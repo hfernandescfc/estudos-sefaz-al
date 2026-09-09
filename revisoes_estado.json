@@ -1,0 +1,350 @@
+{
+  "arquivos_processados": [
+    "tec_registros_2026-09-02.json",
+    "tec_registros_2026-09-03.json",
+    "tec_registros_2026-09-09.json"
+  ],
+  "cadeias": {
+    "Contabilidade Geral||Plano de Contas": {
+      "materia": "Contabilidade Geral",
+      "assunto": "Plano de Contas",
+      "data_base": "2026-09-02",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "3662029"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-09",
+          "emitida": "2026-09-09"
+        },
+        "d6": {
+          "prevista": "2026-09-10",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-09-16",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-09-30",
+          "emitida": null
+        }
+      }
+    },
+    "Direito Tributário||Imunidades Tributárias": {
+      "materia": "Direito Tributário",
+      "assunto": "Imunidades Tributárias",
+      "data_base": "2026-09-02",
+      "cadeia_completa": true,
+      "alvos_origem": [],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-09",
+          "emitida": "2026-09-09"
+        },
+        "d6": {
+          "prevista": "2026-09-10",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-09-16",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-09-30",
+          "emitida": null
+        }
+      }
+    },
+    "Direito Tributário||Taxas (CF/1988 e CTN)": {
+      "materia": "Direito Tributário",
+      "assunto": "Taxas (CF/1988 e CTN)",
+      "data_base": "2026-09-02",
+      "cadeia_completa": true,
+      "alvos_origem": [],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-09",
+          "emitida": "2026-09-09"
+        },
+        "d6": {
+          "prevista": "2026-09-10",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-09-16",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-09-30",
+          "emitida": null
+        }
+      }
+    },
+    "Economia e Finanças Públicas||Dívida Pública, NFSP e Tipos de Déficit Público no Brasil": {
+      "materia": "Economia e Finanças Públicas",
+      "assunto": "Dívida Pública, NFSP e Tipos de Déficit Público no Brasil",
+      "data_base": "2026-09-02",
+      "cadeia_completa": true,
+      "alvos_origem": [],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-09",
+          "emitida": "2026-09-09"
+        },
+        "d6": {
+          "prevista": "2026-09-10",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-09-16",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-09-30",
+          "emitida": null
+        }
+      }
+    },
+    "Finanças e Conhecimentos Bancários||Composição Geral do SFN": {
+      "materia": "Finanças e Conhecimentos Bancários",
+      "assunto": "Composição Geral do SFN",
+      "data_base": "2026-09-02",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "2924519",
+        "3083073"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-09",
+          "emitida": "2026-09-09"
+        },
+        "d6": {
+          "prevista": "2026-09-10",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-09-16",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-09-30",
+          "emitida": null
+        }
+      }
+    },
+    "Matemática Financeira||Valor Presente Líquido (VPL)": {
+      "materia": "Matemática Financeira",
+      "assunto": "Valor Presente Líquido (VPL)",
+      "data_base": "2026-09-02",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "4023990"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-09",
+          "emitida": "2026-09-09"
+        },
+        "d6": {
+          "prevista": "2026-09-10",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-09-16",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-09-30",
+          "emitida": null
+        }
+      }
+    },
+    "Direito Administrativo (Doutrina e Leis Federais)||Atributos ou Características dos Atos Administrativos": {
+      "materia": "Direito Administrativo (Doutrina e Leis Federais)",
+      "assunto": "Atributos ou Características dos Atos Administrativos",
+      "data_base": "2026-09-03",
+      "cadeia_completa": true,
+      "alvos_origem": [],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-09",
+          "emitida": "2026-09-09"
+        },
+        "d6": {
+          "prevista": "2026-09-10",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-09-17",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-01",
+          "emitida": null
+        }
+      }
+    },
+    "Direito Constitucional (CF/1988 e Doutrina)||Direitos Sociais e dos Trabalhadores (arts. 6º e 7º da CF/1988)": {
+      "materia": "Direito Constitucional (CF/1988 e Doutrina)",
+      "assunto": "Direitos Sociais e dos Trabalhadores (arts. 6º e 7º da CF/1988)",
+      "data_base": "2026-09-03",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "4143703"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-09",
+          "emitida": "2026-09-09"
+        },
+        "d6": {
+          "prevista": "2026-09-10",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-09-17",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-01",
+          "emitida": null
+        }
+      }
+    },
+    "Direito Tributário||Imposto sobre Bens e Serviços - IBS (CF/1988, EC 132)": {
+      "materia": "Direito Tributário",
+      "assunto": "Imposto sobre Bens e Serviços - IBS (CF/1988, EC 132)",
+      "data_base": "2026-09-08",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "3144073",
+        "3457608"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-09",
+          "emitida": "2026-09-09"
+        },
+        "d6": {
+          "prevista": "2026-09-14",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-09-22",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-06",
+          "emitida": null
+        }
+      }
+    },
+    "TI - Gestão e Governança de TI||Conceitos de BPM (Gerenciamento de Processos de Negócio)": {
+      "materia": "TI - Gestão e Governança de TI",
+      "assunto": "Conceitos de BPM (Gerenciamento de Processos de Negócio)",
+      "data_base": "2026-09-08",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "3400177",
+        "3456515"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-09",
+          "emitida": "2026-09-09"
+        },
+        "d6": {
+          "prevista": "2026-09-14",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-09-22",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-06",
+          "emitida": null
+        }
+      }
+    }
+  },
+  "ultima_fila": {
+    "data": "2026-09-09",
+    "itens": [
+      [
+        "Contabilidade Geral||Plano de Contas",
+        "d1"
+      ],
+      [
+        "Direito Administrativo (Doutrina e Leis Federais)||Atributos ou Características dos Atos Administrativos",
+        "d1"
+      ],
+      [
+        "Direito Constitucional (CF/1988 e Doutrina)||Direitos Sociais e dos Trabalhadores (arts. 6º e 7º da CF/1988)",
+        "d1"
+      ],
+      [
+        "Direito Tributário||Imposto sobre Bens e Serviços - IBS (CF/1988, EC 132)",
+        "d1"
+      ],
+      [
+        "Direito Tributário||Imunidades Tributárias",
+        "d1"
+      ],
+      [
+        "Direito Tributário||Taxas (CF/1988 e CTN)",
+        "d1"
+      ],
+      [
+        "Economia e Finanças Públicas||Dívida Pública, NFSP e Tipos de Déficit Público no Brasil",
+        "d1"
+      ],
+      [
+        "Finanças e Conhecimentos Bancários||Composição Geral do SFN",
+        "d1"
+      ],
+      [
+        "Matemática Financeira||Valor Presente Líquido (VPL)",
+        "d1"
+      ],
+      [
+        "TI - Gestão e Governança de TI||Conceitos de BPM (Gerenciamento de Processos de Negócio)",
+        "d1"
+      ]
+    ],
+    "confirmada": "2026-09-09"
+  }
+}

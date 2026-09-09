@@ -1,0 +1,5 @@
+# Dashboard do ciclo anterior (TCE-PE / FGV) — fica local, não publica
+index_TCEPE.html.bak
+
+# Harness de teste do replanejador — não é servido pelo index.html
+test_replan.js

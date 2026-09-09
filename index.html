@@ -1,0 +1,2012 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEFAZ-AL · Auditor Fiscal — Controle de Preparação</title>
+<style>
+:root{
+  --bg:#0f1419; --panel:#1a212b; --panel2:#222c38; --line:#2e3a48;
+  --txt:#e6edf3; --muted:#8b9bb0; --accent:#4cc2ff; --accent2:#7c5cff;
+  --ok:#3fb950; --warn:#d29922; --bad:#f85149; --revisar:#d29922;
+  --radius:14px; --shadow:0 6px 20px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--txt);font-family:"Segoe UI",system-ui,Roboto,Arial,sans-serif;font-size:15px;line-height:1.45}
+a{color:var(--accent)}
+.app{max-width:1180px;margin:0 auto;padding:0 18px 60px}
+header.top{display:flex;align-items:center;gap:14px;padding:18px 0 10px;flex-wrap:wrap}
+header.top h1{font-size:20px;margin:0;font-weight:700}
+header.top .sub{color:var(--muted);font-size:13px}
+header.top .spacer{flex:1}
+.btn{background:var(--panel2);color:var(--txt);border:1px solid var(--line);padding:8px 14px;border-radius:10px;cursor:pointer;font-size:14px;transition:.15s}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn.primary{background:var(--accent);color:#06121c;border-color:var(--accent);font-weight:600}
+.btn.primary:hover{filter:brightness(1.08);color:#06121c}
+.btn.ghost{background:transparent}
+.btn.sm{padding:5px 10px;font-size:13px}
+.btn:disabled{opacity:.35;cursor:not-allowed;border-color:var(--line);color:var(--muted)}
+.btn.danger:hover{border-color:var(--bad);color:var(--bad)}
+nav.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 22px;border-bottom:1px solid var(--line);padding-bottom:0}
+nav.tabs button{background:none;border:none;color:var(--muted);padding:11px 16px;cursor:pointer;font-size:15px;border-bottom:2px solid transparent;margin-bottom:-1px}
+nav.tabs button.active{color:var(--txt);border-bottom-color:var(--accent);font-weight:600}
+nav.tabs button:hover{color:var(--txt)}
+.grid{display:grid;gap:16px}
+.cards{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.kpi .label{color:var(--muted);font-size:13px;margin-bottom:6px}
+.kpi .val{font-size:28px;font-weight:700;letter-spacing:-.5px}
+.kpi .val small{font-size:14px;color:var(--muted);font-weight:500}
+.kpi .foot{color:var(--muted);font-size:12px;margin-top:4px}
+h2.sec{font-size:16px;margin:26px 0 12px;display:flex;align-items:center;gap:8px}
+h2.sec .pill{font-size:12px;color:var(--muted);font-weight:400}
+.bar-row{display:flex;align-items:center;gap:10px;margin:9px 0}
+.bar-row .name{width:215px;font-size:13.5px;flex-shrink:0}
+.bar-row .track{flex:1;background:var(--panel2);height:16px;border-radius:8px;overflow:hidden;position:relative}
+.bar-row .fill{height:100%;border-radius:8px;background:linear-gradient(90deg,var(--accent),var(--accent2));min-width:2px}
+.bar-row .meta{position:absolute;top:0;bottom:0;width:2px;background:#fff6;}
+.bar-row .num{width:120px;text-align:right;font-size:12.5px;color:var(--muted);flex-shrink:0}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
+th{color:var(--muted);font-weight:500;font-size:12.5px;text-transform:uppercase;letter-spacing:.4px}
+tr:hover td{background:#ffffff06}
+.tag{display:inline-block;padding:2px 9px;border-radius:20px;font-size:12px;font-weight:600}
+.st-nao{background:#2e3a48;color:#a9b6c5}
+.st-estudando{background:#19324a;color:#4cc2ff}
+.st-revisar{background:#3a2f12;color:#e3b341}
+.st-concluido{background:#16331f;color:#56d364}
+.prio{display:inline-block;padding:1px 8px;border-radius:6px;font-size:11px;font-weight:700;letter-spacing:.3px}
+.prio.p1{background:#3a1518;color:#ff8a92}
+.prio.p2{background:#3a2f12;color:#e3b341}
+.prio.p3{background:#19324a;color:#7fd0ff}
+.prio.p4{background:#2e3a48;color:#a9b6c5}
+.badge2025{display:inline-block;padding:1px 7px;border-radius:6px;font-size:11px;font-weight:700;background:#16331f;color:#56d364;margin-left:5px}
+select,input[type=text],input[type=number],textarea{background:var(--panel2);border:1px solid var(--line);color:var(--txt);border-radius:9px;padding:9px 11px;font-size:14px;font-family:inherit;width:100%}
+select:focus,input:focus,textarea:focus{outline:none;border-color:var(--accent)}
+label.fld{display:block;margin-bottom:14px}
+label.fld .lab{display:block;font-size:13px;color:var(--muted);margin-bottom:5px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.ass-head,.ass-row{display:grid;grid-template-columns:minmax(130px,1.1fr) minmax(170px,1.9fr) 76px 76px 34px;gap:8px;align-items:center;margin-bottom:8px}
+.ass-head{margin-bottom:4px;font-size:12px;color:var(--muted)}
+.ass-row .btn{padding:6px 0;text-align:center}
+.timer-box{text-align:center;padding:8px 0 4px}
+.timer{font-size:64px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:1px}
+.timer.running{color:var(--accent)}
+.timer-ctrls{display:flex;gap:10px;justify-content:center;margin-top:10px;flex-wrap:wrap}
+.muted{color:var(--muted)}
+.sched-day{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;margin-bottom:12px}
+.sched-day h3{margin:0 0 4px;font-size:15px;display:flex;justify-content:space-between;align-items:center}
+.sched-day h3 .tot{color:var(--muted);font-size:13px;font-weight:400}
+.bloco-rot{font-weight:600;color:var(--fg);margin-bottom:4px;line-height:1.35}
+.sched-item{display:flex;gap:12px;padding:7px 0;border-top:1px solid var(--line);font-size:14px}
+.sched-item:first-of-type{border-top:none}
+.sched-item .min{color:var(--accent);font-weight:600;width:58px;flex-shrink:0}
+.sched-item .mt{font-weight:600;width:240px;flex-shrink:0}
+.sched-item .ds{color:var(--muted);flex:1;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.sched-day.today{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+.sched-day.today h3::after{content:"hoje";background:var(--accent);color:#06121c;font-size:10.5px;font-weight:700;padding:2px 7px;border-radius:20px;margin-left:8px}
+.topchip{display:inline-flex;align-items:center;gap:5px;background:var(--panel2);border:1px solid var(--line);border-radius:7px;padding:3px 8px;font-size:13px;color:var(--text)}
+.topchip.c25{border-color:var(--ok)}
+.topchip .qn{color:var(--muted);font-size:11.5px}
+.cods{display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap}
+.btn.xs{padding:2px 7px;font-size:11.5px;border-radius:6px;line-height:1.4}
+.cods-ver{color:var(--accent);cursor:pointer;font-size:11.5px;text-decoration:underline;user-select:none}
+.cods-list{flex-basis:100%;margin-top:4px;font-family:ui-monospace,Consolas,monospace;font-size:11.5px;color:var(--muted);word-break:break-all;background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:5px 7px;user-select:all}
+.bloco-note{font-style:italic}
+.crono-nav{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.crono-nav .wk{font-size:18px;font-weight:700}
+.crono-nav .now-pill{background:var(--ok);color:#06121c;font-size:11px;font-weight:700;padding:2px 9px;border-radius:20px}
+.crono-nav .ph{color:var(--muted);font-size:13px}
+th.wk-now,td.wk-now{background:rgba(76,194,255,.12)}
+.dot{width:9px;height:9px;border-radius:50%;display:inline-block;flex-shrink:0}
+.legend{display:flex;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:13px;margin:6px 0 16px}
+.legend span{display:flex;align-items:center;gap:6px}
+.phase{border-left:3px solid var(--accent);padding:4px 0 4px 14px;margin:14px 0}
+.phase h4{margin:0 0 4px;font-size:14.5px}
+.phase p{margin:0;color:var(--muted);font-size:13.5px}
+.filters{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.filters select,.filters input{width:auto;min-width:140px}
+.mat-group{margin-bottom:8px}
+.mat-head{display:flex;align-items:center;gap:10px;padding:11px 14px;background:var(--panel2);border:1px solid var(--line);border-radius:10px;cursor:pointer;user-select:none}
+.mat-head .mname{font-weight:600;flex:1}
+.mat-head .mprog{font-size:12.5px;color:var(--muted)}
+.mat-head .mbar{width:90px;height:7px;background:var(--bg);border-radius:5px;overflow:hidden}
+.mat-head .mbar i{display:block;height:100%;background:var(--ok)}
+.mat-body{padding:4px 0 10px}
+.empty{color:var(--muted);text-align:center;padding:30px;font-size:14px}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--ok);color:#06121c;padding:11px 22px;border-radius:10px;font-weight:600;box-shadow:var(--shadow);opacity:0;transition:.25s;pointer-events:none;z-index:50}
+.toast.show{opacity:1}
+.hide{display:none!important}
+.flex{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.qstat{font-size:12.5px;color:var(--muted)}
+.right{text-align:right}
+/* Gantt */
+.gantt-wrap{overflow-x:auto}
+.gantt{--glab:270px;position:relative;min-width:820px}
+.g-row{display:flex;align-items:center;min-height:25px}
+.g-row.ghead{margin-top:12px;background:var(--panel2);border-radius:8px;padding:5px 0}
+.g-lab{width:var(--glab);flex-shrink:0;font-size:12.5px;padding:0 10px 0 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.g-lab .q{color:var(--muted);font-size:11.5px}
+.g-track{flex:1;position:relative;height:24px}
+.g-bar{position:absolute;border-radius:4px;box-sizing:border-box}
+.g-plan{top:4px;height:16px;border:1.5px dashed #8b9bb088}
+.g-eff{top:4px;height:16px;opacity:.4}
+.g-real{top:13px;height:3px;border-radius:2px;opacity:.85}
+.g-dot{position:absolute;top:8px;height:8px;border-radius:2px;min-width:3px}
+.g-sep{position:absolute;width:1px;background:var(--line);z-index:0}
+.g-today{position:absolute;width:2px;background:var(--bad);z-index:3;opacity:.85}
+.g-wlab{position:absolute;top:2px;font-size:11px;color:var(--muted)}
+.mov-chip{color:var(--warn);font-size:11px;font-weight:700}
+@media(max-width:680px){
+  .gantt{--glab:150px}
+  .bar-row .name{width:130px}.bar-row .num{width:90px}
+  .sched-item .mt{width:auto}.timer{font-size:48px}
+  .row2,.row3{grid-template-columns:1fr}
+  .ass-head{display:none}
+  .ass-row{grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line);padding-bottom:8px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div>
+      <h1>📊 Estudos SEFAZ-AL — Auditor Fiscal (AFTE)</h1>
+      <div class="sub">FGV · Reaplicação 23/08 e 30/08/2026 · Preparação 25/06 → 21/08</div>
+    </div>
+    <div class="spacer"></div>
+    <span id="syncStatus" class="sub" style="align-self:center;margin-right:6px"></span>
+    <button class="btn sm" onclick="syncSetup()">☁ Sync</button>
+    <button class="btn sm" onclick="exportData()">⭳ Backup</button>
+    <button class="btn sm" onclick="document.getElementById('importFile').click()">⭱ Restaurar</button>
+    <button class="btn sm" onclick="snapRestaurar()" title="Snapshots automáticos guardados neste navegador">⤺ Snapshots</button>
+    <button class="btn sm" onclick="reconstruirDoTec()" title="Repor o histórico a partir das capturas do TEC">⟳ Reconstruir do TEC</button>
+    <input type="file" id="importFile" accept="application/json" class="hide" onchange="importData(event)">
+  </header>
+
+  <nav class="tabs" id="tabs">
+    <button data-tab="dash" class="active">Dashboard</button>
+    <button data-tab="sessao">Sessão de Estudo</button>
+    <button data-tab="assuntos">Assuntos por Matéria</button>
+    <button data-tab="disciplina">Disciplina</button>
+    <button data-tab="cronograma">Cronograma</button>
+    <button data-tab="gantt">Gantt</button>
+    <button data-tab="historico">Histórico</button>
+  </nav>
+
+  <section id="tab-dash"></section>
+  <section id="tab-sessao" class="hide"></section>
+  <section id="tab-assuntos" class="hide"></section>
+  <section id="tab-disciplina" class="hide"></section>
+  <section id="tab-cronograma" class="hide"></section>
+  <section id="tab-gantt" class="hide"></section>
+  <section id="tab-historico" class="hide"></section>
+</div>
+<div class="toast" id="toast"></div>
+
+<!-- Execução real por tópico, gerada por 06_Scripts/desempenho_assuntos.py a partir das
+     capturas do TEC. Script clássico (não fetch): carrega também via file:// (offline).
+     Define window.EXEC_TEC = {por_topico, por_dia, ...}. Ausente => cai nas sessões manuais. -->
+<script src="execucao_tec.js" onerror="window.EXEC_TEC=null"></script>
+
+<!-- Sessões reconstruídas das capturas do TEC (06_Scripts/gerar_sessoes_tec.py):
+     1 sessão por dia+assunto, com uid determinístico. Rede de segurança para o
+     que se perdeu no localStorage: o dashboard só insere o que ainda não tem. -->
+<script src="sessoes_tec.js" onerror="window.SESSOES_TEC=null"></script>
+
+<script>
+/* ============================================================
+   DADOS DE REFERÊNCIA (plano + matérias)
+   ============================================================ */
+// Grupos de matéria: nome, cor, meta semanal (minutos) conforme o plano
+const MAT_INFO = {
+  CDADOS:  {nome:"Ciência de Dados", cor:"#4cc2ff", itens:20, meta:220},
+  RT:      {nome:"Reforma Tributária", cor:"#f778ba", itens:15, meta:450},
+  AUDFIS:  {nome:"Auditoria Fiscal", cor:"#e3b341", itens:15, meta:470},
+  INFRA:   {nome:"Infra de TIC e Segurança", cor:"#79c0ff", itens:10, meta:400},
+  DEV:     {nome:"Desenvolvimento de Sistemas", cor:"#56d364", itens:10, meta:260},
+  IA:      {nome:"Inteligência Artificial", cor:"#7c5cff", itens:10, meta:110},
+  LEGAL:   {nome:"Leg. Tributária Estadual (AL)", cor:"#ff9e64", itens:10, meta:500},
+  FINPUB:  {nome:"Finanças Públicas", cor:"#8ddb8d", itens:10, meta:180},
+  DTRIB:   {nome:"Direito Tributário", cor:"#a0c0b0", itens:10, meta:330},
+  ECON:    {nome:"Economia", cor:"#d2a8ff", itens:10, meta:330},
+  ESTAT:   {nome:"Estatística", cor:"#a5d6ff", itens:10, meta:120},
+  CPUB:    {nome:"Contabilidade Pública", cor:"#c0b0a0", itens:10, meta:200},
+  MATFIN:  {nome:"Matemática Financeira", cor:"#b0a0d0", itens:5, meta:90},
+  DCON:    {nome:"Direito Constitucional", cor:"#9aa5b1", itens:5, meta:90},
+  DADM:    {nome:"Direito Administrativo", cor:"#b08080", itens:5, meta:90},
+  CGER:    {nome:"Contabilidade Geral", cor:"#8b9dc3", itens:5, meta:80},
+};
+// CEX = bloco misto sem matéria própria (consolidação, simulado, caderno de
+// erros). Não é matéria do edital, então fica fora do MAT_INFO — mas precisa
+// de nome e cor, senão cai no fallback e se disfarça de Direito Tributário.
+const CEX_INFO = {nome:"Consolidação e erros", cor:"#9aa5b1"};
+function grupo(code){ return MAT_INFO[code] ? code : "DTRIB"; }
+function matNome(code){ if(code==="CEX") return CEX_INFO.nome;
+  const g=grupo(code); return MAT_INFO[g]?MAT_INFO[g].nome:code; }
+function matCor(code){ if(code==="CEX") return CEX_INFO.cor;
+  const g=grupo(code); return MAT_INFO[g]?MAT_INFO[g].cor:"#888"; }
+function matItens(code){ const g=grupo(code); return MAT_INFO[g]?MAT_INFO[g].itens:0; }
+
+// Assuntos e prioridades vindos das analises em 02_Analises/ (set/2026).
+// prio: 1=MAXIMA · 2=ALTA · 3=MEDIA (amostrar) · 4=manutencao
+// q: questoes reais no banco · gerar:1 = sem acervo, alvo da skill questao-ce
+const SEED_TOPICS = [
+  // ---- RT ----
+  {id:1,assunto:"IBS (CF/1988, EC 132)",mat:"RT",prio:1,q:94},
+  {id:2,assunto:"Outras Questões e Tópicos Mesclados sobre a Reforma Tributária",mat:"RT",prio:3,q:42},
+  {id:3,assunto:"IS (CF 1988; EC 132)",mat:"RT",prio:1,q:21},
+  {id:4,assunto:"Comitê Gestor do IBS (CF 1988, EC 132)",mat:"RT",prio:1,q:18},
+  {id:5,assunto:"Reforma Tributária",mat:"RT",prio:1,q:11},
+  {id:6,assunto:"CBS (CF/1988, EC 132)",mat:"RT",prio:1,q:9},
+  {id:7,assunto:"Da Base de Cálculo (arts. 12 e 13 da LC nº 214/2025)",mat:"RT",prio:1,q:6},
+  {id:8,assunto:"Das Hipóteses de Incidência (arts. 4º a 7º da LC nº 214/2025)",mat:"RT",prio:1,q:5},
+  {id:9,assunto:"Da Sujeição Passiva (arts. 21 a 26 da LC nº 214/2025)",mat:"RT",prio:1,q:5},
+  {id:10,assunto:"Disposições Preliminares (arts. 1º a 3º da LC nº 214/2025)",mat:"RT",prio:3,q:4},
+  {id:11,assunto:"Do Local da Operação (art. 11 da LC nº 214/2025)",mat:"RT",prio:1,q:4},
+  {id:12,assunto:"Do Momento de Ocorrência do Fato Gerador (art. 10 da LC nº 214/2025)",mat:"RT",prio:3,q:3},
+  {id:13,assunto:"Das Modalidades de Extinção dos Débitos (arts. 27 a 37 da LC nº 214/2025)",mat:"RT",prio:1,q:3},
+  {id:14,assunto:"Do Comitê Gestor do IBS (arts. 480 a 484 da LC nº 214/2025)",mat:"RT",prio:1,q:3},
+  // ---- AUDFIS ----
+  {id:15,assunto:"Testes e Procedimentos em Auditoria",mat:"AUDFIS",prio:3,q:74,fora:1},
+  {id:16,assunto:"Fraude e Erro (Auditoria)",mat:"AUDFIS",prio:3,q:22,fora:1},
+  {id:17,assunto:"Sistema Público de Escrituração Digital (SPED)",mat:"AUDFIS",prio:2,q:12},
+  {id:18,assunto:"Planejamento de Auditoria de Regularidade",mat:"AUDFIS",prio:3,q:8,fora:1},
+  {id:19,assunto:"Relatório, Certificado, Parecer e Nota (Auditoria Governamental)",mat:"AUDFIS",prio:3,q:7,fora:1},
+  {id:20,assunto:"Instruções Normativas da RFB sobre Escrituração Contábil Digital",mat:"AUDFIS",prio:2,q:6},
+  {id:21,assunto:"Escrituração Fiscal e Outras Questões Tributárias",mat:"AUDFIS",prio:1,q:6},
+  {id:22,assunto:"Execução de Auditoria de Regularidade",mat:"AUDFIS",prio:3,q:5,fora:1},
+  {id:23,assunto:"Conceitos de SPED e seus Módulos",mat:"AUDFIS",prio:3,q:3},
+  // ---- INFRA ----
+  {id:24,assunto:"ITIL v4",mat:"INFRA",prio:3,q:118},
+  {id:25,assunto:"Cloud Computing (Computação em Nuvem)",mat:"INFRA",prio:3,q:105},
+  {id:26,assunto:"DevOps, IaC, Integração Contínua e Entrega Contínua",mat:"INFRA",prio:2,q:61},
+  {id:27,assunto:"Contêineres (Docker, Kubernetes, etc.)",mat:"INFRA",prio:3,q:51},
+  {id:28,assunto:"Riscos em Segurança da Informação (NBR ISO/IEC 27001, 27002 e 27005)",mat:"INFRA",prio:2,q:43},
+  {id:29,assunto:"Conceitos de Firewall, Proxy e DMZ",mat:"INFRA",prio:2,q:34},
+  {id:30,assunto:"SGSI, Controles e Estrutura das Normas da Família 27000 (ISO/IEC 27001, 27002, etc.)",mat:"INFRA",prio:2,q:28},
+  {id:31,assunto:"Ataques a Aplicações Web (XSS, CSRF, SQL Injection etc.)",mat:"INFRA",prio:1,q:25},
+  {id:32,assunto:"Conceitos de Certificado Digital",mat:"INFRA",prio:2,q:24},
+  {id:33,assunto:"Gestão de Continuidade de Negócio (NBR ISO/IEC 15999-1, 15999-2, 27002, 22313, etc.)",mat:"INFRA",prio:2,q:24},
+  {id:34,assunto:"DNS (Domain Name System)",mat:"INFRA",prio:2,q:22},
+  {id:35,assunto:"Malware (Vírus, Worms, Trojans, etc.)",mat:"INFRA",prio:3,q:20},
+  {id:36,assunto:"ICP e Autoridades Certificadoras",mat:"INFRA",prio:2,q:20},
+  {id:37,assunto:"Computação Forense",mat:"INFRA",prio:1,q:17},
+  {id:38,assunto:"Negação de Serviço (DoS)",mat:"INFRA",prio:3,q:15},
+  {id:39,assunto:"DevSecOps",mat:"INFRA",prio:2,q:14},
+  {id:40,assunto:"Questões Mescladas de Ameaças aos Sistemas Computacionais",mat:"INFRA",prio:3,q:13},
+  {id:41,assunto:"Ameaças Técnicas Relacionadas a Redes e Criptografia",mat:"INFRA",prio:3,q:12},
+  {id:42,assunto:"MPLS",mat:"INFRA",prio:1,q:8},
+  {id:43,assunto:"Spoofing",mat:"INFRA",prio:3,q:6},
+  {id:44,assunto:"X.509",mat:"INFRA",prio:3,q:6},
+  {id:45,assunto:"Testes de Segurança (Pentest, Varreduras, etc.)",mat:"INFRA",prio:1,q:5},
+  {id:46,assunto:"Engenharia Social e Phishing",mat:"INFRA",prio:3,q:4},
+  {id:47,assunto:"Demais Ferramentas de Segurança de Perímetro (WAF, UTM etc.)",mat:"INFRA",prio:3,q:3},
+  {id:48,assunto:"Zero Trust (Modelo de Confiança Zero)",mat:"INFRA",prio:1,q:3},
+  // ---- DEV ----
+  {id:49,assunto:"SCRUM",mat:"DEV",prio:3,q:78},
+  {id:50,assunto:"Conceitos e Tipos de Testes de Software",mat:"DEV",prio:3,q:58},
+  {id:51,assunto:"DevOps, IaC, Integração Contínua e Entrega Contínua",mat:"DEV",prio:2,q:28},
+  {id:52,assunto:"Git",mat:"DEV",prio:2,q:22},
+  {id:53,assunto:"OAuth",mat:"DEV",prio:2,q:21},
+  {id:54,assunto:"Códigos em Java",mat:"DEV",prio:3,q:21},
+  {id:55,assunto:"Conceitos de BPM (Gerenciamento de Processos de Negócio)",mat:"DEV",prio:1,q:20},
+  {id:56,assunto:"Kanban (Engenharia de Software)",mat:"DEV",prio:3,q:17},
+  {id:57,assunto:"Javascript",mat:"DEV",prio:3,q:17},
+  {id:58,assunto:"Conceitos e Propriedades do Java",mat:"DEV",prio:3,q:15},
+  {id:59,assunto:"REST e RESTful",mat:"DEV",prio:2,q:14},
+  {id:60,assunto:"SOA - Arquitetura Orientada a Serviço",mat:"DEV",prio:2,q:9},
+  {id:61,assunto:"TDD e BDD (Test-Driven Development e Behavior Driven Development)",mat:"DEV",prio:2,q:9},
+  {id:62,assunto:"JSON (JavaScript Object Notation)",mat:"DEV",prio:3,q:7},
+  {id:63,assunto:"Arquitetura de Microsserviços",mat:"DEV",prio:2,q:7},
+  {id:64,assunto:"Mensageria (Messaging)",mat:"DEV",prio:2,q:7},
+  {id:65,assunto:"XP (Extreme Programming)",mat:"DEV",prio:3,q:7},
+  {id:66,assunto:"Tópicos Mesclados de Recursos de Segurança da Informação",mat:"DEV",prio:3,q:6},
+  {id:67,assunto:"Arquitetura em Camadas",mat:"DEV",prio:2,q:6},
+  {id:68,assunto:"Ciclo de Vida de Desenvolvimento Seguro",mat:"DEV",prio:1,q:5},
+  {id:69,assunto:"DDD (Domain-Driven Design)",mat:"DEV",prio:2,q:4},
+  {id:70,assunto:"Arquitetura Orientada a Eventos",mat:"DEV",prio:2,q:3},
+  // ---- LEGAL ----
+  {id:71,assunto:"Código Tributário do Estado de Alagoas (AL)",mat:"LEGAL",prio:1,q:18},
+  {id:72,assunto:"Do Fato Gerador (art. 2º da Lei Estadual nº 5.900/1996)",mat:"LEGAL",prio:2,q:6},
+  {id:73,assunto:"Da Não Incidência, da Isenção e Suspensão do Imposto (arts. 3º a 5º da Lei",mat:"LEGAL",prio:3,q:4},
+  {id:74,assunto:"Da Incidência (art. 1º da Lei Estadual nº 5.900/1996)",mat:"LEGAL",prio:2,q:3},
+  {id:75,assunto:"Da Base de Cálculo (arts. 6º a 16 da Lei Estadual nº 5.900/1996)",mat:"LEGAL",prio:2,q:3},
+  {id:76,assunto:"Da Sujeição Passiva (arts. 18 a 29 da Lei Estadual nº 5.900/1996)",mat:"LEGAL",prio:2,q:3},
+  // ---- DTRIB ----
+  {id:77,assunto:"Competência, princípios e limitações ao poder de tributar",mat:"DTRIB",prio:2,q:45,agrup:7},
+  {id:78,assunto:"Extinção do crédito; prescrição e decadência; LC 118/2005",mat:"DTRIB",prio:1,q:40,gerar:1,agrup:3},
+  {id:79,assunto:"Impostos federais e municipais",mat:"DTRIB",prio:3,q:39,agrup:11},
+  {id:80,assunto:"Garantias, privilégios, dívida ativa e certidões",mat:"DTRIB",prio:2,q:23,agrup:5},
+  {id:81,assunto:"Reforma Tributária no STN: IBS, CBS e Imposto Seletivo",mat:"DTRIB",prio:2,q:21,agrup:5},
+  {id:82,assunto:"Taxas, contribuição de melhoria e contribuições especiais",mat:"DTRIB",prio:4,q:20,agrup:5},
+  {id:83,assunto:"Obrigação tributária: fato gerador, sujeitos e solidariedade",mat:"DTRIB",prio:1,q:18,agrup:7},
+  {id:84,assunto:"Responsabilidade tributária (arts. 128-138)",mat:"DTRIB",prio:1,q:17},
+  {id:85,assunto:"Impostos estaduais: ICMS, ITCMD e IPVA",mat:"DTRIB",prio:2,q:17,agrup:4},
+  {id:86,assunto:"Conceito, natureza e espécies de tributo",mat:"DTRIB",prio:3,q:14,agrup:3},
+  {id:87,assunto:"Legislação tributária: vigência, aplicação, interpretação e integração",mat:"DTRIB",prio:2,q:13,agrup:3},
+  {id:88,assunto:"Crédito tributário: lançamento e disposições gerais",mat:"DTRIB",prio:1,q:12,agrup:2},
+  {id:89,assunto:"Imunidades tributárias",mat:"DTRIB",prio:4,q:10,agrup:2},
+  {id:90,assunto:"Suspensão da exigibilidade (arts. 151-155-A)",mat:"DTRIB",prio:1,q:7,agrup:2},
+  {id:91,assunto:"Planejamento tributário: elisão, evasão e elusão",mat:"DTRIB",prio:2,q:6},
+  {id:92,assunto:"Administração tributária: fiscalização e sigilo",mat:"DTRIB",prio:2,q:5},
+  {id:93,assunto:"Crimes contra a ordem tributária (Lei 8.137/1990)",mat:"DTRIB",prio:3,q:5,agrup:2},
+  {id:94,assunto:"Exclusão do crédito: isenção e anistia",mat:"DTRIB",prio:2,q:3,agrup:2},
+  // ---- ECON ----
+  {id:95,assunto:"Bem Estar e Funções do Governo",mat:"ECON",prio:1,q:45},
+  {id:96,assunto:"Conceitos e Identidades Macroeconômicos",mat:"ECON",prio:2,q:34},
+  {id:97,assunto:"Monopólio",mat:"ECON",prio:2,q:22},
+  {id:98,assunto:"Produção",mat:"ECON",prio:2,q:21},
+  {id:99,assunto:"Bens Públicos (Economia)",mat:"ECON",prio:1,q:21},
+  {id:100,assunto:"Política Fiscal",mat:"ECON",prio:1,q:19},
+  {id:101,assunto:"Demanda e Oferta",mat:"ECON",prio:2,q:17},
+  {id:102,assunto:"Política Monetária",mat:"ECON",prio:1,q:17},
+  {id:103,assunto:"Custos",mat:"ECON",prio:2,q:14},
+  {id:104,assunto:"Modelo Keynesiano",mat:"ECON",prio:2,q:14},
+  {id:105,assunto:"Externalidades",mat:"ECON",prio:1,q:13},
+  {id:106,assunto:"Informações Assimétricas",mat:"ECON",prio:1,q:13},
+  {id:107,assunto:"Curva de Possibilidades de Produção",mat:"ECON",prio:2,q:11},
+  {id:108,assunto:"Modelo de Oferta e Demanda Agregada (OA-DA) de Determinação da Renda e dos Preços",mat:"ECON",prio:2,q:11},
+  {id:109,assunto:"Concorrência Perfeita",mat:"ECON",prio:3,q:9},
+  {id:110,assunto:"Tipos de Estrutura",mat:"ECON",prio:3,q:6},
+  {id:111,assunto:"Eficiência (ou Ótimo) de Pareto",mat:"ECON",prio:2,q:6},
+  {id:112,assunto:"Escassez, Escolha e Custo de Oportunidade",mat:"ECON",prio:3,q:5},
+  {id:113,assunto:"Elasticidade Preço da Demanda",mat:"ECON",prio:3,q:5},
+  {id:114,assunto:"Eficiência nas Trocas",mat:"ECON",prio:3,q:5},
+  {id:115,assunto:"Produto Nominal X Produto Real (Deflator do PIB)",mat:"ECON",prio:3,q:4},
+  {id:116,assunto:"Conceito de Economia",mat:"ECON",prio:3,q:3},
+  {id:117,assunto:"Concorrência Monopolística",mat:"ECON",prio:3,q:3},
+  {id:118,assunto:"Determinantes do Investimento",mat:"ECON",prio:3,q:3},
+  // ---- RT ----
+  {id:119,assunto:"LC 214 — não cumulatividade e créditos (arts. 38-56)",mat:"RT",prio:1,q:0,gerar:1},
+  {id:120,assunto:"Split payment e split payment simplificado (arts. 57-61)",mat:"RT",prio:1,q:0,gerar:1},
+  {id:121,assunto:"LC 214 — importação e exportação (arts. 62-82)",mat:"RT",prio:2,q:0,gerar:1},
+  {id:122,assunto:"Cashback e Cesta Básica Nacional (arts. 111-124)",mat:"RT",prio:1,q:0,gerar:1},
+  {id:123,assunto:"Regimes diferenciados e específicos — faixas e percentuais",mat:"RT",prio:2,q:0,gerar:1},
+  {id:124,assunto:"Distribuição do produto da arrecadação do IBS",mat:"RT",prio:2,q:0,gerar:1},
+  {id:125,assunto:"Transição IBS/CBS/ICMS — calendário 2026-2033",mat:"RT",prio:1,q:0,gerar:1},
+  {id:126,assunto:"LC 227/2026 — CGIBS, competências e estrutura",mat:"RT",prio:1,q:0,gerar:1},
+  {id:127,assunto:"LC 227/2026 — Processo Administrativo Tributário do IBS",mat:"RT",prio:1,q:0,gerar:1},
+  {id:128,assunto:"Regulamento do IBS — Res. CGIBS 6 e 13/2026",mat:"RT",prio:1,q:0,gerar:1},
+  {id:129,assunto:"DeRE, NF-ABI, NFAg, BP-e Aéreo e NF-e Gás",mat:"RT",prio:1,q:0,gerar:1},
+  {id:130,assunto:"Sinter e Cadastro Imobiliário Brasileiro (CIB)",mat:"RT",prio:1,q:0,gerar:1},
+  {id:131,assunto:"Tabela cCredPres — crédito presumido",mat:"RT",prio:1,q:0,gerar:1},
+  {id:132,assunto:"Apuração assistida",mat:"RT",prio:1,q:0,gerar:1},
+  // ---- AUDFIS ----
+  {id:133,assunto:"MOC da NF-e e NFC-e 7.0 — modelo operacional e eventos",mat:"AUDFIS",prio:1,q:0,gerar:1},
+  {id:134,assunto:"MOC NF-e 7.0 — contingência (SVC-AN, SVC-RS, EPEC, FS-DA)",mat:"AUDFIS",prio:1,q:0,gerar:1},
+  {id:135,assunto:"Guia Prático da EFD ICMS/IPI 3.2.2 — blocos e obrigatoriedade",mat:"AUDFIS",prio:1,q:0,gerar:1},
+  {id:136,assunto:"EFD 3.2.2 — retificação, prazos e Bloco H (inventário)",mat:"AUDFIS",prio:1,q:0,gerar:1},
+  {id:137,assunto:"MOC do CT-e e CT-e OS 4.00",mat:"AUDFIS",prio:2,q:0,gerar:1},
+  {id:138,assunto:"MOC do MDF-e 3.00b — obrigatoriedade e encerramento",mat:"AUDFIS",prio:2,q:0,gerar:1},
+  {id:139,assunto:"Tabela CFOP — gramática do 1º dígito",mat:"AUDFIS",prio:1,q:0,gerar:1},
+  {id:140,assunto:"Tabelas CST (A e B) e CSOSN",mat:"AUDFIS",prio:1,q:0,gerar:1},
+  {id:141,assunto:"Tabela cBenef de Alagoas",mat:"AUDFIS",prio:2,q:0,gerar:1},
+  {id:142,assunto:"Cruzamento e consistência entre DFe e EFD",mat:"AUDFIS",prio:1,q:0,gerar:1},
+  {id:143,assunto:"Omissão de receitas, créditos indevidos e inconsistências",mat:"AUDFIS",prio:1,q:0,gerar:1},
+  // ---- LEGAL ----
+  {id:144,assunto:"IPVA — isenções e não incidência (6.555, arts. 4º-6º)",mat:"LEGAL",prio:1,q:0,gerar:1},
+  {id:145,assunto:"IPVA — FG, domicílio, contribuinte e solidariedade",mat:"LEGAL",prio:1,q:0,gerar:1},
+  {id:146,assunto:"IPVA — lançamento por calendário (Lei 9.780/2025)",mat:"LEGAL",prio:1,q:0,gerar:1},
+  {id:147,assunto:"PAT — auto de infração, intimação e defesa",mat:"LEGAL",prio:1,q:0,gerar:1},
+  {id:148,assunto:"PAT — ordinário × especial (400 UPFAL), instâncias e CTE",mat:"LEGAL",prio:1,q:0,gerar:1},
+  {id:149,assunto:"PAT — consulta, restituição e denúncia espontânea",mat:"LEGAL",prio:2,q:0,gerar:1},
+  {id:150,assunto:"ITCD — incidência, doação, usufruto e competência",mat:"LEGAL",prio:1,q:0,gerar:1},
+  {id:151,assunto:"ITCD — alíquotas progressivas (Lei 9.440/2024)",mat:"LEGAL",prio:1,q:0,gerar:1},
+  {id:152,assunto:"ICMS-AL — sujeição passiva, responsabilidade e ST",mat:"LEGAL",prio:2,q:0,gerar:1},
+  {id:153,assunto:"ICMS-AL — isenções e os novos arts. 4º-D, 4º-E e 4º-F",mat:"LEGAL",prio:2,q:0,gerar:1},
+  {id:154,assunto:"ICMS-AL — alíquota geral de 20,5% (Lei 9.776/2025)",mat:"LEGAL",prio:1,q:0,gerar:1},
+  {id:155,assunto:"ICMS-AL — obrigações acessórias e cadastro",mat:"LEGAL",prio:3,q:0,gerar:1},
+  {id:156,assunto:"ICMS-AL — fiscalização e presunções de omissão",mat:"LEGAL",prio:2,q:0,gerar:1},
+  {id:157,assunto:"Contribuinte Arretado (8.085/2018)",mat:"LEGAL",prio:1,q:0,gerar:1},
+  // ---- CDADOS ----
+  {id:158,assunto:"Dado, informação, conhecimento; estruturados e abertos",mat:"CDADOS",prio:2,q:0,gerar:1},
+  {id:159,assunto:"Bancos de dados relacionais e modelagem",mat:"CDADOS",prio:1,q:0,gerar:1},
+  {id:160,assunto:"Modelagem dimensional e multidimensional",mat:"CDADOS",prio:1,q:0,gerar:1},
+  {id:161,assunto:"Planilhas e SQL",mat:"CDADOS",prio:1,q:0,gerar:1},
+  {id:162,assunto:"CRISP-DM e pré-processamento",mat:"CDADOS",prio:1,q:0,gerar:1},
+  {id:163,assunto:"Visualização e análise exploratória",mat:"CDADOS",prio:2,q:0,gerar:1},
+  {id:164,assunto:"Mineração: classificação, associação, regressão",mat:"CDADOS",prio:1,q:0,gerar:1},
+  {id:165,assunto:"Clusterização e detecção de anomalias",mat:"CDADOS",prio:1,q:0,gerar:1},
+  {id:166,assunto:"Aprendizado de máquina e métricas de desempenho",mat:"CDADOS",prio:1,q:0,gerar:1},
+  {id:167,assunto:"Big Data e Business Intelligence",mat:"CDADOS",prio:2,q:0,gerar:1},
+  // ---- IA ----
+  {id:168,assunto:"Fundamentos de IA, ML e deep learning",mat:"IA",prio:1,q:0,gerar:1},
+  {id:169,assunto:"Redes neurais artificiais",mat:"IA",prio:2,q:0,gerar:1},
+  {id:170,assunto:"Processamento de linguagem natural e mineração de texto",mat:"IA",prio:1,q:0,gerar:1},
+  {id:171,assunto:"Visão computacional",mat:"IA",prio:3,q:0,gerar:1},
+  {id:172,assunto:"IA generativa, LLM e RAG",mat:"IA",prio:1,q:0,gerar:1},
+  // ---- ESTAT ----
+  {id:173,assunto:"Assimetria e curtose",mat:"ESTAT",prio:1,q:0,gerar:1},
+  {id:174,assunto:"Amostragem: AAS, estratificada, sistemática, conglomerados",mat:"ESTAT",prio:2,q:0,gerar:1},
+  {id:175,assunto:"Medidas de posição e dispersão",mat:"ESTAT",prio:3,q:0,gerar:1},
+  {id:176,assunto:"Probabilidade básica",mat:"ESTAT",prio:2,q:0,gerar:1},
+  {id:177,assunto:"Gráficos e tabelas",mat:"ESTAT",prio:3,q:0,gerar:1},
+  // ---- DCON ----
+  {id:178,assunto:"Controle de constitucionalidade",mat:"DCON",prio:1,q:0,gerar:1},
+  {id:179,assunto:"Poder Judiciário e Estatuto da Magistratura",mat:"DCON",prio:2,q:0,gerar:1},
+  {id:180,assunto:"Direitos e garantias fundamentais (art. 5º)",mat:"DCON",prio:3,q:0,gerar:1},
+  {id:181,assunto:"Ordem econômica e financeira",mat:"DCON",prio:2,q:0,gerar:1},
+  // ---- DADM ----
+  {id:182,assunto:"Lei 9.784/1999 — processo administrativo",mat:"DADM",prio:1,q:0,gerar:1},
+  {id:183,assunto:"Atributos e atos administrativos",mat:"DADM",prio:3,q:0,gerar:1},
+  {id:184,assunto:"Controle da administração",mat:"DADM",prio:2,q:0,gerar:1},
+  {id:185,assunto:"Crimes contra a Administração Pública",mat:"DADM",prio:2,q:0,gerar:1},
+  // ---- FINPUB ----
+  {id:186,assunto:"SFN, moeda, base monetária e multiplicador",mat:"FINPUB",prio:1,q:0,gerar:1},
+  {id:187,assunto:"Banco Central e instrumentos de política monetária",mat:"FINPUB",prio:1,q:0,gerar:1},
+  {id:188,assunto:"Balanço de pagamentos e regimes cambiais",mat:"FINPUB",prio:1,q:0,gerar:1},
+  {id:189,assunto:"Mercado financeiro, bolsas, termo, futuros e opções",mat:"FINPUB",prio:1,q:0,gerar:1},
+  {id:190,assunto:"Déficit público, NFSP e dívida pública",mat:"FINPUB",prio:4,q:0,gerar:1},
+  {id:191,assunto:"Orçamento público: PPA, LDO, LOA e créditos adicionais",mat:"FINPUB",prio:2,q:0,gerar:1},
+  {id:192,assunto:"LRF e Lei 4.320/1964",mat:"FINPUB",prio:2,q:0,gerar:1},
+  {id:193,assunto:"Receita e despesa pública; restos a pagar",mat:"FINPUB",prio:2,q:0,gerar:1},
+  // ---- MATFIN ----
+  {id:194,assunto:"VPL e TIR",mat:"MATFIN",prio:2,q:0,gerar:1},
+  {id:195,assunto:"Fluxo de caixa descontado; valor presente e futuro",mat:"MATFIN",prio:2,q:0,gerar:1},
+  {id:196,assunto:"Séries antecipadas e postecipadas; taxas e prazos",mat:"MATFIN",prio:2,q:0,gerar:1},
+  // ---- CPUB ----
+  {id:197,assunto:"Sistema de custos no setor público (NBC TSP 34)",mat:"CPUB",prio:1,q:0,gerar:1},
+  {id:198,assunto:"DMPL e demonstrações aplicadas ao setor público",mat:"CPUB",prio:1,q:0,gerar:1},
+  {id:199,assunto:"MCASP 11ª edição — conferir alterações",mat:"CPUB",prio:1,q:0,gerar:1},
+  {id:200,assunto:"Variações patrimoniais e mensuração de ativos",mat:"CPUB",prio:2,q:0,gerar:1},
+  {id:201,assunto:"Tratamento contábil de impostos e contribuições",mat:"CPUB",prio:2,q:0,gerar:1},
+  // ---- CGER ----
+  {id:202,assunto:"Escrituração, lançamentos e livros",mat:"CGER",prio:2,q:0,gerar:1},
+  {id:203,assunto:"Balancete de verificação",mat:"CGER",prio:2,q:0,gerar:1},
+  {id:204,assunto:"Atos e fatos administrativos",mat:"CGER",prio:3,q:0,gerar:1},
+  {id:205,assunto:"Plano de contas",mat:"CGER",prio:2,q:0,gerar:1},
+  {id:206,assunto:"Balanço patrimonial e DRE",mat:"CGER",prio:3,q:0,gerar:1},
+];
+const PRIO_LABEL = {1:"MÁXIMA",2:"ALTA",3:"MÉDIA (amostrar)",4:"manutenção"};
+
+// Ritmo de resolucao (questoes/hora).
+const RITMO = {CDADOS:45, RT:35, AUDFIS:35, INFRA:50, DEV:50, IA:45, LEGAL:35, FINPUB:30, DTRIB:40, ECON:30, ESTAT:20, CPUB:30, MATFIN:15, DCON:40, DADM:40, CGER:25};
+function ritmo(code){ const g=grupo(code); return RITMO[g]||40; }
+
+// Plano de questoes em DUAS passagens:
+//   p1 = primeira passagem (aquisicao)  -> semanas 1-10
+//   p2 = revisita em regime de questoes -> semanas 11-14 (Fase 3)
+// Nas semanas 1-5 a p1 e literal do Plano_Fase1_Micro.md — ver PLANO_DIA.
+const QPLAN = {"158":{"p1":[15,6],"p2":[27,11]},"159":{"p1":[15,6],"p2":[27,11]},"160":{"p1":[15,6],"p2":[27,11]},"161":{"p1":[15,6],"p2":[27,11]},"162":{"p1":[15,6],"p2":[27,11]},"163":{"p1":[15,6],"p2":[27,11]},"164":{"p1":[15,6],"p2":[27,11]},"165":{"p1":[15,6],"p2":[27,11]},"166":{"p1":[15,6],"p2":[27,11]},"167":{"p1":[15,6],"p2":[27,11]},"119":{"p1":[7,2],"p2":[5,12]},"120":{"p1":[7,2],"p2":[5,12]},"121":{"p1":[7,2],"p2":[5,12]},"122":{"p1":[7,2],"p2":[5,12]},"123":{"p1":[7,3],"p2":[5,12]},"124":{"p1":[7,3],"p2":[5,12]},"125":{"p1":[7,3],"p2":[5,12]},"126":{"p1":[7,3],"p2":[5,12]},"127":{"p1":[7,3],"p2":[5,12]},"128":{"p1":[7,3],"p2":[5,12]},"129":{"p1":[7,3],"p2":[5,12]},"130":{"p1":[7,3],"p2":[5,12]},"131":{"p1":[7,3],"p2":[5,12]},"132":{"p1":[7,3],"p2":[5,12]},"1":{"p1":[52,1],"p2":[5,12]},"3":{"p1":[11,1],"p2":[5,12]},"4":{"p1":[10,1],"p2":[5,12]},"5":{"p1":[5,1],"p2":[5,12]},"6":{"p1":[5,1],"p2":[5,12]},"7":{"p1":[5,1],"p2":[5,12]},"8":{"p1":[5,1],"p2":[5,12]},"9":{"p1":[5,1],"p2":[5,12]},"11":{"p1":[5,1],"p2":[5,12]},"13":{"p1":[5,1],"p2":[5,12]},"14":{"p1":[5,3],"p2":[5,12]},"2":{"p1":[5,1],"p2":[5,12]},"10":{"p1":[5,1],"p2":[5,12]},"12":{"p1":[5,1],"p2":[5,12]},"133":{"p1":[18,5],"p2":[10,13]},"134":{"p1":[18,5],"p2":[10,13]},"135":{"p1":[18,5],"p2":[10,13]},"136":{"p1":[18,5],"p2":[10,13]},"137":{"p1":[18,9],"p2":[10,13]},"138":{"p1":[18,9],"p2":[10,13]},"139":{"p1":[18,9],"p2":[10,13]},"140":{"p1":[18,9],"p2":[10,13]},"141":{"p1":[18,9],"p2":[10,13]},"142":{"p1":[5,5],"p2":[10,13]},"143":{"p1":[5,5],"p2":[10,13]},"21":{"p1":[5,5],"p2":[10,13]},"17":{"p1":[5,5],"p2":[10,13]},"20":{"p1":[5,5],"p2":[10,13]},"23":{"p1":[5,5],"p2":[10,13]},"15":{"p1":[0,5]},"16":{"p1":[0,5]},"18":{"p1":[0,5]},"19":{"p1":[0,5]},"22":{"p1":[0,5]},"31":{"p1":[25,7],"p2":[6,14]},"37":{"p1":[17,4],"p2":[6,14]},"42":{"p1":[8,7],"p2":[6,14]},"45":{"p1":[5,7],"p2":[6,14]},"48":{"p1":[5,7],"p2":[6,14]},"26":{"p1":[43,4],"p2":[6,14]},"28":{"p1":[30,7],"p2":[6,14]},"29":{"p1":[24,7],"p2":[6,14]},"30":{"p1":[20,7],"p2":[6,14]},"32":{"p1":[17,7],"p2":[6,14]},"33":{"p1":[17,7],"p2":[6,14]},"34":{"p1":[15,7],"p2":[6,14]},"36":{"p1":[9,7],"p2":[6,14]},"39":{"p1":[5,7],"p2":[6,14]},"24":{"p1":[47,2],"p2":[6,14]},"25":{"p1":[42,2],"p2":[6,14]},"27":{"p1":[20,4],"p2":[6,14]},"35":{"p1":[5,7],"p2":[6,14]},"38":{"p1":[5,7],"p2":[6,14]},"40":{"p1":[5,7],"p2":[6,14]},"41":{"p1":[5,7],"p2":[6,14]},"43":{"p1":[5,7],"p2":[6,14]},"44":{"p1":[5,7],"p2":[6,14]},"46":{"p1":[5,7],"p2":[6,14]},"47":{"p1":[5,7],"p2":[6,14]},"55":{"p1":[20,3],"p2":[6,11]},"68":{"p1":[5,3],"p2":[6,11]},"51":{"p1":[20,3],"p2":[6,11]},"52":{"p1":[15,3],"p2":[6,11]},"53":{"p1":[15,3],"p2":[6,11]},"59":{"p1":[10,3],"p2":[6,11]},"60":{"p1":[6,3],"p2":[6,11]},"61":{"p1":[6,3],"p2":[6,11]},"63":{"p1":[5,3],"p2":[6,11]},"64":{"p1":[5,3],"p2":[6,11]},"67":{"p1":[5,3],"p2":[6,11]},"69":{"p1":[5,3],"p2":[6,11]},"70":{"p1":[5,3],"p2":[6,11]},"49":{"p1":[31,1],"p2":[6,11]},"50":{"p1":[23,3],"p2":[6,11]},"54":{"p1":[8,3],"p2":[6,11]},"56":{"p1":[7,1],"p2":[6,11]},"57":{"p1":[7,3],"p2":[6,11]},"58":{"p1":[6,3],"p2":[6,11]},"62":{"p1":[5,3],"p2":[6,11]},"65":{"p1":[5,1],"p2":[6,11]},"66":{"p1":[5,3],"p2":[6,11]},"168":{"p1":[16,6],"p2":[27,12]},"169":{"p1":[16,6],"p2":[27,12]},"170":{"p1":[16,6],"p2":[27,12]},"171":{"p1":[16,6],"p2":[27,12]},"172":{"p1":[16,6],"p2":[27,12]},"144":{"p1":[13,4],"p2":[5,14]},"145":{"p1":[13,4],"p2":[5,14]},"146":{"p1":[13,4],"p2":[5,14]},"147":{"p1":[13,4],"p2":[5,14]},"148":{"p1":[13,4],"p2":[5,14]},"149":{"p1":[11,4],"p2":[5,14]},"150":{"p1":[5,4],"p2":[5,14]},"151":{"p1":[5,4],"p2":[5,14]},"152":{"p1":[13,10],"p2":[5,14]},"153":{"p1":[13,10],"p2":[5,14]},"154":{"p1":[13,10],"p2":[5,14]},"155":{"p1":[13,10],"p2":[5,14]},"156":{"p1":[13,10],"p2":[5,14]},"157":{"p1":[13,10],"p2":[5,14]},"74":{"p1":[5,10],"p2":[5,14]},"72":{"p1":[5,10],"p2":[5,14]},"73":{"p1":[5,10],"p2":[5,14]},"75":{"p1":[5,10],"p2":[5,14]},"76":{"p1":[5,10],"p2":[5,14]},"71":{"p1":[5,4],"p2":[5,14]},"186":{"p1":[12,8],"p2":[11,14]},"187":{"p1":[12,8],"p2":[11,14]},"188":{"p1":[12,8],"p2":[11,14]},"189":{"p1":[12,8],"p2":[11,14]},"190":{"p1":[12,8],"p2":[11,14]},"191":{"p1":[12,8],"p2":[11,14]},"192":{"p1":[12,8],"p2":[11,14]},"193":{"p1":[12,8],"p2":[11,14]},"86":{"p1":[5,8],"p2":[6,11]},"77":{"p1":[19,8],"p2":[6,11]},"89":{"p1":[5,8],"p2":[6,11]},"87":{"p1":[5,8],"p2":[6,11]},"83":{"p1":[11,8],"p2":[6,11]},"84":{"p1":[10,8],"p2":[6,11]},"88":{"p1":[7,8],"p2":[6,11]},"90":{"p1":[5,8],"p2":[6,11]},"94":{"p1":[5,8],"p2":[6,11]},"80":{"p1":[10,8],"p2":[6,11]},"92":{"p1":[5,8],"p2":[6,11]},"91":{"p1":[5,8],"p2":[6,11]},"85":{"p1":[7,8],"p2":[6,11]},"79":{"p1":[10,8],"p2":[6,11]},"82":{"p1":[5,8],"p2":[6,11]},"81":{"p1":[9,8],"p2":[6,11]},"93":{"p1":[5,8],"p2":[6,11]},"78":{"p1":[12,8],"p2":[6,11]},"95":{"p1":[35,7],"p2":[5,12]},"99":{"p1":[16,7],"p2":[5,12]},"100":{"p1":[15,7],"p2":[5,12]},"102":{"p1":[13,7],"p2":[5,12]},"105":{"p1":[10,7],"p2":[5,12]},"106":{"p1":[10,7],"p2":[5,12]},"96":{"p1":[19,7],"p2":[5,12]},"97":{"p1":[11,7],"p2":[5,12]},"98":{"p1":[11,7],"p2":[5,12]},"101":{"p1":[9,7],"p2":[5,12]},"103":{"p1":[7,7],"p2":[5,12]},"104":{"p1":[7,7],"p2":[5,12]},"107":{"p1":[6,7],"p2":[5,12]},"108":{"p1":[6,7],"p2":[5,12]},"111":{"p1":[5,7],"p2":[5,12]},"109":{"p1":[5,7],"p2":[5,12]},"110":{"p1":[5,7],"p2":[5,12]},"112":{"p1":[5,7],"p2":[5,12]},"113":{"p1":[5,7]},"114":{"p1":[5,7]},"115":{"p1":[5,7]},"116":{"p1":[5,7]},"117":{"p1":[5,7]},"118":{"p1":[5,7]},"173":{"p1":[12,14],"p2":[12,14]},"174":{"p1":[12,14],"p2":[12,14]},"175":{"p1":[12,14],"p2":[12,14]},"176":{"p1":[12,14],"p2":[12,14]},"177":{"p1":[12,14],"p2":[12,14]},"197":{"p1":[16,10],"p2":[18,14]},"198":{"p1":[16,10],"p2":[18,14]},"199":{"p1":[16,10],"p2":[18,14]},"200":{"p1":[16,10],"p2":[18,14]},"201":{"p1":[16,10],"p2":[18,14]},"194":{"p1":[17,9],"p2":[7,11]},"195":{"p1":[17,9],"p2":[7,11]},"196":{"p1":[17,9],"p2":[7,11]},"178":{"p1":[15,12],"p2":[15,12]},"179":{"p1":[15,12],"p2":[15,12]},"180":{"p1":[15,12],"p2":[15,12]},"181":{"p1":[15,12],"p2":[15,12]},"182":{"p1":[15,13],"p2":[15,13]},"183":{"p1":[15,13],"p2":[15,13]},"184":{"p1":[15,13],"p2":[15,13]},"185":{"p1":[15,13],"p2":[15,13]},"202":{"p1":[12,11],"p2":[7,11]},"203":{"p1":[12,11],"p2":[7,11]},"204":{"p1":[12,11],"p2":[7,11]},"205":{"p1":[12,11],"p2":[7,11]},"206":{"p1":[12,11],"p2":[7,11]}};
+
+// Semanas 1-5, dia a dia: o bloco de cada dia, seu rotulo e os assuntos que
+// caem nele. Transcricao do Plano_Fase1_Micro.md.
+const PLANO_DIA = {"1":[{"d":"Segunda","min":240,"mat":"RT","rot":"EC 132/2023, íntegra — arts. 156-A e 195-V da CF, o desenho constitucional","tops":[1,6,3,4,5]},{"d":"Segunda","min":42,"mat":"DEV","rot":"Scrum, 1ª leva","tops":[49]},{"d":"Terça","min":105,"mat":"RT","rot":"LC 214, arts. 1º-11 — disposições preliminares, incidência, imunidades, fato gerador, local da operação","tops":[10,8,12,11]},{"d":"Terça","min":42,"mat":"DEV","rot":"Scrum, 2ª leva","tops":[49]},{"d":"Quarta","min":105,"mat":"RT","rot":"LC 214, arts. 12-20 — base de cálculo e alíquotas","tops":[7]},{"d":"Quarta","min":42,"mat":"DEV","rot":"Scrum, 3ª leva","tops":[49]},{"d":"Quinta","min":105,"mat":"RT","rot":"LC 214, arts. 21-37 — sujeição passiva e extinção dos débitos","tops":[9,13]},{"d":"Quinta","min":42,"mat":"DEV","rot":"Kanban","tops":[56]},{"d":"Sexta","min":105,"mat":"RT","rot":"Questões: as 20 de SEFAZ-RN 2026 como leitura dirigida — varrem a LC 214 capítulo a capítulo","tops":[2]},{"d":"Sexta","min":42,"mat":"DEV","rot":"XP + erros da semana","tops":[65]}],"2":[{"d":"Segunda","min":105,"mat":"RT","rot":"LC 214, arts. 38-56 — não cumulatividade, apropriação e utilização de créditos","tops":[119]},{"d":"Segunda","min":42,"mat":"INFRA","rot":"ITIL v4, 1ª leva","tops":[24]},{"d":"Terça","min":105,"mat":"RT","rot":"LC 214, arts. 57-61 — operacionalização e split payment","tops":[120]},{"d":"Terça","min":42,"mat":"INFRA","rot":"ITIL v4, 2ª leva","tops":[24]},{"d":"Quarta","min":105,"mat":"RT","rot":"LC 214, arts. 62-82 — importação e exportação","tops":[121]},{"d":"Quarta","min":42,"mat":"INFRA","rot":"ITIL v4, 3ª leva","tops":[24]},{"d":"Quinta","min":105,"mat":"RT","rot":"🚨 INSCRIÇÃO — abre hoje, fazer antes de abrir qualquer PDF. Depois: LC 214, arts. 111-124 — cashback e Cesta Básica Nacional","tops":[122]},{"d":"Quinta","min":42,"mat":"INFRA","rot":"Cloud computing, 1ª leva","tops":[25]},{"d":"Sexta","min":105,"mat":"RT","rot":"Questões: as 43 restantes de CEBRASPE em RT + as de ME de SEFAZ SP, GO, CE e MT","tops":[5,2]},{"d":"Sexta","min":42,"mat":"INFRA","rot":"Cloud computing, 2ª leva + erros","tops":[25]}],"3":[{"d":"Segunda","min":105,"mat":"RT","rot":"LC 227, arts. 1º-52 — CGIBS: competências, estrutura, controle externo, transparência","tops":[126,14]},{"d":"Segunda","min":42,"mat":"DEV","rot":"Testes de software, 1ª leva","tops":[50]},{"d":"Terça","min":105,"mat":"RT","rot":"LC 227, arts. 53-101 — Processo Administrativo Tributário do IBS","tops":[127]},{"d":"Terça","min":42,"mat":"DEV","rot":"Testes de software, 2ª leva","tops":[50]},{"d":"Quarta","min":105,"mat":"RT","rot":"LC 214, arts. 341-407 — transição IBS/CBS/ICMS, alíquotas 2029-2033, saldo credor. Imposto Seletivo, distribuição e regimes diferenciados entram como lista e percentuais, não artigo a artigo","tops":[125,124,123]},{"d":"Quarta","min":42,"mat":"DEV","rot":"Testes de software, 3ª leva","tops":[50]},{"d":"Quinta","min":105,"mat":"RT","rot":"🔴 Nível 3 — Regulamento do IBS, Livro I Título II (arts. 103-150): obrigações acessórias, DeRE, NF-ABI, NFAg, BP-e Aéreo, NF-e Gás","tops":[128,129,130,131,132]},{"d":"Quinta","min":42,"mat":"DEV","rot":"Git","tops":[52]},{"d":"Sexta","min":105,"mat":"RT","rot":"Questões: 1ª rodada dos ~120 itens gerados do nível 3 (Reg. IBS, LC 227, split payment, apuração assistida, Sinter/CIB, cCredPres)","tops":[128,132,131]},{"d":"Sexta","min":42,"mat":"DEV","rot":"DevOps/CI-CD + erros","tops":[51]}],"4":[{"d":"Segunda","min":105,"mat":"LEGAL","rot":"IPVA — Lei 6.555, arts. 4º a 6º: não incidência e isenções, inciso por inciso, contra a tabela de armadilhas (táxi 2.0L/1 ano, agrícola, PcD, autarquias)","tops":[144]},{"d":"Segunda","min":42,"mat":"INFRA","rot":"DevOps/IaC, 1ª leva","tops":[26]},{"d":"Terça","min":105,"mat":"LEGAL","rot":"IPVA — arts. 1º-3º, 7º-12, 17: FG e momento, domicílio, contribuinte e solidariedade sem benefício de ordem, BC, novo lançamento por calendário (Lei 9.780/2025)","tops":[145,146]},{"d":"Terça","min":42,"mat":"INFRA","rot":"DevOps/IaC, 2ª leva","tops":[26]},{"d":"Quarta","min":105,"mat":"LEGAL","rot":"PAT — Lei 6.771, arts. 11-13 e 18-24: intimação e contagem, auto de infração, defesa, inépcia, crédito não contencioso","tops":[147]},{"d":"Quarta","min":42,"mat":"INFRA","rot":"Contêineres, 1ª leva","tops":[27]},{"d":"Quinta","min":105,"mat":"LEGAL","rot":"PAT — arts. 28-51: ordinário × especial (400 UPFAL), instâncias, Coordenadoria de Julgamento e CTE (não TATE), recursos, reexame necessário","tops":[148,149]},{"d":"Quinta","min":42,"mat":"INFRA","rot":"Contêineres, 2ª leva","tops":[27]},{"d":"Sexta","min":105,"mat":"LEGAL","rot":"ITCD — Lei 5.077, arts. 162-164, 166-172 + art. 168, alíquotas progressivas (Lei 9.440/2024). Depois: as 42 questões de AL em escopo","tops":[150,151,71]},{"d":"Sexta","min":42,"mat":"INFRA","rot":"🔴 Forense computacional — as 17, todas. É a lacuna do caderno","tops":[37]}],"5":[{"d":"Segunda","min":105,"mat":"AUDFIS","rot":"SPED — Decreto 6.022/2007 + módulos. Depois: as 23 questões de SPED do acervo (é o tópico mais bem servido)","tops":[17,23,20,21]},{"d":"Terça","min":105,"mat":"AUDFIS","rot":"MOC NF-e/NFC-e 7.0, Visão Geral — modelo operacional, autorização de uso, eventos, CC-e","tops":[133]},{"d":"Quarta","min":105,"mat":"AUDFIS","rot":"MOC NF-e 7.0 — cancelamento, inutilização, contingência: SVC-AN, SVC-RS, EPEC, FS-DA. Lei seca curta e numérica → Anki","tops":[134]},{"d":"Quinta","min":105,"mat":"AUDFIS","rot":"Guia Prático EFD 3.2.2 — estrutura de blocos, obrigatoriedade, prazos, retificação","tops":[135,136]},{"d":"Sexta","min":105,"mat":"AUDFIS","rot":"Questões: as 77 no alvo de Auditoria Fiscal. ⚠️ conferir toda resposta numérica de EFD contra a 3.2.2 — o acervo cita 3.0.6, 3.1.0 e 3.1.7","tops":[142,143]},{"d":"Segunda","min":42,"mat":"CEX","rot":"Consolidação: erros de Reforma Tributária","tops":[]},{"d":"Terça","min":42,"mat":"CEX","rot":"Consolidação: erros de Legislação de AL","tops":[]},{"d":"Quarta","min":42,"mat":"CEX","rot":"Consolidação: erros de Dev e Infra","tops":[]},{"d":"Quinta","min":42,"mat":"CEX","rot":"Tabelas-âncora: alíquotas de transição do IBS, 400 UPFAL, contingência NF-e","tops":[]},{"d":"Sexta","min":42,"mat":"CEX","rot":"Fechar o pool do Simulado 01 (domingo 11/10, 80 itens, 2h15, à tarde)","tops":[]}]};
+function topicP1(id){ const p=QPLAN[id]; return p&&p.p1?p.p1:null; }
+function topicP2(id){ const p=QPLAN[id]; return p&&p.p2?p.p2:null; }
+function topicMeta(id){ const p=topicP1(id); return p?p[0]:0; }
+function topicSemana(id){ const p=topicP1(id); return p?p[1]:0; }
+function topicMetaRev(id){ const p=topicP2(id); return p?p[0]:0; }
+function topicSemanaRev(id){ const p=topicP2(id); return p?p[1]:0; }
+function metaPlanoTotal(){
+  return Object.values(QPLAN).reduce((a,p)=>a+(p.p1?p.p1[0]:0)+(p.p2?p.p2[0]:0),0);
+}
+
+const CODIGOS = {"1":[2839107,2935098,2982601,2991953,3039683,3144073,3183308,3183363,3195388,3195391,3199384,3228254,3253829,3253896,3253897,3273346,3375832,3401134,3430973,3457608,3517550,3602074,3639051,3641745,3655450,3670612,3685892,3695047,3746251,3748332,3755266,3759236,3775188,3779086,3816445,3846958,3863182,3863183,3863218,3883525,3883527,3883537,3908326,3909279,3911271,3911279,3911306,3913088,3913096,3913114,3913125,3919800,3925222,3957380,3962536,3962550,3962560,3962562,3962565,3962569,3962571,3962587,3962595,3962601,3962603,3962605,3969814,3976493,3976494,3984212,3993330,4010218,4014611,4023837,4023840,4023844,4056352,4057485,4057491,4058155,4059198,4068788,4068790,4085818,4089360,4098290,4098297,4113147,4117552,4117558,4122693,4163883,4172063,4172069],"2":[2807079,2837366,2839109,2839110,2839111,2839114,2839115,2839116,2849134,2849137,2849289,2876073,2973020,2973023,3034760,3047121,3106780,3195364,3195367,3195386,3195502,3195504,3199357,3228244,3253899,3258713,3258714,3401153,3417541,3539244,3541939,3590127,3608934,3639033,3701252,3733848,3754824,3846561,3883533,3981449,3984159,4005148],"3":[2839108,3102852,3195379,3195403,3195519,3464992,3536393,3641743,3685893,3816534,3819664,3879000,3883518,3883523,3883524,3932392,3969820,3977931,4023433,4023849,4122718],"4":[2875956,3113736,3195369,3195392,3195397,3195497,3228259,3253901,3271610,3641746,3846963,3883500,3883530,3883532,3911308,3962607,4058142,4059188],"5":[2777161,3401157,3711665,3832927,3846954,3846956,3901627,3909527,3976067,3976068,3976070],"6":[2973025,3195377,3195401,3195499,3195514,3214430,3271612,3357094,4074328],"7":[3402862,3639054,3846965,3883555,3884026,3976075],"8":[3541971,3863198,3883543,3901652,4124116],"9":[3846967,3863200,3883503,3976077,4122710],"10":[3863195,3976064,3994295,3994442],"11":[3846556,3976074,3994486,4122708],"12":[3846964,3976065,4122707],"13":[3846966,3883560,3976071],"14":[3552025,3561390,3565345],"15":[1937196,1942566,1942579,1970286,1970288,1973011,1973012,2151429,2151439,2151441,2164306,2292294,2292355,2292357,2421915,2421922,2421928,2423221,2450121,2520901,2520933,2924732,3008014,3039905,3075521,3075525,3078850,3144040,3144056,3144063,3202415,3202416,3240932,3240935,3240936,3240948,3240969,3251909,3289729,3317215,3317218,3322664,3342284,3373600,3400436,3400439,3400453,3455376,3455377,3604455,3639346,3639350,3639353,3639360,3639369,3683702,3683724,3683744,3684034,3684037,3815680,3816066,3816075,3828846,3828856,3828881,3828946,3828949,3883354,3883359,3967899,3967904,3967912,3967915],"16":[1942575,1942577,2151431,2520904,2759705,3039475,3039480,3039482,3039483,3039621,3039846,3039850,3039851,3240939,3240953,3322672,3400446,3400458,3455382,3683699,3883367,3883381],"17":[2164370,2759777,2759779,2759780,2759781,3293587,3446245,4023866,4023870,4023878,4023882,4023891],"18":[2715120,3172412,3684031,3815678,3815679,3815681,3829038,3967892],"19":[2415778,3075531,3078840,3078841,3317217,3662000,3684042],"20":[2116789,3293593,3453999,3495933,4023872,4023887],"21":[2116790,2777389,2840950,2840952,3514380,3831172],"22":[1937195,3342279,3816034,3816051,3828868],"23":[2759778,3293589,3293591],"24":[2775808,2775810,2776427,2776428,2776429,2777397,2777398,2783888,2783889,2783890,2783891,2796638,2796642,2797340,2799268,2799269,2799273,2799275,2799276,2799278,2839786,2839788,2839790,2839791,2847900,2847909,2847910,2876584,2876588,2876626,2876691,2876694,2877653,2877654,2877655,2877656,2892294,2940774,2940777,2993386,3008429,3041226,3042092,3048569,3048572,3077339,3077350,3077352,3077353,3077354,3077448,3077467,3077470,3082808,3090392,3090409,3148328,3148330,3148331,3148332,3165946,3165952,3166372,3173494,3173495,3173497,3173499,3186739,3186742,3206233,3206235,3206238,3255348,3255350,3255351,3255352,3258601,3291903,3292157,3292159,3292160,3292161,3292162,3292163,3292164,3292165,3323836,3323842,3323948,3323951,3345870,3345871,3367097,3373814,3400348,3405813,3422103,3425088,3428394,3437607,3447016,3455604,3476118,3663959,3685052,3685055,3815644,3828205,3832475,3841997,3841998,3841999,3842000,3842001,3842080,3916904,3916907,3917859],"25":[2780740,2780741,2780763,2780772,2780777,2783896,2783897,2783898,2783899,2783900,2783903,2783904,2789870,2796704,2796712,2839800,2839803,2842011,2842241,2847650,2847918,2847921,2847934,2847941,2847943,2848024,2848026,2874305,2876872,2876875,2877732,2877734,2940417,2940418,2940426,2940706,2940712,2940720,2940731,2993137,2996875,2997182,3041225,3042050,3048543,3048545,3090426,3090443,3104242,3165839,3165933,3166462,3166544,3166686,3173383,3238553,3238560,3238687,3238688,3238689,3250660,3250665,3250668,3250671,3258561,3260039,3260041,3324066,3340419,3373801,3373810,3400238,3430524,3430526,3430531,3455530,3455538,3456420,3473385,3552822,3598018,3641691,3641693,3641695,3641696,3832523,3842013,3842041,3842046,3842047,3842050,3872569,3877756,3883468,3967389,3967390,3967391,3967393,3967398,3967402,3980933,4096746,4096749,4096798,4096802],"26":[2271487,2536029,2575813,2589459,2591110,2638637,2642391,2642394,2642395,2716672,2759894,2759898,2759979,2759981,2775843,2775859,2777454,2781592,2796939,2796945,2796961,2839819,2839822,2839830,2876490,2876491,2876852,2876880,2877756,2877760,2891814,2981624,2981629,2993156,3008386,3008387,3008388,3041911,3082713,3082805,3148304,3166363,3173426,3186764,3238486,3238487,3238609,3251164,3340524,3340525,3340605,3340801,3340802,3340806,3340809,3340816,3373613,3815672,3827827,3965968,3970384],"27":[2775826,2781591,2839777,2842617,2842619,2842620,2876848,2876851,2876876,2876877,2876878,2877757,2891782,2940415,2993112,2993114,2993341,2997170,3008390,3041932,3041936,3041997,3042008,3173429,3173432,3173434,3173437,3173439,3173441,3173446,3186774,3186775,3238611,3251173,3260034,3293350,3340510,3340511,3340516,3340519,3345895,3373660,3373668,3428343,3445364,3445371,3598818,3965970,3970341,4125962,4125963],"28":[2423545,2424312,2590833,2591846,2642013,2642015,2776358,2776359,2783782,2797355,2847879,2876714,2877553,2892165,2892167,2997220,3076791,3077320,3077324,3081592,3081628,3081632,3081634,3148283,3206211,3259938,3324029,3400372,3437600,3598192,3598194,3641681,3828151,3828204,3832470,3832472,3917876,3990522,3990591,4096782,4096783,4126134,4126136],"29":[2593704,2642029,2642030,2781234,2781237,2783914,2799203,2847648,2847845,2876660,2876662,2877531,2877532,2877715,2993452,3076830,3082773,3148319,3148321,3166687,3173492,3367067,3400362,3425019,3455527,3499270,3641682,3663478,3663916,3663919,3685001,3915635,3970349,4143731],"30":[2590832,2604208,2783775,2841665,2847869,2892150,2892153,3041212,3048666,3090382,3090383,3165935,3191045,3289731,3291871,3340528,3400367,3422360,3598191,3916938,3916941,3952549,3990529,3990534,3990544,3994994,3994999,4096755],"31":[2781226,2781227,3048685,3076809,3076812,3077632,3081608,3081613,3238346,3250681,3292151,3340461,3340463,3340471,3400376,3915627,3915629,3917841,3967358,3990568,4096770,4126104,4126107,4143721,4144769],"32":[2780365,2797356,2840003,2841958,2940686,3076845,3082625,3148284,3172765,3238369,3238805,3238807,3238808,3238809,3259927,3259928,3259934,3367124,3400382,3663921,3828132,4096779,4126128,4126130],"33":[2423427,2575662,2642279,2797448,2839782,3048674,3077744,3077745,3077755,3090436,3148287,3191055,3292152,3340512,3685034,3832474,3952552,3995036,3995040,3995041,3995042,3995043,4147037,4147452],"34":[2338846,2575763,2590776,2590812,2642298,2796974,2799199,2876649,2876651,2892220,2940591,2988522,2996902,3077642,3090446,3166536,3173477,3430511,3473343,3552826,3552847,3952566],"35":[2783912,2783913,2796917,2841763,2847646,2848044,2877716,3048692,3076902,3081554,3148282,3191070,3258566,3598784,3842026,3842029,3970589,4123470,4143650,4143656],"36":[2450392,2575738,2637494,2637495,2642272,2877722,3081595,3172766,3238811,3238812,3238814,3238816,3238818,3238820,3324038,3345924,3444448,3598779,3967368,4143756],"37":[2877575,2877576,2877577,3400356,3548557,3548558,3548562,3548563,3548569,3548575,3548577,3548579,3548583,3548588,3548590,3548598,3548601],"38":[2841762,2848211,2876497,2877535,3048695,3191038,3598782,3663927,3663944,3832514,3915625,3990576,4096364,4143735,4143758],"39":[2637934,2775858,3041909,3206228,3340518,3340600,3400327,3456067,3456474,3456476,3456490,3641684,3842021,4147456],"40":[2997222,2997230,3104252,3191072,3324043,3456119,3598775,3598783,3832513,3857418,3970597,4096765,4147454],"41":[2783915,3048654,3104248,3104251,3255373,3598773,3915624,3917846,3967363,4096363,4126112,4126117],"42":[2575804,2604197,2797303,2841760,3829446,3829554,3832432,3989986],"43":[2877720,2997228,3191061,3842039,4096768,4143732],"44":[2642012,3148310,3832467,3915630,3917854,3970405],"45":[2877538,2877542,3400374,3446088,3967362],"46":[3077675,3090372,3148286,3990572],"47":[2877536,3255369,3255371],"48":[2940673,3400373,3944740],"49":[2271472,2450367,2589476,2589478,2593597,2603868,2637867,2638642,2638752,2638753,2639317,2775848,2780352,2780353,2790353,2790354,2790468,2791017,2796937,2798964,2798969,2798970,2798971,2798975,2799239,2799241,2799248,2842612,2877469,2877478,2891787,2938788,2938791,2942094,2942385,3077439,3077550,3077551,3077555,3164411,3164414,3164529,3165762,3165763,3166234,3166235,3166339,3166340,3205947,3206783,3206785,3255344,3259719,3259722,3291919,3294401,3340532,3340533,3340945,3340950,3340952,3421930,3433998,3456556,3456612,3456631,3473451,3504002,3504005,3663299,3815632,3842088,3916932,3917443,3952375,3965955,3970376,3990434],"50":[165191,184457,211753,229472,230846,230847,231221,250205,260149,284815,346653,389796,513369,513378,552399,553344,558852,595366,620066,726081,738275,1038600,1251723,1294660,1294677,1294678,1294680,1294682,1294684,1304228,1306314,1628803,1768544,1768546,1935724,1936861,2216519,2216520,2216521,2216769,2216771,2265601,2589469,2593602,2605584,2780356,2780357,2781566,2940487,3010746,3205919,3238494,3340583,3340584,3445253,3456065,3917754,3970388],"51":[1935748,1935751,2214501,2216531,2216532,2759168,2759894,2782854,2796945,2876490,2887056,2943469,3053056,3116730,3119238,3186764,3235044,3238487,3251168,3251169,3340524,3340802,3445337,3842008,3842014,3842045,3877584,3970384],"52":[2536019,2716671,2759896,2789639,2791056,2876858,2891810,2940481,2940490,2993141,2993157,3082718,3186769,3238614,3251251,3251255,3445275,3445281,3445291,3446027,3455534,3455535],"53":[2716723,2716724,2840004,2877533,2877534,2940783,2997227,3008435,3077608,3081604,3255363,3255365,3255449,3255451,3259921,3340454,3548492,3828122,3828123,3917833,4143717],"54":[2576007,2576010,2589508,2642506,2759887,2759888,2938776,3008378,3041989,3082646,3191011,3206779,3428387,3437613,3445460,3473313,3503870,3597489,3597498,3597831,3684969],"55":[2637755,2776402,2876579,3008367,3166258,3166259,3166281,3166282,3166284,3166285,3166288,3186781,3186782,3186783,3255354,3291948,3291950,3400175,3400177,3456515],"56":[2780354,3042087,3077443,3165509,3165760,3251134,3345797,3400158,3416941,3421933,3433996,3445207,3828187,3917775,3917864,3965776,3990423],"57":[2589515,2638631,2642406,2759892,2781599,2781600,2791020,2797680,2891793,2891799,2938797,3082662,3238474,3373644,3424620,3437351,3597807],"58":[2450371,2797619,2797627,2797656,2891772,2981658,2981663,2993129,2993135,2997200,3205890,3445227,3455571,3827816,3842024],"59":[2450359,2780339,2796950,2876838,2938875,2981631,3078374,3238484,3406156,3444425,3444429,3444430,3456073,3503885],"60":[2423325,2590803,2876634,3205957,3291934,3293272,3293294,3345815,3373824],"61":[2716654,2775860,2775865,2775866,2791016,2796941,3259732,3842086,3842089],"62":[2216474,2216477,2993422,3081596,3082632,3173481,3842017],"63":[2536050,2589441,2780344,2997209,3473283,3842016,3966304],"64":[2797436,2940407,2993100,3008438,3255455,3447187,3597521],"65":[2589480,2780349,2780351,3259720,3291921,3340536,3340539],"66":[2593705,3915621,3915622,3990547,3990549,3990554],"67":[2716662,2775822,2876885,3291936,3456074,3966309],"68":[2638681,2638683,2877544,3251286,4147438],"69":[2876836,3251229,3400166,3842087],"70":[2589446,3456078,3970667],"71":[38198,38200,38201,38349,38350,38355,38485,38489,1037338,1116514,1143859,1143862,1143864,1143867,1143869,1790792,1790799,1790802],"72":[38182,38332,38480,1037343,1790805,1790868],"73":[1143893,1143895,1790809,1790872],"74":[38331,38334,38486],"75":[38194,1143897,1790811],"76":[38192,38197,1143898],"77":[2778879,2778886,2778910,2794503,2794506,2794515,2794518,2935088,2983696,2983699,2983703,3039134,3039136,3041256,3041259,3102857,3102877,3192169,3258712,3290523,3293584,3314971,3314972,3314973,3361104,3438962,3446315,3493972,3514267,3514269,3514270,3514271,3514272,3599516,3604383,3827694,3827701,3830237,3830241,3831198,3831199,3831202,3841960,3919677,4023436],"78":[16167,54942,60322,89009,89367,287781,364561,542395,725327,2274863,2358939,2358940,2358941,2722917,3039251,3041265,3041266,3041268,3041269,3102915,3192167,3271593,3271598,3271599,3314979,3314981,3514281,3514282,3604347,3604351,3625464,3625861,3950172,3969821,3969829,4059187,4068804,4068807,4147014,4147345],"79":[2935090,2935095,2935100,2935102,2935105,2935107,2973031,2983719,2983720,2983722,2983727,2983729,2987941,3039246,3039254,3041257,3041258,3102868,3102873,3144070,3188137,3192168,3192170,3199375,3296097,3342206,3446311,3446319,3446320,3514275,3551337,3604346,3604350,3604372,3827690,3830232,3830253,4023819,4033915],"80":[60323,442359,540298,964031,2673632,2794499,2794501,2973034,2983695,3186291,3199350,3199356,3314977,3514279,3600004,3604349,3625860,3625863,3681750,3743677,3969830,3969831,3969833],"81":[2876073,2935098,2973020,2973023,2973025,3039683,3102852,3199357,3199384,3258713,3258714,3271610,3271612,3969814,3969820,4023433,4023837,4023840,4023844,4023849,4068788],"82":[2778867,2794494,2935086,3039138,3039244,3039247,3039258,3188142,3194604,3271579,3271611,3314974,3446313,3493976,3604355,3831196,3831221,3919683,3969815,4023445],"83":[2874354,2874358,2983706,2983708,2983711,2983713,2983717,3039688,3102911,3192166,3199366,3258718,3258719,3514277,3514278,3546764,3625470,3625472],"84":[2973029,2973041,3039693,3039697,3102922,3192165,3271596,3314982,3438965,3514106,3514276,3604356,3625466,3969825,3969827,3973396,3973397],"85":[1376886,3039255,3039686,3144074,3144076,3144079,3144081,3144082,3199364,3541953,3604354,3827660,3831217,3919671,4023440,4023834,4033910],"86":[2794492,2794496,2983072,3039135,3039137,3361154,3514274,3625478,3830244,3830245,3831201,3919674,4033909,4033913],"87":[89361,118498,120380,1340346,1781107,2305299,2927169,3039252,3199345,3199348,3314975,3314976,3314978],"88":[59860,60314,60319,60320,554599,767642,1452263,2973044,3041262,3041263,3102909,3827705],"89":[2935093,3188145,3192164,3199361,3199362,3258721,3258722,3271582,3296504,3514268],"90":[60321,2778914,2778916,3514101,3604348,3604352,3827703],"91":[3290363,3290364,4033916,4095953,4095957,4095960],"92":[3314980,3438967,3514280,3625479,3625892],"93":[2854601,3041354,3041359,3258690,3271608],"94":[539902,3199359,3296502],"95":[2794998,2794999,2795000,2818539,2818551,2818553,2876231,2876234,2983076,3008708,3041669,3047286,3047289,3084412,3103690,3143101,3143106,3202278,3249842,3249844,3296089,3296090,3313440,3323259,3348883,3348888,3385752,3385754,3385835,3402693,3402697,3402704,3599592,3599646,3599647,3830230,3830498,3830499,3830501,3872505,3872508,3875123,3919687,3919688,3919689],"96":[2795173,2795779,2856011,2856015,2856145,3041616,3041617,3041618,3047191,3084381,3084384,3144162,3144165,3144169,3339880,3339881,3339882,3354541,3354542,3385937,3385940,3385942,3402647,3402652,3454875,3475139,3475155,3475157,3475192,3475194,3495841,3495842,3875103,3875224],"97":[2795171,2795181,2818503,2818504,2855803,2856031,2856148,2856149,3047140,3084353,3084365,3084367,3103674,3104407,3144131,3144136,3290034,3320051,3454863,3475045,3599609,3875079],"98":[2818501,2855737,2855752,2856144,2856151,2856153,2874416,2874419,3041658,3084336,3084339,3084341,3103549,3144140,3144145,3144148,3385979,3385991,3454854,3454856,3599602],"99":[2855997,2855998,2876246,2876249,2876252,2876287,3084357,3103687,3143107,3144206,3202279,3249843,3385828,3385830,3385996,3475136,3475214,3475228,3475238,3475248,3875126],"100":[2856026,2876294,3008718,3008846,3144151,3144154,3296093,3320020,3323260,3339868,3339871,3366862,3385900,3599654,3872491,3872739,3875225,3875226,3883207],"101":[2818498,2818499,2874402,2874403,2874404,2874406,2874409,2874411,2874412,2874414,3041622,3041623,3047122,3047125,3290033,3385956,3385976],"102":[2795843,2856017,2876230,2876288,3008705,3041630,3041631,3041634,3084394,3144177,3144178,3385884,3454894,3529544,3529546,3529554,3599655],"103":[2855769,2855782,2855784,2856152,3103652,3385970,3385993,3475002,3475013,3475025,3475222,3599598,3599600,3875098],"104":[2855668,2856024,2876286,3041626,3047240,3047247,3047251,3296091,3296092,3320029,3339870,3493298,3681188,3830495],"105":[2795732,2855804,2856030,3084370,3144217,3290029,3319652,3385995,3454867,3454869,3475133,3475219,3475251],"106":[2795184,2854267,2876190,2876197,2876243,3041663,3041665,3103683,3104409,3319649,3319654,3320063,3454864],"107":[2874399,2874400,2874401,3041624,3041625,3084310,3084315,3385975,3402659,3599593,3599595],"108":[2855670,2855677,2855679,3084439,3144156,3144163,3144172,3144173,3144174,3475211,3495846],"109":[2795172,2795707,2856150,2924542,3084342,3084346,3495845,3599606,3681196],"110":[2855801,3084349,3319686,3384929,3385987,3475042],"111":[3084368,3144203,3385826,3402701,3475028,3599607],"112":[3083076,3475242,3475253,3874974,3874976],"113":[2924531,3008693,3084335,3474998,3883201],"114":[2855795,2855798,2855799,3041667,3875101],"115":[2855999,2856000,3385948,3681173],"116":[2795708,2795709,3830224],"117":[3103655,3599610,3875094],"118":[3422157,3422158,3475234]};
+function topicCodigos(id){ return CODIGOS[id]||[]; }
+// Renderiza o bloco copiar/ver códigos de um assunto (id do plano). Sem id colidente
+// no DOM: verCods age sobre o irmão .cods-list. Retorna "" se não houver código.
+function codigosUI(id){
+  const c=topicCodigos(id); if(!c.length) return "";
+  return `<span class="cods"><button class="btn xs" title="Copiar ${c.length} códigos p/ colar no TEC" onclick="copiarCods(event,${id})">📋 ${c.length}</button><span class="cods-ver" onclick="verCods(event)">ver</span><span class="cods-list hide">${c.join(" ")}</span></span>`;
+}
+function copiarCods(ev,id){
+  ev.stopPropagation();
+  const c=topicCodigos(id); if(!c.length){ toast("Sem códigos p/ este assunto"); return; }
+  const txt=c.join(" "), ok=()=>toast(c.length+" códigos copiados ✓");
+  if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(ok).catch(()=>fallbackCopy(txt,ok));
+  else fallbackCopy(txt,ok);
+}
+function fallbackCopy(txt,ok){
+  const ta=document.createElement("textarea"); ta.value=txt; ta.style.position="fixed"; ta.style.opacity="0";
+  document.body.appendChild(ta); ta.select();
+  try{ document.execCommand("copy"); ok(); }catch(e){ toast("Copie manualmente na lista"); }
+  document.body.removeChild(ta);
+}
+function verCods(ev){
+  ev.stopPropagation();
+  const box=ev.currentTarget.parentNode.querySelector(".cods-list");
+  box.classList.toggle("hide");
+  ev.currentTarget.textContent=box.classList.contains("hide")?"ver":"ocultar";
+}
+
+// Plano semanal — Plano_Estudos_Set-Dez.md §5 e Plano_Fase1_Micro.md.
+// Sem sabado: 45min de fila + 1h45 do bloco da fase + 42min de cauda = 3h12/dia util.
+const SEMANAS = [
+  {n:1, per:"07/09 – 13/09", fase:"Fase 1 — aquisição do que é novo", bloco:"RT", cauda:"DEV"},
+  {n:2, per:"14/09 – 20/09", fase:"Fase 1 — aquisição do que é novo", bloco:"RT", cauda:"INFRA"},
+  {n:3, per:"21/09 – 27/09", fase:"Fase 1 — aquisição do que é novo", bloco:"RT", cauda:"DEV"},
+  {n:4, per:"28/09 – 04/10", fase:"Fase 1 — aquisição do que é novo", bloco:"LEGAL", cauda:"INFRA"},
+  {n:5, per:"05/10 – 11/10", fase:"Fase 1 — aquisição do que é novo", bloco:"AUDFIS", cauda:null},
+  {n:6, per:"12/10 – 18/10", fase:"Fase 2 — fechar o novo e reativar o antigo", bloco:"CDADOS", cauda:"IA"},
+  {n:7, per:"19/10 – 25/10", fase:"Fase 2 — fechar o novo e reativar o antigo", bloco:"ECON", cauda:"INFRA"},
+  {n:8, per:"26/10 – 01/11", fase:"Fase 2 — fechar o novo e reativar o antigo", bloco:"FINPUB", cauda:"DTRIB"},
+  {n:9, per:"02/11 – 08/11", fase:"Fase 2 — fechar o novo e reativar o antigo", bloco:"AUDFIS", cauda:"MATFIN"},
+  {n:10, per:"09/11 – 15/11", fase:"Fase 2 — fechar o novo e reativar o antigo", bloco:"LEGAL", cauda:"CPUB"},
+  {n:11, per:"16/11 – 22/11", fase:"Fase 3 — questões e cadeias", bloco:"DTRIB", cauda:"CGER"},
+  {n:12, per:"23/11 – 29/11", fase:"Fase 3 — questões e cadeias", bloco:"RT", cauda:"DCON"},
+  {n:13, per:"30/11 – 06/12", fase:"Fase 3 — questões e cadeias", bloco:"AUDFIS", cauda:"DADM"},
+  {n:14, per:"07/12 – 13/12", fase:"Fase 3 — questões e cadeias", bloco:"LEGAL", cauda:"ESTAT"},
+  {n:15, per:"14/12 – 20/12", fase:"Consolidação", bloco:null, cauda:null},
+];
+const S1_SEGUNDA = "2026-09-07";
+const PERIODO_INI = "2026-09-07", PERIODO_FIM = "2026-12-20";
+const PROVA1 = "2026-12-20", PROVA2 = "2027-01-10";
+// ULT_AQUISICAO = ultima semana de primeira passagem (fim da Fase 2).
+// ULT_SEMANA    = ultima semana util antes da consolidacao.
+const ULT_AQUISICAO = 10, ULT_SEMANA = 14;
+
+// Grade: 45min de fila + 1h45 do bloco da fase + 42min de cauda = 3h12/dia util.
+const DIA_SEMANA = {1:"Segunda",2:"Terça",3:"Quarta",4:"Quinta",5:"Sexta"};
+// Blocos de um dia. Nas semanas 1-5 vem do PLANO_DIA, que e a transcricao do
+// Plano_Fase1_Micro.md — dia, rotulo e assuntos. Nas demais, o molde da semana.
+function gradeDoDia(dia,sem){
+  const dd=(PLANO_DIA[sem]||[]).filter(b=>b.d===dia);
+  if(dd.length) return dd;
+  const s=SEMANAS.find(x=>x.n===sem); if(!s||!s.bloco) return [];
+  return [{d:dia,min:105,mat:s.bloco,rot:"",tops:null},
+          {d:dia,min:42,mat:s.cauda||s.bloco,rot:"",tops:null}];
+}
+// Em qual semana do ciclo cai uma data.
+function semanaDoDia(date){
+  const sow=startOfWeek(date), s1=startOfWeek(new Date(S1_SEGUNDA+"T12:00:00"));
+  return Math.round((sow-s1)/(7*86400000))+1;
+}
+const GRADE = {};  // grade fixa foi substituida por gradeDoDia(dia, semana)
+const FASES = [
+  {sem:"Semanas 1-5",per:"07/09 a 11/10",tit:"Fase 1 — aquisição do que é novo para todos",txt:"Reforma Tributária fecha nas semanas 1-3 (28h30). Semana 4: Legislação de AL, começando pelas isenções do IPVA. Semana 5: núcleo conceitual de Auditoria Fiscal (SPED, MOC NF-e 7.0, estrutura da EFD 3.2.2). Caudas diárias de 42min: Dev nas semanas 1 e 3, Infra nas 2 e 4, consolidação na 5. 🚨 INSCRIÇÃO na quinta 17/09."},
+  {sem:"Semanas 6-10",per:"12/10 a 15/11",tit:"Fase 2 — fechar o novo e reativar o antigo",txt:"Ciência de Dados e IA entram (30 itens, o maior bloco — o caderno precisa existir antes). Economia, Finanças Públicas e Mat. Financeira. Auditoria Fiscal volta para a parte enumerativa: CFOP, CST, CSOSN e cBenef — memorização vai para o fim de propósito, porque decai rápido. Carregam da Fase 1: Leg AL 6h15 · Auditoria Fiscal 13h15 · Dev+Infra 12h."},
+  {sem:"Semanas 11-14",per:"16/11 a 13/12",tit:"Fase 3 — questões e cadeias",txt:"Zero conteúdo novo. Volume de itens C/E, fila de revisão em carga máxima, correção de erro dirigida. Simulado 03 (29/11) e 04 (13/12) são ensaios de prova inteira: 160 itens, 4h30, no turno da tarde."},
+  {sem:"Semana 15",per:"14 a 20/12",tit:"Consolidação",txt:"Sem material novo, sem simulado longo. Releitura das tabelas-âncora (alíquotas de transição do IBS, 400 UPFAL, contingência NF-e, CFOP) e da lei seca de RT e Leg. AL. Reduzir carga a partir de quinta."},
+];
+const SIMULADOS = [
+  {n:1, data:"2026-10-11", itens:80,  dur:"2h15", meta:78, escopo:"blocos da Fase 1"},
+  {n:2, data:"2026-11-08", itens:120, dur:"3h20", meta:80, escopo:"~80% do edital"},
+  {n:3, data:"2026-11-29", itens:160, dur:"4h30", meta:82, escopo:"completo — 1º ensaio de prova inteira"},
+  {n:4, data:"2026-12-13", itens:160, dur:"4h30", meta:84, escopo:"completo — ensaio final"},
+];
+
+
+
+/* ============================================================
+   ESTADO / PERSISTÊNCIA
+   ============================================================ */
+const LS_KEY = "estudosSEFAZAL_v1"; // v2: assuntos repriorizados a partir das análises (jun/2026)
+const LS_SNAP = "estudosSEFAZAL_v1_snap"; // anel de snapshots locais (rede de segurança)
+const LS_DEV  = "estudosSEFAZAL_deviceId"; // id da máquina, fora do estado (não vai p/ o Gist)
+
+/* Identidade da máquina: usada para gerar uid de sessão que NUNCA colide entre
+   computadores. Antes o id era um contador (1,2,3…) que reiniciava em cada
+   máquina — dois registros diferentes recebiam o mesmo id e qualquer tentativa
+   de juntar os estados perdia dados. */
+function deviceId(){
+  let d = localStorage.getItem(LS_DEV);
+  if(!d){ d = Math.random().toString(36).slice(2,8) + Date.now().toString(36).slice(-4); localStorage.setItem(LS_DEV,d); }
+  return d;
+}
+/* uid determinístico para sessões antigas (sem uid): derivado do CONTEÚDO, não da
+   máquina — assim a mesma sessão já sincronizada entre os dois PCs recebe o mesmo
+   uid nos dois lados e o merge a reconhece como uma só (não duplica). */
+function uidLegado(s){
+  return "L~" + [s.id, s.data, s.mat, s.topicId||s.assuntoLivre||"", s.minutos||0,
+                 s.qResolvidas||0, s.qAcertadas||0].join("~");
+}
+function novoUid(){ return deviceId()+":"+(state.nextSid++)+":"+Date.now().toString(36); }
+
+let state = load();
+
+function defaultState(){
+  const ts = {};
+  SEED_TOPICS.forEach(t=> ts[t.id] = "nao");
+  return { schema:3, sessions:[], topicStatus:ts, topicStatusAt:{}, customTopics:[],
+           nextSid:1, nextTid:1000, revFeitas:{}, revFeitasAt:{}, sessionsDel:{} };
+}
+function migrar(s){
+  s.sessions = (s.sessions||[]).filter(x=>x&&typeof x==="object");
+  s.sessions.forEach(x=>{ if(!x.uid) x.uid = uidLegado(x); });
+  // dedup defensivo por uid (estados que já vieram bagunçados de syncs antigas)
+  const vistos={}; s.sessions = s.sessions.filter(x=> vistos[x.uid] ? false : (vistos[x.uid]=1));
+  s.sessionsDel = s.sessionsDel || {};
+  s.topicStatusAt = s.topicStatusAt || {};
+  s.revFeitasAt = s.revFeitasAt || {};
+  s.customTopics = s.customTopics || [];
+  s.schema = 3;
+  return s;
+}
+function load(){
+  try{
+    const raw = localStorage.getItem(LS_KEY);
+    if(!raw) return defaultState();
+    const s = JSON.parse(raw);
+    const d = defaultState();
+    // garante que assuntos novos do seed ganhem status
+    s.topicStatus = s.topicStatus || {};
+    SEED_TOPICS.forEach(t=>{ if(!(t.id in s.topicStatus)) s.topicStatus[t.id]="nao"; });
+    return migrar(Object.assign(d, s));
+  }catch(e){ return defaultState(); }
+}
+function gravarLocal(){ try{ localStorage.setItem(LS_KEY, JSON.stringify(state)); }
+  catch(e){ toast("⚠ Falha ao gravar no navegador"); } }
+function save(){ state.updatedAt=new Date().toISOString(); gravarLocal(); syncAgendar(); }
+
+/* --- Snapshots locais: guarda as últimas versões do estado antes de qualquer
+   substituição vinda da nuvem. Se algo der errado, dá para voltar sem depender
+   de backup manual. --- */
+const SNAP_MAX = 12;
+function snapshot(motivo){
+  try{
+    const arr = JSON.parse(localStorage.getItem(LS_SNAP)||"[]");
+    arr.unshift({ts:new Date().toISOString(), motivo, n:(state.sessions||[]).length, estado:state});
+    localStorage.setItem(LS_SNAP, JSON.stringify(arr.slice(0,SNAP_MAX)));
+  }catch(e){ /* cota cheia: descarta os mais antigos e desiste em silêncio */
+    try{ localStorage.setItem(LS_SNAP,"[]"); }catch(_){}
+  }
+}
+function snapRestaurar(){
+  let arr=[]; try{ arr=JSON.parse(localStorage.getItem(LS_SNAP)||"[]"); }catch(e){}
+  if(!arr.length){ alert("Nenhum snapshot local guardado ainda."); return; }
+  const lista = arr.map((s,i)=>`${i+1}) ${s.ts.slice(0,16).replace("T"," ")} · ${s.n} sessões · ${s.motivo}`).join("\n");
+  const esc = prompt("Snapshots locais (o estado ANTES de cada substituição):\n\n"+lista+
+    "\n\nDigite o número para restaurar (o estado atual vira snapshot antes):","");
+  const i = parseInt(esc)-1;
+  if(isNaN(i)||!arr[i]) return;
+  snapshot("antes de restaurar snapshot");
+  state = migrar(Object.assign(defaultState(), arr[i].estado));
+  save();
+  const ab=document.querySelector("#tabs button.active"); render(ab?ab.dataset.tab:"dash");
+  toast("Snapshot restaurado ("+arr[i].n+" sessões)");
+}
+
+function allTopics(){ return SEED_TOPICS.concat(state.customTopics||[]); }
+function topicById(id){ return allTopics().find(t=>String(t.id)===String(id)); }
+// ordena: prioridade (1 antes), depois "caiu em 2025" primeiro, depois alfabético
+function prioSort(a,b){ return (a.prio||3)-(b.prio||3) || (b.gerar||0)-(a.gerar||0) || a.assunto.localeCompare(b.assunto); }
+
+/* ============================================================
+   HELPERS
+   ============================================================ */
+function fmtMin(min){
+  min = Math.round(min);
+  const h = Math.floor(min/60), m = min%60;
+  if(h>0) return h+"h"+(m>0?String(m).padStart(2,"0"):"00");
+  return m+"min";
+}
+function fmtClock(sec){
+  const h=Math.floor(sec/3600), m=Math.floor((sec%3600)/60), s=sec%60;
+  return [h,m,s].map(x=>String(x).padStart(2,"0")).join(":");
+}
+function todayStr(){ const d=new Date(); return d.toISOString().slice(0,10); }
+function startOfWeek(d){ // segunda
+  const x=new Date(d); const day=(x.getDay()+6)%7; x.setHours(0,0,0,0); x.setDate(x.getDate()-day); return x;
+}
+function inThisWeek(dateStr){
+  const sow=startOfWeek(new Date()); const eow=new Date(sow); eow.setDate(eow.getDate()+7);
+  const d=new Date(dateStr+"T12:00:00"); return d>=sow && d<eow;
+}
+function pct(a,b){ return b>0 ? Math.round(a/b*100) : 0; }
+function escapeHtml(s){ return (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c])); }
+function toast(msg){ const t=document.getElementById("toast"); t.textContent=msg; t.classList.add("show"); setTimeout(()=>t.classList.remove("show"),1800); }
+
+// agregações
+function sessionsFiltered(weekOnly){ return state.sessions.filter(s=> !weekOnly || inThisWeek(s.data)); }
+function sumBy(sessions){
+  let min=0,qr=0,qa=0; sessions.forEach(s=>{min+=s.minutos||0;qr+=s.qResolvidas||0;qa+=s.qAcertadas||0;});
+  return {min,qr,qa};
+}
+function minutosPorGrupo(weekOnly){
+  const m={}; sessionsFiltered(weekOnly).forEach(s=>{ const g=grupo(s.mat); m[g]=(m[g]||0)+(s.minutos||0); }); return m;
+}
+function questoesPorGrupo(weekOnly){
+  const m={}; sessionsFiltered(weekOnly).forEach(s=>{ const g=grupo(s.mat); if(!m[g])m[g]={qr:0,qa:0}; m[g].qr+=s.qResolvidas||0; m[g].qa+=s.qAcertadas||0; }); return m;
+}
+function topicQuestoes(tid){
+  let qr=0,qa=0; state.sessions.forEach(s=>{ if(String(s.topicId)===String(tid)){qr+=s.qResolvidas||0;qa+=s.qAcertadas||0;} }); return {qr,qa};
+}
+function topicMin(tid){ let m=0; state.sessions.forEach(s=>{ if(String(s.topicId)===String(tid)) m+=s.minutos||0; }); return m; }
+function diasEstudados(){ return new Set(state.sessions.filter(s=>s.minutos>0).map(s=>s.data)).size; }
+function streak(){
+  const dias=new Set(state.sessions.filter(s=>s.minutos>0).map(s=>s.data));
+  let n=0; let d=new Date();
+  // se hoje não estudou, começa de ontem
+  if(!dias.has(todayStr())) d.setDate(d.getDate()-1);
+  for(;;){ const ds=d.toISOString().slice(0,10); if(dias.has(ds)){n++; d.setDate(d.getDate()-1);} else break; }
+  return n;
+}
+
+/* ============================================================
+   NAVEGAÇÃO
+   ============================================================ */
+const TABS=["dash","sessao","assuntos","disciplina","cronograma","gantt","historico"];
+document.querySelectorAll("#tabs button").forEach(b=>{
+  b.onclick=()=>{
+    document.querySelectorAll("#tabs button").forEach(x=>x.classList.remove("active"));
+    b.classList.add("active");
+    TABS.forEach(t=>document.getElementById("tab-"+t).classList.add("hide"));
+    document.getElementById("tab-"+b.dataset.tab).classList.remove("hide");
+    render(b.dataset.tab);
+  };
+});
+
+function render(tab){
+  if(tab==="dash") renderDash();
+  else if(tab==="sessao") renderSessao();
+  else if(tab==="assuntos") renderAssuntos();
+  else if(tab==="disciplina") renderDisciplina();
+  else if(tab==="cronograma") renderCronograma();
+  else if(tab==="gantt") renderGantt();
+  else if(tab==="historico") renderHistorico();
+}
+
+/* Desempenho REAL por assunto — consolidado de TODAS as questões registradas no
+   TEC (06_Scripts/desempenho_assuntos.py grava Estudos/desempenho_assuntos.json).
+   Independe do lançamento manual de sessões, que costuma ficar incompleto. */
+let DESEMP_TEC=null;
+function corPct(p){ return p>=80?"var(--ok)":(p>=70?"var(--warn)":"var(--bad)"); }
+
+/* --- MÉTRICA: acerto bruto × saldo líquido ---------------------------------
+   Em prova CERTO/ERRADO (CEBRASPE) o acerto bruto não mede conhecimento: a linha
+   de base do chute é 50%, então 80% de acerto equivale a 60% de domínio e 50%
+   equivale a ZERO. A métrica válida é o saldo líquido (acertos − erros)/total,
+   que é numericamente igual à fração dominada e pode ser negativa — e negativo é
+   informação: responder aquele assunto custa ponto em vez de render.
+
+   O desempenho_assuntos.py grava `formato` e os campos de saldo. Arquivos do
+   ciclo FGV não têm nenhum dos dois e caem no acerto bruto automaticamente. --- */
+const PISO_SALDO=30;   // piso de eliminação do edital (item 8.11.5)
+const META_SALDO=60;   // meta do Plano_Estudos_Set-Dez.md
+let MODO_CE=false;
+function metrica(o){ return MODO_CE ? (o.saldo_pct_unicas ?? 0) : o.pct_unicas; }
+function refMetrica(){ return MODO_CE ? META_SALDO : 70; }
+function rotMetrica(){ return MODO_CE ? "saldo" : "acerto"; }
+function corMetrica(v){
+  return MODO_CE ? (v>=META_SALDO?"var(--ok)":v>=PISO_SALDO?"var(--warn)":"var(--bad)")
+                 : corPct(v);
+}
+function drawDesempTec(){
+  const box=document.getElementById("desempTecBox"); if(!box) return;
+  if(!DESEMP_TEC){
+    box.innerHTML=`<div class="card" style="border-left:3px solid var(--accent2)"><b>Desempenho real por assunto</b> — rode <code>python 06_Scripts/desempenho_assuntos.py</code> e faça commit de <code>Estudos/desempenho_assuntos.json</code> para ver aqui o consolidado de todas as questões do TEC (não só as sessões lançadas à mão).</div>`;
+    return;
+  }
+  const R=DESEMP_TEC.resumo, mats=DESEMP_TEC.materias||[], ass=DESEMP_TEC.assuntos||[];
+  const crit=ass.filter(a=>a.unicas>=4 && metrica(a)<refMetrica() && a.assunto!=="Sem assunto")
+                .sort((a,b)=>metrica(a)-metrica(b));
+  // saldo pode ser negativo: a barra zera e o número em vermelho carrega o sinal
+  const barMat=mats.filter(m=>m.materia!=="Sem materia")
+    .sort((a,b)=>metrica(a)-metrica(b)).map(m=>{ const v=metrica(m), c=corMetrica(v);
+    return `
+    <div style="display:flex;align-items:center;gap:8px;margin:3px 0">
+      <div style="flex:0 0 50px;text-align:right;font-weight:600;color:${c}">${v}%</div>
+      <div style="flex:1;background:#0003;border-radius:4px;height:14px;overflow:hidden">
+        <div style="width:${Math.max(0,v)}%;height:100%;background:${c}"></div></div>
+      <div style="flex:0 0 54px;font-size:11px;color:var(--muted)">${m.acertos_unicas}/${m.unicas}</div>
+      <div style="flex:2;font-size:12px">${escapeHtml(m.materia)}</div>
+    </div>`;}).join("");
+  const cab = MODO_CE
+    ? `${R.unicas} questões · saldo ${R.saldo_pct_unicas}% (${R.pct_unicas}% bruto)`
+    : `${R.unicas} questões · ${R.pct_unicas}%`;
+  const nota = MODO_CE
+    ? `Consolida <b>${R.tentativas}</b> respostas (${R.unicas} únicas; estado pela tentativa mais recente).
+       <b>Barras em saldo líquido</b> = acertos − erros: em prova C/E, 50% de acerto vale saldo <b>0</b>.
+       Piso de eliminação ${PISO_SALDO}% · meta do plano ${META_SALDO}%.
+       ${R.brancos_unicas?`<b>${R.brancos_unicas}</b> em branco (${R.pct_branco_unicas}%).`:""}`
+    : `Consolida <b>${R.tentativas}</b> respostas registradas (${R.unicas} questões únicas; % pela tentativa mais recente). Fonte independente do lançamento manual de sessões.`;
+  box.innerHTML=`
+  <details class="card" open style="border-left:3px solid var(--accent)">
+    <summary style="cursor:pointer;font-weight:600">🎯 Desempenho real por assunto — todas as questões do TEC
+      <span style="color:var(--muted);font-weight:400">(${cab} · gerado ${(DESEMP_TEC.gerado_em||"").slice(0,10)})</span></summary>
+    <div style="font-size:12px;color:var(--muted);margin:6px 0">${nota}</div>
+    <div style="margin:10px 0">${barMat}</div>
+    <details style="margin-top:8px"><summary style="cursor:pointer;font-weight:600;color:var(--bad)">⚠️ ${crit.length} assuntos críticos (${rotMetrica()} &lt;${refMetrica()}%, ≥4 questões)</summary>
+      <table style="margin-top:6px"><tbody>${crit.map(a=>{ const v=metrica(a);
+        return `<tr><td style="color:${corMetrica(v)};font-weight:600;white-space:nowrap">${v}%${MODO_CE&&v<PISO_SALDO?" ⛔":""}</td>
+        <td style="color:var(--muted);white-space:nowrap">${a.acertos_unicas}/${a.unicas}${MODO_CE?` · ${a.pct_unicas}% br.`:""}</td>
+        <td>${escapeHtml(a.assunto)}</td></tr>`;}).join("")}</tbody></table></details>
+  </details>`;
+}
+/* ============================================================
+   DASHBOARD
+   ============================================================ */
+function renderDash(){
+  const all=sumBy(state.sessions), wk=sumBy(sessionsFiltered(true));
+  const tops=allTopics(); const concl=tops.filter(t=>state.topicStatus[t.id]==="concluido").length;
+  const emand=tops.filter(t=>["estudando","revisar"].includes(state.topicStatus[t.id])).length;
+  const diasRest=Math.max(0,Math.ceil((new Date(PROVA1)-new Date())/86400000));
+  const metaTotal=Object.values(MAT_INFO).reduce((a,m)=>a+m.meta,0);
+
+  let html = `
+  <div class="grid cards">
+    <div class="card kpi"><div class="label">⏱️ Tempo total estudado</div><div class="val">${fmtMin(all.min)}</div><div class="foot">${diasEstudados()} dia(s) com estudo · 🔥 streak ${streak()}</div></div>
+    <div class="card kpi"><div class="label">📅 Esta semana</div><div class="val">${fmtMin(wk.min)} <small>/ ${fmtMin(metaTotal)}</small></div><div class="foot">${pct(wk.min,metaTotal)}% da meta semanal (${fmtMin(metaTotal)})</div></div>
+    <div class="card kpi"><div class="label">✍️ Questões resolvidas</div><div class="val">${all.qr} <small>/ ${metaPlanoTotal()}</small></div><div class="foot">${wk.qr} esta semana · ${pct(all.qr,metaPlanoTotal())}% da meta do plano</div></div>
+    <div class="card kpi"><div class="label">🎯 Taxa de acerto</div><div class="val">${pct(all.qa,all.qr)}<small>%</small></div><div class="foot">${all.qa}/${all.qr} acertos</div></div>
+    <div class="card kpi"><div class="label">📚 Assuntos concluídos</div><div class="val">${concl}<small>/${tops.length}</small></div><div class="foot">${emand} em andamento · ${pct(concl,tops.length)}% do edital</div></div>
+    <div class="card kpi"><div class="label">⏳ Dias até a prova</div><div class="val">${diasRest}</div><div class="foot">1º dia 23/08 · 2º dia 30/08 · fim da preparação 21/08</div></div>
+  </div>`;
+
+  // Horas por matéria na semana vs meta
+  const mg=minutosPorGrupo(true);
+  const ordem=Object.keys(MAT_INFO).filter(g=>MAT_INFO[g].meta>0);
+  html += `<h2 class="sec">⏲️ Horas por matéria — esta semana <span class="pill">barra = estudado · marca branca = meta semanal</span></h2><div class="card">`;
+  ordem.forEach(g=>{
+    const done=mg[g]||0, meta=MAT_INFO[g].meta, p=meta>0?Math.min(100,done/meta*100):0;
+    const metaPos=meta>0?Math.min(100,100):0;
+    html += barRow(MAT_INFO[g].nome, p, `${fmtMin(done)} / ${fmtMin(meta)}`, MAT_INFO[g].cor, true);
+  });
+  html += `</div>`;
+
+  // Acerto por matéria (geral)
+  const qg=questoesPorGrupo(false);
+  const comQ=Object.keys(qg).filter(g=>qg[g].qr>0).sort((a,b)=>pct(qg[a].qa,qg[a].qr)-pct(qg[b].qa,qg[b].qr));
+  html += `<h2 class="sec">🎯 Desempenho em questões por matéria <span class="pill">acumulado</span></h2><div class="card">`;
+  if(comQ.length===0) html += `<div class="empty">Nenhuma questão registrada ainda. Registre na aba <b>Sessão de Estudo</b>.</div>`;
+  comQ.forEach(g=>{
+    const p=pct(qg[g].qa,qg[g].qr);
+    const cor = p>=70?"var(--ok)":p>=50?"var(--warn)":"var(--bad)";
+    html += barRow(MAT_INFO[g]?MAT_INFO[g].nome:g, p, `${p}% (${qg[g].qa}/${qg[g].qr})`, cor, false);
+  });
+  html += `</div>`;
+
+  // Sessões recentes
+  html += `<h2 class="sec">🕘 Últimas sessões</h2><div class="card">`+ recentTable(6) +`</div>`;
+
+  document.getElementById("tab-dash").innerHTML = html;
+}
+function barRow(name, percent, numTxt, cor, showMeta){
+  return `<div class="bar-row"><div class="name">${escapeHtml(name)}</div>
+    <div class="track"><div class="fill" style="width:${Math.max(0,Math.min(100,percent))}%;background:${cor||'var(--accent)'}"></div>${showMeta?'<div class="meta" style="left:100%"></div>':''}</div>
+    <div class="num">${numTxt}</div></div>`;
+}
+function recentTable(n){
+  const ss=[...state.sessions].sort((a,b)=> (b.data+String(b.id)).localeCompare(a.data+String(a.id))).slice(0,n||999);
+  if(ss.length===0) return `<div class="empty">Sem sessões registradas ainda.</div>`;
+  let h=`<table><thead><tr><th>Data</th><th>Matéria</th><th>Assunto</th><th>Tempo</th><th class="right">Questões</th><th class="right">Acerto</th></tr></thead><tbody>`;
+  ss.forEach(s=>{
+    const t=s.topicId?topicById(s.topicId):null;
+    const ass=t?t.assunto:(s.assuntoLivre||"—");
+    const ac=s.qResolvidas>0?pct(s.qAcertadas,s.qResolvidas)+"%":"—";
+    h+=`<tr><td>${fmtData(s.data)}</td><td><span class="dot" style="background:${matCor(s.mat)}"></span> ${matNome(s.mat)}</td><td>${escapeHtml(ass)}</td><td>${fmtMin(s.minutos)}</td><td class="right">${s.qResolvidas||0}</td><td class="right">${ac}</td></tr>`;
+  });
+  return h+`</tbody></table>`;
+}
+function fmtData(s){ const [y,m,d]=s.split("-"); return `${d}/${m}`; }
+
+/* ============================================================
+   SESSÃO DE ESTUDO
+   ============================================================ */
+let timer={accMs:0, startTs:null, running:false, intv:null};
+function timerSec(){ return Math.floor((timer.accMs + (timer.running ? Date.now()-timer.startTs : 0))/1000); }
+function renderSessao(){
+  document.getElementById("tab-sessao").innerHTML = `
+  <div class="row2">
+    <div class="card">
+      <div class="timer-box">
+        <div class="muted" style="font-size:13px">Cronômetro da sessão</div>
+        <div class="timer" id="timerDisp">00:00:00</div>
+        <div class="timer-ctrls">
+          <button class="btn primary" id="btnStart" onclick="timerToggle()">▶ Iniciar</button>
+          <button class="btn" onclick="timerReset()">↺ Zerar</button>
+        </div>
+        <div class="muted" style="font-size:12px;margin-top:8px">O tempo do cronômetro preenche os minutos ao salvar. Você também pode digitar manualmente.</div>
+      </div>
+    </div>
+    <div class="card">
+      <label class="fld"><span class="lab">Data</span><input type="text" id="fData" value="${todayStr()}"></label>
+      <span class="lab" style="display:block;font-size:13px;color:var(--muted);margin-bottom:5px">Assuntos estudados (questões por assunto)</span>
+      <div class="ass-head"><span>Matéria</span><span>Assunto</span><span>Resolvidas</span><span>Certas</span><span></span></div>
+      <div id="assRows"></div>
+      <button class="btn sm" onclick="addAssRow()">＋ Adicionar assunto</button>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <div class="row2">
+      <label class="fld"><span class="lab">Tempo total (minutos)</span><input type="number" id="fMin" min="0" placeholder="ex.: 60">
+        <span class="muted" style="font-size:12px">Com mais de um assunto, o tempo é dividido igualmente entre eles.</span></label>
+      <label class="fld"><span class="lab">Marcar assunto(s) como (opcional — aplica a todos da sessão)</span>
+      <select id="fStatus">
+        <option value="">— não alterar status —</option>
+        <option value="estudando">Estudando</option>
+        <option value="revisar">Revisar</option>
+        <option value="concluido">Concluído</option>
+      </select></label>
+    </div>
+    <label class="fld"><span class="lab">Observações</span><textarea id="fObs" rows="2" placeholder="dúvidas, erros recorrentes, lei seca a revisar..."></textarea></label>
+    <div class="flex"><button class="btn primary" onclick="salvarSessao()">💾 Salvar sessão</button>
+    <span class="muted" id="sessMsg"></span></div>
+  </div>
+
+  <h2 class="sec">🕘 Sessões de hoje</h2><div class="card" id="hojeBox"></div>
+  `;
+  assRowSeq=0; addAssRow(); updateTimerDisp(); renderHoje();
+}
+let assRowSeq=0;
+function matOptions(sel){ return Object.keys(MAT_INFO).map(g=>`<option value="${g}" ${g===sel?"selected":""}>${MAT_INFO[g].nome}</option>`).join(""); }
+function assuntoOptions(g){
+  const ts=allTopics().filter(t=>grupo(t.mat)===g).sort(prioSort);
+  let opts=ts.map(t=>{const m=topicMeta(t.id),s=topicSemana(t.id);const tag=m>0?`(S${s}·${m}q) `:"";return `<option value="${t.id}">${t.gerar?"🔨 ":""}[${PRIO_LABEL[t.prio||3]}] ${tag}${escapeHtml(t.assunto)}</option>`;}).join("");
+  opts+=`<option value="__livre">✎ Outro / digitar livre...</option>`;
+  return opts;
+}
+function addAssRow(){
+  const rid=++assRowSeq, defMat=Object.keys(MAT_INFO)[0];
+  const div=document.createElement("div");
+  div.className="ass-row"; div.dataset.rid=rid;
+  div.innerHTML=`<select class="r-mat" onchange="fillRowAssuntos(${rid})">${matOptions(defMat)}</select>
+    <select class="r-ass">${assuntoOptions(defMat)}</select>
+    <input type="number" class="r-qr" min="0" placeholder="0" title="questões resolvidas">
+    <input type="number" class="r-qa" min="0" placeholder="0" title="questões acertadas">
+    <button class="btn sm danger" onclick="delAssRow(${rid})" title="remover assunto">×</button>`;
+  document.getElementById("assRows").appendChild(div);
+}
+function rowEl(rid){ return document.querySelector(`.ass-row[data-rid="${rid}"]`); }
+function fillRowAssuntos(rid){ const r=rowEl(rid); r.querySelector(".r-ass").innerHTML=assuntoOptions(r.querySelector(".r-mat").value); }
+function delAssRow(rid){
+  if(document.querySelectorAll("#assRows .ass-row").length<=1){ toast("A sessão precisa de ao menos 1 assunto"); return; }
+  rowEl(rid).remove();
+}
+function timerToggle(){
+  const b=document.getElementById("btnStart"), disp=document.getElementById("timerDisp");
+  if(!timer.running){
+    timer.running=true; timer.startTs=Date.now();
+    b.textContent="⏸ Pausar"; disp.classList.add("running");
+    // Recalcula a partir do relógio real a cada tick: imune ao throttle de abas em 2º plano e à suspensão do PC
+    timer.intv=setInterval(updateTimerDisp,1000);
+  } else {
+    timer.accMs += Date.now()-timer.startTs; timer.startTs=null; timer.running=false;
+    b.textContent="▶ Continuar"; disp.classList.remove("running"); clearInterval(timer.intv);
+  }
+}
+function timerReset(){ timer.running=false; timer.accMs=0; timer.startTs=null; clearInterval(timer.intv); const b=document.getElementById("btnStart"); if(b)b.textContent="▶ Iniciar"; const d=document.getElementById("timerDisp"); if(d)d.classList.remove("running"); updateTimerDisp(); }
+function updateTimerDisp(){ const d=document.getElementById("timerDisp"); if(d) d.textContent=fmtClock(timerSec()); }
+function salvarSessao(){
+  const msg=document.getElementById("sessMsg");
+  const err=t=>{ msg.textContent=t; msg.style.color="var(--bad)"; };
+  const rows=[...document.querySelectorAll("#assRows .ass-row")];
+  if(rows.length===0){ err("⚠️ Adicione pelo menos um assunto."); return; }
+  const itens=[];
+  for(let i=0;i<rows.length;i++){
+    const r=rows[i];
+    const qr=parseInt(r.querySelector(".r-qr").value)||0, qa=parseInt(r.querySelector(".r-qa").value)||0;
+    if(qa>qr){ err(`⚠️ Assunto ${i+1}: acertos não podem exceder resolvidas.`); return; }
+    itens.push({mat:r.querySelector(".r-mat").value, assSel:r.querySelector(".r-ass").value, qr, qa});
+  }
+  const ids=itens.filter(x=>x.assSel!=="__livre").map(x=>x.assSel);
+  if(new Set(ids).size!==ids.length){ err("⚠️ Há assuntos repetidos na sessão."); return; }
+  let minutos=parseInt(document.getElementById("fMin").value);
+  if(isNaN(minutos)||minutos<=0){ const ts=timerSec(); if(ts>0) minutos=Math.max(1,Math.round(ts/60)); }
+  if(isNaN(minutos)||minutos<0) minutos=0;
+  const qrTot=itens.reduce((a,x)=>a+x.qr,0);
+  if(minutos===0 && qrTot===0){ err("⚠️ Informe tempo ou questões."); return; }
+  for(let i=0;i<itens.length;i++){
+    const x=itens[i];
+    if(x.assSel==="__livre"){ x.assuntoLivre=(prompt(`Digite o assunto estudado (linha ${i+1}):`)||"").trim(); if(!x.assuntoLivre) return; x.topicId=null; }
+    else { x.topicId=x.assSel; x.assuntoLivre=""; }
+  }
+  // um registro por assunto: tempo dividido igualmente (sobra vai para as primeiras linhas)
+  const n=itens.length, base=Math.floor(minutos/n); let resto=minutos-base*n;
+  const data=document.getElementById("fData").value||todayStr();
+  const obs=document.getElementById("fObs").value.trim();
+  const st=document.getElementById("fStatus").value;
+  itens.forEach((x,i)=>{
+    const m=base+(resto>0?1:0); if(resto>0)resto--;
+    const sid=state.nextSid;
+    state.sessions.push({ uid:novoUid(), id:sid, data, mat:x.mat, topicId:x.topicId, assuntoLivre:x.assuntoLivre,
+      minutos:m, qResolvidas:x.qr, qAcertadas:x.qa, obs:i===0?obs:"", criadoEm:new Date().toISOString() });
+    if(st && x.topicId) setTopicStatus(x.topicId, st);
+  });
+  save();
+  // limpar
+  document.getElementById("fMin").value=""; document.getElementById("fObs").value=""; document.getElementById("fStatus").value="";
+  document.getElementById("assRows").innerHTML=""; addAssRow();
+  timerReset();
+  msg.textContent = n>1 ? `✓ Sessão salva (${n} assuntos)!` : "✓ Sessão salva!"; msg.style.color="var(--ok)";
+  toast("Sessão registrada"); renderHoje();
+}
+function renderHoje(){
+  const box=document.getElementById("hojeBox"); if(!box) return;
+  const t=todayStr(); const ss=state.sessions.filter(s=>s.data===t);
+  if(ss.length===0){ box.innerHTML=`<div class="empty">Nenhuma sessão hoje. Bons estudos! 💪</div>`; return; }
+  const tot=sumBy(ss);
+  let h=`<div class="flex" style="margin-bottom:10px"><b>Hoje:</b> ${fmtMin(tot.min)} · ${tot.qr} questões · ${pct(tot.qa,tot.qr)}% acerto</div><table><tbody>`;
+  ss.forEach(s=>{ const tp=s.topicId?topicById(s.topicId):null; const ass=tp?tp.assunto:(s.assuntoLivre||"—");
+    const q = s.qResolvidas>0 ? `${s.qAcertadas||0}/${s.qResolvidas}q (${pct(s.qAcertadas,s.qResolvidas)}%)` : "—";
+    h+=`<tr><td><span class="dot" style="background:${matCor(s.mat)}"></span> ${matNome(s.mat)}</td><td>${escapeHtml(ass)}</td><td>${fmtMin(s.minutos)}</td><td>${q}</td><td><button class="btn sm danger" onclick="delSession('${encodeURIComponent(s.uid)}')">excluir</button></td></tr>`; });
+  box.innerHTML=h+`</tbody></table>`;
+}
+/* Exclusão = tombstone. Sem isso, o merge com a nuvem ressuscitaria a sessão
+   apagada na próxima sincronização. */
+function apagarSessao(uid){
+  state.sessions = state.sessions.filter(s=>String(s.uid)!==String(uid));
+  state.sessionsDel[uid] = new Date().toISOString();
+  save();
+}
+function delSession(uidEnc){ apagarSessao(decodeURIComponent(uidEnc)); renderHoje(); toast("Sessão excluída"); }
+
+/* ============================================================
+   ASSUNTOS POR MATÉRIA
+   ============================================================ */
+const STATUS_LABEL={nao:"Não iniciado",estudando:"Estudando",revisar:"Revisar",concluido:"Concluído"};
+function renderAssuntos(){
+  const groups=Object.keys(MAT_INFO).filter(g=>allTopics().some(t=>grupo(t.mat)===g));
+  let html=`
+  <div class="filters">
+    <select id="filtMat"><option value="">Todas as matérias</option>${groups.map(g=>`<option value="${g}">${MAT_INFO[g].nome}</option>`).join("")}</select>
+    <select id="filtStatus"><option value="">Todos os status</option>${Object.entries(STATUS_LABEL).map(([k,v])=>`<option value="${k}">${v}</option>`).join("")}</select>
+    <select id="filtPrio"><option value="">Todas as prioridades</option><option value="1">MÁXIMA (P1)</option><option value="2">ALTA (P2)</option><option value="3">MÉDIA (P3)</option><option value="4">Anki (P4)</option><option value="c25">✅ Caiu em 2025</option></select>
+    <input type="text" id="filtBusca" placeholder="🔎 buscar assunto...">
+    <button class="btn sm" onclick="addCustomTopic()">＋ Novo assunto</button>
+  </div>
+  <div class="legend">
+    <span><span class="prio p1">MÁXIMA</span> caiu/alta priorid.</span>
+    <span><span class="prio p2">ALTA</span></span>
+    <span><span class="prio p3">MÉDIA</span></span>
+    <span><span class="prio p4">Anki</span></span>
+    <span><span class="badge2025">🔨 gerar</span> sem acervo — alvo da skill <code>questao-ce</code></span>
+  </div>
+  <div class="legend">
+    <span><span class="dot" style="background:#a9b6c5"></span>Não iniciado</span>
+    <span><span class="dot" style="background:#4cc2ff"></span>Estudando</span>
+    <span><span class="dot" style="background:#e3b341"></span>Revisar</span>
+    <span><span class="dot" style="background:#56d364"></span>Concluído</span>
+  </div>
+  <div id="desempTecBox"></div>
+  <div id="assBox"></div>`;
+  document.getElementById("tab-assuntos").innerHTML=html;
+  drawDesempTec();
+  ["filtMat","filtStatus","filtPrio","filtBusca"].forEach(id=>document.getElementById(id).oninput=drawAssuntos);
+  drawAssuntos();
+}
+function drawAssuntos(){
+  const fM=document.getElementById("filtMat").value, fS=document.getElementById("filtStatus").value, fB=(document.getElementById("filtBusca").value||"").toLowerCase();
+  const fP=document.getElementById("filtPrio").value;
+  const matchPrio=t=> !fP ? true : (fP==="gerar" ? !!t.gerar : String(t.prio||3)===fP);
+  const groups=Object.keys(MAT_INFO).filter(g=>allTopics().some(t=>grupo(t.mat)===g));
+  let html="";
+  groups.forEach(g=>{
+    if(fM && fM!==g) return;
+    let ts=allTopics().filter(t=>grupo(t.mat)===g);
+    ts=ts.filter(t=> (!fS||state.topicStatus[t.id]===fS) && matchPrio(t) && (!fB||t.assunto.toLowerCase().includes(fB)) );
+    if(ts.length===0) return;
+    const totG=allTopics().filter(t=>grupo(t.mat)===g);
+    const conclG=totG.filter(t=>state.topicStatus[t.id]==="concluido").length;
+    ts.sort(prioSort);
+    html+=`<div class="mat-group"><div class="mat-head" onclick="this.nextElementSibling.classList.toggle('hide')">
+      <span class="dot" style="background:${MAT_INFO[g].cor};width:12px;height:12px"></span>
+      <span class="mname">${MAT_INFO[g].nome}</span>
+      <span class="mbar"><i style="width:${pct(conclG,totG.length)}%"></i></span>
+      <span class="mprog">${conclG}/${totG.length} concl.</span>
+    </div><div class="mat-body"><table><tbody>`;
+    ts.forEach(t=>{
+      const stv=state.topicStatus[t.id]||"nao"; const q=topicQuestoes(t.id); const mn=topicMin(t.id);
+      const pr=t.prio||3; const meta=topicMeta(t.id); const sem=topicSemana(t.id);
+      const semChip = sem>0 ? `<span class="qstat">S${sem}</span>` : '';
+      let qCol;
+      if(meta>0){
+        const okMeta = q.qr>=meta;
+        qCol = `<b style="color:${okMeta?'var(--ok)':'var(--txt)'}">${q.qr}/${meta}q</b>${q.qr>0?` · ${pct(q.qa,q.qr)}%`:''}`;
+      } else qCol = q.qr>0?`${q.qr}q · ${pct(q.qa,q.qr)}%`:'<span class="muted">—</span>';
+      const cods=codigosUI(t.id);
+      html+=`<tr>
+        <td style="width:46%"><span class="prio p${pr}">${PRIO_LABEL[pr]}</span>${t.gerar?'<span class="badge2025">🔨 gerar</span>':''} ${semChip} ${escapeHtml(t.assunto)}${cods?'<br>'+cods:''}</td>
+        <td>${mn>0?fmtMin(mn):'<span class="muted">—</span>'}</td>
+        <td>${qCol}</td>
+        <td class="right">
+          <select onchange="setStatus('${t.id}',this.value)" class="st-sel">
+            ${Object.entries(STATUS_LABEL).map(([k,v])=>`<option value="${k}" ${k===stv?"selected":""}>${v}</option>`).join("")}
+          </select>
+        </td></tr>`;
+    });
+    html+=`</tbody></table></div></div>`;
+  });
+  document.getElementById("assBox").innerHTML=html||`<div class="empty">Nenhum assunto encontrado com esses filtros.</div>`;
+}
+function setTopicStatus(id,v){ state.topicStatus[id]=v; state.topicStatusAt[id]=new Date().toISOString(); }
+function setStatus(id,v){ setTopicStatus(id,v); save(); toast("Status atualizado");
+  // re-render só para atualizar barras de progresso
+  drawAssuntos(); }
+function addCustomTopic(){
+  const nome=prompt("Nome do novo assunto:"); if(!nome) return;
+  const codes=Object.keys(MAT_INFO);
+  const mat=prompt("Matéria (código):\n"+codes.join(", "), "RT"); if(!mat||!MAT_INFO[mat]){ alert("Código inválido."); return; }
+  // id com prefixo da máquina: assuntos criados nos dois PCs não colidem mais
+  const t={id:"c"+deviceId()+"-"+(state.nextTid++), assunto:nome.trim(), mat, prio:3, gerar:0, custom:true};
+  state.customTopics.push(t); state.topicStatus[t.id]="nao"; save(); drawAssuntos(); toast("Assunto adicionado");
+}
+
+/* ============================================================
+   DISCIPLINA — evolução no tempo (questões resolvidas e taxa de acerto),
+   total, por matéria e por assunto. Fonte: state.sessions.
+   ============================================================ */
+let discFilt={mat:"",ass:"",gran:"dia"};
+function sessKeyAssunto(s){ return s.topicId?("t"+s.topicId):("l"+(s.assuntoLivre||"—")); }
+function sessNomeAssunto(s){ const t=s.topicId?topicById(s.topicId):null; return t?t.assunto:(s.assuntoLivre||"—"); }
+function keyEnc(k){ return encodeURIComponent(k).replace(/'/g,"%27"); }
+function discSetMat(v){ discFilt.mat=v; discFilt.ass=""; renderDisciplina(); }
+function discSetAss(v){ const k=decodeURIComponent(v); discFilt.ass=(k&&discFilt.ass===k)?"":k; renderDisciplina(); }
+function discSetGran(v){ discFilt.gran=v; renderDisciplina(); }
+
+function serieTemporal(sess){ // agrega por dia ou semana -> [{per,qr,qa}] em ordem cronológica
+  const porSem=discFilt.gran==="sem", m={};
+  sess.forEach(s=>{
+    const per=porSem?startOfWeek(new Date(s.data+"T12:00:00")).toISOString().slice(0,10):s.data;
+    if(!m[per]) m[per]={qr:0,qa:0};
+    m[per].qr+=s.qResolvidas||0; m[per].qa+=s.qAcertadas||0;
+  });
+  return Object.keys(m).sort().map(per=>({per,qr:m[per].qr,qa:m[per].qa}));
+}
+function tendencia(sess){ // 1ª metade vs 2ª metade das questões, em ordem cronológica
+  const recs=[...sess].sort((a,b)=>a.data.localeCompare(b.data)||a.id-b.id);
+  const tot=recs.reduce((a,s)=>a+(s.qResolvidas||0),0);
+  if(tot<8) return null; // amostra pequena demais para tendência
+  let acc=0; const h1={qr:0,qa:0}, h2={qr:0,qa:0};
+  recs.forEach(s=>{ const h=acc<tot/2?h1:h2; h.qr+=s.qResolvidas||0; h.qa+=s.qAcertadas||0; acc+=s.qResolvidas||0; });
+  if(!h1.qr||!h2.qr) return null;
+  const p1=pct(h1.qa,h1.qr), p2=pct(h2.qa,h2.qr);
+  return {d:p2-p1,p1,p2};
+}
+function tendTag(t){
+  if(!t) return '<span class="muted" style="font-size:12px">amostra pequena</span>';
+  const cor=t.d>=3?"var(--ok)":t.d<=-3?"var(--bad)":"var(--muted)";
+  const sym=t.d>=3?"▲":t.d<=-3?"▼":"▬";
+  return `<span style="color:${cor};font-weight:600">${sym} ${t.d>0?"+":""}${t.d}pp</span> <span class="muted" style="font-size:11.5px">${t.p1}%→${t.p2}%</span>`;
+}
+function sparkline(serie){ // mini-gráfico da % de acerto por período
+  if(serie.length<2) return '<span class="muted">—</span>';
+  const W=110,H=26,p=4;
+  const xy=serie.map((s,i)=>[p+(W-2*p)*i/(serie.length-1), p+(H-2*p)*(1-pct(s.qa,s.qr)/100)]);
+  const last=pct(serie[serie.length-1].qa,serie[serie.length-1].qr);
+  const cor=last>=70?"var(--ok)":last>=50?"var(--warn)":"var(--bad)";
+  return `<svg width="${W}" height="${H}" style="vertical-align:middle"><polyline points="${xy.map(c=>c.map(v=>v.toFixed(1)).join(",")).join(" ")}" fill="none" stroke="${cor}" stroke-width="1.5"/><circle cx="${xy[xy.length-1][0].toFixed(1)}" cy="${xy[xy.length-1][1].toFixed(1)}" r="2.5" fill="${cor}"/></svg>`;
+}
+function chartEvolucao(serie){
+  if(!serie.length) return `<div class="empty">Nenhuma questão registrada com esses filtros. Registre na aba <b>Sessão de Estudo</b>.</div>`;
+  const n=serie.length,W=Math.max(620,n*56+96),H=252,pL=42,pR=46,pT=20,pB=34;
+  const iw=W-pL-pR,ih=H-pT-pB;
+  const maxQ=Math.max(...serie.map(p=>p.qr),1);
+  const x=i=>pL+iw*((i+0.5)/n), yQ=v=>pT+ih-(v/maxQ)*ih, yP=v=>pT+ih-(v/100)*ih;
+  const bw=Math.min(30,(iw/n)*0.5);
+  let aq=0,aa=0; const cum=serie.map(p=>{aq+=p.qr;aa+=p.qa;return pct(aa,aq);});
+  let g=`<svg viewBox="0 0 ${W} ${H}" style="width:100%;min-width:${Math.min(W,860)}px;display:block">`;
+  [0,25,50,75,100].forEach(v=>{ g+=`<line x1="${pL}" x2="${W-pR}" y1="${yP(v)}" y2="${yP(v)}" stroke="var(--line)" stroke-width="1"${v?' stroke-dasharray="3 4"':''}/><text x="${W-pR+6}" y="${yP(v)+3.5}" fill="var(--muted)" font-size="10">${v}%</text>`; });
+  g+=`<text x="${pL-6}" y="${yQ(maxQ)+4}" fill="var(--muted)" font-size="10" text-anchor="end">${maxQ}q</text><text x="${pL-6}" y="${pT+ih+4}" fill="var(--muted)" font-size="10" text-anchor="end">0</text>`;
+  serie.forEach((p,i)=>{
+    g+=`<rect x="${(x(i)-bw/2).toFixed(1)}" y="${yQ(p.qr).toFixed(1)}" width="${bw.toFixed(1)}" height="${(pT+ih-yQ(p.qr)).toFixed(1)}" rx="3" fill="#4cc2ff44"/>`;
+    g+=`<text x="${x(i).toFixed(1)}" y="${(yQ(p.qr)-4).toFixed(1)}" fill="var(--muted)" font-size="10" text-anchor="middle">${p.qr}</text>`;
+    if(n<=24||i%Math.ceil(n/24)===0) g+=`<text x="${x(i).toFixed(1)}" y="${H-8}" fill="var(--muted)" font-size="10" text-anchor="middle">${fmtData(p.per)}</text>`;
+  });
+  g+=`<polyline points="${serie.map((p,i)=>x(i).toFixed(1)+","+yP(cum[i]).toFixed(1)).join(" ")}" fill="none" stroke="var(--accent2)" stroke-width="2" stroke-dasharray="5 4" opacity=".9"/>`;
+  g+=`<polyline points="${serie.map((p,i)=>x(i).toFixed(1)+","+yP(pct(p.qa,p.qr)).toFixed(1)).join(" ")}" fill="none" stroke="var(--ok)" stroke-width="2"/>`;
+  serie.forEach((p,i)=>{ const v=pct(p.qa,p.qr);
+    g+=`<circle cx="${x(i).toFixed(1)}" cy="${yP(v).toFixed(1)}" r="3.5" fill="var(--ok)"/><text x="${x(i).toFixed(1)}" y="${(yP(v)-7).toFixed(1)}" fill="var(--ok)" font-size="10" font-weight="600" text-anchor="middle">${v}%</text>`; });
+  g+=`</svg>`;
+  return `<div style="overflow-x:auto">${g}</div>
+  <div class="legend" style="margin:8px 0 0">
+    <span><span class="dot" style="background:#4cc2ff77;border-radius:3px;width:12px"></span>questões resolvidas</span>
+    <span><span class="dot" style="background:var(--ok)"></span>% acerto do período</span>
+    <span><span style="border-top:2px dashed var(--accent2);width:16px;display:inline-block"></span>% acerto acumulado</span>
+  </div>`;
+}
+/* Desempenho × Prioridade — cruza o desempenho real por assunto (DESEMP_TEC,
+   todas as questões do TEC) com a prioridade curada (P1..P4). Objetivo: achar
+   de relance os assuntos PRIORITÁRIOS ainda FRACOS (canto superior-esquerdo). */
+const MIN_Q_PRIO=3; // ignora assuntos com pouquíssimo volume (ruído)
+function assuntosPrioridade(filtGrupo){
+  if(!DESEMP_TEC||!DESEMP_TEC.assuntos) return [];
+  return DESEMP_TEC.assuntos.filter(a=>a.prio&&a.unicas>=MIN_Q_PRIO&&(!filtGrupo||a.grupo===filtGrupo));
+}
+/* Layout em beeswarm: cada bolha desce/sobe dentro da faixa da sua prioridade
+   até achar espaço livre, e o RÓTULO do assunto entra na conta da colisão.
+   O jitter antigo (3 posições fixas numa faixa de altura fixa) empilhava as
+   47 bolhas de P1 umas sobre as outras; aqui nada se sobrepõe e a altura de
+   cada faixa cresce conforme a lotação. O eixo x também dá zoom no intervalo
+   realmente ocupado — com quase tudo entre 60% e 100%, a escala 0..100
+   amontoava tudo no terço direito. */
+function chartPrioridade(filtGrupo){
+  const pts=assuntosPrioridade(filtGrupo);
+  if(!DESEMP_TEC) return `<div class="empty">Rode <code>python 06_Scripts/desempenho_assuntos.py</code> e publique <code>Estudos/desempenho_assuntos.json</code> para ver o cruzamento desempenho × prioridade (via <code>file://</code> o fetch é bloqueado).</div>`;
+  if(!pts.length) return `<div class="empty">Sem assuntos com ≥${MIN_Q_PRIO} questões e prioridade mapeada${filtGrupo?" nesta matéria":""}.</div>`;
+  const REF=refMetrica();                  // limiar de reforço (P1-P2 abaixo disso = ⚠)
+  const W=760,pL=36,pR=16,pT=16,pB=28, iw=W-pL-pR;
+  const menor=Math.min(...pts.map(metrica));
+  // em saldo o eixo pode ir a negativo; em acerto bruto o piso continua sendo 0
+  const x0=Math.max(MODO_CE?-100:0,Math.min(60,Math.floor(menor/10)*10));  // 1º tique
+  const d0=x0-3, d1=101.5;                                    // domínio c/ folga p/ o raio
+  const xP=v=>pL+iw*(v-d0)/(d1-d0);
+  const raio=a=>Math.max(3.5,Math.min(13,3+Math.sqrt(a.unicas)*1.4));
+  const curto=a=>a.assunto.replace(/\s*\(.*$/,"").slice(0,26);
+
+  // --- empacotamento por faixa: retângulo (bolha + rótulo) contra retângulo ---
+  const faixas=[1,2,3,4].filter(p=>pts.some(a=>a.prio===p)).map(p=>{
+    const postos=[];
+    pts.filter(a=>a.prio===p).sort((a,b)=>metrica(a)-metrica(b)).forEach(a=>{
+      const r=raio(a), cx=xP(metrica(a)), danger=p<=2&&metrica(a)<REF;
+      const lw=danger?3+curto(a).length*5.2:0;
+      // rótulo à ESQUERDA por padrão: o lado <70% é onde sobra espaço vazio e,
+      // assim, ele não empurra o cluster denso da direita (gráfico ~25% mais baixo)
+      const esq=danger&&cx-r-lw>pL+2;
+      const w0=cx-r-(esq?lw:0)-1, w1=cx+r+(esq?0:lw)+1, hh=Math.max(r,danger?7:0)+1.5;
+      let dy=0;                            // 0, +3, -3, +6, -6… até não colidir
+      for(let k=0;k<400;k++){
+        dy=k?(k%2?1:-1)*Math.ceil(k/2)*3:0;
+        if(!postos.some(q=>w0<q.w1&&w1>q.w0&&Math.abs(dy-q.dy)<hh+q.hh)) break;
+      }
+      postos.push({a,r,cx,danger,esq,dy,w0,w1,hh});
+    });
+    const topo=Math.min(...postos.map(q=>q.dy-q.hh)), base=Math.max(...postos.map(q=>q.dy+q.hh));
+    return {p,postos,alt:Math.max(40,base-topo+16),desl:8-topo};
+  });
+  let yy=pT; faixas.forEach(f=>{ f.y0=yy; f.eixo=yy+f.desl; yy+=f.alt; });
+  const H=yy+pB, ih=yy-pT;
+
+  // largura fixa de propósito: com width:100% o viewBox escalaria a altura junto
+  // (609px viram ~880px num card largo) — aqui o gráfico fica no tamanho natural
+  // e o container é que rola na horizontal em telas estreitas
+  let g=`<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" style="display:block">`;
+  // zona de perigo: prioritário (P1-P2) + abaixo de 70%
+  const fp=faixas.filter(f=>f.p<=2);
+  if(fp.length&&xP(REF)>pL+4){
+    const alt=fp.reduce((s,f)=>s+f.alt,0);
+    g+=`<rect x="${pL}" y="${fp[0].y0}" width="${(xP(REF)-pL).toFixed(1)}" height="${alt}" fill="#f8514915"/>`;
+    g+=`<text x="${pL+6}" y="${fp[0].y0+13}" fill="var(--bad)" font-size="10" font-weight="600">⚠ reforçar</text>`;
+  }
+  // grade vertical de 10 em 10, com o limiar de 70% destacado
+  for(let v=x0;v<=100;v+=10){ const lim=v===REF, x=xP(v).toFixed(1);
+    g+=`<line x1="${x}" x2="${x}" y1="${pT}" y2="${pT+ih}" stroke="${lim?'var(--bad)':'var(--line)'}" stroke-width="1" stroke-dasharray="3 4" opacity="${lim?.6:1}"/>`;
+    g+=`<text x="${x}" y="${H-9}" fill="${lim?'var(--bad)':'var(--muted)'}" font-size="10" text-anchor="middle">${v}%</text>`;
+  }
+  // faixas de prioridade
+  faixas.forEach((f,i)=>{
+    g+=`<text x="${pL-8}" y="${(f.y0+f.alt/2+4).toFixed(1)}" fill="var(--muted)" font-size="11" font-weight="600" text-anchor="end">P${f.p}</text>`;
+    if(i) g+=`<line x1="${pL}" x2="${W-pR}" y1="${f.y0}" y2="${f.y0}" stroke="var(--line)" stroke-width="1" opacity=".4"/>`;
+  });
+  // bolhas
+  faixas.forEach(f=>f.postos.forEach(q=>{ const a=q.a, cy=f.eixo+q.dy;
+    g+=`<circle cx="${q.cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="${q.r.toFixed(1)}" fill="${matCor(a.grupo)}" fill-opacity="${q.danger?0.9:0.5}" stroke="${q.danger?'var(--bad)':'#0006'}" stroke-width="${q.danger?1.6:1}"><title>SEFAZ-AL · ${escapeHtml(a.assunto)} — ${rotMetrica()} ${metrica(a)}%${MODO_CE?` (${a.pct_unicas}% bruto)`:""} (${a.acertos_unicas}/${a.unicas}) · P${a.prio} · ${matNome(a.grupo)}</title></circle>`;
+    if(q.danger) g+=`<text x="${(q.esq?q.cx-q.r-3:q.cx+q.r+3).toFixed(1)}" y="${(cy+3.2).toFixed(1)}" text-anchor="${q.esq?'end':'start'}" fill="var(--txt)" font-size="9.5" stroke="var(--panel)" stroke-width="2.5" paint-order="stroke" style="pointer-events:none">${escapeHtml(curto(a))}</text>`;
+  }));
+  g+=`</svg>`;
+  const grupos=[...new Set(pts.map(a=>a.grupo))];
+  const leg=grupos.map(gr=>`<span><span class="dot" style="background:${matCor(gr)}"></span>${matNome(gr)}</span>`).join("");
+  const eixo=MODO_CE?`eixo x = <b>saldo líquido</b> (acertos − erros) · 0% = chute`:`eixo x = acerto`;
+  return `<div style="overflow-x:auto">${g}</div><div class="legend" style="margin:8px 0 0">${leg}<span style="margin-left:auto;color:var(--muted)">tamanho ∝ nº de questões · ${eixo}, começa em ${x0}%</span></div>`;
+}
+function listaFracosPrio(filtGrupo){
+  const d=assuntosPrioridade(filtGrupo).filter(a=>a.prio<=2&&metrica(a)<refMetrica())
+          .sort((a,b)=>a.prio-b.prio||metrica(a)-metrica(b));
+  if(!DESEMP_TEC||!d.length) return "";
+  const col=MODO_CE?"Saldo":"Acerto";
+  return `<table style="margin-top:8px"><thead><tr><th>Prio</th><th>Matéria</th><th class="right">${col}</th><th class="right">Questões</th><th>Assunto</th></tr></thead><tbody>`+
+    d.map(a=>`<tr><td><span class="prio p${a.prio}">P${a.prio}</span></td>
+      <td><span class="dot" style="background:${matCor(a.grupo)}"></span> ${matNome(a.grupo)}</td>
+      <td class="right" style="color:${corMetrica(metrica(a))};font-weight:600">${metrica(a)}%</td>
+      <td class="right">${a.acertos_unicas}/${a.unicas}</td>
+      <td>${escapeHtml(a.assunto)}${a.gerar?' <span class="badge2025">🔨 gerar</span>':''}</td></tr>`).join("")+
+    `</tbody></table>`;
+}
+function renderDisciplina(){
+  const base=state.sessions.filter(s=>(s.qResolvidas||0)>0);
+  const mats=[...new Set(base.map(s=>grupo(s.mat)))].sort((a,b)=>matNome(a).localeCompare(matNome(b)));
+  if(discFilt.mat&&!mats.includes(discFilt.mat)) discFilt.mat="";
+  const matSess=discFilt.mat?base.filter(s=>grupo(s.mat)===discFilt.mat):base;
+  // agregação por assunto no recorte da matéria
+  const assMap={};
+  matSess.forEach(s=>{ const k=sessKeyAssunto(s);
+    if(!assMap[k]) assMap[k]={k,nome:sessNomeAssunto(s),mat:grupo(s.mat),qr:0,qa:0,sess:[]};
+    assMap[k].qr+=s.qResolvidas||0; assMap[k].qa+=s.qAcertadas||0; assMap[k].sess.push(s); });
+  if(discFilt.ass&&!assMap[discFilt.ass]) discFilt.ass="";
+  const sel=discFilt.ass?matSess.filter(s=>sessKeyAssunto(s)===discFilt.ass):matSess;
+
+  const tot=sumBy(sel), wk=sumBy(sel.filter(s=>inThisWeek(s.data)));
+  const d7=new Date(); d7.setDate(d7.getDate()-6); const lim7=d7.toISOString().slice(0,10);
+  const u7=sumBy(sel.filter(s=>s.data>=lim7));
+  const assuntos=Object.values(assMap).sort((a,b)=>b.qr-a.qr);
+
+  let html=`
+  <div class="filters">
+    <select onchange="discSetMat(this.value)"><option value="">Todas as matérias</option>${mats.map(g=>`<option value="${g}" ${g===discFilt.mat?"selected":""}>${matNome(g)}</option>`).join("")}</select>
+    <select onchange="discSetAss(this.value)" style="max-width:340px"><option value="">Todos os assuntos</option>${assuntos.map(a=>`<option value="${keyEnc(a.k)}" ${a.k===discFilt.ass?"selected":""}>${escapeHtml(a.nome)}</option>`).join("")}</select>
+    <select onchange="discSetGran(this.value)"><option value="dia" ${discFilt.gran==="dia"?"selected":""}>Por dia</option><option value="sem" ${discFilt.gran==="sem"?"selected":""}>Por semana</option></select>
+    ${discFilt.ass?`<button class="btn sm" onclick="discSetAss('')">✕ limpar assunto</button>`:""}
+  </div>
+  <div class="grid cards">
+    <div class="card kpi"><div class="label">✍️ Questões resolvidas</div><div class="val">${tot.qr}</div><div class="foot">${wk.qr} esta semana</div></div>
+    <div class="card kpi"><div class="label">🎯 Acerto acumulado</div><div class="val">${tot.qr>0?pct(tot.qa,tot.qr):"—"}<small>${tot.qr>0?"%":""}</small></div><div class="foot">${tot.qa}/${tot.qr} acertos</div></div>
+    <div class="card kpi"><div class="label">📅 Últimos 7 dias</div><div class="val">${u7.qr>0?pct(u7.qa,u7.qr)+"%":"—"}</div><div class="foot">${u7.qr} questões no período</div></div>
+    <div class="card kpi"><div class="label">📈 Tendência</div><div class="val" style="font-size:20px;line-height:28px">${tendTag(tendencia(sel))}</div><div class="foot">1ª metade × 2ª metade das questões</div></div>
+  </div>
+  <h2 class="sec">🎯 Desempenho × Prioridade <span class="pill">assuntos prioritários fracos = ⚠ reforçar</span></h2>
+  <div class="card">${chartPrioridade(discFilt.mat)}${listaFracosPrio(discFilt.mat)}</div>
+
+  <h2 class="sec">📈 Evolução no tempo <span class="pill">${discFilt.mat?matNome(discFilt.mat):"todas as matérias"}${discFilt.ass?" · "+escapeHtml((assMap[discFilt.ass]||{}).nome||""):""} · ${discFilt.gran==="sem"?"por semana":"por dia"}</span></h2>
+  <div class="card">${chartEvolucao(serieTemporal(sel))}</div>`;
+
+  html+=`<h2 class="sec">📚 Por assunto <span class="pill">clique numa linha para filtrar o gráfico</span></h2><div class="card">`;
+  if(assuntos.length===0) html+=`<div class="empty">Nenhuma questão registrada ainda.</div>`;
+  else{
+    html+=`<table><thead><tr><th>Assunto</th><th class="right">Questões</th><th class="right">Acerto</th><th>Tendência</th><th>Evolução</th></tr></thead><tbody>`;
+    assuntos.forEach(a=>{
+      const p=pct(a.qa,a.qr), cor=p>=70?"var(--ok)":p>=50?"var(--warn)":"var(--bad)";
+      html+=`<tr style="cursor:pointer${a.k===discFilt.ass?";background:#4cc2ff14":""}" onclick="discSetAss('${keyEnc(a.k)}')">
+        <td><span class="dot" style="background:${matCor(a.mat)}"></span> ${escapeHtml(a.nome)}${discFilt.mat?"":` <span class="qstat">${matNome(a.mat)}</span>`}</td>
+        <td class="right">${a.qr}</td>
+        <td class="right" style="color:${cor};font-weight:600">${p}%</td>
+        <td>${tendTag(tendencia(a.sess))}</td>
+        <td>${sparkline(serieTemporal(a.sess))}</td></tr>`;
+    });
+    html+=`</tbody></table>`;
+  }
+  html+=`</div>`;
+  document.getElementById("tab-disciplina").innerHTML=html;
+}
+
+/* ============================================================
+   REPLANEJAMENTO DINÂMICO — o cronograma segue a execução real.
+   planExec(): consolida as sessões por assunto (questões, datas, dias).
+   replanejar(): assuntos com meta cumprida ficam na semana em que foram
+   concluídos; o que falta é realocado da semana atual em diante (nunca
+   antes da semana original), empurrando para a frente quando a capacidade
+   semanal da matéria (maior carga semanal do próprio plano) estoura.
+   ============================================================ */
+/* Execução por tópico. Fonte "Só TEC" (window.EXEC_TEC, gerado das capturas do
+   TEC): fiel e sem lançamento manual. Fallback: sessões digitadas à mão. */
+function planExec(){
+  const manual=planExecManual();
+  if(!(window.EXEC_TEC&&window.EXEC_TEC.por_topico)) return manual;
+  // Fusão por TÓPICO: onde há captura do TEC ela manda (é fiel e deduplicada);
+  // onde NÃO há, valem as sessões lançadas à mão. Antes o TEC zerava tudo que
+  // ele não mapeava — assuntos estudados fora do TEC (ou com assunto ainda sem
+  // topicId no desempenho_assuntos.py) apareciam com 0% de avanço no cronograma.
+  const tec=planExecTEC();
+  Object.keys(manual).forEach(k=>{ if(!tec[k]) tec[k]=manual[k]; });
+  return tec;
+}
+function planExecManual(){
+  const m={};
+  [...state.sessions].sort((a,b)=>a.data.localeCompare(b.data)||(a.id||0)-(b.id||0)).forEach(s=>{
+    if(!s.topicId) return; const k=String(s.topicId);
+    if(!m[k]) m[k]={qr:0,qa:0,min:0,d0:null,d1:null,dMeta:null,dias:[]};
+    const e=m[k];
+    e.qr+=s.qResolvidas||0; e.qa+=s.qAcertadas||0; e.min+=s.minutos||0;
+    if((s.minutos||0)>0||(s.qResolvidas||0)>0){
+      if(!e.d0) e.d0=s.data; if(!e.d1||s.data>e.d1) e.d1=s.data;
+      if(!e.dias.includes(s.data)) e.dias.push(s.data);
+    }
+    const meta=topicMeta(s.topicId);
+    if(!e.dMeta&&meta>0&&e.qr>=meta) e.dMeta=s.data;
+  });
+  return m;
+}
+// Execução a partir do TEC (por questão única resolvida por tópico). qr/qa e datas
+// vêm prontos do script; dMeta = 1º dia em que o acumulado alcançou a meta (calculado
+// pela contagem por dia, que reflete tentativas — aproximação suficiente p/ semEff).
+function planExecTEC(){
+  const pt=window.EXEC_TEC.por_topico, pd=window.EXEC_TEC.por_dia||[];
+  const m={};
+  Object.keys(pt).forEach(k=>{ const e=pt[k];
+    m[k]={qr:e.qr||0,qa:e.qa||0,min:0,d0:e.d0||null,d1:e.d1||null,dMeta:null,dias:(e.dias||[]).slice()};
+  });
+  // dMeta: varre os dias em ordem, acumulando tentativas até bater a meta do tópico.
+  const acc={};
+  [...pd].sort((a,b)=>String(a.data).localeCompare(String(b.data))).forEach(r=>{
+    const k=String(r.id), e=m[k]; if(!e) return;
+    acc[k]=(acc[k]||0)+(r.qr||0);
+    const meta=topicMeta(r.id);
+    if(!e.dMeta&&meta>0&&acc[k]>=meta) e.dMeta=r.data;
+  });
+  return m;
+}
+function replanejar(){
+  const exec=planExec();
+  const cwReal=semanaDoDia(new Date());
+  const wNow=Math.min(ULT_SEMANA,Math.max(1,cwReal));
+  const topics=SEED_TOPICS.filter(t=>topicMeta(t.id)>0&&topicSemana(t.id)>0);
+  // capacidade semanal por matéria = maior carga semanal do plano original
+  const load={};
+  topics.forEach(t=>{ const g=grupo(t.mat), w=topicSemana(t.id);
+    (load[g]=load[g]||{})[w]=(load[g][w]||0)+topicMeta(t.id); });
+  const cap={}; Object.keys(load).forEach(g=>cap[g]=Math.max(...Object.values(load[g])));
+  const info={}, uso={}, pend=[]; let overflow=0;
+  topics.forEach(t=>{
+    const e=exec[String(t.id)]||{qr:0,qa:0,min:0,dias:[]};
+    const meta=topicMeta(t.id), semOrig=topicSemana(t.id);
+    const resto=Math.max(0,meta-e.qr);
+    const ok=resto===0||state.topicStatus[t.id]==="concluido";
+    if(ok){
+      const dRef=e.dMeta||e.d1;
+      const semEff=dRef?Math.min(ULT_SEMANA,Math.max(1,semanaDoDia(new Date(dRef+"T12:00:00")))):semOrig;
+      info[t.id]={t,semOrig,semEff,meta,qr:e.qr,qa:e.qa,resto:0,ok:true,movido:false,exec:e};
+    } else pend.push({t,g:grupo(t.mat),semOrig,meta,resto,e});
+  });
+  pend.sort((a,b)=>a.semOrig-b.semOrig||prioSort(a.t,b.t));
+  pend.forEach(p=>{
+    let w=Math.max(wNow,Math.min(p.semOrig,ULT_SEMANA));
+    while(w<ULT_SEMANA){
+      const usado=(uso[p.g]&&uso[p.g][w])||0;
+      if(usado===0||usado+p.resto<=cap[p.g]) break;
+      w++;
+    }
+    (uso[p.g]=uso[p.g]||{})[w]=(((uso[p.g]||{})[w])||0)+p.resto;
+    if(w>ULT_AQUISICAO && w>p.semOrig) overflow+=p.resto;
+    info[p.t.id]={t:p.t,semOrig:p.semOrig,semEff:w,meta:p.meta,qr:p.e.qr,qa:p.e.qa,resto:p.resto,ok:false,movido:w>p.semOrig,exec:p.e};
+  });
+  return {info,cap,wNow,cwReal,overflow};
+}
+
+/* ============================================================
+   CRONOGRAMA
+   ============================================================ */
+let cronoModo="efetivo"; // "efetivo" = replanejado conforme execução · "original" = plano fixo
+function cronoModoSet(m){ cronoModo=m; renderCronograma(); }
+
+function tabelaQuestoesSemana(hl,plano){
+  const efet=cronoModo==="efetivo";
+  const infos=Object.values(plano.info);
+  let maxW=ULT_AQUISICAO;
+  if(efet) infos.forEach(i=>{ if(!i.ok&&i.semEff>maxW) maxW=i.semEff; });
+  const weeks=[]; for(let w=1;w<=maxW;w++) weeks.push(w);
+  const mats=Object.keys(MAT_INFO).filter(g=>infos.some(i=>grupo(i.t.mat)===g));
+  const cell={}, pendCell={}, totMat={}, totSem={}, timeSem={};
+  mats.forEach(g=>{ cell[g]={}; pendCell[g]={}; totMat[g]=0; });
+  infos.forEach(i=>{
+    const g=grupo(i.t.mat), w=efet?i.semEff:i.semOrig, v=efet?(i.ok?i.meta:i.resto):i.meta;
+    cell[g][w]=(cell[g][w]||0)+v; totMat[g]+=v; totSem[w]=(totSem[w]||0)+v;
+    if(!i.ok) pendCell[g][w]=true;
+  });
+  weeks.forEach(w=>{ let min=0; mats.forEach(g=>{ min+=(cell[g][w]||0)/ritmo(g)*60; }); timeSem[w]=min; });
+  const wc=w=>w===hl?" wk-now":"";
+  let h=`<table><thead><tr><th>Matéria</th>`+weeks.map(w=>`<th class="right${wc(w)}">S${w}</th>`).join("")+`<th class="right">Total</th></tr></thead><tbody>`;
+  mats.forEach(g=>{
+    h+=`<tr><td><span class="dot" style="background:${MAT_INFO[g].cor}"></span> ${MAT_INFO[g].nome} <span class="qstat">(${RITMO[g]}q/h)</span></td>`;
+    weeks.forEach(w=>{ const v=cell[g][w]||0;
+      let s=v?String(v):'<span class="muted">·</span>';
+      if(efet&&v&&!pendCell[g][w]) s=`<span style="color:var(--ok);font-weight:600">${v}✓</span>`;
+      h+=`<td class="right${wc(w)}">${s}</td>`; });
+    h+=`<td class="right"><b>${totMat[g]}</b></td></tr>`;
+  });
+  const totGeral=Object.values(totMat).reduce((a,b)=>a+b,0);
+  h+=`<tr><td><b>Total questões</b></td>`+weeks.map(w=>`<td class="right${wc(w)}"><b>${totSem[w]||0}</b></td>`).join("")+`<td class="right"><b>${totGeral}</b></td></tr>`;
+  h+=`<tr><td class="muted">Tempo só de questões</td>`+weeks.map(w=>`<td class="right muted${wc(w)}">${fmtMin(timeSem[w]||0)}</td>`).join("")+`<td class="right muted">—</td></tr>`;
+  h+=`</tbody></table><div class="muted" style="font-size:12.5px;margin-top:8px">${efet
+    ?`Modo <b>replanejado</b>: células <span style="color:var(--ok)">verdes ✓</span> = metas cumpridas (na semana em que foram concluídas); demais células = questões que <b>faltam</b>, realocadas da semana atual em diante conforme a capacidade semanal de cada matéria. Colunas S7/S8 só aparecem quando o backlog estoura a S6.`
+    :`Plano original fixo. Alterne para “Replanejado” para ver o cronograma ajustado à execução real.`} O tempo acima é só resolução; o restante do bloco de 15h/sem é teoria, lei seca, Anki e refazer erros.</div>`;
+  return h;
+}
+
+// Assuntos PENDENTES de uma matéria replanejados para a semana (P1 → P2…, ✅2025 primeiro).
+function topicosSemana(matGroup, week, plano){
+  return Object.values(plano.info)
+    .filter(i=>!i.ok&&grupo(i.t.mat)===matGroup&&i.semEff===week)
+    .sort((a,b)=>prioSort(a.t,b.t));
+}
+// Conteúdo (HTML) de um bloco da grade para a semana corrente.
+function blocoConteudo(matGroup, week, plano, ids){
+  if(matGroup==="CEX") return `<span class="bloco-note muted">Consolidação — sem assunto novo</span>`;
+  // ids != null: o dia vem do PLANO_DIA e já diz quais assuntos são dele.
+  const tops = ids ? ids.map(i=>plano.info[i]).filter(i=>i&&!i.ok)
+                   : topicosSemana(matGroup, week, plano);
+  if(tops.length){
+    return tops.map(i=>`<span class="topchip${i.t.c25?' c25':''}">${i.t.c25?'✅ ':''}${escapeHtml(i.t.assunto)} <span class="qn">${i.qr>0?i.qr+"/":""}${i.meta}q</span>${i.movido?` <span class="mov-chip" title="movido da S${i.semOrig}">↪S${i.semOrig}</span>`:''}${codigosUI(i.t.id)}</span>`).join("");
+  }
+  // Sem pendências na semana: matérias rápidas (50 q/h) viram simulado.
+  if(ritmo(matGroup)>=50) return `<span class="bloco-note">🎯 Sem pendências — simulado por bloco cronometrado (14 q) + refazer as erradas</span>`;
+  return `<span class="bloco-note muted">Revisão / lei seca / Anki</span>`;
+}
+
+let cronoWeek=null; // null = segue a semana atual; nº = semana fixada pela navegação
+function cronoNav(d){
+  const base = cronoWeek || Math.min(15, Math.max(1, semanaDoDia(new Date())));
+  cronoWeek = Math.min(15, Math.max(1, base + d));
+  renderCronograma();
+}
+function cronoHoje(){ cronoWeek=null; renderCronograma(); }
+
+function renderCronograma(){
+  const plano=replanejar();
+  const now=new Date();
+  const cwReal=semanaDoDia(now);                          // semana real (pode ser <1 ou >8)
+  const cw = cronoWeek || Math.min(15, Math.max(1, cwReal)); // semana exibida
+  const isNow = (cronoWeek===null || cronoWeek===cwReal) && cwReal>=1 && cwReal<=15;
+  const meta=SEMANAS[cw-1];
+
+  let html=`<div class="card"><b>Período:</b> 07/09/2026 → 20/12/2026 · Segunda a sexta · <b>3h12/dia</b> (45min de fila + 1h45 do bloco da fase + 42min de cauda) · sábado e domingo livres, exceto os 4 domingos de simulado.<br>
+  <span class="muted">A <b>fila de revisão vem primeiro e não é negociável</b>. Em cada bloco, atacar primeiro os <b>P1</b>; os marcados <b>🔨 gerar</b> não têm questão em banca nenhuma — é onde a posição sai mais barata. Prova objetiva <b>20/12</b> (160 itens C/E, 4h30) · discursiva <b>10/01/2027</b>.</span></div>`;
+
+  // Resumo do replanejamento (execução real × plano)
+  const infosP=Object.values(plano.info);
+  const conclP=infosP.filter(i=>i.ok).length;
+  const movP=infosP.filter(i=>!i.ok&&i.movido);
+  const movQ=movP.reduce((a,i)=>a+i.resto,0);
+  html+=`<div class="card" style="border-color:${movP.length?'var(--warn)':'var(--ok)'}">
+    <b>🔄 Cronograma dinâmico:</b> ${conclP}/${infosP.length} assuntos com meta cumprida · ${movP.length
+      ?`<span style="color:var(--warn)"><b>${movP.length} re-agendados</b> (${movQ}q pendentes movidas p/ frente${plano.overflow?`; <b>${plano.overflow}q estourando p/ a Fase 3</b>`:""})</span>`
+      :`<span style="color:var(--ok)">nenhum atraso — plano em dia</span>`}
+    <span class="muted">· o que não é cumprido migra sozinho para as semanas seguintes — detalhe na aba <b>Gantt</b></span></div>`;
+
+  // Avisos de fase fora do ciclo normal
+  if(cwReal<1) html+=`<div class="card" style="border-color:var(--accent)"><b>🚀 Antes de 07/09</b><br><span class="muted">O ciclo abre na segunda <b>07/09</b> (feriado, dia cheio). Até lá: abrir as cadeias com <code>gerar_fila.py</code> sobre as capturas do probe, e montar os cadernos do TEC já com as exclusões — <b>21 questões</b> de Leg. AL em leis fora do edital e <b>102</b> de Auditoria Fiscal em NBC TA.</span></div>`;
+  if(cwReal>15) html+=`<div class="card" style="border-color:var(--ok)"><b>📝 Entre as provas</b><br><span class="muted">Objetiva em <b>20/12</b>; discursiva em <b>10/01/2027</b>, 4 questões de até 30 linhas. Os 4 temas já estão no edital — ciência de dados, auditoria fiscal, finanças públicas e reforma tributária —, então o estudo da objetiva já foi o da discursiva. Lembrar da fórmula: <code>NQi = NCi − 2×NEi ÷ TLi</code>, com as linhas escritas no denominador — <b>preencher as 30 linhas é estratégia de nota</b>.</span></div>`;
+
+  html += `<h2 class="sec">🎯 Metas de questões por semana <span class="pill">${cronoModo==="efetivo"?"ajustado à execução real":"plano original fixo"}</span></h2>
+  <div class="filters">
+    <button class="btn sm${cronoModo==='efetivo'?' primary':''}" onclick="cronoModoSet('efetivo')">🔄 Replanejado</button>
+    <button class="btn sm${cronoModo==='original'?' primary':''}" onclick="cronoModoSet('original')">📋 Plano original</button>
+  </div>
+  <div class="card" style="overflow-x:auto">` + tabelaQuestoesSemana(cwReal>=1&&cwReal<=8?cwReal:0,plano) + `</div>`;
+
+  // Navegador de semana
+  html += `<div class="card crono-nav">
+    <button class="btn" onclick="cronoNav(-1)" ${cw<=1?'disabled':''}>◀</button>
+    <div><span class="wk">Semana ${meta.n}</span> ${isNow?'<span class="now-pill">semana atual</span>':''}<br><span class="ph">${meta.per} · ${escapeHtml(meta.fase)}</span></div>
+    <button class="btn" onclick="cronoNav(1)" ${cw>=15?'disabled':''}>▶</button>
+    ${cronoWeek!==null?'<button class="btn sm" onclick="cronoHoje()">↺ voltar p/ hoje</button>':''}
+  </div>`;
+
+  if(cw>=15){
+    html += `<div class="card"><b>Semana 15 — consolidação (14 a 20/12)</b>
+      <div class="sched-item"><span class="min">~1h</span><span class="mt">Tabelas-âncora</span><span class="ds">Alíquotas de transição do IBS · 400 UPFAL e instâncias do PAT · contingência da NF-e (SVC-AN, SVC-RS, EPEC, FS-DA) · gramática do CFOP</span></div>
+      <div class="sched-item"><span class="min">~1h</span><span class="mt">Lei seca de RT e Leg. AL</span><span class="ds">Só releitura dos trechos marcados 🎯 nos arquivos de lei — nada novo</span></div>
+      <div class="sched-item"><span class="min">45min</span><span class="mt">Fila de revisão</span><span class="ds">Mantida até o fim; é o que segura o que já foi medido</span></div>
+      <div class="sched-item"><span class="min">Anki</span><span class="mt">Só revisão</span><span class="ds">Parar de introduzir cards novos</span></div>
+      <div class="sched-item"><span class="min">Qui-sáb</span><span class="mt">Reduzir carga</span><span class="ds">Sem simulado longo. Prova domingo 20/12, à tarde.</span></div>
+    </div>`;
+  } else {
+    const hojeDia = isNow ? DIA_SEMANA[now.getDay()] : null;
+    Object.entries(DIA_SEMANA).forEach(([dn,dia])=>{
+      const items=gradeDoDia(dia,cw); if(!items.length) return;
+      const tot=items.reduce((a,i)=>a+i.min,0);
+      const cls = dia===hojeDia ? " today" : "";
+      html+=`<div class="sched-day${cls}"><h3><span>${dia} <span class="tot">${fmtMin(tot)} direcionadas</span></span></h3>`;
+      items.forEach(it=>{
+        const rot = it.rot ? `<div class="bloco-rot">${escapeHtml(it.rot)}</div>` : "";
+        html+=`<div class="sched-item"><span class="min">${it.min}min</span><span class="mt"><span class="dot" style="background:${matCor(it.mat)}"></span> ${matNome(it.mat)}</span><span class="ds">${rot}${blocoConteudo(it.mat,cw,plano,it.tops)}</span></div>`;
+      });
+      html+=`</div>`;
+    });
+  }
+
+  html+=`<h2 class="sec">📈 Evolução ao longo das semanas</h2><div class="card">`;
+  FASES.forEach(f=>{ html+=`<div class="phase"><h4>${f.sem} (${f.per}) — ${f.tit}</h4><p>${f.txt}</p></div>`; });
+  html+=`<div class="phase" style="border-color:var(--ok)"><h4>Provas — 20/12 (objetiva) e 10/01/2027 (discursiva)</h4><p>Objetiva: 160 itens C/E, 4h30, à tarde. Cortes do edital: P1 ≥ 60% · P2 ≥ 65% · conjunto ≥ 65% — e, acima disso, ficar entre os <b>375 melhores da ampla concorrência</b>. Discursiva em 10/01: 4 questões de até 30 linhas, NPD ≥ 20 de 40.</p></div></div>`;
+  document.getElementById("tab-cronograma").innerHTML=html;
+}
+
+/* ============================================================
+   GANTT — previsto (plano original) × replanejado × realizado
+   Linha do tempo diária de 25/06 a 21/08; um assunto por linha.
+   ============================================================ */
+const GANTT_DIAS=Math.round((new Date(PERIODO_FIM+"T12:00:00")-new Date(PERIODO_INI+"T12:00:00"))/86400000)+1;
+function dayIdx(ds){
+  const i=Math.round((new Date(ds+"T12:00:00")-new Date(PERIODO_INI+"T12:00:00"))/86400000);
+  return Math.max(0,Math.min(GANTT_DIAS-1,i));
+}
+function gPos(d0,d1){ const a=dayIdx(d0), b=dayIdx(d1);
+  return `left:${(a/GANTT_DIAS*100).toFixed(3)}%;width:${((b-a+1)/GANTT_DIAS*100).toFixed(3)}%`; }
+function semDatas(w){ // [segunda, sexta] da semana w do ciclo
+  const d=new Date(S1_SEGUNDA+"T12:00:00"); d.setDate(d.getDate()+(w-1)*7);
+  const a=d.toISOString().slice(0,10); d.setDate(d.getDate()+4);
+  return [a,d.toISOString().slice(0,10)];
+}
+let ganttFilt={mat:"",view:""}; // view: ""=todos | pend | mov | conc
+function ganttSet(k,v){ ganttFilt[k]=v; renderGantt(); }
+function renderGantt(){
+  const plano=replanejar();
+  const infos=Object.values(plano.info);
+  const match=i=>{
+    if(ganttFilt.mat&&grupo(i.t.mat)!==ganttFilt.mat) return false;
+    if(ganttFilt.view==="pend") return !i.ok;
+    if(ganttFilt.view==="mov") return !i.ok&&i.movido;
+    if(ganttFilt.view==="conc") return i.ok;
+    return true;
+  };
+  const mats=Object.keys(MAT_INFO).filter(g=>infos.some(i=>grupo(i.t.mat)===g));
+  const concl=infos.filter(i=>i.ok).length, mov=infos.filter(i=>!i.ok&&i.movido).length;
+  const hoje=todayStr();
+
+  let html=`<div class="filters">
+    <select onchange="ganttSet('mat',this.value)"><option value="">Todas as matérias</option>${mats.map(g=>`<option value="${g}" ${g===ganttFilt.mat?"selected":""}>${MAT_INFO[g].nome}</option>`).join("")}</select>
+    <select onchange="ganttSet('view',this.value)">
+      <option value="">Todos os assuntos</option>
+      <option value="pend" ${ganttFilt.view==="pend"?"selected":""}>Só pendentes</option>
+      <option value="mov" ${ganttFilt.view==="mov"?"selected":""}>Só re-agendados</option>
+      <option value="conc" ${ganttFilt.view==="conc"?"selected":""}>Só concluídos</option>
+    </select>
+    <span class="qstat">${concl}/${infos.length} concluídos · ${mov} re-agendados${plano.overflow?` · ${plano.overflow}q estourando p/ S7–S8`:""}</span>
+  </div>
+  <div class="legend">
+    <span><span style="width:18px;height:10px;border:1.5px dashed #8b9bb0;border-radius:3px;display:inline-block"></span> semana planejada (original)</span>
+    <span><span style="width:18px;height:10px;background:#4cc2ff66;border-radius:3px;display:inline-block"></span> semana replanejada (pendente)</span>
+    <span><span class="dot" style="background:var(--ok);border-radius:2px"></span> realizado — meta cumprida</span>
+    <span><span class="dot" style="background:var(--warn);border-radius:2px"></span> realizado parcial</span>
+    <span><span style="width:2px;height:12px;background:var(--bad);display:inline-block"></span> hoje</span>
+  </div>
+  <div class="card gantt-wrap"><div class="gantt">`;
+
+  // overlay: separadores das semanas + linha de hoje (atravessam todas as linhas)
+  let overlay="";
+  for(let w=1;w<=8;w++){ const [a]=semDatas(w);
+    overlay+=`<div class="g-sep" style="top:24px;bottom:0;left:calc(var(--glab) + (100% - var(--glab))*${(dayIdx(a)/GANTT_DIAS).toFixed(4)})"></div>`; }
+  if(hoje>=PERIODO_INI&&hoje<=PERIODO_FIM)
+    overlay+=`<div class="g-today" style="top:0;bottom:0;left:calc(var(--glab) + (100% - var(--glab))*${((dayIdx(hoje)+0.5)/GANTT_DIAS).toFixed(4)})" title="hoje"></div>`;
+
+  // cabeçalho S1..S8
+  html+=`<div class="g-row" style="min-height:24px"><div class="g-lab muted" style="font-size:11px">assunto · feitas/meta</div><div class="g-track">`;
+  for(let w=1;w<=8;w++){ const [a,b]=semDatas(w);
+    html+=`<div class="g-wlab" style="${gPos(a,b)};text-align:center" title="${fmtData(a)}–${fmtData(b)}">S${w}</div>`; }
+  html+=`</div></div>`;
+
+  let temLinha=false;
+  mats.forEach(g=>{
+    const items=infos.filter(i=>grupo(i.t.mat)===g&&match(i))
+      .sort((a,b)=>a.semEff-b.semEff||prioSort(a.t,b.t));
+    if(!items.length) return;
+    temLinha=true;
+    const doneG=infos.filter(i=>grupo(i.t.mat)===g&&i.ok).length, totG=infos.filter(i=>grupo(i.t.mat)===g).length;
+    html+=`<div class="g-row ghead"><div class="g-lab"><span class="dot" style="background:${MAT_INFO[g].cor}"></span> <b>${MAT_INFO[g].nome}</b> <span class="q">${doneG}/${totG} concl.</span></div><div class="g-track"></div></div>`;
+    items.forEach(i=>{
+      const cor=MAT_INFO[g].cor;
+      const st=i.ok
+        ?`<span style="color:var(--ok)">${i.qr}/${i.meta}q ✓</span>`
+        :`<span class="q">${i.qr}/${i.meta}q</span>${i.movido?` <span class="mov-chip">↪S${i.semOrig}→S${i.semEff}</span>`:""}`;
+      html+=`<div class="g-row"><div class="g-lab" title="${escapeHtml(i.t.assunto)}"><span class="prio p${i.t.prio||3}" style="font-size:10px">${PRIO_LABEL[i.t.prio||3]}</span> ${i.t.c25?"✅ ":""}${escapeHtml(i.t.assunto)} ${st}</div><div class="g-track">`;
+      const [p0,p1]=semDatas(Math.min(8,i.semOrig));
+      html+=`<div class="g-bar g-plan" style="${gPos(p0,p1)}" title="planejado: S${i.semOrig} (${fmtData(p0)}–${fmtData(p1)})"></div>`;
+      if(!i.ok){ const [e0,e1]=semDatas(i.semEff);
+        html+=`<div class="g-bar g-eff" style="${gPos(e0,e1)};background:${cor}" title="replanejado: S${i.semEff} — faltam ${i.resto}q"></div>`; }
+      const e=i.exec;
+      if(e&&e.d0){
+        const corR=i.ok?"var(--ok)":"var(--warn)";
+        html+=`<div class="g-bar g-real" style="${gPos(e.d0,e.d1)};background:${corR}"></div>`;
+        (e.dias||[]).forEach(ds=>html+=`<div class="g-dot" style="left:${(dayIdx(ds)/GANTT_DIAS*100).toFixed(3)}%;width:${(100/GANTT_DIAS).toFixed(3)}%;background:${corR}" title="sessão em ${fmtData(ds)}"></div>`);
+      }
+      html+=`</div></div>`;
+    });
+  });
+  if(!temLinha) html+=`<div class="empty">Nenhum assunto com esses filtros.</div>`;
+  html+=overlay+`</div></div>
+  <div class="muted" style="font-size:12.5px;margin-top:10px">Somente assuntos com meta de questões no plano (os mantidos só via Anki ficam de fora). Barra tracejada = semana do plano original; barra colorida translúcida = para onde o pendente foi <b>replanejado</b> conforme a execução (o que não é feito anda para a frente, respeitando a capacidade semanal da matéria). Quadradinhos = dias com sessão registrada no assunto.</div>`;
+  document.getElementById("tab-gantt").innerHTML=html;
+}
+
+/* ============================================================
+   HISTÓRICO
+   ============================================================ */
+function renderHistorico(){
+  const all=sumBy(state.sessions);
+  let html=`<div class="grid cards">
+    <div class="card kpi"><div class="label">Total de sessões</div><div class="val">${state.sessions.length}</div></div>
+    <div class="card kpi"><div class="label">Tempo acumulado</div><div class="val">${fmtMin(all.min)}</div></div>
+    <div class="card kpi"><div class="label">Questões / acerto</div><div class="val">${all.qr} <small>· ${pct(all.qa,all.qr)}%</small></div></div>
+  </div>
+  <h2 class="sec">📜 Todas as sessões</h2><div class="card" id="histBox"></div>`;
+  document.getElementById("tab-historico").innerHTML=html;
+  drawHist();
+}
+function drawHist(){
+  const ss=[...state.sessions].sort((a,b)=> (b.data+String(b.id)).localeCompare(a.data+String(a.id)));
+  if(ss.length===0){ document.getElementById("histBox").innerHTML=`<div class="empty">Nenhuma sessão registrada ainda.</div>`; return; }
+  let h=`<table><thead><tr><th>Data</th><th>Matéria</th><th>Assunto</th><th>Tempo</th><th class="right">Resolv.</th><th class="right">Acerto</th><th>Obs</th><th></th></tr></thead><tbody>`;
+  ss.forEach(s=>{ const t=s.topicId?topicById(s.topicId):null; const ass=t?t.assunto:(s.assuntoLivre||"—");
+    const ac=s.qResolvidas>0?pct(s.qAcertadas,s.qResolvidas)+"%":"—";
+    h+=`<tr><td>${fmtData(s.data)}</td><td><span class="dot" style="background:${matCor(s.mat)}"></span> ${matNome(s.mat)}</td><td>${escapeHtml(ass)}</td><td>${fmtMin(s.minutos)}</td><td class="right">${s.qResolvidas||0}</td><td class="right">${ac}</td><td class="muted">${escapeHtml(s.obs||"")}</td><td><button class="btn sm danger" onclick="delHist('${encodeURIComponent(s.uid)}')">×</button></td></tr>`; });
+  document.getElementById("histBox").innerHTML=h+`</tbody></table>`;
+}
+function delHist(uidEnc){ if(!confirm("Excluir esta sessão?"))return; apagarSessao(decodeURIComponent(uidEnc)); drawHist(); toast("Excluída"); }
+
+/* ============================================================
+   SYNC ENTRE COMPUTADORES (GitHub Gist secreto)
+   O estado inteiro vive num arquivo JSON dentro de um Gist. Cada máquina
+   guarda token+id só no próprio localStorage (fora do estado — não entram
+   no backup nem no Gist).
+
+   MODELO: UNIÃO (merge), não "o mais recente vence".
+   A versão antiga substituía o estado inteiro pelo lado com updatedAt maior —
+   qualquer sessão registrada na outra máquina (ou na cópia local aberta em
+   file://, que tem localStorage próprio) era apagada em silêncio. Agora:
+     · sessões são unidas por uid, com tombstone para exclusões reais;
+     · topicStatus e revFeitas resolvem conflito item a item;
+     · todo envio é read-modify-write (busca → funde → grava).
+   Consequência prática: um dado sobrevive enquanto QUALQUER máquina ainda o
+   tiver — basta abrir o dashboard nela para ele voltar ao Gist.
+   ============================================================ */
+const SYNC_LS={token:"estudosSEFAZAL_syncToken",gist:"estudosSEFAZAL_syncGist"};
+const SYNC_FILE="estudos-tcepe.json";
+const SYNC_POLL_MS=90000; // relê a nuvem periodicamente
+let syncTimer=null, syncPollTimer=null, syncEmVoo=false, syncEstado="off"; // off|ok|pendente|sincronizando|erro
+
+function syncCfg(){ return {token:localStorage.getItem(SYNC_LS.token)||"", gist:localStorage.getItem(SYNC_LS.gist)||""}; }
+function syncSetStatus(s,msg){
+  syncEstado=s; const el=document.getElementById("syncStatus"); if(!el) return;
+  const map={off:"",ok:"☁ sincronizado",pendente:"☁ alterações pendentes…",sincronizando:"☁ sincronizando…",erro:"☁ ⚠ "+(msg||"erro")};
+  el.textContent=map[s]||""; el.style.color = s==="erro" ? "var(--bad)" : "";
+}
+async function syncApi(method,path,body,token){
+  const r=await fetch("https://api.github.com"+path,{method,
+    headers:{Authorization:"Bearer "+token,Accept:"application/vnd.github+json"},
+    body:body?JSON.stringify(body):undefined});
+  if(!r.ok) throw new Error("GitHub "+r.status);
+  return r.json();
+}
+
+/* ---------- MERGE ----------
+   Devolve {estado, mudouLocal, mudouRemoto} — quem ganhou item por item. */
+const ST_RANK={nao:0,estudando:1,revisar:2,concluido:3};
+function mergeState(local, remoto){
+  const out = Object.assign(defaultState(), JSON.parse(JSON.stringify(local)));
+  let mudouLocal=false, mudouRemoto=false;
+  const R = remoto||{};
+
+  // -- tombstones: união (uma exclusão feita em qualquer máquina vale) --
+  const del = Object.assign({}, R.sessionsDel||{}, out.sessionsDel||{});
+  if(Object.keys(del).length!==Object.keys(out.sessionsDel||{}).length) mudouLocal=true;
+  if(Object.keys(del).length!==Object.keys(R.sessionsDel||{}).length) mudouRemoto=true;
+  out.sessionsDel = del;
+
+  // -- sessões: união por uid, menos as apagadas --
+  const porUid={};
+  (out.sessions||[]).forEach(s=>{ if(s&&s.uid) porUid[s.uid]=s; });
+  const antesLocal = Object.keys(porUid).length;
+  (R.sessions||[]).forEach(s=>{
+    if(!s) return;
+    const uid = s.uid || uidLegado(s);
+    s.uid = uid;
+    if(!porUid[uid]) porUid[uid]=s;
+  });
+  Object.keys(porUid).forEach(u=>{ if(del[u]) delete porUid[u]; });
+  const remotoUids = new Set((R.sessions||[]).map(s=>s&&(s.uid||uidLegado(s))).filter(Boolean));
+  Object.keys(porUid).forEach(u=>{ if(!remotoUids.has(u)) mudouRemoto=true; });
+  if(Object.keys(porUid).length!==antesLocal) mudouLocal=true;
+  out.sessions = Object.values(porUid).sort((a,b)=> String(a.data).localeCompare(String(b.data)) || String(a.uid).localeCompare(String(b.uid)));
+
+  // -- topicStatus: vence o carimbo mais novo; sem carimbo, o status mais avançado --
+  const stAt = Object.assign({}, out.topicStatusAt||{});
+  Object.keys(R.topicStatus||{}).forEach(k=>{
+    const rv=R.topicStatus[k], lv=out.topicStatus[k];
+    const ra=(R.topicStatusAt||{})[k]||"", la=stAt[k]||"";
+    if(lv===undefined){ out.topicStatus[k]=rv; if(ra)stAt[k]=ra; mudouLocal=true; return; }
+    if(rv===lv){ if(ra&&ra>la) stAt[k]=ra; return; }
+    const remotoVence = (ra||la) ? (ra>la) : ((ST_RANK[rv]||0)>(ST_RANK[lv]||0));
+    if(remotoVence){ out.topicStatus[k]=rv; if(ra)stAt[k]=ra; mudouLocal=true; }
+    else mudouRemoto=true;
+  });
+  Object.keys(out.topicStatus).forEach(k=>{ if(!(k in (R.topicStatus||{}))) mudouRemoto=true; });
+  out.topicStatusAt = stAt;
+
+  // -- revFeitas: união; conflito → revisão realmente FEITA vence "pulada"/"expirada",
+  //    e entre duas datas fica a mais antiga (a que de fato marcou a conclusão) --
+  const rvAt = Object.assign({}, out.revFeitasAt||{});
+  const concreta = v => v && v!=="pulada" && v!=="expirada";
+  Object.keys(R.revFeitas||{}).forEach(k=>{
+    const rv=R.revFeitas[k], lv=out.revFeitas[k];
+    if(lv===undefined){ out.revFeitas[k]=rv; const ra=(R.revFeitasAt||{})[k]; if(ra)rvAt[k]=ra; mudouLocal=true; return; }
+    if(rv===lv) return;
+    let vencedor;
+    if(concreta(rv)&&!concreta(lv)) vencedor=rv;
+    else if(concreta(lv)&&!concreta(rv)) vencedor=lv;
+    else vencedor = (String(rv)<String(lv)) ? rv : lv;
+    if(vencedor!==lv){ out.revFeitas[k]=vencedor; mudouLocal=true; } else mudouRemoto=true;
+  });
+  Object.keys(out.revFeitas).forEach(k=>{ if(!(k in (R.revFeitas||{}))) mudouRemoto=true; });
+  out.revFeitasAt = rvAt;
+
+  // -- assuntos personalizados: união por id --
+  const ct={}; (out.customTopics||[]).forEach(t=>{ if(t&&t.id!=null) ct[t.id]=t; });
+  const nCt=Object.keys(ct).length;
+  (R.customTopics||[]).forEach(t=>{ if(t&&t.id!=null&&!ct[t.id]){ ct[t.id]=t; mudouLocal=true; } });
+  if(Object.keys(ct).length!==(R.customTopics||[]).length || nCt!==Object.keys(ct).length) mudouRemoto=true;
+  out.customTopics = Object.values(ct);
+
+  out.nextSid = Math.max(out.nextSid||1, R.nextSid||1);
+  out.nextTid = Math.max(out.nextTid||1000, R.nextTid||1000);
+  out.updatedAt = new Date().toISOString();
+  return {estado:out, mudouLocal, mudouRemoto};
+}
+
+/* ============================================================
+   RECONSTRUÇÃO A PARTIR DO TEC
+   As capturas do TEC são a fonte durável do que foi estudado (dia, assunto,
+   tempo, acerto). Aqui elas preenchem SÓ as lacunas do histórico:
+     · sessão que já existe (mesmo uid) não entra de novo;
+     · sessão apagada de propósito não ressuscita (tombstone);
+     · lançamento manual no mesmo dia+assunto tem precedência — ele inclui o
+       tempo de teoria/leitura, que o TEC não registra.
+   Idempotente: rodar de novo não duplica nada.
+   ============================================================ */
+function absorverSessoesTec(avisar){
+  const pacote = window.SESSOES_TEC;
+  if(!pacote || !Array.isArray(pacote.sessoes)) return 0;
+  const porUid = {}; const ocupado = {};
+  (state.sessions||[]).forEach(s=>{
+    porUid[s.uid]=1;
+    ocupado[s.data+"|"+(s.topicId!=null?String(s.topicId):"livre:"+(s.assuntoLivre||""))]=1;
+  });
+  let add=0;
+  pacote.sessoes.forEach(t=>{
+    if(porUid[t.uid] || state.sessionsDel[t.uid]) return;
+    const chave = t.data+"|"+(t.topicId!=null?String(t.topicId):"livre:"+(t.assuntoLivre||""));
+    if(ocupado[chave]) return;              // já lançada à mão: não mexe
+    state.sessions.push(Object.assign({}, t));
+    ocupado[chave]=1; porUid[t.uid]=1; add++;
+  });
+  if(add){
+    state.sessions.sort((a,b)=> String(a.data).localeCompare(String(b.data)) || String(a.uid).localeCompare(String(b.uid)));
+    save();
+    const ab=document.querySelector("#tabs button.active"); const tab=ab?ab.dataset.tab:"dash";
+    if(tab==="sessao") renderHoje(); else render(tab);
+    if(avisar!==false) toast(add+" sessão(ões) recuperada(s) do histórico do TEC ✓");
+  }
+  return add;
+}
+/* Refaz o histórico do TEC ignorando os lançamentos manuais que o encobrem.
+   Botão de emergência: use se o histórico manual estiver claramente furado. */
+function reconstruirDoTec(){
+  const p=window.SESSOES_TEC;
+  if(!p||!p.sessoes){ alert("sessoes_tec.js não carregou. Rode 06_Scripts/gerar_sessoes_tec.py e publique o arquivo."); return; }
+  if(!confirm("Reconstruir o histórico a partir das "+p.sessoes.length+" sessões do TEC?\n\n"+
+     "· Sessões lançadas à mão são MANTIDAS.\n"+
+     "· Sessões do TEC ausentes são inseridas, inclusive onde há lançamento manual no mesmo dia/assunto.\n"+
+     "· Exclusões que você fez de propósito são reativadas.\n\n"+
+     "O estado atual vira snapshot antes (botão ⤺ Snapshots).")) return;
+  snapshot("antes de reconstruir do TEC");
+  const porUid={}; (state.sessions||[]).forEach(s=>porUid[s.uid]=1);
+  let add=0;
+  p.sessoes.forEach(t=>{ if(porUid[t.uid]) return;
+    delete state.sessionsDel[t.uid];
+    state.sessions.push(Object.assign({},t)); add++; });
+  state.sessions.sort((a,b)=> String(a.data).localeCompare(String(b.data)) || String(a.uid).localeCompare(String(b.uid)));
+  save();
+  const ab=document.querySelector("#tabs button.active"); render(ab?ab.dataset.tab:"dash");
+  alert(add?(add+" sessão(ões) inserida(s)."):"Nada a inserir — o histórico já cobre todo o TEC.");
+}
+
+function lerRemoto(g){
+  const f=g.files&&g.files[SYNC_FILE];
+  if(!f) return Promise.resolve(null);
+  if(f.truncated) return fetch(f.raw_url).then(r=>r.text()).then(t=>{ try{return JSON.parse(t);}catch(_){return null;} });
+  try{ return Promise.resolve(JSON.parse(f.content)); }catch(_){ return Promise.resolve(null); }
+}
+function aplicar(novo, avisar){
+  const antes=(state.sessions||[]).length;
+  if(novo.sessions.length<antes) snapshot("merge reduziu de "+antes+" p/ "+novo.sessions.length+" sessões");
+  state = novo; gravarLocal();
+  const ab=document.querySelector("#tabs button.active");
+  const tab = ab?ab.dataset.tab:"dash";
+  // nunca reconstruir a aba "Sessão de Estudo" por trás do usuário: apagaria o
+  // formulário/cronômetro em uso. Ali só o resumo do dia é atualizado.
+  if(tab==="sessao") renderHoje(); else render(tab);
+  if(avisar) toast(avisar);
+}
+
+/* Read-modify-write: sempre busca a nuvem, funde e só então grava.
+   É o que impede uma máquina de sobrescrever o trabalho da outra. */
+let syncRefazer=false;
+async function syncSincronizar(silencioso){
+  const c=syncCfg(); if(!c.token||!c.gist) return;
+  // já há uma rodada em voo: marca para repetir depois em vez de descartar
+  // (descartar era como uma sessão salva durante a sincronização ficava só local)
+  if(syncEmVoo){ syncRefazer=true; return; }
+  syncEmVoo=true;
+  syncSetStatus("sincronizando");
+  try{
+    const g=await syncApi("GET","/gists/"+c.gist,null,c.token);
+    const remoto=await lerRemoto(g);
+    let {estado,mudouLocal,mudouRemoto}=mergeState(state,remoto);
+    if(mudouLocal) aplicar(estado, silencioso?"":"Dados do outro computador incorporados ☁");
+    else { state=estado; gravarLocal(); }
+    // só depois de conhecer a nuvem: evita inserir do TEC algo que a outra
+    // máquina já tinha lançado à mão e ainda não havia chegado aqui
+    if(absorverSessoesTec(!silencioso)) mudouRemoto=true;
+    if(mudouRemoto||!remoto){
+      await syncApi("PATCH","/gists/"+c.gist,{files:{[SYNC_FILE]:{content:JSON.stringify(state)}}},c.token);
+    }
+    syncSetStatus("ok");
+  }catch(e){ syncSetStatus("erro", String(e.message||e).indexOf("401")>=0 ? "token inválido — clique em ☁ Sync" : "sem conexão; dados salvos localmente"); }
+  finally{
+    syncEmVoo=false;
+    if(syncRefazer){ syncRefazer=false; setTimeout(()=>syncSincronizar(true),400); }
+  }
+}
+const syncPush = ()=>syncSincronizar(true);
+const syncPull = ()=>syncSincronizar(false);
+
+function syncAgendar(){ // chamada em todo save(); agrupa gravações em 1 envio
+  const c=syncCfg(); if(!c.token||!c.gist) return;
+  syncSetStatus("pendente"); clearTimeout(syncTimer); syncTimer=setTimeout(()=>syncSincronizar(true),2500);
+}
+async function syncSetup(){
+  const c=syncCfg();
+  const token=(prompt("Token CLÁSSICO do GitHub com escopo 'gist' (Settings → Developer settings → Tokens classic).\nFica salvo só neste navegador.",c.token)||"").trim();
+  if(!token){
+    if(c.token&&confirm("Desativar a sincronização nesta máquina?")){
+      localStorage.removeItem(SYNC_LS.token); localStorage.removeItem(SYNC_LS.gist); syncSetStatus("off");
+    }
+    return;
+  }
+  let gist=(prompt("ID do Gist (deixe vazio para CRIAR um Gist secreto novo agora):",c.gist)||"").trim();
+  try{
+    if(!gist){
+      const g=await syncApi("POST","/gists",{description:"Estudos SEFAZ-AL — estado do dashboard",public:false,
+        files:{[SYNC_FILE]:{content:JSON.stringify(state)}}},token);
+      gist=g.id;
+      alert("Gist secreto criado!\n\nID (use-o ao configurar o outro computador):\n"+gist);
+    } else {
+      await syncApi("GET","/gists/"+gist,null,token); // valida token+id
+    }
+    localStorage.setItem(SYNC_LS.token,token); localStorage.setItem(SYNC_LS.gist,gist);
+    toast("Sync configurada ✓"); syncPull();
+  }catch(e){ alert("Não deu certo ("+e.message+").\nConfira se o token tem o escopo Gists e se o ID está correto."); }
+}
+/* Duas abas/janelas do dashboard na MESMA máquina eram um caminho de perda
+   independente da nuvem: a aba antiga guardava um `state` em memória e, ao
+   salvar, regravava por cima do que a outra aba tinha acabado de registrar.
+   Agora cada aba funde o que a vizinha gravou. */
+window.addEventListener("storage", ev=>{
+  if(ev.key!==LS_KEY || !ev.newValue) return;
+  let outro=null; try{ outro=JSON.parse(ev.newValue); }catch(e){ return; }
+  if(!outro||!outro.sessions) return;
+  const {estado,mudouLocal}=mergeState(state,migrar(outro));
+  if(mudouLocal) aplicar(estado,"");
+  else state=estado;
+});
+
+syncPull(); // ao abrir: funde com o estado da nuvem (e depois absorve o TEC)
+// Sem sync configurada não há nuvem para esperar: absorve o TEC direto.
+if(!syncCfg().token) absorverSessoesTec(true);
+
+// Relê a nuvem de tempos em tempos e sempre que a aba volta ao primeiro plano.
+// Com merge isso é seguro (nunca substitui, só acrescenta) e evita ficar horas
+// com um estado defasado da outra máquina.
+syncPollTimer=setInterval(()=>{ if(!document.hidden) syncSincronizar(true); }, SYNC_POLL_MS);
+document.addEventListener("visibilitychange",()=>{ if(!document.hidden) syncSincronizar(true); });
+
+// Fechar a aba com envio pendente: tenta mandar mesmo assim. Sem merge prévio,
+// mas nada se perde de forma definitiva — o que existir só na outra máquina
+// volta ao Gist assim que o dashboard for aberto lá.
+window.addEventListener("beforeunload",()=>{
+  if(syncEstado!=="pendente") return;
+  const c=syncCfg(); if(!c.token||!c.gist) return;
+  fetch("https://api.github.com/gists/"+c.gist,{method:"PATCH",keepalive:true,
+    headers:{Authorization:"Bearer "+c.token,Accept:"application/vnd.github+json"},
+    body:JSON.stringify({files:{[SYNC_FILE]:{content:JSON.stringify(state)}}})});
+});
+
+/* ============================================================
+   BACKUP / RESTORE
+   ============================================================ */
+function exportData(){
+  const blob=new Blob([JSON.stringify(state,null,2)],{type:"application/json"});
+  const a=document.createElement("a"); a.href=URL.createObjectURL(blob);
+  a.download="estudos-tcepe-backup-"+todayStr()+".json"; a.click(); toast("Backup gerado");
+}
+function importData(ev){
+  const f=ev.target.files[0]; if(!f) return;
+  const r=new FileReader(); r.onload=()=>{ try{ const s=JSON.parse(r.result);
+    if(!s.sessions||!s.topicStatus) throw 0;
+    snapshot("antes de restaurar backup "+f.name);
+    state=migrar(Object.assign(defaultState(),s)); save();
+    document.querySelector("#tabs button.active")?.click() || render("dash"); render("dash");
+    toast("Backup restaurado");
+  }catch(e){ alert("Arquivo inválido."); } ev.target.value=""; };
+  r.readAsText(f);
+}
+
+/* ============================================================
+   INIT
+   ============================================================ */
+render("dash");
+// Fila real de revisões (exportada pelo gerar_fila.py junto do estado das cadeias)
+fetch("desempenho_assuntos.json",{cache:"no-store"})
+  .then(r=>r.ok?r.json():null)
+  .then(j=>{ if(!j||!j.resumo) return; DESEMP_TEC=j;
+    // Modo saldo líquido: o próprio arquivo declara o formato; arquivos antigos
+    // (ciclo FGV) não têm o campo nem os campos de saldo, e ficam no acerto bruto.
+    MODO_CE = j.formato==="ce" && j.resumo.saldo_pct_unicas!==undefined;
+    const ab=document.querySelector("#tabs button.active");
+    if(ab&&(ab.dataset.tab==="assuntos"||ab.dataset.tab==="disciplina")) render(ab.dataset.tab); })
+  .catch(()=>{});
+</script>
+</body>
+</html>
