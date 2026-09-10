@@ -2,7 +2,8 @@
   "arquivos_processados": [
     "tec_registros_2026-09-02.json",
     "tec_registros_2026-09-03.json",
-    "tec_registros_2026-09-09.json"
+    "tec_registros_2026-09-09.json",
+    "tec_registros_2026-09-09 (1).json"
   ],
   "cadeias": {
     "Contabilidade Geral||Plano de Contas": {
@@ -22,7 +23,7 @@
         },
         "d6": {
           "prevista": "2026-09-10",
-          "emitida": null,
+          "emitida": "2026-09-10",
           "resultado": null
         },
         "d14": {
@@ -49,7 +50,7 @@
           "emitida": "2026-09-09"
         },
         "d6": {
-          "prevista": "2026-09-10",
+          "prevista": "2026-09-11",
           "emitida": null,
           "resultado": null
         },
@@ -77,7 +78,7 @@
           "emitida": "2026-09-09"
         },
         "d6": {
-          "prevista": "2026-09-10",
+          "prevista": "2026-09-11",
           "emitida": null,
           "resultado": null
         },
@@ -105,7 +106,7 @@
           "emitida": "2026-09-09"
         },
         "d6": {
-          "prevista": "2026-09-10",
+          "prevista": "2026-09-11",
           "emitida": null,
           "resultado": null
         },
@@ -137,7 +138,7 @@
         },
         "d6": {
           "prevista": "2026-09-10",
-          "emitida": null,
+          "emitida": "2026-09-10",
           "resultado": null
         },
         "d14": {
@@ -167,7 +168,7 @@
         },
         "d6": {
           "prevista": "2026-09-10",
-          "emitida": null,
+          "emitida": "2026-09-10",
           "resultado": null
         },
         "d14": {
@@ -194,7 +195,7 @@
           "emitida": "2026-09-09"
         },
         "d6": {
-          "prevista": "2026-09-10",
+          "prevista": "2026-09-11",
           "emitida": null,
           "resultado": null
         },
@@ -225,7 +226,7 @@
         },
         "d6": {
           "prevista": "2026-09-10",
-          "emitida": null,
+          "emitida": "2026-09-10",
           "resultado": null
         },
         "d14": {
@@ -299,52 +300,248 @@
           "emitida": null
         }
       }
+    },
+    "Legislação Tributária Federal||Da Base de Cálculo (arts. 12 e 13 da LC nº 214/2025)": {
+      "materia": "Legislação Tributária Federal",
+      "assunto": "Da Base de Cálculo (arts. 12 e 13 da LC nº 214/2025)",
+      "data_base": "2026-09-09",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "3402862"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-10",
+          "emitida": "2026-09-10"
+        },
+        "d6": {
+          "prevista": "2026-09-15",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-09-23",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-07",
+          "emitida": null
+        }
+      }
+    },
+    "Legislação Tributária Federal||Das Hipóteses de Incidência (arts. 4º a 7º da LC nº 214/2025)": {
+      "materia": "Legislação Tributária Federal",
+      "assunto": "Das Hipóteses de Incidência (arts. 4º a 7º da LC nº 214/2025)",
+      "data_base": "2026-09-09",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "3863198"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-10",
+          "emitida": "2026-09-10"
+        },
+        "d6": {
+          "prevista": "2026-09-15",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-09-23",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-07",
+          "emitida": null
+        }
+      }
+    },
+    "Legislação Tributária Federal||Disposições Preliminares (arts. 1º a 3º da LC nº 214/2025)": {
+      "materia": "Legislação Tributária Federal",
+      "assunto": "Disposições Preliminares (arts. 1º a 3º da LC nº 214/2025)",
+      "data_base": "2026-09-09",
+      "cadeia_completa": true,
+      "alvos_origem": [],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-10",
+          "emitida": "2026-09-10"
+        },
+        "d6": {
+          "prevista": "2026-09-15",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-09-23",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-07",
+          "emitida": null
+        }
+      }
+    },
+    "Legislação Tributária Federal||Do Local da Operação (art. 11 da LC nº 214/2025)": {
+      "materia": "Legislação Tributária Federal",
+      "assunto": "Do Local da Operação (art. 11 da LC nº 214/2025)",
+      "data_base": "2026-09-09",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "3976074",
+        "4122708"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-10",
+          "emitida": "2026-09-10"
+        },
+        "d6": {
+          "prevista": "2026-09-15",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-09-23",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-07",
+          "emitida": null
+        }
+      }
+    },
+    "Legislação Tributária Federal||Do Momento de Ocorrência do Fato Gerador (art. 10 da LC nº 214/2025)": {
+      "materia": "Legislação Tributária Federal",
+      "assunto": "Do Momento de Ocorrência do Fato Gerador (art. 10 da LC nº 214/2025)",
+      "data_base": "2026-09-09",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "3846964"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-10",
+          "emitida": "2026-09-10"
+        },
+        "d6": {
+          "prevista": "2026-09-15",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-09-23",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-07",
+          "emitida": null
+        }
+      }
+    },
+    "TI - Engenharia de Software||SCRUM": {
+      "materia": "TI - Engenharia de Software",
+      "assunto": "SCRUM",
+      "data_base": "2026-09-09",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "2271472",
+        "2450367",
+        "2589478",
+        "2593597",
+        "2638753",
+        "2775848",
+        "2790353",
+        "2790354",
+        "2790468",
+        "2798969",
+        "2798971",
+        "2842612",
+        "2877478",
+        "2891787",
+        "2938788",
+        "2938791",
+        "2942094",
+        "3077439"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-10",
+          "emitida": "2026-09-10"
+        },
+        "d6": {
+          "prevista": "2026-09-15",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-09-23",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-07",
+          "emitida": null
+        }
+      }
     }
   },
   "ultima_fila": {
-    "data": "2026-09-09",
+    "data": "2026-09-10",
     "itens": [
       [
         "Contabilidade Geral||Plano de Contas",
-        "d1"
-      ],
-      [
-        "Direito Administrativo (Doutrina e Leis Federais)||Atributos ou Características dos Atos Administrativos",
-        "d1"
+        "d6"
       ],
       [
         "Direito Constitucional (CF/1988 e Doutrina)||Direitos Sociais e dos Trabalhadores (arts. 6º e 7º da CF/1988)",
-        "d1"
-      ],
-      [
-        "Direito Tributário||Imposto sobre Bens e Serviços - IBS (CF/1988, EC 132)",
-        "d1"
-      ],
-      [
-        "Direito Tributário||Imunidades Tributárias",
-        "d1"
-      ],
-      [
-        "Direito Tributário||Taxas (CF/1988 e CTN)",
-        "d1"
-      ],
-      [
-        "Economia e Finanças Públicas||Dívida Pública, NFSP e Tipos de Déficit Público no Brasil",
-        "d1"
+        "d6"
       ],
       [
         "Finanças e Conhecimentos Bancários||Composição Geral do SFN",
+        "d6"
+      ],
+      [
+        "Legislação Tributária Federal||Da Base de Cálculo (arts. 12 e 13 da LC nº 214/2025)",
+        "d1"
+      ],
+      [
+        "Legislação Tributária Federal||Das Hipóteses de Incidência (arts. 4º a 7º da LC nº 214/2025)",
+        "d1"
+      ],
+      [
+        "Legislação Tributária Federal||Disposições Preliminares (arts. 1º a 3º da LC nº 214/2025)",
+        "d1"
+      ],
+      [
+        "Legislação Tributária Federal||Do Local da Operação (art. 11 da LC nº 214/2025)",
+        "d1"
+      ],
+      [
+        "Legislação Tributária Federal||Do Momento de Ocorrência do Fato Gerador (art. 10 da LC nº 214/2025)",
         "d1"
       ],
       [
         "Matemática Financeira||Valor Presente Líquido (VPL)",
-        "d1"
+        "d6"
       ],
       [
-        "TI - Gestão e Governança de TI||Conceitos de BPM (Gerenciamento de Processos de Negócio)",
+        "TI - Engenharia de Software||SCRUM",
         "d1"
       ]
     ],
-    "confirmada": "2026-09-09"
+    "confirmada": "2026-09-10"
   }
 }
