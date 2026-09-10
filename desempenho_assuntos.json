@@ -1,39 +1,28 @@
 {
-  "gerado_em": "2026-09-09T09:31:26",
+  "gerado_em": "2026-09-10T08:05:55",
   "fonte": "07_TEC/TEC_Captura/tec_registros_*.json",
   "formato": "ce",
   "resumo": {
-    "tentativas": 121,
-    "acertos": 98,
-    "pct": 81.0,
-    "unicas": 121,
-    "acertos_unicas": 98,
-    "pct_unicas": 81.0,
-    "erros": 22,
-    "brancos": 1,
-    "saldo_pct": 62.8,
-    "erros_unicas": 22,
-    "brancos_unicas": 1,
-    "saldo_pct_unicas": 62.8,
-    "pct_branco_unicas": 0.8
+    "tentativas": 178,
+    "acertos": 133,
+    "pct": 74.7,
+    "unicas": 178,
+    "acertos_unicas": 133,
+    "pct_unicas": 74.7,
+    "erros": 45,
+    "brancos": 0,
+    "saldo_pct": 49.4,
+    "erros_unicas": 45,
+    "brancos_unicas": 0,
+    "saldo_pct_unicas": 49.4,
+    "pct_branco_unicas": 0.0,
+    "palpites": 2,
+    "acertos_palpite": 0,
+    "palpites_unicas": 2,
+    "acertos_palpite_unicas": 0,
+    "pct_palpite_unicas": 1.1
   },
   "materias": [
-    {
-      "materia": "Sem materia",
-      "tentativas": 1,
-      "acertos": 0,
-      "pct": 0.0,
-      "unicas": 1,
-      "acertos_unicas": 0,
-      "pct_unicas": 0.0,
-      "erros": 0,
-      "brancos": 1,
-      "saldo_pct": 0.0,
-      "erros_unicas": 0,
-      "brancos_unicas": 1,
-      "saldo_pct_unicas": 0.0,
-      "pct_branco_unicas": 100.0
-    },
     {
       "materia": "Finanças e Conhecimentos Bancários",
       "tentativas": 5,
@@ -48,7 +37,12 @@
       "erros_unicas": 3,
       "brancos_unicas": 0,
       "saldo_pct_unicas": -20.0,
-      "pct_branco_unicas": 0.0
+      "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0
     },
     {
       "materia": "Direito Penal",
@@ -64,7 +58,33 @@
       "erros_unicas": 1,
       "brancos_unicas": 0,
       "saldo_pct_unicas": 0.0,
-      "pct_branco_unicas": 0.0
+      "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0
+    },
+    {
+      "materia": "TI - Engenharia de Software",
+      "tentativas": 36,
+      "acertos": 18,
+      "pct": 50.0,
+      "unicas": 36,
+      "acertos_unicas": 18,
+      "pct_unicas": 50.0,
+      "erros": 18,
+      "brancos": 0,
+      "saldo_pct": 0.0,
+      "erros_unicas": 18,
+      "brancos_unicas": 0,
+      "saldo_pct_unicas": 0.0,
+      "pct_branco_unicas": 0.0,
+      "palpites": 2,
+      "acertos_palpite": 0,
+      "palpites_unicas": 2,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 5.6
     },
     {
       "materia": "AFO, Direito Financeiro e Contabilidade Pública",
@@ -80,7 +100,12 @@
       "erros_unicas": 2,
       "brancos_unicas": 0,
       "saldo_pct_unicas": 20.0,
-      "pct_branco_unicas": 0.0
+      "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0
     },
     {
       "materia": "Matemática Financeira",
@@ -96,7 +121,33 @@
       "erros_unicas": 1,
       "brancos_unicas": 0,
       "saldo_pct_unicas": 50.0,
-      "pct_branco_unicas": 0.0
+      "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0
+    },
+    {
+      "materia": "Legislação Tributária Federal",
+      "tentativas": 22,
+      "acertos": 17,
+      "pct": 77.3,
+      "unicas": 22,
+      "acertos_unicas": 17,
+      "pct_unicas": 77.3,
+      "erros": 5,
+      "brancos": 0,
+      "saldo_pct": 54.5,
+      "erros_unicas": 5,
+      "brancos_unicas": 0,
+      "saldo_pct_unicas": 54.5,
+      "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0
     },
     {
       "materia": "Economia e Finanças Públicas",
@@ -112,7 +163,12 @@
       "erros_unicas": 1,
       "brancos_unicas": 0,
       "saldo_pct_unicas": 60.0,
-      "pct_branco_unicas": 0.0
+      "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0
     },
     {
       "materia": "Estatística",
@@ -128,7 +184,12 @@
       "erros_unicas": 2,
       "brancos_unicas": 0,
       "saldo_pct_unicas": 60.0,
-      "pct_branco_unicas": 0.0
+      "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0
     },
     {
       "materia": "Direito Constitucional (CF/1988 e Doutrina)",
@@ -144,7 +205,12 @@
       "erros_unicas": 2,
       "brancos_unicas": 0,
       "saldo_pct_unicas": 66.7,
-      "pct_branco_unicas": 0.0
+      "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0
     },
     {
       "materia": "Direito Tributário",
@@ -160,7 +226,12 @@
       "erros_unicas": 6,
       "brancos_unicas": 0,
       "saldo_pct_unicas": 69.2,
-      "pct_branco_unicas": 0.0
+      "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0
     },
     {
       "materia": "Contabilidade Geral",
@@ -176,7 +247,12 @@
       "erros_unicas": 1,
       "brancos_unicas": 0,
       "saldo_pct_unicas": 75.0,
-      "pct_branco_unicas": 0.0
+      "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0
     },
     {
       "materia": "Direito Administrativo (Doutrina e Leis Federais)",
@@ -192,7 +268,12 @@
       "erros_unicas": 1,
       "brancos_unicas": 0,
       "saldo_pct_unicas": 77.8,
-      "pct_branco_unicas": 0.0
+      "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0
     },
     {
       "materia": "TI - Gestão e Governança de TI",
@@ -208,7 +289,12 @@
       "erros_unicas": 2,
       "brancos_unicas": 0,
       "saldo_pct_unicas": 80.0,
-      "pct_branco_unicas": 0.0
+      "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0
     },
     {
       "materia": "Legislação Penal e Processual Penal Especial",
@@ -224,7 +310,12 @@
       "erros_unicas": 0,
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
-      "pct_branco_unicas": 0.0
+      "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0
     }
   ],
   "assuntos": [
@@ -247,6 +338,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": -100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-03"
     },
     {
@@ -268,6 +364,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 0.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-02"
     },
     {
@@ -289,6 +390,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-02"
     },
     {
@@ -310,6 +416,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-02"
     },
     {
@@ -331,6 +442,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 50.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-02"
     },
     {
@@ -352,6 +468,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-02"
     },
     {
@@ -373,6 +494,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-02"
     },
     {
@@ -394,6 +520,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-02"
     },
     {
@@ -415,6 +546,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": -100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-03"
     },
     {
@@ -436,6 +572,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-03"
     },
     {
@@ -457,6 +598,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-03"
     },
     {
@@ -478,6 +624,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-03"
     },
     {
@@ -499,6 +650,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-03"
     },
     {
@@ -520,6 +676,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-03"
     },
     {
@@ -541,6 +702,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": -100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-03"
     },
     {
@@ -562,6 +728,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 60.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-03"
     },
     {
@@ -583,6 +754,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-03"
     },
     {
@@ -604,6 +780,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-03"
     },
     {
@@ -625,6 +806,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-03"
     },
     {
@@ -646,6 +832,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-03"
     },
     {
@@ -667,6 +858,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-03"
     },
     {
@@ -688,6 +884,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": -100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-03"
     },
     {
@@ -709,6 +910,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-03"
     },
     {
@@ -730,6 +936,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": -100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-02"
     },
     {
@@ -751,6 +962,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": -100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-02"
     },
     {
@@ -772,6 +988,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": -100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-02"
     },
     {
@@ -793,6 +1014,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": -100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-02"
     },
     {
@@ -814,6 +1040,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 81.8,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-08"
     },
     {
@@ -835,6 +1066,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-02"
     },
     {
@@ -856,6 +1092,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-02"
     },
     {
@@ -877,6 +1118,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-02"
     },
     {
@@ -898,6 +1144,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-02"
     },
     {
@@ -919,6 +1170,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-02"
     },
     {
@@ -940,6 +1196,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-02"
     },
     {
@@ -961,6 +1222,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-02"
     },
     {
@@ -982,6 +1248,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": -100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-02"
     },
     {
@@ -1003,6 +1274,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-02"
     },
     {
@@ -1024,6 +1300,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-02"
     },
     {
@@ -1045,6 +1326,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": -100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-03"
     },
     {
@@ -1066,6 +1352,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": -100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-03"
     },
     {
@@ -1087,6 +1378,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-03"
     },
     {
@@ -1108,6 +1404,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-03"
     },
     {
@@ -1129,6 +1430,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-03"
     },
     {
@@ -1150,6 +1456,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-03"
     },
     {
@@ -1171,6 +1482,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-03"
     },
     {
@@ -1192,6 +1508,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-03"
     },
     {
@@ -1213,6 +1534,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-03"
     },
     {
@@ -1234,6 +1560,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": -33.3,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-02"
     },
     {
@@ -1255,6 +1586,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 0.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-02"
     },
     {
@@ -1276,7 +1612,142 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-02"
+    },
+    {
+      "materia": "Legislação Tributária Federal",
+      "assunto": "Do Local da Operação (art. 11 da LC nº 214/2025)",
+      "grupo": "",
+      "prio": null,
+      "c25": 0,
+      "tentativas": 4,
+      "acertos": 2,
+      "pct": 50.0,
+      "unicas": 4,
+      "acertos_unicas": 2,
+      "pct_unicas": 50.0,
+      "erros": 2,
+      "brancos": 0,
+      "saldo_pct": 0.0,
+      "erros_unicas": 2,
+      "brancos_unicas": 0,
+      "saldo_pct_unicas": 0.0,
+      "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
+      "ultima": "2026-09-09"
+    },
+    {
+      "materia": "Legislação Tributária Federal",
+      "assunto": "Do Momento de Ocorrência do Fato Gerador (art. 10 da LC nº 214/2025)",
+      "grupo": "",
+      "prio": null,
+      "c25": 0,
+      "tentativas": 3,
+      "acertos": 2,
+      "pct": 66.7,
+      "unicas": 3,
+      "acertos_unicas": 2,
+      "pct_unicas": 66.7,
+      "erros": 1,
+      "brancos": 0,
+      "saldo_pct": 33.3,
+      "erros_unicas": 1,
+      "brancos_unicas": 0,
+      "saldo_pct_unicas": 33.3,
+      "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
+      "ultima": "2026-09-09"
+    },
+    {
+      "materia": "Legislação Tributária Federal",
+      "assunto": "Das Hipóteses de Incidência (arts. 4º a 7º da LC nº 214/2025)",
+      "grupo": "",
+      "prio": null,
+      "c25": 0,
+      "tentativas": 5,
+      "acertos": 4,
+      "pct": 80.0,
+      "unicas": 5,
+      "acertos_unicas": 4,
+      "pct_unicas": 80.0,
+      "erros": 1,
+      "brancos": 0,
+      "saldo_pct": 60.0,
+      "erros_unicas": 1,
+      "brancos_unicas": 0,
+      "saldo_pct_unicas": 60.0,
+      "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
+      "ultima": "2026-09-09"
+    },
+    {
+      "materia": "Legislação Tributária Federal",
+      "assunto": "Da Base de Cálculo (arts. 12 e 13 da LC nº 214/2025)",
+      "grupo": "",
+      "prio": null,
+      "c25": 0,
+      "tentativas": 6,
+      "acertos": 5,
+      "pct": 83.3,
+      "unicas": 6,
+      "acertos_unicas": 5,
+      "pct_unicas": 83.3,
+      "erros": 1,
+      "brancos": 0,
+      "saldo_pct": 66.7,
+      "erros_unicas": 1,
+      "brancos_unicas": 0,
+      "saldo_pct_unicas": 66.7,
+      "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
+      "ultima": "2026-09-09"
+    },
+    {
+      "materia": "Legislação Tributária Federal",
+      "assunto": "Disposições Preliminares (arts. 1º a 3º da LC nº 214/2025)",
+      "grupo": "",
+      "prio": null,
+      "c25": 0,
+      "tentativas": 4,
+      "acertos": 4,
+      "pct": 100.0,
+      "unicas": 4,
+      "acertos_unicas": 4,
+      "pct_unicas": 100.0,
+      "erros": 0,
+      "brancos": 0,
+      "saldo_pct": 100.0,
+      "erros_unicas": 0,
+      "brancos_unicas": 0,
+      "saldo_pct_unicas": 100.0,
+      "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
+      "ultima": "2026-09-09"
     },
     {
       "materia": "Matemática Financeira",
@@ -1297,6 +1768,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 33.3,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-02"
     },
     {
@@ -1318,28 +1794,38 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 100.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-02"
     },
     {
-      "materia": "Sem materia",
-      "assunto": "Sem assunto",
-      "grupo": "",
+      "materia": "TI - Engenharia de Software",
+      "assunto": "SCRUM",
+      "grupo": "TI",
       "prio": null,
       "c25": 0,
-      "tentativas": 1,
-      "acertos": 0,
-      "pct": 0.0,
-      "unicas": 1,
-      "acertos_unicas": 0,
-      "pct_unicas": 0.0,
-      "erros": 0,
-      "brancos": 1,
+      "tentativas": 36,
+      "acertos": 18,
+      "pct": 50.0,
+      "unicas": 36,
+      "acertos_unicas": 18,
+      "pct_unicas": 50.0,
+      "erros": 18,
+      "brancos": 0,
       "saldo_pct": 0.0,
-      "erros_unicas": 0,
-      "brancos_unicas": 1,
+      "erros_unicas": 18,
+      "brancos_unicas": 0,
       "saldo_pct_unicas": 0.0,
-      "pct_branco_unicas": 100.0,
-      "ultima": "2026-09-08"
+      "pct_branco_unicas": 0.0,
+      "palpites": 2,
+      "acertos_palpite": 0,
+      "palpites_unicas": 2,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 5.6,
+      "ultima": "2026-09-09"
     },
     {
       "materia": "TI - Gestão e Governança de TI",
@@ -1360,6 +1846,11 @@
       "brancos_unicas": 0,
       "saldo_pct_unicas": 80.0,
       "pct_branco_unicas": 0.0,
+      "palpites": 0,
+      "acertos_palpite": 0,
+      "palpites_unicas": 0,
+      "acertos_palpite_unicas": 0,
+      "pct_palpite_unicas": 0.0,
       "ultima": "2026-09-08"
     }
   ]

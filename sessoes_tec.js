@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-09-09T09:31:26",
+ "gerado_em": "2026-09-10T08:05:56",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -640,15 +640,75 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-08~sem-assunto-177bb3",
+   "uid": "TEC~2026-09-09~da-base-de-calculo-arts-12-e-13-da-lc-n-214-2025-fac2eb",
    "origem": "tec",
-   "data": "2026-09-08",
+   "data": "2026-09-09",
    "mat": "DFin",
    "topicId": null,
-   "assuntoLivre": "(sem assunto no TEC)",
-   "minutos": 1,
-   "qResolvidas": 1,
-   "qAcertadas": 0,
+   "assuntoLivre": "Da Base de Cálculo (arts. 12 e 13 da LC nº 214/2025)",
+   "minutos": 29,
+   "qResolvidas": 6,
+   "qAcertadas": 5,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-09~das-hipoteses-de-incidencia-arts-4-a-7-da-lc-n-214-2025-39b86f",
+   "origem": "tec",
+   "data": "2026-09-09",
+   "mat": "DFin",
+   "topicId": null,
+   "assuntoLivre": "Das Hipóteses de Incidência (arts. 4º a 7º da LC nº 214/2025)",
+   "minutos": 4,
+   "qResolvidas": 5,
+   "qAcertadas": 4,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-09~disposicoes-preliminares-arts-1-a-3-da-lc-n-214-2025-087e8f",
+   "origem": "tec",
+   "data": "2026-09-09",
+   "mat": "DFin",
+   "topicId": null,
+   "assuntoLivre": "Disposições Preliminares (arts. 1º a 3º da LC nº 214/2025)",
+   "minutos": 15,
+   "qResolvidas": 4,
+   "qAcertadas": 4,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-09~do-local-da-operacao-art-11-da-lc-n-214-2025-a7263a",
+   "origem": "tec",
+   "data": "2026-09-09",
+   "mat": "DFin",
+   "topicId": null,
+   "assuntoLivre": "Do Local da Operação (art. 11 da LC nº 214/2025)",
+   "minutos": 5,
+   "qResolvidas": 4,
+   "qAcertadas": 2,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-09~do-momento-de-ocorrencia-do-fato-gerador-art-10-da-lc-n-214--1a0ae1",
+   "origem": "tec",
+   "data": "2026-09-09",
+   "mat": "DFin",
+   "topicId": null,
+   "assuntoLivre": "Do Momento de Ocorrência do Fato Gerador (art. 10 da LC nº 214/2025)",
+   "minutos": 2,
+   "qResolvidas": 3,
+   "qAcertadas": 2,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-09~scrum-399530",
+   "origem": "tec",
+   "data": "2026-09-09",
+   "mat": "DFin",
+   "topicId": null,
+   "assuntoLivre": "SCRUM",
+   "minutos": 15,
+   "qResolvidas": 36,
+   "qAcertadas": 18,
    "obs": "reconstruída do TEC"
   }
  ]
