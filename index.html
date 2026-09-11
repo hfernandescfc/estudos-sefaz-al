@@ -746,12 +746,22 @@ function render(tab){
 let DESEMP_TEC=null;
 function corPct(p){ return p>=80?"var(--ok)":(p>=70?"var(--warn)":"var(--bad)"); }
 
-/* --- MÉTRICA: acerto bruto × saldo líquido ---------------------------------
+/* --- MÉTRICA: acerto bruto × domínio estimado -------------------------------
    Em prova CERTO/ERRADO (CEBRASPE) o acerto bruto não mede conhecimento: a linha
    de base do chute é 50%, então 80% de acerto equivale a 60% de domínio e 50%
-   equivale a ZERO. A métrica válida é o saldo líquido (acertos − erros)/total,
-   que é numericamente igual à fração dominada e pode ser negativa — e negativo é
-   informação: responder aquele assunto custa ponto em vez de render.
+   equivale a ZERO. A métrica válida é a fração dominada, que pode ser negativa —
+   e negativo é informação: responder aquele assunto custa ponto em vez de render.
+
+   ⚠ 11/09/2026 — o número deixou de ser o saldo líquido literal. O acervo do TEC
+   mistura C/E e MÚLTIPLA ESCOLHA (~51% dele é ME), e aplicar a régua do C/E a uma
+   amostra de ME subestimava feio: "Da Sujeição Passiva", 4 dos 5 itens em ME,
+   aparecia aqui como −20%/ELIMINA quando o domínio real é 25%. O
+   desempenho_assuntos.py passou a estimar a fração de ME de cada amostra e a
+   corrigir a linha do chute: `domínio = (acertos − c·respondidas)/((1−c)·total)`,
+   com c entre 0,20 (ME puro) e 0,50 (C/E puro). Em amostra 100% C/E o valor é
+   idêntico ao saldo de antes. O campo continua chamando `saldo_pct_unicas` por
+   compatibilidade; o literal está em `saldo_bruto_pct_unicas` e a mistura
+   estimada, em `fracao_me_unicas`.
 
    O desempenho_assuntos.py grava `formato` e os campos de saldo. Arquivos do
    ciclo FGV não têm nenhum dos dois e caem no acerto bruto automaticamente. --- */
@@ -760,7 +770,7 @@ const META_SALDO=60;   // meta do Plano_Estudos_Set-Dez.md
 let MODO_CE=false;
 function metrica(o){ return MODO_CE ? (o.saldo_pct_unicas ?? 0) : o.pct_unicas; }
 function refMetrica(){ return MODO_CE ? META_SALDO : 70; }
-function rotMetrica(){ return MODO_CE ? "saldo" : "acerto"; }
+function rotMetrica(){ return MODO_CE ? "domínio" : "acerto"; }
 function corMetrica(v){
   return MODO_CE ? (v>=META_SALDO?"var(--ok)":v>=PISO_SALDO?"var(--warn)":"var(--bad)")
                  : corPct(v);
@@ -786,12 +796,13 @@ function drawDesempTec(){
       <div style="flex:2;font-size:12px">${escapeHtml(m.materia)}</div>
     </div>`;}).join("");
   const cab = MODO_CE
-    ? `${R.unicas} questões · saldo ${R.saldo_pct_unicas}% (${R.pct_unicas}% bruto)`
+    ? `${R.unicas} questões · domínio ${R.saldo_pct_unicas}% (${R.pct_unicas}% bruto)`
     : `${R.unicas} questões · ${R.pct_unicas}%`;
   const nota = MODO_CE
     ? `Consolida <b>${R.tentativas}</b> respostas (${R.unicas} únicas; estado pela tentativa mais recente).
-       <b>Barras em saldo líquido</b> = acertos − erros: em prova C/E, 50% de acerto vale saldo <b>0</b>.
+       <b>Barras em domínio estimado</b>, corrigido pelo chute: em C/E, 50% de acerto vale <b>0</b>; em múltipla escolha, 20%.
        Piso de eliminação ${PISO_SALDO}% · meta do plano ${META_SALDO}%.
+       ${R.fracao_me_unicas>0?`Amostra ~<b>${Math.round(100*R.fracao_me_unicas)}%</b> múltipla escolha (saldo líquido literal: ${R.saldo_bruto_pct_unicas}%).`:""}
        ${R.brancos_unicas?`<b>${R.brancos_unicas}</b> em branco (${R.pct_branco_unicas}%).`:""}`
     : `Consolida <b>${R.tentativas}</b> respostas registradas (${R.unicas} questões únicas; % pela tentativa mais recente). Fonte independente do lançamento manual de sessões.`;
   box.innerHTML=`
@@ -1271,7 +1282,7 @@ function chartPrioridade(filtGrupo){
   g+=`</svg>`;
   const grupos=[...new Set(pts.map(a=>a.grupo))];
   const leg=grupos.map(gr=>`<span><span class="dot" style="background:${matCor(gr)}"></span>${matNome(gr)}</span>`).join("");
-  const eixo=MODO_CE?`eixo x = <b>saldo líquido</b> (acertos − erros) · 0% = chute`:`eixo x = acerto`;
+  const eixo=MODO_CE?`eixo x = <b>domínio estimado</b> (acerto corrigido pelo chute do formato) · 0% = chute`:`eixo x = acerto`;
   return `<div style="overflow-x:auto">${g}</div><div class="legend" style="margin:8px 0 0">${leg}<span style="margin-left:auto;color:var(--muted)">tamanho ∝ nº de questões · ${eixo}, começa em ${x0}%</span></div>`;
 }
 function listaFracosPrio(filtGrupo){
