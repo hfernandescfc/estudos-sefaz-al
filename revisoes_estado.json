@@ -3,7 +3,8 @@
     "tec_registros_2026-09-02.json",
     "tec_registros_2026-09-03.json",
     "tec_registros_2026-09-09.json",
-    "tec_registros_2026-09-09 (1).json"
+    "tec_registros_2026-09-09 (1).json",
+    "tec_registros_2026-09-11.json"
   ],
   "cadeias": {
     "Contabilidade Geral||Plano de Contas": {
@@ -51,7 +52,7 @@
         },
         "d6": {
           "prevista": "2026-09-11",
-          "emitida": null,
+          "emitida": "2026-09-11",
           "resultado": null
         },
         "d14": {
@@ -79,7 +80,7 @@
         },
         "d6": {
           "prevista": "2026-09-11",
-          "emitida": null,
+          "emitida": "2026-09-11",
           "resultado": null
         },
         "d14": {
@@ -107,7 +108,7 @@
         },
         "d6": {
           "prevista": "2026-09-11",
-          "emitida": null,
+          "emitida": "2026-09-11",
           "resultado": null
         },
         "d14": {
@@ -196,7 +197,7 @@
         },
         "d6": {
           "prevista": "2026-09-11",
-          "emitida": null,
+          "emitida": "2026-09-11",
           "resultado": null
         },
         "d14": {
@@ -496,52 +497,99 @@
           "emitida": null
         }
       }
+    },
+    "Legislação Tributária Federal||Da Sujeição Passiva (arts. 21 a 26 da LC nº 214/2025)": {
+      "materia": "Legislação Tributária Federal",
+      "assunto": "Da Sujeição Passiva (arts. 21 a 26 da LC nº 214/2025)",
+      "data_base": "2026-09-11",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "3846967",
+        "3863200",
+        "3976077"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-11",
+          "emitida": "2026-09-11"
+        },
+        "d6": {
+          "prevista": "2026-09-17",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-09-25",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-09",
+          "emitida": null
+        }
+      }
+    },
+    "Legislação Tributária Federal||Das Modalidades de Extinção dos Débitos (arts. 27 a 37 da LC nº 214/2025)": {
+      "materia": "Legislação Tributária Federal",
+      "assunto": "Das Modalidades de Extinção dos Débitos (arts. 27 a 37 da LC nº 214/2025)",
+      "data_base": "2026-09-11",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "3883560",
+        "3976071"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-11",
+          "emitida": "2026-09-11"
+        },
+        "d6": {
+          "prevista": "2026-09-17",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-09-25",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-09",
+          "emitida": null
+        }
+      }
     }
   },
   "ultima_fila": {
-    "data": "2026-09-10",
+    "data": "2026-09-11",
     "itens": [
       [
-        "Contabilidade Geral||Plano de Contas",
+        "Direito Administrativo (Doutrina e Leis Federais)||Atributos ou Características dos Atos Administrativos",
         "d6"
       ],
       [
-        "Direito Constitucional (CF/1988 e Doutrina)||Direitos Sociais e dos Trabalhadores (arts. 6º e 7º da CF/1988)",
+        "Direito Tributário||Imunidades Tributárias",
         "d6"
       ],
       [
-        "Finanças e Conhecimentos Bancários||Composição Geral do SFN",
+        "Direito Tributário||Taxas (CF/1988 e CTN)",
         "d6"
       ],
       [
-        "Legislação Tributária Federal||Da Base de Cálculo (arts. 12 e 13 da LC nº 214/2025)",
-        "d1"
-      ],
-      [
-        "Legislação Tributária Federal||Das Hipóteses de Incidência (arts. 4º a 7º da LC nº 214/2025)",
-        "d1"
-      ],
-      [
-        "Legislação Tributária Federal||Disposições Preliminares (arts. 1º a 3º da LC nº 214/2025)",
-        "d1"
-      ],
-      [
-        "Legislação Tributária Federal||Do Local da Operação (art. 11 da LC nº 214/2025)",
-        "d1"
-      ],
-      [
-        "Legislação Tributária Federal||Do Momento de Ocorrência do Fato Gerador (art. 10 da LC nº 214/2025)",
-        "d1"
-      ],
-      [
-        "Matemática Financeira||Valor Presente Líquido (VPL)",
+        "Economia e Finanças Públicas||Dívida Pública, NFSP e Tipos de Déficit Público no Brasil",
         "d6"
       ],
       [
-        "TI - Engenharia de Software||SCRUM",
+        "Legislação Tributária Federal||Da Sujeição Passiva (arts. 21 a 26 da LC nº 214/2025)",
+        "d1"
+      ],
+      [
+        "Legislação Tributária Federal||Das Modalidades de Extinção dos Débitos (arts. 27 a 37 da LC nº 214/2025)",
         "d1"
       ]
     ],
-    "confirmada": "2026-09-10"
+    "confirmada": "2026-09-11"
   }
 }

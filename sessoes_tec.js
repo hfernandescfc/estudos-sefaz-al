@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-09-10T08:14:42",
+ "gerado_em": "2026-09-11T08:10:03",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -709,6 +709,42 @@ window.SESSOES_TEC = {
    "minutos": 15,
    "qResolvidas": 36,
    "qAcertadas": 18,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-10~da-sujeicao-passiva-arts-21-a-26-da-lc-n-214-2025-f36d83",
+   "origem": "tec",
+   "data": "2026-09-10",
+   "mat": "DFin",
+   "topicId": null,
+   "assuntoLivre": "Da Sujeição Passiva (arts. 21 a 26 da LC nº 214/2025)",
+   "minutos": 6,
+   "qResolvidas": 5,
+   "qAcertadas": 2,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-10~das-modalidades-de-extincao-dos-debitos-arts-27-a-37-da-lc-n-0e7452",
+   "origem": "tec",
+   "data": "2026-09-10",
+   "mat": "DFin",
+   "topicId": null,
+   "assuntoLivre": "Das Modalidades de Extinção dos Débitos (arts. 27 a 37 da LC nº 214/2025)",
+   "minutos": 15,
+   "qResolvidas": 3,
+   "qAcertadas": 3,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-10~scrum-399530",
+   "origem": "tec",
+   "data": "2026-09-10",
+   "mat": "DFin",
+   "topicId": null,
+   "assuntoLivre": "SCRUM",
+   "minutos": 18,
+   "qResolvidas": 42,
+   "qAcertadas": 31,
    "obs": "reconstruída do TEC"
   }
  ]
