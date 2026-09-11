@@ -564,32 +564,6 @@
   },
   "ultima_fila": {
     "data": "2026-09-11",
-    "itens": [
-      [
-        "Direito Administrativo (Doutrina e Leis Federais)||Atributos ou Características dos Atos Administrativos",
-        "d6"
-      ],
-      [
-        "Direito Tributário||Imunidades Tributárias",
-        "d6"
-      ],
-      [
-        "Direito Tributário||Taxas (CF/1988 e CTN)",
-        "d6"
-      ],
-      [
-        "Economia e Finanças Públicas||Dívida Pública, NFSP e Tipos de Déficit Público no Brasil",
-        "d6"
-      ],
-      [
-        "Legislação Tributária Federal||Da Sujeição Passiva (arts. 21 a 26 da LC nº 214/2025)",
-        "d1"
-      ],
-      [
-        "Legislação Tributária Federal||Das Modalidades de Extinção dos Débitos (arts. 27 a 37 da LC nº 214/2025)",
-        "d1"
-      ]
-    ],
-    "confirmada": "2026-09-11"
+    "itens": []
   }
 }
