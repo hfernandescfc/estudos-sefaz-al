@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-09-11T09:06:40",
+ "gerado_em": "2026-09-11T12:04:49",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
