@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-09-11T12:04:49",
+ "gerado_em": "2026-09-14T08:12:02",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -745,6 +745,138 @@ window.SESSOES_TEC = {
    "minutos": 18,
    "qResolvidas": 42,
    "qAcertadas": 31,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-11~comite-gestor-do-ibs-cf-1988-ec-132-9db39c",
+   "origem": "tec",
+   "data": "2026-09-11",
+   "mat": "TRIB",
+   "topicId": null,
+   "assuntoLivre": "Comitê Gestor do IBS (CF 1988, EC 132)",
+   "minutos": 2,
+   "qResolvidas": 3,
+   "qAcertadas": 2,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-11~da-base-de-calculo-arts-12-e-13-da-lc-n-214-2025-fac2eb",
+   "origem": "tec",
+   "data": "2026-09-11",
+   "mat": "DFin",
+   "topicId": null,
+   "assuntoLivre": "Da Base de Cálculo (arts. 12 e 13 da LC nº 214/2025)",
+   "minutos": 1,
+   "qResolvidas": 1,
+   "qAcertadas": 1,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-11~da-sujeicao-passiva-arts-21-a-26-da-lc-n-214-2025-f36d83",
+   "origem": "tec",
+   "data": "2026-09-11",
+   "mat": "DFin",
+   "topicId": null,
+   "assuntoLivre": "Da Sujeição Passiva (arts. 21 a 26 da LC nº 214/2025)",
+   "minutos": 1,
+   "qResolvidas": 1,
+   "qAcertadas": 1,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-11~das-hipoteses-de-incidencia-arts-4-a-7-da-lc-n-214-2025-39b86f",
+   "origem": "tec",
+   "data": "2026-09-11",
+   "mat": "DFin",
+   "topicId": null,
+   "assuntoLivre": "Das Hipóteses de Incidência (arts. 4º a 7º da LC nº 214/2025)",
+   "minutos": 1,
+   "qResolvidas": 1,
+   "qAcertadas": 1,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-11~das-modalidades-de-extincao-dos-debitos-arts-27-a-37-da-lc-n-0e7452",
+   "origem": "tec",
+   "data": "2026-09-11",
+   "mat": "DFin",
+   "topicId": null,
+   "assuntoLivre": "Das Modalidades de Extinção dos Débitos (arts. 27 a 37 da LC nº 214/2025)",
+   "minutos": 12,
+   "qResolvidas": 1,
+   "qAcertadas": 1,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-11~do-momento-de-ocorrencia-do-fato-gerador-art-10-da-lc-n-214--1a0ae1",
+   "origem": "tec",
+   "data": "2026-09-11",
+   "mat": "DFin",
+   "topicId": null,
+   "assuntoLivre": "Do Momento de Ocorrência do Fato Gerador (art. 10 da LC nº 214/2025)",
+   "minutos": 1,
+   "qResolvidas": 1,
+   "qAcertadas": 1,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-11~imposto-seletivo-is-cf-1988-ec-132-919bd8",
+   "origem": "tec",
+   "data": "2026-09-11",
+   "mat": "TRIB",
+   "topicId": null,
+   "assuntoLivre": "Imposto Seletivo - IS (CF 1988; EC 132)",
+   "minutos": 2,
+   "qResolvidas": 3,
+   "qAcertadas": 2,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-11~imposto-sobre-bens-e-servicos-ibs-cf-1988-ec-132-21b555",
+   "origem": "tec",
+   "data": "2026-09-11",
+   "mat": "TRIB",
+   "topicId": null,
+   "assuntoLivre": "Imposto sobre Bens e Serviços - IBS (CF/1988, EC 132)",
+   "minutos": 2,
+   "qResolvidas": 3,
+   "qAcertadas": 3,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-11~kanban-engenharia-de-software-abf49f",
+   "origem": "tec",
+   "data": "2026-09-11",
+   "mat": "DFin",
+   "topicId": null,
+   "assuntoLivre": "Kanban (Engenharia de Software)",
+   "minutos": 104,
+   "qResolvidas": 17,
+   "qAcertadas": 12,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-11~outras-questoes-e-topicos-mesclados-sobre-a-reforma-tributar-eae5d7",
+   "origem": "tec",
+   "data": "2026-09-11",
+   "mat": "TRIB",
+   "topicId": null,
+   "assuntoLivre": "Outras Questões e Tópicos Mesclados sobre a Reforma Tributária",
+   "minutos": 1,
+   "qResolvidas": 1,
+   "qAcertadas": 1,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-11~xp-extreme-programming-81d998",
+   "origem": "tec",
+   "data": "2026-09-11",
+   "mat": "DFin",
+   "topicId": null,
+   "assuntoLivre": "XP (Extreme Programming)",
+   "minutos": 1,
+   "qResolvidas": 7,
+   "qAcertadas": 5,
    "obs": "reconstruída do TEC"
   }
  ]

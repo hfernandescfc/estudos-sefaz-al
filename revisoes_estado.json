@@ -4,7 +4,8 @@
     "tec_registros_2026-09-03.json",
     "tec_registros_2026-09-09.json",
     "tec_registros_2026-09-09 (1).json",
-    "tec_registros_2026-09-11.json"
+    "tec_registros_2026-09-11.json",
+    "tec_registros_2026-09-14.json"
   ],
   "cadeias": {
     "Contabilidade Geral||Plano de Contas": {
@@ -258,7 +259,7 @@
         },
         "d6": {
           "prevista": "2026-09-14",
-          "emitida": null,
+          "emitida": "2026-09-14",
           "resultado": null
         },
         "d14": {
@@ -289,7 +290,7 @@
         },
         "d6": {
           "prevista": "2026-09-14",
-          "emitida": null,
+          "emitida": "2026-09-14",
           "resultado": null
         },
         "d14": {
@@ -560,10 +561,167 @@
           "emitida": null
         }
       }
+    },
+    "Direito Tributário||Comitê Gestor do IBS (CF 1988, EC 132)": {
+      "materia": "Direito Tributário",
+      "assunto": "Comitê Gestor do IBS (CF 1988, EC 132)",
+      "data_base": "2026-09-14",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "3883530"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-14",
+          "emitida": "2026-09-14"
+        },
+        "d6": {
+          "prevista": "2026-09-18",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-09-28",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-12",
+          "emitida": null
+        }
+      }
+    },
+    "Direito Tributário||Imposto Seletivo - IS (CF 1988; EC 132)": {
+      "materia": "Direito Tributário",
+      "assunto": "Imposto Seletivo - IS (CF 1988; EC 132)",
+      "data_base": "2026-09-14",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "3883518"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-14",
+          "emitida": "2026-09-14"
+        },
+        "d6": {
+          "prevista": "2026-09-18",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-09-28",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-12",
+          "emitida": null
+        }
+      }
+    },
+    "TI - Engenharia de Software||Kanban (Engenharia de Software)": {
+      "materia": "TI - Engenharia de Software",
+      "assunto": "Kanban (Engenharia de Software)",
+      "data_base": "2026-09-14",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "2780354",
+        "3042087",
+        "3165509",
+        "3345797",
+        "3917775",
+        "3400158",
+        "3433996",
+        "3445207"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-14",
+          "emitida": "2026-09-14"
+        },
+        "d6": {
+          "prevista": "2026-09-18",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-09-28",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-12",
+          "emitida": null
+        }
+      }
+    },
+    "TI - Engenharia de Software||XP (Extreme Programming)": {
+      "materia": "TI - Engenharia de Software",
+      "assunto": "XP (Extreme Programming)",
+      "data_base": "2026-09-14",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "3259720",
+        "3340539",
+        "2589480",
+        "2780349",
+        "3291921"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-14",
+          "emitida": "2026-09-14"
+        },
+        "d6": {
+          "prevista": "2026-09-18",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-09-28",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-12",
+          "emitida": null
+        }
+      }
     }
   },
   "ultima_fila": {
-    "data": "2026-09-11",
-    "itens": []
+    "data": "2026-09-14",
+    "itens": [
+      [
+        "Direito Tributário||Comitê Gestor do IBS (CF 1988, EC 132)",
+        "d1"
+      ],
+      [
+        "Direito Tributário||Imposto Seletivo - IS (CF 1988; EC 132)",
+        "d1"
+      ],
+      [
+        "Direito Tributário||Imposto sobre Bens e Serviços - IBS (CF/1988, EC 132)",
+        "d6"
+      ],
+      [
+        "TI - Engenharia de Software||Kanban (Engenharia de Software)",
+        "d1"
+      ],
+      [
+        "TI - Engenharia de Software||XP (Extreme Programming)",
+        "d1"
+      ],
+      [
+        "TI - Gestão e Governança de TI||Conceitos de BPM (Gerenciamento de Processos de Negócio)",
+        "d6"
+      ]
+    ],
+    "confirmada": "2026-09-14"
   }
 }
