@@ -121,6 +121,12 @@ th.wk-now,td.wk-now{background:rgba(76,194,255,.12)}
 .hide{display:none!important}
 .flex{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .qstat{font-size:12.5px;color:var(--muted)}
+/* Chips de semana do plano (aba Assuntos): S = 1a passagem, R = revisita da Fase 3 */
+.semchip{display:inline-block;padding:1px 6px;border-radius:6px;font-size:11px;font-weight:700;background:rgba(76,194,255,.14);color:var(--accent);margin-left:4px;cursor:help}
+.semchip.mov{background:rgba(227,179,65,.16);color:var(--warn)}
+.semchip.rev{background:rgba(255,255,255,.07);color:var(--muted)}
+.sem-box{margin-bottom:12px}
+.sem-box b.wk{font-size:15px}
 .right{text-align:right}
 /* Gantt */
 .gantt-wrap{overflow-x:auto}
@@ -1065,11 +1071,81 @@ function delSession(uidEnc){ apagarSessao(decodeURIComponent(uidEnc)); renderHoj
    ASSUNTOS POR MATÉRIA
    ============================================================ */
 const STATUS_LABEL={nao:"Não iniciado",estudando:"Estudando",revisar:"Revisar",concluido:"Concluído"};
+
+/* ---- Semana do plano, por assunto -------------------------------------
+   Cada assunto tem ATÉ DUAS semanas no QPLAN: p1 = aquisição (1ª passagem,
+   semanas 1-10) e p2 = revisita em regime de questões (Fase 3). A semana de
+   aquisição exibida/filtrada é a REPLANEJADA (`semEff` de replanejar()), que é
+   a mesma régua do Cronograma e do Gantt — assunto atrasado migra de semana lá
+   e tem de migrar aqui também. Assunto sem entrada no QPLAN (criado à mão)
+   fica em "sem semana".
+   `assSemBase="orig"` volta para a semana fixa do plano — necessário porque, na
+   régua replanejada, uma semana já vencida fica vazia (tudo que não fechou
+   migrou para a semana corrente) e sem isso não há como revisitá-la. */
+let assSemBase="eff"; // "eff" = replanejada · "orig" = plano original
+function semanasTopico(id,plano){
+  const info=plano?plano.info[id]:null;
+  const aqOrig=topicSemana(id);
+  const aq=(assSemBase==="orig") ? aqOrig : (info?info.semEff:aqOrig);
+  return {aq, aqOrig, semEff:info?info.semEff:aqOrig, rev:topicSemanaRev(id),
+          movido:!!(info&&info.movido&&info.semEff!==aqOrig),
+          ok:!!(info&&info.ok), resto:info?info.resto:0};
+}
+function chipsSemana(id,plano){
+  const s=semanasTopico(id,plano); let h="";
+  // o chip mostra sempre plano→replanejado, em qualquer régua: é o mesmo fato
+  if(s.aq>0) h+=s.movido
+    ? `<span class="semchip mov" title="aquisição: plano S${s.aqOrig} → replanejado S${s.semEff} (meta não cumprida)">S${s.aqOrig}→${s.semEff}</span>`
+    : `<span class="semchip" title="semana de aquisição (1ª passagem)">S${s.aq}</span>`;
+  if(s.rev>0) h+=`<span class="semchip rev" title="revisita em regime de questões (Fase 3)">R${s.rev}</span>`;
+  return h;
+}
+function semanaHoje(){ return Math.min(15,Math.max(1,semanaDoDia(new Date()))); }
+function faseCurta(n){ return n<=5?"F1":(n<=ULT_AQUISICAO?"F2":(n<=ULT_SEMANA?"F3":"Consol.")); }
+
+/* Contagem de assuntos por semana, na régua em vigor (assSemBase). Um assunto
+   conta nas DUAS semanas em que aparece: aquisição e revisita. */
+function contagemPorSemana(plano){
+  const cnt={}; let semSem=0;
+  allTopics().forEach(t=>{ const s=semanasTopico(t.id,plano);
+    if(s.aq>0) cnt[s.aq]=(cnt[s.aq]||0)+1;
+    if(s.rev>0 && s.rev!==s.aq) cnt[s.rev]=(cnt[s.rev]||0)+1;
+    if(s.aq<=0 && s.rev<=0) semSem++; });
+  return {cnt, semSem};
+}
+/* Os rótulos do select levam a contagem, que muda quando a régua muda — então
+   são reescritos a cada desenho, não fixados no HTML. */
+function atualizarOpcoesSemana(plano,wNow){
+  const sel=document.getElementById("filtSem"); if(!sel||!sel.options) return;
+  const {cnt,semSem}=contagemPorSemana(plano);
+  const atrasados=Object.values(plano.info).filter(i=>!i.ok && i.semOrig<wNow && i.resto>0).length;
+  for(const o of sel.options){
+    const n=(cnt[+o.value]||0), suf=v=>v?` (${v})`:"";
+    if(o.value==="") o.textContent="Todas as semanas";
+    else if(o.value==="atual") o.textContent=`📌 Semana atual — S${wNow}${suf(cnt[wNow]||0)}`;
+    else if(o.value==="atraso") o.textContent=`⏰ Atrasados${suf(atrasados)}`;
+    else if(o.value==="0") o.textContent=`— sem semana no plano${suf(semSem)}`;
+    else { const s=SEMANAS[+o.value-1]; if(s) o.textContent=`S${s.n} · ${s.per} · ${faseCurta(s.n)}${suf(n)}`; }
+  }
+}
+
 function renderAssuntos(){
   const groups=Object.keys(MAT_INFO).filter(g=>allTopics().some(t=>grupo(t.mat)===g));
+  const optSem=SEMANAS.map(s=>`<option value="${s.n}">S${s.n} · ${s.per}</option>`).join("");
   let html=`
   <div class="filters">
     <select id="filtMat"><option value="">Todas as matérias</option>${groups.map(g=>`<option value="${g}">${MAT_INFO[g].nome}</option>`).join("")}</select>
+    <select id="filtSem" title="Semana do plano: S = aquisição · R = revisita da Fase 3. O número entre parênteses é quantos assuntos caem na semana.">
+      <option value="">Todas as semanas</option>
+      <option value="atual">📌 Semana atual</option>
+      <option value="atraso">⏰ Atrasados</option>
+      ${optSem}
+      <option value="0">— sem semana no plano</option>
+    </select>
+    <select id="filtSemBase" title="Régua da semana de aquisição. Replanejada = a mesma do Cronograma e do Gantt (o que não fechou migra p/ a semana corrente). Plano original = a semana fixa do QPLAN.">
+      <option value="eff">🔄 semana replanejada</option>
+      <option value="orig">📋 semana do plano original</option>
+    </select>
     <select id="filtStatus"><option value="">Todos os status</option>${Object.entries(STATUS_LABEL).map(([k,v])=>`<option value="${k}">${v}</option>`).join("")}</select>
     <select id="filtPrio"><option value="">Todas as prioridades</option><option value="1">MÁXIMA (P1)</option><option value="2">ALTA (P2)</option><option value="3">MÉDIA (P3)</option><option value="4">Anki (P4)</option><option value="c25">✅ Caiu em 2025</option></select>
     <input type="text" id="filtBusca" placeholder="🔎 buscar assunto...">
@@ -1087,38 +1163,56 @@ function renderAssuntos(){
     <span><span class="dot" style="background:#4cc2ff"></span>Estudando</span>
     <span><span class="dot" style="background:#e3b341"></span>Revisar</span>
     <span><span class="dot" style="background:#56d364"></span>Concluído</span>
+    <span><span class="semchip">S6</span> semana de aquisição · <span class="semchip mov">S6→8</span> replanejada · <span class="semchip rev">R11</span> revisita da Fase 3</span>
   </div>
+  <div id="semResumo"></div>
   <div id="desempTecBox"></div>
   <div id="assBox"></div>`;
   document.getElementById("tab-assuntos").innerHTML=html;
   drawDesempTec();
-  ["filtMat","filtStatus","filtPrio","filtBusca"].forEach(id=>document.getElementById(id).oninput=drawAssuntos);
+  ["filtMat","filtSem","filtSemBase","filtStatus","filtPrio","filtBusca"].forEach(id=>document.getElementById(id).oninput=drawAssuntos);
   drawAssuntos();
 }
 function drawAssuntos(){
   const fM=document.getElementById("filtMat").value, fS=document.getElementById("filtStatus").value, fB=(document.getElementById("filtBusca").value||"").toLowerCase();
   const fP=document.getElementById("filtPrio").value;
   const matchPrio=t=> !fP ? true : (fP==="gerar" ? !!t.gerar : String(t.prio||3)===fP);
+  // Semana: "" todas · "atual" a semana de hoje · "atraso" meta vencida e não
+  // cumprida · "0" fora do plano · "1".."15" a semana escolhida
+  const fSemRaw=document.getElementById("filtSem").value;
+  assSemBase=(document.getElementById("filtSemBase")||{}).value||"eff";
+  const plano=replanejar(), wNow=semanaHoje();
+  atualizarOpcoesSemana(plano,wNow);
+  const fW = fSemRaw==="atual" ? wNow : (/^\d+$/.test(fSemRaw) ? +fSemRaw : null);
+  const matchSem=t=>{
+    if(!fSemRaw) return true;
+    const s=semanasTopico(t.id,plano);
+    if(fSemRaw==="atraso") return !s.ok && s.aqOrig>0 && s.aqOrig<wNow && s.resto>0;
+    if(fW===0) return s.aq<=0 && s.rev<=0;
+    return s.aq===fW || s.rev===fW;
+  };
   const groups=Object.keys(MAT_INFO).filter(g=>allTopics().some(t=>grupo(t.mat)===g));
-  let html="";
+  let html="", sel=[];
   groups.forEach(g=>{
     if(fM && fM!==g) return;
     let ts=allTopics().filter(t=>grupo(t.mat)===g);
-    ts=ts.filter(t=> (!fS||state.topicStatus[t.id]===fS) && matchPrio(t) && (!fB||t.assunto.toLowerCase().includes(fB)) );
+    ts=ts.filter(t=> (!fS||state.topicStatus[t.id]===fS) && matchPrio(t) && matchSem(t) && (!fB||t.assunto.toLowerCase().includes(fB)) );
     if(ts.length===0) return;
+    sel=sel.concat(ts);
     const totG=allTopics().filter(t=>grupo(t.mat)===g);
     const conclG=totG.filter(t=>state.topicStatus[t.id]==="concluido").length;
     ts.sort(prioSort);
     html+=`<div class="mat-group"><div class="mat-head" onclick="this.nextElementSibling.classList.toggle('hide')">
       <span class="dot" style="background:${MAT_INFO[g].cor};width:12px;height:12px"></span>
       <span class="mname">${MAT_INFO[g].nome}</span>
+      ${fSemRaw?`<span class="qstat">${ts.length} no filtro</span>`:""}
       <span class="mbar"><i style="width:${pct(conclG,totG.length)}%"></i></span>
       <span class="mprog">${conclG}/${totG.length} concl.</span>
     </div><div class="mat-body"><table><tbody>`;
     ts.forEach(t=>{
       const stv=state.topicStatus[t.id]||"nao"; const q=topicQuestoes(t.id); const mn=topicMin(t.id);
-      const pr=t.prio||3; const meta=topicMeta(t.id); const sem=topicSemana(t.id);
-      const semChip = sem>0 ? `<span class="qstat">S${sem}</span>` : '';
+      const pr=t.prio||3; const meta=topicMeta(t.id);
+      const semChip = chipsSemana(t.id,plano);
       let qCol;
       if(meta>0){
         const okMeta = q.qr>=meta;
@@ -1138,6 +1232,49 @@ function drawAssuntos(){
     html+=`</tbody></table></div></div>`;
   });
   document.getElementById("assBox").innerHTML=html||`<div class="empty">Nenhum assunto encontrado com esses filtros.</div>`;
+  desenharSemResumo(fSemRaw,fW,wNow,plano,sel);
+}
+/* Cartão de contexto da semana filtrada: o que o plano manda fazer nela, quantas
+   questões ela pede e quanto tempo isso custa no ritmo de cada matéria. */
+function desenharSemResumo(fSemRaw,fW,wNow,plano,sel){
+  const box=document.getElementById("semResumo"); if(!box) return;
+  if(!fSemRaw){ box.innerHTML=""; return; }
+  if(fSemRaw==="atraso"){
+    const resto=sel.reduce((a,t)=>a+semanasTopico(t.id,plano).resto,0);
+    const min=sel.reduce((a,t)=>a+semanasTopico(t.id,plano).resto/ritmo(grupo(t.mat))*60,0);
+    box.innerHTML=`<div class="card sem-box" style="border-color:var(--warn)">
+      <b class="wk">⏰ Atrasados</b> <span class="muted">— meta da 1ª passagem vencida antes da S${wNow} e ainda não cumprida</span><br>
+      <b>${sel.length}</b> assuntos · <b>${resto}q</b> pendentes · ~<b>${fmtMin(min)}</b> no ritmo de cada matéria
+      <span class="muted">· o chip <span class="semchip mov">S→S</span> mostra para qual semana cada um já migrou</span></div>`;
+    return;
+  }
+  if(fW===0){
+    box.innerHTML=`<div class="card sem-box"><b class="wk">— Sem semana no plano</b>
+      <span class="muted">— ${sel.length} assunto(s) fora do QPLAN (criados à mão ou sem meta de questões). Não entram no Cronograma nem no Gantt.</span></div>`;
+    return;
+  }
+  const s=SEMANAS[fW-1]; if(!s){ box.innerHTML=""; return; }
+  let aq=0, rev=0, metaQ=0, min=0, concl=0;
+  sel.forEach(t=>{ const z=semanasTopico(t.id,plano), g=grupo(t.mat);
+    if(z.aq===fW){ aq++; metaQ+=topicMeta(t.id); min+=topicMeta(t.id)/ritmo(g)*60; }
+    if(z.rev===fW){ rev++; metaQ+=topicMetaRev(t.id); min+=topicMetaRev(t.id)/ritmo(g)*60; }
+    if(state.topicStatus[t.id]==="concluido") concl++; });
+  const blocos=[s.ext?`extensão <b>${matNome(s.ext)}</b>`:null, s.bloco?`bloco <b>${matNome(s.bloco)}</b>`:null,
+                s.cauda?`cauda <b>${matNome(s.cauda)}</b>`:null].filter(Boolean).join(" · ");
+  // Semana vazia tem duas causas legítimas — dizer qual, senão parece defeito.
+  let nota="";
+  if(sel.length===0){
+    const noPlano=allTopics().filter(t=>topicSemana(t.id)===fW||topicSemanaRev(t.id)===fW).length;
+    if(fW>ULT_SEMANA) nota=`<br><span class="muted">Semana de consolidação: o plano não aloca aquisição nem revisita aqui — é releitura de tabelas-âncora e lei seca.</span>`;
+    else if(assSemBase==="eff" && noPlano) nota=`<br><span class="muted">Vazia na régua <b>replanejada</b>: os ${noPlano} assuntos originais desta semana já migraram para frente. Troque para <b>📋 semana do plano original</b> para vê-los.</span>`;
+  }
+  box.innerHTML=`<div class="card sem-box" style="border-color:${fW===wNow?"var(--accent)":"var(--line)"}">
+    <b class="wk">📅 Semana ${s.n}</b> <span class="muted">${s.per} · ${escapeHtml(s.fase)}</span>
+    ${fW===wNow?'<span class="now-pill" style="background:var(--ok);color:#06121c;font-size:11px;font-weight:700;padding:2px 9px;border-radius:20px">semana atual</span>':""}<br>
+    ${blocos||'<span class="muted">sem grade — consolidação</span>'}<br>
+    <b>${sel.length}</b> assuntos no filtro (${aq} de aquisição · ${rev} de revisita) · meta <b>${metaQ}q</b>
+    · ~<b>${fmtMin(min)}</b> de questões · <b>${concl}</b> marcados concluídos
+    <span class="muted">· régua: ${assSemBase==="orig"?"plano original":"replanejada"}</span>${nota}</div>`;
 }
 function setTopicStatus(id,v){ state.topicStatus[id]=v; state.topicStatusAt[id]=new Date().toISOString(); }
 function setStatus(id,v){ setTopicStatus(id,v); save(); toast("Status atualizado");
