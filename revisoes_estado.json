@@ -5,7 +5,8 @@
     "tec_registros_2026-09-09.json",
     "tec_registros_2026-09-09 (1).json",
     "tec_registros_2026-09-11.json",
-    "tec_registros_2026-09-14.json"
+    "tec_registros_2026-09-14.json",
+    "tec_registros_2026-09-15.json"
   ],
   "cadeias": {
     "Contabilidade Geral||Plano de Contas": {
@@ -320,7 +321,7 @@
         },
         "d6": {
           "prevista": "2026-09-15",
-          "emitida": null,
+          "emitida": "2026-09-15",
           "resultado": null
         },
         "d14": {
@@ -350,7 +351,7 @@
         },
         "d6": {
           "prevista": "2026-09-15",
-          "emitida": null,
+          "emitida": "2026-09-15",
           "resultado": null
         },
         "d14": {
@@ -378,7 +379,7 @@
         },
         "d6": {
           "prevista": "2026-09-15",
-          "emitida": null,
+          "emitida": "2026-09-15",
           "resultado": null
         },
         "d14": {
@@ -409,7 +410,7 @@
         },
         "d6": {
           "prevista": "2026-09-15",
-          "emitida": null,
+          "emitida": "2026-09-15",
           "resultado": null
         },
         "d14": {
@@ -439,7 +440,7 @@
         },
         "d6": {
           "prevista": "2026-09-15",
-          "emitida": null,
+          "emitida": "2026-09-15",
           "resultado": null
         },
         "d14": {
@@ -486,7 +487,7 @@
         },
         "d6": {
           "prevista": "2026-09-15",
-          "emitida": null,
+          "emitida": "2026-09-15",
           "resultado": null
         },
         "d14": {
@@ -692,36 +693,188 @@
           "emitida": null
         }
       }
+    },
+    "TI - Gestão e Governança de TI||BPMN (Modelo e Notação de Processos de Negócio)": {
+      "materia": "TI - Gestão e Governança de TI",
+      "assunto": "BPMN (Modelo e Notação de Processos de Negócio)",
+      "data_base": "2026-09-15",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "3828207",
+        "3437362",
+        "3663279"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-15",
+          "emitida": "2026-09-15"
+        },
+        "d6": {
+          "prevista": "2026-09-21",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-09-29",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-13",
+          "emitida": null
+        }
+      }
+    },
+    "TI - Segurança da Informação||Gestão de Continuidade de Negócio (NBR ISO/IEC 15999-1, 15999-2, 27002, 22313, etc.)": {
+      "materia": "TI - Segurança da Informação",
+      "assunto": "Gestão de Continuidade de Negócio (NBR ISO/IEC 15999-1, 15999-2, 27002, 22313, etc.)",
+      "data_base": "2026-09-15",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "2423427",
+        "2575662",
+        "2839782",
+        "3048674",
+        "3077744",
+        "3148287",
+        "3191055",
+        "2642279",
+        "2797448",
+        "3090436"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-15",
+          "emitida": "2026-09-15"
+        },
+        "d6": {
+          "prevista": "2026-09-21",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-09-29",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-13",
+          "emitida": null
+        }
+      }
+    },
+    "TI - Segurança da Informação||SGSI, Controles e Estrutura das Normas da Família 27000 (ISO/IEC 27001, 27002, etc.)": {
+      "materia": "TI - Segurança da Informação",
+      "assunto": "SGSI, Controles e Estrutura das Normas da Família 27000 (ISO/IEC 27001, 27002, etc.)",
+      "data_base": "2026-09-15",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "2892153",
+        "3191045",
+        "2590832",
+        "2783775",
+        "2847869",
+        "3041212",
+        "3090382",
+        "3289731"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-15",
+          "emitida": "2026-09-15"
+        },
+        "d6": {
+          "prevista": "2026-09-21",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-09-29",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-13",
+          "emitida": null
+        }
+      }
     }
   },
   "ultima_fila": {
-    "data": "2026-09-14",
+    "data": "2026-09-15",
     "itens": [
       [
-        "Direito Tributário||Comitê Gestor do IBS (CF 1988, EC 132)",
-        "d1"
+        "2026-09-14||Extensão — SPED, Decreto 6.022/2007: instituição, âmbito, quem está obrigado",
+        "leitura"
       ],
       [
-        "Direito Tributário||Imposto Seletivo - IS (CF 1988; EC 132)",
-        "d1"
+        "2026-09-14||LC 214, arts. 38-56 — não cumulatividade, apropriação e utilização de créditos",
+        "leitura"
       ],
       [
-        "Direito Tributário||Imposto sobre Bens e Serviços - IBS (CF/1988, EC 132)",
+        "Legislação Tributária Federal||Da Base de Cálculo (arts. 12 e 13 da LC nº 214/2025)",
         "d6"
       ],
       [
-        "TI - Engenharia de Software||Kanban (Engenharia de Software)",
-        "d1"
-      ],
-      [
-        "TI - Engenharia de Software||XP (Extreme Programming)",
-        "d1"
-      ],
-      [
-        "TI - Gestão e Governança de TI||Conceitos de BPM (Gerenciamento de Processos de Negócio)",
+        "Legislação Tributária Federal||Das Hipóteses de Incidência (arts. 4º a 7º da LC nº 214/2025)",
         "d6"
+      ],
+      [
+        "Legislação Tributária Federal||Disposições Preliminares (arts. 1º a 3º da LC nº 214/2025)",
+        "d6"
+      ],
+      [
+        "Legislação Tributária Federal||Do Local da Operação (art. 11 da LC nº 214/2025)",
+        "d6"
+      ],
+      [
+        "Legislação Tributária Federal||Do Momento de Ocorrência do Fato Gerador (art. 10 da LC nº 214/2025)",
+        "d6"
+      ],
+      [
+        "TI - Engenharia de Software||SCRUM",
+        "d6"
+      ],
+      [
+        "TI - Gestão e Governança de TI||BPMN (Modelo e Notação de Processos de Negócio)",
+        "d1"
+      ],
+      [
+        "TI - Segurança da Informação||Gestão de Continuidade de Negócio (NBR ISO/IEC 15999-1, 15999-2, 27002, 22313, etc.)",
+        "d1"
+      ],
+      [
+        "TI - Segurança da Informação||SGSI, Controles e Estrutura das Normas da Família 27000 (ISO/IEC 27001, 27002, etc.)",
+        "d1"
       ]
     ],
-    "confirmada": "2026-09-14"
+    "confirmada": "2026-09-15"
+  },
+  "leituras": {
+    "2026-09-14||LC 214, arts. 38-56 — não cumulatividade, apropriação e utilização de créditos": {
+      "materia": "Reforma Tributária",
+      "rotulo": "LC 214, arts. 38-56 — não cumulatividade, apropriação e utilização de créditos",
+      "data_leitura": "2026-09-14",
+      "fonte": null,
+      "origem": "plano",
+      "plano_ref": "S2 Segunda",
+      "minutos": 105,
+      "prevista": "2026-09-15",
+      "emitida": "2026-09-15"
+    },
+    "2026-09-14||Extensão — SPED, Decreto 6.022/2007: instituição, âmbito, quem está obrigado": {
+      "materia": "Auditoria Fiscal",
+      "rotulo": "Extensão — SPED, Decreto 6.022/2007: instituição, âmbito, quem está obrigado",
+      "data_leitura": "2026-09-14",
+      "fonte": null,
+      "origem": "plano",
+      "plano_ref": "S2 Segunda",
+      "minutos": 30,
+      "prevista": "2026-09-15",
+      "emitida": "2026-09-15"
+    }
   }
 }

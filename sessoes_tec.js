@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-09-14T08:12:02",
+ "gerado_em": "2026-09-15T08:14:56",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -877,6 +877,102 @@ window.SESSOES_TEC = {
    "minutos": 1,
    "qResolvidas": 7,
    "qAcertadas": 5,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "SIM~RT02~2026-09-14~RT",
+   "origem": "simulado",
+   "data": "2026-09-14",
+   "mat": "RT",
+   "topicId": null,
+   "assuntoLivre": "Simulado RT02 — RT",
+   "minutos": 10,
+   "qResolvidas": 30,
+   "qAcertadas": 24,
+   "obs": "Simulado RT02 (Q1-30) cronometrado"
+  },
+  {
+   "uid": "TEC~2026-09-14~bpmn-modelo-e-notacao-de-processos-de-negocio-66aca0",
+   "origem": "tec",
+   "data": "2026-09-14",
+   "mat": "DFin",
+   "topicId": null,
+   "assuntoLivre": "BPMN (Modelo e Notação de Processos de Negócio)",
+   "minutos": 5,
+   "qResolvidas": 9,
+   "qAcertadas": 8,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-14~bpms-business-process-management-system-791738",
+   "origem": "tec",
+   "data": "2026-09-14",
+   "mat": "DFin",
+   "topicId": null,
+   "assuntoLivre": "BPMS (Business Process Management System)",
+   "minutos": 1,
+   "qResolvidas": 1,
+   "qAcertadas": 1,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-14~da-nao-cumulatividade-arts-47-a-56-da-lc-n-214-2025-dd01e2",
+   "origem": "tec",
+   "data": "2026-09-14",
+   "mat": "DFin",
+   "topicId": null,
+   "assuntoLivre": "Da Não Cumulatividade (arts. 47 a 56 da LC nº 214/2025)",
+   "minutos": 1,
+   "qResolvidas": 2,
+   "qAcertadas": 2,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-14~gestao-de-continuidade-de-negocio-nbr-iso-iec-15999-1-15999--0cbaf9",
+   "origem": "tec",
+   "data": "2026-09-14",
+   "mat": "DFin",
+   "topicId": null,
+   "assuntoLivre": "Gestão de Continuidade de Negócio (NBR ISO/IEC 15999-1, 15999-2, 27002, 22313, etc.)",
+   "minutos": 15,
+   "qResolvidas": 12,
+   "qAcertadas": 5,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-14~imposto-seletivo-is-cf-1988-ec-132-919bd8",
+   "origem": "tec",
+   "data": "2026-09-14",
+   "mat": "TRIB",
+   "topicId": null,
+   "assuntoLivre": "Imposto Seletivo - IS (CF 1988; EC 132)",
+   "minutos": 1,
+   "qResolvidas": 1,
+   "qAcertadas": 1,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-14~imposto-sobre-bens-e-servicos-ibs-cf-1988-ec-132-21b555",
+   "origem": "tec",
+   "data": "2026-09-14",
+   "mat": "TRIB",
+   "topicId": null,
+   "assuntoLivre": "Imposto sobre Bens e Serviços - IBS (CF/1988, EC 132)",
+   "minutos": 2,
+   "qResolvidas": 5,
+   "qAcertadas": 4,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-14~sgsi-controles-e-estrutura-das-normas-da-familia-27000-iso-i-25b664",
+   "origem": "tec",
+   "data": "2026-09-14",
+   "mat": "DFin",
+   "topicId": null,
+   "assuntoLivre": "SGSI, Controles e Estrutura das Normas da Família 27000 (ISO/IEC 27001, 27002, etc.)",
+   "minutos": 9,
+   "qResolvidas": 14,
+   "qAcertadas": 12,
    "obs": "reconstruída do TEC"
   }
  ]
