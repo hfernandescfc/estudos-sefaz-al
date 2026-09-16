@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-09-16T08:18:02",
+ "gerado_em": "2026-09-16T08:55:20",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -986,6 +986,18 @@ window.SESSOES_TEC = {
    "qResolvidas": 9,
    "qAcertadas": 5,
    "obs": "Simulado RT03 (Q1-9) cronometrado"
+  },
+  {
+   "uid": "SIM~RT04~2026-09-15~RT",
+   "origem": "simulado",
+   "data": "2026-09-15",
+   "mat": "RT",
+   "topicId": null,
+   "assuntoLivre": "Simulado RT04 — RT",
+   "minutos": 7,
+   "qResolvidas": 34,
+   "qAcertadas": 29,
+   "obs": "Simulado RT04 (Q1-34) cronometrado"
   },
   {
    "uid": "TEC~2026-09-15~da-operacionalizacao-do-ibs-e-da-cbs-arts-58-a-62-da-lc-n-21-987010",
