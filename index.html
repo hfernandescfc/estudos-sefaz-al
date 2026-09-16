@@ -632,7 +632,8 @@ function defaultState(){
   const ts = {};
   SEED_TOPICS.forEach(t=> ts[t.id] = "nao");
   return { schema:3, sessions:[], topicStatus:ts, topicStatusAt:{}, customTopics:[],
-           nextSid:1, nextTid:1000, revFeitas:{}, revFeitasAt:{}, sessionsDel:{} };
+           nextSid:1, nextTid:1000, revFeitas:{}, revFeitasAt:{}, sessionsDel:{},
+           sobraFeitas:{}, sobraN:{} };
 }
 function migrar(s){
   s.sessions = (s.sessions||[]).filter(x=>x&&typeof x==="object");
@@ -643,6 +644,8 @@ function migrar(s){
   s.topicStatusAt = s.topicStatusAt || {};
   s.revFeitasAt = s.revFeitasAt || {};
   s.customTopics = s.customTopics || [];
+  s.sobraFeitas = s.sobraFeitas || {};   // backlog de tempo livre: id -> última data feita
+  s.sobraN      = s.sobraN      || {};   // backlog de tempo livre: id -> nº de vezes
   s.schema = 3;
   return s;
 }
@@ -849,6 +852,143 @@ function drawDesempTec(){
   </details>`;
 }
 /* ============================================================
+   BACKLOG DE TEMPO LIVRE
+   ------------------------------------------------------------
+   Sobrou tempo depois da meta do dia e não há nada planejado → a atividade que
+   acontece é nenhuma. O problema não é falta de coisa para fazer (há seis
+   backlogs abertos no projeto); é que DECIDIR custa energia exatamente quando
+   ela acabou. Mesma estrutura do achado dos 30s: a restrição vai no CONTINENTE
+   (aqui, o relógio), não na intenção. Escolhe-se a faixa de tempo e o item já
+   está escolhido.
+
+   ⚠ FONTE: 02_Analises/Backlog_Tempo_Livre.md — este array é a cópia
+   operacional. Mexer em um exige mexer no outro.
+
+   campos: id · t = faixa (15|30|60) · rec = recorrente (nunca sai da lista)
+           prio = ordem dentro da faixa · tit · det (HTML curto) · ref (caminho)
+   ============================================================ */
+const BACKLOG_SOBRA=[
+ // ---------- ≤15 min: manutenção, custo de setup zero ----------
+ {id:"import-anki",t:15,rec:1,prio:0,tit:"Importar o lote pendente no AnkiWeb e revisar",
+  det:"<b>O gargalo com três medições.</b> 15/09: <code>gcn-001/002</code> (RTO×RPO) escritos 08h32, mesmo conceito errado 13h38, em 23s — 3º erro de RTO×RPO do projeto. O card existe no arquivo e não existe na coleção. Destrava a geração de cards da folha seguinte.",
+  ref:"03_Anki/Import/cards_tec_2026-09-14.txt (9) + cards_tec_2026-09-15.txt (11)"},
+ {id:"pan-local-operacao",t:15,prio:1,tit:"Painel em modo cego — Local da operação (LC 214, art. 11)",
+  det:"22 lacunas · 🔴 <b>domínio 33%</b> (4 itens), cadeia reaberta à mão em 16/09.",ref:"10_Mapas/RT_lc214_local_operacao.html"},
+ {id:"pan-uso-consumo",t:15,prio:2,tit:"Painel em modo cego — Uso ou consumo pessoal (crédito vedado)",
+  det:"22 lacunas · é <b>exceção</b>, que é onde o item C/E se decide.",ref:"10_Mapas/RT_lc214_uso_consumo_pessoal.html"},
+ {id:"pan-sped",t:15,prio:3,tit:"Painel em modo cego — SPED, os quatro módulos",
+  det:"24 lacunas, matriz · Auditoria Fiscal vale <b>15 itens</b> e tem <b>zero card</b>.",ref:"10_Mapas/AUDFIS_sped_modulos.html"},
+ {id:"pan-scrum",t:15,prio:4,tit:"Painel em modo cego — Scrum: listas fechadas e compromissos",
+  det:"22 lacunas · SCRUM está em <b>42,1% de domínio sobre 91 itens</b> — a maior amostra fraca do projeto.",ref:"10_Mapas/DEV_scrum_listas.html"},
+ {id:"pan-27000",t:15,prio:5,tit:"Painel em modo cego — Controles da família 27000",
+  det:"20 lacunas · ⚠ saiu de <b>comentário do TEC, não de norma</b>: todo dispositivo começa com <code>[CONFERIR]</code>.",ref:"10_Mapas/TI_controles_27000.html"},
+ {id:"pan-ressarcimento",t:15,prio:6,tit:"Painel em modo cego — Ressarcimento: prazos e correção",
+  det:"19 lacunas · prazos puros, memorização mecânica.",ref:"10_Mapas/RT_lc214_prazos_ressarcimento.html"},
+ {id:"pan-bc-importacao",t:15,prio:7,tit:"Painel em modo cego — Base de cálculo na importação",
+  det:"16 lacunas.",ref:"10_Mapas/RT_lc214_bc_importacao.html"},
+ {id:"pan-domicilio",t:15,prio:8,tit:"Painel em modo cego — Domicílio principal (art. 11, §§ 3º, 4º e 6º)",
+  det:"16 lacunas.",ref:"10_Mapas/RT_lc214_domicilio_principal.html"},
+ {id:"pan-cgibs",t:15,prio:9,tit:"Painel em modo cego — CGIBS: composição, quórum e mandatos",
+  det:"15 lacunas.",ref:"10_Mapas/RT_cgibs_numeros.html"},
+ {id:"pan-continuidade",t:15,prio:10,tit:"Painel em modo cego — PCN: subplanos e fronteiras",
+  det:"6 lacunas · ⚠ <code>[CONFERIR]</code> · Continuidade em <b>50% acumulado</b>, apesar dos 88% da sessão.",ref:"10_Mapas/TI_pcn_continuidade.html"},
+ {id:"audio",t:15,rec:1,prio:11,tit:"Uma faixa de áudio",
+  det:"11 faixas · para energia baixa e sobra que não comporta leitura dirigida.",ref:"08_Audio/EC132/ (5) · 08_Audio/LC214/ (6) — índice em 00_indice.md"},
+
+ // ---------- 15-30 min: o que está medido como buraco ----------
+ {id:"lote-cronometrado",t:30,rec:1,prio:0,tit:"Lote de 10 itens, alvo 5 min, cronômetro visível",
+  det:"<b>O mecanismo que falta há seis folhas.</b> 85% dos erros do projeto vieram em ≤60s (mediana 28s) e o RT02 deu 19s/item mesmo com a prova pausando na troca de aba. O lote é o continente; o alvo de 5 min é a restrição. Matéria é indiferente.",
+  ref:"qualquer caderno do TEC"},
+ {id:"leitura-sujeicao",t:30,prio:1,tit:"Ler a seco LC 214, arts. 21-26 — sujeição passiva",
+  det:"🔴 <b>25% de domínio</b> — o pior número do acervo — em 6 artigos de lei seca. Melhor relação retorno/tempo da faixa. Depois: <code>--leitura \"Reforma Tributária|LC 214, arts. 21-26 — sujeição passiva\"</code>.",
+  ref:"01_Material_PDF/Leis_Normas/"},
+ {id:"guia-scrum",t:30,prio:2,tit:"Guia do Scrum 2020 — leitura primária (25 min)",
+  det:"Domínio <b>42,1%</b> em 91 itens. Regra nº 5: com domínio baixo, ler a norma bate rodar questões — Scrum já fez 0% → +53% depois de 25 min de guia.",ref:"Guia do Scrum 2020 (Schwaber e Sutherland)"},
+ {id:"guia-kanban",t:30,prio:3,tit:"Kanban Guide — leitura primária (25 min)",
+  det:"Domínio <b>41,2%</b> em 17 itens.",ref:"Kanban Guide"},
+ {id:"guia-xp",t:30,prio:4,tit:"Extreme Programming — leitura primária (20 min)",
+  det:"Domínio <b>42,9%</b> em 7 itens.",ref:"recorte de XP"},
+
+ // ---------- 30-60 min: abrir frente nova ----------
+ {id:"cd-ia-caderno",t:60,rec:1,prio:0,tit:"Rodar o caderno de IA — conta para dois blocos (30 itens)",
+  det:"🟢 Os itens 8 e 9 do programa de Ciência de Dados têm <b>mais material no caderno de IA</b> que no próprio caderno (clusterização 76×38, classificação 32×7, regressão 22×2, métricas 29×10). <b>O melhor uso isolado de 45 min do projeto.</b>",
+  ref:"02_Analises/Ciencia_Dados_Prioridade_por_Evidencia.md §6"},
+ {id:"cd-crispdm",t:60,prio:1,tit:"Ciência de Dados 🔴P1 — CRISP-DM",
+  det:"As 6 fases, na ordem, e o que cada uma entrega. <b>Enumerativo e não derivável</b> da formação prévia. Vira <code>mapa-mental</code> + cards.",ref:"Ciencia_Dados_Prioridade_por_Evidencia.md · item 6.1 do edital"},
+ {id:"cd-bigdata",t:60,prio:2,tit:"Ciência de Dados 🔴P1 — Big Data",
+  det:"Os V, premissas e aplicações. Enumerativo, não derivável. Vira <code>mapa-mental</code>.",ref:"item 10 do edital"},
+ {id:"cd-dados-abertos",t:60,prio:3,tit:"Ciência de Dados 🔴P1 — Dados abertos",
+  det:"Normativo (LAI, decreto de dados abertos, princípios). Sinal fiscal alto e <b>não derivável</b>.",ref:"item 1.2 do edital"},
+ {id:"cd-sql",t:60,prio:4,tit:"Ciência de Dados 🟡P2 — SQL: ler consulta alheia e prever o resultado",
+  det:"🔴 <b>Pior número medido do bloco: 45,5% bruto, domínio 32% (n=11)</b> no baseline do TCE-PE — num item que o autorrelato dava como fluente. O alvo <b>não</b> é sintaxe: a AFTE/SEFAZ-AL cobrou <code>CROSS JOIN</code> + subconsulta para calcular.",ref:"item 5 do edital"},
+ {id:"cd-dikw",t:60,prio:5,tit:"Ciência de Dados 🔴P1 — DIKW",
+  det:"Dado → informação → conhecimento → inteligência. Card único.",ref:"item 1 do edital"},
+ {id:"discursiva",t:60,rec:1,prio:6,tit:"Uma discursiva de 30 linhas, cronometrada",
+  det:"Os 4 temas já estão no edital e são os 4 maiores blocos de P2 (60 dos 100 itens). <code>NQi = NCi − 2×NEi ÷ TLi</code> — com as linhas no denominador, escrever 15 <b>dobra</b> o peso de cada erro. Preencher as 30 linhas é estratégia de nota. ⚠ A skill <code>discursiva-fgv</code> ainda é FGV: usar só o esqueleto.",
+  ref:"ciência de dados · auditoria fiscal · finanças públicas · reforma tributária"},
+ {id:"zero-audfis",t:60,prio:7,tit:"Auditoria Fiscal — 15 itens, zero card",
+  det:"O deck <code>AUD</code> é auditoria <i>governamental</i> e foi descartado na triagem; não serve.",ref:"02_Analises/Auditoria_Fiscal_Prioridade_por_Evidencia.md"},
+ {id:"zero-legal",t:60,prio:8,tit:"Legislação Tributária de AL — 10 itens, zero card",
+  det:"Roteiro de leitura já pronto.",ref:"02_Analises/Mapa_Leitura_Legislacao_AL.md"},
+ {id:"zero-econ",t:60,prio:9,tit:"Economia (10) e Matemática Financeira (5) — zero card",
+  det:"15 itens de P1 sem nenhum card na coleção.",ref:"02_Analises/Economia_Prioridade_por_Evidencia.md"}
+];
+const SOBRA_FAIXA={15:"≤ 15 min",30:"15-30 min",60:"30-60 min"};
+const SOBRA_SUB={15:"manutenção — já está pronto, só consumir",30:"o que está medido como buraco",60:"abrir frente nova"};
+let sobraFaixa=15, sobraSkip={};   // sobraSkip é efêmero de propósito: pular não é decisão a guardar
+
+/* Fila da faixa: pendentes primeiro (por prio); recorrentes entram sempre, mas
+   caem para o fim se já foram feitos hoje. Pulados vão para o fim da fila. */
+function sobraFila(t){
+  const hoje=todayStr();
+  return BACKLOG_SOBRA.filter(b=>b.t===t && (b.rec || !state.sobraFeitas[b.id]))
+    .map(b=>({b, hojeFeito:state.sobraFeitas[b.id]===hoje?1:0, pulado:sobraSkip[b.id]?1:0}))
+    .sort((x,y)=> x.pulado-y.pulado || x.hojeFeito-y.hojeFeito || x.b.prio-y.b.prio)
+    .map(x=>x.b);
+}
+function sobraFeito(id){
+  state.sobraFeitas[id]=todayStr();
+  state.sobraN[id]=(state.sobraN[id]||0)+1;
+  save(); toast("✅ Registrado no backlog"); renderDash();
+}
+function sobraPular(id){ sobraSkip[id]=1; renderDash(); }
+function cardSobra(){
+  const fila=sobraFila(sobraFaixa), it=fila[0];
+  const tabs=[15,30,60].map(t=>`<button class="btn sm ${t===sobraFaixa?'primary':'ghost'}" onclick="sobraFaixa=${t};sobraSkip={};renderDash()">${SOBRA_FAIXA[t]}</button>`).join(" ");
+  const totPend=BACKLOG_SOBRA.filter(b=>b.rec||!state.sobraFeitas[b.id]).length;
+  let corpo;
+  if(!it){
+    corpo=`<div class="empty">Nada pendente nesta faixa — tente outra.</div>`;
+  }else{
+    const n=state.sobraN[it.id]||0, ult=state.sobraFeitas[it.id];
+    corpo=`
+    <div style="font-size:16px;font-weight:600;margin:2px 0 6px">${it.rec?'🔁 ':''}${escapeHtml(it.tit)}</div>
+    <div style="font-size:13px;line-height:1.55;color:var(--txt)">${it.det}</div>
+    <div style="font-size:12px;color:var(--muted);margin-top:8px"><code>${escapeHtml(it.ref)}</code></div>
+    <div style="display:flex;gap:8px;align-items:center;margin-top:12px;flex-wrap:wrap">
+      <button class="btn sm primary" onclick="sobraFeito('${it.id}')">✅ Feito</button>
+      <button class="btn sm ghost" onclick="sobraPular('${it.id}')">⤼ Outro</button>
+      <span style="font-size:12px;color:var(--muted)">${n?`feito ${n}× · última em ${fmtData(ult)}`:"nunca feito"} · ${fila.length} nesta faixa · ${totPend} no backlog</span>
+    </div>`;
+  }
+  const resto=fila.slice(1).map(b=>`<tr><td style="color:var(--muted);white-space:nowrap">${b.rec?'🔁':'·'}</td><td>${escapeHtml(b.tit)}</td><td style="color:var(--muted);white-space:nowrap;font-size:11.5px">${state.sobraN[b.id]?state.sobraN[b.id]+'×':'—'}</td></tr>`).join("");
+  return `
+  <details class="card" style="border-left:3px solid var(--accent2)" open>
+    <summary style="cursor:pointer;font-weight:600">🧰 Sobrou tempo? — próximo item do backlog
+      <span style="color:var(--muted);font-weight:400">(${SOBRA_SUB[sobraFaixa]})</span></summary>
+    <div style="display:flex;gap:6px;margin:10px 0 12px;flex-wrap:wrap">${tabs}</div>
+    ${corpo}
+    ${resto?`<details style="margin-top:12px"><summary style="cursor:pointer;font-size:12.5px;color:var(--muted)">resto da faixa (${fila.length-1})</summary>
+      <table style="margin-top:6px"><tbody>${resto}</tbody></table></details>`:""}
+    <div style="font-size:11.5px;color:var(--muted);margin-top:10px;border-top:1px solid var(--line);padding-top:8px">
+      <b>Escolher pelo relógio, não pela vontade.</b> Nada de "mais questões do assunto do dia": abaixo de ~40% de domínio isso está medido como não funcionando — o que move é <b>leitura</b>.
+      Atividade sem registro não volta: leitura → <code>gerar_fila.py --leitura "Matéria|trecho"</code>; painel, card ou faixa → anotar na folha de amanhã.
+      Fonte: <code>02_Analises/Backlog_Tempo_Livre.md</code>.
+    </div>
+  </details>`;
+}
+
+/* ============================================================
    DASHBOARD
    ============================================================ */
 function renderDash(){
@@ -865,8 +1005,11 @@ function renderDash(){
     <div class="card kpi"><div class="label">✍️ Questões resolvidas</div><div class="val">${all.qr} <small>/ ${metaPlanoTotal()}</small></div><div class="foot">${wk.qr} esta semana · ${pct(all.qr,metaPlanoTotal())}% da meta do plano</div></div>
     <div class="card kpi"><div class="label">🎯 Taxa de acerto</div><div class="val">${pct(all.qa,all.qr)}<small>%</small></div><div class="foot">${all.qa}/${all.qr} acertos</div></div>
     <div class="card kpi"><div class="label">📚 Assuntos concluídos</div><div class="val">${concl}<small>/${tops.length}</small></div><div class="foot">${emand} em andamento · ${pct(concl,tops.length)}% do edital</div></div>
-    <div class="card kpi"><div class="label">⏳ Dias até a prova</div><div class="val">${diasRest}</div><div class="foot">1º dia 23/08 · 2º dia 30/08 · fim da preparação 21/08</div></div>
+    <div class="card kpi"><div class="label">⏳ Dias até a prova</div><div class="val">${diasRest}</div><div class="foot">objetiva 20/12/2026 · discursiva 10/01/2027</div></div>
   </div>`;
+
+  // Backlog de tempo livre — o que fazer quando a meta do dia fechou e sobrou tempo
+  html += cardSobra();
 
   // Horas por matéria na semana vs meta
   const mg=minutosPorGrupo(true);
@@ -1963,6 +2106,24 @@ function mergeState(local, remoto){
   });
   Object.keys(out.revFeitas).forEach(k=>{ if(!(k in (R.revFeitas||{}))) mudouRemoto=true; });
   out.revFeitasAt = rvAt;
+
+  /* -- backlog de tempo livre: união por id.
+        `sobraFeitas` guarda a ÚLTIMA data em que o item foi feito → vence a mais recente
+        (item recorrente feito nas duas máquinas tem de mostrar a atividade mais nova).
+        `sobraN` é contador → vence o maior. Sem este bloco o mergeState descartaria em
+        silêncio o que a outra máquina fez, porque tudo que ele não trata explicitamente
+        vem do estado LOCAL (`Object.assign(defaultState(), local)`). -- */
+  Object.keys(R.sobraFeitas||{}).forEach(k=>{
+    const rv=R.sobraFeitas[k], lv=out.sobraFeitas[k];
+    if(lv===undefined || String(rv)>String(lv)){ out.sobraFeitas[k]=rv; mudouLocal=true; }
+    else if(String(rv)<String(lv)) mudouRemoto=true;
+  });
+  Object.keys(out.sobraFeitas).forEach(k=>{ if(!(k in (R.sobraFeitas||{}))) mudouRemoto=true; });
+  Object.keys(R.sobraN||{}).forEach(k=>{
+    const rv=R.sobraN[k]||0, lv=out.sobraN[k]||0;
+    if(rv>lv){ out.sobraN[k]=rv; mudouLocal=true; } else if(rv<lv) mudouRemoto=true;
+  });
+  Object.keys(out.sobraN).forEach(k=>{ if(!(k in (R.sobraN||{}))) mudouRemoto=true; });
 
   // -- assuntos personalizados: união por id --
   const ct={}; (out.customTopics||[]).forEach(t=>{ if(t&&t.id!=null) ct[t.id]=t; });
