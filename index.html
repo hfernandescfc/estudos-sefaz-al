@@ -64,6 +64,9 @@ tr:hover td{background:#ffffff06}
 .badge2025{display:inline-block;padding:1px 7px;border-radius:6px;font-size:11px;font-weight:700;background:#16331f;color:#56d364;margin-left:5px}
 select,input[type=text],input[type=number],textarea{background:var(--panel2);border:1px solid var(--line);color:var(--txt);border-radius:9px;padding:9px 11px;font-size:14px;font-family:inherit;width:100%}
 select:focus,input:focus,textarea:focus{outline:none;border-color:var(--accent)}
+/* o rótulo do optgroup herda o fundo claro do sistema em alguns navegadores; fixa no tema */
+select optgroup{background:var(--panel);color:var(--accent);font-style:normal;font-weight:600}
+select optgroup option{background:var(--panel2);color:var(--txt);font-weight:400}
 label.fld{display:block;margin-bottom:14px}
 label.fld .lab{display:block;font-size:13px;color:var(--muted);margin-bottom:5px}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
@@ -1109,9 +1112,50 @@ function renderSessao(){
 }
 let assRowSeq=0;
 function matOptions(sel){ return Object.keys(MAT_INFO).map(g=>`<option value="${g}" ${g===sel?"selected":""}>${MAT_INFO[g].nome}</option>`).join(""); }
+/* `replanejar()` varre todos os tópicos e todas as sessões, e `assuntoOptions()` é
+   chamada a cada linha adicionada e a cada troca de matéria — daí o memo. A chave
+   cobre as duas coisas que mudam o resultado: a versão do estado (o `save()`
+   carimba `updatedAt`) e a chegada do EXEC_TEC, que é assíncrona. */
+let _planoMemo=null, _planoMemoKey=null;
+function planoMemo(){
+  const k=(state.updatedAt||"-")+"|"+(state.sessions||[]).length+"|"+(window.EXEC_TEC?"tec":"-");
+  if(_planoMemo && _planoMemoKey===k) return _planoMemo;
+  _planoMemoKey=k; return (_planoMemo=replanejar());
+}
+function rotuloSemana(w,wNow){
+  if(w>=99) return "Sem semana no plano";
+  const [a,b]=semDatas(w);
+  const marca = w===wNow ? " — ESTA SEMANA" : (w<wNow ? " — já vencida" : "");
+  return `Semana ${w} · ${fmtData(a)}–${fmtData(b)}${marca}`;
+}
+/* Ordem do select: SEMANA DO PLANO, não prioridade.
+   A lista existe para registrar o que acabou de ser estudado, e o que se estuda é
+   o que o cronograma manda — ordenar por prioridade punha no topo o assunto
+   prio 1 que só entra na semana 9, e enterrava o da semana corrente.
+   A régua é a REPLANEJADA (`semEff`), a mesma do Cronograma e do Gantt: assunto
+   que não fechou a meta migra para a semana corrente lá, e migra aqui junto —
+   então tudo antes de "ESTA SEMANA" é o que já fechou. A prioridade continua
+   desempatando dentro da semana e o rótulo [MÁXIMA]/[ALTA] continua visível.
+   Assunto sem entrada no QPLAN (criado à mão) cai no grupo do fim. */
 function assuntoOptions(g){
-  const ts=allTopics().filter(t=>grupo(t.mat)===g).sort(prioSort);
-  let opts=ts.map(t=>{const m=topicMeta(t.id),s=topicSemana(t.id);const tag=m>0?`(S${s}·${m}q) `:"";return `<option value="${t.id}">${t.gerar?"🔨 ":""}[${PRIO_LABEL[t.prio||3]}] ${tag}${escapeHtml(t.assunto)}</option>`;}).join("");
+  const plano=planoMemo(), wNow=semanaHoje();
+  const ts=allTopics().filter(t=>grupo(t.mat)===g).map(t=>{
+    const s=semanasTopico(t.id,plano);
+    const w=s.semEff>0 ? s.semEff : (s.rev>0 ? s.rev : 0);
+    return {t, s, w: w>0?w:99};
+  }).sort((a,b)=> a.w-b.w || prioSort(a.t,b.t));
+  /* Sem isto o navegador selecionaria a 1ª opção, que na ordem por semana é de uma
+     semana já vencida — o default tem de ser o que está em aberto agora. */
+  const iDef=Math.max(0, ts.findIndex(x=>x.w>=wNow));
+  let opts="", wPrev=null;
+  ts.forEach(({t,s,w},i)=>{
+    if(w!==wPrev){ if(wPrev!==null) opts+=`</optgroup>`; opts+=`<optgroup label="${rotuloSemana(w,wNow)}">`; wPrev=w; }
+    const m=topicMeta(t.id);
+    // o chip carrega a migração (S3→7), senão o número do select brigaria com o do Gantt
+    const tag = m>0 ? `(${s.movido?`S${s.aqOrig}→${s.semEff}`:`S${s.semEff}`}·${m}q) ` : "";
+    opts+=`<option value="${t.id}"${i===iDef?" selected":""}>${t.gerar?"🔨 ":""}[${PRIO_LABEL[t.prio||3]}] ${tag}${escapeHtml(t.assunto)}</option>`;
+  });
+  if(wPrev!==null) opts+=`</optgroup>`;
   opts+=`<option value="__livre">✎ Outro / digitar livre...</option>`;
   return opts;
 }
