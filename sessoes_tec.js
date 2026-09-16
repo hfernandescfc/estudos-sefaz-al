@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-09-15T08:14:56",
+ "gerado_em": "2026-09-16T08:18:02",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -973,6 +973,66 @@ window.SESSOES_TEC = {
    "minutos": 9,
    "qResolvidas": 14,
    "qAcertadas": 12,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "SIM~RT03~2026-09-15~RT",
+   "origem": "simulado",
+   "data": "2026-09-15",
+   "mat": "RT",
+   "topicId": null,
+   "assuntoLivre": "Simulado RT03 — RT",
+   "minutos": 3,
+   "qResolvidas": 9,
+   "qAcertadas": 5,
+   "obs": "Simulado RT03 (Q1-9) cronometrado"
+  },
+  {
+   "uid": "TEC~2026-09-15~da-operacionalizacao-do-ibs-e-da-cbs-arts-58-a-62-da-lc-n-21-987010",
+   "origem": "tec",
+   "data": "2026-09-15",
+   "mat": "DFin",
+   "topicId": null,
+   "assuntoLivre": "Da Operacionalização do IBS e da CBS (arts. 58 a 62 da LC nº 214/2025)",
+   "minutos": 7,
+   "qResolvidas": 5,
+   "qAcertadas": 4,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-15~gestao-de-continuidade-de-negocio-nbr-iso-iec-15999-1-15999--0cbaf9",
+   "origem": "tec",
+   "data": "2026-09-15",
+   "mat": "DFin",
+   "topicId": null,
+   "assuntoLivre": "Gestão de Continuidade de Negócio (NBR ISO/IEC 15999-1, 15999-2, 27002, 22313, etc.)",
+   "minutos": 8,
+   "qResolvidas": 12,
+   "qAcertadas": 11,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-15~scrum-399530",
+   "origem": "tec",
+   "data": "2026-09-15",
+   "mat": "DFin",
+   "topicId": null,
+   "assuntoLivre": "SCRUM",
+   "minutos": 3,
+   "qResolvidas": 13,
+   "qAcertadas": 11,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-15~sgsi-controles-e-estrutura-das-normas-da-familia-27000-iso-i-25b664",
+   "origem": "tec",
+   "data": "2026-09-15",
+   "mat": "DFin",
+   "topicId": null,
+   "assuntoLivre": "SGSI, Controles e Estrutura das Normas da Família 27000 (ISO/IEC 27001, 27002, etc.)",
+   "minutos": 8,
+   "qResolvidas": 14,
+   "qAcertadas": 13,
    "obs": "reconstruída do TEC"
   }
  ]

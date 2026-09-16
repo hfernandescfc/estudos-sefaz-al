@@ -6,7 +6,8 @@
     "tec_registros_2026-09-09 (1).json",
     "tec_registros_2026-09-11.json",
     "tec_registros_2026-09-14.json",
-    "tec_registros_2026-09-15.json"
+    "tec_registros_2026-09-15.json",
+    "tec_registros_2026-09-16.json"
   ],
   "cadeias": {
     "Contabilidade Geral||Plano de Contas": {
@@ -31,7 +32,7 @@
         },
         "d14": {
           "prevista": "2026-09-16",
-          "emitida": null
+          "emitida": "2026-09-16"
         },
         "d28": {
           "prevista": "2026-09-30",
@@ -59,7 +60,7 @@
         },
         "d14": {
           "prevista": "2026-09-16",
-          "emitida": null
+          "emitida": "2026-09-16"
         },
         "d28": {
           "prevista": "2026-09-30",
@@ -87,7 +88,7 @@
         },
         "d14": {
           "prevista": "2026-09-16",
-          "emitida": null
+          "emitida": "2026-09-16"
         },
         "d28": {
           "prevista": "2026-09-30",
@@ -115,7 +116,7 @@
         },
         "d14": {
           "prevista": "2026-09-16",
-          "emitida": null
+          "emitida": "2026-09-16"
         },
         "d28": {
           "prevista": "2026-09-30",
@@ -146,7 +147,7 @@
         },
         "d14": {
           "prevista": "2026-09-16",
-          "emitida": null
+          "emitida": "2026-09-16"
         },
         "d28": {
           "prevista": "2026-09-30",
@@ -176,7 +177,7 @@
         },
         "d14": {
           "prevista": "2026-09-16",
-          "emitida": null
+          "emitida": "2026-09-16"
         },
         "d28": {
           "prevista": "2026-09-30",
@@ -395,30 +396,30 @@
     "Legislação Tributária Federal||Do Local da Operação (art. 11 da LC nº 214/2025)": {
       "materia": "Legislação Tributária Federal",
       "assunto": "Do Local da Operação (art. 11 da LC nº 214/2025)",
-      "data_base": "2026-09-09",
+      "data_base": "2026-09-16",
       "cadeia_completa": true,
       "alvos_origem": [
         "3976074",
         "4122708"
       ],
-      "reinicios": 0,
+      "reinicios": 1,
       "status": "ativa",
       "etapas": {
         "d1": {
-          "prevista": "2026-09-10",
-          "emitida": "2026-09-10"
+          "prevista": "2026-09-16",
+          "emitida": "2026-09-16"
         },
         "d6": {
-          "prevista": "2026-09-15",
-          "emitida": "2026-09-15",
+          "prevista": "2026-09-22",
+          "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-09-23",
+          "prevista": "2026-09-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-07",
+          "prevista": "2026-10-14",
           "emitida": null
         }
       }
@@ -456,46 +457,31 @@
     "TI - Engenharia de Software||SCRUM": {
       "materia": "TI - Engenharia de Software",
       "assunto": "SCRUM",
-      "data_base": "2026-09-09",
+      "data_base": "2026-09-16",
       "cadeia_completa": true,
       "alvos_origem": [
-        "2271472",
-        "2450367",
-        "2589478",
-        "2593597",
-        "2638753",
-        "2775848",
-        "2790353",
-        "2790354",
-        "2790468",
-        "2798969",
-        "2798971",
-        "2842612",
-        "2877478",
-        "2891787",
-        "2938788",
-        "2938791",
-        "2942094",
-        "3077439"
+        "3416945",
+        "3421931",
+        "3504004"
       ],
-      "reinicios": 0,
+      "reinicios": 1,
       "status": "ativa",
       "etapas": {
         "d1": {
-          "prevista": "2026-09-10",
-          "emitida": "2026-09-10"
+          "prevista": "2026-09-16",
+          "emitida": "2026-09-16"
         },
         "d6": {
-          "prevista": "2026-09-15",
-          "emitida": "2026-09-15",
+          "prevista": "2026-09-22",
+          "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-09-23",
+          "prevista": "2026-09-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-07",
+          "prevista": "2026-10-14",
           "emitida": null
         }
       }
@@ -801,57 +787,88 @@
           "emitida": null
         }
       }
+    },
+    "Legislação Tributária Federal||Da Operacionalização do IBS e da CBS (arts. 58 a 62 da LC nº 214/2025)": {
+      "materia": "Legislação Tributária Federal",
+      "assunto": "Da Operacionalização do IBS e da CBS (arts. 58 a 62 da LC nº 214/2025)",
+      "data_base": "2026-09-16",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "3911297",
+        "3655454"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-16",
+          "emitida": "2026-09-16"
+        },
+        "d6": {
+          "prevista": "2026-09-22",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-09-30",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-14",
+          "emitida": null
+        }
+      }
     }
   },
   "ultima_fila": {
-    "data": "2026-09-15",
+    "data": "2026-09-16",
     "itens": [
       [
-        "2026-09-14||Extensão — SPED, Decreto 6.022/2007: instituição, âmbito, quem está obrigado",
+        "2026-09-15||Extensão — SPED, os módulos: EFD-ICMS/IPI, EFD-Contribuições, ECD, ECF. O que cada um recebe e de quem",
         "leitura"
       ],
       [
-        "2026-09-14||LC 214, arts. 38-56 — não cumulatividade, apropriação e utilização de créditos",
+        "2026-09-15||LC 214, arts. 57-62 — operacionalização: uso e consumo pessoal, cadastro único, documento fiscal eletrônico, cidadania fiscal",
         "leitura"
       ],
       [
-        "Legislação Tributária Federal||Da Base de Cálculo (arts. 12 e 13 da LC nº 214/2025)",
-        "d6"
+        "Contabilidade Geral||Plano de Contas",
+        "d14"
       ],
       [
-        "Legislação Tributária Federal||Das Hipóteses de Incidência (arts. 4º a 7º da LC nº 214/2025)",
-        "d6"
+        "Direito Tributário||Imunidades Tributárias",
+        "d14"
       ],
       [
-        "Legislação Tributária Federal||Disposições Preliminares (arts. 1º a 3º da LC nº 214/2025)",
-        "d6"
+        "Direito Tributário||Taxas (CF/1988 e CTN)",
+        "d14"
+      ],
+      [
+        "Economia e Finanças Públicas||Dívida Pública, NFSP e Tipos de Déficit Público no Brasil",
+        "d14"
+      ],
+      [
+        "Finanças e Conhecimentos Bancários||Composição Geral do SFN",
+        "d14"
+      ],
+      [
+        "Legislação Tributária Federal||Da Operacionalização do IBS e da CBS (arts. 58 a 62 da LC nº 214/2025)",
+        "d1"
       ],
       [
         "Legislação Tributária Federal||Do Local da Operação (art. 11 da LC nº 214/2025)",
-        "d6"
+        "d1"
       ],
       [
-        "Legislação Tributária Federal||Do Momento de Ocorrência do Fato Gerador (art. 10 da LC nº 214/2025)",
-        "d6"
+        "Matemática Financeira||Valor Presente Líquido (VPL)",
+        "d14"
       ],
       [
         "TI - Engenharia de Software||SCRUM",
-        "d6"
-      ],
-      [
-        "TI - Gestão e Governança de TI||BPMN (Modelo e Notação de Processos de Negócio)",
-        "d1"
-      ],
-      [
-        "TI - Segurança da Informação||Gestão de Continuidade de Negócio (NBR ISO/IEC 15999-1, 15999-2, 27002, 22313, etc.)",
-        "d1"
-      ],
-      [
-        "TI - Segurança da Informação||SGSI, Controles e Estrutura das Normas da Família 27000 (ISO/IEC 27001, 27002, etc.)",
         "d1"
       ]
     ],
-    "confirmada": "2026-09-15"
+    "confirmada": "2026-09-16"
   },
   "leituras": {
     "2026-09-14||LC 214, arts. 38-56 — não cumulatividade, apropriação e utilização de créditos": {
@@ -875,6 +892,28 @@
       "minutos": 30,
       "prevista": "2026-09-15",
       "emitida": "2026-09-15"
+    },
+    "2026-09-15||LC 214, arts. 57-62 — operacionalização: uso e consumo pessoal, cadastro único, documento fiscal eletrônico, cidadania fiscal": {
+      "materia": "Reforma Tributária",
+      "rotulo": "LC 214, arts. 57-62 — operacionalização: uso e consumo pessoal, cadastro único, documento fiscal eletrônico, cidadania fiscal",
+      "data_leitura": "2026-09-15",
+      "fonte": null,
+      "origem": "plano",
+      "plano_ref": "S2 Terça",
+      "minutos": 105,
+      "prevista": "2026-09-16",
+      "emitida": "2026-09-16"
+    },
+    "2026-09-15||Extensão — SPED, os módulos: EFD-ICMS/IPI, EFD-Contribuições, ECD, ECF. O que cada um recebe e de quem": {
+      "materia": "Auditoria Fiscal",
+      "rotulo": "Extensão — SPED, os módulos: EFD-ICMS/IPI, EFD-Contribuições, ECD, ECF. O que cada um recebe e de quem",
+      "data_leitura": "2026-09-15",
+      "fonte": null,
+      "origem": "plano",
+      "plano_ref": "S2 Terça",
+      "minutos": 30,
+      "prevista": "2026-09-16",
+      "emitida": "2026-09-16"
     }
   }
 }
