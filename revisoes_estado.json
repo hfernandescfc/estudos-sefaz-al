@@ -7,7 +7,8 @@
     "tec_registros_2026-09-11.json",
     "tec_registros_2026-09-14.json",
     "tec_registros_2026-09-15.json",
-    "tec_registros_2026-09-16.json"
+    "tec_registros_2026-09-16.json",
+    "tec_registros_2026-09-16(1).json"
   ],
   "cadeias": {
     "Contabilidade Geral||Plano de Contas": {
@@ -91,7 +92,7 @@
           "emitida": "2026-09-16"
         },
         "d28": {
-          "prevista": "2026-09-30",
+          "prevista": "2026-10-01",
           "emitida": null
         }
       }
@@ -119,7 +120,7 @@
           "emitida": "2026-09-16"
         },
         "d28": {
-          "prevista": "2026-09-30",
+          "prevista": "2026-10-01",
           "emitida": null
         }
       }
@@ -205,7 +206,7 @@
         },
         "d14": {
           "prevista": "2026-09-17",
-          "emitida": null
+          "emitida": "2026-09-17"
         },
         "d28": {
           "prevista": "2026-10-01",
@@ -235,7 +236,7 @@
         },
         "d14": {
           "prevista": "2026-09-17",
-          "emitida": null
+          "emitida": "2026-09-17"
         },
         "d28": {
           "prevista": "2026-10-01",
@@ -505,7 +506,7 @@
         },
         "d6": {
           "prevista": "2026-09-17",
-          "emitida": null,
+          "emitida": "2026-09-17",
           "resultado": null
         },
         "d14": {
@@ -536,7 +537,7 @@
         },
         "d6": {
           "prevista": "2026-09-17",
-          "emitida": null,
+          "emitida": "2026-09-17",
           "resultado": null
         },
         "d14": {
@@ -818,57 +819,161 @@
           "emitida": null
         }
       }
+    },
+    "Contabilidade Geral||Conceitos de SPED e seus Módulos": {
+      "materia": "Contabilidade Geral",
+      "assunto": "Conceitos de SPED e seus Módulos",
+      "data_base": "2026-09-16",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "3293589",
+        "3293591",
+        "1302688",
+        "1302691"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-17",
+          "emitida": "2026-09-17"
+        },
+        "d6": {
+          "prevista": "2026-09-22",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-09-30",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-14",
+          "emitida": null
+        }
+      }
+    },
+    "Contabilidade Geral||Decreto nº 6.022/2007 - Sistema Público de Escrituração Digital (SPED)": {
+      "materia": "Contabilidade Geral",
+      "assunto": "Decreto nº 6.022/2007 - Sistema Público de Escrituração Digital (SPED)",
+      "data_base": "2026-09-16",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "4023866",
+        "4023882",
+        "4023891",
+        "3293587",
+        "2759779",
+        "2759780"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-17",
+          "emitida": "2026-09-17"
+        },
+        "d6": {
+          "prevista": "2026-09-22",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-09-30",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-14",
+          "emitida": null
+        }
+      }
+    },
+    "TI - Segurança da Informação||Riscos em Segurança da Informação (NBR ISO/IEC 27001, 27002 e 27005)": {
+      "materia": "TI - Segurança da Informação",
+      "assunto": "Riscos em Segurança da Informação (NBR ISO/IEC 27001, 27002 e 27005)",
+      "data_base": "2026-09-16",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "2424312",
+        "2590833",
+        "2591846",
+        "3081628",
+        "3041211",
+        "3076858",
+        "2423545",
+        "2642015",
+        "2776359",
+        "2877553",
+        "2892165",
+        "2997220",
+        "2876909",
+        "3076859",
+        "3081634"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-17",
+          "emitida": "2026-09-17"
+        },
+        "d6": {
+          "prevista": "2026-09-22",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-09-30",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-14",
+          "emitida": null
+        }
+      }
     }
   },
   "ultima_fila": {
-    "data": "2026-09-16",
+    "data": "2026-09-17",
     "itens": [
       [
-        "2026-09-15||Extensão — SPED, os módulos: EFD-ICMS/IPI, EFD-Contribuições, ECD, ECF. O que cada um recebe e de quem",
+        "2026-09-16||Extensão — SPED: as 23 questões do acervo, 1ª metade (é o tópico mais bem servido de AF)",
         "leitura"
       ],
       [
-        "2026-09-15||LC 214, arts. 57-62 — operacionalização: uso e consumo pessoal, cadastro único, documento fiscal eletrônico, cidadania fiscal",
+        "2026-09-16||LC 214, arts. 62-82 — importação e exportação",
         "leitura"
       ],
       [
-        "Contabilidade Geral||Plano de Contas",
-        "d14"
-      ],
-      [
-        "Direito Tributário||Imunidades Tributárias",
-        "d14"
-      ],
-      [
-        "Direito Tributário||Taxas (CF/1988 e CTN)",
-        "d14"
-      ],
-      [
-        "Economia e Finanças Públicas||Dívida Pública, NFSP e Tipos de Déficit Público no Brasil",
-        "d14"
-      ],
-      [
-        "Finanças e Conhecimentos Bancários||Composição Geral do SFN",
-        "d14"
-      ],
-      [
-        "Legislação Tributária Federal||Da Operacionalização do IBS e da CBS (arts. 58 a 62 da LC nº 214/2025)",
+        "Contabilidade Geral||Conceitos de SPED e seus Módulos",
         "d1"
       ],
       [
-        "Legislação Tributária Federal||Do Local da Operação (art. 11 da LC nº 214/2025)",
+        "Contabilidade Geral||Decreto nº 6.022/2007 - Sistema Público de Escrituração Digital (SPED)",
         "d1"
       ],
       [
-        "Matemática Financeira||Valor Presente Líquido (VPL)",
+        "Direito Administrativo (Doutrina e Leis Federais)||Atributos ou Características dos Atos Administrativos",
         "d14"
       ],
       [
-        "TI - Engenharia de Software||SCRUM",
+        "Direito Constitucional (CF/1988 e Doutrina)||Direitos Sociais e dos Trabalhadores (arts. 6º e 7º da CF/1988)",
+        "d14"
+      ],
+      [
+        "Legislação Tributária Federal||Da Sujeição Passiva (arts. 21 a 26 da LC nº 214/2025)",
+        "d6"
+      ],
+      [
+        "Legislação Tributária Federal||Das Modalidades de Extinção dos Débitos (arts. 27 a 37 da LC nº 214/2025)",
+        "d6"
+      ],
+      [
+        "TI - Segurança da Informação||Riscos em Segurança da Informação (NBR ISO/IEC 27001, 27002 e 27005)",
         "d1"
       ]
     ],
-    "confirmada": "2026-09-16"
+    "confirmada": "2026-09-17"
   },
   "leituras": {
     "2026-09-14||LC 214, arts. 38-56 — não cumulatividade, apropriação e utilização de créditos": {
@@ -914,6 +1019,28 @@
       "minutos": 30,
       "prevista": "2026-09-16",
       "emitida": "2026-09-16"
+    },
+    "2026-09-16||LC 214, arts. 62-82 — importação e exportação": {
+      "materia": "Reforma Tributária",
+      "rotulo": "LC 214, arts. 62-82 — importação e exportação",
+      "data_leitura": "2026-09-16",
+      "fonte": null,
+      "origem": "plano",
+      "plano_ref": "S2 Quarta",
+      "minutos": 105,
+      "prevista": "2026-09-17",
+      "emitida": "2026-09-17"
+    },
+    "2026-09-16||Extensão — SPED: as 23 questões do acervo, 1ª metade (é o tópico mais bem servido de AF)": {
+      "materia": "Auditoria Fiscal",
+      "rotulo": "Extensão — SPED: as 23 questões do acervo, 1ª metade (é o tópico mais bem servido de AF)",
+      "data_leitura": "2026-09-16",
+      "fonte": null,
+      "origem": "plano",
+      "plano_ref": "S2 Quarta",
+      "minutos": 30,
+      "prevista": "2026-09-17",
+      "emitida": "2026-09-17"
     }
   }
 }

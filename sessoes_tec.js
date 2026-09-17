@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-09-16T15:46:02",
+ "gerado_em": "2026-09-17T08:14:03",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -1045,6 +1045,66 @@ window.SESSOES_TEC = {
    "minutos": 8,
    "qResolvidas": 14,
    "qAcertadas": 13,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-16~conceitos-de-sped-e-seus-modulos-0750f5",
+   "origem": "tec",
+   "data": "2026-09-16",
+   "mat": "CG",
+   "topicId": null,
+   "assuntoLivre": "Conceitos de SPED e seus Módulos",
+   "minutos": 2,
+   "qResolvidas": 6,
+   "qAcertadas": 4,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-16~decreto-n-6-022-2007-sistema-publico-de-escrituracao-digital-31ab61",
+   "origem": "tec",
+   "data": "2026-09-16",
+   "mat": "CG",
+   "topicId": null,
+   "assuntoLivre": "Decreto nº 6.022/2007 - Sistema Público de Escrituração Digital (SPED)",
+   "minutos": 15,
+   "qResolvidas": 13,
+   "qAcertadas": 7,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-16~do-ibs-e-da-cbs-sobre-exportacoes-arts-79-a-83-da-lc-n-214-2-b5f6ee",
+   "origem": "tec",
+   "data": "2026-09-16",
+   "mat": "DFin",
+   "topicId": null,
+   "assuntoLivre": "Do IBS e da CBS sobre Exportações (arts. 79 a 83 da LC nº 214/2025)",
+   "minutos": 2,
+   "qResolvidas": 1,
+   "qAcertadas": 1,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-16~do-ibs-e-da-cbs-sobre-importacoes-arts-63-a-78-da-lc-n-214-2-d71372",
+   "origem": "tec",
+   "data": "2026-09-16",
+   "mat": "DFin",
+   "topicId": null,
+   "assuntoLivre": "Do IBS e da CBS sobre Importações (arts. 63 a 78 da LC nº 214/2025)",
+   "minutos": 2,
+   "qResolvidas": 2,
+   "qAcertadas": 1,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-16~riscos-em-seguranca-da-informacao-nbr-iso-iec-27001-27002-e--838bca",
+   "origem": "tec",
+   "data": "2026-09-16",
+   "mat": "DFin",
+   "topicId": null,
+   "assuntoLivre": "Riscos em Segurança da Informação (NBR ISO/IEC 27001, 27002 e 27005)",
+   "minutos": 12,
+   "qResolvidas": 33,
+   "qAcertadas": 27,
    "obs": "reconstruída do TEC"
   }
  ]
