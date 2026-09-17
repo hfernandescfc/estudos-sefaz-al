@@ -74,6 +74,11 @@ label.fld .lab{display:block;font-size:13px;color:var(--muted);margin-bottom:5px
 .ass-head,.ass-row{display:grid;grid-template-columns:minmax(130px,1.1fr) minmax(170px,1.9fr) 76px 76px 34px;gap:8px;align-items:center;margin-bottom:8px}
 .ass-head{margin-bottom:4px;font-size:12px;color:var(--muted)}
 .ass-row .btn{padding:6px 0;text-align:center}
+.ass-head.rev-grid,.ass-row.rev-grid{grid-template-columns:1fr 76px 76px}
+label.rev-toggle{display:flex;align-items:center;gap:9px;margin-bottom:14px;padding:10px 12px;
+  border:1px solid var(--line);border-radius:8px;cursor:pointer;font-size:13.5px}
+label.rev-toggle input{width:auto;margin:0;flex:none;cursor:pointer}
+label.rev-toggle:has(input:checked){border-color:#f0883e;background:rgba(240,136,62,.09)}
 .timer-box{text-align:center;padding:8px 0 4px}
 .timer{font-size:64px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:1px}
 .timer.running{color:var(--accent)}
@@ -155,6 +160,8 @@ th.wk-now,td.wk-now{background:rgba(76,194,255,.12)}
   .row2,.row3{grid-template-columns:1fr}
   .ass-head{display:none}
   .ass-row{grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line);padding-bottom:8px}
+  .ass-row.rev-grid{grid-template-columns:1fr 1fr}
+  .ass-row.rev-grid>.muted{grid-column:1/-1}
 }
 </style>
 </head>
@@ -228,10 +235,20 @@ const MAT_INFO = {
   CGER:    {nome:"Contabilidade Geral", cor:"#8b9dc3", itens:5, meta:80},
 };
 const CEX_INFO = {nome:"Consolidação e erros", cor:"#9aa5b1"};
-function grupo(code){ return MAT_INFO[code] ? code : "DTRIB"; }
+/* Pseudo-matéria da fila de revisão. A folha do dia cruza 3-4 matérias e a sessão
+   dela não é "estudo de um assunto" — registrá-la sob uma matéria real inflaria a
+   meta daquela matéria com tempo que não foi de aquisição.
+   ⚠ `grupo()` devolve "REV" em vez do fallback "DTRIB": sem isso a revisão do dia
+   entraria, em silêncio, nas estatísticas de Direito Tributário. */
+const REV_MAT = "REV";
+const REV_INFO = {nome:"🔁 Revisão do dia", cor:"#f0883e"};
+const REV_ASSUNTO = "Revisão do dia (folha)";
+function grupo(code){ if(code===REV_MAT) return REV_MAT; return MAT_INFO[code] ? code : "DTRIB"; }
 function matNome(code){ if(code==="CEX") return CEX_INFO.nome;
+  if(code===REV_MAT) return REV_INFO.nome;
   const g=grupo(code); return MAT_INFO[g]?MAT_INFO[g].nome:code; }
 function matCor(code){ if(code==="CEX") return CEX_INFO.cor;
+  if(code===REV_MAT) return REV_INFO.cor;
   const g=grupo(code); return MAT_INFO[g]?MAT_INFO[g].cor:"#888"; }
 function matItens(code){ const g=grupo(code); return MAT_INFO[g]?MAT_INFO[g].itens:0; }
 
@@ -1259,10 +1276,27 @@ function renderSessao(){
     </div>
     <div class="card">
       <label class="fld"><span class="lab">Data</span><input type="text" id="fData" value="${todayStr()}"></label>
-      <span class="lab" style="display:block;font-size:13px;color:var(--muted);margin-bottom:5px">Assuntos estudados (questões por assunto)</span>
-      <div class="ass-head"><span>Matéria</span><span>Assunto</span><span>Resolvidas</span><span>Certas</span><span></span></div>
-      <div id="assRows"></div>
-      <button class="btn sm" onclick="addAssRow()">＋ Adicionar assunto</button>
+      <label class="rev-toggle" for="fRev">
+        <input type="checkbox" id="fRev" onchange="toggleRev()">
+        <span><b>🔁 Revisão do dia</b> — registrar a folha sem escolher matéria nem assunto</span>
+      </label>
+      <div id="revBox" style="display:none">
+        <div class="ass-head rev-grid"><span>Bloco</span><span>Resolvidas</span><span>Certas</span></div>
+        <div class="ass-row rev-grid">
+          <span class="muted">Folha de revisão (D+1 · D+6 · D+14 · D+28)</span>
+          <input type="number" id="revQr" min="0" placeholder="0" title="questões resolvidas">
+          <input type="number" id="revQa" min="0" placeholder="0" title="questões acertadas">
+        </div>
+        <div class="muted" style="font-size:12px">Questões são opcionais — boa parte da fila é recall, não rodada. O tempo vem do cronômetro.</div>
+      </div>
+      <!-- o id é sessAssBox, e não assBox: assBox já pertence à aba "Assuntos por
+           matéria", e as duas abas podem estar no DOM ao mesmo tempo -->
+      <div id="sessAssBox">
+        <span class="lab" style="display:block;font-size:13px;color:var(--muted);margin-bottom:5px">Assuntos estudados (questões por assunto)</span>
+        <div class="ass-head"><span>Matéria</span><span>Assunto</span><span>Resolvidas</span><span>Certas</span><span></span></div>
+        <div id="assRows"></div>
+        <button class="btn sm" onclick="addAssRow()">＋ Adicionar assunto</button>
+      </div>
     </div>
   </div>
 
@@ -1353,6 +1387,15 @@ function delAssRow(rid){
   if(document.querySelectorAll("#assRows .ass-row").length<=1){ toast("A sessão precisa de ao menos 1 assunto"); return; }
   rowEl(rid).remove();
 }
+function revLigada(){ const c=document.getElementById("fRev"); return !!(c&&c.checked); }
+/* Em modo revisão o select de status some: ele aplica `setTopicStatus` e a sessão
+   de revisão não tem tópico — deixá-lo visível prometeria um efeito que não existe. */
+function toggleRev(){
+  const on=revLigada();
+  document.getElementById("revBox").style.display = on?"":"none";
+  document.getElementById("sessAssBox").style.display = on?"none":"";
+  const st=document.getElementById("fStatus"); if(st) st.closest("label.fld").style.display = on?"none":"";
+}
 function timerToggle(){
   const b=document.getElementById("btnStart"), disp=document.getElementById("timerDisp");
   if(!timer.running){
@@ -1370,17 +1413,24 @@ function updateTimerDisp(){ const d=document.getElementById("timerDisp"); if(d) 
 function salvarSessao(){
   const msg=document.getElementById("sessMsg");
   const err=t=>{ msg.textContent=t; msg.style.color="var(--bad)"; };
-  const rows=[...document.querySelectorAll("#assRows .ass-row")];
-  if(rows.length===0){ err("⚠️ Adicione pelo menos um assunto."); return; }
+  const rev=revLigada();
   const itens=[];
-  for(let i=0;i<rows.length;i++){
-    const r=rows[i];
-    const qr=parseInt(r.querySelector(".r-qr").value)||0, qa=parseInt(r.querySelector(".r-qa").value)||0;
-    if(qa>qr){ err(`⚠️ Assunto ${i+1}: acertos não podem exceder resolvidas.`); return; }
-    itens.push({mat:r.querySelector(".r-mat").value, assSel:r.querySelector(".r-ass").value, qr, qa});
+  if(rev){
+    const qr=parseInt(document.getElementById("revQr").value)||0, qa=parseInt(document.getElementById("revQa").value)||0;
+    if(qa>qr){ err("⚠️ Acertos não podem exceder resolvidas."); return; }
+    itens.push({mat:REV_MAT, assSel:"__rev", qr, qa});
+  } else {
+    const rows=[...document.querySelectorAll("#assRows .ass-row")];
+    if(rows.length===0){ err("⚠️ Adicione pelo menos um assunto."); return; }
+    for(let i=0;i<rows.length;i++){
+      const r=rows[i];
+      const qr=parseInt(r.querySelector(".r-qr").value)||0, qa=parseInt(r.querySelector(".r-qa").value)||0;
+      if(qa>qr){ err(`⚠️ Assunto ${i+1}: acertos não podem exceder resolvidas.`); return; }
+      itens.push({mat:r.querySelector(".r-mat").value, assSel:r.querySelector(".r-ass").value, qr, qa});
+    }
+    const ids=itens.filter(x=>x.assSel!=="__livre").map(x=>x.assSel);
+    if(new Set(ids).size!==ids.length){ err("⚠️ Há assuntos repetidos na sessão."); return; }
   }
-  const ids=itens.filter(x=>x.assSel!=="__livre").map(x=>x.assSel);
-  if(new Set(ids).size!==ids.length){ err("⚠️ Há assuntos repetidos na sessão."); return; }
   let minutos=parseInt(document.getElementById("fMin").value);
   if(isNaN(minutos)||minutos<=0){ const ts=timerSec(); if(ts>0) minutos=Math.max(1,Math.round(ts/60)); }
   if(isNaN(minutos)||minutos<0) minutos=0;
@@ -1388,7 +1438,8 @@ function salvarSessao(){
   if(minutos===0 && qrTot===0){ err("⚠️ Informe tempo ou questões."); return; }
   for(let i=0;i<itens.length;i++){
     const x=itens[i];
-    if(x.assSel==="__livre"){ x.assuntoLivre=(prompt(`Digite o assunto estudado (linha ${i+1}):`)||"").trim(); if(!x.assuntoLivre) return; x.topicId=null; }
+    if(x.assSel==="__rev"){ x.topicId=null; x.assuntoLivre=REV_ASSUNTO; }
+    else if(x.assSel==="__livre"){ x.assuntoLivre=(prompt(`Digite o assunto estudado (linha ${i+1}):`)||"").trim(); if(!x.assuntoLivre) return; x.topicId=null; }
     else { x.topicId=x.assSel; x.assuntoLivre=""; }
   }
   // um registro por assunto: tempo dividido igualmente (sobra vai para as primeiras linhas)
@@ -1404,11 +1455,12 @@ function salvarSessao(){
     if(st && x.topicId) setTopicStatus(x.topicId, st);
   });
   save();
-  // limpar
+  // limpar (o toggle de revisão fica como está: quem registra a folha um dia registra no outro)
   document.getElementById("fMin").value=""; document.getElementById("fObs").value=""; document.getElementById("fStatus").value="";
+  document.getElementById("revQr").value=""; document.getElementById("revQa").value="";
   document.getElementById("assRows").innerHTML=""; addAssRow();
   timerReset();
-  msg.textContent = n>1 ? `✓ Sessão salva (${n} assuntos)!` : "✓ Sessão salva!"; msg.style.color="var(--ok)";
+  msg.textContent = rev ? "✓ Revisão do dia registrada!" : (n>1 ? `✓ Sessão salva (${n} assuntos)!` : "✓ Sessão salva!"); msg.style.color="var(--ok)";
   toast("Sessão registrada"); renderHoje();
 }
 function renderHoje(){
