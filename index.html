@@ -2432,7 +2432,20 @@ function mergeState(local, remoto){
    ============================================================ */
 function absorverSessoesTec(avisar){
   const pacote = window.SESSOES_TEC;
-  if(!pacote || !Array.isArray(pacote.sessoes)) return 0;
+  if(!pacote || !Array.isArray(pacote.sessoes) || !pacote.sessoes.length) return 0;
+  /* Sessão auto-gerada por uma versão ANTERIOR do mapa assunto→tópico fica órfã
+     quando o mapa muda: o uid é `TEC~<dia>~<topicId>`, então corrigir o tópico
+     cria uid novo e a antiga continuaria no histórico contando o mesmo dia duas
+     vezes — em matéria errada. Em 18/09/2026 isso valeu para 74 das 91 sessões
+     (o mapa apontava 100% para o tópico errado desde a renumeração de 16/09).
+     Só remove o que ESTE pipeline gerou (origem "tec" + uid TEC~) e nunca
+     lançamento manual; a guarda de pacote vazio acima evita varrer tudo quando
+     o sessoes_tec.js não carrega. */
+  const vivos = {}; pacote.sessoes.forEach(t=>{ vivos[t.uid]=1; });
+  const antesPurga = (state.sessions||[]).length;
+  state.sessions = (state.sessions||[]).filter(s =>
+    !(s.origem==="tec" && /^TEC~/.test(String(s.uid||"")) && !vivos[s.uid]));
+  const removidas = antesPurga - state.sessions.length;
   const porUid = {}; const ocupado = {};
   (state.sessions||[]).forEach(s=>{
     porUid[s.uid]=1;
@@ -2446,12 +2459,17 @@ function absorverSessoesTec(avisar){
     state.sessions.push(Object.assign({}, t));
     ocupado[chave]=1; porUid[t.uid]=1; add++;
   });
-  if(add){
+  if(add || removidas){
     state.sessions.sort((a,b)=> String(a.data).localeCompare(String(b.data)) || String(a.uid).localeCompare(String(b.uid)));
     save();
     const ab=document.querySelector("#tabs button.active"); const tab=ab?ab.dataset.tab:"dash";
     if(tab==="sessao") renderHoje(); else render(tab);
-    if(avisar!==false) toast(add+" sessão(ões) recuperada(s) do histórico do TEC ✓");
+    if(avisar!==false){
+      const msg = [add?(add+" sessão(ões) recuperada(s) do TEC"):"",
+                   removidas?(removidas+" órfã(s) de mapa antigo removida(s)"):""]
+                  .filter(Boolean).join(" · ");
+      toast(msg+" ✓");
+    }
   }
   return add;
 }
@@ -2466,6 +2484,10 @@ function reconstruirDoTec(){
      "· Exclusões que você fez de propósito são reativadas.\n\n"+
      "O estado atual vira snapshot antes (botão ⤺ Snapshots).")) return;
   snapshot("antes de reconstruir do TEC");
+  // mesma purga de órfãs do absorverSessoesTec (ver o comentário de lá)
+  const vivos={}; p.sessoes.forEach(t=>{ vivos[t.uid]=1; });
+  state.sessions=(state.sessions||[]).filter(s=>
+    !(s.origem==="tec" && /^TEC~/.test(String(s.uid||"")) && !vivos[s.uid]));
   const porUid={}; (state.sessions||[]).forEach(s=>porUid[s.uid]=1);
   let add=0;
   p.sessoes.forEach(t=>{ if(porUid[t.uid]) return;
