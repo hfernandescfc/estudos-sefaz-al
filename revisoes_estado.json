@@ -8,7 +8,8 @@
     "tec_registros_2026-09-14.json",
     "tec_registros_2026-09-15.json",
     "tec_registros_2026-09-16.json",
-    "tec_registros_2026-09-16(1).json"
+    "tec_registros_2026-09-16(1).json",
+    "tec_registros_2026-09-18.json"
   ],
   "cadeias": {
     "Contabilidade Geral||Plano de Contas": {
@@ -567,7 +568,7 @@
         },
         "d6": {
           "prevista": "2026-09-18",
-          "emitida": null,
+          "emitida": "2026-09-18",
           "resultado": null
         },
         "d14": {
@@ -597,7 +598,7 @@
         },
         "d6": {
           "prevista": "2026-09-18",
-          "emitida": null,
+          "emitida": "2026-09-18",
           "resultado": null
         },
         "d14": {
@@ -634,7 +635,7 @@
         },
         "d6": {
           "prevista": "2026-09-18",
-          "emitida": null,
+          "emitida": "2026-09-18",
           "resultado": null
         },
         "d14": {
@@ -668,7 +669,7 @@
         },
         "d6": {
           "prevista": "2026-09-18",
-          "emitida": null,
+          "emitida": "2026-09-18",
           "resultado": null
         },
         "d14": {
@@ -931,49 +932,108 @@
           "emitida": null
         }
       }
+    },
+    "Auditoria Governamental e Controle||Execução de Auditoria de Regularidade": {
+      "materia": "Auditoria Governamental e Controle",
+      "assunto": "Execução de Auditoria de Regularidade",
+      "data_base": "2026-09-18",
+      "cadeia_completa": true,
+      "alvos_origem": [],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-18",
+          "emitida": "2026-09-18"
+        },
+        "d6": {
+          "prevista": "2026-09-24",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-02",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-16",
+          "emitida": null
+        }
+      }
+    },
+    "TI - Ciência de Dados e Inteligência Artificial||Conceitos Gerais de Machine Learning": {
+      "materia": "TI - Ciência de Dados e Inteligência Artificial",
+      "assunto": "Conceitos Gerais de Machine Learning",
+      "data_base": "2026-09-18",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "3195682",
+        "3195655",
+        "3639448",
+        "3048700",
+        "3401316",
+        "3253794"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-18",
+          "emitida": "2026-09-18"
+        },
+        "d6": {
+          "prevista": "2026-09-24",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-02",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-16",
+          "emitida": null
+        }
+      }
     }
   },
   "ultima_fila": {
-    "data": "2026-09-17",
+    "data": "2026-09-18",
     "itens": [
       [
-        "2026-09-16||Extensão — SPED: as 23 questões do acervo, 1ª metade (é o tópico mais bem servido de AF)",
+        "2026-09-17||Extensão — SPED: as 23 questões, 2ª metade + erros",
         "leitura"
       ],
       [
-        "2026-09-16||LC 214, arts. 62-82 — importação e exportação",
+        "2026-09-17||🚨 INSCRIÇÃO — abre hoje, fazer antes de abrir qualquer PDF. Depois: LC 214, arts. 111-124 — cashback e Cesta Básica Nacional",
         "leitura"
       ],
       [
-        "Contabilidade Geral||Conceitos de SPED e seus Módulos",
+        "Auditoria Governamental e Controle||Execução de Auditoria de Regularidade",
         "d1"
       ],
       [
-        "Contabilidade Geral||Decreto nº 6.022/2007 - Sistema Público de Escrituração Digital (SPED)",
-        "d1"
-      ],
-      [
-        "Direito Administrativo (Doutrina e Leis Federais)||Atributos ou Características dos Atos Administrativos",
-        "d14"
-      ],
-      [
-        "Direito Constitucional (CF/1988 e Doutrina)||Direitos Sociais e dos Trabalhadores (arts. 6º e 7º da CF/1988)",
-        "d14"
-      ],
-      [
-        "Legislação Tributária Federal||Da Sujeição Passiva (arts. 21 a 26 da LC nº 214/2025)",
+        "Direito Tributário||Comitê Gestor do IBS (CF 1988, EC 132)",
         "d6"
       ],
       [
-        "Legislação Tributária Federal||Das Modalidades de Extinção dos Débitos (arts. 27 a 37 da LC nº 214/2025)",
+        "Direito Tributário||Imposto Seletivo - IS (CF 1988; EC 132)",
         "d6"
       ],
       [
-        "TI - Segurança da Informação||Riscos em Segurança da Informação (NBR ISO/IEC 27001, 27002 e 27005)",
+        "TI - Ciência de Dados e Inteligência Artificial||Conceitos Gerais de Machine Learning",
         "d1"
+      ],
+      [
+        "TI - Engenharia de Software||Kanban (Engenharia de Software)",
+        "d6"
+      ],
+      [
+        "TI - Engenharia de Software||XP (Extreme Programming)",
+        "d6"
       ]
     ],
-    "confirmada": "2026-09-17"
+    "confirmada": "2026-09-18"
   },
   "leituras": {
     "2026-09-14||LC 214, arts. 38-56 — não cumulatividade, apropriação e utilização de créditos": {
@@ -1041,6 +1101,28 @@
       "minutos": 30,
       "prevista": "2026-09-17",
       "emitida": "2026-09-17"
+    },
+    "2026-09-17||🚨 INSCRIÇÃO — abre hoje, fazer antes de abrir qualquer PDF. Depois: LC 214, arts. 111-124 — cashback e Cesta Básica Nacional": {
+      "materia": "Reforma Tributária",
+      "rotulo": "🚨 INSCRIÇÃO — abre hoje, fazer antes de abrir qualquer PDF. Depois: LC 214, arts. 111-124 — cashback e Cesta Básica Nacional",
+      "data_leitura": "2026-09-17",
+      "fonte": null,
+      "origem": "plano",
+      "plano_ref": "S2 Quinta",
+      "minutos": 105,
+      "prevista": "2026-09-18",
+      "emitida": "2026-09-18"
+    },
+    "2026-09-17||Extensão — SPED: as 23 questões, 2ª metade + erros": {
+      "materia": "Auditoria Fiscal",
+      "rotulo": "Extensão — SPED: as 23 questões, 2ª metade + erros",
+      "data_leitura": "2026-09-17",
+      "fonte": null,
+      "origem": "plano",
+      "plano_ref": "S2 Quinta",
+      "minutos": 30,
+      "prevista": "2026-09-18",
+      "emitida": "2026-09-18"
     }
   }
 }

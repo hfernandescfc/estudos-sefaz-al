@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-09-17T16:23:50",
+ "gerado_em": "2026-09-18T08:25:44",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -1118,6 +1118,54 @@ window.SESSOES_TEC = {
    "qResolvidas": 20,
    "qAcertadas": 18,
    "obs": "Simulado RT06 (Q1-20) cronometrado"
+  },
+  {
+   "uid": "TEC~2026-09-17~115",
+   "origem": "tec",
+   "data": "2026-09-17",
+   "mat": "ECON",
+   "topicId": "115",
+   "assuntoLivre": "",
+   "minutos": 32,
+   "qResolvidas": 47,
+   "qAcertadas": 45,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-17~68",
+   "origem": "tec",
+   "data": "2026-09-17",
+   "mat": "DEV",
+   "topicId": "68",
+   "assuntoLivre": "",
+   "minutos": 3,
+   "qResolvidas": 5,
+   "qAcertadas": 5,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-17~da-devolucao-personalizada-do-ibs-e-da-cbs-cashback-e-da-ces-f798fe",
+   "origem": "tec",
+   "data": "2026-09-17",
+   "mat": "DFin",
+   "topicId": null,
+   "assuntoLivre": "Da Devolução Personalizada do IBS e da CBS (Cashback) e da Cesta Básica Nacional de Alimentos (arts. 112 a 125 da LC nº 214/2025)",
+   "minutos": 1,
+   "qResolvidas": 1,
+   "qAcertadas": 1,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-17~riscos-em-seguranca-da-informacao-nbr-iso-iec-27001-27002-e--838bca",
+   "origem": "tec",
+   "data": "2026-09-17",
+   "mat": "DFin",
+   "topicId": null,
+   "assuntoLivre": "Riscos em Segurança da Informação (NBR ISO/IEC 27001, 27002 e 27005)",
+   "minutos": 11,
+   "qResolvidas": 29,
+   "qAcertadas": 23,
+   "obs": "reconstruída do TEC"
   }
  ]
 };
