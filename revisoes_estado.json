@@ -9,7 +9,8 @@
     "tec_registros_2026-09-15.json",
     "tec_registros_2026-09-16.json",
     "tec_registros_2026-09-16(1).json",
-    "tec_registros_2026-09-18.json"
+    "tec_registros_2026-09-18.json",
+    "tec_registros_2026-09-21.json"
   ],
   "cadeias": {
     "Contabilidade Geral||Plano de Contas": {
@@ -569,7 +570,16 @@
         "d6": {
           "prevista": "2026-09-18",
           "emitida": "2026-09-18",
-          "resultado": null
+          "resultado": {
+            "pct": 83,
+            "saldo": 79,
+            "questoes": 6,
+            "limiar_saldo": 70,
+            "aprovada": true,
+            "data": "2026-09-21",
+            "fracao_me": 1.0,
+            "chance_base": 0.2
+          }
         },
         "d14": {
           "prevista": "2026-09-28",
@@ -599,7 +609,16 @@
         "d6": {
           "prevista": "2026-09-18",
           "emitida": "2026-09-18",
-          "resultado": null
+          "resultado": {
+            "pct": 100,
+            "saldo": 100,
+            "questoes": 7,
+            "limiar_saldo": 70,
+            "aprovada": true,
+            "data": "2026-09-21",
+            "fracao_me": 0.95,
+            "chance_base": 0.21
+          }
         },
         "d14": {
           "prevista": "2026-09-28",
@@ -636,7 +655,16 @@
         "d6": {
           "prevista": "2026-09-18",
           "emitida": "2026-09-18",
-          "resultado": null
+          "resultado": {
+            "pct": 86,
+            "saldo": 71,
+            "questoes": 7,
+            "limiar_saldo": 70,
+            "aprovada": true,
+            "data": "2026-09-21",
+            "fracao_me": 0.0,
+            "chance_base": 0.5
+          }
         },
         "d14": {
           "prevista": "2026-09-28",
@@ -701,7 +729,7 @@
         },
         "d6": {
           "prevista": "2026-09-21",
-          "emitida": null,
+          "emitida": "2026-09-21",
           "resultado": null
         },
         "d14": {
@@ -740,7 +768,7 @@
         },
         "d6": {
           "prevista": "2026-09-21",
-          "emitida": null,
+          "emitida": "2026-09-21",
           "resultado": null
         },
         "d14": {
@@ -777,7 +805,7 @@
         },
         "d6": {
           "prevista": "2026-09-21",
-          "emitida": null,
+          "emitida": "2026-09-21",
           "resultado": null
         },
         "d14": {
@@ -995,45 +1023,183 @@
           "emitida": null
         }
       }
+    },
+    "Direito Tributário||Outras Questões e Tópicos Mesclados sobre a Reforma Tributária": {
+      "materia": "Direito Tributário",
+      "assunto": "Outras Questões e Tópicos Mesclados sobre a Reforma Tributária",
+      "data_base": "2026-09-21",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "2849134",
+        "2849289",
+        "3195367",
+        "3195386",
+        "3984159"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-21",
+          "emitida": "2026-09-21"
+        },
+        "d6": {
+          "prevista": "2026-09-25",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-05",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-19",
+          "emitida": null
+        }
+      }
+    },
+    "TI - Segurança da Informação||Conceitos de Certificado Digital": {
+      "materia": "TI - Segurança da Informação",
+      "assunto": "Conceitos de Certificado Digital",
+      "data_base": "2026-09-21",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "2797356",
+        "2841958",
+        "3238805",
+        "3238807",
+        "2780365",
+        "3238369",
+        "3259928",
+        "3076845"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-21",
+          "emitida": "2026-09-21"
+        },
+        "d6": {
+          "prevista": "2026-09-25",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-05",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-19",
+          "emitida": null
+        }
+      }
+    },
+    "TI - Segurança da Informação||ICP e Autoridades Certificadoras": {
+      "materia": "TI - Segurança da Informação",
+      "assunto": "ICP e Autoridades Certificadoras",
+      "data_base": "2026-09-21",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "2877722",
+        "3081595",
+        "3238812",
+        "3238820",
+        "2450392",
+        "2575738",
+        "2637494",
+        "2642272",
+        "3172766",
+        "3238816"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-21",
+          "emitida": "2026-09-21"
+        },
+        "d6": {
+          "prevista": "2026-09-25",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-05",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-19",
+          "emitida": null
+        }
+      }
+    },
+    "TI - Segurança da Informação||X.509": {
+      "materia": "TI - Segurança da Informação",
+      "assunto": "X.509",
+      "data_base": "2026-09-21",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "3915630",
+        "3917854",
+        "3148310"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-21",
+          "emitida": "2026-09-21"
+        },
+        "d6": {
+          "prevista": "2026-09-25",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-05",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-19",
+          "emitida": null
+        }
+      }
     }
   },
   "ultima_fila": {
-    "data": "2026-09-18",
+    "data": "2026-09-21",
     "itens": [
       [
-        "2026-09-17||Extensão — SPED: as 23 questões, 2ª metade + erros",
-        "leitura"
-      ],
-      [
-        "2026-09-17||🚨 INSCRIÇÃO — abre hoje, fazer antes de abrir qualquer PDF. Depois: LC 214, arts. 111-124 — cashback e Cesta Básica Nacional",
-        "leitura"
-      ],
-      [
-        "Auditoria Governamental e Controle||Execução de Auditoria de Regularidade",
+        "Direito Tributário||Outras Questões e Tópicos Mesclados sobre a Reforma Tributária",
         "d1"
       ],
       [
-        "Direito Tributário||Comitê Gestor do IBS (CF 1988, EC 132)",
+        "TI - Gestão e Governança de TI||BPMN (Modelo e Notação de Processos de Negócio)",
         "d6"
       ],
       [
-        "Direito Tributário||Imposto Seletivo - IS (CF 1988; EC 132)",
-        "d6"
-      ],
-      [
-        "TI - Ciência de Dados e Inteligência Artificial||Conceitos Gerais de Machine Learning",
+        "TI - Segurança da Informação||Conceitos de Certificado Digital",
         "d1"
       ],
       [
-        "TI - Engenharia de Software||Kanban (Engenharia de Software)",
+        "TI - Segurança da Informação||Gestão de Continuidade de Negócio (NBR ISO/IEC 15999-1, 15999-2, 27002, 22313, etc.)",
         "d6"
       ],
       [
-        "TI - Engenharia de Software||XP (Extreme Programming)",
+        "TI - Segurança da Informação||ICP e Autoridades Certificadoras",
+        "d1"
+      ],
+      [
+        "TI - Segurança da Informação||SGSI, Controles e Estrutura das Normas da Família 27000 (ISO/IEC 27001, 27002, etc.)",
         "d6"
+      ],
+      [
+        "TI - Segurança da Informação||X.509",
+        "d1"
       ]
     ],
-    "confirmada": "2026-09-18"
+    "confirmada": "2026-09-21"
   },
   "leituras": {
     "2026-09-14||LC 214, arts. 38-56 — não cumulatividade, apropriação e utilização de créditos": {
@@ -1100,7 +1266,8 @@
       "plano_ref": "S2 Quarta",
       "minutos": 30,
       "prevista": "2026-09-17",
-      "emitida": "2026-09-17"
+      "emitida": "2026-09-17",
+      "descartada": "rodada de questoes, nao leitura (pendencia 1) -- marcada em 2026-09-18"
     },
     "2026-09-17||🚨 INSCRIÇÃO — abre hoje, fazer antes de abrir qualquer PDF. Depois: LC 214, arts. 111-124 — cashback e Cesta Básica Nacional": {
       "materia": "Reforma Tributária",
@@ -1122,7 +1289,8 @@
       "plano_ref": "S2 Quinta",
       "minutos": 30,
       "prevista": "2026-09-18",
-      "emitida": "2026-09-18"
+      "emitida": "2026-09-18",
+      "descartada": "rodada de questoes, nao leitura (pendencia 1) -- marcada em 2026-09-18"
     }
   }
 }

@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-09-18T14:57:09",
+ "gerado_em": "2026-09-21T08:16:43",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -1094,6 +1094,114 @@ window.SESSOES_TEC = {
    "qResolvidas": 29,
    "qAcertadas": 23,
    "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-18~2",
+   "origem": "tec",
+   "data": "2026-09-18",
+   "mat": "RT",
+   "topicId": "2",
+   "assuntoLivre": "",
+   "minutos": 10,
+   "qResolvidas": 15,
+   "qAcertadas": 14,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-18~3",
+   "origem": "tec",
+   "data": "2026-09-18",
+   "mat": "RT",
+   "topicId": "3",
+   "assuntoLivre": "",
+   "minutos": 2,
+   "qResolvidas": 6,
+   "qAcertadas": 6,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-18~32",
+   "origem": "tec",
+   "data": "2026-09-18",
+   "mat": "INFRA",
+   "topicId": "32",
+   "assuntoLivre": "",
+   "minutos": 5,
+   "qResolvidas": 16,
+   "qAcertadas": 12,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-18~36",
+   "origem": "tec",
+   "data": "2026-09-18",
+   "mat": "INFRA",
+   "topicId": "36",
+   "assuntoLivre": "",
+   "minutos": 7,
+   "qResolvidas": 14,
+   "qAcertadas": 10,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-18~4",
+   "origem": "tec",
+   "data": "2026-09-18",
+   "mat": "RT",
+   "topicId": "4",
+   "assuntoLivre": "",
+   "minutos": 2,
+   "qResolvidas": 5,
+   "qAcertadas": 4,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-18~44",
+   "origem": "tec",
+   "data": "2026-09-18",
+   "mat": "INFRA",
+   "topicId": "44",
+   "assuntoLivre": "",
+   "minutos": 55,
+   "qResolvidas": 6,
+   "qAcertadas": 4,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-18~56",
+   "origem": "tec",
+   "data": "2026-09-18",
+   "mat": "DEV",
+   "topicId": "56",
+   "assuntoLivre": "",
+   "minutos": 2,
+   "qResolvidas": 7,
+   "qAcertadas": 6,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-18~65",
+   "origem": "tec",
+   "data": "2026-09-18",
+   "mat": "DEV",
+   "topicId": "65",
+   "assuntoLivre": "",
+   "minutos": 1,
+   "qResolvidas": 4,
+   "qAcertadas": 3,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-18~81",
+   "origem": "tec",
+   "data": "2026-09-18",
+   "mat": "DTRIB",
+   "topicId": "81",
+   "assuntoLivre": "",
+   "minutos": 1,
+   "qResolvidas": 5,
+   "qAcertadas": 5,
+   "obs": "reconstruída do TEC (3 assuntos)"
   }
  ]
 };
