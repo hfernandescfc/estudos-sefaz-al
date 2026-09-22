@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-09-21T08:16:43",
+ "gerado_em": "2026-09-22T08:17:42",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -1202,6 +1202,18 @@ window.SESSOES_TEC = {
    "qResolvidas": 5,
    "qAcertadas": 5,
    "obs": "reconstruída do TEC (3 assuntos)"
+  },
+  {
+   "uid": "TEC~2026-09-21~das-competencias-do-cgibs-e-das-diretrizes-para-a-coordenaca-5e512b",
+   "origem": "tec",
+   "data": "2026-09-21",
+   "mat": "RT",
+   "topicId": null,
+   "assuntoLivre": "Das Competências do CGIBS e das Diretrizes para a Coordenação da Fiscalização e da Cobrança do IBS (arts. 2º a 6º da LC nº 227/2026)",
+   "minutos": 2,
+   "qResolvidas": 2,
+   "qAcertadas": 2,
+   "obs": "reconstruída do TEC"
   }
  ]
 };

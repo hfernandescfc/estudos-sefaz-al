@@ -10,7 +10,8 @@
     "tec_registros_2026-09-16.json",
     "tec_registros_2026-09-16(1).json",
     "tec_registros_2026-09-18.json",
-    "tec_registros_2026-09-21.json"
+    "tec_registros_2026-09-21.json",
+    "tec_registros_2026-09-22.json"
   ],
   "cadeias": {
     "Contabilidade Geral||Plano de Contas": {
@@ -269,7 +270,7 @@
         },
         "d14": {
           "prevista": "2026-09-22",
-          "emitida": null
+          "emitida": "2026-09-22"
         },
         "d28": {
           "prevista": "2026-10-06",
@@ -300,7 +301,7 @@
         },
         "d14": {
           "prevista": "2026-09-22",
-          "emitida": null
+          "emitida": "2026-09-22"
         },
         "d28": {
           "prevista": "2026-10-06",
@@ -414,7 +415,7 @@
         },
         "d6": {
           "prevista": "2026-09-22",
-          "emitida": null,
+          "emitida": "2026-09-22",
           "resultado": null
         },
         "d14": {
@@ -476,7 +477,7 @@
         },
         "d6": {
           "prevista": "2026-09-22",
-          "emitida": null,
+          "emitida": "2026-09-22",
           "resultado": null
         },
         "d14": {
@@ -836,7 +837,7 @@
         },
         "d6": {
           "prevista": "2026-09-22",
-          "emitida": null,
+          "emitida": "2026-09-22",
           "resultado": null
         },
         "d14": {
@@ -869,7 +870,7 @@
         },
         "d6": {
           "prevista": "2026-09-22",
-          "emitida": null,
+          "emitida": "2026-09-22",
           "resultado": null
         },
         "d14": {
@@ -904,7 +905,7 @@
         },
         "d6": {
           "prevista": "2026-09-22",
-          "emitida": null,
+          "emitida": "2026-09-22",
           "resultado": null
         },
         "d14": {
@@ -948,7 +949,7 @@
         },
         "d6": {
           "prevista": "2026-09-22",
-          "emitida": null,
+          "emitida": "2026-09-22",
           "resultado": null
         },
         "d14": {
@@ -1168,38 +1169,50 @@
     }
   },
   "ultima_fila": {
-    "data": "2026-09-21",
+    "data": "2026-09-22",
     "itens": [
       [
-        "Direito Tributário||Outras Questões e Tópicos Mesclados sobre a Reforma Tributária",
-        "d1"
+        "2026-09-21||Extensão — MOC NF-e/NFC-e 7.0, Visão Geral: modelo operacional, autorização de uso",
+        "leitura"
       ],
       [
-        "TI - Gestão e Governança de TI||BPMN (Modelo e Notação de Processos de Negócio)",
+        "2026-09-21||LC 227, arts. 1º-52 — CGIBS: competências, estrutura, controle externo, transparência",
+        "leitura"
+      ],
+      [
+        "Contabilidade Geral||Conceitos de SPED e seus Módulos",
         "d6"
       ],
       [
-        "TI - Segurança da Informação||Conceitos de Certificado Digital",
-        "d1"
-      ],
-      [
-        "TI - Segurança da Informação||Gestão de Continuidade de Negócio (NBR ISO/IEC 15999-1, 15999-2, 27002, 22313, etc.)",
+        "Contabilidade Geral||Decreto nº 6.022/2007 - Sistema Público de Escrituração Digital (SPED)",
         "d6"
       ],
       [
-        "TI - Segurança da Informação||ICP e Autoridades Certificadoras",
-        "d1"
+        "Direito Tributário||Imposto sobre Bens e Serviços - IBS (CF/1988, EC 132)",
+        "d14"
       ],
       [
-        "TI - Segurança da Informação||SGSI, Controles e Estrutura das Normas da Família 27000 (ISO/IEC 27001, 27002, etc.)",
+        "Legislação Tributária Federal||Da Operacionalização do IBS e da CBS (arts. 58 a 62 da LC nº 214/2025)",
         "d6"
       ],
       [
-        "TI - Segurança da Informação||X.509",
-        "d1"
+        "Legislação Tributária Federal||Do Local da Operação (art. 11 da LC nº 214/2025)",
+        "d6"
+      ],
+      [
+        "TI - Engenharia de Software||SCRUM",
+        "d6"
+      ],
+      [
+        "TI - Gestão e Governança de TI||Conceitos de BPM (Gerenciamento de Processos de Negócio)",
+        "d14"
+      ],
+      [
+        "TI - Segurança da Informação||Riscos em Segurança da Informação (NBR ISO/IEC 27001, 27002 e 27005)",
+        "d6"
       ]
     ],
-    "confirmada": "2026-09-21"
+    "confirmada": "2026-09-22"
   },
   "leituras": {
     "2026-09-14||LC 214, arts. 38-56 — não cumulatividade, apropriação e utilização de créditos": {
@@ -1291,6 +1304,28 @@
       "prevista": "2026-09-18",
       "emitida": "2026-09-18",
       "descartada": "rodada de questoes, nao leitura (pendencia 1) -- marcada em 2026-09-18"
+    },
+    "2026-09-21||LC 227, arts. 1º-52 — CGIBS: competências, estrutura, controle externo, transparência": {
+      "materia": "Reforma Tributária",
+      "rotulo": "LC 227, arts. 1º-52 — CGIBS: competências, estrutura, controle externo, transparência",
+      "data_leitura": "2026-09-21",
+      "fonte": null,
+      "origem": "plano",
+      "plano_ref": "S3 Segunda",
+      "minutos": 105,
+      "prevista": "2026-09-22",
+      "emitida": "2026-09-22"
+    },
+    "2026-09-21||Extensão — MOC NF-e/NFC-e 7.0, Visão Geral: modelo operacional, autorização de uso": {
+      "materia": "Auditoria Fiscal",
+      "rotulo": "Extensão — MOC NF-e/NFC-e 7.0, Visão Geral: modelo operacional, autorização de uso",
+      "data_leitura": "2026-09-21",
+      "fonte": null,
+      "origem": "plano",
+      "plano_ref": "S3 Segunda",
+      "minutos": 30,
+      "prevista": "2026-09-22",
+      "emitida": "2026-09-22"
     }
   }
 }
