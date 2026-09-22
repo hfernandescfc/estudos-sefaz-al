@@ -11,7 +11,11 @@
     "tec_registros_2026-09-16(1).json",
     "tec_registros_2026-09-18.json",
     "tec_registros_2026-09-21.json",
-    "tec_registros_2026-09-22.json"
+    "tec_registros_2026-09-22.json",
+    "resultado_simulado_RT02_2026-09-14.json",
+    "resultado_simulado_RT03_2026-09-15.json",
+    "resultado_simulado_RT04_2026-09-15.json",
+    "resultado_simulado_RT06_2026-09-17.json"
   ],
   "cadeias": {
     "Contabilidade Geral||Plano de Contas": {
@@ -1170,49 +1174,7 @@
   },
   "ultima_fila": {
     "data": "2026-09-22",
-    "itens": [
-      [
-        "2026-09-21||Extensão — MOC NF-e/NFC-e 7.0, Visão Geral: modelo operacional, autorização de uso",
-        "leitura"
-      ],
-      [
-        "2026-09-21||LC 227, arts. 1º-52 — CGIBS: competências, estrutura, controle externo, transparência",
-        "leitura"
-      ],
-      [
-        "Contabilidade Geral||Conceitos de SPED e seus Módulos",
-        "d6"
-      ],
-      [
-        "Contabilidade Geral||Decreto nº 6.022/2007 - Sistema Público de Escrituração Digital (SPED)",
-        "d6"
-      ],
-      [
-        "Direito Tributário||Imposto sobre Bens e Serviços - IBS (CF/1988, EC 132)",
-        "d14"
-      ],
-      [
-        "Legislação Tributária Federal||Da Operacionalização do IBS e da CBS (arts. 58 a 62 da LC nº 214/2025)",
-        "d6"
-      ],
-      [
-        "Legislação Tributária Federal||Do Local da Operação (art. 11 da LC nº 214/2025)",
-        "d6"
-      ],
-      [
-        "TI - Engenharia de Software||SCRUM",
-        "d6"
-      ],
-      [
-        "TI - Gestão e Governança de TI||Conceitos de BPM (Gerenciamento de Processos de Negócio)",
-        "d14"
-      ],
-      [
-        "TI - Segurança da Informação||Riscos em Segurança da Informação (NBR ISO/IEC 27001, 27002 e 27005)",
-        "d6"
-      ]
-    ],
-    "confirmada": "2026-09-22"
+    "itens": []
   },
   "leituras": {
     "2026-09-14||LC 214, arts. 38-56 — não cumulatividade, apropriação e utilização de créditos": {
