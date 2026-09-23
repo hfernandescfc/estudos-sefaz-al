@@ -421,7 +421,14 @@
         "d6": {
           "prevista": "2026-09-22",
           "emitida": "2026-09-22",
-          "resultado": null
+          "resultado": null,
+          "execucao": {
+            "data": "2026-09-22",
+            "declarada_em": "2026-09-23",
+            "instrumento": "mapa-mental em modo cego",
+            "painel": "10_Mapas/RT_lc214_local_operacao",
+            "obs": "sem amostra de itens: resultado segue null e o gatilho continua aberto para captura com >=6 itens"
+          }
         },
         "d14": {
           "prevista": "2026-09-30",
@@ -483,7 +490,14 @@
         "d6": {
           "prevista": "2026-09-22",
           "emitida": "2026-09-22",
-          "resultado": null
+          "resultado": null,
+          "execucao": {
+            "data": "2026-09-22",
+            "declarada_em": "2026-09-23",
+            "instrumento": "mapa-mental em modo cego",
+            "painel": "10_Mapas/DEV_scrum_listas",
+            "obs": "sem amostra de itens: resultado segue null e o gatilho continua aberto para captura com >=6 itens"
+          }
         },
         "d14": {
           "prevista": "2026-09-30",
@@ -843,7 +857,14 @@
         "d6": {
           "prevista": "2026-09-22",
           "emitida": "2026-09-22",
-          "resultado": null
+          "resultado": null,
+          "execucao": {
+            "data": "2026-09-22",
+            "declarada_em": "2026-09-23",
+            "instrumento": "so registro (sem prescricao na folha)",
+            "painel": null,
+            "obs": "sem amostra de itens: resultado segue null e o gatilho continua aberto para captura com >=6 itens"
+          }
         },
         "d14": {
           "prevista": "2026-09-30",
@@ -876,7 +897,14 @@
         "d6": {
           "prevista": "2026-09-22",
           "emitida": "2026-09-22",
-          "resultado": null
+          "resultado": null,
+          "execucao": {
+            "data": "2026-09-22",
+            "declarada_em": "2026-09-23",
+            "instrumento": "mapa-mental em modo cego",
+            "painel": "10_Mapas/AUDFIS_sped_modulos",
+            "obs": "sem amostra de itens: resultado segue null e o gatilho continua aberto para captura com >=6 itens"
+          }
         },
         "d14": {
           "prevista": "2026-09-30",
@@ -911,7 +939,14 @@
         "d6": {
           "prevista": "2026-09-22",
           "emitida": "2026-09-22",
-          "resultado": null
+          "resultado": null,
+          "execucao": {
+            "data": "2026-09-22",
+            "declarada_em": "2026-09-23",
+            "instrumento": "mapa-mental em modo cego",
+            "painel": "10_Mapas/AUDFIS_sped_decreto6022",
+            "obs": "sem amostra de itens: resultado segue null e o gatilho continua aberto para captura com >=6 itens"
+          }
         },
         "d14": {
           "prevista": "2026-09-30",
@@ -955,7 +990,14 @@
         "d6": {
           "prevista": "2026-09-22",
           "emitida": "2026-09-22",
-          "resultado": null
+          "resultado": null,
+          "execucao": {
+            "data": "2026-09-22",
+            "declarada_em": "2026-09-23",
+            "instrumento": "mapa-mental em modo cego",
+            "painel": "10_Mapas/TI_controles_27000",
+            "obs": "sem amostra de itens: resultado segue null e o gatilho continua aberto para captura com >=6 itens"
+          }
         },
         "d14": {
           "prevista": "2026-09-30",
@@ -1322,49 +1364,7 @@
   },
   "ultima_fila": {
     "data": "2026-09-23",
-    "itens": [
-      [
-        "2026-09-22||Dados abertos (item 1.2) + DIKW (item 1) — normativo, enumerativo e NÃO derivável. 3 das 9 questões são de cargo fiscal e 2 são da própria SEFAZ-AL; domínio no baseline: 63%",
-        "leitura"
-      ],
-      [
-        "2026-09-22||Extensão — MOC 7.0, eventos e CC-e: o que a carta de correção pode e o que NÃO pode corrigir",
-        "leitura"
-      ],
-      [
-        "Legislação Tributária Federal||Da Base de Cálculo (arts. 12 e 13 da LC nº 214/2025)",
-        "d14"
-      ],
-      [
-        "Legislação Tributária Federal||Das Hipóteses de Incidência (arts. 4º a 7º da LC nº 214/2025)",
-        "d14"
-      ],
-      [
-        "Legislação Tributária Federal||Disposições Preliminares (arts. 1º a 3º da LC nº 214/2025)",
-        "d14"
-      ],
-      [
-        "Legislação Tributária Federal||Do Momento de Ocorrência do Fato Gerador (art. 10 da LC nº 214/2025)",
-        "d14"
-      ],
-      [
-        "TI - Ciência de Dados e Inteligência Artificial||Dado, Informação e Conhecimento",
-        "d1"
-      ],
-      [
-        "TI - Ciência de Dados e Inteligência Artificial||Dados Abertos (Conceitos, Princípios, etc.)",
-        "d1"
-      ],
-      [
-        "TI - Ciência de Dados e Inteligência Artificial||Treinamento e Avaliação de Modelos",
-        "d1"
-      ],
-      [
-        "TI - Engenharia de Software||Conceitos e Tipos de Testes de Software",
-        "d1"
-      ]
-    ],
-    "confirmada": "2026-09-23"
+    "itens": []
   },
   "leituras": {
     "2026-09-14||LC 214, arts. 38-56 — não cumulatividade, apropriação e utilização de créditos": {
