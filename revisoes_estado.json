@@ -15,7 +15,8 @@
     "resultado_simulado_RT02_2026-09-14.json",
     "resultado_simulado_RT03_2026-09-15.json",
     "resultado_simulado_RT04_2026-09-15.json",
-    "resultado_simulado_RT06_2026-09-17.json"
+    "resultado_simulado_RT06_2026-09-17.json",
+    "tec_registros_2026-09-23.json"
   ],
   "cadeias": {
     "Contabilidade Geral||Plano de Contas": {
@@ -335,7 +336,7 @@
         },
         "d14": {
           "prevista": "2026-09-23",
-          "emitida": null
+          "emitida": "2026-09-23"
         },
         "d28": {
           "prevista": "2026-10-07",
@@ -365,7 +366,7 @@
         },
         "d14": {
           "prevista": "2026-09-23",
-          "emitida": null
+          "emitida": "2026-09-23"
         },
         "d28": {
           "prevista": "2026-10-07",
@@ -393,7 +394,7 @@
         },
         "d14": {
           "prevista": "2026-09-23",
-          "emitida": null
+          "emitida": "2026-09-23"
         },
         "d28": {
           "prevista": "2026-10-07",
@@ -454,7 +455,7 @@
         },
         "d14": {
           "prevista": "2026-09-23",
-          "emitida": null
+          "emitida": "2026-09-23"
         },
         "d28": {
           "prevista": "2026-10-07",
@@ -1170,11 +1171,200 @@
           "emitida": null
         }
       }
+    },
+    "TI - Ciência de Dados e Inteligência Artificial||Dado, Informação e Conhecimento": {
+      "materia": "TI - Ciência de Dados e Inteligência Artificial",
+      "assunto": "Dado, Informação e Conhecimento",
+      "data_base": "2026-09-23",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "2152896"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-23",
+          "emitida": "2026-09-23"
+        },
+        "d6": {
+          "prevista": "2026-09-29",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-07",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-21",
+          "emitida": null
+        }
+      }
+    },
+    "TI - Ciência de Dados e Inteligência Artificial||Dados Abertos (Conceitos, Princípios, etc.)": {
+      "materia": "TI - Ciência de Dados e Inteligência Artificial",
+      "assunto": "Dados Abertos (Conceitos, Princípios, etc.)",
+      "data_base": "2026-09-23",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "1509484",
+        "1509652",
+        "1790415",
+        "2876050"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-23",
+          "emitida": "2026-09-23"
+        },
+        "d6": {
+          "prevista": "2026-09-29",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-07",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-21",
+          "emitida": null
+        }
+      }
+    },
+    "TI - Ciência de Dados e Inteligência Artificial||Treinamento e Avaliação de Modelos": {
+      "materia": "TI - Ciência de Dados e Inteligência Artificial",
+      "assunto": "Treinamento e Avaliação de Modelos",
+      "data_base": "2026-09-23",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "3966272",
+        "3970305"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-23",
+          "emitida": "2026-09-23"
+        },
+        "d6": {
+          "prevista": "2026-09-29",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-07",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-21",
+          "emitida": null
+        }
+      }
+    },
+    "TI - Engenharia de Software||Conceitos e Tipos de Testes de Software": {
+      "materia": "TI - Engenharia de Software",
+      "assunto": "Conceitos e Tipos de Testes de Software",
+      "data_base": "2026-09-23",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "231221",
+        "250205",
+        "284815",
+        "346653",
+        "553344",
+        "595366",
+        "726081",
+        "1294660",
+        "2216520",
+        "2216771",
+        "1935724",
+        "1294684",
+        "1768544",
+        "165191",
+        "184457",
+        "211753",
+        "229472",
+        "230847",
+        "389796",
+        "552399",
+        "738275",
+        "1038600",
+        "2780356",
+        "2265601"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-23",
+          "emitida": "2026-09-23"
+        },
+        "d6": {
+          "prevista": "2026-09-29",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-07",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-21",
+          "emitida": null
+        }
+      }
     }
   },
   "ultima_fila": {
-    "data": "2026-09-22",
-    "itens": []
+    "data": "2026-09-23",
+    "itens": [
+      [
+        "2026-09-22||Dados abertos (item 1.2) + DIKW (item 1) — normativo, enumerativo e NÃO derivável. 3 das 9 questões são de cargo fiscal e 2 são da própria SEFAZ-AL; domínio no baseline: 63%",
+        "leitura"
+      ],
+      [
+        "2026-09-22||Extensão — MOC 7.0, eventos e CC-e: o que a carta de correção pode e o que NÃO pode corrigir",
+        "leitura"
+      ],
+      [
+        "Legislação Tributária Federal||Da Base de Cálculo (arts. 12 e 13 da LC nº 214/2025)",
+        "d14"
+      ],
+      [
+        "Legislação Tributária Federal||Das Hipóteses de Incidência (arts. 4º a 7º da LC nº 214/2025)",
+        "d14"
+      ],
+      [
+        "Legislação Tributária Federal||Disposições Preliminares (arts. 1º a 3º da LC nº 214/2025)",
+        "d14"
+      ],
+      [
+        "Legislação Tributária Federal||Do Momento de Ocorrência do Fato Gerador (art. 10 da LC nº 214/2025)",
+        "d14"
+      ],
+      [
+        "TI - Ciência de Dados e Inteligência Artificial||Dado, Informação e Conhecimento",
+        "d1"
+      ],
+      [
+        "TI - Ciência de Dados e Inteligência Artificial||Dados Abertos (Conceitos, Princípios, etc.)",
+        "d1"
+      ],
+      [
+        "TI - Ciência de Dados e Inteligência Artificial||Treinamento e Avaliação de Modelos",
+        "d1"
+      ],
+      [
+        "TI - Engenharia de Software||Conceitos e Tipos de Testes de Software",
+        "d1"
+      ]
+    ],
+    "confirmada": "2026-09-23"
   },
   "leituras": {
     "2026-09-14||LC 214, arts. 38-56 — não cumulatividade, apropriação e utilização de créditos": {
@@ -1288,6 +1478,28 @@
       "minutos": 30,
       "prevista": "2026-09-22",
       "emitida": "2026-09-22"
+    },
+    "2026-09-22||Dados abertos (item 1.2) + DIKW (item 1) — normativo, enumerativo e NÃO derivável. 3 das 9 questões são de cargo fiscal e 2 são da própria SEFAZ-AL; domínio no baseline: 63%": {
+      "materia": "Ciência de Dados",
+      "rotulo": "Dados abertos (item 1.2) + DIKW (item 1) — normativo, enumerativo e NÃO derivável. 3 das 9 questões são de cargo fiscal e 2 são da própria SEFAZ-AL; domínio no baseline: 63%",
+      "data_leitura": "2026-09-22",
+      "fonte": null,
+      "origem": "plano",
+      "plano_ref": "S3 Terça",
+      "minutos": 105,
+      "prevista": "2026-09-23",
+      "emitida": "2026-09-23"
+    },
+    "2026-09-22||Extensão — MOC 7.0, eventos e CC-e: o que a carta de correção pode e o que NÃO pode corrigir": {
+      "materia": "Auditoria Fiscal",
+      "rotulo": "Extensão — MOC 7.0, eventos e CC-e: o que a carta de correção pode e o que NÃO pode corrigir",
+      "data_leitura": "2026-09-22",
+      "fonte": null,
+      "origem": "plano",
+      "plano_ref": "S3 Terça",
+      "minutos": 30,
+      "prevista": "2026-09-23",
+      "emitida": "2026-09-23"
     }
   }
 }
