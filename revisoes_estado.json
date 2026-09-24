@@ -16,7 +16,8 @@
     "resultado_simulado_RT03_2026-09-15.json",
     "resultado_simulado_RT04_2026-09-15.json",
     "resultado_simulado_RT06_2026-09-17.json",
-    "tec_registros_2026-09-23.json"
+    "tec_registros_2026-09-23.json",
+    "resultado_simulado_RT07_2026-09-23.json"
   ],
   "cadeias": {
     "Contabilidade Geral||Plano de Contas": {
@@ -1024,7 +1025,7 @@
         },
         "d6": {
           "prevista": "2026-09-24",
-          "emitida": null,
+          "emitida": "2026-09-24",
           "resultado": null
         },
         "d14": {
@@ -1059,7 +1060,7 @@
         },
         "d6": {
           "prevista": "2026-09-24",
-          "emitida": null,
+          "emitida": "2026-09-24",
           "resultado": null
         },
         "d14": {
@@ -1363,8 +1364,26 @@
     }
   },
   "ultima_fila": {
-    "data": "2026-09-23",
-    "itens": []
+    "data": "2026-09-24",
+    "itens": [
+      [
+        "2026-09-23||LC 227, arts. 53-101 — Processo Administrativo Tributário do IBS",
+        "leitura"
+      ],
+      [
+        "2026-09-23||MOC 7.0 — cancelamento e inutilização",
+        "leitura"
+      ],
+      [
+        "Auditoria Governamental e Controle||Execução de Auditoria de Regularidade",
+        "d6"
+      ],
+      [
+        "TI - Ciência de Dados e Inteligência Artificial||Conceitos Gerais de Machine Learning",
+        "d6"
+      ]
+    ],
+    "confirmada": "2026-09-24"
   },
   "leituras": {
     "2026-09-14||LC 214, arts. 38-56 — não cumulatividade, apropriação e utilização de créditos": {
@@ -1500,6 +1519,29 @@
       "minutos": 30,
       "prevista": "2026-09-23",
       "emitida": "2026-09-23"
+    },
+    "2026-09-23||MOC 7.0 — cancelamento e inutilização": {
+      "materia": "Auditoria Fiscal",
+      "rotulo": "MOC 7.0 — cancelamento e inutilização",
+      "data_leitura": "2026-09-23",
+      "fonte": "01_Material_PDF/Leis_Normas/Manuais_Fiscais/MOC_NFe_NFCe_v7.0_Visao_Geral.pdf",
+      "origem": "declarada",
+      "plano_ref": "S3 Quarta",
+      "minutos": 30,
+      "prevista": "2026-09-24",
+      "emitida": "2026-09-24",
+      "rotulo_plano": "Extensão — MOC 7.0, cancelamento e inutilização: prazos e hipóteses. Numérico → cards"
+    },
+    "2026-09-23||LC 227, arts. 53-101 — Processo Administrativo Tributário do IBS": {
+      "materia": "Reforma Tributária",
+      "rotulo": "LC 227, arts. 53-101 — Processo Administrativo Tributário do IBS",
+      "data_leitura": "2026-09-23",
+      "fonte": null,
+      "origem": "plano",
+      "plano_ref": "S3 Quarta",
+      "minutos": 105,
+      "prevista": "2026-09-24",
+      "emitida": "2026-09-24"
     }
   }
 }
