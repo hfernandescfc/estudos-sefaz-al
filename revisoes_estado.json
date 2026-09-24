@@ -1656,6 +1656,17 @@
       "minutos": 105,
       "prevista": "2026-09-24",
       "emitida": "2026-09-24"
+    },
+    "2026-09-24||MOC 7.0, Anexo III — contingência NF-e (SVC-AN, SVC-RS, EPEC, FS-DA)": {
+      "materia": "Auditoria Fiscal",
+      "rotulo": "MOC 7.0, Anexo III — contingência NF-e (SVC-AN, SVC-RS, EPEC, FS-DA)",
+      "data_leitura": "2026-09-24",
+      "fonte": "01_Material_PDF/Leis_Normas/Manuais_Fiscais/MOC_NFe_NFCe_v7.0_AnexoIII_Contingencia.pdf",
+      "origem": "declarada",
+      "plano_ref": null,
+      "minutos": null,
+      "prevista": "2026-09-25",
+      "emitida": null
     }
   }
 }
