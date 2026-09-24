@@ -1017,7 +1017,7 @@
       "cadeia_completa": true,
       "alvos_origem": [],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-09-18",
@@ -1036,6 +1036,11 @@
           "prevista": "2026-10-16",
           "emitida": null
         }
+      },
+      "encerramento": {
+        "data": "2026-09-24",
+        "manual": true,
+        "motivo": "fora do edital da SEFAZ-AL (auditoria governamental, rótulo herdado do TCE-PE; a disciplina é Auditoria Fiscal) — pedido do usuário"
       }
     },
     "TI - Ciência de Dados e Inteligência Artificial||Conceitos Gerais de Machine Learning": {
