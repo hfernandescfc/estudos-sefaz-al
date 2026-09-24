@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-09-24T09:36:31",
+ "gerado_em": "2026-09-24T11:15:13",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -562,9 +562,9 @@ window.SESSOES_TEC = {
    "mat": "RT",
    "topicId": "1",
    "assuntoLivre": "",
-   "minutos": 16,
-   "qResolvidas": 19,
-   "qAcertadas": 17,
+   "minutos": 17,
+   "qResolvidas": 22,
+   "qAcertadas": 20,
    "obs": "reconstruída do TEC"
   },
   {
@@ -577,18 +577,6 @@ window.SESSOES_TEC = {
    "minutos": 24,
    "qResolvidas": 20,
    "qAcertadas": 18,
-   "obs": "reconstruída do TEC"
-  },
-  {
-   "uid": "TEC~2026-09-08~81",
-   "origem": "tec",
-   "data": "2026-09-08",
-   "mat": "DTRIB",
-   "topicId": "81",
-   "assuntoLivre": "",
-   "minutos": 1,
-   "qResolvidas": 3,
-   "qAcertadas": 3,
    "obs": "reconstruída do TEC"
   },
   {
@@ -844,6 +832,18 @@ window.SESSOES_TEC = {
    "obs": "Simulado RT02 (Q1-30) cronometrado"
   },
   {
+   "uid": "TEC~2026-09-14~1",
+   "origem": "tec",
+   "data": "2026-09-14",
+   "mat": "RT",
+   "topicId": "1",
+   "assuntoLivre": "",
+   "minutos": 2,
+   "qResolvidas": 5,
+   "qAcertadas": 4,
+   "obs": "reconstruída do TEC"
+  },
+  {
    "uid": "TEC~2026-09-14~119",
    "origem": "tec",
    "data": "2026-09-14",
@@ -853,6 +853,18 @@ window.SESSOES_TEC = {
    "minutos": 1,
    "qResolvidas": 2,
    "qAcertadas": 2,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-14~3",
+   "origem": "tec",
+   "data": "2026-09-14",
+   "mat": "RT",
+   "topicId": "3",
+   "assuntoLivre": "",
+   "minutos": 1,
+   "qResolvidas": 1,
+   "qAcertadas": 1,
    "obs": "reconstruída do TEC"
   },
   {
@@ -889,18 +901,6 @@ window.SESSOES_TEC = {
    "minutos": 5,
    "qResolvidas": 10,
    "qAcertadas": 9,
-   "obs": "reconstruída do TEC (2 assuntos)"
-  },
-  {
-   "uid": "TEC~2026-09-14~81",
-   "origem": "tec",
-   "data": "2026-09-14",
-   "mat": "DTRIB",
-   "topicId": "81",
-   "assuntoLivre": "",
-   "minutos": 2,
-   "qResolvidas": 6,
-   "qAcertadas": 5,
    "obs": "reconstruída do TEC (2 assuntos)"
   },
   {
@@ -976,6 +976,18 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
+   "uid": "TEC~2026-09-16~1",
+   "origem": "tec",
+   "data": "2026-09-16",
+   "mat": "RT",
+   "topicId": "1",
+   "assuntoLivre": "",
+   "minutos": 1,
+   "qResolvidas": 1,
+   "qAcertadas": 1,
+   "obs": "reconstruída do TEC"
+  },
+  {
    "uid": "TEC~2026-09-16~121",
    "origem": "tec",
    "data": "2026-09-16",
@@ -1024,18 +1036,6 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-16~81",
-   "origem": "tec",
-   "data": "2026-09-16",
-   "mat": "DTRIB",
-   "topicId": "81",
-   "assuntoLivre": "",
-   "minutos": 1,
-   "qResolvidas": 1,
-   "qAcertadas": 1,
-   "obs": "reconstruída do TEC"
-  },
-  {
    "uid": "SIM~RT06~2026-09-17~RT",
    "origem": "simulado",
    "data": "2026-09-17",
@@ -1072,11 +1072,11 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-17~237",
+   "uid": "TEC~2026-09-17~226",
    "origem": "tec",
    "data": "2026-09-17",
-   "mat": "IA",
-   "topicId": "237",
+   "mat": "CDADOS",
+   "topicId": "226",
    "assuntoLivre": "",
    "minutos": 32,
    "qResolvidas": 47,
@@ -1102,9 +1102,9 @@ window.SESSOES_TEC = {
    "mat": "RT",
    "topicId": "2",
    "assuntoLivre": "",
-   "minutos": 10,
-   "qResolvidas": 15,
-   "qAcertadas": 14,
+   "minutos": 11,
+   "qResolvidas": 18,
+   "qAcertadas": 17,
    "obs": "reconstruída do TEC"
   },
   {
@@ -1115,8 +1115,8 @@ window.SESSOES_TEC = {
    "topicId": "3",
    "assuntoLivre": "",
    "minutos": 2,
-   "qResolvidas": 6,
-   "qAcertadas": 6,
+   "qResolvidas": 7,
+   "qAcertadas": 7,
    "obs": "reconstruída do TEC"
   },
   {
@@ -1150,9 +1150,9 @@ window.SESSOES_TEC = {
    "mat": "RT",
    "topicId": "4",
    "assuntoLivre": "",
-   "minutos": 2,
-   "qResolvidas": 5,
-   "qAcertadas": 4,
+   "minutos": 3,
+   "qResolvidas": 6,
+   "qAcertadas": 5,
    "obs": "reconstruída do TEC"
   },
   {
@@ -1192,18 +1192,6 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-18~81",
-   "origem": "tec",
-   "data": "2026-09-18",
-   "mat": "DTRIB",
-   "topicId": "81",
-   "assuntoLivre": "",
-   "minutos": 1,
-   "qResolvidas": 5,
-   "qAcertadas": 5,
-   "obs": "reconstruída do TEC (3 assuntos)"
-  },
-  {
    "uid": "TEC~2026-09-21~das-competencias-do-cgibs-e-das-diretrizes-para-a-coordenaca-5e512b",
    "origem": "tec",
    "data": "2026-09-21",
@@ -1222,9 +1210,9 @@ window.SESSOES_TEC = {
    "mat": "CDADOS",
    "topicId": "226",
    "assuntoLivre": "",
-   "minutos": 1,
-   "qResolvidas": 3,
-   "qAcertadas": 3,
+   "minutos": 2,
+   "qResolvidas": 7,
+   "qAcertadas": 6,
    "obs": "reconstruída do TEC"
   },
   {
@@ -1261,18 +1249,6 @@ window.SESSOES_TEC = {
    "minutos": 3,
    "qResolvidas": 9,
    "qAcertadas": 6,
-   "obs": "reconstruída do TEC"
-  },
-  {
-   "uid": "TEC~2026-09-22~237",
-   "origem": "tec",
-   "data": "2026-09-22",
-   "mat": "IA",
-   "topicId": "237",
-   "assuntoLivre": "",
-   "minutos": 1,
-   "qResolvidas": 4,
-   "qAcertadas": 3,
    "obs": "reconstruída do TEC"
   },
   {
