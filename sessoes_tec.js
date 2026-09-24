@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-09-23T10:09:00",
+ "gerado_em": "2026-09-24T08:12:49",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -1286,6 +1286,18 @@ window.SESSOES_TEC = {
    "qResolvidas": 42,
    "qAcertadas": 29,
    "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "SIM~RT07~2026-09-23~RT",
+   "origem": "simulado",
+   "data": "2026-09-23",
+   "mat": "RT",
+   "topicId": null,
+   "assuntoLivre": "Simulado RT07 — RT",
+   "minutos": 6,
+   "qResolvidas": 30,
+   "qAcertadas": 22,
+   "obs": "Simulado RT07 (Q1-30) cronometrado"
   }
  ]
 };
