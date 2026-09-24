@@ -12,11 +12,11 @@
     "tec_registros_2026-09-18.json",
     "tec_registros_2026-09-21.json",
     "tec_registros_2026-09-22.json",
-    "resultado_simulado_RT02_2026-09-14.json",
     "resultado_simulado_RT03_2026-09-15.json",
     "resultado_simulado_RT04_2026-09-15.json",
-    "resultado_simulado_RT06_2026-09-17.json",
     "tec_registros_2026-09-23.json",
+    "resultado_simulado_RT02_2026-09-14.json",
+    "resultado_simulado_RT06_2026-09-17.json",
     "resultado_simulado_RT07_2026-09-23.json"
   ],
   "cadeias": {
@@ -1361,26 +1361,135 @@
           "emitida": null
         }
       }
+    },
+    "Legislação Tributária Federal||Da Não Cumulatividade (arts. 47 a 56 da LC nº 214/2025)": {
+      "materia": "Legislação Tributária Federal",
+      "assunto": "Da Não Cumulatividade (arts. 47 a 56 da LC nº 214/2025)",
+      "data_base": "2026-09-14",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "SIM:RT02:Q1-30:5",
+        "SIM:RT02:Q1-30:10",
+        "SIM:RT02:Q1-30:19",
+        "SIM:RT02:Q1-30:20",
+        "SIM:RT02:Q1-30:22",
+        "SIM:RT02:Q1-30:24"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-14",
+          "emitida": "expirada"
+        },
+        "d6": {
+          "prevista": "2026-09-24",
+          "emitida": "2026-09-24",
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-09-28",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-12",
+          "emitida": null
+        }
+      }
+    },
+    "Legislação Tributária Federal||Da Devolução Personalizada do IBS e da CBS (Cashback) e da Cesta Básica Nacional de Alimentos (arts. 112 a 125 da LC nº 214/2025)": {
+      "materia": "Legislação Tributária Federal",
+      "assunto": "Da Devolução Personalizada do IBS e da CBS (Cashback) e da Cesta Básica Nacional de Alimentos (arts. 112 a 125 da LC nº 214/2025)",
+      "data_base": "2026-09-17",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "SIM:RT06:Q1-20:8",
+        "SIM:RT06:Q1-20:13"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-17",
+          "emitida": "expirada"
+        },
+        "d6": {
+          "prevista": "2026-09-24",
+          "emitida": "2026-09-24",
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-01",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-15",
+          "emitida": null
+        }
+      }
+    },
+    "Reforma Tributária||LC 227/2026 — Processo Administrativo Tributário do IBS": {
+      "materia": "Reforma Tributária",
+      "assunto": "LC 227/2026 — Processo Administrativo Tributário do IBS",
+      "data_base": "2026-09-23",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "SIM:RT07:Q1-30:4",
+        "SIM:RT07:Q1-30:8",
+        "SIM:RT07:Q1-30:10",
+        "SIM:RT07:Q1-30:11",
+        "SIM:RT07:Q1-30:12",
+        "SIM:RT07:Q1-30:23",
+        "SIM:RT07:Q1-30:28",
+        "SIM:RT07:Q1-30:30",
+        "SIM:RT07:Q1-30:3",
+        "SIM:RT07:Q1-30:6",
+        "SIM:RT07:Q1-30:18",
+        "SIM:RT07:Q1-30:21",
+        "SIM:RT07:Q1-30:22",
+        "SIM:RT07:Q1-30:24",
+        "SIM:RT07:Q1-30:26",
+        "SIM:RT07:Q1-30:27"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-24",
+          "emitida": "2026-09-24"
+        },
+        "d6": {
+          "prevista": "2026-09-29",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-07",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-21",
+          "emitida": null
+        }
+      },
+      "origem": "simulado",
+      "topico": 127
     }
   },
   "ultima_fila": {
     "data": "2026-09-24",
     "itens": [
       [
-        "2026-09-23||LC 227, arts. 53-101 — Processo Administrativo Tributário do IBS",
-        "leitura"
-      ],
-      [
-        "2026-09-23||MOC 7.0 — cancelamento e inutilização",
-        "leitura"
-      ],
-      [
-        "Auditoria Governamental e Controle||Execução de Auditoria de Regularidade",
+        "Legislação Tributária Federal||Da Devolução Personalizada do IBS e da CBS (Cashback) e da Cesta Básica Nacional de Alimentos (arts. 112 a 125 da LC nº 214/2025)",
         "d6"
       ],
       [
-        "TI - Ciência de Dados e Inteligência Artificial||Conceitos Gerais de Machine Learning",
+        "Legislação Tributária Federal||Da Não Cumulatividade (arts. 47 a 56 da LC nº 214/2025)",
         "d6"
+      ],
+      [
+        "Reforma Tributária||LC 227/2026 — Processo Administrativo Tributário do IBS",
+        "d1"
       ]
     ],
     "confirmada": "2026-09-24"
