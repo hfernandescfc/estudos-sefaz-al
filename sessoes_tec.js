@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-09-24T11:15:13",
+ "gerado_em": "2026-09-25T08:30:44",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -1274,6 +1274,54 @@ window.SESSOES_TEC = {
    "qResolvidas": 30,
    "qAcertadas": 22,
    "obs": "Simulado RT07 (Q1-30) cronometrado"
+  },
+  {
+   "uid": "TEC~2026-09-24~225",
+   "origem": "tec",
+   "data": "2026-09-24",
+   "mat": "CDADOS",
+   "topicId": "225",
+   "assuntoLivre": "",
+   "minutos": 11,
+   "qResolvidas": 27,
+   "qAcertadas": 22,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-24~227",
+   "origem": "tec",
+   "data": "2026-09-24",
+   "mat": "CDADOS",
+   "topicId": "227",
+   "assuntoLivre": "",
+   "minutos": 28,
+   "qResolvidas": 47,
+   "qAcertadas": 44,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-24~229",
+   "origem": "tec",
+   "data": "2026-09-24",
+   "mat": "CDADOS",
+   "topicId": "229",
+   "assuntoLivre": "",
+   "minutos": 5,
+   "qResolvidas": 16,
+   "qAcertadas": 14,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-24~31",
+   "origem": "tec",
+   "data": "2026-09-24",
+   "mat": "INFRA",
+   "topicId": "31",
+   "assuntoLivre": "",
+   "minutos": 12,
+   "qResolvidas": 25,
+   "qAcertadas": 18,
+   "obs": "reconstruída do TEC"
   }
  ]
 };

@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/desempenho_assuntos.py - NAO editar a mao.
 window.EXEC_TEC = {
-  "gerado_em": "2026-09-24T11:15:12",
+  "gerado_em": "2026-09-25T08:30:43",
   "fonte": "07_TEC/TEC_Captura/tec_registros_*.json + resultado_simulado_*.json (id/assunto -> topicId por 04_Dados/mapa_topicos_tec.json)",
   "por_topico": {
     "455": {
@@ -564,6 +564,42 @@ window.EXEC_TEC = {
       "dias": [
         "2026-09-23"
       ]
+    },
+    "31": {
+      "qr": 25,
+      "qa": 18,
+      "d0": "2026-09-24",
+      "d1": "2026-09-24",
+      "dias": [
+        "2026-09-24"
+      ]
+    },
+    "225": {
+      "qr": 27,
+      "qa": 22,
+      "d0": "2026-09-24",
+      "d1": "2026-09-24",
+      "dias": [
+        "2026-09-24"
+      ]
+    },
+    "229": {
+      "qr": 16,
+      "qa": 14,
+      "d0": "2026-09-24",
+      "d1": "2026-09-24",
+      "dias": [
+        "2026-09-24"
+      ]
+    },
+    "227": {
+      "qr": 47,
+      "qa": 44,
+      "d0": "2026-09-24",
+      "d1": "2026-09-24",
+      "dias": [
+        "2026-09-24"
+      ]
     }
   },
   "por_dia": [
@@ -1058,6 +1094,30 @@ window.EXEC_TEC = {
       "id": 127,
       "qr": 30,
       "qa": 22
+    },
+    {
+      "data": "2026-09-24",
+      "id": 31,
+      "qr": 25,
+      "qa": 18
+    },
+    {
+      "data": "2026-09-24",
+      "id": 225,
+      "qr": 27,
+      "qa": 22
+    },
+    {
+      "data": "2026-09-24",
+      "id": 227,
+      "qr": 47,
+      "qa": 44
+    },
+    {
+      "data": "2026-09-24",
+      "id": 229,
+      "qr": 16,
+      "qa": 14
     }
   ]
 };

@@ -17,7 +17,8 @@
     "tec_registros_2026-09-23.json",
     "resultado_simulado_RT02_2026-09-14.json",
     "resultado_simulado_RT06_2026-09-17.json",
-    "resultado_simulado_RT07_2026-09-23.json"
+    "resultado_simulado_RT07_2026-09-23.json",
+    "tec_registros_2026-09-25.json"
   ],
   "cadeias": {
     "Contabilidade Geral||Plano de Contas": {
@@ -534,7 +535,7 @@
         },
         "d14": {
           "prevista": "2026-09-25",
-          "emitida": null
+          "emitida": "2026-09-25"
         },
         "d28": {
           "prevista": "2026-10-09",
@@ -565,7 +566,7 @@
         },
         "d14": {
           "prevista": "2026-09-25",
-          "emitida": null
+          "emitida": "2026-09-25"
         },
         "d28": {
           "prevista": "2026-10-09",
@@ -1099,7 +1100,7 @@
         },
         "d6": {
           "prevista": "2026-09-25",
-          "emitida": null,
+          "emitida": "2026-09-25",
           "resultado": null
         },
         "d14": {
@@ -1136,7 +1137,7 @@
         },
         "d6": {
           "prevista": "2026-09-25",
-          "emitida": null,
+          "emitida": "2026-09-25",
           "resultado": null
         },
         "d14": {
@@ -1175,7 +1176,7 @@
         },
         "d6": {
           "prevista": "2026-09-25",
-          "emitida": null,
+          "emitida": "2026-09-25",
           "resultado": null
         },
         "d14": {
@@ -1207,7 +1208,7 @@
         },
         "d6": {
           "prevista": "2026-09-25",
-          "emitida": null,
+          "emitida": "2026-09-25",
           "resultado": null
         },
         "d14": {
@@ -1479,25 +1480,214 @@
       },
       "origem": "simulado",
       "topico": 127
+    },
+    "TI - Banco de Dados||Normalização": {
+      "materia": "TI - Banco de Dados",
+      "assunto": "Normalização",
+      "data_base": "2026-09-25",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "1813379",
+        "2877382",
+        "3685179"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-25",
+          "emitida": "2026-09-25"
+        },
+        "d6": {
+          "prevista": "2026-10-01",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-09",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-23",
+          "emitida": null
+        }
+      }
+    },
+    "TI - Ciência de Dados e Inteligência Artificial||Algoritmos de Machine Learning (Classificação, Regressão e Clusterização)": {
+      "materia": "TI - Ciência de Dados e Inteligência Artificial",
+      "assunto": "Algoritmos de Machine Learning (Classificação, Regressão e Clusterização)",
+      "data_base": "2026-09-25",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "3641673",
+        "2877426",
+        "3176057",
+        "1718779",
+        "3822828"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-25",
+          "emitida": "2026-09-25"
+        },
+        "d6": {
+          "prevista": "2026-10-01",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-09",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-23",
+          "emitida": null
+        }
+      }
+    },
+    "TI - Ciência de Dados e Inteligência Artificial||Data Mining (Mineração de Dados): Etapas, Algoritmos e Modelos (KDD, CRISP-DM, etc.)": {
+      "materia": "TI - Ciência de Dados e Inteligência Artificial",
+      "assunto": "Data Mining (Mineração de Dados): Etapas, Algoritmos e Modelos (KDD, CRISP-DM, etc.)",
+      "data_base": "2026-09-25",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "1509659",
+        "1790711",
+        "2012309",
+        "2012315",
+        "3639435",
+        "2876033",
+        "3970300",
+        "4144611"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-25",
+          "emitida": "2026-09-25"
+        },
+        "d6": {
+          "prevista": "2026-10-01",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-09",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-23",
+          "emitida": null
+        }
+      }
+    },
+    "TI - Segurança da Informação||Ataques a Aplicações Web (XSS, CSRF, SQL Injection etc.)": {
+      "materia": "TI - Segurança da Informação",
+      "assunto": "Ataques a Aplicações Web (XSS, CSRF, SQL Injection etc.)",
+      "data_base": "2026-09-25",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "2781227",
+        "3081613",
+        "3250681",
+        "3340463",
+        "3400376",
+        "4126104",
+        "4143721",
+        "2781226",
+        "3048685",
+        "3076812",
+        "3077632",
+        "3081608",
+        "3238346",
+        "3340461",
+        "3915629",
+        "3967358",
+        "4096770"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-25",
+          "emitida": "2026-09-25"
+        },
+        "d6": {
+          "prevista": "2026-10-01",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-09",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-23",
+          "emitida": null
+        }
+      }
     }
   },
   "ultima_fila": {
-    "data": "2026-09-24",
+    "data": "2026-09-25",
     "itens": [
       [
-        "Legislação Tributária Federal||Da Devolução Personalizada do IBS e da CBS (Cashback) e da Cesta Básica Nacional de Alimentos (arts. 112 a 125 da LC nº 214/2025)",
+        "2026-09-24||CRISP-DM: as 6 fases na ordem (item 6.1) + planilhas (item 5), leitura dirigida de 30min — referência absoluta × relativa, ordem de avaliação, nome de função pt-BR × en-US",
+        "leitura"
+      ],
+      [
+        "2026-09-24||MOC 7.0, Anexo III — contingência NF-e (SVC-AN, SVC-RS, EPEC, FS-DA)",
+        "leitura"
+      ],
+      [
+        "2026-09-24||🔴 Extensão — MOC 7.0, contingência: SVC-AN, SVC-RS, EPEC, FS-DA. Lei seca curta e numérica, alvo clássico de C/E → cards",
+        "leitura"
+      ],
+      [
+        "Direito Tributário||Outras Questões e Tópicos Mesclados sobre a Reforma Tributária",
         "d6"
       ],
       [
-        "Legislação Tributária Federal||Da Não Cumulatividade (arts. 47 a 56 da LC nº 214/2025)",
-        "d6"
+        "Legislação Tributária Federal||Da Sujeição Passiva (arts. 21 a 26 da LC nº 214/2025)",
+        "d14"
       ],
       [
-        "Reforma Tributária||LC 227/2026 — Processo Administrativo Tributário do IBS",
+        "Legislação Tributária Federal||Das Modalidades de Extinção dos Débitos (arts. 27 a 37 da LC nº 214/2025)",
+        "d14"
+      ],
+      [
+        "TI - Banco de Dados||Normalização",
         "d1"
+      ],
+      [
+        "TI - Ciência de Dados e Inteligência Artificial||Algoritmos de Machine Learning (Classificação, Regressão e Clusterização)",
+        "d1"
+      ],
+      [
+        "TI - Ciência de Dados e Inteligência Artificial||Data Mining (Mineração de Dados): Etapas, Algoritmos e Modelos (KDD, CRISP-DM, etc.)",
+        "d1"
+      ],
+      [
+        "TI - Segurança da Informação||Ataques a Aplicações Web (XSS, CSRF, SQL Injection etc.)",
+        "d1"
+      ],
+      [
+        "TI - Segurança da Informação||Conceitos de Certificado Digital",
+        "d6"
+      ],
+      [
+        "TI - Segurança da Informação||ICP e Autoridades Certificadoras",
+        "d6"
+      ],
+      [
+        "TI - Segurança da Informação||X.509",
+        "d6"
       ]
     ],
-    "confirmada": "2026-09-24"
+    "confirmada": "2026-09-25"
   },
   "leituras": {
     "2026-09-14||LC 214, arts. 38-56 — não cumulatividade, apropriação e utilização de créditos": {
@@ -1666,7 +1856,29 @@
       "plano_ref": null,
       "minutos": null,
       "prevista": "2026-09-25",
-      "emitida": null
+      "emitida": "2026-09-25"
+    },
+    "2026-09-24||CRISP-DM: as 6 fases na ordem (item 6.1) + planilhas (item 5), leitura dirigida de 30min — referência absoluta × relativa, ordem de avaliação, nome de função pt-BR × en-US": {
+      "materia": "Ciência de Dados",
+      "rotulo": "CRISP-DM: as 6 fases na ordem (item 6.1) + planilhas (item 5), leitura dirigida de 30min — referência absoluta × relativa, ordem de avaliação, nome de função pt-BR × en-US",
+      "data_leitura": "2026-09-24",
+      "fonte": null,
+      "origem": "plano",
+      "plano_ref": "S3 Quinta",
+      "minutos": 105,
+      "prevista": "2026-09-25",
+      "emitida": "2026-09-25"
+    },
+    "2026-09-24||🔴 Extensão — MOC 7.0, contingência: SVC-AN, SVC-RS, EPEC, FS-DA. Lei seca curta e numérica, alvo clássico de C/E → cards": {
+      "materia": "Auditoria Fiscal",
+      "rotulo": "🔴 Extensão — MOC 7.0, contingência: SVC-AN, SVC-RS, EPEC, FS-DA. Lei seca curta e numérica, alvo clássico de C/E → cards",
+      "data_leitura": "2026-09-24",
+      "fonte": null,
+      "origem": "plano",
+      "plano_ref": "S3 Quinta",
+      "minutos": 30,
+      "prevista": "2026-09-25",
+      "emitida": "2026-09-25"
     }
   }
 }
