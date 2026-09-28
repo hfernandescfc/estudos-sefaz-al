@@ -18,7 +18,10 @@
     "resultado_simulado_RT02_2026-09-14.json",
     "resultado_simulado_RT06_2026-09-17.json",
     "resultado_simulado_RT07_2026-09-23.json",
-    "tec_registros_2026-09-25.json"
+    "tec_registros_2026-09-25.json",
+    "tec_registros_2026-09-28.json",
+    "resultado_simulado_AF01_2026-09-25.json",
+    "resultado_simulado_RT09_2026-09-25.json"
   ],
   "cadeias": {
     "Contabilidade Geral||Plano de Contas": {
@@ -30,7 +33,7 @@
         "3662029"
       ],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-09-09",
@@ -47,7 +50,7 @@
         },
         "d28": {
           "prevista": "2026-09-30",
-          "emitida": null
+          "emitida": "2026-09-28"
         }
       }
     },
@@ -58,7 +61,7 @@
       "cadeia_completa": true,
       "alvos_origem": [],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-09-09",
@@ -75,7 +78,7 @@
         },
         "d28": {
           "prevista": "2026-09-30",
-          "emitida": null
+          "emitida": "2026-09-28"
         }
       }
     },
@@ -86,7 +89,7 @@
       "cadeia_completa": true,
       "alvos_origem": [],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-09-09",
@@ -103,7 +106,7 @@
         },
         "d28": {
           "prevista": "2026-10-01",
-          "emitida": null
+          "emitida": "2026-09-28"
         }
       }
     },
@@ -114,7 +117,7 @@
       "cadeia_completa": true,
       "alvos_origem": [],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-09-09",
@@ -131,7 +134,7 @@
         },
         "d28": {
           "prevista": "2026-10-01",
-          "emitida": null
+          "emitida": "2026-09-28"
         }
       }
     },
@@ -145,7 +148,7 @@
         "3083073"
       ],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-09-09",
@@ -162,7 +165,7 @@
         },
         "d28": {
           "prevista": "2026-09-30",
-          "emitida": null
+          "emitida": "2026-09-28"
         }
       }
     },
@@ -175,7 +178,7 @@
         "4023990"
       ],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-09-09",
@@ -192,7 +195,7 @@
         },
         "d28": {
           "prevista": "2026-09-30",
-          "emitida": null
+          "emitida": "2026-09-28"
         }
       }
     },
@@ -203,7 +206,7 @@
       "cadeia_completa": true,
       "alvos_origem": [],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-09-09",
@@ -219,8 +222,8 @@
           "emitida": "2026-09-17"
         },
         "d28": {
-          "prevista": "2026-10-01",
-          "emitida": null
+          "prevista": "2026-10-02",
+          "emitida": "2026-09-28"
         }
       }
     },
@@ -233,7 +236,7 @@
         "4143703"
       ],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-09-09",
@@ -249,8 +252,8 @@
           "emitida": "2026-09-17"
         },
         "d28": {
-          "prevista": "2026-10-01",
-          "emitida": null
+          "prevista": "2026-10-02",
+          "emitida": "2026-09-28"
         }
       }
     },
@@ -569,7 +572,7 @@
           "emitida": "2026-09-25"
         },
         "d28": {
-          "prevista": "2026-10-09",
+          "prevista": "2026-10-12",
           "emitida": null
         }
       }
@@ -604,7 +607,7 @@
           }
         },
         "d14": {
-          "prevista": "2026-09-28",
+          "prevista": "2026-09-29",
           "emitida": null
         },
         "d28": {
@@ -643,7 +646,7 @@
           }
         },
         "d14": {
-          "prevista": "2026-09-28",
+          "prevista": "2026-09-29",
           "emitida": null
         },
         "d28": {
@@ -690,7 +693,7 @@
         },
         "d14": {
           "prevista": "2026-09-28",
-          "emitida": null
+          "emitida": "2026-09-28"
         },
         "d28": {
           "prevista": "2026-10-12",
@@ -724,7 +727,7 @@
         },
         "d14": {
           "prevista": "2026-09-28",
-          "emitida": null
+          "emitida": "2026-09-28"
         },
         "d28": {
           "prevista": "2026-10-12",
@@ -1153,39 +1156,65 @@
     "TI - Segurança da Informação||ICP e Autoridades Certificadoras": {
       "materia": "TI - Segurança da Informação",
       "assunto": "ICP e Autoridades Certificadoras",
-      "data_base": "2026-09-21",
+      "data_base": "2026-09-28",
       "cadeia_completa": true,
       "alvos_origem": [
-        "2877722",
-        "3081595",
-        "3238812",
-        "3238820",
-        "2450392",
-        "2575738",
-        "2637494",
-        "2642272",
-        "3172766",
-        "3238816"
+        "3324038",
+        "3598779"
       ],
-      "reinicios": 0,
+      "reinicios": 1,
       "status": "ativa",
       "etapas": {
         "d1": {
-          "prevista": "2026-09-21",
-          "emitida": "2026-09-21"
+          "prevista": "2026-09-28",
+          "emitida": "2026-09-28"
         },
         "d6": {
-          "prevista": "2026-09-25",
-          "emitida": "2026-09-25",
+          "prevista": "2026-10-02",
+          "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-05",
+          "prevista": "2026-10-12",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-19",
+          "prevista": "2026-10-26",
           "emitida": null
+        }
+      },
+      "amostra_base": {
+        "itens": {
+          "3967368": [
+            true,
+            false,
+            "C"
+          ],
+          "4143756": [
+            true,
+            false,
+            "E"
+          ],
+          "3324038": [
+            false,
+            true,
+            "C"
+          ],
+          "3345924": [
+            true,
+            false,
+            "E"
+          ],
+          "3444448": [
+            true,
+            false,
+            "C"
+          ],
+          "3598779": [
+            false,
+            false,
+            "E"
+          ]
         }
       }
     },
@@ -1249,6 +1278,61 @@
           "prevista": "2026-10-21",
           "emitida": null
         }
+      },
+      "amostra_base": {
+        "itens": {
+          "1509486": [
+            true,
+            false,
+            "C"
+          ],
+          "1509487": [
+            true,
+            false,
+            "C"
+          ],
+          "1509649": [
+            true,
+            false,
+            "E"
+          ],
+          "1509650": [
+            true,
+            false,
+            "C"
+          ],
+          "1937680": [
+            true,
+            false,
+            "E"
+          ],
+          "1937681": [
+            true,
+            false,
+            "C"
+          ],
+          "2012282": [
+            true,
+            false,
+            "C"
+          ],
+          "2152895": [
+            true,
+            false,
+            "C"
+          ],
+          "2152896": [
+            true,
+            true,
+            "E"
+          ],
+          "3172505": [
+            true,
+            false,
+            "E"
+          ]
+        },
+        "retro": true
       }
     },
     "TI - Ciência de Dados e Inteligência Artificial||Dados Abertos (Conceitos, Princípios, etc.)": {
@@ -1282,6 +1366,56 @@
           "prevista": "2026-10-21",
           "emitida": null
         }
+      },
+      "amostra_base": {
+        "itens": {
+          "1509483": [
+            true,
+            false,
+            "E"
+          ],
+          "1509484": [
+            false,
+            false,
+            "C"
+          ],
+          "1509652": [
+            false,
+            false,
+            "C"
+          ],
+          "1790405": [
+            true,
+            false,
+            "E"
+          ],
+          "1790415": [
+            false,
+            true,
+            "C"
+          ],
+          "1813364": [
+            true,
+            false,
+            "A"
+          ],
+          "2876050": [
+            true,
+            true,
+            "E"
+          ],
+          "2877394": [
+            true,
+            false,
+            "E"
+          ],
+          "3639389": [
+            true,
+            false,
+            "C"
+          ]
+        },
+        "retro": true
       }
     },
     "TI - Ciência de Dados e Inteligência Artificial||Treinamento e Avaliação de Modelos": {
@@ -1313,6 +1447,81 @@
           "prevista": "2026-10-21",
           "emitida": null
         }
+      },
+      "amostra_base": {
+        "itens": {
+          "2589492": [
+            true,
+            false,
+            "C"
+          ],
+          "2589495": [
+            true,
+            false,
+            "C"
+          ],
+          "2716714": [
+            true,
+            false,
+            "E"
+          ],
+          "3842052": [
+            true,
+            false,
+            "C"
+          ],
+          "3842065": [
+            true,
+            false,
+            "E"
+          ],
+          "3857423": [
+            true,
+            false,
+            "E"
+          ],
+          "3966041": [
+            true,
+            false,
+            "E"
+          ],
+          "3966253": [
+            true,
+            false,
+            "E"
+          ],
+          "3966271": [
+            true,
+            false,
+            "E"
+          ],
+          "3966272": [
+            true,
+            true,
+            "C"
+          ],
+          "3966297": [
+            true,
+            false,
+            "C"
+          ],
+          "3970303": [
+            true,
+            false,
+            "C"
+          ],
+          "3970305": [
+            true,
+            true,
+            "C"
+          ],
+          "3970733": [
+            true,
+            false,
+            "E"
+          ]
+        },
+        "retro": true
       }
     },
     "TI - Engenharia de Software||Conceitos e Tipos de Testes de Software": {
@@ -1366,6 +1575,221 @@
           "prevista": "2026-10-21",
           "emitida": null
         }
+      },
+      "amostra_base": {
+        "itens": {
+          "165191": [
+            true,
+            true,
+            "E"
+          ],
+          "184457": [
+            true,
+            true,
+            "E"
+          ],
+          "211753": [
+            true,
+            true,
+            "D"
+          ],
+          "229472": [
+            true,
+            true,
+            "C"
+          ],
+          "230846": [
+            true,
+            false,
+            "C"
+          ],
+          "230847": [
+            true,
+            true,
+            "E"
+          ],
+          "231221": [
+            false,
+            true,
+            "C"
+          ],
+          "250205": [
+            false,
+            false,
+            "C"
+          ],
+          "260149": [
+            true,
+            false,
+            "E"
+          ],
+          "284815": [
+            false,
+            false,
+            "E"
+          ],
+          "346653": [
+            false,
+            true,
+            "E"
+          ],
+          "389796": [
+            true,
+            true,
+            "E"
+          ],
+          "513369": [
+            true,
+            false,
+            "A"
+          ],
+          "513378": [
+            true,
+            false,
+            "A"
+          ],
+          "552399": [
+            true,
+            true,
+            "C"
+          ],
+          "553344": [
+            false,
+            false,
+            "B"
+          ],
+          "558852": [
+            true,
+            false,
+            "E"
+          ],
+          "595366": [
+            false,
+            true,
+            "C"
+          ],
+          "620066": [
+            true,
+            false,
+            "E"
+          ],
+          "726081": [
+            false,
+            false,
+            "B"
+          ],
+          "738275": [
+            true,
+            true,
+            "E"
+          ],
+          "1038600": [
+            true,
+            true,
+            "E"
+          ],
+          "1251723": [
+            true,
+            false,
+            "C"
+          ],
+          "1294660": [
+            false,
+            false,
+            "C"
+          ],
+          "1294677": [
+            true,
+            false,
+            "E"
+          ],
+          "1294678": [
+            true,
+            false,
+            "C"
+          ],
+          "1294680": [
+            true,
+            false,
+            "C"
+          ],
+          "2780356": [
+            true,
+            true,
+            "E"
+          ],
+          "2593602": [
+            true,
+            false,
+            "D"
+          ],
+          "2589469": [
+            true,
+            false,
+            "E"
+          ],
+          "2265601": [
+            true,
+            true,
+            "C"
+          ],
+          "2216519": [
+            true,
+            false,
+            "C"
+          ],
+          "2216520": [
+            false,
+            false,
+            "E"
+          ],
+          "2216521": [
+            true,
+            false,
+            "C"
+          ],
+          "2216769": [
+            true,
+            false,
+            "C"
+          ],
+          "2216771": [
+            false,
+            false,
+            "E"
+          ],
+          "1935724": [
+            false,
+            false,
+            "C"
+          ],
+          "1936861": [
+            true,
+            false,
+            "C"
+          ],
+          "1628803": [
+            true,
+            false,
+            "C"
+          ],
+          "1294682": [
+            true,
+            false,
+            "E"
+          ],
+          "1294684": [
+            false,
+            false,
+            "E"
+          ],
+          "1768544": [
+            false,
+            false,
+            "C"
+          ]
+        },
+        "retro": true
       }
     },
     "Legislação Tributária Federal||Da Não Cumulatividade (arts. 47 a 56 da LC nº 214/2025)": {
@@ -1395,7 +1819,7 @@
         },
         "d14": {
           "prevista": "2026-09-28",
-          "emitida": null
+          "emitida": "2026-09-28"
         },
         "d28": {
           "prevista": "2026-10-12",
@@ -1425,7 +1849,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-01",
+          "prevista": "2026-10-02",
           "emitida": null
         },
         "d28": {
@@ -1479,7 +1903,11 @@
         }
       },
       "origem": "simulado",
-      "topico": 127
+      "topico": 127,
+      "amostra_base": {
+        "itens": {},
+        "retro": true
+      }
     },
     "TI - Banco de Dados||Normalização": {
       "materia": "TI - Banco de Dados",
@@ -1499,7 +1927,7 @@
           "emitida": "2026-09-25"
         },
         "d6": {
-          "prevista": "2026-10-01",
+          "prevista": "2026-10-02",
           "emitida": null,
           "resultado": null
         },
@@ -1511,6 +1939,91 @@
           "prevista": "2026-10-23",
           "emitida": null
         }
+      },
+      "amostra_base": {
+        "itens": {
+          "1813379": [
+            false,
+            false,
+            "A"
+          ],
+          "1937645": [
+            true,
+            false,
+            "C"
+          ],
+          "2589522": [
+            true,
+            false,
+            "C"
+          ],
+          "2876042": [
+            true,
+            false,
+            "E"
+          ],
+          "2876863": [
+            true,
+            false,
+            "E"
+          ],
+          "2877382": [
+            false,
+            true,
+            "E"
+          ],
+          "2877383": [
+            true,
+            false,
+            "C"
+          ],
+          "2877423": [
+            true,
+            false,
+            "C"
+          ],
+          "3008021": [
+            true,
+            false,
+            "E"
+          ],
+          "3041190": [
+            true,
+            false,
+            "C"
+          ],
+          "3076415": [
+            true,
+            false,
+            "E"
+          ],
+          "3076446": [
+            true,
+            false,
+            "E"
+          ],
+          "3173544": [
+            true,
+            false,
+            "E"
+          ],
+          "3685179": [
+            true,
+            true,
+            "C"
+          ],
+          "3685180": [
+            true,
+            false,
+            "D"
+          ],
+          "3815589": [
+            true,
+            false,
+            "D"
+          ]
+        },
+        "retro": true
       }
     },
     "TI - Ciência de Dados e Inteligência Artificial||Algoritmos de Machine Learning (Classificação, Regressão e Clusterização)": {
@@ -1545,6 +2058,246 @@
           "prevista": "2026-10-23",
           "emitida": null
         }
+      },
+      "amostra_base": {
+        "itens": {
+          "1510053": [
+            true,
+            false,
+            "E"
+          ],
+          "1718777": [
+            true,
+            false,
+            "C"
+          ],
+          "1718779": [
+            true,
+            true,
+            "E"
+          ],
+          "1872437": [
+            true,
+            false,
+            "B"
+          ],
+          "2012312": [
+            true,
+            false,
+            "E"
+          ],
+          "2337618": [
+            true,
+            false,
+            "D"
+          ],
+          "2337619": [
+            true,
+            false,
+            "B"
+          ],
+          "2346694": [
+            true,
+            false,
+            "C"
+          ],
+          "2346889": [
+            true,
+            false,
+            "B"
+          ],
+          "2346894": [
+            true,
+            false,
+            "A"
+          ],
+          "2636259": [
+            true,
+            false,
+            "C"
+          ],
+          "2690382": [
+            true,
+            false,
+            "C"
+          ],
+          "2690383": [
+            true,
+            false,
+            "B"
+          ],
+          "2709139": [
+            true,
+            false,
+            "A"
+          ],
+          "2710247": [
+            true,
+            false,
+            "D"
+          ],
+          "3815580": [
+            true,
+            false,
+            "B"
+          ],
+          "3883436": [
+            true,
+            false,
+            "B"
+          ],
+          "3641673": [
+            false,
+            false,
+            "B"
+          ],
+          "3641674": [
+            true,
+            false,
+            "D"
+          ],
+          "3639443": [
+            true,
+            false,
+            "E"
+          ],
+          "3641671": [
+            true,
+            false,
+            "C"
+          ],
+          "2876028": [
+            true,
+            false,
+            "C"
+          ],
+          "2876031": [
+            true,
+            false,
+            "C"
+          ],
+          "2877426": [
+            false,
+            true,
+            "C"
+          ],
+          "3048701": [
+            true,
+            false,
+            "B"
+          ],
+          "3048703": [
+            true,
+            false,
+            "C"
+          ],
+          "3008425": [
+            true,
+            false,
+            "E"
+          ],
+          "2716715": [
+            true,
+            false,
+            "C"
+          ],
+          "3879019": [
+            true,
+            false,
+            "E"
+          ],
+          "3822828": [
+            true,
+            true,
+            "C"
+          ],
+          "3863448": [
+            true,
+            false,
+            "E"
+          ],
+          "3863455": [
+            true,
+            false,
+            "A"
+          ],
+          "3863303": [
+            true,
+            false,
+            "C"
+          ],
+          "3847058": [
+            true,
+            false,
+            "D"
+          ],
+          "3871420": [
+            true,
+            false,
+            "C"
+          ],
+          "3822442": [
+            true,
+            false,
+            "A"
+          ],
+          "3822386": [
+            true,
+            false,
+            "A"
+          ],
+          "3605529": [
+            true,
+            false,
+            "A"
+          ],
+          "3046634": [
+            true,
+            false,
+            "A"
+          ],
+          "3176057": [
+            false,
+            false,
+            "A"
+          ],
+          "2943825": [
+            true,
+            false,
+            "C"
+          ],
+          "3253785": [
+            true,
+            false,
+            "C"
+          ],
+          "2903616": [
+            true,
+            false,
+            "B"
+          ],
+          "2903617": [
+            true,
+            false,
+            "D"
+          ],
+          "3258734": [
+            true,
+            false,
+            "B"
+          ],
+          "3176055": [
+            true,
+            false,
+            "E"
+          ],
+          "3046650": [
+            true,
+            false,
+            "B"
+          ]
+        },
+        "retro": true
       }
     },
     "TI - Ciência de Dados e Inteligência Artificial||Data Mining (Mineração de Dados): Etapas, Algoritmos e Modelos (KDD, CRISP-DM, etc.)": {
@@ -1582,6 +2335,146 @@
           "prevista": "2026-10-23",
           "emitida": null
         }
+      },
+      "amostra_base": {
+        "itens": {
+          "1509657": [
+            true,
+            false,
+            "E"
+          ],
+          "1509658": [
+            true,
+            false,
+            "C"
+          ],
+          "1509659": [
+            false,
+            true,
+            "E"
+          ],
+          "1509660": [
+            true,
+            false,
+            "C"
+          ],
+          "1509661": [
+            true,
+            false,
+            "C"
+          ],
+          "1510051": [
+            true,
+            false,
+            "C"
+          ],
+          "1510052": [
+            true,
+            false,
+            "C"
+          ],
+          "1790711": [
+            false,
+            false,
+            "C"
+          ],
+          "1813378": [
+            true,
+            false,
+            "A"
+          ],
+          "1813382": [
+            true,
+            false,
+            "A"
+          ],
+          "1813384": [
+            true,
+            false,
+            "A"
+          ],
+          "2012309": [
+            false,
+            false,
+            "C"
+          ],
+          "2012315": [
+            false,
+            true,
+            "C"
+          ],
+          "2013126": [
+            true,
+            false,
+            "C"
+          ],
+          "2589018": [
+            true,
+            false,
+            "E"
+          ],
+          "2876033": [
+            true,
+            true,
+            "E"
+          ],
+          "3008413": [
+            true,
+            false,
+            "E"
+          ],
+          "3048706": [
+            true,
+            false,
+            "E"
+          ],
+          "3172516": [
+            true,
+            false,
+            "E"
+          ],
+          "3172518": [
+            true,
+            false,
+            "C"
+          ],
+          "3639435": [
+            false,
+            false,
+            "B"
+          ],
+          "3857583": [
+            true,
+            false,
+            "C"
+          ],
+          "3883449": [
+            true,
+            false,
+            "A"
+          ],
+          "3970299": [
+            true,
+            false,
+            "C"
+          ],
+          "3970300": [
+            true,
+            true,
+            "C"
+          ],
+          "3970698": [
+            true,
+            false,
+            "E"
+          ],
+          "4144611": [
+            true,
+            true,
+            "A"
+          ]
+        },
+        "retro": true
       }
     },
     "TI - Segurança da Informação||Ataques a Aplicações Web (XSS, CSRF, SQL Injection etc.)": {
@@ -1628,62 +2521,760 @@
           "prevista": "2026-10-23",
           "emitida": null
         }
+      },
+      "amostra_base": {
+        "itens": {
+          "2781226": [
+            true,
+            true,
+            "E"
+          ],
+          "2781227": [
+            false,
+            true,
+            "C"
+          ],
+          "3048685": [
+            true,
+            true,
+            "D"
+          ],
+          "3076809": [
+            true,
+            false,
+            "E"
+          ],
+          "3076812": [
+            true,
+            true,
+            "C"
+          ],
+          "3077632": [
+            true,
+            true,
+            "E"
+          ],
+          "3081608": [
+            true,
+            true,
+            "E"
+          ],
+          "3081613": [
+            false,
+            false,
+            "C"
+          ],
+          "3238346": [
+            true,
+            true,
+            "C"
+          ],
+          "3250681": [
+            false,
+            false,
+            "E"
+          ],
+          "3292151": [
+            true,
+            false,
+            "E"
+          ],
+          "3340461": [
+            true,
+            true,
+            "C"
+          ],
+          "3340463": [
+            false,
+            false,
+            "E"
+          ],
+          "3340471": [
+            true,
+            false,
+            "E"
+          ],
+          "3400376": [
+            false,
+            true,
+            "B"
+          ],
+          "3915627": [
+            true,
+            false,
+            "E"
+          ],
+          "3915629": [
+            true,
+            true,
+            "E"
+          ],
+          "3917841": [
+            true,
+            false,
+            "C"
+          ],
+          "3967358": [
+            true,
+            true,
+            "E"
+          ],
+          "3990568": [
+            true,
+            false,
+            "E"
+          ],
+          "4096770": [
+            true,
+            true,
+            "C"
+          ],
+          "4126104": [
+            false,
+            true,
+            "C"
+          ],
+          "4126107": [
+            true,
+            false,
+            "C"
+          ],
+          "4143721": [
+            false,
+            true,
+            "E"
+          ],
+          "4144769": [
+            true,
+            false,
+            "B"
+          ]
+        },
+        "retro": true
+      }
+    },
+    "Legislação Tributária Federal||Disposições Preliminares do Imposto Seletivo (arts. 409 a 411 da LC nº 214/2025)": {
+      "materia": "Legislação Tributária Federal",
+      "assunto": "Disposições Preliminares do Imposto Seletivo (arts. 409 a 411 da LC nº 214/2025)",
+      "data_base": "2026-09-28",
+      "cadeia_completa": true,
+      "alvos_origem": [],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-28",
+          "emitida": "2026-09-28"
+        },
+        "d6": {
+          "prevista": "2026-10-02",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-12",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-26",
+          "emitida": null
+        }
+      },
+      "amostra_base": {
+        "itens": {
+          "3838287": [
+            true,
+            false,
+            "E"
+          ],
+          "3641747": [
+            true,
+            false,
+            "E"
+          ],
+          "3713306": [
+            true,
+            false,
+            "B"
+          ]
+        }
+      }
+    },
+    "Auditoria Fiscal||MOC NF-e 7.0 — contingência (SVC-AN, SVC-RS, EPEC, FS-DA)": {
+      "materia": "Auditoria Fiscal",
+      "assunto": "MOC NF-e 7.0 — contingência (SVC-AN, SVC-RS, EPEC, FS-DA)",
+      "data_base": "2026-09-25",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "SIM:AF01:Q1-23:20",
+        "SIM:AF01:Q1-23:22",
+        "SIM:AF01:Q1-23:19"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-28",
+          "emitida": "2026-09-28"
+        },
+        "d6": {
+          "prevista": "2026-10-01",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-09",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-23",
+          "emitida": null
+        }
+      },
+      "origem": "simulado",
+      "topico": 134,
+      "amostra_base": {
+        "itens": {
+          "SIM:AF01:Q1-23:16": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:AF01:Q1-23:17": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:AF01:Q1-23:18": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:AF01:Q1-23:19": [
+            true,
+            true,
+            "C"
+          ],
+          "SIM:AF01:Q1-23:20": [
+            false,
+            false,
+            "E"
+          ],
+          "SIM:AF01:Q1-23:21": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:AF01:Q1-23:22": [
+            false,
+            false,
+            "C"
+          ],
+          "SIM:AF01:Q1-23:23": [
+            true,
+            false,
+            "E"
+          ]
+        }
+      }
+    },
+    "Auditoria Fiscal||MOC da NF-e e NFC-e 7.0 — modelo operacional e eventos": {
+      "materia": "Auditoria Fiscal",
+      "assunto": "MOC da NF-e e NFC-e 7.0 — modelo operacional e eventos",
+      "data_base": "2026-09-25",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "SIM:AF01:Q1-23:3",
+        "SIM:AF01:Q1-23:4",
+        "SIM:AF01:Q1-23:5",
+        "SIM:AF01:Q1-23:12",
+        "SIM:AF01:Q1-23:14",
+        "SIM:AF01:Q1-23:15",
+        "SIM:AF01:Q1-23:11"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-28",
+          "emitida": "2026-09-28"
+        },
+        "d6": {
+          "prevista": "2026-10-01",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-09",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-23",
+          "emitida": null
+        }
+      },
+      "origem": "simulado",
+      "topico": 133,
+      "amostra_base": {
+        "itens": {
+          "SIM:AF01:Q1-23:1": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:AF01:Q1-23:2": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:AF01:Q1-23:3": [
+            false,
+            false,
+            "C"
+          ],
+          "SIM:AF01:Q1-23:4": [
+            false,
+            true,
+            "E"
+          ],
+          "SIM:AF01:Q1-23:5": [
+            false,
+            true,
+            "C"
+          ],
+          "SIM:AF01:Q1-23:6": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:AF01:Q1-23:7": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:AF01:Q1-23:8": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:AF01:Q1-23:9": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:AF01:Q1-23:10": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:AF01:Q1-23:11": [
+            true,
+            true,
+            "C"
+          ],
+          "SIM:AF01:Q1-23:12": [
+            false,
+            false,
+            "E"
+          ],
+          "SIM:AF01:Q1-23:13": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:AF01:Q1-23:14": [
+            false,
+            false,
+            "E"
+          ],
+          "SIM:AF01:Q1-23:15": [
+            false,
+            false,
+            "C"
+          ]
+        }
+      }
+    },
+    "Reforma Tributária||Distribuição do produto da arrecadação do IBS": {
+      "materia": "Reforma Tributária",
+      "assunto": "Distribuição do produto da arrecadação do IBS",
+      "data_base": "2026-09-25",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "SIM:RT09:Q1-34:13",
+        "SIM:RT09:Q1-34:16",
+        "SIM:RT09:Q1-34:18",
+        "SIM:RT09:Q1-34:19",
+        "SIM:RT09:Q1-34:20",
+        "SIM:RT09:Q1-34:21",
+        "SIM:RT09:Q1-34:15",
+        "SIM:RT09:Q1-34:17"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-28",
+          "emitida": "2026-09-28"
+        },
+        "d6": {
+          "prevista": "2026-10-01",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-09",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-23",
+          "emitida": null
+        }
+      },
+      "origem": "simulado",
+      "topico": 124,
+      "amostra_base": {
+        "itens": {
+          "SIM:RT09:Q1-34:13": [
+            false,
+            true,
+            "C"
+          ],
+          "SIM:RT09:Q1-34:14": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:RT09:Q1-34:15": [
+            true,
+            true,
+            "C"
+          ],
+          "SIM:RT09:Q1-34:16": [
+            false,
+            true,
+            "E"
+          ],
+          "SIM:RT09:Q1-34:17": [
+            true,
+            true,
+            "C"
+          ],
+          "SIM:RT09:Q1-34:18": [
+            false,
+            false,
+            "E"
+          ],
+          "SIM:RT09:Q1-34:19": [
+            false,
+            false,
+            "C"
+          ],
+          "SIM:RT09:Q1-34:20": [
+            false,
+            false,
+            "E"
+          ],
+          "SIM:RT09:Q1-34:21": [
+            false,
+            true,
+            "C"
+          ],
+          "SIM:RT09:Q1-34:22": [
+            true,
+            false,
+            "C"
+          ]
+        }
+      }
+    },
+    "Reforma Tributária||Regimes diferenciados e específicos — faixas e percentuais": {
+      "materia": "Reforma Tributária",
+      "assunto": "Regimes diferenciados e específicos — faixas e percentuais",
+      "data_base": "2026-09-25",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "SIM:RT09:Q1-34:32",
+        "SIM:RT09:Q1-34:34",
+        "SIM:RT09:Q1-34:25",
+        "SIM:RT09:Q1-34:27",
+        "SIM:RT09:Q1-34:30",
+        "SIM:RT09:Q1-34:33"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-28",
+          "emitida": "2026-09-28"
+        },
+        "d6": {
+          "prevista": "2026-10-01",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-09",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-23",
+          "emitida": null
+        }
+      },
+      "origem": "simulado",
+      "topico": 123,
+      "amostra_base": {
+        "itens": {
+          "SIM:RT09:Q1-34:23": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:RT09:Q1-34:24": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:RT09:Q1-34:25": [
+            true,
+            true,
+            "E"
+          ],
+          "SIM:RT09:Q1-34:26": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:RT09:Q1-34:27": [
+            true,
+            true,
+            "E"
+          ],
+          "SIM:RT09:Q1-34:28": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:RT09:Q1-34:29": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:RT09:Q1-34:30": [
+            true,
+            true,
+            "C"
+          ],
+          "SIM:RT09:Q1-34:31": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:RT09:Q1-34:32": [
+            false,
+            true,
+            "E"
+          ],
+          "SIM:RT09:Q1-34:33": [
+            true,
+            true,
+            "E"
+          ],
+          "SIM:RT09:Q1-34:34": [
+            false,
+            false,
+            "C"
+          ]
+        }
+      }
+    },
+    "Reforma Tributária||Transição IBS/CBS/ICMS — calendário 2026-2033": {
+      "materia": "Reforma Tributária",
+      "assunto": "Transição IBS/CBS/ICMS — calendário 2026-2033",
+      "data_base": "2026-09-25",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "SIM:RT09:Q1-34:6",
+        "SIM:RT09:Q1-34:10",
+        "SIM:RT09:Q1-34:11",
+        "SIM:RT09:Q1-34:12",
+        "SIM:RT09:Q1-34:4"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-28",
+          "emitida": "2026-09-28"
+        },
+        "d6": {
+          "prevista": "2026-10-01",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-09",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-23",
+          "emitida": null
+        }
+      },
+      "origem": "simulado",
+      "topico": 125,
+      "amostra_base": {
+        "itens": {
+          "SIM:RT09:Q1-34:1": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:RT09:Q1-34:2": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:RT09:Q1-34:3": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:RT09:Q1-34:4": [
+            true,
+            true,
+            "C"
+          ],
+          "SIM:RT09:Q1-34:5": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:RT09:Q1-34:6": [
+            false,
+            true,
+            "E"
+          ],
+          "SIM:RT09:Q1-34:7": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:RT09:Q1-34:8": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:RT09:Q1-34:9": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:RT09:Q1-34:10": [
+            false,
+            true,
+            "E"
+          ],
+          "SIM:RT09:Q1-34:11": [
+            false,
+            true,
+            "C"
+          ],
+          "SIM:RT09:Q1-34:12": [
+            false,
+            false,
+            "E"
+          ]
+        }
       }
     }
   },
   "ultima_fila": {
-    "data": "2026-09-25",
+    "data": "2026-09-28",
     "itens": [
       [
-        "2026-09-24||CRISP-DM: as 6 fases na ordem (item 6.1) + planilhas (item 5), leitura dirigida de 30min — referência absoluta × relativa, ordem de avaliação, nome de função pt-BR × en-US",
+        "2026-09-25||Extensão — NFC-e: o que difere da NF-e + erros da semana",
         "leitura"
       ],
       [
-        "2026-09-24||MOC 7.0, Anexo III — contingência NF-e (SVC-AN, SVC-RS, EPEC, FS-DA)",
+        "2026-09-25||LC 214, arts. 341-407 — transição IBS/CBS/ICMS, alíquotas 2029-2033, saldo credor. Imposto Seletivo, distribuição e regimes diferenciados entram como lista e percentuais, não artigo a artigo",
         "leitura"
       ],
       [
-        "Direito Tributário||Outras Questões e Tópicos Mesclados sobre a Reforma Tributária",
-        "d6"
+        "Auditoria Fiscal||MOC NF-e 7.0 — contingência (SVC-AN, SVC-RS, EPEC, FS-DA)",
+        "d1"
       ],
       [
-        "Legislação Tributária Federal||Da Sujeição Passiva (arts. 21 a 26 da LC nº 214/2025)",
+        "Auditoria Fiscal||MOC da NF-e e NFC-e 7.0 — modelo operacional e eventos",
+        "d1"
+      ],
+      [
+        "Contabilidade Geral||Plano de Contas",
+        "d28"
+      ],
+      [
+        "Direito Administrativo (Doutrina e Leis Federais)||Atributos ou Características dos Atos Administrativos",
+        "d28"
+      ],
+      [
+        "Direito Constitucional (CF/1988 e Doutrina)||Direitos Sociais e dos Trabalhadores (arts. 6º e 7º da CF/1988)",
+        "d28"
+      ],
+      [
+        "Direito Tributário||Imunidades Tributárias",
+        "d28"
+      ],
+      [
+        "Direito Tributário||Taxas (CF/1988 e CTN)",
+        "d28"
+      ],
+      [
+        "Economia e Finanças Públicas||Dívida Pública, NFSP e Tipos de Déficit Público no Brasil",
+        "d28"
+      ],
+      [
+        "Finanças e Conhecimentos Bancários||Composição Geral do SFN",
+        "d28"
+      ],
+      [
+        "Legislação Tributária Federal||Da Não Cumulatividade (arts. 47 a 56 da LC nº 214/2025)",
         "d14"
       ],
       [
-        "Legislação Tributária Federal||Das Modalidades de Extinção dos Débitos (arts. 27 a 37 da LC nº 214/2025)",
+        "Legislação Tributária Federal||Disposições Preliminares do Imposto Seletivo (arts. 409 a 411 da LC nº 214/2025)",
+        "d1"
+      ],
+      [
+        "Matemática Financeira||Valor Presente Líquido (VPL)",
+        "d28"
+      ],
+      [
+        "Reforma Tributária||Distribuição do produto da arrecadação do IBS",
+        "d1"
+      ],
+      [
+        "Reforma Tributária||Regimes diferenciados e específicos — faixas e percentuais",
+        "d1"
+      ],
+      [
+        "Reforma Tributária||Transição IBS/CBS/ICMS — calendário 2026-2033",
+        "d1"
+      ],
+      [
+        "TI - Engenharia de Software||Kanban (Engenharia de Software)",
         "d14"
       ],
       [
-        "TI - Banco de Dados||Normalização",
-        "d1"
-      ],
-      [
-        "TI - Ciência de Dados e Inteligência Artificial||Algoritmos de Machine Learning (Classificação, Regressão e Clusterização)",
-        "d1"
-      ],
-      [
-        "TI - Ciência de Dados e Inteligência Artificial||Data Mining (Mineração de Dados): Etapas, Algoritmos e Modelos (KDD, CRISP-DM, etc.)",
-        "d1"
-      ],
-      [
-        "TI - Segurança da Informação||Ataques a Aplicações Web (XSS, CSRF, SQL Injection etc.)",
-        "d1"
-      ],
-      [
-        "TI - Segurança da Informação||Conceitos de Certificado Digital",
-        "d6"
+        "TI - Engenharia de Software||XP (Extreme Programming)",
+        "d14"
       ],
       [
         "TI - Segurança da Informação||ICP e Autoridades Certificadoras",
-        "d6"
-      ],
-      [
-        "TI - Segurança da Informação||X.509",
-        "d6"
+        "d1"
       ]
     ],
-    "confirmada": "2026-09-25"
+    "confirmada": "2026-09-28"
   },
   "leituras": {
     "2026-09-14||LC 214, arts. 38-56 — não cumulatividade, apropriação e utilização de créditos": {
@@ -1865,6 +3456,28 @@
       "minutos": 105,
       "prevista": "2026-09-25",
       "emitida": "2026-09-25"
+    },
+    "2026-09-25||LC 214, arts. 341-407 — transição IBS/CBS/ICMS, alíquotas 2029-2033, saldo credor. Imposto Seletivo, distribuição e regimes diferenciados entram como lista e percentuais, não artigo a artigo": {
+      "materia": "Reforma Tributária",
+      "rotulo": "LC 214, arts. 341-407 — transição IBS/CBS/ICMS, alíquotas 2029-2033, saldo credor. Imposto Seletivo, distribuição e regimes diferenciados entram como lista e percentuais, não artigo a artigo",
+      "data_leitura": "2026-09-25",
+      "fonte": null,
+      "origem": "plano",
+      "plano_ref": "S3 Sexta",
+      "minutos": 105,
+      "prevista": "2026-09-28",
+      "emitida": "2026-09-28"
+    },
+    "2026-09-25||Extensão — NFC-e: o que difere da NF-e + erros da semana": {
+      "materia": "Auditoria Fiscal",
+      "rotulo": "Extensão — NFC-e: o que difere da NF-e + erros da semana",
+      "data_leitura": "2026-09-25",
+      "fonte": null,
+      "origem": "plano",
+      "plano_ref": "S3 Sexta",
+      "minutos": 30,
+      "prevista": "2026-09-28",
+      "emitida": "2026-09-28"
     }
   }
 }
