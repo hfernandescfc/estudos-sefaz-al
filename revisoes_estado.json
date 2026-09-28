@@ -3478,6 +3478,17 @@
       "minutos": 30,
       "prevista": "2026-09-28",
       "emitida": "2026-09-28"
+    },
+    "2026-09-28||Guia Prático EFD-ICMS/IPI 3.2.2 — parte geral (Cap. I-II), blocos, C100, C190, Bloco E, G, H, K": {
+      "materia": "Auditoria Fiscal",
+      "rotulo": "Guia Prático EFD-ICMS/IPI 3.2.2 — parte geral (Cap. I-II), blocos, C100, C190, Bloco E, G, H, K",
+      "data_leitura": "2026-09-28",
+      "fonte": "01_Material_PDF/Leis_Normas/Manuais_Fiscais/EFD_ICMS_IPI_Guia_Pratico_v3.2.2.pdf",
+      "origem": "declarada",
+      "plano_ref": null,
+      "minutos": null,
+      "prevista": "2026-09-29",
+      "emitida": null
     }
   }
 }
