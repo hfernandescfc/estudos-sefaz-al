@@ -21,7 +21,9 @@
     "tec_registros_2026-09-25.json",
     "tec_registros_2026-09-28.json",
     "resultado_simulado_AF01_2026-09-25.json",
-    "resultado_simulado_RT09_2026-09-25.json"
+    "resultado_simulado_RT09_2026-09-25.json",
+    "tec_registros_2026-09-29.json",
+    "resultado_simulado_AL01_2026-09-28.json"
   ],
   "cadeias": {
     "Contabilidade Geral||Plano de Contas": {
@@ -607,7 +609,7 @@
           }
         },
         "d14": {
-          "prevista": "2026-09-29",
+          "prevista": "2026-09-30",
           "emitida": null
         },
         "d28": {
@@ -646,7 +648,7 @@
           }
         },
         "d14": {
-          "prevista": "2026-09-29",
+          "prevista": "2026-09-30",
           "emitida": null
         },
         "d28": {
@@ -723,7 +725,17 @@
         "d6": {
           "prevista": "2026-09-18",
           "emitida": "2026-09-18",
-          "resultado": null
+          "resultado": {
+            "pct": 88,
+            "saldo": 75,
+            "questoes": 8,
+            "limiar_saldo": 70,
+            "aprovada": true,
+            "data": "2026-09-29",
+            "fonte": "tec_registros_2026-09-29.json",
+            "fracao_me": 0.0,
+            "chance_base": 0.5
+          }
         },
         "d14": {
           "prevista": "2026-09-28",
@@ -758,7 +770,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-09-29",
+          "prevista": "2026-09-30",
           "emitida": null
         },
         "d28": {
@@ -798,7 +810,7 @@
         },
         "d14": {
           "prevista": "2026-09-29",
-          "emitida": null
+          "emitida": "2026-09-29"
         },
         "d28": {
           "prevista": "2026-10-13",
@@ -835,7 +847,7 @@
         },
         "d14": {
           "prevista": "2026-09-29",
-          "emitida": null
+          "emitida": "2026-09-29"
         },
         "d28": {
           "prevista": "2026-10-13",
@@ -1267,8 +1279,17 @@
         },
         "d6": {
           "prevista": "2026-09-29",
-          "emitida": null,
-          "resultado": null
+          "emitida": "2026-09-29",
+          "resultado": {
+            "aprovada": true,
+            "modo": "breve",
+            "saldo": 90,
+            "questoes": 10,
+            "palpites": 1,
+            "limiar_saldo": 85,
+            "data": "2026-09-29",
+            "fonte": "amostra de origem (D+6 breve)"
+          }
         },
         "d14": {
           "prevista": "2026-10-07",
@@ -1355,7 +1376,7 @@
         },
         "d6": {
           "prevista": "2026-09-29",
-          "emitida": null,
+          "emitida": "2026-09-29",
           "resultado": null
         },
         "d14": {
@@ -1436,8 +1457,17 @@
         },
         "d6": {
           "prevista": "2026-09-29",
-          "emitida": null,
-          "resultado": null
+          "emitida": "2026-09-29",
+          "resultado": {
+            "aprovada": true,
+            "modo": "breve",
+            "saldo": 86,
+            "questoes": 14,
+            "palpites": 2,
+            "limiar_saldo": 85,
+            "data": "2026-09-29",
+            "fonte": "amostra de origem (D+6 breve)"
+          }
         },
         "d14": {
           "prevista": "2026-10-07",
@@ -1564,7 +1594,7 @@
         },
         "d6": {
           "prevista": "2026-09-29",
-          "emitida": null,
+          "emitida": "2026-09-29",
           "resultado": null
         },
         "d14": {
@@ -1849,7 +1879,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-02",
+          "prevista": "2026-10-01",
           "emitida": null
         },
         "d28": {
@@ -1890,7 +1920,7 @@
         },
         "d6": {
           "prevista": "2026-09-29",
-          "emitida": null,
+          "emitida": "2026-09-29",
           "resultado": null
         },
         "d14": {
@@ -1927,7 +1957,7 @@
           "emitida": "2026-09-25"
         },
         "d6": {
-          "prevista": "2026-10-02",
+          "prevista": "2026-10-01",
           "emitida": null,
           "resultado": null
         },
@@ -3188,93 +3218,465 @@
           ]
         }
       }
+    },
+    "TI - Ciência de Dados e Inteligência Artificial||Conceitos de Big Data": {
+      "materia": "TI - Ciência de Dados e Inteligência Artificial",
+      "assunto": "Conceitos de Big Data",
+      "data_base": "2026-09-29",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "1813398",
+        "2271453",
+        "2877411",
+        "3008411",
+        "3172523",
+        "3842007",
+        "3076506"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-29",
+          "emitida": "2026-09-29"
+        },
+        "d6": {
+          "prevista": "2026-10-05",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-13",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-27",
+          "emitida": null
+        }
+      },
+      "amostra_base": {
+        "itens": {
+          "1509662": [
+            true,
+            false,
+            "E"
+          ],
+          "1510048": [
+            true,
+            false,
+            "C"
+          ],
+          "1510049": [
+            true,
+            false,
+            "E"
+          ],
+          "1718741": [
+            true,
+            false,
+            "E"
+          ],
+          "1813398": [
+            false,
+            false,
+            "D"
+          ],
+          "1937688": [
+            true,
+            false,
+            "C"
+          ],
+          "1942668": [
+            true,
+            false,
+            "C"
+          ],
+          "2012280": [
+            true,
+            false,
+            "E"
+          ],
+          "2013123": [
+            true,
+            false,
+            "C"
+          ],
+          "2013124": [
+            true,
+            false,
+            "E"
+          ],
+          "2271452": [
+            true,
+            false,
+            "E"
+          ],
+          "2271453": [
+            false,
+            false,
+            "C"
+          ],
+          "2715205": [
+            true,
+            false,
+            "C"
+          ],
+          "2715207": [
+            true,
+            false,
+            "E"
+          ],
+          "2877411": [
+            false,
+            false,
+            "C"
+          ],
+          "3008411": [
+            false,
+            false,
+            "C"
+          ],
+          "3008418": [
+            true,
+            false,
+            "C"
+          ],
+          "3041176": [
+            true,
+            false,
+            "C"
+          ],
+          "3041198": [
+            true,
+            false,
+            "E"
+          ],
+          "3076506": [
+            true,
+            true,
+            "C"
+          ],
+          "3172523": [
+            false,
+            false,
+            "E"
+          ],
+          "3172531": [
+            true,
+            false,
+            "C"
+          ],
+          "3639462": [
+            true,
+            false,
+            "A"
+          ],
+          "3842007": [
+            false,
+            true,
+            "C"
+          ],
+          "3883451": [
+            true,
+            false,
+            "A"
+          ],
+          "3883456": [
+            true,
+            false,
+            "B"
+          ],
+          "3962967": [
+            true,
+            false,
+            "E"
+          ],
+          "3972877": [
+            true,
+            false,
+            "E"
+          ]
+        }
+      }
+    },
+    "Legislação Tributária Estadual||IPVA — FG, domicílio, contribuinte e solidariedade": {
+      "materia": "Legislação Tributária Estadual",
+      "assunto": "IPVA — FG, domicílio, contribuinte e solidariedade",
+      "data_base": "2026-09-28",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "SIM:AL01:Q1-27:1",
+        "SIM:AL01:Q1-27:2",
+        "SIM:AL01:Q1-27:14",
+        "SIM:AL01:Q1-27:16",
+        "SIM:AL01:Q1-27:19",
+        "SIM:AL01:Q1-27:4",
+        "SIM:AL01:Q1-27:8",
+        "SIM:AL01:Q1-27:12",
+        "SIM:AL01:Q1-27:17",
+        "SIM:AL01:Q1-27:18"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-29",
+          "emitida": "2026-09-29"
+        },
+        "d6": {
+          "prevista": "2026-10-02",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-12",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-26",
+          "emitida": null
+        }
+      },
+      "origem": "simulado",
+      "topico": 145,
+      "amostra_base": {
+        "itens": {
+          "SIM:AL01:Q1-27:1": [
+            false,
+            false,
+            "C"
+          ],
+          "SIM:AL01:Q1-27:2": [
+            false,
+            false,
+            "E"
+          ],
+          "SIM:AL01:Q1-27:3": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:AL01:Q1-27:4": [
+            true,
+            true,
+            "E"
+          ],
+          "SIM:AL01:Q1-27:5": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:AL01:Q1-27:6": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:AL01:Q1-27:7": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:AL01:Q1-27:8": [
+            true,
+            true,
+            "C"
+          ],
+          "SIM:AL01:Q1-27:9": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:AL01:Q1-27:10": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:AL01:Q1-27:11": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:AL01:Q1-27:12": [
+            true,
+            true,
+            "E"
+          ],
+          "SIM:AL01:Q1-27:13": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:AL01:Q1-27:14": [
+            false,
+            false,
+            "C"
+          ],
+          "SIM:AL01:Q1-27:15": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:AL01:Q1-27:16": [
+            false,
+            true,
+            "C"
+          ],
+          "SIM:AL01:Q1-27:17": [
+            true,
+            true,
+            "C"
+          ],
+          "SIM:AL01:Q1-27:18": [
+            true,
+            true,
+            "E"
+          ],
+          "SIM:AL01:Q1-27:19": [
+            false,
+            false,
+            "C"
+          ]
+        }
+      }
+    },
+    "Legislação Tributária Estadual||IPVA — lançamento por calendário (Lei 9.780/2025)": {
+      "materia": "Legislação Tributária Estadual",
+      "assunto": "IPVA — lançamento por calendário (Lei 9.780/2025)",
+      "data_base": "2026-09-28",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "SIM:AL01:Q1-27:20",
+        "SIM:AL01:Q1-27:21",
+        "SIM:AL01:Q1-27:25",
+        "SIM:AL01:Q1-27:23",
+        "SIM:AL01:Q1-27:24"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-29",
+          "emitida": "2026-09-29"
+        },
+        "d6": {
+          "prevista": "2026-10-02",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-12",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-26",
+          "emitida": null
+        }
+      },
+      "origem": "simulado",
+      "topico": 146,
+      "amostra_base": {
+        "itens": {
+          "SIM:AL01:Q1-27:20": [
+            false,
+            true,
+            "C"
+          ],
+          "SIM:AL01:Q1-27:21": [
+            false,
+            true,
+            "E"
+          ],
+          "SIM:AL01:Q1-27:22": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:AL01:Q1-27:23": [
+            true,
+            true,
+            "C"
+          ],
+          "SIM:AL01:Q1-27:24": [
+            true,
+            true,
+            "E"
+          ],
+          "SIM:AL01:Q1-27:25": [
+            false,
+            false,
+            "C"
+          ],
+          "SIM:AL01:Q1-27:26": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:AL01:Q1-27:27": [
+            true,
+            false,
+            "C"
+          ]
+        }
+      }
     }
   },
   "ultima_fila": {
-    "data": "2026-09-28",
+    "data": "2026-09-29",
     "itens": [
       [
-        "2026-09-25||Extensão — NFC-e: o que difere da NF-e + erros da semana",
+        "2026-09-28||Extensão — Guia Prático EFD 3.2.2: obrigatoriedade, prazos, dispensa",
         "leitura"
       ],
       [
-        "2026-09-25||LC 214, arts. 341-407 — transição IBS/CBS/ICMS, alíquotas 2029-2033, saldo credor. Imposto Seletivo, distribuição e regimes diferenciados entram como lista e percentuais, não artigo a artigo",
+        "2026-09-28||Guia Prático EFD-ICMS/IPI 3.2.2 — parte geral (Cap. I-II), blocos, C100, C190, Bloco E, G, H, K",
         "leitura"
       ],
       [
-        "Auditoria Fiscal||MOC NF-e 7.0 — contingência (SVC-AN, SVC-RS, EPEC, FS-DA)",
+        "2026-09-28||IPVA — Lei 6.555, arts. 4º a 6º: não incidência e isenções, inciso por inciso, contra a tabela de armadilhas (táxi 2.0L/1 ano, agrícola, PcD, autarquias)",
+        "leitura"
+      ],
+      [
+        "Legislação Tributária Estadual||IPVA — FG, domicílio, contribuinte e solidariedade",
         "d1"
       ],
       [
-        "Auditoria Fiscal||MOC da NF-e e NFC-e 7.0 — modelo operacional e eventos",
+        "Legislação Tributária Estadual||IPVA — lançamento por calendário (Lei 9.780/2025)",
         "d1"
       ],
       [
-        "Contabilidade Geral||Plano de Contas",
-        "d28"
+        "Reforma Tributária||LC 227/2026 — Processo Administrativo Tributário do IBS",
+        "d6"
       ],
       [
-        "Direito Administrativo (Doutrina e Leis Federais)||Atributos ou Características dos Atos Administrativos",
-        "d28"
+        "TI - Ciência de Dados e Inteligência Artificial||Conceitos de Big Data",
+        "d1"
       ],
       [
-        "Direito Constitucional (CF/1988 e Doutrina)||Direitos Sociais e dos Trabalhadores (arts. 6º e 7º da CF/1988)",
-        "d28"
+        "TI - Ciência de Dados e Inteligência Artificial||Dado, Informação e Conhecimento",
+        "d6"
       ],
       [
-        "Direito Tributário||Imunidades Tributárias",
-        "d28"
+        "TI - Ciência de Dados e Inteligência Artificial||Dados Abertos (Conceitos, Princípios, etc.)",
+        "d6"
       ],
       [
-        "Direito Tributário||Taxas (CF/1988 e CTN)",
-        "d28"
+        "TI - Ciência de Dados e Inteligência Artificial||Treinamento e Avaliação de Modelos",
+        "d6"
       ],
       [
-        "Economia e Finanças Públicas||Dívida Pública, NFSP e Tipos de Déficit Público no Brasil",
-        "d28"
+        "TI - Engenharia de Software||Conceitos e Tipos de Testes de Software",
+        "d6"
       ],
       [
-        "Finanças e Conhecimentos Bancários||Composição Geral do SFN",
-        "d28"
-      ],
-      [
-        "Legislação Tributária Federal||Da Não Cumulatividade (arts. 47 a 56 da LC nº 214/2025)",
+        "TI - Segurança da Informação||Gestão de Continuidade de Negócio (NBR ISO/IEC 15999-1, 15999-2, 27002, 22313, etc.)",
         "d14"
       ],
       [
-        "Legislação Tributária Federal||Disposições Preliminares do Imposto Seletivo (arts. 409 a 411 da LC nº 214/2025)",
-        "d1"
-      ],
-      [
-        "Matemática Financeira||Valor Presente Líquido (VPL)",
-        "d28"
-      ],
-      [
-        "Reforma Tributária||Distribuição do produto da arrecadação do IBS",
-        "d1"
-      ],
-      [
-        "Reforma Tributária||Regimes diferenciados e específicos — faixas e percentuais",
-        "d1"
-      ],
-      [
-        "Reforma Tributária||Transição IBS/CBS/ICMS — calendário 2026-2033",
-        "d1"
-      ],
-      [
-        "TI - Engenharia de Software||Kanban (Engenharia de Software)",
+        "TI - Segurança da Informação||SGSI, Controles e Estrutura das Normas da Família 27000 (ISO/IEC 27001, 27002, etc.)",
         "d14"
-      ],
-      [
-        "TI - Engenharia de Software||XP (Extreme Programming)",
-        "d14"
-      ],
-      [
-        "TI - Segurança da Informação||ICP e Autoridades Certificadoras",
-        "d1"
       ]
     ],
-    "confirmada": "2026-09-28"
+    "confirmada": "2026-09-29"
   },
   "leituras": {
     "2026-09-14||LC 214, arts. 38-56 — não cumulatividade, apropriação e utilização de créditos": {
@@ -3488,7 +3890,29 @@
       "plano_ref": null,
       "minutos": null,
       "prevista": "2026-09-29",
-      "emitida": null
+      "emitida": "2026-09-29"
+    },
+    "2026-09-28||IPVA — Lei 6.555, arts. 4º a 6º: não incidência e isenções, inciso por inciso, contra a tabela de armadilhas (táxi 2.0L/1 ano, agrícola, PcD, autarquias)": {
+      "materia": "Legislação Tributária Estadual (AL)",
+      "rotulo": "IPVA — Lei 6.555, arts. 4º a 6º: não incidência e isenções, inciso por inciso, contra a tabela de armadilhas (táxi 2.0L/1 ano, agrícola, PcD, autarquias)",
+      "data_leitura": "2026-09-28",
+      "fonte": null,
+      "origem": "plano",
+      "plano_ref": "S4 Segunda",
+      "minutos": 105,
+      "prevista": "2026-09-29",
+      "emitida": "2026-09-29"
+    },
+    "2026-09-28||Extensão — Guia Prático EFD 3.2.2: obrigatoriedade, prazos, dispensa": {
+      "materia": "Auditoria Fiscal",
+      "rotulo": "Extensão — Guia Prático EFD 3.2.2: obrigatoriedade, prazos, dispensa",
+      "data_leitura": "2026-09-28",
+      "fonte": null,
+      "origem": "plano",
+      "plano_ref": "S4 Segunda",
+      "minutos": 30,
+      "prevista": "2026-09-29",
+      "emitida": "2026-09-29"
     }
   }
 }

@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-09-28T08:16:51",
+ "gerado_em": "2026-09-29T08:22:25",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -1561,6 +1561,42 @@ window.SESSOES_TEC = {
    "minutos": 7,
    "qResolvidas": 1,
    "qAcertadas": 1,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "SIM~AL01~2026-09-28~LEGAL",
+   "origem": "simulado",
+   "data": "2026-09-28",
+   "mat": "LEGAL",
+   "topicId": null,
+   "assuntoLivre": "Simulado AL01 — LEGAL",
+   "minutos": 7,
+   "qResolvidas": 27,
+   "qAcertadas": 19,
+   "obs": "Simulado AL01 (Q1-27) cronometrado"
+  },
+  {
+   "uid": "TEC~2026-09-28~224",
+   "origem": "tec",
+   "data": "2026-09-28",
+   "mat": "CDADOS",
+   "topicId": "224",
+   "assuntoLivre": "",
+   "minutos": 11,
+   "qResolvidas": 28,
+   "qAcertadas": 22,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-28~65",
+   "origem": "tec",
+   "data": "2026-09-28",
+   "mat": "DEV",
+   "topicId": "65",
+   "assuntoLivre": "",
+   "minutos": 2,
+   "qResolvidas": 8,
+   "qAcertadas": 7,
    "obs": "reconstruída do TEC"
   }
  ]
