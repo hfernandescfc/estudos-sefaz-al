@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-09-29T08:22:25",
+ "gerado_em": "2026-09-30T08:20:56",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -1597,6 +1597,78 @@ window.SESSOES_TEC = {
    "minutos": 2,
    "qResolvidas": 8,
    "qAcertadas": 7,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "SIM~RT08~2026-09-29~RT",
+   "origem": "simulado",
+   "data": "2026-09-29",
+   "mat": "RT",
+   "topicId": null,
+   "assuntoLivre": "Simulado RT08 — RT",
+   "minutos": 7,
+   "qResolvidas": 26,
+   "qAcertadas": 14,
+   "obs": "Simulado RT08 (Q1-26) cronometrado"
+  },
+  {
+   "uid": "SIM~RT10~2026-09-29~RT",
+   "origem": "simulado",
+   "data": "2026-09-29",
+   "mat": "RT",
+   "topicId": null,
+   "assuntoLivre": "Simulado RT10 — RT",
+   "minutos": 8,
+   "qResolvidas": 30,
+   "qAcertadas": 15,
+   "obs": "Simulado RT10 (Q1-30) cronometrado"
+  },
+  {
+   "uid": "SIM~RT11~2026-09-29~RT",
+   "origem": "simulado",
+   "data": "2026-09-29",
+   "mat": "RT",
+   "topicId": null,
+   "assuntoLivre": "Simulado RT11 — RT",
+   "minutos": 2,
+   "qResolvidas": 11,
+   "qAcertadas": 7,
+   "obs": "Simulado RT11 (Q1-11) cronometrado"
+  },
+  {
+   "uid": "TEC~2026-09-29~233",
+   "origem": "tec",
+   "data": "2026-09-29",
+   "mat": "CDADOS",
+   "topicId": "233",
+   "assuntoLivre": "",
+   "minutos": 2,
+   "qResolvidas": 1,
+   "qAcertadas": 1,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-29~50",
+   "origem": "tec",
+   "data": "2026-09-29",
+   "mat": "DEV",
+   "topicId": "50",
+   "assuntoLivre": "",
+   "minutos": 4,
+   "qResolvidas": 15,
+   "qAcertadas": 12,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-29~68",
+   "origem": "tec",
+   "data": "2026-09-29",
+   "mat": "DEV",
+   "topicId": "68",
+   "assuntoLivre": "",
+   "minutos": 6,
+   "qResolvidas": 5,
+   "qAcertadas": 2,
    "obs": "reconstruída do TEC"
   }
  ]

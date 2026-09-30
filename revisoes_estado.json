@@ -23,7 +23,11 @@
     "resultado_simulado_AF01_2026-09-25.json",
     "resultado_simulado_RT09_2026-09-25.json",
     "tec_registros_2026-09-29.json",
-    "resultado_simulado_AL01_2026-09-28.json"
+    "resultado_simulado_AL01_2026-09-28.json",
+    "tec_registros_2026-09-30.json",
+    "resultado_simulado_RT08_2026-09-29.json",
+    "resultado_simulado_RT10_2026-09-29.json",
+    "resultado_simulado_RT11_2026-09-29.json"
   ],
   "cadeias": {
     "Contabilidade Geral||Plano de Contas": {
@@ -438,7 +442,7 @@
           }
         },
         "d14": {
-          "prevista": "2026-09-30",
+          "prevista": "2026-10-01",
           "emitida": null
         },
         "d28": {
@@ -507,7 +511,7 @@
           }
         },
         "d14": {
-          "prevista": "2026-09-30",
+          "prevista": "2026-10-01",
           "emitida": null
         },
         "d28": {
@@ -609,7 +613,7 @@
           }
         },
         "d14": {
-          "prevista": "2026-09-30",
+          "prevista": "2026-10-01",
           "emitida": null
         },
         "d28": {
@@ -648,7 +652,7 @@
           }
         },
         "d14": {
-          "prevista": "2026-09-30",
+          "prevista": "2026-10-01",
           "emitida": null
         },
         "d28": {
@@ -770,7 +774,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-09-30",
+          "prevista": "2026-10-01",
           "emitida": null
         },
         "d28": {
@@ -884,7 +888,7 @@
           }
         },
         "d14": {
-          "prevista": "2026-09-30",
+          "prevista": "2026-10-01",
           "emitida": null
         },
         "d28": {
@@ -925,7 +929,7 @@
         },
         "d14": {
           "prevista": "2026-09-30",
-          "emitida": null
+          "emitida": "2026-09-30"
         },
         "d28": {
           "prevista": "2026-10-14",
@@ -967,7 +971,7 @@
         },
         "d14": {
           "prevista": "2026-09-30",
-          "emitida": null
+          "emitida": "2026-09-30"
         },
         "d28": {
           "prevista": "2026-10-14",
@@ -1018,7 +1022,7 @@
         },
         "d14": {
           "prevista": "2026-09-30",
-          "emitida": null
+          "emitida": "2026-09-30"
         },
         "d28": {
           "prevista": "2026-10-14",
@@ -1557,269 +1561,114 @@
     "TI - Engenharia de Software||Conceitos e Tipos de Testes de Software": {
       "materia": "TI - Engenharia de Software",
       "assunto": "Conceitos e Tipos de Testes de Software",
-      "data_base": "2026-09-23",
+      "data_base": "2026-09-30",
       "cadeia_completa": true,
       "alvos_origem": [
-        "231221",
-        "250205",
-        "284815",
-        "346653",
-        "553344",
-        "595366",
-        "726081",
-        "1294660",
-        "2216520",
-        "2216771",
-        "1935724",
-        "1294684",
-        "1768544",
-        "165191",
-        "184457",
-        "211753",
-        "229472",
-        "230847",
-        "389796",
-        "552399",
-        "738275",
-        "1038600",
-        "2780356",
-        "2265601"
+        "3238494",
+        "3259730",
+        "3445253",
+        "3917754",
+        "3503979"
       ],
-      "reinicios": 0,
+      "reinicios": 1,
       "status": "ativa",
       "etapas": {
         "d1": {
-          "prevista": "2026-09-23",
-          "emitida": "2026-09-23"
+          "prevista": "2026-09-30",
+          "emitida": "2026-09-30"
         },
         "d6": {
-          "prevista": "2026-09-29",
-          "emitida": "2026-09-29",
+          "prevista": "2026-10-06",
+          "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-07",
+          "prevista": "2026-10-14",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-21",
+          "prevista": "2026-10-28",
           "emitida": null
         }
       },
       "amostra_base": {
         "itens": {
-          "165191": [
-            true,
-            true,
-            "E"
-          ],
-          "184457": [
-            true,
-            true,
-            "E"
-          ],
-          "211753": [
-            true,
-            true,
-            "D"
-          ],
-          "229472": [
+          "3917754": [
             true,
             true,
             "C"
           ],
-          "230846": [
+          "3970388": [
             true,
             false,
             "C"
           ],
-          "230847": [
-            true,
-            true,
-            "E"
-          ],
-          "231221": [
-            false,
-            true,
-            "C"
-          ],
-          "250205": [
-            false,
-            false,
-            "C"
-          ],
-          "260149": [
-            true,
-            false,
-            "E"
-          ],
-          "284815": [
+          "3238494": [
             false,
             false,
             "E"
           ],
-          "346653": [
-            false,
-            true,
-            "E"
-          ],
-          "389796": [
-            true,
-            true,
-            "E"
-          ],
-          "513369": [
-            true,
-            false,
-            "A"
-          ],
-          "513378": [
-            true,
-            false,
-            "A"
-          ],
-          "552399": [
-            true,
-            true,
-            "C"
-          ],
-          "553344": [
-            false,
-            false,
-            "B"
-          ],
-          "558852": [
-            true,
-            false,
-            "E"
-          ],
-          "595366": [
-            false,
-            true,
-            "C"
-          ],
-          "620066": [
-            true,
-            false,
-            "E"
-          ],
-          "726081": [
-            false,
-            false,
-            "B"
-          ],
-          "738275": [
-            true,
-            true,
-            "E"
-          ],
-          "1038600": [
-            true,
-            true,
-            "E"
-          ],
-          "1251723": [
-            true,
-            false,
-            "C"
-          ],
-          "1294660": [
-            false,
-            false,
-            "C"
-          ],
-          "1294677": [
-            true,
-            false,
-            "E"
-          ],
-          "1294678": [
-            true,
-            false,
-            "C"
-          ],
-          "1294680": [
-            true,
-            false,
-            "C"
-          ],
-          "2780356": [
-            true,
-            true,
-            "E"
-          ],
-          "2593602": [
-            true,
-            false,
-            "D"
-          ],
-          "2589469": [
-            true,
-            false,
-            "E"
-          ],
-          "2265601": [
-            true,
-            true,
-            "C"
-          ],
-          "2216519": [
-            true,
-            false,
-            "C"
-          ],
-          "2216520": [
+          "3259730": [
             false,
             false,
             "E"
           ],
-          "2216521": [
+          "3340583": [
             true,
             false,
             "C"
           ],
-          "2216769": [
+          "3340584": [
             true,
             false,
             "C"
           ],
-          "2216771": [
+          "3373652": [
+            true,
+            false,
+            "C"
+          ],
+          "3422091": [
+            true,
+            false,
+            "C"
+          ],
+          "3425079": [
+            true,
+            false,
+            "C"
+          ],
+          "3428362": [
+            true,
+            false,
+            "C"
+          ],
+          "3439220": [
+            true,
+            false,
+            "E"
+          ],
+          "3445253": [
             false,
             false,
             "E"
           ],
-          "1935724": [
-            false,
-            false,
-            "C"
+          "3503979": [
+            true,
+            true,
+            "E"
           ],
-          "1936861": [
+          "3663302": [
             true,
             false,
             "C"
           ],
-          "1628803": [
-            true,
-            false,
-            "C"
-          ],
-          "1294682": [
+          "3663304": [
             true,
             false,
             "E"
-          ],
-          "1294684": [
-            false,
-            false,
-            "E"
-          ],
-          "1768544": [
-            false,
-            false,
-            "C"
           ]
-        },
-        "retro": true
+        }
       }
     },
     "Legislação Tributária Federal||Da Não Cumulatividade (arts. 47 a 56 da LC nº 214/2025)": {
@@ -1879,7 +1728,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-01",
+          "prevista": "2026-10-02",
           "emitida": null
         },
         "d28": {
@@ -1891,52 +1740,180 @@
     "Reforma Tributária||LC 227/2026 — Processo Administrativo Tributário do IBS": {
       "materia": "Reforma Tributária",
       "assunto": "LC 227/2026 — Processo Administrativo Tributário do IBS",
-      "data_base": "2026-09-23",
+      "data_base": "2026-09-29",
       "cadeia_completa": true,
       "alvos_origem": [
-        "SIM:RT07:Q1-30:4",
-        "SIM:RT07:Q1-30:8",
-        "SIM:RT07:Q1-30:10",
-        "SIM:RT07:Q1-30:11",
-        "SIM:RT07:Q1-30:12",
-        "SIM:RT07:Q1-30:23",
-        "SIM:RT07:Q1-30:28",
-        "SIM:RT07:Q1-30:30",
-        "SIM:RT07:Q1-30:3",
-        "SIM:RT07:Q1-30:6",
-        "SIM:RT07:Q1-30:18",
-        "SIM:RT07:Q1-30:21",
-        "SIM:RT07:Q1-30:22",
-        "SIM:RT07:Q1-30:24",
-        "SIM:RT07:Q1-30:26",
-        "SIM:RT07:Q1-30:27"
+        "SIM:RT08:Q1-26:1",
+        "SIM:RT08:Q1-26:8",
+        "SIM:RT08:Q1-26:15",
+        "SIM:RT08:Q1-26:16",
+        "SIM:RT08:Q1-26:19",
+        "SIM:RT08:Q1-26:20",
+        "SIM:RT08:Q1-26:21",
+        "SIM:RT08:Q1-26:22",
+        "SIM:RT08:Q1-26:23",
+        "SIM:RT08:Q1-26:24",
+        "SIM:RT08:Q1-26:25",
+        "SIM:RT08:Q1-26:26",
+        "SIM:RT08:Q1-26:3",
+        "SIM:RT08:Q1-26:5",
+        "SIM:RT08:Q1-26:7",
+        "SIM:RT08:Q1-26:12"
       ],
-      "reinicios": 0,
+      "reinicios": 1,
       "status": "ativa",
       "etapas": {
         "d1": {
-          "prevista": "2026-09-24",
-          "emitida": "2026-09-24"
+          "prevista": "2026-09-30",
+          "emitida": "2026-09-30"
         },
         "d6": {
-          "prevista": "2026-09-29",
-          "emitida": "2026-09-29",
+          "prevista": "2026-10-05",
+          "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-07",
+          "prevista": "2026-10-13",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-21",
+          "prevista": "2026-10-27",
           "emitida": null
         }
       },
-      "origem": "simulado",
-      "topico": 127,
       "amostra_base": {
-        "itens": {},
-        "retro": true
+        "itens": {
+          "SIM:RT08:Q1-26:1": [
+            false,
+            false,
+            "C"
+          ],
+          "SIM:RT08:Q1-26:2": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:RT08:Q1-26:3": [
+            true,
+            true,
+            "C"
+          ],
+          "SIM:RT08:Q1-26:4": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:RT08:Q1-26:5": [
+            true,
+            true,
+            "C"
+          ],
+          "SIM:RT08:Q1-26:6": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:RT08:Q1-26:7": [
+            true,
+            true,
+            "C"
+          ],
+          "SIM:RT08:Q1-26:8": [
+            false,
+            false,
+            "E"
+          ],
+          "SIM:RT08:Q1-26:9": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:RT08:Q1-26:10": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:RT08:Q1-26:11": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:RT08:Q1-26:12": [
+            true,
+            true,
+            "E"
+          ],
+          "SIM:RT08:Q1-26:13": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:RT08:Q1-26:14": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:RT08:Q1-26:15": [
+            false,
+            false,
+            "E"
+          ],
+          "SIM:RT08:Q1-26:16": [
+            false,
+            false,
+            "C"
+          ],
+          "SIM:RT08:Q1-26:17": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:RT08:Q1-26:18": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:RT08:Q1-26:19": [
+            false,
+            true,
+            "E"
+          ],
+          "SIM:RT08:Q1-26:20": [
+            false,
+            true,
+            "C"
+          ],
+          "SIM:RT08:Q1-26:21": [
+            false,
+            false,
+            "E"
+          ],
+          "SIM:RT08:Q1-26:22": [
+            false,
+            true,
+            "E"
+          ],
+          "SIM:RT08:Q1-26:23": [
+            false,
+            false,
+            "C"
+          ],
+          "SIM:RT08:Q1-26:24": [
+            false,
+            true,
+            "E"
+          ],
+          "SIM:RT08:Q1-26:25": [
+            false,
+            false,
+            "C"
+          ],
+          "SIM:RT08:Q1-26:26": [
+            false,
+            false,
+            "E"
+          ]
+        }
       }
     },
     "TI - Banco de Dados||Normalização": {
@@ -1957,7 +1934,7 @@
           "emitida": "2026-09-25"
         },
         "d6": {
-          "prevista": "2026-10-01",
+          "prevista": "2026-10-02",
           "emitida": null,
           "resultado": null
         },
@@ -2076,7 +2053,7 @@
           "emitida": "2026-09-25"
         },
         "d6": {
-          "prevista": "2026-10-01",
+          "prevista": "2026-10-02",
           "emitida": null,
           "resultado": null
         },
@@ -2697,7 +2674,7 @@
           "emitida": "2026-09-28"
         },
         "d6": {
-          "prevista": "2026-10-02",
+          "prevista": "2026-10-05",
           "emitida": null,
           "resultado": null
         },
@@ -2748,7 +2725,7 @@
           "emitida": "2026-09-28"
         },
         "d6": {
-          "prevista": "2026-10-01",
+          "prevista": "2026-10-02",
           "emitida": null,
           "resultado": null
         },
@@ -3039,7 +3016,7 @@
           "emitida": "2026-09-28"
         },
         "d6": {
-          "prevista": "2026-10-01",
+          "prevista": "2026-10-02",
           "emitida": null,
           "resultado": null
         },
@@ -3139,7 +3116,7 @@
           "emitida": "2026-09-28"
         },
         "d6": {
-          "prevista": "2026-10-01",
+          "prevista": "2026-10-02",
           "emitida": null,
           "resultado": null
         },
@@ -3618,65 +3595,487 @@
           ]
         }
       }
+    },
+    "TI - Segurança da Informação||Ciclo de Vida de Desenvolvimento Seguro": {
+      "materia": "TI - Segurança da Informação",
+      "assunto": "Ciclo de Vida de Desenvolvimento Seguro",
+      "data_base": "2026-09-30",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "2638683",
+        "2877544",
+        "3251286",
+        "2638681"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-30",
+          "emitida": "2026-09-30"
+        },
+        "d6": {
+          "prevista": "2026-10-06",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-14",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-28",
+          "emitida": null
+        }
+      },
+      "amostra_base": {
+        "itens": {
+          "2638681": [
+            true,
+            true,
+            "E"
+          ],
+          "2638683": [
+            false,
+            true,
+            "E"
+          ],
+          "2877544": [
+            false,
+            false,
+            "E"
+          ],
+          "3251286": [
+            false,
+            false,
+            "C"
+          ],
+          "4147438": [
+            true,
+            false,
+            "A"
+          ]
+        }
+      }
+    },
+    "Reforma Tributária||DeRE, NF-ABI, NFAg, BP-e Aéreo e NF-e Gás": {
+      "materia": "Reforma Tributária",
+      "assunto": "DeRE, NF-ABI, NFAg, BP-e Aéreo e NF-e Gás",
+      "data_base": "2026-09-29",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "SIM:RT10:Q1-30:1",
+        "SIM:RT10:Q1-30:3",
+        "SIM:RT10:Q1-30:5",
+        "SIM:RT10:Q1-30:7",
+        "SIM:RT10:Q1-30:8",
+        "SIM:RT10:Q1-30:9",
+        "SIM:RT10:Q1-30:11",
+        "SIM:RT10:Q1-30:12",
+        "SIM:RT10:Q1-30:10"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-30",
+          "emitida": "2026-09-30"
+        },
+        "d6": {
+          "prevista": "2026-10-05",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-13",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-27",
+          "emitida": null
+        }
+      },
+      "origem": "simulado",
+      "topico": 129,
+      "amostra_base": {
+        "itens": {
+          "SIM:RT10:Q1-30:1": [
+            false,
+            false,
+            "C"
+          ],
+          "SIM:RT10:Q1-30:2": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:RT10:Q1-30:3": [
+            false,
+            true,
+            "E"
+          ],
+          "SIM:RT10:Q1-30:4": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:RT10:Q1-30:5": [
+            false,
+            false,
+            "E"
+          ],
+          "SIM:RT10:Q1-30:6": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:RT10:Q1-30:7": [
+            false,
+            false,
+            "E"
+          ],
+          "SIM:RT10:Q1-30:8": [
+            false,
+            false,
+            "C"
+          ],
+          "SIM:RT10:Q1-30:9": [
+            false,
+            true,
+            "E"
+          ],
+          "SIM:RT10:Q1-30:10": [
+            true,
+            true,
+            "C"
+          ],
+          "SIM:RT10:Q1-30:11": [
+            false,
+            true,
+            "E"
+          ],
+          "SIM:RT10:Q1-30:12": [
+            false,
+            false,
+            "C"
+          ]
+        }
+      }
+    },
+    "Reforma Tributária||Regulamento do IBS — Res. CGIBS 6 e 13/2026": {
+      "materia": "Reforma Tributária",
+      "assunto": "Regulamento do IBS — Res. CGIBS 6 e 13/2026",
+      "data_base": "2026-09-29",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "SIM:RT10:Q1-30:13",
+        "SIM:RT10:Q1-30:18",
+        "SIM:RT10:Q1-30:20",
+        "SIM:RT10:Q1-30:21",
+        "SIM:RT10:Q1-30:24",
+        "SIM:RT10:Q1-30:14",
+        "SIM:RT10:Q1-30:17",
+        "SIM:RT10:Q1-30:23"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-30",
+          "emitida": "2026-09-30"
+        },
+        "d6": {
+          "prevista": "2026-10-05",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-13",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-27",
+          "emitida": null
+        }
+      },
+      "origem": "simulado",
+      "topico": 128,
+      "amostra_base": {
+        "itens": {
+          "SIM:RT10:Q1-30:13": [
+            false,
+            false,
+            "C"
+          ],
+          "SIM:RT10:Q1-30:14": [
+            true,
+            true,
+            "E"
+          ],
+          "SIM:RT10:Q1-30:16": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:RT10:Q1-30:17": [
+            true,
+            true,
+            "C"
+          ],
+          "SIM:RT10:Q1-30:18": [
+            false,
+            false,
+            "E"
+          ],
+          "SIM:RT10:Q1-30:19": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:RT10:Q1-30:20": [
+            false,
+            false,
+            "E"
+          ],
+          "SIM:RT10:Q1-30:21": [
+            false,
+            true,
+            "C"
+          ],
+          "SIM:RT10:Q1-30:22": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:RT10:Q1-30:23": [
+            true,
+            true,
+            "C"
+          ],
+          "SIM:RT10:Q1-30:24": [
+            false,
+            false,
+            "E"
+          ]
+        }
+      }
+    },
+    "Reforma Tributária||Sinter e Cadastro Imobiliário Brasileiro (CIB)": {
+      "materia": "Reforma Tributária",
+      "assunto": "Sinter e Cadastro Imobiliário Brasileiro (CIB)",
+      "data_base": "2026-09-29",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "SIM:RT10:Q1-30:29"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-30",
+          "emitida": "2026-09-30"
+        },
+        "d6": {
+          "prevista": "2026-10-05",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-13",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-27",
+          "emitida": null
+        }
+      },
+      "origem": "simulado",
+      "topico": 130,
+      "amostra_base": {
+        "itens": {
+          "SIM:RT10:Q1-30:25": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:RT10:Q1-30:26": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:RT10:Q1-30:27": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:RT10:Q1-30:28": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:RT10:Q1-30:29": [
+            false,
+            true,
+            "C"
+          ],
+          "SIM:RT10:Q1-30:30": [
+            true,
+            false,
+            "C"
+          ]
+        }
+      }
+    },
+    "Reforma Tributária||Tabela cCredPres — crédito presumido": {
+      "materia": "Reforma Tributária",
+      "assunto": "Tabela cCredPres — crédito presumido",
+      "data_base": "2026-09-29",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "SIM:RT11:Q1-11:4",
+        "SIM:RT11:Q1-11:5",
+        "SIM:RT11:Q1-11:8",
+        "SIM:RT11:Q1-11:11",
+        "SIM:RT11:Q1-11:2",
+        "SIM:RT11:Q1-11:6"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-09-30",
+          "emitida": "2026-09-30"
+        },
+        "d6": {
+          "prevista": "2026-10-05",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-13",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-27",
+          "emitida": null
+        }
+      },
+      "origem": "simulado",
+      "topico": 131,
+      "amostra_base": {
+        "itens": {
+          "SIM:RT11:Q1-11:1": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:RT11:Q1-11:2": [
+            true,
+            true,
+            "E"
+          ],
+          "SIM:RT11:Q1-11:3": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:RT11:Q1-11:4": [
+            false,
+            false,
+            "C"
+          ],
+          "SIM:RT11:Q1-11:5": [
+            false,
+            false,
+            "E"
+          ],
+          "SIM:RT11:Q1-11:6": [
+            true,
+            true,
+            "C"
+          ],
+          "SIM:RT11:Q1-11:7": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:RT11:Q1-11:8": [
+            false,
+            false,
+            "E"
+          ],
+          "SIM:RT11:Q1-11:9": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:RT11:Q1-11:10": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:RT11:Q1-11:11": [
+            false,
+            false,
+            "C"
+          ]
+        }
+      }
     }
   },
   "ultima_fila": {
-    "data": "2026-09-29",
+    "data": "2026-09-30",
     "itens": [
       [
-        "2026-09-28||Extensão — Guia Prático EFD 3.2.2: obrigatoriedade, prazos, dispensa",
+        "2026-09-29||Extensão — EFD 3.2.2, estrutura de blocos: 0, C, D, E, G, H, K, 1, 9. O que cada bloco carrega",
         "leitura"
       ],
       [
-        "2026-09-28||Guia Prático EFD-ICMS/IPI 3.2.2 — parte geral (Cap. I-II), blocos, C100, C190, Bloco E, G, H, K",
+        "2026-09-29||🔴 Nível 3 — Regulamento do IBS, Livro I Título II (arts. 103-150): obrigações acessórias, DeRE, NF-ABI, NFAg, BP-e Aéreo, NF-e Gás",
         "leitura"
       ],
       [
-        "2026-09-28||IPVA — Lei 6.555, arts. 4º a 6º: não incidência e isenções, inciso por inciso, contra a tabela de armadilhas (táxi 2.0L/1 ano, agrícola, PcD, autarquias)",
-        "leitura"
+        "Contabilidade Geral||Conceitos de SPED e seus Módulos",
+        "d14"
       ],
       [
-        "Legislação Tributária Estadual||IPVA — FG, domicílio, contribuinte e solidariedade",
-        "d1"
+        "Contabilidade Geral||Decreto nº 6.022/2007 - Sistema Público de Escrituração Digital (SPED)",
+        "d14"
       ],
       [
-        "Legislação Tributária Estadual||IPVA — lançamento por calendário (Lei 9.780/2025)",
+        "Reforma Tributária||DeRE, NF-ABI, NFAg, BP-e Aéreo e NF-e Gás",
         "d1"
       ],
       [
         "Reforma Tributária||LC 227/2026 — Processo Administrativo Tributário do IBS",
-        "d6"
-      ],
-      [
-        "TI - Ciência de Dados e Inteligência Artificial||Conceitos de Big Data",
         "d1"
       ],
       [
-        "TI - Ciência de Dados e Inteligência Artificial||Dado, Informação e Conhecimento",
-        "d6"
+        "Reforma Tributária||Regulamento do IBS — Res. CGIBS 6 e 13/2026",
+        "d1"
       ],
       [
-        "TI - Ciência de Dados e Inteligência Artificial||Dados Abertos (Conceitos, Princípios, etc.)",
-        "d6"
+        "Reforma Tributária||Sinter e Cadastro Imobiliário Brasileiro (CIB)",
+        "d1"
       ],
       [
-        "TI - Ciência de Dados e Inteligência Artificial||Treinamento e Avaliação de Modelos",
-        "d6"
+        "Reforma Tributária||Tabela cCredPres — crédito presumido",
+        "d1"
       ],
       [
         "TI - Engenharia de Software||Conceitos e Tipos de Testes de Software",
-        "d6"
+        "d1"
       ],
       [
-        "TI - Segurança da Informação||Gestão de Continuidade de Negócio (NBR ISO/IEC 15999-1, 15999-2, 27002, 22313, etc.)",
-        "d14"
+        "TI - Segurança da Informação||Ciclo de Vida de Desenvolvimento Seguro",
+        "d1"
       ],
       [
-        "TI - Segurança da Informação||SGSI, Controles e Estrutura das Normas da Família 27000 (ISO/IEC 27001, 27002, etc.)",
+        "TI - Segurança da Informação||Riscos em Segurança da Informação (NBR ISO/IEC 27001, 27002 e 27005)",
         "d14"
       ]
     ],
-    "confirmada": "2026-09-29"
+    "confirmada": "2026-09-30"
   },
   "leituras": {
     "2026-09-14||LC 214, arts. 38-56 — não cumulatividade, apropriação e utilização de créditos": {
@@ -3913,6 +4312,28 @@
       "minutos": 30,
       "prevista": "2026-09-29",
       "emitida": "2026-09-29"
+    },
+    "2026-09-29||🔴 Nível 3 — Regulamento do IBS, Livro I Título II (arts. 103-150): obrigações acessórias, DeRE, NF-ABI, NFAg, BP-e Aéreo, NF-e Gás": {
+      "materia": "Reforma Tributária",
+      "rotulo": "🔴 Nível 3 — Regulamento do IBS, Livro I Título II (arts. 103-150): obrigações acessórias, DeRE, NF-ABI, NFAg, BP-e Aéreo, NF-e Gás",
+      "data_leitura": "2026-09-29",
+      "fonte": null,
+      "origem": "plano",
+      "plano_ref": "S4 Terça",
+      "minutos": 105,
+      "prevista": "2026-09-30",
+      "emitida": "2026-09-30"
+    },
+    "2026-09-29||Extensão — EFD 3.2.2, estrutura de blocos: 0, C, D, E, G, H, K, 1, 9. O que cada bloco carrega": {
+      "materia": "Auditoria Fiscal",
+      "rotulo": "Extensão — EFD 3.2.2, estrutura de blocos: 0, C, D, E, G, H, K, 1, 9. O que cada bloco carrega",
+      "data_leitura": "2026-09-29",
+      "fonte": null,
+      "origem": "plano",
+      "plano_ref": "S4 Terça",
+      "minutos": 30,
+      "prevista": "2026-09-30",
+      "emitida": "2026-09-30"
     }
   }
 }
