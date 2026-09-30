@@ -4289,7 +4289,8 @@
       "plano_ref": null,
       "minutos": null,
       "prevista": "2026-09-29",
-      "emitida": "2026-09-29"
+      "emitida": "2026-09-29",
+      "obs": "D+1 emitido na folha de 29/09 e NAO feito (declarado pelo usuario em 30/09); recall refeito na folha de 30/09, fundido com a entrada do plano de 29/09"
     },
     "2026-09-28||IPVA — Lei 6.555, arts. 4º a 6º: não incidência e isenções, inciso por inciso, contra a tabela de armadilhas (táxi 2.0L/1 ano, agrícola, PcD, autarquias)": {
       "materia": "Legislação Tributária Estadual (AL)",
@@ -4333,7 +4334,8 @@
       "plano_ref": "S4 Terça",
       "minutos": 30,
       "prevista": "2026-09-30",
-      "emitida": "2026-09-30"
+      "emitida": "2026-09-30",
+      "obs": "duplicata da leitura declarada de 28/09 (que ja incluia os blocos); D+1 da folha de 30/09 cobre as duas"
     }
   }
 }
