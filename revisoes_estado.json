@@ -27,7 +27,9 @@
     "tec_registros_2026-09-30.json",
     "resultado_simulado_RT08_2026-09-29.json",
     "resultado_simulado_RT10_2026-09-29.json",
-    "resultado_simulado_RT11_2026-09-29.json"
+    "resultado_simulado_RT11_2026-09-29.json",
+    "tec_registros_2026-10-01.json",
+    "tec_registros_2026-10-01_b.json"
   ],
   "cadeias": {
     "Contabilidade Geral||Plano de Contas": {
@@ -442,7 +444,7 @@
           }
         },
         "d14": {
-          "prevista": "2026-10-01",
+          "prevista": "2026-10-02",
           "emitida": null
         },
         "d28": {
@@ -511,7 +513,7 @@
           }
         },
         "d14": {
-          "prevista": "2026-10-01",
+          "prevista": "2026-10-02",
           "emitida": null
         },
         "d28": {
@@ -613,7 +615,7 @@
           }
         },
         "d14": {
-          "prevista": "2026-10-01",
+          "prevista": "2026-10-02",
           "emitida": null
         },
         "d28": {
@@ -652,7 +654,7 @@
           }
         },
         "d14": {
-          "prevista": "2026-10-01",
+          "prevista": "2026-10-02",
           "emitida": null
         },
         "d28": {
@@ -774,7 +776,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-01",
+          "prevista": "2026-10-02",
           "emitida": null
         },
         "d28": {
@@ -888,7 +890,7 @@
           }
         },
         "d14": {
-          "prevista": "2026-10-01",
+          "prevista": "2026-10-02",
           "emitida": null
         },
         "d28": {
@@ -1123,7 +1125,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-05",
+          "prevista": "2026-10-06",
           "emitida": null
         },
         "d28": {
@@ -1160,7 +1162,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-05",
+          "prevista": "2026-10-06",
           "emitida": null
         },
         "d28": {
@@ -1186,7 +1188,7 @@
           "emitida": "2026-09-28"
         },
         "d6": {
-          "prevista": "2026-10-02",
+          "prevista": "2026-10-05",
           "emitida": null,
           "resultado": null
         },
@@ -1257,7 +1259,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-05",
+          "prevista": "2026-10-06",
           "emitida": null
         },
         "d28": {
@@ -2053,9 +2055,18 @@
           "emitida": "2026-09-25"
         },
         "d6": {
-          "prevista": "2026-10-02",
-          "emitida": null,
-          "resultado": null
+          "prevista": "2026-10-01",
+          "emitida": "2026-10-01",
+          "resultado": {
+            "aprovada": true,
+            "modo": "breve",
+            "saldo": 87,
+            "questoes": 47,
+            "palpites": 3,
+            "limiar_saldo": 85,
+            "data": "2026-10-01",
+            "fonte": "amostra de origem (D+6 breve)"
+          }
         },
         "d14": {
           "prevista": "2026-10-09",
@@ -2331,7 +2342,7 @@
         },
         "d6": {
           "prevista": "2026-10-01",
-          "emitida": null,
+          "emitida": "2026-10-01",
           "resultado": null
         },
         "d14": {
@@ -2517,7 +2528,7 @@
         },
         "d6": {
           "prevista": "2026-10-01",
-          "emitida": null,
+          "emitida": "2026-10-01",
           "resultado": null
         },
         "d14": {
@@ -2808,7 +2819,7 @@
         },
         "d6": {
           "prevista": "2026-10-01",
-          "emitida": null,
+          "emitida": "2026-10-01",
           "resultado": null
         },
         "d14": {
@@ -2926,7 +2937,7 @@
         },
         "d6": {
           "prevista": "2026-10-01",
-          "emitida": null,
+          "emitida": "2026-10-01",
           "resultado": null
         },
         "d14": {
@@ -3016,8 +3027,8 @@
           "emitida": "2026-09-28"
         },
         "d6": {
-          "prevista": "2026-10-02",
-          "emitida": null,
+          "prevista": "2026-10-01",
+          "emitida": "2026-10-01",
           "resultado": null
         },
         "d14": {
@@ -3116,8 +3127,8 @@
           "emitida": "2026-09-28"
         },
         "d6": {
-          "prevista": "2026-10-02",
-          "emitida": null,
+          "prevista": "2026-10-01",
+          "emitida": "2026-10-01",
           "resultado": null
         },
         "d14": {
@@ -3401,7 +3412,7 @@
           "emitida": "2026-09-29"
         },
         "d6": {
-          "prevista": "2026-10-02",
+          "prevista": "2026-10-05",
           "emitida": null,
           "resultado": null
         },
@@ -3536,7 +3547,7 @@
           "emitida": "2026-09-29"
         },
         "d6": {
-          "prevista": "2026-10-02",
+          "prevista": "2026-10-05",
           "emitida": null,
           "resultado": null
         },
@@ -4021,61 +4032,485 @@
           ]
         }
       }
+    },
+    "TI - Segurança da Informação||Conceitos de Firewall, Proxy e DMZ": {
+      "materia": "TI - Segurança da Informação",
+      "assunto": "Conceitos de Firewall, Proxy e DMZ",
+      "data_base": "2026-10-01",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "2799203",
+        "2847648",
+        "2847845",
+        "3082773",
+        "3148321",
+        "3367067",
+        "3425019",
+        "2593704",
+        "2642029",
+        "2642030",
+        "2781237",
+        "2876660",
+        "2876662",
+        "2993452",
+        "3076830",
+        "3173492",
+        "3400362"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-10-01",
+          "emitida": "2026-10-01"
+        },
+        "d6": {
+          "prevista": "2026-10-07",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-15",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-29",
+          "emitida": null
+        }
+      },
+      "amostra_base": {
+        "itens": {
+          "2593704": [
+            true,
+            true,
+            "A"
+          ],
+          "2642029": [
+            true,
+            true,
+            "C"
+          ],
+          "2642030": [
+            true,
+            true,
+            "C"
+          ],
+          "2781234": [
+            true,
+            false,
+            "C"
+          ],
+          "2781237": [
+            true,
+            true,
+            "E"
+          ],
+          "2783914": [
+            true,
+            false,
+            "E"
+          ],
+          "2799203": [
+            false,
+            true,
+            "E"
+          ],
+          "2847648": [
+            false,
+            false,
+            "E"
+          ],
+          "2847845": [
+            false,
+            false,
+            "C"
+          ],
+          "2876660": [
+            true,
+            true,
+            "E"
+          ],
+          "2876662": [
+            true,
+            true,
+            "E"
+          ],
+          "2877531": [
+            true,
+            false,
+            "C"
+          ],
+          "2877532": [
+            true,
+            false,
+            "E"
+          ],
+          "2877715": [
+            true,
+            false,
+            "C"
+          ],
+          "2993452": [
+            true,
+            true,
+            "E"
+          ],
+          "3076830": [
+            true,
+            true,
+            "E"
+          ],
+          "3082773": [
+            false,
+            false,
+            "B"
+          ],
+          "3148319": [
+            true,
+            false,
+            "E"
+          ],
+          "3148321": [
+            false,
+            false,
+            "C"
+          ],
+          "3166687": [
+            true,
+            false,
+            "A"
+          ],
+          "3173492": [
+            true,
+            true,
+            "C"
+          ],
+          "3367067": [
+            false,
+            true,
+            "B"
+          ],
+          "3400362": [
+            true,
+            true,
+            "E"
+          ],
+          "3425019": [
+            false,
+            false,
+            "E"
+          ]
+        }
+      }
+    },
+    "AFO, Direito Financeiro e Contabilidade Pública||Despesas com Pessoal e Seguridade Social (arts. 18 a 24 da LRF)": {
+      "materia": "AFO, Direito Financeiro e Contabilidade Pública",
+      "assunto": "Despesas com Pessoal e Seguridade Social (arts. 18 a 24 da LRF)",
+      "data_base": "2026-10-01",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "3969804",
+        "3662776",
+        "3664163",
+        "2590512",
+        "3039793",
+        "1937372"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-10-01",
+          "emitida": "2026-10-01"
+        },
+        "d6": {
+          "prevista": "2026-10-07",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-15",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-29",
+          "emitida": null
+        }
+      },
+      "amostra_base": {
+        "itens": {
+          "3963839": [
+            true,
+            false,
+            "E"
+          ],
+          "3965206": [
+            true,
+            false,
+            "E"
+          ],
+          "3965207": [
+            true,
+            false,
+            "E"
+          ],
+          "3969766": [
+            true,
+            false,
+            "E"
+          ],
+          "3969804": [
+            false,
+            true,
+            "E"
+          ],
+          "4130057": [
+            true,
+            false,
+            "E"
+          ],
+          "3662776": [
+            false,
+            false,
+            "C"
+          ],
+          "3664163": [
+            false,
+            false,
+            "C"
+          ],
+          "2983108": [
+            true,
+            false,
+            "E"
+          ],
+          "3008100": [
+            true,
+            false,
+            "E"
+          ],
+          "3039793": [
+            true,
+            true,
+            "E"
+          ],
+          "3075595": [
+            true,
+            false,
+            "E"
+          ],
+          "3081452": [
+            true,
+            false,
+            "C"
+          ],
+          "3081459": [
+            true,
+            false,
+            "C"
+          ],
+          "3081461": [
+            true,
+            false,
+            "E"
+          ],
+          "2590511": [
+            true,
+            false,
+            "E"
+          ],
+          "2590512": [
+            false,
+            false,
+            "C"
+          ],
+          "2292530": [
+            true,
+            false,
+            "C"
+          ],
+          "2292532": [
+            true,
+            false,
+            "C"
+          ],
+          "2305108": [
+            true,
+            false,
+            "C"
+          ],
+          "2305109": [
+            true,
+            false,
+            "E"
+          ],
+          "2305110": [
+            true,
+            false,
+            "E"
+          ],
+          "1937372": [
+            true,
+            true,
+            "C"
+          ],
+          "1937375": [
+            true,
+            false,
+            "E"
+          ],
+          "1937500": [
+            true,
+            false,
+            "C"
+          ],
+          "2007496": [
+            true,
+            false,
+            "E"
+          ]
+        }
+      }
+    },
+    "AFO, Direito Financeiro e Contabilidade Pública||Planejamento e Orçamento Público (arts. 3º a 10 da LRF)": {
+      "materia": "AFO, Direito Financeiro e Contabilidade Pública",
+      "assunto": "Planejamento e Orçamento Público (arts. 3º a 10 da LRF)",
+      "data_base": "2026-10-01",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "3662813",
+        "3008746"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-10-01",
+          "emitida": "2026-10-01"
+        },
+        "d6": {
+          "prevista": "2026-10-07",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-15",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-29",
+          "emitida": null
+        }
+      },
+      "amostra_base": {
+        "itens": {
+          "3857287": [
+            true,
+            false,
+            "E"
+          ],
+          "3969803": [
+            true,
+            false,
+            "E"
+          ],
+          "3662813": [
+            false,
+            false,
+            "C"
+          ],
+          "2876096": [
+            true,
+            false,
+            "E"
+          ],
+          "2934867": [
+            true,
+            false,
+            "C"
+          ],
+          "2983105": [
+            true,
+            false,
+            "C"
+          ],
+          "3008732": [
+            true,
+            false,
+            "E"
+          ],
+          "3008746": [
+            true,
+            true,
+            "E"
+          ],
+          "3039741": [
+            true,
+            false,
+            "E"
+          ],
+          "3040074": [
+            true,
+            false,
+            "C"
+          ]
+        }
+      }
     }
   },
   "ultima_fila": {
-    "data": "2026-09-30",
+    "data": "2026-10-01",
     "itens": [
       [
-        "2026-09-29||Extensão — EFD 3.2.2, estrutura de blocos: 0, C, D, E, G, H, K, 1, 9. O que cada bloco carrega",
+        "2026-09-30||Extensão — EFD 3.2.2, registros-chave: C100/C170, E110, H010",
         "leitura"
       ],
       [
-        "2026-09-29||🔴 Nível 3 — Regulamento do IBS, Livro I Título II (arts. 103-150): obrigações acessórias, DeRE, NF-ABI, NFAg, BP-e Aéreo, NF-e Gás",
+        "2026-09-30||IPVA — arts. 1º-3º, 7º-12, 17: FG e momento, domicílio, contribuinte e solidariedade sem benefício de ordem, BC, novo lançamento por calendário (Lei 9.780/2025)",
         "leitura"
       ],
       [
-        "Contabilidade Geral||Conceitos de SPED e seus Módulos",
-        "d14"
-      ],
-      [
-        "Contabilidade Geral||Decreto nº 6.022/2007 - Sistema Público de Escrituração Digital (SPED)",
-        "d14"
-      ],
-      [
-        "Reforma Tributária||DeRE, NF-ABI, NFAg, BP-e Aéreo e NF-e Gás",
+        "AFO, Direito Financeiro e Contabilidade Pública||Despesas com Pessoal e Seguridade Social (arts. 18 a 24 da LRF)",
         "d1"
       ],
       [
-        "Reforma Tributária||LC 227/2026 — Processo Administrativo Tributário do IBS",
+        "AFO, Direito Financeiro e Contabilidade Pública||Planejamento e Orçamento Público (arts. 3º a 10 da LRF)",
         "d1"
       ],
       [
-        "Reforma Tributária||Regulamento do IBS — Res. CGIBS 6 e 13/2026",
-        "d1"
+        "Auditoria Fiscal||MOC da NF-e e NFC-e 7.0 — modelo operacional e eventos",
+        "d6"
       ],
       [
-        "Reforma Tributária||Sinter e Cadastro Imobiliário Brasileiro (CIB)",
-        "d1"
+        "Reforma Tributária||Distribuição do produto da arrecadação do IBS",
+        "d6"
       ],
       [
-        "Reforma Tributária||Tabela cCredPres — crédito presumido",
-        "d1"
+        "Reforma Tributária||Regimes diferenciados e específicos — faixas e percentuais",
+        "d6"
       ],
       [
-        "TI - Engenharia de Software||Conceitos e Tipos de Testes de Software",
-        "d1"
+        "Reforma Tributária||Transição IBS/CBS/ICMS — calendário 2026-2033",
+        "d6"
       ],
       [
-        "TI - Segurança da Informação||Ciclo de Vida de Desenvolvimento Seguro",
-        "d1"
+        "TI - Ciência de Dados e Inteligência Artificial||Algoritmos de Machine Learning (Classificação, Regressão e Clusterização)",
+        "d6"
       ],
       [
-        "TI - Segurança da Informação||Riscos em Segurança da Informação (NBR ISO/IEC 27001, 27002 e 27005)",
-        "d14"
+        "TI - Ciência de Dados e Inteligência Artificial||Data Mining (Mineração de Dados): Etapas, Algoritmos e Modelos (KDD, CRISP-DM, etc.)",
+        "d6"
+      ],
+      [
+        "TI - Segurança da Informação||Ataques a Aplicações Web (XSS, CSRF, SQL Injection etc.)",
+        "d6"
+      ],
+      [
+        "TI - Segurança da Informação||Conceitos de Firewall, Proxy e DMZ",
+        "d1"
       ]
     ],
-    "confirmada": "2026-09-30"
+    "confirmada": "2026-10-01"
   },
   "leituras": {
     "2026-09-14||LC 214, arts. 38-56 — não cumulatividade, apropriação e utilização de créditos": {
@@ -4336,6 +4771,28 @@
       "prevista": "2026-09-30",
       "emitida": "2026-09-30",
       "obs": "duplicata da leitura declarada de 28/09 (que ja incluia os blocos); D+1 da folha de 30/09 cobre as duas"
+    },
+    "2026-09-30||IPVA — arts. 1º-3º, 7º-12, 17: FG e momento, domicílio, contribuinte e solidariedade sem benefício de ordem, BC, novo lançamento por calendário (Lei 9.780/2025)": {
+      "materia": "Legislação Tributária Estadual (AL)",
+      "rotulo": "IPVA — arts. 1º-3º, 7º-12, 17: FG e momento, domicílio, contribuinte e solidariedade sem benefício de ordem, BC, novo lançamento por calendário (Lei 9.780/2025)",
+      "data_leitura": "2026-09-30",
+      "fonte": null,
+      "origem": "plano",
+      "plano_ref": "S4 Quarta",
+      "minutos": 105,
+      "prevista": "2026-10-01",
+      "emitida": "2026-10-01"
+    },
+    "2026-09-30||Extensão — EFD 3.2.2, registros-chave: C100/C170, E110, H010": {
+      "materia": "Auditoria Fiscal",
+      "rotulo": "Extensão — EFD 3.2.2, registros-chave: C100/C170, E110, H010",
+      "data_leitura": "2026-09-30",
+      "fonte": null,
+      "origem": "plano",
+      "plano_ref": "S4 Quarta",
+      "minutos": 30,
+      "prevista": "2026-10-01",
+      "emitida": "2026-10-01"
     }
   }
 }

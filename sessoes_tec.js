@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-09-30T08:20:56",
+ "gerado_em": "2026-10-01T08:45:54",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -1669,6 +1669,90 @@ window.SESSOES_TEC = {
    "minutos": 6,
    "qResolvidas": 5,
    "qAcertadas": 2,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-30~17",
+   "origem": "tec",
+   "data": "2026-09-30",
+   "mat": "AUDFIS",
+   "topicId": "17",
+   "assuntoLivre": "",
+   "minutos": 1,
+   "qResolvidas": 5,
+   "qAcertadas": 4,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-30~20",
+   "origem": "tec",
+   "data": "2026-09-30",
+   "mat": "AUDFIS",
+   "topicId": "20",
+   "assuntoLivre": "",
+   "minutos": 1,
+   "qResolvidas": 2,
+   "qAcertadas": 2,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-30~249",
+   "origem": "tec",
+   "data": "2026-09-30",
+   "mat": "FINPUB",
+   "topicId": "249",
+   "assuntoLivre": "",
+   "minutos": 4,
+   "qResolvidas": 10,
+   "qAcertadas": 9,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-30~250",
+   "origem": "tec",
+   "data": "2026-09-30",
+   "mat": "FINPUB",
+   "topicId": "250",
+   "assuntoLivre": "",
+   "minutos": 8,
+   "qResolvidas": 26,
+   "qAcertadas": 22,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-30~29",
+   "origem": "tec",
+   "data": "2026-09-30",
+   "mat": "INFRA",
+   "topicId": "29",
+   "assuntoLivre": "",
+   "minutos": 20,
+   "qResolvidas": 24,
+   "qAcertadas": 17,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-30~ctg-2001-r3-formalidades-da-escrituracao-contabil-em-forma-d-f87bf0",
+   "origem": "tec",
+   "data": "2026-09-30",
+   "mat": "CGER",
+   "topicId": null,
+   "assuntoLivre": "CTG 2001 (R3) - Formalidades da Escrituração Contábil em Forma Digital",
+   "minutos": 1,
+   "qResolvidas": 1,
+   "qAcertadas": 0,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-09-30~sem-assunto-98b864",
+   "origem": "tec",
+   "data": "2026-09-30",
+   "mat": "DTRIB",
+   "topicId": null,
+   "assuntoLivre": "Legislação Tributária dos Estados e do Distrito Federal — geral",
+   "minutos": 1,
+   "qResolvidas": 1,
+   "qAcertadas": 1,
    "obs": "reconstruída do TEC"
   }
  ]
