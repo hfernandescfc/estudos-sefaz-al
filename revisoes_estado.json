@@ -31,7 +31,10 @@
     "tec_registros_2026-10-01.json",
     "tec_registros_2026-10-01_b.json",
     "resultado_simulado_AF02_2026-09-30.json",
-    "resultado_simulado_AL02_2026-09-30.json"
+    "resultado_simulado_AL02_2026-09-30.json",
+    "resultado_simulado_RT01_2026-10-01.json",
+    "tec_registros_2026-10-01_casa.json",
+    "tec_registros_2026-10-02.json"
   ],
   "cadeias": {
     "Contabilidade Geral||Plano de Contas": {
@@ -354,7 +357,7 @@
           "emitida": "2026-09-23"
         },
         "d28": {
-          "prevista": "2026-10-07",
+          "prevista": "2026-10-08",
           "emitida": null
         }
       }
@@ -384,7 +387,7 @@
           "emitida": "2026-09-23"
         },
         "d28": {
-          "prevista": "2026-10-07",
+          "prevista": "2026-10-08",
           "emitida": null
         }
       }
@@ -412,7 +415,7 @@
           "emitida": "2026-09-23"
         },
         "d28": {
-          "prevista": "2026-10-07",
+          "prevista": "2026-10-08",
           "emitida": null
         }
       }
@@ -480,7 +483,7 @@
           "emitida": "2026-09-23"
         },
         "d28": {
-          "prevista": "2026-10-07",
+          "prevista": "2026-10-08",
           "emitida": null
         }
       }
@@ -657,7 +660,7 @@
         },
         "d14": {
           "prevista": "2026-10-02",
-          "emitida": null
+          "emitida": "2026-10-02"
         },
         "d28": {
           "prevista": "2026-10-12",
@@ -1094,7 +1097,7 @@
         },
         "d14": {
           "prevista": "2026-10-02",
-          "emitida": null
+          "emitida": "2026-10-02"
         },
         "d28": {
           "prevista": "2026-10-16",
@@ -1191,7 +1194,7 @@
         },
         "d6": {
           "prevista": "2026-10-02",
-          "emitida": null,
+          "emitida": "2026-10-02",
           "resultado": null
         },
         "d14": {
@@ -2345,7 +2348,17 @@
         "d6": {
           "prevista": "2026-10-01",
           "emitida": "2026-10-01",
-          "resultado": null
+          "resultado": {
+            "pct": 88,
+            "saldo": 75,
+            "questoes": 8,
+            "limiar_saldo": 70,
+            "aprovada": true,
+            "data": "2026-10-02",
+            "fonte": "tec_registros_2026-10-02.json",
+            "fracao_me": 0.0,
+            "chance_base": 0.5
+          }
         },
         "d14": {
           "prevista": "2026-10-09",
@@ -2531,7 +2544,17 @@
         "d6": {
           "prevista": "2026-10-01",
           "emitida": "2026-10-01",
-          "resultado": null
+          "resultado": {
+            "pct": 100,
+            "saldo": 100,
+            "questoes": 9,
+            "limiar_saldo": 70,
+            "aprovada": true,
+            "data": "2026-10-02",
+            "fonte": "tec_registros_2026-10-02.json",
+            "fracao_me": 0.0,
+            "chance_base": 0.5
+          }
         },
         "d14": {
           "prevista": "2026-10-09",
@@ -2687,7 +2710,7 @@
           "emitida": "2026-09-28"
         },
         "d6": {
-          "prevista": "2026-10-02",
+          "prevista": "2026-10-05",
           "emitida": null,
           "resultado": null
         },
@@ -3415,7 +3438,7 @@
         },
         "d6": {
           "prevista": "2026-10-02",
-          "emitida": null,
+          "emitida": "2026-10-02",
           "resultado": null
         },
         "d14": {
@@ -3550,7 +3573,7 @@
         },
         "d6": {
           "prevista": "2026-10-02",
-          "emitida": null,
+          "emitida": "2026-10-02",
           "resultado": null
         },
         "d14": {
@@ -4743,53 +4766,697 @@
           ]
         }
       }
+    },
+    "Reforma Tributária||Apuração assistida": {
+      "materia": "Reforma Tributária",
+      "assunto": "Apuração assistida",
+      "data_base": "2026-10-01",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "SIM:RT01:Q1-30:23",
+        "SIM:RT01:Q1-30:24",
+        "SIM:RT01:Q1-30:26",
+        "SIM:RT01:Q1-30:28",
+        "SIM:RT01:Q1-30:29"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-10-02",
+          "emitida": "2026-10-02"
+        },
+        "d6": {
+          "prevista": "2026-10-07",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-15",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-29",
+          "emitida": null
+        }
+      },
+      "origem": "simulado",
+      "topico": 132,
+      "amostra_base": {
+        "itens": {
+          "SIM:RT01:Q1-30:23": [
+            false,
+            true,
+            "C"
+          ],
+          "SIM:RT01:Q1-30:24": [
+            false,
+            false,
+            "E"
+          ],
+          "SIM:RT01:Q1-30:25": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:RT01:Q1-30:26": [
+            true,
+            true,
+            "E"
+          ],
+          "SIM:RT01:Q1-30:27": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:RT01:Q1-30:28": [
+            true,
+            true,
+            "E"
+          ],
+          "SIM:RT01:Q1-30:29": [
+            true,
+            true,
+            "E"
+          ],
+          "SIM:RT01:Q1-30:30": [
+            true,
+            false,
+            "C"
+          ]
+        }
+      }
+    },
+    "Reforma Tributária||Split payment e split payment simplificado (arts. 31-36)": {
+      "materia": "Reforma Tributária",
+      "assunto": "Split payment e split payment simplificado (arts. 31-36)",
+      "data_base": "2026-10-01",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "SIM:RT01:Q1-30:5",
+        "SIM:RT01:Q1-30:6",
+        "SIM:RT01:Q1-30:9",
+        "SIM:RT01:Q1-30:14",
+        "SIM:RT01:Q1-30:15",
+        "SIM:RT01:Q1-30:2",
+        "SIM:RT01:Q1-30:4",
+        "SIM:RT01:Q1-30:12",
+        "SIM:RT01:Q1-30:16",
+        "SIM:RT01:Q1-30:21"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-10-02",
+          "emitida": "2026-10-02"
+        },
+        "d6": {
+          "prevista": "2026-10-07",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-15",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-29",
+          "emitida": null
+        }
+      },
+      "origem": "simulado",
+      "topico": null,
+      "amostra_base": {
+        "itens": {
+          "SIM:RT01:Q1-30:1": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:RT01:Q1-30:2": [
+            true,
+            true,
+            "E"
+          ],
+          "SIM:RT01:Q1-30:3": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:RT01:Q1-30:4": [
+            true,
+            true,
+            "E"
+          ],
+          "SIM:RT01:Q1-30:5": [
+            false,
+            false,
+            "C"
+          ],
+          "SIM:RT01:Q1-30:6": [
+            false,
+            false,
+            "E"
+          ],
+          "SIM:RT01:Q1-30:7": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:RT01:Q1-30:8": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:RT01:Q1-30:9": [
+            false,
+            false,
+            "C"
+          ],
+          "SIM:RT01:Q1-30:10": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:RT01:Q1-30:11": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:RT01:Q1-30:12": [
+            true,
+            true,
+            "C"
+          ],
+          "SIM:RT01:Q1-30:13": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:RT01:Q1-30:14": [
+            false,
+            false,
+            "C"
+          ],
+          "SIM:RT01:Q1-30:15": [
+            false,
+            true,
+            "E"
+          ],
+          "SIM:RT01:Q1-30:16": [
+            true,
+            true,
+            "C"
+          ],
+          "SIM:RT01:Q1-30:17": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:RT01:Q1-30:18": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:RT01:Q1-30:19": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:RT01:Q1-30:20": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:RT01:Q1-30:21": [
+            true,
+            true,
+            "E"
+          ],
+          "SIM:RT01:Q1-30:22": [
+            true,
+            false,
+            "C"
+          ]
+        }
+      }
+    },
+    "Direito Administrativo (Doutrina e Leis Federais)||Alteração dos Contratos e dos Preços (art. 124 a 136 da Lei nº 14.133/2021)": {
+      "materia": "Direito Administrativo (Doutrina e Leis Federais)",
+      "assunto": "Alteração dos Contratos e dos Preços (art. 124 a 136 da Lei nº 14.133/2021)",
+      "data_base": "2026-10-01",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "3008063",
+        "3041163"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-10-02",
+          "emitida": "2026-10-02"
+        },
+        "d6": {
+          "prevista": "2026-10-07",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-15",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-29",
+          "emitida": null
+        }
+      },
+      "amostra_base": {
+        "itens": {
+          "3008063": [
+            true,
+            true,
+            "E"
+          ],
+          "3041162": [
+            true,
+            false,
+            "C"
+          ],
+          "3041163": [
+            true,
+            true,
+            "C"
+          ],
+          "3074991": [
+            true,
+            false,
+            "C"
+          ],
+          "3076044": [
+            true,
+            false,
+            "C"
+          ],
+          "3076080": [
+            true,
+            false,
+            "E"
+          ],
+          "3076081": [
+            true,
+            false,
+            "C"
+          ]
+        }
+      }
+    },
+    "Direito Administrativo (Doutrina e Leis Federais)||Associação Sindical e Direito de Greve": {
+      "materia": "Direito Administrativo (Doutrina e Leis Federais)",
+      "assunto": "Associação Sindical e Direito de Greve",
+      "data_base": "2026-10-01",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "6920",
+        "49876",
+        "74875",
+        "561926"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-10-02",
+          "emitida": "2026-10-02"
+        },
+        "d6": {
+          "prevista": "2026-10-07",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-15",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-29",
+          "emitida": null
+        }
+      },
+      "amostra_base": {
+        "itens": {
+          "6920": [
+            false,
+            false,
+            "C"
+          ],
+          "49876": [
+            false,
+            false,
+            "E"
+          ],
+          "57784": [
+            true,
+            false,
+            "C"
+          ],
+          "74875": [
+            false,
+            false,
+            "E"
+          ],
+          "144318": [
+            true,
+            false,
+            "C"
+          ],
+          "147789": [
+            true,
+            false,
+            "C"
+          ],
+          "294991": [
+            true,
+            false,
+            "E"
+          ],
+          "550802": [
+            true,
+            false,
+            "C"
+          ],
+          "561926": [
+            true,
+            true,
+            "E"
+          ],
+          "561927": [
+            true,
+            false,
+            "E"
+          ],
+          "682203": [
+            true,
+            false,
+            "C"
+          ],
+          "1297725": [
+            true,
+            false,
+            "E"
+          ],
+          "1596172": [
+            true,
+            false,
+            "E"
+          ],
+          "2012059": [
+            true,
+            false,
+            "C"
+          ]
+        }
+      }
+    },
+    "TI - Ciência de Dados e Inteligência Artificial||Conceitos Iniciais e Gerais de Inteligência Artificial": {
+      "materia": "TI - Ciência de Dados e Inteligência Artificial",
+      "assunto": "Conceitos Iniciais e Gerais de Inteligência Artificial",
+      "data_base": "2026-10-02",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "3822800",
+        "3008376",
+        "3076546",
+        "3076779",
+        "3843010",
+        "3857429"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-10-02",
+          "emitida": "2026-10-02"
+        },
+        "d6": {
+          "prevista": "2026-10-08",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-16",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-10-30",
+          "emitida": null
+        }
+      },
+      "amostra_base": {
+        "itens": {
+          "2346896": [
+            true,
+            false,
+            "C"
+          ],
+          "2520686": [
+            true,
+            false,
+            "E"
+          ],
+          "2781160": [
+            true,
+            false,
+            "D"
+          ],
+          "2851356": [
+            true,
+            false,
+            "C"
+          ],
+          "2851368": [
+            true,
+            false,
+            "A"
+          ],
+          "2851370": [
+            true,
+            false,
+            "C"
+          ],
+          "2851374": [
+            true,
+            false,
+            "C"
+          ],
+          "2851378": [
+            true,
+            false,
+            "B"
+          ],
+          "2851387": [
+            true,
+            false,
+            "B"
+          ],
+          "2852103": [
+            true,
+            false,
+            "C"
+          ],
+          "2876500": [
+            true,
+            false,
+            "C"
+          ],
+          "2876501": [
+            true,
+            false,
+            "C"
+          ],
+          "2876504": [
+            true,
+            false,
+            "C"
+          ],
+          "2877420": [
+            true,
+            false,
+            "C"
+          ],
+          "2877421": [
+            true,
+            false,
+            "C"
+          ],
+          "2877422": [
+            true,
+            false,
+            "E"
+          ],
+          "2903626": [
+            true,
+            false,
+            "B"
+          ],
+          "3008376": [
+            true,
+            true,
+            "C"
+          ],
+          "3052983": [
+            true,
+            false,
+            "C"
+          ],
+          "3054465": [
+            true,
+            false,
+            "E"
+          ],
+          "3054476": [
+            true,
+            false,
+            "E"
+          ],
+          "3076546": [
+            true,
+            true,
+            "C"
+          ],
+          "3076774": [
+            true,
+            false,
+            "E"
+          ],
+          "3076779": [
+            true,
+            true,
+            "E"
+          ],
+          "3285119": [
+            true,
+            false,
+            "D"
+          ],
+          "3454766": [
+            true,
+            false,
+            "A"
+          ],
+          "3457434": [
+            true,
+            false,
+            "D"
+          ],
+          "3605532": [
+            true,
+            false,
+            "C"
+          ],
+          "3815466": [
+            true,
+            false,
+            "E"
+          ],
+          "3822800": [
+            false,
+            false,
+            "A"
+          ],
+          "3823872": [
+            true,
+            false,
+            "C"
+          ],
+          "3842053": [
+            true,
+            false,
+            "C"
+          ],
+          "3843010": [
+            true,
+            true,
+            "B"
+          ],
+          "3846477": [
+            true,
+            false,
+            "C"
+          ],
+          "3847055": [
+            true,
+            false,
+            "C"
+          ],
+          "3857429": [
+            true,
+            true,
+            "E"
+          ],
+          "3883448": [
+            true,
+            false,
+            "A"
+          ]
+        }
+      }
     }
   },
   "ultima_fila": {
-    "data": "2026-10-01",
+    "data": "2026-10-02",
     "itens": [
       [
-        "Auditoria Fiscal||Guia Prático da EFD ICMS/IPI 3.2.2 — blocos e obrigatoriedade",
+        "2026-10-01||Extensão — EFD 3.2.2, retificação: prazos e limites. Numérico → cards",
+        "leitura"
+      ],
+      [
+        "2026-10-01||Guia Prático EFD-ICMS/IPI 3.2.2 — retificação: prazos e limites (Cap. I, Seção 7, pp. 5-6; registro 0000, p. 29)",
+        "leitura"
+      ],
+      [
+        "Direito Administrativo (Doutrina e Leis Federais)||Alteração dos Contratos e dos Preços (art. 124 a 136 da Lei nº 14.133/2021)",
         "d1"
       ],
       [
-        "Auditoria Fiscal||MOC NF-e 7.0 — contingência (SVC-AN, SVC-RS, EPEC, FS-DA)",
-        "d6"
-      ],
-      [
-        "Direito Tributário||Comitê Gestor do IBS (CF 1988, EC 132)",
-        "d14"
-      ],
-      [
-        "Legislação Tributária Estadual||IPVA — isenções e não incidência (6.555, arts. 4º-6º)",
+        "Direito Administrativo (Doutrina e Leis Federais)||Associação Sindical e Direito de Greve",
         "d1"
       ],
       [
-        "Legislação Tributária Federal||Da Devolução Personalizada do IBS e da CBS (Cashback) e da Cesta Básica Nacional de Alimentos (arts. 112 a 125 da LC nº 214/2025)",
+        "Direito Tributário||Imposto Seletivo - IS (CF 1988; EC 132)",
         "d14"
       ],
       [
-        "Legislação Tributária Federal||Da Operacionalização do IBS e da CBS (arts. 58 a 62 da LC nº 214/2025)",
-        "d14"
-      ],
-      [
-        "Legislação Tributária Federal||Do Local da Operação (art. 11 da LC nº 214/2025)",
-        "d14"
-      ],
-      [
-        "TI - Banco de Dados||Normalização",
+        "Legislação Tributária Estadual||IPVA — FG, domicílio, contribuinte e solidariedade",
         "d6"
       ],
       [
-        "TI - Engenharia de Software||SCRUM",
+        "Legislação Tributária Estadual||IPVA — lançamento por calendário (Lei 9.780/2025)",
+        "d6"
+      ],
+      [
+        "Reforma Tributária||Apuração assistida",
+        "d1"
+      ],
+      [
+        "Reforma Tributária||Split payment e split payment simplificado (arts. 31-36)",
+        "d1"
+      ],
+      [
+        "TI - Ciência de Dados e Inteligência Artificial||Conceitos Gerais de Machine Learning",
         "d14"
       ],
       [
-        "TI - Gestão e Governança de TI||BPMN (Modelo e Notação de Processos de Negócio)",
-        "d14"
+        "TI - Ciência de Dados e Inteligência Artificial||Conceitos Iniciais e Gerais de Inteligência Artificial",
+        "d1"
+      ],
+      [
+        "TI - Segurança da Informação||ICP e Autoridades Certificadoras",
+        "d6"
       ]
     ],
-    "confirmada": "2026-10-01"
+    "confirmada": "2026-10-02"
   },
   "leituras": {
     "2026-09-14||LC 214, arts. 38-56 — não cumulatividade, apropriação e utilização de créditos": {
@@ -5072,6 +5739,28 @@
       "minutos": 30,
       "prevista": "2026-10-01",
       "emitida": "2026-10-01"
+    },
+    "2026-10-01||Guia Prático EFD-ICMS/IPI 3.2.2 — retificação: prazos e limites (Cap. I, Seção 7, pp. 5-6; registro 0000, p. 29)": {
+      "materia": "Auditoria Fiscal",
+      "rotulo": "Guia Prático EFD-ICMS/IPI 3.2.2 — retificação: prazos e limites (Cap. I, Seção 7, pp. 5-6; registro 0000, p. 29)",
+      "data_leitura": "2026-10-01",
+      "fonte": null,
+      "origem": "declarada",
+      "plano_ref": null,
+      "minutos": null,
+      "prevista": "2026-10-02",
+      "emitida": "2026-10-02"
+    },
+    "2026-10-01||Extensão — EFD 3.2.2, retificação: prazos e limites. Numérico → cards": {
+      "materia": "Auditoria Fiscal",
+      "rotulo": "Extensão — EFD 3.2.2, retificação: prazos e limites. Numérico → cards",
+      "data_leitura": "2026-10-01",
+      "fonte": null,
+      "origem": "plano",
+      "plano_ref": "S4 Quinta",
+      "minutos": 30,
+      "prevista": "2026-10-02",
+      "emitida": "2026-10-02"
     }
   }
 }
