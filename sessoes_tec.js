@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-10-02T11:42:06",
+ "gerado_em": "2026-10-05T08:37:10",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -1792,6 +1792,18 @@ window.SESSOES_TEC = {
    "obs": "Simulado RT01 (Q1-30) cronometrado"
   },
   {
+   "uid": "SIM~RT05~2026-10-01~RT",
+   "origem": "simulado",
+   "data": "2026-10-01",
+   "mat": "RT",
+   "topicId": null,
+   "assuntoLivre": "Simulado RT05 — RT",
+   "minutos": 11,
+   "qResolvidas": 32,
+   "qAcertadas": 19,
+   "obs": "Simulado RT05 (Q1-32) cronometrado"
+  },
+  {
    "uid": "TEC~2026-10-01~225",
    "origem": "tec",
    "data": "2026-10-01",
@@ -1850,6 +1862,18 @@ window.SESSOES_TEC = {
    "qResolvidas": 7,
    "qAcertadas": 7,
    "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "SIM~AL03~2026-10-02~LEGAL",
+   "origem": "simulado",
+   "data": "2026-10-02",
+   "mat": "LEGAL",
+   "topicId": null,
+   "assuntoLivre": "Simulado AL03 — LEGAL",
+   "minutos": 10,
+   "qResolvidas": 26,
+   "qAcertadas": 17,
+   "obs": "Simulado AL03 (Q1-26) cronometrado"
   }
  ]
 };
