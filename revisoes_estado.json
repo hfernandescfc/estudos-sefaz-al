@@ -35,6 +35,7 @@
     "resultado_simulado_RT01_2026-10-01.json",
     "tec_registros_2026-10-01_casa.json",
     "tec_registros_2026-10-02.json",
+    "tec_registros_2026-10-05.json",
     "resultado_simulado_AL03_2026-10-02.json",
     "resultado_simulado_RT05_2026-10-01.json"
   ],
@@ -298,7 +299,7 @@
           "emitida": "2026-09-22"
         },
         "d28": {
-          "prevista": "2026-10-06",
+          "prevista": "2026-10-07",
           "emitida": "2026-10-05"
         }
       }
@@ -329,7 +330,7 @@
           "emitida": "2026-09-22"
         },
         "d28": {
-          "prevista": "2026-10-06",
+          "prevista": "2026-10-07",
           "emitida": "2026-10-05"
         }
       }
@@ -455,7 +456,7 @@
           "emitida": "2026-10-01"
         },
         "d28": {
-          "prevista": "2026-10-14",
+          "prevista": "2026-10-15",
           "emitida": null
         }
       }
@@ -524,7 +525,7 @@
           "emitida": "2026-10-01"
         },
         "d28": {
-          "prevista": "2026-10-14",
+          "prevista": "2026-10-15",
           "emitida": null
         }
       }
@@ -626,7 +627,7 @@
           "emitida": "2026-10-01"
         },
         "d28": {
-          "prevista": "2026-10-12",
+          "prevista": "2026-10-13",
           "emitida": null
         }
       }
@@ -665,7 +666,7 @@
           "emitida": "2026-10-02"
         },
         "d28": {
-          "prevista": "2026-10-12",
+          "prevista": "2026-10-13",
           "emitida": null
         }
       }
@@ -755,7 +756,7 @@
           "emitida": "2026-09-28"
         },
         "d28": {
-          "prevista": "2026-10-12",
+          "prevista": "2026-10-13",
           "emitida": null
         }
       }
@@ -787,7 +788,7 @@
           "emitida": "2026-10-01"
         },
         "d28": {
-          "prevista": "2026-10-13",
+          "prevista": "2026-10-14",
           "emitida": null
         }
       }
@@ -826,7 +827,7 @@
           "emitida": "2026-09-29"
         },
         "d28": {
-          "prevista": "2026-10-13",
+          "prevista": "2026-10-14",
           "emitida": null
         }
       }
@@ -863,7 +864,7 @@
           "emitida": "2026-09-29"
         },
         "d28": {
-          "prevista": "2026-10-13",
+          "prevista": "2026-10-14",
           "emitida": null
         }
       }
@@ -901,7 +902,7 @@
           "emitida": "2026-10-01"
         },
         "d28": {
-          "prevista": "2026-10-14",
+          "prevista": "2026-10-15",
           "emitida": null
         }
       }
@@ -1132,8 +1133,8 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-05",
-          "emitida": "2026-10-05"
+          "prevista": "2026-10-06",
+          "emitida": null
         },
         "d28": {
           "prevista": "2026-10-19",
@@ -1169,8 +1170,8 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-05",
-          "emitida": "2026-10-05"
+          "prevista": "2026-10-06",
+          "emitida": null
         },
         "d28": {
           "prevista": "2026-10-19",
@@ -1181,62 +1182,88 @@
     "TI - Segurança da Informação||ICP e Autoridades Certificadoras": {
       "materia": "TI - Segurança da Informação",
       "assunto": "ICP e Autoridades Certificadoras",
-      "data_base": "2026-09-28",
+      "data_base": "2026-10-05",
       "cadeia_completa": true,
       "alvos_origem": [
-        "3324038",
-        "3598779"
+        "1790729",
+        "738000",
+        "390478"
       ],
-      "reinicios": 1,
+      "reinicios": 2,
       "status": "ativa",
       "etapas": {
         "d1": {
-          "prevista": "2026-09-28",
-          "emitida": "2026-09-28"
+          "prevista": "2026-10-05",
+          "emitida": "2026-10-05"
         },
         "d6": {
-          "prevista": "2026-10-02",
-          "emitida": "2026-10-02",
+          "prevista": "2026-10-12",
+          "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-12",
+          "prevista": "2026-10-19",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-26",
+          "prevista": "2026-11-02",
           "emitida": null
         }
       },
       "amostra_base": {
         "itens": {
-          "3967368": [
+          "2216236": [
+            true,
+            false,
+            "E"
+          ],
+          "1628729": [
+            true,
+            false,
+            "E"
+          ],
+          "1790729": [
+            false,
+            true,
+            "C"
+          ],
+          "1393399": [
+            true,
+            false,
+            "E"
+          ],
+          "616042": [
             true,
             false,
             "C"
           ],
-          "4143756": [
+          "738000": [
+            false,
+            false,
+            "C"
+          ],
+          "324358": [
             true,
+            false,
+            "E"
+          ],
+          "359635": [
+            true,
+            false,
+            "E"
+          ],
+          "390478": [
+            false,
             false,
             "E"
           ],
           "3324038": [
-            false,
-            true,
-            "C"
-          ],
-          "3345924": [
-            true,
-            false,
-            "E"
-          ],
-          "3444448": [
             true,
             false,
             "C"
           ],
           "3598779": [
-            false,
+            true,
             false,
             "E"
           ]
@@ -1305,7 +1332,7 @@
           }
         },
         "d14": {
-          "prevista": "2026-10-07",
+          "prevista": "2026-10-08",
           "emitida": null
         },
         "d28": {
@@ -1483,7 +1510,7 @@
           }
         },
         "d14": {
-          "prevista": "2026-10-07",
+          "prevista": "2026-10-08",
           "emitida": null
         },
         "d28": {
@@ -1676,6 +1703,21 @@
             true,
             false,
             "E"
+          ],
+          "231221": [
+            true,
+            false,
+            "C"
+          ],
+          "284815": [
+            true,
+            false,
+            "E"
+          ],
+          "1294684": [
+            true,
+            false,
+            "E"
           ]
         }
       }
@@ -1710,7 +1752,7 @@
           "emitida": "2026-09-28"
         },
         "d28": {
-          "prevista": "2026-10-12",
+          "prevista": "2026-10-13",
           "emitida": null
         }
       }
@@ -1741,7 +1783,7 @@
           "emitida": "2026-10-01"
         },
         "d28": {
-          "prevista": "2026-10-15",
+          "prevista": "2026-10-16",
           "emitida": null
         }
       }
@@ -2712,8 +2754,8 @@
           "emitida": "2026-09-28"
         },
         "d6": {
-          "prevista": "2026-10-05",
-          "emitida": "2026-10-05",
+          "prevista": "2026-10-06",
+          "emitida": null,
           "resultado": null
         },
         "d14": {
@@ -3914,8 +3956,8 @@
           "emitida": "2026-09-30"
         },
         "d6": {
-          "prevista": "2026-10-05",
-          "emitida": "2026-10-05",
+          "prevista": "2026-10-06",
+          "emitida": null,
           "resultado": null
         },
         "d14": {
@@ -3985,8 +4027,8 @@
           "emitida": "2026-09-30"
         },
         "d6": {
-          "prevista": "2026-10-05",
-          "emitida": "2026-10-05",
+          "prevista": "2026-10-06",
+          "emitida": null,
           "resultado": null
         },
         "d14": {
@@ -5565,6 +5607,245 @@
         }
       }
     },
+    "Contabilidade Geral||Atos e Fatos Contábeis": {
+      "materia": "Contabilidade Geral",
+      "assunto": "Atos e Fatos Contábeis",
+      "data_base": "2026-10-05",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "1718373"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-10-05",
+          "emitida": "2026-10-05"
+        },
+        "d6": {
+          "prevista": "2026-10-12",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-19",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-11-02",
+          "emitida": null
+        }
+      },
+      "amostra_base": {
+        "itens": {
+          "1718371": [
+            true,
+            false,
+            "E"
+          ],
+          "1718373": [
+            false,
+            false,
+            "E"
+          ],
+          "1125568": [
+            true,
+            false,
+            "E"
+          ]
+        }
+      }
+    },
+    "Contabilidade Geral||CPC 16 - Tratamento Contábil para os Estoques": {
+      "materia": "Contabilidade Geral",
+      "assunto": "CPC 16 - Tratamento Contábil para os Estoques",
+      "data_base": "2026-10-05",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "1718377",
+        "1143545"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-10-05",
+          "emitida": "2026-10-05"
+        },
+        "d6": {
+          "prevista": "2026-10-12",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-19",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-11-02",
+          "emitida": null
+        }
+      },
+      "amostra_base": {
+        "itens": {
+          "1718377": [
+            true,
+            true,
+            "C"
+          ],
+          "1718379": [
+            true,
+            false,
+            "E"
+          ],
+          "1790365": [
+            true,
+            false,
+            "E"
+          ],
+          "1125571": [
+            true,
+            false,
+            "E"
+          ],
+          "1143545": [
+            true,
+            true,
+            "E"
+          ]
+        }
+      }
+    },
+    "Contabilidade Geral||Estrutura Conceitual Básica da Contabilidade (CPC 00)": {
+      "materia": "Contabilidade Geral",
+      "assunto": "Estrutura Conceitual Básica da Contabilidade (CPC 00)",
+      "data_base": "2026-10-05",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "1790357"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-10-05",
+          "emitida": "2026-10-05"
+        },
+        "d6": {
+          "prevista": "2026-10-12",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-19",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-11-02",
+          "emitida": null
+        }
+      },
+      "amostra_base": {
+        "itens": {
+          "1790357": [
+            false,
+            false,
+            "C"
+          ],
+          "1790358": [
+            true,
+            false,
+            "C"
+          ],
+          "1125567": [
+            true,
+            false,
+            "C"
+          ],
+          "1143535": [
+            true,
+            false,
+            "E"
+          ]
+        }
+      }
+    },
+    "Legislação Tributária dos Estados e do Distrito Federal||Lei Estadual nº 6.555/2004 - IPVA (AL)": {
+      "materia": "Legislação Tributária dos Estados e do Distrito Federal",
+      "assunto": "Lei Estadual nº 6.555/2004 - IPVA (AL)",
+      "data_base": "2026-10-05",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "1790845",
+        "1143888",
+        "1143889"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-10-05",
+          "emitida": "2026-10-05"
+        },
+        "d6": {
+          "prevista": "2026-10-12",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-19",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-11-02",
+          "emitida": null
+        }
+      },
+      "amostra_base": {
+        "itens": {
+          "1790814": [
+            true,
+            false,
+            "C"
+          ],
+          "1790817": [
+            true,
+            false,
+            "C"
+          ],
+          "1790845": [
+            true,
+            true,
+            "E"
+          ],
+          "1143873": [
+            true,
+            false,
+            "C"
+          ],
+          "1143876": [
+            true,
+            false,
+            "E"
+          ],
+          "1143888": [
+            true,
+            true,
+            "E"
+          ],
+          "1143889": [
+            true,
+            true,
+            "C"
+          ],
+          "38188": [
+            true,
+            false,
+            "E"
+          ]
+        }
+      }
+    },
     "Legislação Tributária Estadual||PAT — auto de infração, intimação e defesa": {
       "materia": "Legislação Tributária Estadual",
       "assunto": "PAT — auto de infração, intimação e defesa",
@@ -5754,12 +6035,20 @@
         "leitura"
       ],
       [
-        "Direito Tributário||Imposto sobre Bens e Serviços - IBS (CF/1988, EC 132)",
-        "d28"
+        "Contabilidade Geral||Atos e Fatos Contábeis",
+        "d1"
       ],
       [
-        "Direito Tributário||Outras Questões e Tópicos Mesclados sobre a Reforma Tributária",
-        "d14"
+        "Contabilidade Geral||CPC 16 - Tratamento Contábil para os Estoques",
+        "d1"
+      ],
+      [
+        "Contabilidade Geral||Estrutura Conceitual Básica da Contabilidade (CPC 00)",
+        "d1"
+      ],
+      [
+        "Direito Tributário||Imposto sobre Bens e Serviços - IBS (CF/1988, EC 132)",
+        "d28"
       ],
       [
         "Legislação Tributária Estadual||PAT — auto de infração, intimação e defesa",
@@ -5782,12 +6071,12 @@
         "d28"
       ],
       [
-        "Legislação Tributária Federal||Disposições Preliminares do Imposto Seletivo (arts. 409 a 411 da LC nº 214/2025)",
-        "d6"
-      ],
-      [
         "Legislação Tributária Federal||Do Momento de Ocorrência do Fato Gerador (art. 10 da LC nº 214/2025)",
         "d28"
+      ],
+      [
+        "Legislação Tributária dos Estados e do Distrito Federal||Lei Estadual nº 6.555/2004 - IPVA (AL)",
+        "d1"
       ],
       [
         "Reforma Tributária||DeRE, NF-ABI, NFAg, BP-e Aéreo e NF-e Gás",
@@ -5802,14 +6091,6 @@
         "d6"
       ],
       [
-        "Reforma Tributária||Sinter e Cadastro Imobiliário Brasileiro (CIB)",
-        "d6"
-      ],
-      [
-        "Reforma Tributária||Tabela cCredPres — crédito presumido",
-        "d6"
-      ],
-      [
         "TI - Ciência de Dados e Inteligência Artificial||Conceitos de Big Data",
         "d6"
       ],
@@ -5818,8 +6099,8 @@
         "d28"
       ],
       [
-        "TI - Segurança da Informação||Conceitos de Certificado Digital",
-        "d14"
+        "TI - Segurança da Informação||ICP e Autoridades Certificadoras",
+        "d1"
       ]
     ],
     "confirmada": "2026-10-05"
