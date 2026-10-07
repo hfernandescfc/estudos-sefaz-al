@@ -40,7 +40,9 @@
     "resultado_simulado_RT05_2026-10-01.json",
     "tec_registros_2026-10-06.json",
     "resultado_simulado_AL04_2026-10-05.json",
-    "resultado_simulado_RT13_2026-10-05.json"
+    "resultado_simulado_RT13_2026-10-05.json",
+    "tec_registros_2026-10-07_casa.json",
+    "resultado_simulado_AF04_2026-10-06.json"
   ],
   "cadeias": {
     "Contabilidade Geral||Plano de Contas": {
@@ -1038,7 +1040,7 @@
           "emitida": "2026-09-30"
         },
         "d28": {
-          "prevista": "2026-10-14",
+          "prevista": "2026-10-15",
           "emitida": null
         }
       }
@@ -1136,7 +1138,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-07",
+          "prevista": "2026-10-08",
           "emitida": null
         },
         "d28": {
@@ -1331,7 +1333,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-07",
+          "prevista": "2026-10-08",
           "emitida": null
         },
         "d28": {
@@ -2793,7 +2795,7 @@
         },
         "d6": {
           "prevista": "2026-10-07",
-          "emitida": null,
+          "emitida": "2026-10-07",
           "resultado": null
         },
         "d14": {
@@ -3351,7 +3353,7 @@
           }
         },
         "d14": {
-          "prevista": "2026-10-13",
+          "prevista": "2026-10-14",
           "emitida": null
         },
         "d28": {
@@ -4249,7 +4251,7 @@
         },
         "d6": {
           "prevista": "2026-10-07",
-          "emitida": null,
+          "emitida": "2026-10-07",
           "resultado": null
         },
         "d14": {
@@ -4408,7 +4410,7 @@
         },
         "d6": {
           "prevista": "2026-10-07",
-          "emitida": null,
+          "emitida": "2026-10-07",
           "resultado": null
         },
         "d14": {
@@ -4573,7 +4575,7 @@
         },
         "d6": {
           "prevista": "2026-10-07",
-          "emitida": null,
+          "emitida": "2026-10-07",
           "resultado": null
         },
         "d14": {
@@ -4946,7 +4948,7 @@
         },
         "d6": {
           "prevista": "2026-10-07",
-          "emitida": null,
+          "emitida": "2026-10-07",
           "resultado": null
         },
         "d14": {
@@ -5031,7 +5033,7 @@
         },
         "d6": {
           "prevista": "2026-10-07",
-          "emitida": null,
+          "emitida": "2026-10-07",
           "resultado": null
         },
         "d14": {
@@ -5338,7 +5340,7 @@
         },
         "d6": {
           "prevista": "2026-10-07",
-          "emitida": null,
+          "emitida": "2026-10-07",
           "resultado": null
         },
         "d14": {
@@ -5410,11 +5412,11 @@
         },
         "d6": {
           "prevista": "2026-10-07",
-          "emitida": null,
+          "emitida": "2026-10-07",
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-15",
+          "prevista": "2026-10-16",
           "emitida": null
         },
         "d28": {
@@ -6303,7 +6305,7 @@
           "emitida": "2026-10-06"
         },
         "d6": {
-          "prevista": "2026-10-12",
+          "prevista": "2026-10-09",
           "emitida": null,
           "resultado": null
         },
@@ -6417,61 +6419,459 @@
           ]
         }
       }
+    },
+    "Economia e Finanças Públicas||Bem Estar e Funções do Governo": {
+      "materia": "Economia e Finanças Públicas",
+      "assunto": "Bem Estar e Funções do Governo",
+      "data_base": "2026-10-07",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "1937781",
+        "2520677",
+        "2876231",
+        "3103690",
+        "2818553",
+        "2876234",
+        "3041669",
+        "3249844",
+        "3296090",
+        "3313440"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-10-07",
+          "emitida": "2026-10-07"
+        },
+        "d6": {
+          "prevista": "2026-10-13",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-21",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-11-04",
+          "emitida": null
+        }
+      },
+      "amostra_base": {
+        "itens": {
+          "1937781": [
+            false,
+            false,
+            "E"
+          ],
+          "1937782": [
+            true,
+            false,
+            "E"
+          ],
+          "1937784": [
+            true,
+            false,
+            "C"
+          ],
+          "2151723": [
+            true,
+            false,
+            "C"
+          ],
+          "2520677": [
+            false,
+            false,
+            "E"
+          ],
+          "2589597": [
+            true,
+            false,
+            "E"
+          ],
+          "2794998": [
+            true,
+            false,
+            "C"
+          ],
+          "2794999": [
+            true,
+            false,
+            "C"
+          ],
+          "2795000": [
+            true,
+            false,
+            "E"
+          ],
+          "2818539": [
+            true,
+            false,
+            "C"
+          ],
+          "2818551": [
+            true,
+            false,
+            "E"
+          ],
+          "2818553": [
+            true,
+            true,
+            "C"
+          ],
+          "2876231": [
+            false,
+            true,
+            "E"
+          ],
+          "2876234": [
+            true,
+            true,
+            "C"
+          ],
+          "2983076": [
+            true,
+            false,
+            "C"
+          ],
+          "3008708": [
+            true,
+            false,
+            "E"
+          ],
+          "3041669": [
+            true,
+            true,
+            "E"
+          ],
+          "3103690": [
+            false,
+            false,
+            "E"
+          ],
+          "3143101": [
+            true,
+            false,
+            "C"
+          ],
+          "3143106": [
+            true,
+            false,
+            "E"
+          ],
+          "3202278": [
+            true,
+            false,
+            "C"
+          ],
+          "3249842": [
+            true,
+            false,
+            "E"
+          ],
+          "3249844": [
+            true,
+            true,
+            "E"
+          ],
+          "3296089": [
+            true,
+            false,
+            "C"
+          ],
+          "3296090": [
+            true,
+            true,
+            "C"
+          ],
+          "3313440": [
+            true,
+            true,
+            "E"
+          ],
+          "3323259": [
+            true,
+            false,
+            "C"
+          ],
+          "3348883": [
+            true,
+            false,
+            "E"
+          ],
+          "3348888": [
+            true,
+            false,
+            "C"
+          ],
+          "3599592": [
+            true,
+            false,
+            "E"
+          ]
+        }
+      }
+    },
+    "Auditoria Fiscal||MOC do CT-e e CT-e OS 4.00": {
+      "materia": "Auditoria Fiscal",
+      "assunto": "MOC do CT-e e CT-e OS 4.00",
+      "data_base": "2026-10-06",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "SIM:AF04:Q1-31:5",
+        "SIM:AF04:Q1-31:7",
+        "SIM:AF04:Q1-31:8",
+        "SIM:AF04:Q1-31:14",
+        "SIM:AF04:Q1-31:17",
+        "SIM:AF04:Q1-31:18",
+        "SIM:AF04:Q1-31:21",
+        "SIM:AF04:Q1-31:25",
+        "SIM:AF04:Q1-31:26",
+        "SIM:AF04:Q1-31:3",
+        "SIM:AF04:Q1-31:9",
+        "SIM:AF04:Q1-31:13",
+        "SIM:AF04:Q1-31:15",
+        "SIM:AF04:Q1-31:19",
+        "SIM:AF04:Q1-31:28"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-10-07",
+          "emitida": "2026-10-07"
+        },
+        "d6": {
+          "prevista": "2026-10-12",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-20",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-11-03",
+          "emitida": null
+        }
+      },
+      "origem": "simulado",
+      "topico": 137,
+      "amostra_base": {
+        "itens": {
+          "SIM:AF04:Q1-31:1": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:AF04:Q1-31:2": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:AF04:Q1-31:3": [
+            true,
+            true,
+            "C"
+          ],
+          "SIM:AF04:Q1-31:4": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:AF04:Q1-31:5": [
+            false,
+            true,
+            "C"
+          ],
+          "SIM:AF04:Q1-31:6": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:AF04:Q1-31:7": [
+            false,
+            true,
+            "E"
+          ],
+          "SIM:AF04:Q1-31:8": [
+            false,
+            false,
+            "E"
+          ],
+          "SIM:AF04:Q1-31:9": [
+            true,
+            true,
+            "E"
+          ],
+          "SIM:AF04:Q1-31:10": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:AF04:Q1-31:11": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:AF04:Q1-31:12": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:AF04:Q1-31:13": [
+            true,
+            true,
+            "C"
+          ],
+          "SIM:AF04:Q1-31:14": [
+            false,
+            true,
+            "E"
+          ],
+          "SIM:AF04:Q1-31:15": [
+            true,
+            true,
+            "C"
+          ],
+          "SIM:AF04:Q1-31:16": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:AF04:Q1-31:17": [
+            false,
+            false,
+            "E"
+          ],
+          "SIM:AF04:Q1-31:18": [
+            false,
+            false,
+            "E"
+          ],
+          "SIM:AF04:Q1-31:19": [
+            true,
+            true,
+            "C"
+          ],
+          "SIM:AF04:Q1-31:20": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:AF04:Q1-31:21": [
+            false,
+            false,
+            "C"
+          ],
+          "SIM:AF04:Q1-31:22": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:AF04:Q1-31:23": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:AF04:Q1-31:24": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:AF04:Q1-31:25": [
+            false,
+            true,
+            "E"
+          ],
+          "SIM:AF04:Q1-31:26": [
+            false,
+            true,
+            "E"
+          ],
+          "SIM:AF04:Q1-31:27": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:AF04:Q1-31:28": [
+            true,
+            true,
+            "E"
+          ],
+          "SIM:AF04:Q1-31:29": [
+            true,
+            false,
+            "C"
+          ],
+          "SIM:AF04:Q1-31:30": [
+            true,
+            false,
+            "E"
+          ],
+          "SIM:AF04:Q1-31:31": [
+            true,
+            false,
+            "C"
+          ]
+        }
+      }
     }
   },
   "ultima_fila": {
-    "data": "2026-10-06",
+    "data": "2026-10-07",
     "itens": [
       [
-        "2026-10-05||PAT — arts. 28-51: ordinário × especial (400 UPFAL), instâncias, Coordenadoria de Julgamento e CTE (não TATE), recursos, reexame necessário",
+        "2026-10-06||Cruzamento e omissão, 1ª parte — a técnica: EFD × NF-e × CT-e, malha fiscal, o que caracteriza a divergência",
         "leitura"
       ],
       [
-        "Auditoria Fiscal||Guia Prático da EFD ICMS/IPI 3.2.2 — blocos e obrigatoriedade",
+        "2026-10-06||Extensão — CT-e 4.0: eventos, CT-e OS, anulação e substituição",
+        "leitura"
+      ],
+      [
+        "AFO, Direito Financeiro e Contabilidade Pública||Despesas com Pessoal e Seguridade Social (arts. 18 a 24 da LRF)",
         "d6"
       ],
       [
-        "Legislação Tributária Estadual||IPVA — isenções e não incidência (6.555, arts. 4º-6º)",
+        "AFO, Direito Financeiro e Contabilidade Pública||Planejamento e Orçamento Público (arts. 3º a 10 da LRF)",
         "d6"
       ],
       [
-        "Legislação Tributária Estadual||PAT — ordinário × especial (400 UPFAL), instâncias e CTE",
+        "Auditoria Fiscal||MOC do CT-e e CT-e OS 4.00",
         "d1"
       ],
       [
-        "Legislação Tributária Federal||Das Modalidades de Extinção dos Débitos (arts. 27 a 37 da LC nº 214/2025)",
-        "d28"
+        "Direito Administrativo (Doutrina e Leis Federais)||Alteração dos Contratos e dos Preços (art. 124 a 136 da Lei nº 14.133/2021)",
+        "d6"
       ],
       [
-        "Reforma Tributária||Regulamento do IBS — Res. CGIBS 6 e 13/2026",
+        "Direito Administrativo (Doutrina e Leis Federais)||Associação Sindical e Direito de Greve",
+        "d6"
+      ],
+      [
+        "Economia e Finanças Públicas||Bem Estar e Funções do Governo",
         "d1"
       ],
       [
-        "Reforma Tributária||Sinter e Cadastro Imobiliário Brasileiro (CIB)",
+        "Legislação Tributária Federal||Disposições Preliminares do Imposto Seletivo (arts. 409 a 411 da LC nº 214/2025)",
         "d6"
       ],
       [
-        "Reforma Tributária||Tabela cCredPres — crédito presumido",
+        "Reforma Tributária||Apuração assistida",
         "d6"
       ],
       [
-        "TI - Banco de Dados||Conceitos e Fundamentos de Modelo Relacional",
-        "d1"
-      ],
-      [
-        "TI - Engenharia de Software||Conceitos e Tipos de Testes de Software",
+        "Reforma Tributária||Split payment e split payment simplificado (arts. 31-36)",
         "d6"
       ],
       [
-        "TI - Segurança da Informação||Ciclo de Vida de Desenvolvimento Seguro",
+        "TI - Segurança da Informação||Conceitos de Firewall, Proxy e DMZ",
         "d6"
-      ],
-      [
-        "TI - Segurança da Informação||Conceitos de Certificado Digital",
-        "d1"
       ]
     ],
-    "confirmada": "2026-10-06"
+    "confirmada": "2026-10-07"
   },
   "leituras": {
     "2026-09-14||LC 214, arts. 38-56 — não cumulatividade, apropriação e utilização de créditos": {
@@ -6810,6 +7210,28 @@
       "prevista": "2026-10-06",
       "emitida": "expirada",
       "nao_realizada": true
+    },
+    "2026-10-06||Cruzamento e omissão, 1ª parte — a técnica: EFD × NF-e × CT-e, malha fiscal, o que caracteriza a divergência": {
+      "materia": "Auditoria Fiscal",
+      "rotulo": "Cruzamento e omissão, 1ª parte — a técnica: EFD × NF-e × CT-e, malha fiscal, o que caracteriza a divergência",
+      "data_leitura": "2026-10-06",
+      "fonte": null,
+      "origem": "plano",
+      "plano_ref": "S5 Terça",
+      "minutos": 105,
+      "prevista": "2026-10-07",
+      "emitida": "2026-10-07"
+    },
+    "2026-10-06||Extensão — CT-e 4.0: eventos, CT-e OS, anulação e substituição": {
+      "materia": "Auditoria Fiscal",
+      "rotulo": "Extensão — CT-e 4.0: eventos, CT-e OS, anulação e substituição",
+      "data_leitura": "2026-10-06",
+      "fonte": null,
+      "origem": "plano",
+      "plano_ref": "S5 Terça",
+      "minutos": 30,
+      "prevista": "2026-10-07",
+      "emitida": "2026-10-07"
     }
   }
 }

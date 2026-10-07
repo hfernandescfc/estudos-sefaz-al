@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-10-06T08:19:42",
+ "gerado_em": "2026-10-07T08:30:15",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -2221,6 +2221,30 @@ window.SESSOES_TEC = {
    "minutos": 1,
    "qResolvidas": 2,
    "qAcertadas": 1,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "SIM~AF04~2026-10-06~AUDFIS",
+   "origem": "simulado",
+   "data": "2026-10-06",
+   "mat": "AUDFIS",
+   "topicId": null,
+   "assuntoLivre": "Simulado AF04 — AUDFIS",
+   "minutos": 7,
+   "qResolvidas": 31,
+   "qAcertadas": 22,
+   "obs": "Simulado AF04 (Q1-31) cronometrado"
+  },
+  {
+   "uid": "TEC~2026-10-06~271",
+   "origem": "tec",
+   "data": "2026-10-06",
+   "mat": "FINPUB",
+   "topicId": "271",
+   "assuntoLivre": "",
+   "minutos": 7,
+   "qResolvidas": 30,
+   "qAcertadas": 26,
    "obs": "reconstruída do TEC"
   }
  ]
