@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-10-07T08:30:15",
+ "gerado_em": "2026-10-08T08:28:15",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -2245,6 +2245,150 @@ window.SESSOES_TEC = {
    "minutos": 7,
    "qResolvidas": 30,
    "qAcertadas": 26,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-06~39",
+   "origem": "tec",
+   "data": "2026-10-06",
+   "mat": "INFRA",
+   "topicId": "39",
+   "assuntoLivre": "",
+   "minutos": 1,
+   "qResolvidas": 3,
+   "qAcertadas": 2,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-06~474",
+   "origem": "tec",
+   "data": "2026-10-06",
+   "mat": "LEGAL",
+   "topicId": "474",
+   "assuntoLivre": "",
+   "minutos": 1,
+   "qResolvidas": 3,
+   "qAcertadas": 3,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-06~68",
+   "origem": "tec",
+   "data": "2026-10-06",
+   "mat": "DEV",
+   "topicId": "68",
+   "assuntoLivre": "",
+   "minutos": 1,
+   "qResolvidas": 5,
+   "qAcertadas": 5,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-06~das-imunidades-e-das-isencoes-arts-5-a-7-da-lei-estadual-n-7-2f141c",
+   "origem": "tec",
+   "data": "2026-10-06",
+   "mat": "DTRIB",
+   "topicId": null,
+   "assuntoLivre": "Das Imunidades e das Isenções (arts. 5º a 7º da Lei Estadual nº 7.655/2013)",
+   "minutos": 1,
+   "qResolvidas": 1,
+   "qAcertadas": 1,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-06~lei-estadual-n-12-023-1992-ipva-ce-ddbd39",
+   "origem": "tec",
+   "data": "2026-10-06",
+   "mat": "DTRIB",
+   "topicId": null,
+   "assuntoLivre": "Lei Estadual nº 12.023/1992 - IPVA (CE)",
+   "minutos": 1,
+   "qResolvidas": 2,
+   "qAcertadas": 2,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "SIM~AL05~2026-10-07~LEGAL",
+   "origem": "simulado",
+   "data": "2026-10-07",
+   "mat": "LEGAL",
+   "topicId": null,
+   "assuntoLivre": "Simulado AL05 — LEGAL",
+   "minutos": 3,
+   "qResolvidas": 10,
+   "qAcertadas": 9,
+   "obs": "Simulado AL05 (Q1-10) cronometrado"
+  },
+  {
+   "uid": "TEC~2026-10-07~24",
+   "origem": "tec",
+   "data": "2026-10-07",
+   "mat": "INFRA",
+   "topicId": "24",
+   "assuntoLivre": "",
+   "minutos": 17,
+   "qResolvidas": 35,
+   "qAcertadas": 26,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-07~245",
+   "origem": "tec",
+   "data": "2026-10-07",
+   "mat": "FINPUB",
+   "topicId": "245",
+   "assuntoLivre": "",
+   "minutos": 4,
+   "qResolvidas": 20,
+   "qAcertadas": 17,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-07~250",
+   "origem": "tec",
+   "data": "2026-10-07",
+   "mat": "FINPUB",
+   "topicId": "250",
+   "assuntoLivre": "",
+   "minutos": 3,
+   "qResolvidas": 6,
+   "qAcertadas": 6,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-07~29",
+   "origem": "tec",
+   "data": "2026-10-07",
+   "mat": "INFRA",
+   "topicId": "29",
+   "assuntoLivre": "",
+   "minutos": 3,
+   "qResolvidas": 8,
+   "qAcertadas": 6,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-07~291",
+   "origem": "tec",
+   "data": "2026-10-07",
+   "mat": "FINPUB",
+   "topicId": "291",
+   "assuntoLivre": "",
+   "minutos": 8,
+   "qResolvidas": 14,
+   "qAcertadas": 10,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-07~71",
+   "origem": "tec",
+   "data": "2026-10-07",
+   "mat": "LEGAL",
+   "topicId": "71",
+   "assuntoLivre": "",
+   "minutos": 2,
+   "qResolvidas": 5,
+   "qAcertadas": 5,
    "obs": "reconstruída do TEC"
   }
  ]
