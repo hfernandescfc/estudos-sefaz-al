@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-10-08T08:28:15",
+ "gerado_em": "2026-10-09T10:08:12",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -2389,6 +2389,90 @@ window.SESSOES_TEC = {
    "minutos": 2,
    "qResolvidas": 5,
    "qAcertadas": 5,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "SIM~AF05~2026-10-08~AUDFIS",
+   "origem": "simulado",
+   "data": "2026-10-08",
+   "mat": "AUDFIS",
+   "topicId": null,
+   "assuntoLivre": "Simulado AF05 — AUDFIS",
+   "minutos": 8,
+   "qResolvidas": 18,
+   "qAcertadas": 13,
+   "obs": "Simulado AF05 (Q1-18) cronometrado"
+  },
+  {
+   "uid": "TEC~2026-10-08~240",
+   "origem": "tec",
+   "data": "2026-10-08",
+   "mat": "IA",
+   "topicId": "240",
+   "assuntoLivre": "",
+   "minutos": 15,
+   "qResolvidas": 27,
+   "qAcertadas": 23,
+   "obs": "reconstruída do TEC (2 assuntos)"
+  },
+  {
+   "uid": "TEC~2026-10-08~394",
+   "origem": "tec",
+   "data": "2026-10-08",
+   "mat": "DADM",
+   "topicId": "394",
+   "assuntoLivre": "",
+   "minutos": 5,
+   "qResolvidas": 9,
+   "qAcertadas": 7,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-08~396",
+   "origem": "tec",
+   "data": "2026-10-08",
+   "mat": "DADM",
+   "topicId": "396",
+   "assuntoLivre": "",
+   "minutos": 5,
+   "qResolvidas": 11,
+   "qAcertadas": 8,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-08~407",
+   "origem": "tec",
+   "data": "2026-10-08",
+   "mat": "DADM",
+   "topicId": "407",
+   "assuntoLivre": "",
+   "minutos": 3,
+   "qResolvidas": 6,
+   "qAcertadas": 5,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-08~468",
+   "origem": "tec",
+   "data": "2026-10-08",
+   "mat": "AUDFIS",
+   "topicId": "468",
+   "assuntoLivre": "",
+   "minutos": 1,
+   "qResolvidas": 1,
+   "qAcertadas": 1,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-08~475",
+   "origem": "tec",
+   "data": "2026-10-08",
+   "mat": "LEGAL",
+   "topicId": "475",
+   "assuntoLivre": "",
+   "minutos": 3,
+   "qResolvidas": 7,
+   "qAcertadas": 6,
    "obs": "reconstruída do TEC"
   }
  ]
