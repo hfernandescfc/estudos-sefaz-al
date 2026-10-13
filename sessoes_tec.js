@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-10-09T10:08:12",
+ "gerado_em": "2026-10-13T10:05:58",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -2474,6 +2474,102 @@ window.SESSOES_TEC = {
    "qResolvidas": 7,
    "qAcertadas": 6,
    "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "SIM~AF03~2026-10-09~AUDFIS",
+   "origem": "simulado",
+   "data": "2026-10-09",
+   "mat": "AUDFIS",
+   "topicId": null,
+   "assuntoLivre": "Simulado AF03 — AUDFIS",
+   "minutos": 10,
+   "qResolvidas": 23,
+   "qAcertadas": 19,
+   "obs": "Simulado AF03 (Q1-23) cronometrado"
+  },
+  {
+   "uid": "SIM~AF06~2026-10-09~AUDFIS",
+   "origem": "simulado",
+   "data": "2026-10-09",
+   "mat": "AUDFIS",
+   "topicId": null,
+   "assuntoLivre": "Simulado AF06 — AUDFIS",
+   "minutos": 4,
+   "qResolvidas": 13,
+   "qAcertadas": 9,
+   "obs": "Simulado AF06 (Q1-13) cronometrado"
+  },
+  {
+   "uid": "SIM~SIM01~2026-10-11~AUDFIS",
+   "origem": "simulado",
+   "data": "2026-10-11",
+   "mat": "AUDFIS",
+   "topicId": null,
+   "assuntoLivre": "Simulado SIM01 — AUDFIS",
+   "minutos": 5,
+   "qResolvidas": 14,
+   "qAcertadas": 10,
+   "obs": "Simulado SIM01 (Q1-80) cronometrado"
+  },
+  {
+   "uid": "SIM~SIM01~2026-10-11~CDADOS",
+   "origem": "simulado",
+   "data": "2026-10-11",
+   "mat": "CDADOS",
+   "topicId": null,
+   "assuntoLivre": "Simulado SIM01 — CDADOS",
+   "minutos": 4,
+   "qResolvidas": 12,
+   "qAcertadas": 11,
+   "obs": "Simulado SIM01 (Q1-80) cronometrado"
+  },
+  {
+   "uid": "SIM~SIM01~2026-10-11~DEV",
+   "origem": "simulado",
+   "data": "2026-10-11",
+   "mat": "DEV",
+   "topicId": null,
+   "assuntoLivre": "Simulado SIM01 — DEV",
+   "minutos": 3,
+   "qResolvidas": 12,
+   "qAcertadas": 10,
+   "obs": "Simulado SIM01 (Q1-80) cronometrado"
+  },
+  {
+   "uid": "SIM~SIM01~2026-10-11~INFRA",
+   "origem": "simulado",
+   "data": "2026-10-11",
+   "mat": "INFRA",
+   "topicId": null,
+   "assuntoLivre": "Simulado SIM01 — INFRA",
+   "minutos": 4,
+   "qResolvidas": 12,
+   "qAcertadas": 11,
+   "obs": "Simulado SIM01 (Q1-80) cronometrado"
+  },
+  {
+   "uid": "SIM~SIM01~2026-10-11~LEGAL",
+   "origem": "simulado",
+   "data": "2026-10-11",
+   "mat": "LEGAL",
+   "topicId": null,
+   "assuntoLivre": "Simulado SIM01 — LEGAL",
+   "minutos": 5,
+   "qResolvidas": 12,
+   "qAcertadas": 7,
+   "obs": "Simulado SIM01 (Q1-80) cronometrado"
+  },
+  {
+   "uid": "SIM~SIM01~2026-10-11~RT",
+   "origem": "simulado",
+   "data": "2026-10-11",
+   "mat": "RT",
+   "topicId": null,
+   "assuntoLivre": "Simulado SIM01 — RT",
+   "minutos": 7,
+   "qResolvidas": 18,
+   "qAcertadas": 15,
+   "obs": "Simulado SIM01 (Q1-80) cronometrado"
   }
  ]
 };
