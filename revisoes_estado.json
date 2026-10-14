@@ -53,7 +53,11 @@
     "tec_registros_2026-10-12_casa.json",
     "resultado_simulado_AF03_2026-10-09.json",
     "resultado_simulado_AF06_2026-10-09.json",
-    "resultado_simulado_SIM01_2026-10-11.json"
+    "resultado_simulado_SIM01_2026-10-11.json",
+    "tec_registros_2026-10-14_casa.json",
+    "resultado_simulado_AF08_2026-10-13.json",
+    "resultado_simulado_AL06_2026-10-13.json",
+    "resultado_simulado_RT14_2026-10-13.json"
   ],
   "cadeias": {
     "Contabilidade Geral||Plano de Contas": {
@@ -145,30 +149,122 @@
     "Economia e Finanças Públicas||Dívida Pública, NFSP e Tipos de Déficit Público no Brasil": {
       "materia": "Economia e Finanças Públicas",
       "assunto": "Dívida Pública, NFSP e Tipos de Déficit Público no Brasil",
-      "data_base": "2026-09-02",
+      "data_base": "2026-10-13",
       "cadeia_completa": true,
-      "alvos_origem": [],
+      "alvos_origem": [
+        "3454895",
+        "2589611",
+        "2589612",
+        "1937786",
+        "2876299",
+        "3041633"
+      ],
       "reinicios": 0,
-      "status": "concluida",
+      "status": "ativa",
       "etapas": {
         "d1": {
-          "prevista": "2026-09-09",
-          "emitida": "2026-09-09"
+          "prevista": "2026-10-14",
+          "emitida": "2026-10-14"
         },
         "d6": {
-          "prevista": "2026-09-11",
-          "emitida": "2026-09-11",
+          "prevista": "2026-10-23",
+          "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-09-16",
-          "emitida": "2026-09-16"
+          "prevista": "2026-10-30",
+          "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-01",
-          "emitida": "2026-09-28"
+          "prevista": "2026-11-10",
+          "emitida": null
         }
-      }
+      },
+      "amostra_base": {
+        "itens": {
+          "1937786": [
+            true,
+            true,
+            "E"
+          ],
+          "1937787": [
+            true,
+            false,
+            "C"
+          ],
+          "3454895": [
+            false,
+            true,
+            "C"
+          ],
+          "2876299": [
+            true,
+            true,
+            "E"
+          ],
+          "2876301": [
+            true,
+            false,
+            "C"
+          ],
+          "2876303": [
+            true,
+            false,
+            "E"
+          ],
+          "3008713": [
+            true,
+            false,
+            "E"
+          ],
+          "3041633": [
+            true,
+            true,
+            "C"
+          ],
+          "2589610": [
+            true,
+            false,
+            "E"
+          ],
+          "2589611": [
+            false,
+            true,
+            "E"
+          ],
+          "2589612": [
+            false,
+            false,
+            "C"
+          ],
+          "2590517": [
+            true,
+            false,
+            "C"
+          ],
+          "2590520": [
+            true,
+            false,
+            "C"
+          ],
+          "2590522": [
+            true,
+            false,
+            "E"
+          ],
+          "2590523": [
+            true,
+            false,
+            "E"
+          ],
+          "2590528": [
+            true,
+            false,
+            "E"
+          ]
+        }
+      },
+      "obs_data_base": "corrigida 14->13/10 em 14/10: captura _14_casa traz respostas de 13/10"
     },
     "Finanças e Conhecimentos Bancários||Composição Geral do SFN": {
       "materia": "Finanças e Conhecimentos Bancários",
@@ -472,7 +568,7 @@
           "emitida": "2026-10-01"
         },
         "d28": {
-          "prevista": "2026-10-20",
+          "prevista": "2026-10-21",
           "emitida": null
         }
       }
@@ -541,7 +637,7 @@
           "emitida": "2026-10-01"
         },
         "d28": {
-          "prevista": "2026-10-19",
+          "prevista": "2026-10-20",
           "emitida": null
         }
       }
@@ -918,7 +1014,7 @@
           "emitida": "2026-10-01"
         },
         "d28": {
-          "prevista": "2026-10-19",
+          "prevista": "2026-10-20",
           "emitida": null
         }
       }
@@ -958,7 +1054,7 @@
           "emitida": "2026-09-30"
         },
         "d28": {
-          "prevista": "2026-10-19",
+          "prevista": "2026-10-20",
           "emitida": null
         }
       }
@@ -1000,7 +1096,7 @@
           "emitida": "2026-09-30"
         },
         "d28": {
-          "prevista": "2026-10-19",
+          "prevista": "2026-10-20",
           "emitida": null
         }
       }
@@ -1051,7 +1147,7 @@
           "emitida": "2026-09-30"
         },
         "d28": {
-          "prevista": "2026-10-19",
+          "prevista": "2026-10-20",
           "emitida": null
         }
       }
@@ -1119,7 +1215,7 @@
           "emitida": "2026-10-02"
         },
         "d28": {
-          "prevista": "2026-10-21",
+          "prevista": "2026-10-22",
           "emitida": null
         }
       }
@@ -1149,11 +1245,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-13",
+          "prevista": "2026-10-19",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-22",
+          "prevista": "2026-10-26",
           "emitida": null
         }
       }
@@ -1177,16 +1273,16 @@
           "emitida": "2026-10-06"
         },
         "d6": {
-          "prevista": "2026-10-13",
+          "prevista": "2026-10-15",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-23",
+          "prevista": "2026-10-26",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-03",
+          "prevista": "2026-11-04",
           "emitida": null
         }
       },
@@ -1248,16 +1344,16 @@
           "emitida": "2026-10-05"
         },
         "d6": {
-          "prevista": "2026-10-13",
+          "prevista": "2026-10-15",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-22",
+          "prevista": "2026-10-26",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-02",
+          "prevista": "2026-11-03",
           "emitida": null
         }
       },
@@ -1344,11 +1440,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-14",
+          "prevista": "2026-10-19",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-22",
+          "prevista": "2026-10-26",
           "emitida": null
         }
       }
@@ -1383,11 +1479,11 @@
           }
         },
         "d14": {
-          "prevista": "2026-10-14",
+          "prevista": "2026-10-20",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-23",
+          "prevista": "2026-10-27",
           "emitida": null
         }
       },
@@ -1471,11 +1567,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-14",
+          "prevista": "2026-10-19",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-23",
+          "prevista": "2026-10-27",
           "emitida": null
         }
       },
@@ -1561,11 +1657,11 @@
           }
         },
         "d14": {
-          "prevista": "2026-10-14",
+          "prevista": "2026-10-20",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-23",
+          "prevista": "2026-10-27",
           "emitida": null
         }
       },
@@ -1664,12 +1760,12 @@
           "emitida": "2026-10-12"
         },
         "d6": {
-          "prevista": "2026-10-21",
+          "prevista": "2026-10-22",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-28",
+          "prevista": "2026-10-29",
           "emitida": null
         },
         "d28": {
@@ -1783,7 +1879,7 @@
           "emitida": "2026-10-01"
         },
         "d28": {
-          "prevista": "2026-10-21",
+          "prevista": "2026-10-22",
           "emitida": null
         }
       }
@@ -1824,11 +1920,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-15",
+          "prevista": "2026-10-16",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-28",
+          "prevista": "2026-11-02",
           "emitida": null
         }
       },
@@ -1990,11 +2086,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-14",
+          "prevista": "2026-10-20",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-28",
+          "prevista": "2026-10-29",
           "emitida": null
         }
       },
@@ -2118,11 +2214,11 @@
           }
         },
         "d14": {
-          "prevista": "2026-10-14",
+          "prevista": "2026-10-19",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-27",
+          "prevista": "2026-10-29",
           "emitida": null
         }
       },
@@ -2409,7 +2505,7 @@
           "emitida": "2026-10-09"
         },
         "d28": {
-          "prevista": "2026-10-27",
+          "prevista": "2026-10-28",
           "emitida": null
         }
       },
@@ -2605,7 +2701,7 @@
           "emitida": "2026-10-09"
         },
         "d28": {
-          "prevista": "2026-10-27",
+          "prevista": "2026-10-28",
           "emitida": null
         }
       },
@@ -2759,11 +2855,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-14",
+          "prevista": "2026-10-20",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-28",
+          "prevista": "2026-10-30",
           "emitida": null
         }
       },
@@ -2810,11 +2906,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-14",
+          "prevista": "2026-10-19",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-27",
+          "prevista": "2026-10-29",
           "emitida": null
         }
       },
@@ -2896,7 +2992,7 @@
           "emitida": "2026-10-09"
         },
         "d28": {
-          "prevista": "2026-10-27",
+          "prevista": "2026-10-29",
           "emitida": null
         }
       },
@@ -3014,7 +3110,7 @@
           "emitida": "2026-10-09"
         },
         "d28": {
-          "prevista": "2026-10-27",
+          "prevista": "2026-10-28",
           "emitida": null
         }
       },
@@ -3101,11 +3197,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-13",
+          "prevista": "2026-10-16",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-27",
+          "prevista": "2026-10-29",
           "emitida": null
         }
       },
@@ -3201,11 +3297,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-13",
+          "prevista": "2026-10-19",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-27",
+          "prevista": "2026-10-29",
           "emitida": null
         }
       },
@@ -3317,7 +3413,7 @@
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-29",
+          "prevista": "2026-11-02",
           "emitida": null
         }
       },
@@ -3496,11 +3592,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-13",
+          "prevista": "2026-10-16",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-28",
+          "prevista": "2026-10-30",
           "emitida": null
         }
       },
@@ -3631,11 +3727,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-14",
+          "prevista": "2026-10-19",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-28",
+          "prevista": "2026-10-30",
           "emitida": null
         }
       },
@@ -3714,7 +3810,7 @@
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-29",
+          "prevista": "2026-11-02",
           "emitida": null
         }
       },
@@ -3787,11 +3883,11 @@
           }
         },
         "d14": {
-          "prevista": "2026-10-15",
+          "prevista": "2026-10-16",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-28",
+          "prevista": "2026-11-02",
           "emitida": null
         }
       },
@@ -3885,14 +3981,24 @@
         "d6": {
           "prevista": "2026-10-12",
           "emitida": "2026-10-12",
-          "resultado": null
+          "resultado": {
+            "pct": 88,
+            "saldo": 75,
+            "questoes": 8,
+            "limiar_saldo": 70,
+            "aprovada": true,
+            "data": "2026-10-13",
+            "fonte": "resultado_simulado_RT14_2026-10-13.json",
+            "fracao_me": 0.0,
+            "chance_base": 0.5
+          }
         },
         "d14": {
-          "prevista": "2026-10-22",
+          "prevista": "2026-10-23",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-02",
+          "prevista": "2026-11-03",
           "emitida": null
         }
       },
@@ -4022,11 +4128,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-16",
+          "prevista": "2026-10-20",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-29",
+          "prevista": "2026-11-02",
           "emitida": null
         }
       },
@@ -4108,11 +4214,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-16",
+          "prevista": "2026-10-19",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-29",
+          "prevista": "2026-11-02",
           "emitida": null
         }
       },
@@ -4197,12 +4303,12 @@
           "emitida": "2026-10-08"
         },
         "d6": {
-          "prevista": "2026-10-16",
+          "prevista": "2026-10-15",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-26",
+          "prevista": "2026-10-27",
           "emitida": null
         },
         "d28": {
@@ -4296,11 +4402,11 @@
           }
         },
         "d14": {
-          "prevista": "2026-10-20",
+          "prevista": "2026-10-21",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-29",
+          "prevista": "2026-11-03",
           "emitida": null
         }
       },
@@ -4442,30 +4548,31 @@
     "AFO, Direito Financeiro e Contabilidade Pública||Planejamento e Orçamento Público (arts. 3º a 10 da LRF)": {
       "materia": "AFO, Direito Financeiro e Contabilidade Pública",
       "assunto": "Planejamento e Orçamento Público (arts. 3º a 10 da LRF)",
-      "data_base": "2026-10-01",
+      "data_base": "2026-10-13",
       "cadeia_completa": true,
       "alvos_origem": [
         "3662813",
+        "3008748",
         "3008746"
       ],
-      "reinicios": 0,
+      "reinicios": 1,
       "status": "ativa",
       "etapas": {
         "d1": {
-          "prevista": "2026-10-01",
-          "emitida": "2026-10-01"
+          "prevista": "2026-10-14",
+          "emitida": "2026-10-14"
         },
         "d6": {
-          "prevista": "2026-10-07",
-          "emitida": "2026-10-07",
+          "prevista": "2026-10-23",
+          "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-21",
+          "prevista": "2026-10-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-30",
+          "prevista": "2026-11-10",
           "emitida": null
         }
       },
@@ -4511,6 +4618,11 @@
             true,
             "E"
           ],
+          "3008748": [
+            false,
+            true,
+            "C"
+          ],
           "3039741": [
             true,
             false,
@@ -4520,9 +4632,20 @@
             true,
             false,
             "C"
+          ],
+          "3075593": [
+            true,
+            false,
+            "C"
+          ],
+          "3075594": [
+            true,
+            false,
+            "C"
           ]
         }
-      }
+      },
+      "obs_data_base": "corrigida 14->13/10 em 14/10: captura _14_casa traz respostas de 13/10"
     },
     "Auditoria Fiscal||Guia Prático da EFD ICMS/IPI 3.2.2 — blocos e obrigatoriedade": {
       "materia": "Auditoria Fiscal",
@@ -4565,11 +4688,11 @@
           }
         },
         "d14": {
-          "prevista": "2026-10-19",
+          "prevista": "2026-10-16",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-29",
+          "prevista": "2026-11-02",
           "emitida": null
         }
       },
@@ -4713,7 +4836,7 @@
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-29",
+          "prevista": "2026-11-02",
           "emitida": null
         }
       },
@@ -4844,11 +4967,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-20",
+          "prevista": "2026-10-21",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-29",
+          "prevista": "2026-11-03",
           "emitida": null
         }
       },
@@ -4929,11 +5052,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-20",
+          "prevista": "2026-10-21",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-29",
+          "prevista": "2026-11-02",
           "emitida": null
         }
       },
@@ -5236,11 +5359,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-21",
+          "prevista": "2026-10-22",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-30",
+          "prevista": "2026-11-03",
           "emitida": null
         }
       },
@@ -5308,11 +5431,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-21",
+          "prevista": "2026-10-22",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-29",
+          "prevista": "2026-11-03",
           "emitida": null
         }
       },
@@ -5417,11 +5540,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-21",
+          "prevista": "2026-10-22",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-30",
+          "prevista": "2026-11-03",
           "emitida": null
         }
       },
@@ -5631,16 +5754,16 @@
           "emitida": "2026-10-05"
         },
         "d6": {
-          "prevista": "2026-10-13",
+          "prevista": "2026-10-16",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-22",
+          "prevista": "2026-10-26",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-02",
+          "prevista": "2026-11-04",
           "emitida": null
         }
       },
@@ -5681,16 +5804,16 @@
           "emitida": "2026-10-05"
         },
         "d6": {
-          "prevista": "2026-10-13",
+          "prevista": "2026-10-15",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-22",
+          "prevista": "2026-10-26",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-02",
+          "prevista": "2026-11-03",
           "emitida": null
         }
       },
@@ -5740,16 +5863,16 @@
           "emitida": "2026-10-05"
         },
         "d6": {
-          "prevista": "2026-10-13",
+          "prevista": "2026-10-16",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-22",
+          "prevista": "2026-10-26",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-02",
+          "prevista": "2026-11-04",
           "emitida": null
         }
       },
@@ -5796,16 +5919,16 @@
           "emitida": "2026-10-05"
         },
         "d6": {
-          "prevista": "2026-10-13",
+          "prevista": "2026-10-15",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-22",
+          "prevista": "2026-10-23",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-02",
+          "prevista": "2026-11-03",
           "emitida": null
         }
       },
@@ -5923,11 +6046,11 @@
           }
         },
         "d14": {
-          "prevista": "2026-10-21",
+          "prevista": "2026-10-22",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-10-30",
+          "prevista": "2026-11-03",
           "emitida": null
         }
       },
@@ -6093,14 +6216,24 @@
         "d6": {
           "prevista": "2026-10-12",
           "emitida": "2026-10-12",
-          "resultado": null
+          "resultado": {
+            "pct": 86,
+            "saldo": 71,
+            "questoes": 7,
+            "limiar_saldo": 70,
+            "aprovada": true,
+            "data": "2026-10-14",
+            "fonte": "tec_registros_2026-10-14_casa.json",
+            "fracao_me": 0.0,
+            "chance_base": 0.5
+          }
         },
         "d14": {
-          "prevista": "2026-10-23",
+          "prevista": "2026-10-26",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-03",
+          "prevista": "2026-11-04",
           "emitida": null
         }
       },
@@ -6222,136 +6355,77 @@
     "Legislação Tributária Estadual||PAT — ordinário × especial (400 UPFAL), instâncias e CTE": {
       "materia": "Legislação Tributária Estadual",
       "assunto": "PAT — ordinário × especial (400 UPFAL), instâncias e CTE",
-      "data_base": "2026-10-05",
+      "data_base": "2026-10-13",
       "cadeia_completa": true,
       "alvos_origem": [
-        "SIM:AL04:Q1-30:6",
-        "SIM:AL04:Q1-30:8",
-        "SIM:AL04:Q1-30:11",
-        "SIM:AL04:Q1-30:17",
-        "SIM:AL04:Q1-30:19",
-        "SIM:AL04:Q1-30:4",
-        "SIM:AL04:Q1-30:16"
+        "SIM:AL06:Q1-8:1",
+        "SIM:AL06:Q1-8:4",
+        "SIM:AL06:Q1-8:5",
+        "SIM:AL06:Q1-8:6",
+        "SIM:AL06:Q1-8:8"
       ],
-      "reinicios": 0,
+      "reinicios": 1,
       "status": "ativa",
       "etapas": {
         "d1": {
-          "prevista": "2026-10-06",
-          "emitida": "2026-10-06"
+          "prevista": "2026-10-14",
+          "emitida": "2026-10-14"
         },
         "d6": {
-          "prevista": "2026-10-12",
-          "emitida": "2026-10-12",
+          "prevista": "2026-10-23",
+          "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-22",
+          "prevista": "2026-10-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-02",
+          "prevista": "2026-11-10",
           "emitida": null
         }
       },
-      "origem": "simulado",
-      "topico": 148,
       "amostra_base": {
         "itens": {
-          "SIM:AL04:Q1-30:1": [
-            true,
-            false,
-            "C"
-          ],
-          "SIM:AL04:Q1-30:2": [
-            true,
-            false,
-            "E"
-          ],
-          "SIM:AL04:Q1-30:3": [
-            true,
-            false,
-            "E"
-          ],
-          "SIM:AL04:Q1-30:4": [
-            true,
-            true,
-            "C"
-          ],
-          "SIM:AL04:Q1-30:5": [
-            true,
-            false,
-            "E"
-          ],
-          "SIM:AL04:Q1-30:6": [
-            false,
-            true,
-            "C"
-          ],
-          "SIM:AL04:Q1-30:7": [
-            true,
-            false,
-            "E"
-          ],
-          "SIM:AL04:Q1-30:8": [
+          "SIM:AL06:Q1-8:1": [
             false,
             false,
             "C"
           ],
-          "SIM:AL04:Q1-30:9": [
+          "SIM:AL06:Q1-8:2": [
             true,
             false,
             "E"
           ],
-          "SIM:AL04:Q1-30:10": [
-            true,
-            false,
-            "E"
-          ],
-          "SIM:AL04:Q1-30:11": [
-            false,
-            false,
-            "C"
-          ],
-          "SIM:AL04:Q1-30:12": [
-            true,
-            false,
-            "E"
-          ],
-          "SIM:AL04:Q1-30:13": [
+          "SIM:AL06:Q1-8:3": [
             true,
             false,
             "C"
           ],
-          "SIM:AL04:Q1-30:14": [
-            true,
+          "SIM:AL06:Q1-8:4": [
             false,
-            "E"
-          ],
-          "SIM:AL04:Q1-30:15": [
-            true,
-            false,
-            "C"
-          ],
-          "SIM:AL04:Q1-30:16": [
-            true,
             true,
             "E"
           ],
-          "SIM:AL04:Q1-30:17": [
+          "SIM:AL06:Q1-8:5": [
             false,
             false,
             "C"
           ],
-          "SIM:AL04:Q1-30:18": [
-            true,
+          "SIM:AL06:Q1-8:6": [
             false,
+            true,
             "E"
           ],
-          "SIM:AL04:Q1-30:19": [
-            false,
+          "SIM:AL06:Q1-8:7": [
             true,
+            false,
             "C"
+          ],
+          "SIM:AL06:Q1-8:8": [
+            true,
+            true,
+            "E"
           ]
         }
       }
@@ -6381,12 +6455,12 @@
           "emitida": "2026-10-07"
         },
         "d6": {
-          "prevista": "2026-10-15",
-          "emitida": null,
+          "prevista": "2026-10-14",
+          "emitida": "2026-10-14",
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-23",
+          "prevista": "2026-10-26",
           "emitida": null
         },
         "d28": {
@@ -6552,203 +6626,76 @@
     "Auditoria Fiscal||MOC do CT-e e CT-e OS 4.00": {
       "materia": "Auditoria Fiscal",
       "assunto": "MOC do CT-e e CT-e OS 4.00",
-      "data_base": "2026-10-06",
+      "data_base": "2026-10-13",
       "cadeia_completa": true,
       "alvos_origem": [
-        "SIM:AF04:Q1-31:5",
-        "SIM:AF04:Q1-31:7",
-        "SIM:AF04:Q1-31:8",
-        "SIM:AF04:Q1-31:14",
-        "SIM:AF04:Q1-31:17",
-        "SIM:AF04:Q1-31:18",
-        "SIM:AF04:Q1-31:21",
-        "SIM:AF04:Q1-31:25",
-        "SIM:AF04:Q1-31:26",
-        "SIM:AF04:Q1-31:3",
-        "SIM:AF04:Q1-31:9",
-        "SIM:AF04:Q1-31:13",
-        "SIM:AF04:Q1-31:15",
-        "SIM:AF04:Q1-31:19",
-        "SIM:AF04:Q1-31:28"
+        "SIM:AF08:Q1-8:1",
+        "SIM:AF08:Q1-8:2",
+        "SIM:AF08:Q1-8:5",
+        "SIM:AF08:Q1-8:6",
+        "SIM:AF08:Q1-8:8"
       ],
-      "reinicios": 0,
+      "reinicios": 1,
       "status": "ativa",
       "etapas": {
         "d1": {
-          "prevista": "2026-10-07",
-          "emitida": "2026-10-07"
+          "prevista": "2026-10-14",
+          "emitida": "2026-10-14"
         },
         "d6": {
-          "prevista": "2026-10-12",
-          "emitida": "2026-10-12",
+          "prevista": "2026-10-23",
+          "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-23",
+          "prevista": "2026-10-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-03",
+          "prevista": "2026-11-10",
           "emitida": null
         }
       },
-      "origem": "simulado",
-      "topico": 137,
       "amostra_base": {
         "itens": {
-          "SIM:AF04:Q1-31:1": [
-            true,
+          "SIM:AF08:Q1-8:1": [
             false,
-            "C"
-          ],
-          "SIM:AF04:Q1-31:2": [
-            true,
             false,
             "E"
           ],
-          "SIM:AF04:Q1-31:3": [
-            true,
-            true,
-            "C"
-          ],
-          "SIM:AF04:Q1-31:4": [
-            true,
-            false,
-            "E"
-          ],
-          "SIM:AF04:Q1-31:5": [
+          "SIM:AF08:Q1-8:2": [
             false,
             true,
             "C"
           ],
-          "SIM:AF04:Q1-31:6": [
+          "SIM:AF08:Q1-8:3": [
             true,
             false,
             "E"
           ],
-          "SIM:AF04:Q1-31:7": [
-            false,
-            true,
-            "E"
-          ],
-          "SIM:AF04:Q1-31:8": [
-            false,
-            false,
-            "E"
-          ],
-          "SIM:AF04:Q1-31:9": [
-            true,
-            true,
-            "E"
-          ],
-          "SIM:AF04:Q1-31:10": [
+          "SIM:AF08:Q1-8:4": [
             true,
             false,
             "C"
           ],
-          "SIM:AF04:Q1-31:11": [
-            true,
+          "SIM:AF08:Q1-8:5": [
             false,
+            true,
             "E"
           ],
-          "SIM:AF04:Q1-31:12": [
-            true,
+          "SIM:AF08:Q1-8:6": [
             false,
-            "C"
-          ],
-          "SIM:AF04:Q1-31:13": [
-            true,
             true,
             "C"
           ],
-          "SIM:AF04:Q1-31:14": [
-            false,
-            true,
-            "E"
-          ],
-          "SIM:AF04:Q1-31:15": [
-            true,
-            true,
-            "C"
-          ],
-          "SIM:AF04:Q1-31:16": [
-            true,
-            false,
-            "C"
-          ],
-          "SIM:AF04:Q1-31:17": [
-            false,
-            false,
-            "E"
-          ],
-          "SIM:AF04:Q1-31:18": [
-            false,
-            false,
-            "E"
-          ],
-          "SIM:AF04:Q1-31:19": [
-            true,
-            true,
-            "C"
-          ],
-          "SIM:AF04:Q1-31:20": [
+          "SIM:AF08:Q1-8:7": [
             true,
             false,
             "E"
           ],
-          "SIM:AF04:Q1-31:21": [
-            false,
-            false,
-            "C"
-          ],
-          "SIM:AF04:Q1-31:22": [
-            true,
-            false,
-            "E"
-          ],
-          "SIM:AF04:Q1-31:23": [
-            true,
-            false,
-            "E"
-          ],
-          "SIM:AF04:Q1-31:24": [
-            true,
-            false,
-            "C"
-          ],
-          "SIM:AF04:Q1-31:25": [
+          "SIM:AF08:Q1-8:8": [
             false,
             true,
-            "E"
-          ],
-          "SIM:AF04:Q1-31:26": [
-            false,
-            true,
-            "E"
-          ],
-          "SIM:AF04:Q1-31:27": [
-            true,
-            false,
-            "C"
-          ],
-          "SIM:AF04:Q1-31:28": [
-            true,
-            true,
-            "E"
-          ],
-          "SIM:AF04:Q1-31:29": [
-            true,
-            false,
-            "C"
-          ],
-          "SIM:AF04:Q1-31:30": [
-            true,
-            false,
-            "E"
-          ],
-          "SIM:AF04:Q1-31:31": [
-            true,
-            false,
             "C"
           ]
         }
@@ -6776,7 +6723,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-23",
+          "prevista": "2026-10-27",
           "emitida": null
         },
         "d28": {
@@ -6832,12 +6779,12 @@
           "emitida": "2026-10-08"
         },
         "d6": {
-          "prevista": "2026-10-19",
+          "prevista": "2026-10-15",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-26",
+          "prevista": "2026-10-27",
           "emitida": null
         },
         "d28": {
@@ -6973,12 +6920,12 @@
           "emitida": "2026-10-08"
         },
         "d6": {
-          "prevista": "2026-10-16",
+          "prevista": "2026-10-15",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-26",
+          "prevista": "2026-10-27",
           "emitida": null
         },
         "d28": {
@@ -7075,12 +7022,12 @@
           "emitida": "2026-10-08"
         },
         "d6": {
-          "prevista": "2026-10-19",
+          "prevista": "2026-10-16",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-26",
+          "prevista": "2026-10-28",
           "emitida": null
         },
         "d28": {
@@ -7163,12 +7110,12 @@
           "emitida": "2026-10-08"
         },
         "d6": {
-          "prevista": "2026-10-16",
-          "emitida": null,
+          "prevista": "2026-10-14",
+          "emitida": "2026-10-14",
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-26",
+          "prevista": "2026-10-27",
           "emitida": null
         },
         "d28": {
@@ -7390,12 +7337,12 @@
           "emitida": "2026-10-08"
         },
         "d6": {
-          "prevista": "2026-10-15",
+          "prevista": "2026-10-16",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-23",
+          "prevista": "2026-10-27",
           "emitida": null
         },
         "d28": {
@@ -7452,7 +7399,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-23",
+          "prevista": "2026-10-26",
           "emitida": null
         },
         "d28": {
@@ -7516,12 +7463,12 @@
           "emitida": "2026-10-09"
         },
         "d6": {
-          "prevista": "2026-10-20",
+          "prevista": "2026-10-21",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-26",
+          "prevista": "2026-10-28",
           "emitida": null
         },
         "d28": {
@@ -7607,12 +7554,12 @@
           "emitida": "2026-10-09"
         },
         "d6": {
-          "prevista": "2026-10-20",
+          "prevista": "2026-10-21",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-27",
+          "prevista": "2026-10-28",
           "emitida": null
         },
         "d28": {
@@ -7672,12 +7619,12 @@
           "emitida": "2026-10-09"
         },
         "d6": {
-          "prevista": "2026-10-20",
+          "prevista": "2026-10-21",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-27",
+          "prevista": "2026-10-28",
           "emitida": null
         },
         "d28": {
@@ -7827,12 +7774,12 @@
           "emitida": "2026-10-09"
         },
         "d6": {
-          "prevista": "2026-10-20",
+          "prevista": "2026-10-21",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-26",
+          "prevista": "2026-10-28",
           "emitida": null
         },
         "d28": {
@@ -7999,12 +7946,12 @@
           "emitida": "2026-10-09"
         },
         "d6": {
-          "prevista": "2026-10-16",
+          "prevista": "2026-10-15",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-26",
+          "prevista": "2026-10-27",
           "emitida": null
         },
         "d28": {
@@ -8179,12 +8126,12 @@
           "emitida": "2026-10-12"
         },
         "d6": {
-          "prevista": "2026-10-20",
+          "prevista": "2026-10-21",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-26",
+          "prevista": "2026-10-28",
           "emitida": null
         },
         "d28": {
@@ -8269,12 +8216,12 @@
           "emitida": "2026-10-12"
         },
         "d6": {
-          "prevista": "2026-10-20",
+          "prevista": "2026-10-21",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-26",
+          "prevista": "2026-10-28",
           "emitida": null
         },
         "d28": {
@@ -8411,7 +8358,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-28",
+          "prevista": "2026-10-29",
           "emitida": null
         },
         "d28": {
@@ -8460,12 +8407,12 @@
           "emitida": "2026-10-12"
         },
         "d6": {
-          "prevista": "2026-10-21",
+          "prevista": "2026-10-22",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-28",
+          "prevista": "2026-10-29",
           "emitida": null
         },
         "d28": {
@@ -8523,12 +8470,12 @@
           "emitida": "2026-10-12"
         },
         "d6": {
-          "prevista": "2026-10-21",
+          "prevista": "2026-10-22",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-10-28",
+          "prevista": "2026-10-29",
           "emitida": null
         },
         "d28": {
@@ -8567,89 +8514,460 @@
           ]
         }
       }
+    },
+    "AFO, Direito Financeiro e Contabilidade Pública||Classificação por Natureza da Receita": {
+      "materia": "AFO, Direito Financeiro e Contabilidade Pública",
+      "assunto": "Classificação por Natureza da Receita",
+      "data_base": "2026-10-13",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "2292475",
+        "2292485",
+        "2156913",
+        "2271399",
+        "3661410"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-10-14",
+          "emitida": "2026-10-14"
+        },
+        "d6": {
+          "prevista": "2026-10-23",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-30",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-11-10",
+          "emitida": null
+        }
+      },
+      "amostra_base": {
+        "itens": {
+          "2007463": [
+            true,
+            false,
+            "C"
+          ],
+          "2156913": [
+            true,
+            true,
+            "C"
+          ],
+          "2159520": [
+            true,
+            false,
+            "C"
+          ],
+          "2214895": [
+            true,
+            false,
+            "C"
+          ],
+          "2271399": [
+            true,
+            true,
+            "C"
+          ],
+          "2292473": [
+            true,
+            false,
+            "C"
+          ],
+          "2292474": [
+            true,
+            false,
+            "E"
+          ],
+          "2292475": [
+            false,
+            false,
+            "C"
+          ],
+          "2292476": [
+            true,
+            false,
+            "E"
+          ],
+          "2292484": [
+            true,
+            false,
+            "C"
+          ],
+          "2292485": [
+            false,
+            true,
+            "E"
+          ],
+          "2520704": [
+            true,
+            false,
+            "E"
+          ],
+          "2590554": [
+            true,
+            false,
+            "E"
+          ],
+          "2779039": [
+            true,
+            false,
+            "C"
+          ],
+          "3454150": [
+            true,
+            false,
+            "C"
+          ],
+          "3661406": [
+            true,
+            false,
+            "E"
+          ],
+          "3661410": [
+            true,
+            true,
+            "C"
+          ]
+        }
+      },
+      "obs_data_base": "corrigida 14->13/10 em 14/10: captura _14_casa traz respostas de 13/10"
+    },
+    "Economia e Finanças Públicas||Bens Públicos (Economia)": {
+      "materia": "Economia e Finanças Públicas",
+      "assunto": "Bens Públicos (Economia)",
+      "data_base": "2026-10-13",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "3875126",
+        "2855997",
+        "2876246",
+        "2876287"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-10-14",
+          "emitida": "2026-10-14"
+        },
+        "d6": {
+          "prevista": "2026-10-23",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-30",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-11-10",
+          "emitida": null
+        }
+      },
+      "amostra_base": {
+        "itens": {
+          "3875126": [
+            false,
+            true,
+            "A"
+          ],
+          "3249843": [
+            true,
+            false,
+            "C"
+          ],
+          "2855997": [
+            false,
+            false,
+            "C"
+          ],
+          "2855998": [
+            true,
+            false,
+            "C"
+          ],
+          "2876246": [
+            false,
+            true,
+            "E"
+          ],
+          "2876249": [
+            true,
+            false,
+            "C"
+          ],
+          "2876252": [
+            true,
+            false,
+            "E"
+          ],
+          "2876287": [
+            true,
+            true,
+            "E"
+          ]
+        }
+      },
+      "obs_data_base": "corrigida 14->13/10 em 14/10: captura _14_casa traz respostas de 13/10"
+    },
+    "Economia e Finanças Públicas||Conceitos e Identidades Macroeconômicos": {
+      "materia": "Economia e Finanças Públicas",
+      "assunto": "Conceitos e Identidades Macroeconômicos",
+      "data_base": "2026-10-13",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "3339882",
+        "3354541",
+        "3354542",
+        "3495842",
+        "2795173",
+        "2856011",
+        "2856015",
+        "3041616",
+        "3144169",
+        "3339880",
+        "3339881",
+        "3495841",
+        "2856145",
+        "3144165"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-10-14",
+          "emitida": "2026-10-14"
+        },
+        "d6": {
+          "prevista": "2026-10-23",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-10-30",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-11-10",
+          "emitida": null
+        }
+      },
+      "amostra_base": {
+        "itens": {
+          "3339880": [
+            true,
+            true,
+            "C"
+          ],
+          "3339881": [
+            true,
+            true,
+            "E"
+          ],
+          "3339882": [
+            false,
+            false,
+            "E"
+          ],
+          "3354541": [
+            false,
+            false,
+            "C"
+          ],
+          "3354542": [
+            false,
+            false,
+            "E"
+          ],
+          "3495841": [
+            true,
+            true,
+            "C"
+          ],
+          "3495842": [
+            false,
+            true,
+            "C"
+          ],
+          "2795173": [
+            false,
+            false,
+            "E"
+          ],
+          "2856011": [
+            false,
+            false,
+            "C"
+          ],
+          "2856015": [
+            false,
+            true,
+            "E"
+          ],
+          "2856145": [
+            true,
+            true,
+            "E"
+          ],
+          "3041616": [
+            false,
+            false,
+            "C"
+          ],
+          "3041617": [
+            true,
+            false,
+            "E"
+          ],
+          "3041618": [
+            true,
+            false,
+            "E"
+          ],
+          "3144162": [
+            true,
+            false,
+            "E"
+          ],
+          "3144165": [
+            true,
+            true,
+            "E"
+          ],
+          "3144169": [
+            false,
+            true,
+            "C"
+          ]
+        }
+      },
+      "obs_data_base": "corrigida 14->13/10 em 14/10: captura _14_casa traz respostas de 13/10"
+    },
+    "Economia e Finanças Públicas||Elasticidade Preço da Demanda": {
+      "materia": "Economia e Finanças Públicas",
+      "assunto": "Elasticidade Preço da Demanda",
+      "data_base": "2026-10-13",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "3474998"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-10-14",
+          "emitida": "2026-10-14"
+        },
+        "d6": {
+          "prevista": "2026-10-23",
+          "emitida": null,
+          "resultado": null
+        },
+        "d14": {
+          "prevista": "2026-11-02",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-11-10",
+          "emitida": null
+        }
+      },
+      "amostra_base": {
+        "itens": {
+          "3883201": [
+            true,
+            false,
+            "E"
+          ],
+          "3474998": [
+            false,
+            false,
+            "A"
+          ],
+          "2924531": [
+            true,
+            false,
+            "C"
+          ],
+          "3008693": [
+            true,
+            false,
+            "C"
+          ],
+          "3084335": [
+            true,
+            false,
+            "A"
+          ]
+        }
+      },
+      "obs_data_base": "corrigida 14->13/10 em 14/10: captura _14_casa traz respostas de 13/10"
     }
   },
   "ultima_fila": {
-    "data": "2026-10-12",
+    "data": "2026-10-14",
     "itens": [
       [
-        "2026-10-09||Extensão — tabela-âncora dos prazos de DF-e",
+        "2026-10-12||Extensão — nuvem, 1ª leva: IaaS × PaaS × SaaS e a responsabilidade compartilhada, dentro do tópico de nuvem (p1, 105 questões)",
         "leitura"
       ],
       [
+        "2026-10-12||🎌 Feriado — Estatística 2h: curtose (ZERO questões em 5.589) e assimetria (2). Enumerativo e barato: lepto/meso/platicúrtica, coeficiente de Pearson, assimetria por quartis",
+        "leitura"
+      ],
+      [
+        "2026-10-13||Macro — contas nacionais, produto e renda, agregados (item 3, p1). Produto nominal × real (p4) foi para a Fase 3 em 24/09 (Fases 1-2 só com prioridade alta/máxima)",
+        "leitura"
+      ],
+      [
+        "AFO, Direito Financeiro e Contabilidade Pública||Classificação por Natureza da Receita",
+        "d1"
+      ],
+      [
+        "AFO, Direito Financeiro e Contabilidade Pública||Planejamento e Orçamento Público (arts. 3º a 10 da LRF)",
+        "d1"
+      ],
+      [
         "Auditoria Fiscal||MOC do CT-e e CT-e OS 4.00",
+        "d1"
+      ],
+      [
+        "Economia e Finanças Públicas||Bem Estar e Funções do Governo",
         "d6"
       ],
       [
-        "Auditoria Fiscal||Omissão de receitas, créditos indevidos e inconsistências",
+        "Economia e Finanças Públicas||Bens Públicos (Economia)",
         "d1"
       ],
       [
-        "Auditoria Fiscal||Registros da EFD-ICMS/IPI",
+        "Economia e Finanças Públicas||Conceitos e Identidades Macroeconômicos",
         "d1"
       ],
       [
-        "Direito Tributário||Comitê Gestor do IBS (CF 1988, EC 132)",
-        "d28"
-      ],
-      [
-        "Direito Tributário||Imposto Seletivo - IS (CF 1988; EC 132)",
-        "d28"
-      ],
-      [
-        "Legislação Tributária Estadual||ICMS/AL — alíquotas (art. 17)",
+        "Economia e Finanças Públicas||Dívida Pública, NFSP e Tipos de Déficit Público no Brasil",
         "d1"
       ],
       [
-        "Legislação Tributária Estadual||PAT — consulta, restituição e denúncia espontânea",
+        "Economia e Finanças Públicas||Elasticidade Preço da Demanda",
         "d1"
       ],
       [
         "Legislação Tributária Estadual||PAT — ordinário × especial (400 UPFAL), instâncias e CTE",
-        "d6"
-      ],
-      [
-        "Legislação Tributária Federal||Da Não Cumulatividade (arts. 47 a 56 da LC nº 214/2025)",
-        "d28"
-      ],
-      [
-        "Reforma Tributária||LC 227/2026 — CGIBS, competências e estrutura",
         "d1"
       ],
       [
-        "Reforma Tributária||Regulamento do IBS — Res. CGIBS 6 e 13/2026",
+        "TI - Gestão e Governança de TI||ITIL v4",
         "d6"
-      ],
-      [
-        "TI - Banco de Dados||Conceitos e Fundamentos de Modelo Relacional",
-        "d6"
-      ],
-      [
-        "TI - Engenharia de Software||Conceitos e Tipos de Testes de Software",
-        "d1"
-      ],
-      [
-        "TI - Engenharia de Software||Kanban (Engenharia de Software)",
-        "d28"
-      ],
-      [
-        "TI - Engenharia de Software||XP (Extreme Programming)",
-        "d28"
-      ],
-      [
-        "TI - Gestão e Governança de TI||BPMN (Modelo e Notação de Processos de Negócio)",
-        "d28"
-      ],
-      [
-        "TI - Segurança da Informação||Gestão de Continuidade de Negócio (NBR ISO/IEC 15999-1, 15999-2, 27002, 22313, etc.)",
-        "d28"
-      ],
-      [
-        "TI - Segurança da Informação||SGSI, Controles e Estrutura das Normas da Família 27000 (ISO/IEC 27001, 27002, etc.)",
-        "d28"
       ]
     ],
-    "confirmada": "2026-10-12"
+    "confirmada": "2026-10-14"
   },
   "leituras": {
     "2026-09-14||LC 214, arts. 38-56 — não cumulatividade, apropriação e utilização de créditos": {
@@ -9065,6 +9383,45 @@
       "minutos": null,
       "prevista": "2026-10-12",
       "emitida": "2026-10-12"
+    },
+    "2026-10-13||Macro — contas nacionais, produto e renda, agregados (item 3, p1). Produto nominal × real (p4) foi para a Fase 3 em 24/09 (Fases 1-2 só com prioridade alta/máxima)": {
+      "materia": "Economia",
+      "rotulo": "Macro — contas nacionais, produto e renda, agregados (item 3, p1). Produto nominal × real (p4) foi para a Fase 3 em 24/09 (Fases 1-2 só com prioridade alta/máxima)",
+      "data_leitura": "2026-10-13",
+      "fonte": null,
+      "origem": "plano",
+      "plano_ref": "S6 Terça",
+      "minutos": 105,
+      "prevista": "2026-10-14",
+      "emitida": "expirada",
+      "nao_realizada": true,
+      "obs": "nao realizada (declarado pelo usuario em 14/10: na semana so houve a rodada do TEC de 13/10)"
+    },
+    "2026-10-12||🎌 Feriado — Estatística 2h: curtose (ZERO questões em 5.589) e assimetria (2). Enumerativo e barato: lepto/meso/platicúrtica, coeficiente de Pearson, assimetria por quartis": {
+      "materia": "Estatística",
+      "rotulo": "🎌 Feriado — Estatística 2h: curtose (ZERO questões em 5.589) e assimetria (2). Enumerativo e barato: lepto/meso/platicúrtica, coeficiente de Pearson, assimetria por quartis",
+      "data_leitura": "2026-10-12",
+      "fonte": null,
+      "origem": "plano",
+      "plano_ref": "S6 Segunda",
+      "minutos": 120,
+      "prevista": "2026-10-13",
+      "emitida": "expirada",
+      "nao_realizada": true,
+      "obs": "nao realizada (declarado pelo usuario em 14/10: na semana so houve a rodada do TEC de 13/10)"
+    },
+    "2026-10-12||Extensão — nuvem, 1ª leva: IaaS × PaaS × SaaS e a responsabilidade compartilhada, dentro do tópico de nuvem (p1, 105 questões)": {
+      "materia": "Infra de TIC e Segurança",
+      "rotulo": "Extensão — nuvem, 1ª leva: IaaS × PaaS × SaaS e a responsabilidade compartilhada, dentro do tópico de nuvem (p1, 105 questões)",
+      "data_leitura": "2026-10-12",
+      "fonte": null,
+      "origem": "plano",
+      "plano_ref": "S6 Segunda",
+      "minutos": 30,
+      "prevista": "2026-10-13",
+      "emitida": "expirada",
+      "nao_realizada": true,
+      "obs": "nao realizada (declarado pelo usuario em 14/10: na semana so houve a rodada do TEC de 13/10)"
     }
   }
 }

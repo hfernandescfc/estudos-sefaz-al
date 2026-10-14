@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-10-13T10:05:58",
+ "gerado_em": "2026-10-14T11:42:19",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -2570,6 +2570,138 @@ window.SESSOES_TEC = {
    "qResolvidas": 18,
    "qAcertadas": 15,
    "obs": "Simulado SIM01 (Q1-80) cronometrado"
+  },
+  {
+   "uid": "SIM~AF08~2026-10-13~AUDFIS",
+   "origem": "simulado",
+   "data": "2026-10-13",
+   "mat": "AUDFIS",
+   "topicId": null,
+   "assuntoLivre": "Simulado AF08 — AUDFIS",
+   "minutos": 2,
+   "qResolvidas": 8,
+   "qAcertadas": 3,
+   "obs": "Simulado AF08 (Q1-8) cronometrado"
+  },
+  {
+   "uid": "SIM~AL06~2026-10-13~LEGAL",
+   "origem": "simulado",
+   "data": "2026-10-13",
+   "mat": "LEGAL",
+   "topicId": null,
+   "assuntoLivre": "Simulado AL06 — LEGAL",
+   "minutos": 2,
+   "qResolvidas": 8,
+   "qAcertadas": 4,
+   "obs": "Simulado AL06 (Q1-8) cronometrado"
+  },
+  {
+   "uid": "SIM~RT14~2026-10-13~RT",
+   "origem": "simulado",
+   "data": "2026-10-13",
+   "mat": "RT",
+   "topicId": null,
+   "assuntoLivre": "Simulado RT14 — RT",
+   "minutos": 2,
+   "qResolvidas": 8,
+   "qAcertadas": 7,
+   "obs": "Simulado RT14 (Q1-8) cronometrado"
+  },
+  {
+   "uid": "TEC~2026-10-13~113",
+   "origem": "tec",
+   "data": "2026-10-13",
+   "mat": "ECON",
+   "topicId": "113",
+   "assuntoLivre": "",
+   "minutos": 3,
+   "qResolvidas": 5,
+   "qAcertadas": 4,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-13~222",
+   "origem": "tec",
+   "data": "2026-10-13",
+   "mat": "CDADOS",
+   "topicId": "222",
+   "assuntoLivre": "",
+   "minutos": 1,
+   "qResolvidas": 7,
+   "qAcertadas": 6,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-13~249",
+   "origem": "tec",
+   "data": "2026-10-13",
+   "mat": "FINPUB",
+   "topicId": "249",
+   "assuntoLivre": "",
+   "minutos": 5,
+   "qResolvidas": 13,
+   "qAcertadas": 11,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-13~253",
+   "origem": "tec",
+   "data": "2026-10-13",
+   "mat": "FINPUB",
+   "topicId": "253",
+   "assuntoLivre": "",
+   "minutos": 6,
+   "qResolvidas": 16,
+   "qAcertadas": 13,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-13~256",
+   "origem": "tec",
+   "data": "2026-10-13",
+   "mat": "FINPUB",
+   "topicId": "256",
+   "assuntoLivre": "",
+   "minutos": 6,
+   "qResolvidas": 17,
+   "qAcertadas": 15,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-13~96",
+   "origem": "tec",
+   "data": "2026-10-13",
+   "mat": "ECON",
+   "topicId": "96",
+   "assuntoLivre": "",
+   "minutos": 14,
+   "qResolvidas": 17,
+   "qAcertadas": 8,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-13~99",
+   "origem": "tec",
+   "data": "2026-10-13",
+   "mat": "ECON",
+   "topicId": "99",
+   "assuntoLivre": "",
+   "minutos": 3,
+   "qResolvidas": 8,
+   "qAcertadas": 5,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-13~algebra-relacional-79fe2f",
+   "origem": "tec",
+   "data": "2026-10-13",
+   "mat": "CDADOS",
+   "topicId": null,
+   "assuntoLivre": "Álgebra Relacional",
+   "minutos": 1,
+   "qResolvidas": 1,
+   "qAcertadas": 1,
+   "obs": "reconstruída do TEC"
   }
  ]
 };
