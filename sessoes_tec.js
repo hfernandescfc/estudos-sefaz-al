@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-10-15T15:37:07",
+ "gerado_em": "2026-10-19T08:16:11",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -2808,6 +2808,18 @@ window.SESSOES_TEC = {
    "assuntoLivre": "",
    "minutos": 3,
    "qResolvidas": 7,
+   "qAcertadas": 2,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-15~291",
+   "origem": "tec",
+   "data": "2026-10-15",
+   "mat": "FINPUB",
+   "topicId": "291",
+   "assuntoLivre": "",
+   "minutos": 4,
+   "qResolvidas": 5,
    "qAcertadas": 2,
    "obs": "reconstruída do TEC"
   }
