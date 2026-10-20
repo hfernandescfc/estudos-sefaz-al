@@ -2169,15 +2169,115 @@ function topicosSemana(matGroup, week, plano){
     .filter(i=>!i.ok&&grupo(i.t.mat)===matGroup&&i.semEff===week)
     .sort((a,b)=>prioSort(a.t,b.t));
 }
+/* Projeção dos slots da semana atual em diante (20/10/2026).
+   Antes: o slot do PLANO_DIA cujo assunto já estava cumprido exibia "Sem
+   pendências", e o slot de molde exibia TODOS os pendentes da matéria, sem
+   limite. Como o replanejar() empilha o atraso na semana atual (o limite dele
+   é por matéria, não por hora), a semana atual prometia mais do que cabe e as
+   seguintes ficavam vazias — e, com o ritmo recalibrado, o gerador adiantou
+   assuntos e deixou slots das S8-S14 sem assunto próprio.
+   Agora cada assunto pendente vai para UM slot, até a capacidade do slot
+   (minutos × ritmo), e o que não cabe passa para a semana seguinte:
+     1. slot do PLANO_DIA com assunto pendente: mantém os seus (sem limite —
+        leitura de lei seca ancorada no dia não se fatia);
+     2. slot de molde: pendentes da matéria, o mais antigo no plano primeiro;
+     3. slot ainda vazio: pendente da mesma matéria; senão, de outra matéria;
+        esgotado o atraso, ADIANTA o próximo assunto do plano (nunca um que
+        já tem dia marcado no PLANO_DIA de semana futura); esgotada a 1ª
+        passagem, entra a REVISITA (p2 do QPLAN), que a grade não mostrava —
+        as S11-S14 apareciam vazias desde sempre. Revisita já feita = o que
+        passou da meta da 1ª passagem.
+   -> {semana: [{tops:[info], tipo}]}, alinhado com itensDaSemana(semana). */
+function itensDaSemana(week){
+  const its=[]; Object.values(DIA_SEMANA).forEach(dia=>its.push(...gradeDoDia(dia,week))); return its;
+}
+function projecaoSlots(plano){
+  if(plano._proj) return plano._proj;
+  const proj={}; plano._proj=proj;
+  const pend=Object.values(plano.info).filter(i=>!i.ok)
+    .sort((a,b)=>a.semOrig-b.semOrig||prioSort(a.t,b.t));
+  const ancorado={};   // id -> semana do PLANO_DIA que o cita
+  for(let w=plano.wNow; w<=ULT_SEMANA; w++)
+    (PLANO_DIA[w]||[]).forEach(bl=>(bl.tops||[]).forEach(id=>{ if(!(id in ancorado)) ancorado[String(id)]=w; }));
+  const exec=planExec();
+  const rev=SEED_TOPICS.map(t=>{ const p2=topicP2(t.id); if(!p2||!(p2[0]>0)) return null;
+      const e=exec[String(t.id)]||{qr:0}, feita=Math.max(0,(e.qr||0)-topicMeta(t.id));
+      const resto=Math.max(0,p2[0]-feita); if(!resto) return null;
+      return {t,semOrig:p2[1],meta:p2[0],qr:feita,resto,ok:false,movido:false,rev:true}; })
+    .filter(Boolean).sort((a,b)=>a.semOrig-b.semOrig||prioSort(a.t,b.t));
+  const tomados=new Set(), chave=i=>(i.rev?"R":"")+i.t.id;
+  const semTomado={};  // id -> semana em que a 1ª passagem pendente foi alocada
+  const toma=i=>{ tomados.add(chave(i)); if(!i.rev) semTomado[String(i.t.id)]=wCur; };
+  const livre=i=>!tomados.has(chave(i));
+  // revisita só depois da 1ª passagem: cumprida, ou alocada em semana anterior
+  const p1feita=(i,w)=>{ const p=plano.info[i.t.id]; if(!p||p.ok) return true;
+    const s=semTomado[String(i.t.id)]; return s!==undefined&&s<w; };
+  let wCur=0;
+  for(let w=plano.wNow; w<=ULT_SEMANA; w++){
+    wCur=w;
+    const itens=itensDaSemana(w);
+    const out=itens.map(()=>({tops:[],tipo:""})); proj[w]=out;
+    const encher=(k,pred,tipo,lista)=>{ const it=itens[k]; let q=out[k].tops.reduce((a,i)=>a+i.resto,0);
+      for(const i of (lista||pend)){
+        if(!livre(i)||!pred(i)) continue;
+        const cap=Math.max(1,Math.round(it.min*ritmo(i.t.mat)/60));
+        if(out[k].tops.length&&q+i.resto>cap) break;
+        out[k].tops.push(i); toma(i); q+=i.resto; if(!out[k].tipo) out[k].tipo=tipo;
+        if(q>=cap) break; } };
+    // 1. assuntos do próprio dia
+    itens.forEach((it,k)=>{ if(it.mat==="CEX"||!it.tops) return;
+      it.tops.map(id=>plano.info[id]).filter(i=>i&&!i.ok&&livre(i)).forEach(i=>{ out[k].tops.push(i); toma(i); });
+      if(out[k].tops.length) out[k].tipo="proprio"; });
+    const devido=i=>i.semEff<=w&&(ancorado[String(i.t.id)]===undefined||ancorado[String(i.t.id)]<=w);
+    // 2. molde
+    itens.forEach((it,k)=>{ if(it.mat!=="CEX"&&!it.tops) encher(k,i=>devido(i)&&grupo(i.t.mat)===it.mat,"molde"); });
+    // 3. slots vazios
+    itens.forEach((it,k)=>{
+      if(it.mat==="CEX"||out[k].tops.length) return;
+      encher(k,i=>devido(i)&&grupo(i.t.mat)===it.mat,"mesma");
+      if(out[k].tops.length) return;
+      const o=pend.find(i=>livre(i)&&devido(i));
+      if(o){ const g=grupo(o.t.mat); encher(k,i=>devido(i)&&grupo(i.t.mat)===g,"outra"); return; }
+      const ad=i=>ancorado[String(i.t.id)]===undefined;
+      encher(k,i=>ad(i)&&grupo(i.t.mat)===it.mat,"adianta");
+      if(out[k].tops.length) return;
+      const a=pend.find(i=>livre(i)&&ad(i));
+      if(a){ const g=grupo(a.t.mat); encher(k,i=>ad(i)&&grupo(i.t.mat)===g,"adianta-outra"); return; }
+      // revisita: a vencida (semana ≤ w) primeiro, depois a adiantada
+      for(const venc of [true,false]){
+        const ok=i=>(!venc||i.semOrig<=w)&&p1feita(i,w);
+        encher(k,i=>ok(i)&&grupo(i.t.mat)===it.mat,"rev",rev);
+        if(out[k].tops.length) return;
+        const r=rev.find(i=>livre(i)&&ok(i));
+        if(r){ const g=grupo(r.t.mat); encher(k,i=>ok(i)&&grupo(i.t.mat)===g,"rev-outra",rev); return; }
+      }
+    });
+  }
+  return proj;
+}
+function chipTopico(i){
+  return `<span class="topchip${i.t.c25?' c25':''}">${i.t.c25?'✅ ':''}${escapeHtml(i.t.assunto)} <span class="qn">${i.qr>0?i.qr+"/":""}${i.meta}q</span>${i.movido?` <span class="mov-chip" title="movido da S${i.semOrig}">↪S${i.semOrig}</span>`:''}${codigosUI(i.t.id)}</span>`;
+}
 // Conteúdo (HTML) de um bloco da grade para a semana corrente.
-function blocoConteudo(matGroup, week, plano, ids){
+// slot: {tops, tipo} da projecaoSlots() — da semana atual em diante.
+function blocoConteudo(matGroup, week, plano, ids, slot){
   if(matGroup==="CEX") return `<span class="bloco-note muted">Consolidação — sem assunto novo</span>`;
-  // ids != null: o dia vem do PLANO_DIA e já diz quais assuntos são dele.
+  if(slot){
+    if(!slot.tops.length) return `<span class="bloco-note">🎯 Plano inteiro em dia — simulado por bloco cronometrado + refazer as erradas</span>`;
+    const g=grupo(slot.tops[0].t.mat), outra=g!==matGroup;
+    const nota={
+      mesma:`↻ Previsto já cumprido — no lugar, o pendente mais antigo da matéria`,
+      outra:`⇄ ${matNome(matGroup)} sem pendência — no lugar: <b>${matNome(g)}</b> (atrasado)`,
+      adianta:`⏩ Sem atraso — adiantando o próximo assunto da matéria`,
+      "adianta-outra":`⏩ ${matNome(matGroup)} sem pendência — adiantando <b>${matNome(g)}</b>`,
+      rev:`🔁 Revisita (Fase 3)`,
+      "rev-outra":`🔁 ${matNome(matGroup)} sem pendência — revisita de <b>${matNome(g)}</b>`}[slot.tipo];
+    return (nota?`<span class="bloco-note">${nota}</span> `:"")+slot.tops.map(chipTopico).join("");
+  }
+  // semanas passadas: o que o plano marcou, sem projeção
   const tops = ids ? ids.map(i=>plano.info[i]).filter(i=>i&&!i.ok)
                    : topicosSemana(matGroup, week, plano);
-  if(tops.length){
-    return tops.map(i=>`<span class="topchip${i.t.c25?' c25':''}">${i.t.c25?'✅ ':''}${escapeHtml(i.t.assunto)} <span class="qn">${i.qr>0?i.qr+"/":""}${i.meta}q</span>${i.movido?` <span class="mov-chip" title="movido da S${i.semOrig}">↪S${i.semOrig}</span>`:''}${codigosUI(i.t.id)}</span>`).join("");
-  }
+  if(tops.length) return tops.map(chipTopico).join("");
   // Sem pendências na semana: matérias rápidas (50 q/h) viram simulado.
   if(ritmo(matGroup)>=50) return `<span class="bloco-note">🎯 Sem pendências — simulado por bloco cronometrado (14 q) + refazer as erradas</span>`;
   return `<span class="bloco-note muted">Revisão / lei seca / Anki</span>`;
@@ -2242,14 +2342,19 @@ function renderCronograma(){
     </div>`;
   } else {
     const hojeDia = isNow ? DIA_SEMANA[now.getDay()] : null;
+    // gradeDoDia cria objetos novos nas S11-14: guardar e reusar os mesmos.
+    // A ordem de itensSem é a de itensDaSemana(), que indexa os substitutos.
+    const gradeSem={}, itensSem=[];
+    Object.values(DIA_SEMANA).forEach(dia=>{ gradeSem[dia]=gradeDoDia(dia,cw); itensSem.push(...gradeSem[dia]); });
+    const subs=projecaoSlots(plano)[cw]||[];
     Object.entries(DIA_SEMANA).forEach(([dn,dia])=>{
-      const items=gradeDoDia(dia,cw); if(!items.length) return;
+      const items=gradeSem[dia]; if(!items.length) return;
       const tot=items.reduce((a,i)=>a+i.min,0);
       const cls = dia===hojeDia ? " today" : "";
       html+=`<div class="sched-day${cls}"><h3><span>${dia} <span class="tot">${fmtMin(tot)} direcionadas</span></span></h3>`;
       items.forEach(it=>{
         const rot = it.rot ? `<div class="bloco-rot">${escapeHtml(it.rot)}</div>` : "";
-        html+=`<div class="sched-item"><span class="min">${it.min}min</span><span class="mt"><span class="dot" style="background:${matCor(it.mat)}"></span> ${matNome(it.mat)}</span><span class="ds">${rot}${blocoConteudo(it.mat,cw,plano,it.tops)}</span></div>`;
+        html+=`<div class="sched-item"><span class="min">${it.min}min</span><span class="mt"><span class="dot" style="background:${matCor(it.mat)}"></span> ${matNome(it.mat)}</span><span class="ds">${rot}${blocoConteudo(it.mat,cw,plano,it.tops,subs[itensSem.indexOf(it)])}</span></div>`;
       });
       html+=`</div>`;
     });
