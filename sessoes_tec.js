@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-10-20T08:16:16",
+ "gerado_em": "2026-10-20T10:21:24",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -208,7 +208,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-02~classificacao-e-subsistemas-do-sfn-75036b",
+   "uid": "TEC~2026-09-02~classificacao-e-subsistemas-do-sfn-bbeb41",
    "origem": "tec",
    "data": "2026-09-02",
    "mat": "FINPUB",
@@ -220,7 +220,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-02~composicao-geral-do-sfn-294b51",
+   "uid": "TEC~2026-09-02~composicao-geral-do-sfn-56c2a8",
    "origem": "tec",
    "data": "2026-09-02",
    "mat": "FINPUB",
@@ -232,7 +232,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-02~demais-temas-sobre-custos-no-setor-publico-6ab4a8",
+   "uid": "TEC~2026-09-02~demais-temas-sobre-custos-no-setor-publico-a276e4",
    "origem": "tec",
    "data": "2026-09-02",
    "mat": "CPUB",
@@ -244,7 +244,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-02~escrituracao-normas-livros-contabeis-lancamentos-metodo-das--2a030a",
+   "uid": "TEC~2026-09-02~escrituracao-normas-livros-contabeis-lancamentos-metodo-das--e56406",
    "origem": "tec",
    "data": "2026-09-02",
    "mat": "CGER",
@@ -364,7 +364,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-03~amplitude-1e7ae7",
+   "uid": "TEC~2026-09-03~amplitude-8b1ac0",
    "origem": "tec",
    "data": "2026-09-03",
    "mat": "ESTAT",
@@ -376,7 +376,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-03~atributos-ou-caracteristicas-dos-atos-administrativos-2fd71f",
+   "uid": "TEC~2026-09-03~atributos-ou-caracteristicas-dos-atos-administrativos-1bd32f",
    "origem": "tec",
    "data": "2026-09-03",
    "mat": "DADM",
@@ -388,7 +388,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-03~da-responsabilizacao-administrativa-arts-6-e-7-da-lei-n-12-8-3590d1",
+   "uid": "TEC~2026-09-03~da-responsabilizacao-administrativa-arts-6-e-7-da-lei-n-12-8-389d67",
    "origem": "tec",
    "data": "2026-09-03",
    "mat": "DADM",
@@ -400,7 +400,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-03~decreto-n-11-129-2022-regulamenta-a-lei-n-12-846-2013-lei-an-4c8c66",
+   "uid": "TEC~2026-09-03~decreto-n-11-129-2022-regulamenta-a-lei-n-12-846-2013-lei-an-8ac612",
    "origem": "tec",
    "data": "2026-09-03",
    "mat": "DADM",
@@ -412,7 +412,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-03~decreto-n-11-462-2023-sistema-de-registro-de-precos-srp-e5c1b8",
+   "uid": "TEC~2026-09-03~decreto-n-11-462-2023-sistema-de-registro-de-precos-srp-4136f2",
    "origem": "tec",
    "data": "2026-09-03",
    "mat": "DADM",
@@ -424,7 +424,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-03~demonstracao-das-mutacoes-do-patrimonio-liquido-afo-e-cpu-794c40",
+   "uid": "TEC~2026-09-03~demonstracao-das-mutacoes-do-patrimonio-liquido-afo-e-cpu-06b816",
    "origem": "tec",
    "data": "2026-09-03",
    "mat": "CPUB",
@@ -436,7 +436,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-03~direitos-coletivos-dos-trabalhadores-arts-8-a-11-da-cf-1988-a57fc2",
+   "uid": "TEC~2026-09-03~direitos-coletivos-dos-trabalhadores-arts-8-a-11-da-cf-1988-cc1cda",
    "origem": "tec",
    "data": "2026-09-03",
    "mat": "DCON",
@@ -448,7 +448,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-03~do-acordo-de-leniencia-arts-16-e-17-da-lei-n-12-846-2013-6ea3eb",
+   "uid": "TEC~2026-09-03~do-acordo-de-leniencia-arts-16-e-17-da-lei-n-12-846-2013-617ba3",
    "origem": "tec",
    "data": "2026-09-03",
    "mat": "DADM",
@@ -460,7 +460,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-03~do-estatuto-da-magistratura-art-93-da-cf-1988-a72e9a",
+   "uid": "TEC~2026-09-03~do-estatuto-da-magistratura-art-93-da-cf-1988-f7eb5f",
    "origem": "tec",
    "data": "2026-09-03",
    "mat": "DCON",
@@ -472,7 +472,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-03~dos-atos-lesivos-a-administracao-publica-nacional-ou-estrang-582d7b",
+   "uid": "TEC~2026-09-03~dos-atos-lesivos-a-administracao-publica-nacional-ou-estrang-454c35",
    "origem": "tec",
    "data": "2026-09-03",
    "mat": "DADM",
@@ -484,7 +484,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-03~intervalo-interquartilico-e569ee",
+   "uid": "TEC~2026-09-03~intervalo-interquartilico-a54b32",
    "origem": "tec",
    "data": "2026-09-03",
    "mat": "ESTAT",
@@ -496,7 +496,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-03~peculato-art-312-do-cp-463c67",
+   "uid": "TEC~2026-09-03~peculato-art-312-do-cp-71742b",
    "origem": "tec",
    "data": "2026-09-03",
    "mat": "DTRIB",
@@ -508,7 +508,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-03~propriedades-das-medidas-de-dispersao-67e6bb",
+   "uid": "TEC~2026-09-03~propriedades-das-medidas-de-dispersao-553849",
    "origem": "tec",
    "data": "2026-09-03",
    "mat": "ESTAT",
@@ -520,7 +520,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-03~propriedades-das-medidas-de-posicao-associadas-a-desvios-323789",
+   "uid": "TEC~2026-09-03~propriedades-das-medidas-de-posicao-associadas-a-desvios-895c50",
    "origem": "tec",
    "data": "2026-09-03",
    "mat": "ESTAT",
@@ -532,7 +532,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-03~questoes-mescladas-de-poder-judiciario-arts-92-a-126-da-cf-1-a57628",
+   "uid": "TEC~2026-09-03~questoes-mescladas-de-poder-judiciario-arts-92-a-126-da-cf-1-1d7fd5",
    "origem": "tec",
    "data": "2026-09-03",
    "mat": "DCON",
@@ -544,7 +544,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-03~questoes-mescladas-sobre-crimes-praticados-por-funcionario-p-2351bf",
+   "uid": "TEC~2026-09-03~questoes-mescladas-sobre-crimes-praticados-por-funcionario-p-db497d",
    "origem": "tec",
    "data": "2026-09-03",
    "mat": "DTRIB",
@@ -1192,7 +1192,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-21~das-competencias-do-cgibs-e-das-diretrizes-para-a-coordenaca-5e512b",
+   "uid": "TEC~2026-09-21~das-competencias-do-cgibs-e-das-diretrizes-para-a-coordenaca-a28de1",
    "origem": "tec",
    "data": "2026-09-21",
    "mat": "RT",
@@ -1456,7 +1456,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-25~da-fiscalizacao-e-do-lancamento-de-oficio-arts-324-a-341-da--b56404",
+   "uid": "TEC~2026-09-25~da-fiscalizacao-e-do-lancamento-de-oficio-arts-324-a-341-da--3e733e",
    "origem": "tec",
    "data": "2026-09-25",
    "mat": "RT",
@@ -1468,7 +1468,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-25~da-harmonizacao-do-ibs-e-da-cbs-arts-318-a-323-da-lc-n-214-2-c8d30c",
+   "uid": "TEC~2026-09-25~da-harmonizacao-do-ibs-e-da-cbs-arts-318-a-323-da-lc-n-214-2-b538e3",
    "origem": "tec",
    "data": "2026-09-25",
    "mat": "RT",
@@ -1480,7 +1480,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-25~da-reabilitacao-urbana-de-zonas-historicas-e-de-areas-critic-1b4e69",
+   "uid": "TEC~2026-09-25~da-reabilitacao-urbana-de-zonas-historicas-e-de-areas-critic-ecabbf",
    "origem": "tec",
    "data": "2026-09-25",
    "mat": "RT",
@@ -1492,7 +1492,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-25~da-reducao-a-zero-das-aliquotas-do-ibs-e-da-cbs-arts-143-a-1-ac5998",
+   "uid": "TEC~2026-09-25~da-reducao-a-zero-das-aliquotas-do-ibs-e-da-cbs-arts-143-a-1-3c8ac9",
    "origem": "tec",
    "data": "2026-09-25",
    "mat": "RT",
@@ -1504,7 +1504,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-25~da-reducao-em-sessenta-por-cento-das-aliquotas-do-ibs-e-da-c-5cdf41",
+   "uid": "TEC~2026-09-25~da-reducao-em-sessenta-por-cento-das-aliquotas-do-ibs-e-da-c-bc1515",
    "origem": "tec",
    "data": "2026-09-25",
    "mat": "RT",
@@ -1516,7 +1516,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-25~disposicoes-preliminares-do-imposto-seletivo-arts-409-a-411--5edd4d",
+   "uid": "TEC~2026-09-25~disposicoes-preliminares-do-imposto-seletivo-arts-409-a-411--bc5d59",
    "origem": "tec",
    "data": "2026-09-25",
    "mat": "RT",
@@ -1528,7 +1528,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-25~dos-arranjos-de-pagamento-arts-214-a-219-da-lc-n-214-2025-5bda9f",
+   "uid": "TEC~2026-09-25~dos-arranjos-de-pagamento-arts-214-a-219-da-lc-n-214-2025-b161cc",
    "origem": "tec",
    "data": "2026-09-25",
    "mat": "RT",
@@ -1540,7 +1540,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-25~dos-concursos-de-prognosticos-arts-244-a-250-da-lc-n-214-202-7c4a1c",
+   "uid": "TEC~2026-09-25~dos-concursos-de-prognosticos-arts-244-a-250-da-lc-n-214-202-fb23ec",
    "origem": "tec",
    "data": "2026-09-25",
    "mat": "RT",
@@ -1552,7 +1552,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-25~dos-regimes-aduaneiros-arts-84-a-98-b-da-lc-n-214-2025-61db6c",
+   "uid": "TEC~2026-09-25~dos-regimes-aduaneiros-arts-84-a-98-b-da-lc-n-214-2025-8b2e70",
    "origem": "tec",
    "data": "2026-09-25",
    "mat": "RT",
@@ -1756,7 +1756,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-30~ctg-2001-r3-formalidades-da-escrituracao-contabil-em-forma-d-f87bf0",
+   "uid": "TEC~2026-09-30~ctg-2001-r3-formalidades-da-escrituracao-contabil-em-forma-d-366614",
    "origem": "tec",
    "data": "2026-09-30",
    "mat": "CGER",
@@ -1768,10 +1768,10 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-30~sem-assunto-98b864",
+   "uid": "TEC~2026-09-30~sem-assunto-0a4bef",
    "origem": "tec",
    "data": "2026-09-30",
-   "mat": "DTRIB",
+   "mat": "LEGAL",
    "topicId": null,
    "assuntoLivre": "Legislação Tributária dos Estados e do Distrito Federal — geral",
    "minutos": 1,
@@ -2080,7 +2080,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-10-02~ajuste-de-avaliacao-patrimonial-1d09c1",
+   "uid": "TEC~2026-10-02~ajuste-de-avaliacao-patrimonial-818bf5",
    "origem": "tec",
    "data": "2026-10-02",
    "mat": "CGER",
@@ -2092,7 +2092,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-10-02~criterios-de-avaliacao-do-estoque-peps-ueps-media-ponderada-1433f5",
+   "uid": "TEC~2026-10-02~criterios-de-avaliacao-do-estoque-peps-ueps-media-ponderada-28364b",
    "origem": "tec",
    "data": "2026-10-02",
    "mat": "CGER",
@@ -2104,7 +2104,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-10-02~da-fiscalizacao-e-do-lancamento-de-oficio-arts-324-a-341-da--b56404",
+   "uid": "TEC~2026-10-02~da-fiscalizacao-e-do-lancamento-de-oficio-arts-324-a-341-da--3e733e",
    "origem": "tec",
    "data": "2026-10-02",
    "mat": "RT",
@@ -2116,7 +2116,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-10-02~emprestimos-e-fornecedores-d347b8",
+   "uid": "TEC~2026-10-02~emprestimos-e-fornecedores-380941",
    "origem": "tec",
    "data": "2026-10-02",
    "mat": "CGER",
@@ -2128,7 +2128,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-10-02~regimes-contabeis-competencia-caixa-e-misto-55654c",
+   "uid": "TEC~2026-10-02~regimes-contabeis-competencia-caixa-e-misto-79178b",
    "origem": "tec",
    "data": "2026-10-02",
    "mat": "CGER",
@@ -2140,7 +2140,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-10-02~reservas-de-capital-5cbdcc",
+   "uid": "TEC~2026-10-02~reservas-de-capital-111e64",
    "origem": "tec",
    "data": "2026-10-02",
    "mat": "CGER",
@@ -2212,7 +2212,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-10-05~data-lake-c2b1df",
+   "uid": "TEC~2026-10-05~data-lake-7a09aa",
    "origem": "tec",
    "data": "2026-10-05",
    "mat": "CDADOS",
@@ -2284,10 +2284,10 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-10-06~das-imunidades-e-das-isencoes-arts-5-a-7-da-lei-estadual-n-7-2f141c",
+   "uid": "TEC~2026-10-06~das-imunidades-e-das-isencoes-arts-5-a-7-da-lei-estadual-n-7-6750a1",
    "origem": "tec",
    "data": "2026-10-06",
-   "mat": "DTRIB",
+   "mat": "LEGAL",
    "topicId": null,
    "assuntoLivre": "Das Imunidades e das Isenções (arts. 5º a 7º da Lei Estadual nº 7.655/2013)",
    "minutos": 1,
@@ -2296,10 +2296,10 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-10-06~lei-estadual-n-12-023-1992-ipva-ce-ddbd39",
+   "uid": "TEC~2026-10-06~lei-estadual-n-12-023-1992-ipva-ce-c85736",
    "origem": "tec",
    "data": "2026-10-06",
-   "mat": "DTRIB",
+   "mat": "LEGAL",
    "topicId": null,
    "assuntoLivre": "Lei Estadual nº 12.023/1992 - IPVA (CE)",
    "minutos": 1,
@@ -2692,7 +2692,7 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-10-13~algebra-relacional-79fe2f",
+   "uid": "TEC~2026-10-13~algebra-relacional-3dff08",
    "origem": "tec",
    "data": "2026-10-13",
    "mat": "CDADOS",
@@ -2968,10 +2968,10 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC (2 assuntos)"
   },
   {
-   "uid": "TEC~2026-10-19~conceitos-e-tipos-de-computacao-em-nuvem-cloud-computing-5e820e",
+   "uid": "TEC~2026-10-19~conceitos-e-tipos-de-computacao-em-nuvem-cloud-computing-b6ad2a",
    "origem": "tec",
    "data": "2026-10-19",
-   "mat": "DTRIB",
+   "mat": "INFRA",
    "topicId": null,
    "assuntoLivre": "Conceitos e Tipos de Computação em Nuvem (Cloud Computing)",
    "minutos": 4,
