@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-10-19T08:16:11",
+ "gerado_em": "2026-10-20T08:16:16",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -2821,6 +2821,162 @@ window.SESSOES_TEC = {
    "minutos": 4,
    "qResolvidas": 5,
    "qAcertadas": 2,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-19~223",
+   "origem": "tec",
+   "data": "2026-10-19",
+   "mat": "CDADOS",
+   "topicId": "223",
+   "assuntoLivre": "",
+   "minutos": 9,
+   "qResolvidas": 28,
+   "qAcertadas": 23,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-19~25",
+   "origem": "tec",
+   "data": "2026-10-19",
+   "mat": "INFRA",
+   "topicId": "25",
+   "assuntoLivre": "",
+   "minutos": 7,
+   "qResolvidas": 22,
+   "qAcertadas": 14,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-19~253",
+   "origem": "tec",
+   "data": "2026-10-19",
+   "mat": "FINPUB",
+   "topicId": "253",
+   "assuntoLivre": "",
+   "minutos": 2,
+   "qResolvidas": 8,
+   "qAcertadas": 7,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-19~29",
+   "origem": "tec",
+   "data": "2026-10-19",
+   "mat": "INFRA",
+   "topicId": "29",
+   "assuntoLivre": "",
+   "minutos": 3,
+   "qResolvidas": 8,
+   "qAcertadas": 7,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-19~314",
+   "origem": "tec",
+   "data": "2026-10-19",
+   "mat": "CPUB",
+   "topicId": "314",
+   "assuntoLivre": "",
+   "minutos": 83,
+   "qResolvidas": 27,
+   "qAcertadas": 26,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-19~315",
+   "origem": "tec",
+   "data": "2026-10-19",
+   "mat": "CPUB",
+   "topicId": "315",
+   "assuntoLivre": "",
+   "minutos": 6,
+   "qResolvidas": 31,
+   "qAcertadas": 29,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-19~32",
+   "origem": "tec",
+   "data": "2026-10-19",
+   "mat": "INFRA",
+   "topicId": "32",
+   "assuntoLivre": "",
+   "minutos": 1,
+   "qResolvidas": 5,
+   "qAcertadas": 4,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-19~36",
+   "origem": "tec",
+   "data": "2026-10-19",
+   "mat": "INFRA",
+   "topicId": "36",
+   "assuntoLivre": "",
+   "minutos": 1,
+   "qResolvidas": 1,
+   "qAcertadas": 0,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-19~77",
+   "origem": "tec",
+   "data": "2026-10-19",
+   "mat": "DTRIB",
+   "topicId": "77",
+   "assuntoLivre": "",
+   "minutos": 29,
+   "qResolvidas": 45,
+   "qAcertadas": 34,
+   "obs": "reconstruída do TEC (7 assuntos)"
+  },
+  {
+   "uid": "TEC~2026-10-19~79",
+   "origem": "tec",
+   "data": "2026-10-19",
+   "mat": "DTRIB",
+   "topicId": "79",
+   "assuntoLivre": "",
+   "minutos": 6,
+   "qResolvidas": 22,
+   "qAcertadas": 16,
+   "obs": "reconstruída do TEC (9 assuntos)"
+  },
+  {
+   "uid": "TEC~2026-10-19~83",
+   "origem": "tec",
+   "data": "2026-10-19",
+   "mat": "DTRIB",
+   "topicId": "83",
+   "assuntoLivre": "",
+   "minutos": 4,
+   "qResolvidas": 16,
+   "qAcertadas": 12,
+   "obs": "reconstruída do TEC (7 assuntos)"
+  },
+  {
+   "uid": "TEC~2026-10-19~90",
+   "origem": "tec",
+   "data": "2026-10-19",
+   "mat": "DTRIB",
+   "topicId": "90",
+   "assuntoLivre": "",
+   "minutos": 1,
+   "qResolvidas": 5,
+   "qAcertadas": 4,
+   "obs": "reconstruída do TEC (2 assuntos)"
+  },
+  {
+   "uid": "TEC~2026-10-19~conceitos-e-tipos-de-computacao-em-nuvem-cloud-computing-5e820e",
+   "origem": "tec",
+   "data": "2026-10-19",
+   "mat": "DTRIB",
+   "topicId": null,
+   "assuntoLivre": "Conceitos e Tipos de Computação em Nuvem (Cloud Computing)",
+   "minutos": 4,
+   "qResolvidas": 16,
+   "qAcertadas": 14,
    "obs": "reconstruída do TEC"
   }
  ]
