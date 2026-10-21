@@ -2040,20 +2040,23 @@ function renderDisciplina(){
    ============================================================ */
 /* Execução por tópico. Fonte "Só TEC" (window.EXEC_TEC, gerado das capturas do
    TEC): fiel e sem lançamento manual. Fallback: sessões digitadas à mão. */
-function planExec(){
-  const manual=planExecManual();
+/* `ate` (opcional, "AAAA-MM-DD", exclusivo): execução como estava no INÍCIO
+   desse dia — usado para congelar a grade de hoje e dos dias já passados da
+   semana (ver projecaoSlots). Sem `ate`, tudo o que foi registrado. */
+function planExec(ate){
+  const manual=planExecManual(ate);
   if(!(window.EXEC_TEC&&window.EXEC_TEC.por_topico)) return manual;
   // Fusão por TÓPICO: onde há captura do TEC ela manda (é fiel e deduplicada);
   // onde NÃO há, valem as sessões lançadas à mão. Antes o TEC zerava tudo que
   // ele não mapeava — assuntos estudados fora do TEC (ou com assunto ainda sem
   // topicId no desempenho_assuntos.py) apareciam com 0% de avanço no cronograma.
-  const tec=planExecTEC();
+  const tec=planExecTEC(ate);
   Object.keys(manual).forEach(k=>{ if(!tec[k]) tec[k]=manual[k]; });
   return tec;
 }
-function planExecManual(){
+function planExecManual(ate){
   const m={};
-  [...state.sessions].sort((a,b)=>a.data.localeCompare(b.data)||(a.id||0)-(b.id||0)).forEach(s=>{
+  [...state.sessions].filter(s=>!ate||String(s.data)<ate).sort((a,b)=>a.data.localeCompare(b.data)||(a.id||0)-(b.id||0)).forEach(s=>{
     if(!s.topicId) return; const k=String(s.topicId);
     if(!m[k]) m[k]={qr:0,qa:0,min:0,d0:null,d1:null,dMeta:null,dias:[]};
     const e=m[k];
@@ -2070,12 +2073,22 @@ function planExecManual(){
 // Execução a partir do TEC (por questão única resolvida por tópico). qr/qa e datas
 // vêm prontos do script; dMeta = 1º dia em que o acumulado alcançou a meta (calculado
 // pela contagem por dia, que reflete tentativas — aproximação suficiente p/ semEff).
-function planExecTEC(){
-  const pt=window.EXEC_TEC.por_topico, pd=window.EXEC_TEC.por_dia||[];
+function planExecTEC(ate){
+  const pt=window.EXEC_TEC.por_topico, pdAll=window.EXEC_TEC.por_dia||[];
+  const pd=ate?pdAll.filter(r=>String(r.data)<ate):pdAll;
   const m={};
   Object.keys(pt).forEach(k=>{ const e=pt[k];
     m[k]={qr:e.qr||0,qa:e.qa||0,min:0,d0:e.d0||null,d1:e.d1||null,dMeta:null,dias:(e.dias||[]).slice()};
   });
+  // Corte: desconta o que foi feito de `ate` em diante. qr do tópico é questão
+  // única e o por_dia é tentativa, então o desconto pode passar do ponto — o
+  // erro é para o lado de mostrar o assunto como pendente, que é o conservador.
+  if(ate){
+    pdAll.forEach(r=>{ if(String(r.data)<ate) return; const e=m[String(r.id)]; if(!e) return;
+      e.qr=Math.max(0,e.qr-(r.qr||0)); e.qa=Math.max(0,e.qa-(r.qa||0)); });
+    Object.values(m).forEach(e=>{ e.dias=e.dias.filter(d=>d<ate).sort();
+      e.d0=e.dias[0]||null; e.d1=e.dias[e.dias.length-1]||null; });
+  }
   // dMeta: varre os dias em ordem, acumulando tentativas até bater a meta do tópico.
   const acc={};
   [...pd].sort((a,b)=>String(a.data).localeCompare(String(b.data))).forEach(r=>{
@@ -2086,9 +2099,12 @@ function planExecTEC(){
   });
   return m;
 }
-function replanejar(){
-  const exec=planExec();
-  const cwReal=semanaDoDia(new Date());
+function replanejar(ate){
+  const exec=planExec(ate);
+  const cwReal=semanaDoDia(ate?new Date(ate+"T12:00:00"):new Date());
+  // "concluído" marcado à mão só vale no corte se foi marcado antes dele
+  const concluido=id=>state.topicStatus[id]==="concluido"&&(!ate||!(state.topicStatusAt||{})[id]
+    ||diaLocal(new Date((state.topicStatusAt||{})[id]))<ate);
   const wNow=Math.min(ULT_SEMANA,Math.max(1,cwReal));
   const topics=SEED_TOPICS.filter(t=>topicMeta(t.id)>0&&topicSemana(t.id)>0);
   // capacidade semanal por matéria = maior carga semanal do plano original
@@ -2101,7 +2117,7 @@ function replanejar(){
     const e=exec[String(t.id)]||{qr:0,qa:0,min:0,dias:[]};
     const meta=topicMeta(t.id), semOrig=topicSemana(t.id);
     const resto=Math.max(0,meta-e.qr);
-    const ok=resto===0||state.topicStatus[t.id]==="concluido";
+    const ok=resto===0||concluido(t.id);
     if(ok){
       const dRef=e.dMeta||e.d1;
       const semEff=dRef?Math.min(ULT_SEMANA,Math.max(1,semanaDoDia(new Date(dRef+"T12:00:00")))):semOrig;
@@ -2120,7 +2136,7 @@ function replanejar(){
     if(w>ULT_AQUISICAO && w>p.semOrig) overflow+=p.resto;
     info[p.t.id]={t:p.t,semOrig:p.semOrig,semEff:w,meta:p.meta,qr:p.e.qr,qa:p.e.qa,resto:p.resto,ok:false,movido:w>p.semOrig,exec:p.e};
   });
-  return {info,cap,wNow,cwReal,overflow};
+  return {info,cap,wNow,cwReal,overflow,ate:ate||null};
 }
 
 /* ============================================================
@@ -2187,19 +2203,28 @@ function topicosSemana(matGroup, week, plano){
         passagem, entra a REVISITA (p2 do QPLAN), que a grade não mostrava —
         as S11-S14 apareciam vazias desde sempre. Revisita já feita = o que
         passou da meta da 1ª passagem.
-   -> {semana: [{tops:[info], tipo}]}, alinhado com itensDaSemana(semana). */
+   -> {semana: [{tops:[info], tipo}]}, alinhado com itensDaSemana(semana).
+
+   Congelamento (21/10/2026): o remanejamento só pode mexer no FUTURO. Antes,
+   concluir hoje o assunto do dia o tirava do slot de hoje e punha outro no
+   lugar, e os dias já passados da semana absorviam pendências que ninguém via.
+   `fixo` = {dia: 1..5 (6 = fim de semana, a semana útil inteira passou),
+   reservado: [slot|undefined] alinhado com itensDaSemana}: na semana do plano,
+   dia anterior a `dia` não recebe nada; o de `dia` recebe só o reservado (a
+   foto do início do dia, de projecaoCongelada) e não entra no remanejamento. */
 function itensDaSemana(week){
   const its=[]; Object.values(DIA_SEMANA).forEach(dia=>its.push(...gradeDoDia(dia,week))); return its;
 }
-function projecaoSlots(plano){
-  if(plano._proj) return plano._proj;
-  const proj={}; plano._proj=proj;
+const NUM_DIA=Object.fromEntries(Object.entries(DIA_SEMANA).map(([n,d])=>[d,+n]));
+function projecaoSlots(plano, fixo){
+  if(!fixo&&plano._proj) return plano._proj;
+  const proj={}; if(!fixo) plano._proj=proj;
   const pend=Object.values(plano.info).filter(i=>!i.ok)
     .sort((a,b)=>a.semOrig-b.semOrig||prioSort(a.t,b.t));
   const ancorado={};   // id -> semana do PLANO_DIA que o cita
   for(let w=plano.wNow; w<=ULT_SEMANA; w++)
     (PLANO_DIA[w]||[]).forEach(bl=>(bl.tops||[]).forEach(id=>{ if(!(id in ancorado)) ancorado[String(id)]=w; }));
-  const exec=planExec();
+  const exec=planExec(plano.ate||undefined);
   const rev=SEED_TOPICS.map(t=>{ const p2=topicP2(t.id); if(!p2||!(p2[0]>0)) return null;
       const e=exec[String(t.id)]||{qr:0}, feita=Math.max(0,(e.qr||0)-topicMeta(t.id));
       const resto=Math.max(0,p2[0]-feita); if(!resto) return null;
@@ -2217,6 +2242,18 @@ function projecaoSlots(plano){
     wCur=w;
     const itens=itensDaSemana(w);
     const out=itens.map(()=>({tops:[],tipo:""})); proj[w]=out;
+    // slots fora do remanejamento (dias já passados e hoje, na semana do plano)
+    const trava=new Set();
+    if(fixo&&w===plano.wNow) itens.forEach((it,k)=>{ const n=NUM_DIA[it.d];
+      if(n<fixo.dia){ trava.add(k); out[k].tipo="passado"; }
+      else if(n===fixo.dia&&fixo.reservado){ trava.add(k);
+        const r=fixo.reservado[k]; if(!r) return;
+        out[k].tipo=r.tipo;
+        r.tops.forEach(f=>{
+          const viva=f.rev?(rev.find(x=>x.t.id===f.t.id)||Object.assign({},f,{resto:0,ok:true}))
+                         :(plano.info[f.t.id]||f);
+          out[k].tops.push(viva); if(!viva.ok) toma(viva); });
+      } });
     const encher=(k,pred,tipo,lista)=>{ const it=itens[k]; let q=out[k].tops.reduce((a,i)=>a+i.resto,0);
       for(const i of (lista||pend)){
         if(!livre(i)||!pred(i)) continue;
@@ -2225,15 +2262,15 @@ function projecaoSlots(plano){
         out[k].tops.push(i); toma(i); q+=i.resto; if(!out[k].tipo) out[k].tipo=tipo;
         if(q>=cap) break; } };
     // 1. assuntos do próprio dia
-    itens.forEach((it,k)=>{ if(it.mat==="CEX"||!it.tops) return;
+    itens.forEach((it,k)=>{ if(it.mat==="CEX"||!it.tops||trava.has(k)) return;
       it.tops.map(id=>plano.info[id]).filter(i=>i&&!i.ok&&livre(i)).forEach(i=>{ out[k].tops.push(i); toma(i); });
       if(out[k].tops.length) out[k].tipo="proprio"; });
     const devido=i=>i.semEff<=w&&(ancorado[String(i.t.id)]===undefined||ancorado[String(i.t.id)]<=w);
     // 2. molde
-    itens.forEach((it,k)=>{ if(it.mat!=="CEX"&&!it.tops) encher(k,i=>devido(i)&&grupo(i.t.mat)===it.mat,"molde"); });
+    itens.forEach((it,k)=>{ if(it.mat!=="CEX"&&!it.tops&&!trava.has(k)) encher(k,i=>devido(i)&&grupo(i.t.mat)===it.mat,"molde"); });
     // 3. slots vazios
     itens.forEach((it,k)=>{
-      if(it.mat==="CEX"||out[k].tops.length) return;
+      if(it.mat==="CEX"||out[k].tops.length||trava.has(k)) return;
       encher(k,i=>devido(i)&&grupo(i.t.mat)===it.mat,"mesma");
       if(out[k].tops.length) return;
       const o=pend.find(i=>livre(i)&&devido(i));
@@ -2255,8 +2292,27 @@ function projecaoSlots(plano){
   }
   return proj;
 }
+/* Grade exibida: cada dia útil da semana corrente que já começou mostra a foto
+   do INÍCIO daquele dia (execução com corte em `ate`), e só os dias seguintes
+   são remanejados com a execução de agora. Assunto concluído hoje continua no
+   slot de hoje, com ✓; o que sobrou de um dia passado reaparece adiante. */
+function slotsDaGrade(plano, agora){
+  agora=agora||new Date();
+  const cw=plano.wNow;
+  if(semanaDoDia(agora)!==cw) return projecaoSlots(plano);
+  const n=agora.getDay()||7;                       // 1..5 útil · 6 sáb · 7 dom
+  const seg=semDatas(cw)[0], foto={};
+  for(let d=1; d<=Math.min(n,5); d++)
+    foto[d]=projecaoSlots(replanejar(addDias(seg,d-1)),{dia:d})[cw];
+  const vivo=projecaoSlots(plano,{dia:Math.min(n,6),reservado:n<=5?foto[n]:null});
+  const viva=f=>f.rev?f:(plano.info[f.t.id]||f);
+  vivo[cw]=itensDaSemana(cw).map((it,k)=>{ const d=NUM_DIA[it.d];
+    if(d<n&&foto[d]){ const s=foto[d][k]; return {tops:s.tops.map(viva),tipo:s.tipo}; }
+    return vivo[cw][k]; });
+  return vivo;
+}
 function chipTopico(i){
-  return `<span class="topchip${i.t.c25?' c25':''}">${i.t.c25?'✅ ':''}${escapeHtml(i.t.assunto)} <span class="qn">${i.qr>0?i.qr+"/":""}${i.meta}q</span>${i.movido?` <span class="mov-chip" title="movido da S${i.semOrig}">↪S${i.semOrig}</span>`:''}${codigosUI(i.t.id)}</span>`;
+  return `<span class="topchip${i.t.c25?' c25':''}"${i.ok?' style="opacity:.6"':''}>${i.ok?'✓ ':''}${i.t.c25?'✅ ':''}${escapeHtml(i.t.assunto)} <span class="qn">${i.qr>0?i.qr+"/":""}${i.meta}q</span>${i.movido?` <span class="mov-chip" title="movido da S${i.semOrig}">↪S${i.semOrig}</span>`:''}${codigosUI(i.t.id)}</span>`;
 }
 // Conteúdo (HTML) de um bloco da grade para a semana corrente.
 // slot: {tops, tipo} da projecaoSlots() — da semana atual em diante.
@@ -2346,7 +2402,7 @@ function renderCronograma(){
     // A ordem de itensSem é a de itensDaSemana(), que indexa os substitutos.
     const gradeSem={}, itensSem=[];
     Object.values(DIA_SEMANA).forEach(dia=>{ gradeSem[dia]=gradeDoDia(dia,cw); itensSem.push(...gradeSem[dia]); });
-    const subs=projecaoSlots(plano)[cw]||[];
+    const subs=slotsDaGrade(plano,now)[cw]||[];
     Object.entries(DIA_SEMANA).forEach(([dn,dia])=>{
       const items=gradeSem[dia]; if(!items.length) return;
       const tot=items.reduce((a,i)=>a+i.min,0);
