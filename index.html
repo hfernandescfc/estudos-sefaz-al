@@ -217,6 +217,9 @@ th.wk-now,td.wk-now{background:rgba(76,194,255,.12)}
      cada assunto. Define window.TRILHAS = {por_topico:{id:{n,prox,etapas}}}. O chip do
      assunto ganha o link 🧭, que abre o TEC na 1ª questão com ?trilha=<id> (userscript v1.6). -->
 <script src="trilhas.js" onerror="window.TRILHAS=null"></script>
+<!-- Status "concluído" inferido da execução (06_Scripts/inferir_status_concluido.py). O status
+     vive só no localStorage; navegador limpo zerava tudo. Só promove, nunca rebaixa. -->
+<script src="status_concluido.js" onerror="window.STATUS_CONCLUIDO=null"></script>
 
 <script>
 /* ============================================================
@@ -824,6 +827,7 @@ function uidLegado(s){
 function novoUid(){ return deviceId()+":"+(state.nextSid++)+":"+Date.now().toString(36); }
 
 let state = load();
+if(statusInferidoN){ gravarLocal(); setTimeout(()=>{ try{ toast(statusInferidoN+" assunto(s) marcados como concluídos pela execução"); }catch(e){} }, 800); }
 
 function defaultState(){
   const ts = {};
@@ -844,6 +848,7 @@ function migrar(s){
   s.sobraFeitas = s.sobraFeitas || {};   // backlog de tempo livre: id -> última data feita
   s.sobraN      = s.sobraN      || {};   // backlog de tempo livre: id -> nº de vezes
   fundirTopicos(s);
+  statusInferidoN = (statusInferidoN||0) + aplicarStatusConcluido(s);
   s.schema = 3;
   return s;
 }
@@ -872,17 +877,36 @@ function fundirTopicos(s){
     delete ts[velho];
   });
 }
+/* 23/10/2026: o status dos assuntos só existia no localStorage e se perdeu (sem Gist de
+   sync neste ciclo; as sessões voltam do TEC, o status não). STATUS_CONCLUIDO lista o que a
+   execução mostra como estudado: promove a "concluido" com o carimbo da inferência, a menos
+   que o status local tenha carimbo MAIS NOVO (mudança manual posterior vence). Idempotente.
+   `var`, não `let`: load() roda antes desta linha (let state = load()). */
+var statusInferidoN;
+function aplicarStatusConcluido(s){
+  const SC = window.STATUS_CONCLUIDO; if(!SC || !SC.ids) return 0;
+  s.topicStatus = s.topicStatus || {}; s.topicStatusAt = s.topicStatusAt || {};
+  let n = 0;
+  Object.keys(SC.ids).forEach(id=>{
+    if(s.topicStatus[id]==="concluido") return;
+    const tInf = Date.parse(SC.ids[id])||0;
+    const tLoc = Date.parse(s.topicStatusAt[id]||"")||0;
+    if(tLoc > tInf) return;
+    s.topicStatus[id] = "concluido"; s.topicStatusAt[id] = new Date(tInf).toISOString(); n++;
+  });
+  return n;
+}
 function load(){
   try{
     const raw = localStorage.getItem(LS_KEY);
-    if(!raw) return defaultState();
+    if(!raw) return migrar(defaultState());
     const s = JSON.parse(raw);
     const d = defaultState();
     // garante que assuntos novos do seed ganhem status
     s.topicStatus = s.topicStatus || {};
     SEED_TOPICS.forEach(t=>{ if(!(t.id in s.topicStatus)) s.topicStatus[t.id]="nao"; });
     return migrar(Object.assign(d, s));
-  }catch(e){ return defaultState(); }
+  }catch(e){ return migrar(defaultState()); }
 }
 function gravarLocal(){ try{ localStorage.setItem(LS_KEY, JSON.stringify(state)); }
   catch(e){ toast("⚠ Falha ao gravar no navegador"); } }
