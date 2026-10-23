@@ -2624,7 +2624,7 @@ function delHist(uidEnc){ if(!confirm("Excluir esta sessão?"))return; apagarSes
    tiver — basta abrir o dashboard nela para ele voltar ao Gist.
    ============================================================ */
 const SYNC_LS={token:"estudosSEFAZAL_syncToken",gist:"estudosSEFAZAL_syncGist"};
-const SYNC_FILE="estudos-tcepe.json";
+const SYNC_FILE="estudos-sefazal.json";   // 23/10/2026: Gist novo deste ciclo (o nome antigo era herança do TCE-PE)
 const SYNC_POLL_MS=90000; // relê a nuvem periodicamente
 let syncTimer=null, syncPollTimer=null, syncEmVoo=false, syncEstado="off"; // off|ok|pendente|sincronizando|erro
 
