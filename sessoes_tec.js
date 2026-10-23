@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-10-23T08:19:28",
+ "gerado_em": "2026-10-23T08:34:20",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -3436,6 +3436,18 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
+   "uid": "TEC~2026-10-22~27",
+   "origem": "tec",
+   "data": "2026-10-22",
+   "mat": "INFRA",
+   "topicId": "27",
+   "assuntoLivre": "",
+   "minutos": 7,
+   "qResolvidas": 8,
+   "qAcertadas": 6,
+   "obs": "reconstruída do TEC"
+  },
+  {
    "uid": "TEC~2026-10-22~316",
    "origem": "tec",
    "data": "2026-10-22",
@@ -3529,6 +3541,54 @@ window.SESSOES_TEC = {
    "minutos": 1,
    "qResolvidas": 1,
    "qAcertadas": 1,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-22~395",
+   "origem": "tec",
+   "data": "2026-10-22",
+   "mat": "DADM",
+   "topicId": "395",
+   "assuntoLivre": "",
+   "minutos": 2,
+   "qResolvidas": 12,
+   "qAcertadas": 12,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-22~406",
+   "origem": "tec",
+   "data": "2026-10-22",
+   "mat": "DADM",
+   "topicId": "406",
+   "assuntoLivre": "",
+   "minutos": 2,
+   "qResolvidas": 7,
+   "qAcertadas": 6,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-22~409",
+   "origem": "tec",
+   "data": "2026-10-22",
+   "mat": "DADM",
+   "topicId": "409",
+   "assuntoLivre": "",
+   "minutos": 3,
+   "qResolvidas": 6,
+   "qAcertadas": 4,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-22~428",
+   "origem": "tec",
+   "data": "2026-10-22",
+   "mat": "DADM",
+   "topicId": "428",
+   "assuntoLivre": "",
+   "minutos": 1,
+   "qResolvidas": 3,
+   "qAcertadas": 3,
    "obs": "reconstruída do TEC"
   },
   {
