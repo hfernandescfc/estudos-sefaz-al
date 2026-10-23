@@ -1,0 +1,2 @@
+// Derivado de 06_Scripts/montar_trilhas.py — não editar.
+window.TRILHAS={"gerado_em":"2026-10-23","por_topico":{"25":{"n":43,"prox":"2877734","etapas":7},"267":{"n":6,"prox":"2589634","etapas":3},"271":{"n":21,"prox":"3872505","etapas":5},"291":{"n":1,"prox":"3385900","etapas":1},"78":{"n":39,"prox":"3625464","etapas":9},"79":{"n":17,"prox":"3604346","etapas":6},"86":{"n":14,"prox":"4033913","etapas":4},"87":{"n":13,"prox":"118498","etapas":6},"89":{"n":10,"prox":"3258722","etapas":4}}};

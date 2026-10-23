@@ -98,6 +98,7 @@ label.rev-toggle:has(input:checked){border-color:#f0883e;background:rgba(240,136
 .topchip{display:inline-flex;align-items:center;gap:5px;background:var(--panel2);border:1px solid var(--line);border-radius:7px;padding:3px 8px;font-size:13px;color:var(--text)}
 .topchip.c25{border-color:var(--ok)}
 .topchip .qn{color:var(--muted);font-size:11.5px}
+.trilha-lk{font-size:11.5px;text-decoration:none;color:var(--accent);white-space:nowrap}
 .cods{display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap}
 .btn.xs{padding:2px 7px;font-size:11.5px;border-radius:6px;line-height:1.4}
 .cods-ver{color:var(--accent);cursor:pointer;font-size:11.5px;text-decoration:underline;user-select:none}
@@ -211,6 +212,11 @@ th.wk-now,td.wk-now{background:rgba(76,194,255,.12)}
      1 sessão por dia+assunto, com uid determinístico. Rede de segurança para o
      que se perdeu no localStorage: o dashboard só insere o que ainda não tem. -->
 <script src="sessoes_tec.js" onerror="window.SESSOES_TEC=null"></script>
+
+<!-- Trilhas de questões (06_Scripts/montar_trilhas.py): ordem progressiva das inéditas de
+     cada assunto. Define window.TRILHAS = {por_topico:{id:{n,prox,etapas}}}. O chip do
+     assunto ganha o link 🧭, que abre o TEC na 1ª questão com ?trilha=<id> (userscript v1.6). -->
+<script src="trilhas.js" onerror="window.TRILHAS=null"></script>
 
 <script>
 /* ============================================================
@@ -2339,7 +2345,13 @@ function slotsDaGrade(plano, agora){
   return vivo;
 }
 function chipTopico(i){
-  return `<span class="topchip${i.t.c25?' c25':''}"${i.ok?' style="opacity:.6"':''}>${i.ok?'✓ ':''}${i.t.c25?'✅ ':''}${escapeHtml(i.t.assunto)} <span class="qn">${i.qr>0?i.qr+"/":""}${i.meta}q</span>${i.movido?` <span class="mov-chip" title="movido da S${i.semOrig}">↪S${i.semOrig}</span>`:''}${codigosUI(i.t.id)}</span>`;
+  return `<span class="topchip${i.t.c25?' c25':''}"${i.ok?' style="opacity:.6"':''}>${i.ok?'✓ ':''}${i.t.c25?'✅ ':''}${escapeHtml(i.t.assunto)} <span class="qn">${i.qr>0?i.qr+"/":""}${i.meta}q</span>${i.movido?` <span class="mov-chip" title="movido da S${i.semOrig}">↪S${i.semOrig}</span>`:''}${codigosUI(i.t.id)}${linkTrilha(i.t.id)}</span>`;
+}
+// 🧭 trilha do assunto no TEC (06_Scripts/montar_trilhas.py → trilhas.js; userscript v1.6).
+function linkTrilha(id){
+  const tr=window.TRILHAS&&window.TRILHAS.por_topico&&window.TRILHAS.por_topico[String(id)];
+  if(!tr||!tr.n||!tr.prox) return "";
+  return ` <a class="trilha-lk" href="https://www.tecconcursos.com.br/questoes/${tr.prox}?trilha=${id}" target="_blank" rel="noopener" title="Trilha no TEC: ${tr.n} inéditas em ${tr.etapas} etapa(s), do fundamento ao detalhe">🧭${tr.n}</a>`;
 }
 // Conteúdo (HTML) de um bloco da grade para a semana corrente.
 // slot: {tops, tipo} da projecaoSlots() — da semana atual em diante.
