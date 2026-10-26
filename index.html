@@ -1708,6 +1708,7 @@ function renderAssuntos(){
       <option value="eff">🔄 semana replanejada</option>
       <option value="orig">📋 semana do plano original</option>
     </select>
+    <select id="filtStatusOp" title="é = só o status escolhido · não é = todos menos ele (ex.: não é Concluído)"><option value="eq">status é</option><option value="ne">status não é</option></select>
     <select id="filtStatus"><option value="">Todos os status</option>${Object.entries(STATUS_LABEL).map(([k,v])=>`<option value="${k}">${v}</option>`).join("")}</select>
     <select id="filtPrio"><option value="">Todas as prioridades</option><option value="1">MÁXIMA (P1)</option><option value="2">ALTA (P2)</option><option value="3">MÉDIA (P3)</option><option value="4">Anki (P4)</option><option value="c25">✅ Caiu em 2025</option></select>
     <input type="text" id="filtBusca" placeholder="🔎 buscar assunto...">
@@ -1732,12 +1733,15 @@ function renderAssuntos(){
   <div id="assBox"></div>`;
   document.getElementById("tab-assuntos").innerHTML=html;
   drawDesempTec();
-  ["filtMat","filtSem","filtSemBase","filtStatus","filtPrio","filtBusca"].forEach(id=>document.getElementById(id).oninput=drawAssuntos);
+  ["filtMat","filtSem","filtSemBase","filtStatusOp","filtStatus","filtPrio","filtBusca"].forEach(id=>document.getElementById(id).oninput=drawAssuntos);
   drawAssuntos();
 }
 function drawAssuntos(){
   const fM=document.getElementById("filtMat").value, fS=document.getElementById("filtStatus").value, fB=(document.getElementById("filtBusca").value||"").toLowerCase();
   const fP=document.getElementById("filtPrio").value;
+  // Status: "é" ou "não é" o escolhido; sem status gravado = "nao" (não iniciado)
+  const fSop=(document.getElementById("filtStatusOp")||{}).value||"eq";
+  const matchStatus=t=>{ if(!fS) return true; const st=state.topicStatus[t.id]||"nao"; return fSop==="ne" ? st!==fS : st===fS; };
   const matchPrio=t=> !fP ? true : (fP==="gerar" ? !!t.gerar : String(t.prio||3)===fP);
   // Semana: "" todas · "atual" a semana de hoje · "atraso" meta vencida e não
   // cumprida · "0" fora do plano · "1".."15" a semana escolhida
@@ -1758,7 +1762,7 @@ function drawAssuntos(){
   groups.forEach(g=>{
     if(fM && fM!==g) return;
     let ts=allTopics().filter(t=>grupo(t.mat)===g);
-    ts=ts.filter(t=> (!fS||state.topicStatus[t.id]===fS) && matchPrio(t) && matchSem(t) && (!fB||t.assunto.toLowerCase().includes(fB)) );
+    ts=ts.filter(t=> matchStatus(t) && matchPrio(t) && matchSem(t) && (!fB||t.assunto.toLowerCase().includes(fB)) );
     if(ts.length===0) return;
     sel=sel.concat(ts);
     const totG=allTopics().filter(t=>grupo(t.mat)===g);
@@ -1767,7 +1771,7 @@ function drawAssuntos(){
     html+=`<div class="mat-group"><div class="mat-head" onclick="this.nextElementSibling.classList.toggle('hide')">
       <span class="dot" style="background:${MAT_INFO[g].cor};width:12px;height:12px"></span>
       <span class="mname">${MAT_INFO[g].nome}</span>
-      ${fSemRaw?`<span class="qstat">${ts.length} no filtro</span>`:""}
+      ${(fSemRaw||fS)?`<span class="qstat">${ts.length} no filtro</span>`:""}
       <span class="mbar"><i style="width:${pct(conclG,totG.length)}%"></i></span>
       <span class="mprog">${conclG}/${totG.length} concl.</span>
     </div><div class="mat-body"><table><tbody>`;
