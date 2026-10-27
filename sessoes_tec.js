@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-10-26T08:27:28",
+ "gerado_em": "2026-10-27T08:17:21",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -3888,6 +3888,66 @@ window.SESSOES_TEC = {
    "assuntoLivre": "Data Lake",
    "minutos": 1,
    "qResolvidas": 1,
+   "qAcertadas": 1,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-26~291",
+   "origem": "tec",
+   "data": "2026-10-26",
+   "mat": "FINPUB",
+   "topicId": "291",
+   "assuntoLivre": "",
+   "minutos": 7,
+   "qResolvidas": 6,
+   "qAcertadas": 5,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-26~322",
+   "origem": "tec",
+   "data": "2026-10-26",
+   "mat": "CPUB",
+   "topicId": "322",
+   "assuntoLivre": "",
+   "minutos": 2,
+   "qResolvidas": 5,
+   "qAcertadas": 5,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-26~323",
+   "origem": "tec",
+   "data": "2026-10-26",
+   "mat": "CPUB",
+   "topicId": "323",
+   "assuntoLivre": "",
+   "minutos": 4,
+   "qResolvidas": 6,
+   "qAcertadas": 5,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-26~328",
+   "origem": "tec",
+   "data": "2026-10-26",
+   "mat": "CPUB",
+   "topicId": "328",
+   "assuntoLivre": "",
+   "minutos": 6,
+   "qResolvidas": 6,
+   "qAcertadas": 6,
+   "obs": "reconstruída do TEC (3 assuntos)"
+  },
+  {
+   "uid": "TEC~2026-10-26~329",
+   "origem": "tec",
+   "data": "2026-10-26",
+   "mat": "CPUB",
+   "topicId": "329",
+   "assuntoLivre": "",
+   "minutos": 1,
+   "qResolvidas": 2,
    "qAcertadas": 1,
    "obs": "reconstruída do TEC"
   }
