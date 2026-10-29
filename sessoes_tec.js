@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-10-29T08:17:09",
+ "gerado_em": "2026-10-29T20:25:40",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -364,6 +364,18 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
+   "uid": "TEC~2026-09-03~481",
+   "origem": "tec",
+   "data": "2026-09-03",
+   "mat": "DADM",
+   "topicId": "481",
+   "assuntoLivre": "",
+   "minutos": 1,
+   "qResolvidas": 3,
+   "qAcertadas": 3,
+   "obs": "reconstruída do TEC"
+  },
+  {
    "uid": "TEC~2026-09-03~amplitude-8b1ac0",
    "origem": "tec",
    "data": "2026-09-03",
@@ -373,18 +385,6 @@ window.SESSOES_TEC = {
    "minutos": 1,
    "qResolvidas": 1,
    "qAcertadas": 1,
-   "obs": "reconstruída do TEC"
-  },
-  {
-   "uid": "TEC~2026-09-03~atributos-ou-caracteristicas-dos-atos-administrativos-1bd32f",
-   "origem": "tec",
-   "data": "2026-09-03",
-   "mat": "DADM",
-   "topicId": null,
-   "assuntoLivre": "Atributos ou Características dos Atos Administrativos",
-   "minutos": 1,
-   "qResolvidas": 3,
-   "qAcertadas": 3,
    "obs": "reconstruída do TEC"
   },
   {
