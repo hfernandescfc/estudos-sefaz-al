@@ -2389,10 +2389,22 @@ function linkTrilha(id){
   if(!tr||!tr.n||!tr.prox) return "";
   return ` <a class="trilha-lk" href="https://www.tecconcursos.com.br/questoes/${tr.prox}?trilha=${id}" target="_blank" rel="noopener" title="Trilha no TEC: ${tr.n} inéditas em ${tr.etapas} etapa(s), do fundamento ao detalhe">🧭${tr.n}</a>`;
 }
+// 🧭 trilha das erradas (06_Scripts/trilha_erros.py → montar_trilhas.py → TRILHAS.erros),
+// no bloco de Consolidação do dia marcado na fonte. Chave numérica: o userscript só aceita
+// ?trilha=<dígitos>.
+function linkTrilhaErros(dataISO){
+  const E=window.TRILHAS&&window.TRILHAS.erros; if(!E||!dataISO) return "";
+  return Object.entries(E).filter(([,t])=>t.dia===dataISO).map(([k,t])=>{
+    if(!t.n||!t.prox) return `<span class="bloco-note">✓ ${escapeHtml(t.titulo)}: as ${t.total} refeitas</span>`;
+    return `<span class="bloco-note">🔁 ${escapeHtml(t.titulo)} — refazer escrevendo o porquê antes de responder</span> `+
+      `<span class="topchip">${escapeHtml(t.titulo)} <span class="qn">${t.n}/${t.total}q</span> `+
+      `<a class="trilha-lk" href="https://www.tecconcursos.com.br/questoes/${t.prox}?trilha=${k}" target="_blank" rel="noopener" title="Trilha no TEC: ${t.n} erradas em ${t.etapas} etapa(s), por matéria (mais erros primeiro) e na ordem lógica dos assuntos">🧭${t.n}</a></span>`;
+  }).join("");
+}
 // Conteúdo (HTML) de um bloco da grade para a semana corrente.
 // slot: {tops, tipo} da projecaoSlots() — da semana atual em diante.
-function blocoConteudo(matGroup, week, plano, ids, slot){
-  if(matGroup==="CEX") return `<span class="bloco-note muted">Consolidação — sem assunto novo</span>`;
+function blocoConteudo(matGroup, week, plano, ids, slot, dataISO){
+  if(matGroup==="CEX") return linkTrilhaErros(dataISO) || `<span class="bloco-note muted">Consolidação — sem assunto novo</span>`;
   if(slot){
     if(!slot.tops.length) return `<span class="bloco-note">🎯 Plano inteiro em dia — simulado por bloco cronometrado + refazer as erradas</span>`;
     const g=grupo(slot.tops[0].t.mat), outra=g!==matGroup;
@@ -2485,7 +2497,7 @@ function renderCronograma(){
       html+=`<div class="sched-day${cls}"><h3><span>${dia} <span class="tot">${fmtMin(tot)} direcionadas</span></span></h3>`;
       items.forEach(it=>{
         const rot = it.rot ? `<div class="bloco-rot">${escapeHtml(it.rot)}</div>` : "";
-        html+=`<div class="sched-item"><span class="min">${it.min}min</span><span class="mt"><span class="dot" style="background:${matCor(it.mat)}"></span> ${matNome(it.mat)}</span><span class="ds">${rot}${blocoConteudo(it.mat,cw,plano,it.tops,subs[itensSem.indexOf(it)])}</span></div>`;
+        html+=`<div class="sched-item"><span class="min">${it.min}min</span><span class="mt"><span class="dot" style="background:${matCor(it.mat)}"></span> ${matNome(it.mat)}</span><span class="ds">${rot}${blocoConteudo(it.mat,cw,plano,it.tops,subs[itensSem.indexOf(it)],dataDoDia(cw,dia))}</span></div>`;
       });
       html+=`</div>`;
     });
@@ -2508,6 +2520,10 @@ function dayIdx(ds){
 }
 function gPos(d0,d1){ const a=dayIdx(d0), b=dayIdx(d1);
   return `left:${(a/GANTT_DIAS*100).toFixed(3)}%;width:${((b-a+1)/GANTT_DIAS*100).toFixed(3)}%`; }
+function dataDoDia(w,dia){ // ISO do dia útil `dia` ("Segunda".."Sexta") da semana w
+  const d=new Date(semDatas(w)[0]+"T12:00:00"); d.setDate(d.getDate()+(NUM_DIA[dia]||1)-1);
+  return d.toISOString().slice(0,10);
+}
 function semDatas(w){ // [segunda, sexta] da semana w do ciclo
   const d=new Date(S1_SEGUNDA+"T12:00:00"); d.setDate(d.getDate()+(w-1)*7);
   const a=d.toISOString().slice(0,10); d.setDate(d.getDate()+4);
