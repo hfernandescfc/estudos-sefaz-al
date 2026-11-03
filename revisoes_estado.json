@@ -20356,11 +20356,12 @@
       "rotulo": "Extensão — ICMS 5.900, arts. 46-58: obrigações acessórias, cadastro, documentos e livros",
       "data_leitura": "2026-10-30",
       "fonte": null,
-      "origem": "plano",
+      "origem": "declarada",
       "plano_ref": "S8 Sexta",
       "minutos": 30,
       "prevista": "2026-11-02",
-      "emitida": "2026-11-03"
+      "emitida": "2026-11-03",
+      "obs": "confirmada pelo usuario apos a folha de 2026-11-03"
     }
   }
 }
