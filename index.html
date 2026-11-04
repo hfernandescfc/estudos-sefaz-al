@@ -99,6 +99,20 @@ label.rev-toggle:has(input:checked){border-color:#f0883e;background:rgba(240,136
 .topchip.c25{border-color:var(--ok)}
 .topchip .qn{color:var(--muted);font-size:11.5px}
 .trilha-lk{font-size:11.5px;text-decoration:none;color:var(--accent);white-space:nowrap}
+/* aba Assuntos por matéria: visão da trilha (etapas e andamento) */
+.trilha-tg{background:none;border:1px solid var(--line);color:var(--muted);border-radius:8px;font-size:11px;padding:1px 7px;cursor:pointer;margin-left:4px}
+.trilha-tg:hover,.trilha-tg.on{border-color:var(--accent);color:var(--accent)}
+tr.trilha-row td{padding-top:0;border-top:none}
+.trilha-box{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:8px 12px;margin:2px 0 6px}
+.trilha-box .th{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;font-size:12px;color:var(--muted);margin-bottom:6px}
+.trilha-et{display:grid;grid-template-columns:18px minmax(0,1fr) 90px 44px;gap:8px;align-items:center;font-size:12.5px;padding:2px 0}
+.trilha-et.done{color:var(--muted)}
+.trilha-et.cur{color:var(--txt);font-weight:600}
+.trilha-et .nm{overflow-wrap:anywhere}
+.trilha-et .bar{height:6px;background:var(--line);border-radius:4px;overflow:hidden}
+.trilha-et .bar i{display:block;height:100%;background:var(--accent)}
+.trilha-et .ct{text-align:right;color:var(--muted);font-variant-numeric:tabular-nums}
+@media (max-width:600px){.trilha-et{grid-template-columns:18px minmax(0,1fr) 44px}.trilha-et .bar{display:none}}
 .cods{display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap}
 .btn.xs{padding:2px 7px;font-size:11.5px;border-radius:6px;line-height:1.4}
 .cods-ver{color:var(--accent);cursor:pointer;font-size:11.5px;text-decoration:underline;user-select:none}
@@ -1786,6 +1800,7 @@ function drawAssuntos(){
       <span class="dot" style="background:${MAT_INFO[g].cor};width:12px;height:12px"></span>
       <span class="mname">${MAT_INFO[g].nome}</span>
       ${(fSemRaw||fS)?`<span class="qstat">${ts.length} no filtro</span>`:""}
+      ${resumoTrilhasMat(ts)}
       <span class="mbar"><i style="width:${pct(conclG,totG.length)}%"></i></span>
       <span class="mprog">${conclG}/${totG.length} concl.</span>
     </div><div class="mat-body"><table><tbody>`;
@@ -1800,14 +1815,14 @@ function drawAssuntos(){
       } else qCol = q.qr>0?`${q.qr}q · ${pct(q.qa,q.qr)}%`:'<span class="muted">—</span>';
       const cods=codigosUI(t.id);
       html+=`<tr>
-        <td style="width:46%"><span class="prio p${pr}">${PRIO_LABEL[pr]}</span>${t.gerar?'<span class="badge2025">🔨 gerar</span>':''} ${semChip} ${escapeHtml(t.assunto)}${cods?'<br>'+cods:''}</td>
+        <td style="width:46%"><span class="prio p${pr}">${PRIO_LABEL[pr]}</span>${t.gerar?'<span class="badge2025">🔨 gerar</span>':''} ${semChip} ${escapeHtml(t.assunto)}${linkTrilha(t.id)}${botaoTrilha(t.id)}${cods?'<br>'+cods:''}</td>
         <td>${mn>0?fmtMin(mn):'<span class="muted">—</span>'}</td>
         <td>${qCol}</td>
         <td class="right">
           <select onchange="setStatus('${t.id}',this.value)" class="st-sel">
             ${Object.entries(STATUS_LABEL).map(([k,v])=>`<option value="${k}" ${k===stv?"selected":""}>${v}</option>`).join("")}
           </select>
-        </td></tr>`;
+        </td></tr>${linhaTrilha(t.id)}`;
     });
     html+=`</tbody></table></div></div>`;
   });
@@ -2394,6 +2409,43 @@ function linkTrilha(id){
   const tr=window.TRILHAS&&window.TRILHAS.por_topico&&window.TRILHAS.por_topico[String(id)];
   if(!tr||!tr.n||!tr.prox) return "";
   return ` <a class="trilha-lk" href="https://www.tecconcursos.com.br/questoes/${tr.prox}?trilha=${id}" target="_blank" rel="noopener" title="Trilha no TEC: ${tr.n} inéditas em ${tr.etapas} etapa(s), do fundamento ao detalhe">🧭${tr.n}</a>`;
+}
+// Visão da trilha na aba "Assuntos por matéria": etapas com andamento, a etapa em
+// curso marcada e o link para continuar no TEC. A visão vem de trilhas.js
+// (por_topico[id].visao = [[nome, total, pendentes, próxima], ...], todas as etapas,
+// inclusive as esgotadas). O link abre sempre a PRÓXIMA da trilha: o "Próxima ▶" do
+// userscript volta à 1ª pendente da ordem, então abrir uma etapa adiante não pula as anteriores.
+const trilhaAberta=new Set();
+function trilhaDe(id){ const P=window.TRILHAS&&window.TRILHAS.por_topico; return P?P[String(id)]||null:null; }
+function botaoTrilha(id){
+  const tr=trilhaDe(id); if(!tr||!tr.visao||!tr.visao.length) return "";
+  const on=trilhaAberta.has(String(id));
+  return `<button class="trilha-tg${on?' on':''}" onclick="alternarTrilha('${id}',this)" title="Ver as etapas da trilha">${on?'▾':'▸'} etapas</button>`;
+}
+function alternarTrilha(id,btn){
+  const k=String(id), row=document.getElementById("trilha-row-"+k); if(!row) return;
+  const abrir=row.classList.contains("hide");
+  row.classList.toggle("hide",!abrir); abrir?trilhaAberta.add(k):trilhaAberta.delete(k);
+  if(btn){ btn.classList.toggle("on",abrir); btn.textContent=(abrir?'▾':'▸')+' etapas'; }
+}
+function linhaTrilha(id){
+  const tr=trilhaDe(id); if(!tr||!tr.visao||!tr.visao.length) return "";
+  const tot=tr.visao.reduce((a,e)=>a+e[1],0), pend=tr.visao.reduce((a,e)=>a+e[2],0), feitas=tot-pend;
+  const cur=tr.visao.findIndex(e=>e[2]>0);
+  const ets=tr.visao.map((e,k)=>{
+    const [nome,n,p]=e, f=n-p, done=p===0, atual=k===cur;
+    return `<div class="trilha-et${done?' done':''}${atual?' cur':''}"><span>${done?'✓':(atual?'▶':'○')}</span><span class="nm">${escapeHtml(nome)}</span><span class="bar"><i style="width:${pct(f,n)}%"></i></span><span class="ct">${f}/${n}</span></div>`;
+  }).join("");
+  const cont=tr.prox?`<a class="trilha-lk" href="https://www.tecconcursos.com.br/questoes/${tr.prox}?trilha=${id}" target="_blank" rel="noopener">▶ continuar no TEC</a>`:`<span>✓ trilha concluída</span>`;
+  return `<tr class="trilha-row${trilhaAberta.has(String(id))?'':' hide'}" id="trilha-row-${id}"><td colspan="4"><div class="trilha-box">
+    <div class="th"><span>🧭 <b>${feitas}/${tot}</b> resolvidas · ${pend} inéditas em ${tr.visao.filter(e=>e[2]>0).length} etapa(s)</span>${cur>=0?`<span>em curso: <b>${escapeHtml(tr.visao[cur][0])}</b></span>`:''}${cont}</div>
+    ${ets}</div></td></tr>`;
+}
+function resumoTrilhasMat(ts){
+  const trs=ts.map(t=>trilhaDe(t.id)).filter(tr=>tr&&tr.visao&&tr.visao.length);
+  if(!trs.length) return "";
+  const pend=trs.reduce((a,tr)=>a+tr.n,0);
+  return `<span class="qstat" title="Assuntos com trilha de questões nesta lista · inéditas pendentes">🧭 ${trs.length} trilha(s) · ${pend} inéditas</span>`;
 }
 // 🧭 trilha das erradas (06_Scripts/trilha_erros.py → montar_trilhas.py → TRILHAS.erros),
 // no bloco de Consolidação do dia marcado na fonte. Chave numérica: o userscript só aceita
