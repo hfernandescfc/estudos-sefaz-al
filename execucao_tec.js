@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/desempenho_assuntos.py - NAO editar a mao.
 window.EXEC_TEC = {
-  "gerado_em": "2026-11-04T08:30:02",
+  "gerado_em": "2026-11-04T13:50:23",
   "fonte": "07_TEC/TEC_Captura/tec_registros_*.json + resultado_simulado_*.json (id/assunto -> topicId por 04_Dados/mapa_topicos_tec.json)",
   "por_topico": {
     "455": {
@@ -26,6 +26,15 @@ window.EXEC_TEC = {
     "332": {
       "qr": 1,
       "qa": 1,
+      "d0": "2026-09-02",
+      "d1": "2026-09-02",
+      "dias": [
+        "2026-09-02"
+      ]
+    },
+    "486": {
+      "qr": 2,
+      "qa": 2,
       "d0": "2026-09-02",
       "d1": "2026-09-02",
       "dias": [
@@ -957,6 +966,15 @@ window.EXEC_TEC = {
         "2026-10-02"
       ]
     },
+    "488": {
+      "qr": 1,
+      "qa": 1,
+      "d0": "2026-10-02",
+      "d1": "2026-10-02",
+      "dias": [
+        "2026-10-02"
+      ]
+    },
     "449": {
       "qr": 1,
       "qa": 1,
@@ -1014,6 +1032,15 @@ window.EXEC_TEC = {
     "441": {
       "qr": 1,
       "qa": 0,
+      "d0": "2026-10-02",
+      "d1": "2026-10-02",
+      "dias": [
+        "2026-10-02"
+      ]
+    },
+    "487": {
+      "qr": 1,
+      "qa": 1,
       "d0": "2026-10-02",
       "d1": "2026-10-02",
       "dias": [
@@ -2313,6 +2340,12 @@ window.EXEC_TEC = {
       "qa": 2
     },
     {
+      "data": "2026-09-02",
+      "id": 486,
+      "qr": 2,
+      "qa": 2
+    },
+    {
       "data": "2026-09-03",
       "id": 340,
       "qr": 1,
@@ -3097,6 +3130,18 @@ window.EXEC_TEC = {
       "id": 474,
       "qr": 8,
       "qa": 8
+    },
+    {
+      "data": "2026-10-02",
+      "id": 487,
+      "qr": 1,
+      "qa": 1
+    },
+    {
+      "data": "2026-10-02",
+      "id": 488,
+      "qr": 1,
+      "qa": 1
     },
     {
       "data": "2026-10-05",

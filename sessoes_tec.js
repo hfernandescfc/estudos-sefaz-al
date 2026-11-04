@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-11-04T08:30:03",
+ "gerado_em": "2026-11-04T13:50:24",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -124,6 +124,18 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
+   "uid": "TEC~2026-09-02~486",
+   "origem": "tec",
+   "data": "2026-09-02",
+   "mat": "CGER",
+   "topicId": "486",
+   "assuntoLivre": "",
+   "minutos": 2,
+   "qResolvidas": 2,
+   "qAcertadas": 2,
+   "obs": "reconstruída do TEC"
+  },
+  {
    "uid": "TEC~2026-09-02~78",
    "origem": "tec",
    "data": "2026-09-02",
@@ -241,18 +253,6 @@ window.SESSOES_TEC = {
    "minutos": 1,
    "qResolvidas": 1,
    "qAcertadas": 1,
-   "obs": "reconstruída do TEC"
-  },
-  {
-   "uid": "TEC~2026-09-02~escrituracao-normas-livros-contabeis-lancamentos-metodo-das--e56406",
-   "origem": "tec",
-   "data": "2026-09-02",
-   "mat": "CGER",
-   "topicId": null,
-   "assuntoLivre": "Escrituração: Normas, Livros Contábeis, Lançamentos, Método das Partidas Dobradas",
-   "minutos": 2,
-   "qResolvidas": 2,
-   "qAcertadas": 2,
    "obs": "reconstruída do TEC"
   },
   {
@@ -2068,6 +2068,30 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
+   "uid": "TEC~2026-10-02~487",
+   "origem": "tec",
+   "data": "2026-10-02",
+   "mat": "CGER",
+   "topicId": "487",
+   "assuntoLivre": "",
+   "minutos": 1,
+   "qResolvidas": 1,
+   "qAcertadas": 1,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-10-02~488",
+   "origem": "tec",
+   "data": "2026-10-02",
+   "mat": "CGER",
+   "topicId": "488",
+   "assuntoLivre": "",
+   "minutos": 1,
+   "qResolvidas": 1,
+   "qAcertadas": 1,
+   "obs": "reconstruída do TEC"
+  },
+  {
    "uid": "TEC~2026-10-02~50",
    "origem": "tec",
    "data": "2026-10-02",
@@ -2113,30 +2137,6 @@ window.SESSOES_TEC = {
    "minutos": 1,
    "qResolvidas": 1,
    "qAcertadas": 0,
-   "obs": "reconstruída do TEC"
-  },
-  {
-   "uid": "TEC~2026-10-02~emprestimos-e-fornecedores-380941",
-   "origem": "tec",
-   "data": "2026-10-02",
-   "mat": "CGER",
-   "topicId": null,
-   "assuntoLivre": "Empréstimos e Fornecedores",
-   "minutos": 1,
-   "qResolvidas": 1,
-   "qAcertadas": 1,
-   "obs": "reconstruída do TEC"
-  },
-  {
-   "uid": "TEC~2026-10-02~regimes-contabeis-competencia-caixa-e-misto-79178b",
-   "origem": "tec",
-   "data": "2026-10-02",
-   "mat": "CGER",
-   "topicId": null,
-   "assuntoLivre": "Regimes Contábeis (Competência, Caixa e Misto)",
-   "minutos": 1,
-   "qResolvidas": 1,
-   "qAcertadas": 1,
    "obs": "reconstruída do TEC"
   },
   {
