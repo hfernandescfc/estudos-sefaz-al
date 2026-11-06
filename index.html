@@ -83,6 +83,12 @@ label.rev-toggle:has(input:checked){border-color:#f0883e;background:rgba(240,136
 .timer{font-size:64px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:1px}
 .timer.running{color:var(--accent)}
 .timer-ctrls{display:flex;gap:10px;justify-content:center;margin-top:10px;flex-wrap:wrap}
+/* Cronômetro flutuante: aparece nas outras abas enquanto houver sessão em curso */
+.timer-float{position:fixed;right:16px;bottom:16px;z-index:50;display:flex;align-items:center;gap:8px;background:var(--panel);border:1px solid var(--accent);border-radius:12px;padding:6px 8px 6px 12px;box-shadow:0 6px 20px #0006}
+.timer-float.hide{display:none}
+.timer-float .tf-time{background:none;border:none;color:var(--txt);font-size:20px;font-weight:700;font-variant-numeric:tabular-nums;cursor:pointer;padding:0}
+.timer-float.running .tf-time{color:var(--accent)}
+.timer-float .tf-time:hover{text-decoration:underline}
 .muted{color:var(--muted)}
 .sched-day{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;margin-bottom:12px}
 .sched-day h3{margin:0 0 4px;font-size:15px;display:flex;justify-content:space-between;align-items:center}
@@ -196,6 +202,11 @@ th.wk-now,td.wk-now{background:rgba(76,194,255,.12)}
     <button class="btn sm" onclick="reconstruirDoTec()" title="Repor o histórico a partir das capturas do TEC">⟳ Reconstruir do TEC</button>
     <input type="file" id="importFile" accept="application/json" class="hide" onchange="importData(event)">
   </header>
+
+  <div id="timerFloat" class="timer-float hide" role="timer" aria-live="off">
+    <button class="tf-time" onclick="irParaSessao()" title="Voltar à Sessão de Estudo">⏱ <span id="timerFloatDisp">00:00:00</span></button>
+    <button class="btn sm" id="timerFloatBtn" onclick="timerToggle()" title="Pausar / continuar">⏸</button>
+  </div>
 
   <nav class="tabs" id="tabs">
     <button data-tab="dash" class="active">Dashboard</button>
@@ -1052,6 +1063,7 @@ document.querySelectorAll("#tabs button").forEach(b=>{
     TABS.forEach(t=>document.getElementById("tab-"+t).classList.add("hide"));
     document.getElementById("tab-"+b.dataset.tab).classList.remove("hide");
     render(b.dataset.tab);
+    timerUI();
   };
 });
 
@@ -1493,7 +1505,7 @@ function renderSessao(){
 
   <h2 class="sec">🕘 Sessões de hoje</h2><div class="card" id="hojeBox"></div>
   `;
-  assRowSeq=0; addAssRow(); updateTimerDisp(); renderHoje();
+  assRowSeq=0; addAssRow(); timerUI(); renderHoje();
 }
 let assRowSeq=0;
 function matOptions(sel){ return Object.keys(MAT_INFO).map(g=>`<option value="${g}" ${g===sel?"selected":""}>${MAT_INFO[g].nome}</option>`).join(""); }
@@ -1571,19 +1583,46 @@ function toggleRev(){
   const st=document.getElementById("fStatus"); if(st) st.closest("label.fld").style.display = on?"none":"";
 }
 function timerToggle(){
-  const b=document.getElementById("btnStart"), disp=document.getElementById("timerDisp");
   if(!timer.running){
     timer.running=true; timer.startTs=Date.now();
-    b.textContent="⏸ Pausar"; disp.classList.add("running");
     // Recalcula a partir do relógio real a cada tick: imune ao throttle de abas em 2º plano e à suspensão do PC
     timer.intv=setInterval(updateTimerDisp,1000);
   } else {
     timer.accMs += Date.now()-timer.startTs; timer.startTs=null; timer.running=false;
-    b.textContent="▶ Continuar"; disp.classList.remove("running"); clearInterval(timer.intv);
+    clearInterval(timer.intv);
   }
+  timerUI();
 }
-function timerReset(){ timer.running=false; timer.accMs=0; timer.startTs=null; clearInterval(timer.intv); const b=document.getElementById("btnStart"); if(b)b.textContent="▶ Iniciar"; const d=document.getElementById("timerDisp"); if(d)d.classList.remove("running"); updateTimerDisp(); }
-function updateTimerDisp(){ const d=document.getElementById("timerDisp"); if(d) d.textContent=fmtClock(timerSec()); }
+function timerReset(){ timer.running=false; timer.accMs=0; timer.startTs=null; clearInterval(timer.intv); timerUI(); }
+/* O cronômetro vive na aba Sessão, mas a sessão continua quando se troca de aba:
+   nas outras abas aparece o #timerFloat (clicar no tempo volta à Sessão), e o
+   título da aba do navegador carrega o tempo, para quem sai do painel. */
+/* lazy: timerUI() pode rodar antes desta linha do script ser avaliada */
+function tituloBase(){ return window.__tituloBase || (window.__tituloBase=document.title); }
+function timerUI(){
+  const b=document.getElementById("btnStart"), disp=document.getElementById("timerDisp");
+  const emCurso = timer.running || timer.accMs>0;
+  if(b) b.textContent = timer.running ? "⏸ Pausar" : (emCurso ? "▶ Continuar" : "▶ Iniciar");
+  if(disp) disp.classList.toggle("running", timer.running);
+  const f=document.getElementById("timerFloat");
+  if(f){
+    const ab=document.querySelector("#tabs button.active");
+    const naSessao = ab && ab.dataset.tab==="sessao";
+    f.classList.toggle("hide", !emCurso || naSessao);
+    f.classList.toggle("running", timer.running);
+    const fb=document.getElementById("timerFloatBtn");
+    if(fb){ fb.textContent = timer.running ? "⏸" : "▶"; fb.title = timer.running ? "Pausar" : "Continuar"; }
+  }
+  updateTimerDisp();
+}
+function updateTimerDisp(){
+  const t=fmtClock(timerSec());
+  const d=document.getElementById("timerDisp"); if(d) d.textContent=t;
+  const fd=document.getElementById("timerFloatDisp"); if(fd) fd.textContent=t;
+  const emCurso = timer.running || timer.accMs>0;
+  document.title = emCurso ? `${timer.running?"⏱":"⏸"} ${t} · ${tituloBase()}` : tituloBase();
+}
+function irParaSessao(){ const b=document.querySelector('#tabs button[data-tab="sessao"]'); if(b) b.click(); }
 function salvarSessao(){
   const msg=document.getElementById("sessMsg");
   const err=t=>{ msg.textContent=t; msg.style.color="var(--bad)"; };
