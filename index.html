@@ -169,6 +169,7 @@ th.wk-now,td.wk-now{background:rgba(76,194,255,.12)}
 .g-plan{top:4px;height:16px;border:1.5px dashed #8b9bb088}
 .g-eff{top:4px;height:16px;opacity:.4}
 .g-real{top:13px;height:3px;border-radius:2px;opacity:.85}
+.g-rev{top:4px;height:16px;border:1.5px dotted #f0883e;background:#f0883e14}
 .g-dot{position:absolute;top:8px;height:8px;border-radius:2px;min-width:3px}
 .g-sep{position:absolute;width:1px;background:var(--line);z-index:0}
 .g-today{position:absolute;width:2px;background:var(--bad);z-index:3;opacity:.85}
@@ -787,11 +788,11 @@ const SEMANAS = [
   {n:7, per:"19/10 – 25/10", fase:"Fase 2 — fechar o novo e reativar o antigo", bloco:"FINPUB", cauda:"CDADOS", ext:"INFRA"},
   {n:8, per:"26/10 – 01/11", fase:"Fase 2 — fechar o novo e reativar o antigo", bloco:"DTRIB", cauda:"CDADOS", ext:"LEGAL"},
   {n:9, per:"02/11 – 08/11", fase:"Fase 2 — fechar o novo e reativar o antigo", bloco:"DTRIB", cauda:"CDADOS", ext:"LEGAL"},
-  {n:10, per:"09/11 – 15/11", fase:"Fase 3 — reta final: peso × desempenho", bloco:"AUDFIS", cauda:"CDADOS", ext:"AUDFIS"},
-  {n:11, per:"16/11 – 22/11", fase:"Fase 3 — reta final: peso × desempenho", bloco:"DTRIB", cauda:"CGER", ext:"DTRIB"},
-  {n:12, per:"23/11 – 29/11", fase:"Fase 3 — reta final: peso × desempenho", bloco:"RT", cauda:"DCON", ext:"RT"},
-  {n:13, per:"30/11 – 06/12", fase:"Fase 3 — reta final: peso × desempenho", bloco:"AUDFIS", cauda:"DADM", ext:"AUDFIS"},
-  {n:14, per:"07/12 – 13/12", fase:"Fase 3 — reta final: peso × desempenho", bloco:"LEGAL", cauda:"ESTAT", ext:"LEGAL"},
+  {n:10, per:"09/11 – 15/11", fase:"Fase 3 — reta final: peso × desempenho", bloco:null, cauda:null, ext:null, grade:1},
+  {n:11, per:"16/11 – 22/11", fase:"Fase 3 — reta final: peso × desempenho", bloco:null, cauda:null, ext:null, grade:1},
+  {n:12, per:"23/11 – 29/11", fase:"Fase 3 — reta final: peso × desempenho", bloco:null, cauda:null, ext:null, grade:1},
+  {n:13, per:"30/11 – 06/12", fase:"Fase 3 — reta final: peso × desempenho", bloco:null, cauda:null, ext:null, grade:1},
+  {n:14, per:"07/12 – 13/12", fase:"Fase 3 — reta final: peso × desempenho", bloco:null, cauda:null, ext:null, grade:1},
   {n:15, per:"14/12 – 20/12", fase:"Consolidação", bloco:null, cauda:null, ext:null},
 ];
 const S1_SEGUNDA = "2026-09-07";
@@ -799,6 +800,8 @@ const PERIODO_INI = "2026-09-07", PERIODO_FIM = "2026-12-20";
 const PROVA1 = "2026-12-20", PROVA2 = "2027-01-10";
 const ULT_AQUISICAO = 9, ULT_SEMANA = 14;   // 06/11/2026: a reta final começa na S10
 
+// Reta final (06/11/2026): das S10 em diante a grade e por materia
+// (plano_fase3.json) — 45min de fila + 2h57 (sex 2h45) + noite Ter-Qui.
 // Grade (desde 14/09): 45min de fila + 30min de extensao + 1h45 do
 // bloco da fase + 42min de cauda = 3h42/dia util. A semana 1 correu
 // em 3h12, sem extensao; a semana 15 devolve os 30min ao descanso.
@@ -829,13 +832,13 @@ function semanaDoDia(date){
 const GRADE = {};  // grade fixa foi substituida por gradeDoDia(dia, semana)
 const FASES = [
   {sem:"Semanas 1-5",per:"07/09 a 11/10",tit:"Fase 1 — aquisição do que é novo para todos",txt:"Desde 21/09 o bloco da fase roda DUAS matérias por semana (Seg/Qua/Sex uma, Ter/Qui outra) e a cauda vira rotação fixa: Seg Ciência de Dados · Ter Dev · Qua Infra · Qui IA+CD · Sex erros. Semana 3: RT (LC 227 e transição) × Ciência de Dados. Semana 4: Legislação de AL (IPVA, PAT) × RT, que fecha em 28h30. Semana 5: Leg. AL (PAT, ITCD) × Auditoria Fiscal (cruzamento e omissão). Extensão de 30min: Auditoria Fiscal nas semanas 2-5 (SPED → MOC NF-e → EFD → CT-e/MDF-e)."},
-  {sem:"Semanas 6-10",per:"12/10 a 15/11",tit:"Fase 2 — fechar o novo e reativar o antigo",txt:"S6 Mat. Financeira × Economia macro (+ curtose e assimetria no feriado de 12/10). S7 Finanças Públicas (funções do Estado e orçamento) × Contabilidade Pública. S8 CTN arts. 113-155-A em três dias seguidos — a exceção à regra das duas matérias — × Cont. Pública e SQL. S9 CTN+LC 118 e jurisprudência × D. Constitucional (art. 5º, organização do Estado, ordem econômica); 🎯 Simulado 02 em 08/11. S10 tabelas de Auditoria Fiscal (CFOP, CST, CSOSN, cBenef) × Leg. AL cobrada × IA generativa. Extensão: Infra nas 6-7, Leg. AL P2-P3 nas 8-9, tabelas na 10. Desde 24/09, nas matérias de acervo consolidado, só prioridade alta/máxima até a S10; o p3-4 vai para a Fase 3. Entregável: primeira passagem de LEITURA em 100% do edital — o volume de itens é a Fase 3."},
-  {sem:"Semanas 11-14",per:"16/11 a 13/12",tit:"Fase 3 — questões e cadeias",txt:"Zero LEITURA nova. Volume de itens C/E sobre o edital inteiro, fila de revisão em carga máxima, correção de erro dirigida e a resolução dos ~600 itens gerados — a rubrica que nenhum bloco orçava. Simulado 03 (29/11) e 04 (13/12) são ensaios de prova inteira: 160 itens, 4h30, no turno da tarde. Assunto p3-4 fora da discursiva não tem 1ª passagem própria aqui: entra na revisita como amostra."},
+  {sem:"Semanas 6-9",per:"12/10 a 08/11",tit:"Fase 2 — fechar o novo e reativar o antigo",txt:"S6 Mat. Financeira × Economia macro (+ curtose e assimetria no feriado de 12/10). S7 Finanças Públicas (funções do Estado e orçamento) × Contabilidade Pública. S8 CTN arts. 113-155-A em três dias seguidos — a exceção à regra das duas matérias — × Cont. Pública e SQL. S9 CTN+LC 118 e jurisprudência × D. Constitucional (art. 5º, organização do Estado, ordem econômica); (o Simulado 02, previsto para 08/11, foi adiado para sáb 14/11). Extensão: Infra nas 6-7, Leg. AL P2-P3 nas 8-9. Desde 24/09, nas matérias de acervo consolidado, só prioridade alta/máxima até a S9; o p3-4 vai para a Fase 3. Desde 02/10, nas matérias de acervo (CPUB, FinPub, DCon, Economia, Mat. Fin., Estatística, D. Trib.), o bloco é molde de questões por prioridade. Entregável: primeira passagem de LEITURA em 100% do edital — o volume de itens é a Fase 3."},
+  {sem:"Semanas 10-14",per:"09/11 a 13/12",tit:"Fase 3 — reta final: peso × desempenho",txt:"Desde 06/11 não há mais bloco da fase, extensão, cauda nem noite com matéria fixa. A fila de 45 min continua em 1º lugar; o resto do dia (2h57, ~77h45 no total) vai por matéria em proporção a itens na prova × (1 − domínio) — saída de 06_Scripts/plano_fase3.py. Escopo: rever P1-P2 com domínio < 70% (+15 min de leitura dirigida abaixo de 40%) · medir os P1-P2 nunca medidos · fechar as inéditas dos P3 (+15 min de teoria nas matérias novas) · P4 só nas matérias da discursiva (CD, AudFis, FinPub, RT). Seg 09/11: expansão do banco no TEC. 🎯 Simulado 02 sáb 14/11 (120 itens, 3h20), correção dirigida seg 16/11. Simulados 03 (dom 29/11) e 04 (dom 13/12) são ensaios de prova inteira: 160 itens, 4h30, à tarde; o 03 é o ponto de revisão do plano (regerar as S13-S14 se alguma matéria mudar de faixa)."},
   {sem:"Semana 15",per:"14 a 20/12",tit:"Consolidação",txt:"Sem material novo, sem simulado longo. Releitura das tabelas-âncora (alíquotas de transição do IBS, 400 UPFAL, contingência NF-e, CFOP) e da lei seca de RT e Leg. AL. Reduzir carga a partir de quinta."},
 ];
 const SIMULADOS = [
   {n:1, data:"2026-10-11", itens:80,  dur:"2h15", meta:78, escopo:"blocos da Fase 1"},
-  {n:2, data:"2026-11-08", itens:120, dur:"3h20", meta:80, escopo:"~80% do edital"},
+  {n:2, data:"2026-11-14", itens:120, dur:"3h20", meta:80, escopo:"~80% do edital — sábado; adiado de 08/11, pool refeito por blueprint"},
   {n:3, data:"2026-11-29", itens:160, dur:"4h30", meta:82, escopo:"completo — 1º ensaio de prova inteira"},
   {n:4, data:"2026-12-13", itens:160, dur:"4h30", meta:84, escopo:"completo — ensaio final"},
 ];
@@ -1373,17 +1376,30 @@ function chartHorasDia(serie){
 /* ============================================================
    DASHBOARD
    ============================================================ */
+/* Meta semanal em minutos, por matéria, tirada da grade da semana (09/11/2026).
+   Antes vinha de MAT_INFO.meta, fixa desde o plano de setembro — na reta final
+   (S10-S14, plano_fase3.json) a grade muda de semana para semana. A fila de
+   45 min/dia útil entra à parte, na linha REV. Semana sem grade (S15) → vazia. */
+const FILA_MIN=45;
+function metaSemana(w){
+  const m={}; let dias=0, cex=0;
+  Object.values(DIA_SEMANA).forEach(dia=>{ const g=gradeDoDia(dia,w); if(!g.length) return; dias++;
+    g.forEach(b=>{ if(b.mat==="CEX") cex+=b.min; else m[grupo(b.mat)]=(m[grupo(b.mat)]||0)+b.min; }); });
+  if(dias) m[REV_MAT]=FILA_MIN*dias;
+  const total=Object.values(m).reduce((a,b)=>a+b,0)+cex;
+  return {m, cex, total};
+}
 function renderDash(){
   const all=sumBy(state.sessions), wk=sumBy(sessionsFiltered(true));
   const tops=allTopics(); const concl=tops.filter(t=>state.topicStatus[t.id]==="concluido").length;
   const emand=tops.filter(t=>["estudando","revisar"].includes(state.topicStatus[t.id])).length;
   const diasRest=Math.max(0,Math.ceil((new Date(PROVA1)-new Date())/86400000));
-  const metaTotal=Object.values(MAT_INFO).reduce((a,m)=>a+m.meta,0);
+  const wDash=semanaHoje(), ms=metaSemana(wDash), metaTotal=ms.total;
 
   let html = `
   <div class="grid cards">
     <div class="card kpi"><div class="label">⏱️ Tempo total estudado</div><div class="val">${fmtMin(all.min)}</div><div class="foot">${diasEstudados()} dia(s) com estudo · 🔥 streak ${streak()}</div></div>
-    <div class="card kpi"><div class="label">📅 Esta semana</div><div class="val">${fmtMin(wk.min)} <small>/ ${fmtMin(metaTotal)}</small></div><div class="foot">${pct(wk.min,metaTotal)}% da meta semanal (${fmtMin(metaTotal)})</div></div>
+    <div class="card kpi"><div class="label">📅 Esta semana</div><div class="val">${fmtMin(wk.min)} <small>/ ${fmtMin(metaTotal)}</small></div><div class="foot">${metaTotal?`${pct(wk.min,metaTotal)}% da grade da S${wDash} (fila + blocos)`:`S${wDash} sem grade — consolidação`}</div></div>
     <div class="card kpi"><div class="label">✍️ Questões resolvidas</div><div class="val">${all.qr} <small>/ ${metaPlanoTotal()}</small></div><div class="foot">${wk.qr} esta semana · ${pct(all.qr,metaPlanoTotal())}% da meta do plano</div></div>
     <div class="card kpi"><div class="label">🎯 Taxa de acerto</div><div class="val">${pct(all.qa,all.qr)}<small>%</small></div><div class="foot">${all.qa}/${all.qr} acertos</div></div>
     <div class="card kpi"><div class="label">📚 Assuntos concluídos</div><div class="val">${concl}<small>/${tops.length}</small></div><div class="foot">${emand} em andamento · ${pct(concl,tops.length)}% do edital</div></div>
@@ -1395,13 +1411,18 @@ function renderDash(){
 
   // Horas por matéria na semana vs meta
   const mg=minutosPorGrupo(true);
-  const ordem=Object.keys(MAT_INFO).filter(g=>MAT_INFO[g].meta>0);
-  html += `<h2 class="sec">⏲️ Horas por matéria — esta semana <span class="pill">barra = estudado · marca branca = meta semanal</span></h2><div class="card">`;
+  // fila primeiro (é o 1º bloco do dia); depois as matérias por minutos de grade
+  const ordem=[REV_MAT].concat(Object.keys(MAT_INFO).filter(g=>(ms.m[g]||0)>0||(mg[g]||0)>0)
+    .sort((a,b)=>(ms.m[b]||0)-(ms.m[a]||0)||(mg[b]||0)-(mg[a]||0)));
+  html += `<h2 class="sec">⏲️ Horas por matéria — S${wDash} <span class="pill">barra = estudado · meta = minutos da grade desta semana</span></h2><div class="card">`;
+  if(!metaTotal&&!wk.min) html += `<div class="empty">Semana sem grade (consolidação).</div>`;
   ordem.forEach(g=>{
-    const done=mg[g]||0, meta=MAT_INFO[g].meta, p=meta>0?Math.min(100,done/meta*100):0;
-    const metaPos=meta>0?Math.min(100,100):0;
-    html += barRow(MAT_INFO[g].nome, p, `${fmtMin(done)} / ${fmtMin(meta)}`, MAT_INFO[g].cor, true);
+    const done=mg[g]||0, meta=ms.m[g]||0, p=meta>0?Math.min(100,done/meta*100):(done>0?100:0);
+    if(g===REV_MAT&&!meta&&!done) return;
+    const nome=g===REV_MAT?REV_INFO.nome:MAT_INFO[g].nome, cor=g===REV_MAT?REV_INFO.cor:MAT_INFO[g].cor;
+    html += barRow(nome, p, meta?`${fmtMin(done)} / ${fmtMin(meta)}`:`${fmtMin(done)} · fora da grade`, cor, meta>0);
   });
+  if(ms.cex) html += `<div class="muted" style="font-size:12.5px;margin-top:6px">+ ${fmtMin(ms.cex)} de bloco sem matéria (expansão do banco, correção de simulado, erros) — contados só no total da semana.</div>`;
   html += `</div>`;
 
   // Horas por dia e evolução no tempo
@@ -1705,7 +1726,8 @@ const STATUS_LABEL={nao:"Não iniciado",estudando:"Estudando",revisar:"Revisar",
 
 /* ---- Semana do plano, por assunto -------------------------------------
    Cada assunto tem ATÉ DUAS semanas no QPLAN: p1 = aquisição (1ª passagem,
-   semanas 1-10) e p2 = revisita em regime de questões (Fase 3). A semana de
+   semanas 1-9, ou S10-S14 quando a reta final a reabriu) e p2 = revisita em
+   regime de questões (Fase 3). A semana de
    aquisição exibida/filtrada é a REPLANEJADA (`semEff` de replanejar()), que é
    a mesma régua do Cronograma e do Gantt — assunto atrasado migra de semana lá
    e tem de migrar aqui também. Assunto sem entrada no QPLAN (criado à mão)
@@ -1895,8 +1917,11 @@ function desenharSemResumo(fSemRaw,fW,wNow,plano,sel){
     if(z.aq===fW){ aq++; metaQ+=topicMeta(t.id); min+=topicMeta(t.id)/ritmo(g)*60; }
     if(z.rev===fW){ rev++; metaQ+=topicMetaRev(t.id); min+=topicMetaRev(t.id)/ritmo(g)*60; }
     if(state.topicStatus[t.id]==="concluido") concl++; });
-  const blocos=[s.ext?`extensão <b>${matNome(s.ext)}</b>`:null, s.bloco?`bloco <b>${matNome(s.bloco)}</b>`:null,
-                s.cauda?`cauda <b>${matNome(s.cauda)}</b>`:null].filter(Boolean).join(" · ");
+  // grade da semana por matéria (09/11/2026): na reta final não há mais
+  // bloco/extensão/cauda, e mesmo antes a MICRO já rodava várias matérias
+  const gm={}; itensDaSemana(fW).forEach(b=>{ gm[b.mat]=(gm[b.mat]||0)+b.min; });
+  const blocos=Object.entries(gm).sort((a,b)=>b[1]-a[1])
+    .map(([m,min])=>`<span class="dot" style="background:${matCor(m)}"></span> <b>${matNome(m)}</b> ${fmtMin(min)}`).join(" · ");
   // Semana vazia tem duas causas legítimas — dizer qual, senão parece defeito.
   let nota="";
   if(sel.length===0){
@@ -1907,7 +1932,7 @@ function desenharSemResumo(fSemRaw,fW,wNow,plano,sel){
   box.innerHTML=`<div class="card sem-box" style="border-color:${fW===wNow?"var(--accent)":"var(--line)"}">
     <b class="wk">📅 Semana ${s.n}</b> <span class="muted">${s.per} · ${escapeHtml(s.fase)}</span>
     ${fW===wNow?'<span class="now-pill" style="background:var(--ok);color:#06121c;font-size:11px;font-weight:700;padding:2px 9px;border-radius:20px">semana atual</span>':""}<br>
-    ${blocos||'<span class="muted">sem grade — consolidação</span>'}<br>
+    ${blocos?`<span class="muted">grade (fora a fila):</span> ${blocos}`:'<span class="muted">sem grade — consolidação</span>'}<br>
     <b>${sel.length}</b> assuntos no filtro (${aq} de aquisição · ${rev} de revisita) · meta <b>${metaQ}q</b>
     · ~<b>${fmtMin(min)}</b> de questões · <b>${concl}</b> marcados concluídos
     <span class="muted">· régua: ${assSemBase==="orig"?"plano original":"replanejada"}</span>${nota}</div>`;
@@ -2268,8 +2293,12 @@ function cronoModoSet(m){ cronoModo=m; renderCronograma(); }
 function tabelaQuestoesSemana(hl,plano){
   const efet=cronoModo==="efetivo";
   const infos=Object.values(plano.info);
+  // na reta final a 1ª passagem pendente e a revisita (p2) caem nas S10-S14
   let maxW=ULT_AQUISICAO;
-  if(efet) infos.forEach(i=>{ if(!i.ok&&i.semEff>maxW) maxW=i.semEff; });
+  infos.forEach(i=>{ const w=efet&&!i.ok?i.semEff:i.semOrig; if(w>maxW) maxW=w; });
+  const revSem={}; allTopics().forEach(t=>{ const w=topicSemanaRev(t.id), m=topicMetaRev(t.id);
+    if(w>0&&m>0){ revSem[w]=(revSem[w]||0)+m; if(w>maxW) maxW=w; } });
+  maxW=Math.min(maxW,ULT_SEMANA);
   const weeks=[]; for(let w=1;w<=maxW;w++) weeks.push(w);
   const mats=Object.keys(MAT_INFO).filter(g=>infos.some(i=>grupo(i.t.mat)===g));
   const cell={}, pendCell={}, totMat={}, totSem={}, timeSem={};
@@ -2292,10 +2321,11 @@ function tabelaQuestoesSemana(hl,plano){
   });
   const totGeral=Object.values(totMat).reduce((a,b)=>a+b,0);
   h+=`<tr><td><b>Total questões</b></td>`+weeks.map(w=>`<td class="right${wc(w)}"><b>${totSem[w]||0}</b></td>`).join("")+`<td class="right"><b>${totGeral}</b></td></tr>`;
+  if(Object.keys(revSem).length) h+=`<tr><td>🔁 <b>Revisita</b> <span class="qstat">(p2, meta do plano)</span></td>`+weeks.map(w=>`<td class="right${wc(w)}">${revSem[w]||'<span class="muted">·</span>'}</td>`).join("")+`<td class="right"><b>${Object.values(revSem).reduce((a,b)=>a+b,0)}</b></td></tr>`;
   h+=`<tr><td class="muted">Tempo só de questões</td>`+weeks.map(w=>`<td class="right muted${wc(w)}">${fmtMin(timeSem[w]||0)}</td>`).join("")+`<td class="right muted">—</td></tr>`;
   h+=`</tbody></table><div class="muted" style="font-size:12.5px;margin-top:8px">${efet
-    ?`Modo <b>replanejado</b>: células <span style="color:var(--ok)">verdes ✓</span> = metas cumpridas (na semana em que foram concluídas); demais células = questões que <b>faltam</b>, realocadas da semana atual em diante conforme a capacidade semanal de cada matéria. Colunas S7/S8 só aparecem quando o backlog estoura a S6.`
-    :`Plano original fixo. Alterne para “Replanejado” para ver o cronograma ajustado à execução real.`} O tempo acima é só resolução; o restante do bloco de 15h/sem é teoria, lei seca, Anki e refazer erros.</div>`;
+    ?`Modo <b>replanejado</b>: células <span style="color:var(--ok)">verdes ✓</span> = metas cumpridas (na semana em que foram concluídas); demais células = questões que <b>faltam</b>, realocadas da semana atual em diante conforme a capacidade semanal de cada matéria. As linhas por matéria são a <b>1ª passagem</b>; a linha 🔁 é a meta de <b>revisita</b> (p2), que na reta final ocupa o que sobra do slot da matéria.`
+    :`Plano original fixo. Alterne para “Replanejado” para ver o cronograma ajustado à execução real.`} O tempo acima é só a 1ª passagem, no ritmo medido de cada matéria; fila, leitura (📖) e revisita ficam fora dele.</div>`;
   return h;
 }
 
@@ -2553,8 +2583,17 @@ function renderCronograma(){
   const isNow = (cronoWeek===null || cronoWeek===cwReal) && cwReal>=1 && cwReal<=15;
   const meta=SEMANAS[cw-1];
 
-  let html=`<div class="card"><b>Período:</b> 07/09/2026 → 20/12/2026 · Segunda a sexta · <b>3h42/dia</b> (45min de fila + <b>30min de extensão</b> + 1h45 do bloco da fase + 42min de cauda) · sábado e domingo livres, exceto os4 domingos de simulado.<br>
-  <span class="muted">A <b>fila de revisão vem primeiro e não é negociável</b>. Em cada bloco, atacar primeiro os <b>P1</b>; os marcados <b>🔨 gerar</b> não têm questão em banca nenhuma — é onde a posição sai mais barata. Prova objetiva <b>20/12</b> (160 itens C/E, 4h30) · discursiva <b>10/01/2027</b>.</span></div>`;
+  // cabeçalho por fase (09/11/2026): a grade de 3h42 com bloco/extensão/cauda
+  // acabou na S9; da S10 em diante os minutos vêm da grade da semana exibida.
+  const dSem=Object.values(DIA_SEMANA).map(d=>[d,gradeDoDia(d,cw)]).filter(x=>x[1].length);
+  const durDia=dSem.map(([d,g])=>{ const dia=g.filter(b=>!b.noite).reduce((a,b)=>a+b.min,0), nt=g.filter(b=>b.noite).reduce((a,b)=>a+b.min,0);
+    return `${d.slice(0,3)} ${fmtMin(dia)}${nt?` + ${nt}′ noite`:""}`; }).join(" · ");
+  const sims=SIMULADOS.map(x=>{ const d=new Date(x.data+"T12:00:00"); return `${fmtData(x.data)} (${["dom","seg","ter","qua","qui","sex","sáb"][d.getDay()]}, ${x.itens} itens)`; }).join(" · ");
+  const gradeTxt = cw>=15 ? `semana de consolidação, sem grade fixa`
+    : meta.grade ? `<b>reta final:</b> 45min de fila + grade por matéria em proporção a <b>itens na prova × (1 − domínio)</b> (<code>plano_fase3.json</code>) — ${durDia}`
+    : `45min de fila + grade da semana — ${durDia}`;
+  let html=`<div class="card"><b>Período:</b> 07/09/2026 → 20/12/2026 · Segunda a sexta · ${gradeTxt} · fim de semana livre, exceto os simulados: ${sims}.<br>
+  <span class="muted">A <b>fila de revisão vem primeiro e não é negociável</b>. ${meta.grade?`Em cada slot: <b>📖15′</b> de leitura antes das questões quando marcado; depois a 1ª passagem pendente e, no que sobrar, a revisita (🔁) da mesma matéria.`:`Em cada bloco, atacar primeiro os <b>P1</b>; os marcados <b>🔨 gerar</b> não têm questão em banca nenhuma — é onde a posição sai mais barata.`} Prova objetiva <b>20/12</b> (160 itens C/E, 4h30) · discursiva <b>10/01/2027</b>.</span></div>`;
 
   // Resumo do replanejamento (execução real × plano)
   const infosP=Object.values(plano.info);
@@ -2563,7 +2602,7 @@ function renderCronograma(){
   const movQ=movP.reduce((a,i)=>a+i.resto,0);
   html+=`<div class="card" style="border-color:${movP.length?'var(--warn)':'var(--ok)'}">
     <b>🔄 Cronograma dinâmico:</b> ${conclP}/${infosP.length} assuntos com meta cumprida · ${movP.length
-      ?`<span style="color:var(--warn)"><b>${movP.length} re-agendados</b> (${movQ}q pendentes movidas p/ frente${plano.overflow?`; <b>${plano.overflow}q estourando p/ a Fase 3</b>`:""})</span>`
+      ?`<span style="color:var(--warn)"><b>${movP.length} re-agendados</b> (${movQ}q pendentes movidas p/ frente${plano.overflow?`; <b>${plano.overflow}q</b> na Fase 3 depois da semana planejada`:""})</span>`
       :`<span style="color:var(--ok)">nenhum atraso — plano em dia</span>`}
     <span class="muted">· o que não é cumprido migra sozinho para as semanas seguintes — detalhe na aba <b>Gantt</b></span></div>`;
 
@@ -2576,7 +2615,7 @@ function renderCronograma(){
     <button class="btn sm${cronoModo==='efetivo'?' primary':''}" onclick="cronoModoSet('efetivo')">🔄 Replanejado</button>
     <button class="btn sm${cronoModo==='original'?' primary':''}" onclick="cronoModoSet('original')">📋 Plano original</button>
   </div>
-  <div class="card" style="overflow-x:auto">` + tabelaQuestoesSemana(cwReal>=1&&cwReal<=8?cwReal:0,plano) + `</div>`;
+  <div class="card" style="overflow-x:auto">` + tabelaQuestoesSemana(cwReal>=1&&cwReal<=ULT_SEMANA?cwReal:0,plano) + `</div>`;
 
   // Navegador de semana
   html += `<div class="card crono-nav">
@@ -2622,7 +2661,7 @@ function renderCronograma(){
 
 /* ============================================================
    GANTT — previsto (plano original) × replanejado × realizado
-   Linha do tempo diária de 25/06 a 21/08; um assunto por linha.
+   Linha do tempo diária de 07/09 a 20/12 (S1-S15); um assunto por linha.
    ============================================================ */
 const GANTT_DIAS=Math.round((new Date(PERIODO_FIM+"T12:00:00")-new Date(PERIODO_INI+"T12:00:00"))/86400000)+1;
 function dayIdx(ds){
@@ -2664,11 +2703,12 @@ function renderGantt(){
       <option value="mov" ${ganttFilt.view==="mov"?"selected":""}>Só re-agendados</option>
       <option value="conc" ${ganttFilt.view==="conc"?"selected":""}>Só concluídos</option>
     </select>
-    <span class="qstat">${concl}/${infos.length} concluídos · ${mov} re-agendados${plano.overflow?` · ${plano.overflow}q estourando p/ S7–S8`:""}</span>
+    <span class="qstat">${concl}/${infos.length} concluídos · ${mov} re-agendados${plano.overflow?` · ${plano.overflow}q na Fase 3 depois da semana planejada`:""}</span>
   </div>
   <div class="legend">
     <span><span style="width:18px;height:10px;border:1.5px dashed #8b9bb0;border-radius:3px;display:inline-block"></span> semana planejada (original)</span>
     <span><span style="width:18px;height:10px;background:#4cc2ff66;border-radius:3px;display:inline-block"></span> semana replanejada (pendente)</span>
+    <span><span style="width:18px;height:10px;border:1.5px dotted #f0883e;border-radius:3px;display:inline-block"></span> revisita (Fase 3)</span>
     <span><span class="dot" style="background:var(--ok);border-radius:2px"></span> realizado — meta cumprida</span>
     <span><span class="dot" style="background:var(--warn);border-radius:2px"></span> realizado parcial</span>
     <span><span style="width:2px;height:12px;background:var(--bad);display:inline-block"></span> hoje</span>
@@ -2677,14 +2717,14 @@ function renderGantt(){
 
   // overlay: separadores das semanas + linha de hoje (atravessam todas as linhas)
   let overlay="";
-  for(let w=1;w<=8;w++){ const [a]=semDatas(w);
+  for(let w=1;w<=15;w++){ const [a]=semDatas(w);
     overlay+=`<div class="g-sep" style="top:24px;bottom:0;left:calc(var(--glab) + (100% - var(--glab))*${(dayIdx(a)/GANTT_DIAS).toFixed(4)})"></div>`; }
   if(hoje>=PERIODO_INI&&hoje<=PERIODO_FIM)
     overlay+=`<div class="g-today" style="top:0;bottom:0;left:calc(var(--glab) + (100% - var(--glab))*${((dayIdx(hoje)+0.5)/GANTT_DIAS).toFixed(4)})" title="hoje"></div>`;
 
-  // cabeçalho S1..S8
+  // cabeçalho S1..S15
   html+=`<div class="g-row" style="min-height:24px"><div class="g-lab muted" style="font-size:11px">assunto · feitas/meta</div><div class="g-track">`;
-  for(let w=1;w<=8;w++){ const [a,b]=semDatas(w);
+  for(let w=1;w<=15;w++){ const [a,b]=semDatas(w);
     html+=`<div class="g-wlab" style="${gPos(a,b)};text-align:center" title="${fmtData(a)}–${fmtData(b)}">S${w}</div>`; }
   html+=`</div></div>`;
 
@@ -2702,8 +2742,11 @@ function renderGantt(){
         ?`<span style="color:var(--ok)">${i.qr}/${i.meta}q ✓</span>`
         :`<span class="q">${i.qr}/${i.meta}q</span>${i.movido?` <span class="mov-chip">↪S${i.semOrig}→S${i.semEff}</span>`:""}`;
       html+=`<div class="g-row"><div class="g-lab" title="${escapeHtml(i.t.assunto)}"><span class="prio p${i.t.prio||3}" style="font-size:10px">${PRIO_LABEL[i.t.prio||3]}</span> ${i.t.c25?"✅ ":""}${escapeHtml(i.t.assunto)} ${st}</div><div class="g-track">`;
-      const [p0,p1]=semDatas(Math.min(8,i.semOrig));
+      const [p0,p1]=semDatas(i.semOrig);
       html+=`<div class="g-bar g-plan" style="${gPos(p0,p1)}" title="planejado: S${i.semOrig} (${fmtData(p0)}–${fmtData(p1)})"></div>`;
+      const wr=topicSemanaRev(i.t.id);
+      if(wr>0){ const [r0,r1]=semDatas(wr);
+        html+=`<div class="g-bar g-rev" style="${gPos(r0,r1)}" title="revisita: R${wr} — meta ${topicMetaRev(i.t.id)}q"></div>`; }
       if(!i.ok){ const [e0,e1]=semDatas(i.semEff);
         html+=`<div class="g-bar g-eff" style="${gPos(e0,e1)};background:${cor}" title="replanejado: S${i.semEff} — faltam ${i.resto}q"></div>`; }
       const e=i.exec;
@@ -2717,7 +2760,7 @@ function renderGantt(){
   });
   if(!temLinha) html+=`<div class="empty">Nenhum assunto com esses filtros.</div>`;
   html+=overlay+`</div></div>
-  <div class="muted" style="font-size:12.5px;margin-top:10px">Somente assuntos com meta de questões no plano (os mantidos só via Anki ficam de fora). Barra tracejada = semana do plano original; barra colorida translúcida = para onde o pendente foi <b>replanejado</b> conforme a execução (o que não é feito anda para a frente, respeitando a capacidade semanal da matéria). Quadradinhos = dias com sessão registrada no assunto.</div>`;
+  <div class="muted" style="font-size:12.5px;margin-top:10px">Somente assuntos com meta de questões no plano (os mantidos só via Anki ficam de fora). Barra tracejada = semana do plano original (1ª passagem); barra pontilhada laranja = semana da revisita da Fase 3; barra colorida translúcida = para onde o pendente foi <b>replanejado</b> conforme a execução (o que não é feito anda para a frente, respeitando a capacidade semanal da matéria). Quadradinhos = dias com sessão registrada no assunto.</div>`;
   document.getElementById("tab-gantt").innerHTML=html;
 }
 
