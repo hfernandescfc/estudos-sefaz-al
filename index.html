@@ -942,6 +942,15 @@ function aplicarStatusConcluido(s){
     if(tLoc > tInf) return;
     s.topicStatus[id] = "concluido"; s.topicStatusAt[id] = new Date(tInf).toISOString(); n++;
   });
+  // revisita cumprida (resolvidas >= meta p1 + p2): mesma regra de carimbo, e passa por
+  // cima de "concluido" (que a linha acima pode ter acabado de gravar com o mesmo carimbo)
+  Object.keys(SC.revisitados||{}).forEach(id=>{
+    if(s.topicStatus[id]==="revisitado") return;
+    const tInf = Date.parse(SC.revisitados[id])||0;
+    const tLoc = Date.parse(s.topicStatusAt[id]||"")||0;
+    if(tLoc > tInf && !(SC.ids[id] && tLoc===(Date.parse(SC.ids[id])||0))) return;
+    s.topicStatus[id] = "revisitado"; s.topicStatusAt[id] = new Date(tInf).toISOString(); n++;
+  });
   return n;
 }
 function load(){
