@@ -106,6 +106,8 @@ label.rev-toggle:has(input:checked){border-color:#f0883e;background:rgba(240,136
 .topchip.c25{border-color:var(--ok)}
 .topchip .qn{color:var(--muted);font-size:11.5px}
 .trilha-lk{font-size:11.5px;text-decoration:none;color:var(--accent);white-space:nowrap}
+.ce-lk{font-size:11.5px;white-space:nowrap;color:var(--warn);font-weight:600;cursor:help}
+.ce-lk.feita{color:var(--muted);font-weight:400;opacity:.8}
 /* aba Assuntos por matéria: visão da trilha (etapas e andamento) */
 .trilha-tg{background:none;border:1px solid var(--line);color:var(--muted);border-radius:8px;font-size:11px;padding:1px 7px;cursor:pointer;margin-left:4px}
 .trilha-tg:hover,.trilha-tg.on{border-color:var(--accent);color:var(--accent)}
@@ -249,6 +251,9 @@ th.wk-now,td.wk-now{background:rgba(76,194,255,.12)}
 <!-- Status "concluído" inferido da execução (06_Scripts/inferir_status_concluido.py). O status
      vive só no localStorage; navegador limpo zerava tudo. Só promove, nunca rebaixa. -->
 <script src="status_concluido.js" onerror="window.STATUS_CONCLUIDO=null"></script>
+<!-- Sessões C/E já geradas pela questao-ce, por tópico (06_Scripts/sessoes_ce.py). O chip do
+     assunto mostra 📝<ID> (pendente) ou ✓<ID> (feita), só de hoje em diante na grade. -->
+<script src="sessoes_ce.js" onerror="window.SESSOES_CE=null"></script>
 
 <script>
 /* ============================================================
@@ -2513,9 +2518,21 @@ function slotsDaGrade(plano, agora){
     return vivo[cw][k]; });
   return vivo;
 }
-function chipTopico(i){
+// Sessões C/E já geradas (sessoes_ce.js): 📝 pendente, ✓ feita. Só para dataISO de hoje em
+// diante — a grade do passado fica como estava (pedido do usuário, 11/11/2026).
+function hojeLocalISO(){ const d=new Date(); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`; }
+function marcaSessoesCE(id, dataISO){
+  if(!dataISO||dataISO<hojeLocalISO()) return "";
+  const l=window.SESSOES_CE&&window.SESSOES_CE.por_topico&&window.SESSOES_CE.por_topico[String(id)];
+  if(!l||!l.length) return "";
+  return " "+l.map(s=>{ const g=s.gerado?`, gerada em ${fmtData(s.gerado)}`:"";
+    return s.feita
+    ? `<span class="ce-lk feita" title="Sessão ${s.id} (questao-ce, ${s.n} itens${g}) — já resolvida">✓${s.id}</span>`
+    : `<span class="ce-lk" title="Sessão ${s.id} (questao-ce, ${s.n} itens${g}) — montada e ainda não resolvida: 09_Simulados/Simulado_${s.id}…/prova_interativa.html">📝${s.id}</span>`; }).join(" ");
+}
+function chipTopico(i, dataISO){
   const lt=i.ok?0:leituraMin(i.t.id);
-  return `<span class="topchip${i.t.c25?' c25':''}"${i.ok?' style="opacity:.6"':''}>${i.ok?'✓ ':''}${i.t.c25?'✅ ':''}${lt?`<span title="${lt} min de leitura rápida da teoria antes das questões">📖${lt}′</span> `:''}${escapeHtml(i.t.assunto)} <span class="qn">${i.qr>0?i.qr+"/":""}${i.meta}q</span>${i.movido?` <span class="mov-chip" title="movido da S${i.semOrig}">↪S${i.semOrig}</span>`:''}${codigosUI(i.t.id)}${linkTrilha(i.t.id)}</span>`;
+  return `<span class="topchip${i.t.c25?' c25':''}"${i.ok?' style="opacity:.6"':''}>${i.ok?'✓ ':''}${i.t.c25?'✅ ':''}${lt?`<span title="${lt} min de leitura rápida da teoria antes das questões">📖${lt}′</span> `:''}${escapeHtml(i.t.assunto)} <span class="qn">${i.qr>0?i.qr+"/":""}${i.meta}q</span>${i.movido?` <span class="mov-chip" title="movido da S${i.semOrig}">↪S${i.semOrig}</span>`:''}${codigosUI(i.t.id)}${linkTrilha(i.t.id)}${marcaSessoesCE(i.t.id, typeof dataISO==="string"?dataISO:null)}</span>`;
 }
 // 🧭 trilha do assunto no TEC (06_Scripts/montar_trilhas.py → trilhas.js; userscript v1.6).
 function linkTrilha(id){
@@ -2586,7 +2603,7 @@ function blocoConteudo(matGroup, week, plano, ids, slot, dataISO){
       "adianta-outra":`⏩ ${matNome(matGroup)} sem pendência — adiantando <b>${matNome(g)}</b>`,
       rev:`🔁 Revisita (Fase 3)`,
       "rev-outra":`🔁 ${matNome(matGroup)} sem pendência — revisita de <b>${matNome(g)}</b>`}[slot.tipo];
-    return (nota?`<span class="bloco-note">${nota}</span> `:"")+slot.tops.map(chipTopico).join("");
+    return (nota?`<span class="bloco-note">${nota}</span> `:"")+slot.tops.map(i=>chipTopico(i,dataISO)).join("");
   }
   // semanas passadas: o que o plano marcou, sem projeção
   const tops = ids ? ids.map(i=>plano.info[i]).filter(i=>i&&!i.ok)
