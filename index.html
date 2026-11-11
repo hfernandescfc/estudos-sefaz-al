@@ -56,6 +56,7 @@ tr:hover td{background:#ffffff06}
 .st-estudando{background:#19324a;color:#4cc2ff}
 .st-revisar{background:#3a2f12;color:#e3b341}
 .st-concluido{background:#16331f;color:#56d364}
+.st-revisitado{background:#2a1f3d;color:#c297ff}
 .prio{display:inline-block;padding:1px 8px;border-radius:6px;font-size:11px;font-weight:700;letter-spacing:.3px}
 .prio.p1{background:#3a1518;color:#ff8a92}
 .prio.p2{background:#3a2f12;color:#e3b341}
@@ -154,6 +155,7 @@ th.wk-now,td.wk-now{background:rgba(76,194,255,.12)}
 .semchip{display:inline-block;padding:1px 6px;border-radius:6px;font-size:11px;font-weight:700;background:rgba(76,194,255,.14);color:var(--accent);margin-left:4px;cursor:help}
 .semchip.mov{background:rgba(227,179,65,.16);color:var(--warn)}
 .semchip.rev{background:rgba(255,255,255,.07);color:var(--muted)}
+.semchip.rev.feita{background:rgba(194,151,255,.16);color:#c297ff}
 .sem-box{margin-bottom:12px}
 .sem-box b.wk{font-size:15px}
 .right{text-align:right}
@@ -170,6 +172,7 @@ th.wk-now,td.wk-now{background:rgba(76,194,255,.12)}
 .g-eff{top:4px;height:16px;opacity:.4}
 .g-real{top:13px;height:3px;border-radius:2px;opacity:.85}
 .g-rev{top:4px;height:16px;border:1.5px dotted #f0883e;background:#f0883e14}
+.g-rev.feita{border:1.5px solid #c297ff;background:#c297ff33}
 .g-dot{position:absolute;top:8px;height:8px;border-radius:2px;min-width:3px}
 .g-sep{position:absolute;width:1px;background:var(--line);z-index:0}
 .g-today{position:absolute;width:2px;background:var(--bad);z-index:3;opacity:.85}
@@ -912,7 +915,7 @@ function fundirTopicos(s){
     x.topicId = novo;
     const t = SEED_TOPICS.find(t=>t.id===novo); if(t) x.mat = t.mat;
   });
-  const ORD = {nao:0, estudando:1, revisar:2, concluido:3};   // = ST_RANK
+  const ORD = {nao:0, estudando:1, revisar:2, concluido:3, revisitado:4};   // = ST_RANK
   const ts = s.topicStatus || {};
   Object.keys(F).forEach(velho=>{
     if(!(velho in ts)) return;
@@ -933,7 +936,7 @@ function aplicarStatusConcluido(s){
   s.topicStatus = s.topicStatus || {}; s.topicStatusAt = s.topicStatusAt || {};
   let n = 0;
   Object.keys(SC.ids).forEach(id=>{
-    if(s.topicStatus[id]==="concluido") return;
+    if(stConcl(s.topicStatus[id])) return;   // "revisitado" também já passou da 1ª passagem
     const tInf = Date.parse(SC.ids[id])||0;
     const tLoc = Date.parse(s.topicStatusAt[id]||"")||0;
     if(tLoc > tInf) return;
@@ -1392,7 +1395,7 @@ function metaSemana(w){
 }
 function renderDash(){
   const all=sumBy(state.sessions), wk=sumBy(sessionsFiltered(true));
-  const tops=allTopics(); const concl=tops.filter(t=>state.topicStatus[t.id]==="concluido").length;
+  const tops=allTopics(); const concl=tops.filter(t=>stConcl(state.topicStatus[t.id])).length;
   const emand=tops.filter(t=>["estudando","revisar"].includes(state.topicStatus[t.id])).length;
   const diasRest=Math.max(0,Math.ceil((new Date(PROVA1)-new Date())/86400000));
   const wDash=semanaHoje(), ms=metaSemana(wDash), metaTotal=ms.total;
@@ -1520,6 +1523,7 @@ function renderSessao(){
         <option value="estudando">Estudando</option>
         <option value="revisar">Revisar</option>
         <option value="concluido">Concluído</option>
+        <option value="revisitado">Revisitado (só assunto com revisita no plano)</option>
       </select></label>
     </div>
     <label class="fld"><span class="lab">Observações</span><textarea id="fObs" rows="2" placeholder="dúvidas, erros recorrentes, lei seca a revisar..."></textarea></label>
@@ -1689,7 +1693,7 @@ function salvarSessao(){
     const sid=state.nextSid;
     state.sessions.push({ uid:novoUid(), id:sid, data, mat:x.mat, topicId:x.topicId, assuntoLivre:x.assuntoLivre,
       minutos:m, qResolvidas:x.qr, qAcertadas:x.qa, obs:i===0?obs:"", criadoEm:new Date().toISOString() });
-    if(st && x.topicId) setTopicStatus(x.topicId, st);
+    if(st && x.topicId) setTopicStatus(x.topicId, (st==="revisitado"&&!temRevisita(x.topicId))?"concluido":st);
   });
   save();
   // limpar (o toggle de revisão fica como está: quem registra a folha um dia registra no outro)
@@ -1723,7 +1727,18 @@ function delSession(uidEnc){ apagarSessao(decodeURIComponent(uidEnc)); renderHoj
 /* ============================================================
    ASSUNTOS POR MATÉRIA
    ============================================================ */
-const STATUS_LABEL={nao:"Não iniciado",estudando:"Estudando",revisar:"Revisar",concluido:"Concluído"};
+const STATUS_LABEL={nao:"Não iniciado",estudando:"Estudando",revisar:"Revisar",concluido:"Concluído",revisitado:"Revisitado"};
+/* "Revisitado" (11/11/2026, pedido do usuário): marca a revisita da Fase 3 (p2 do QPLAN) como
+   feita. Só é oferecido a assunto com revisita planejada e implica a 1ª passagem cumprida:
+   tudo que lia "concluido" passa por stConcl(). A projeção da grade tira o assunto revisitado
+   da fila de revisita a partir do dia em que foi marcado (os dias já congelados não mudam). */
+function stConcl(v){ return v==="concluido"||v==="revisitado"; }
+function temRevisita(id){ return topicMetaRev(id)>0; }
+function revisitado(id,ate){ return state.topicStatus[id]==="revisitado"&&(!ate||!(state.topicStatusAt||{})[id]
+  ||diaLocal(new Date((state.topicStatusAt||{})[id]))<ate); }
+function opcoesStatus(id,stv){ return Object.entries(STATUS_LABEL)
+  .filter(([k])=>k!=="revisitado"||temRevisita(id)||stv==="revisitado")
+  .map(([k,v])=>`<option value="${k}" ${k===stv?"selected":""}>${v}</option>`).join(""); }
 
 /* ---- Semana do plano, por assunto -------------------------------------
    Cada assunto tem ATÉ DUAS semanas no QPLAN: p1 = aquisição (1ª passagem,
@@ -1751,7 +1766,9 @@ function chipsSemana(id,plano){
   if(s.aq>0) h+=s.movido
     ? `<span class="semchip mov" title="aquisição: plano S${s.aqOrig} → replanejado S${s.semEff} (meta não cumprida)">S${s.aqOrig}→${s.semEff}</span>`
     : `<span class="semchip" title="semana de aquisição (1ª passagem)">S${s.aq}</span>`;
-  if(s.rev>0) h+=`<span class="semchip rev" title="revisita em regime de questões (Fase 3)">R${s.rev}</span>`;
+  if(s.rev>0) h+=revisitado(id)
+    ? `<span class="semchip rev feita" title="revisita da Fase 3 feita (status Revisitado)">R${s.rev} ✓</span>`
+    : `<span class="semchip rev" title="revisita em regime de questões (Fase 3)">R${s.rev}</span>`;
   return h;
 }
 function semanaHoje(){ return Math.min(15,Math.max(1,semanaDoDia(new Date()))); }
@@ -1818,7 +1835,8 @@ function renderAssuntos(){
     <span><span class="dot" style="background:#4cc2ff"></span>Estudando</span>
     <span><span class="dot" style="background:#e3b341"></span>Revisar</span>
     <span><span class="dot" style="background:#56d364"></span>Concluído</span>
-    <span><span class="semchip">S6</span> semana de aquisição · <span class="semchip mov">S6→8</span> replanejada · <span class="semchip rev">R11</span> revisita da Fase 3</span>
+    <span><span class="dot" style="background:#c297ff"></span>Revisitado (revisita da Fase 3 feita)</span>
+    <span><span class="semchip">S6</span> semana de aquisição · <span class="semchip mov">S6→8</span> replanejada · <span class="semchip rev">R11</span> revisita da Fase 3 · <span class="semchip rev feita">R11 ✓</span> revisitado</span>
   </div>
   <div id="semResumo"></div>
   <div id="desempTecBox"></div>
@@ -1858,7 +1876,8 @@ function drawAssuntos(){
     if(ts.length===0) return;
     sel=sel.concat(ts);
     const totG=allTopics().filter(t=>grupo(t.mat)===g);
-    const conclG=totG.filter(t=>state.topicStatus[t.id]==="concluido").length;
+    const conclG=totG.filter(t=>stConcl(state.topicStatus[t.id])).length;
+    const revT=totG.filter(t=>temRevisita(t.id)), revG=revT.filter(t=>revisitado(t.id)).length;
     ts.sort(ordSort);   // 21/10: na ordem de estudo da matéria (ORDEM_LOGICA)
     html+=`<div class="mat-group"><div class="mat-head" onclick="this.nextElementSibling.classList.toggle('hide')">
       <span class="dot" style="background:${MAT_INFO[g].cor};width:12px;height:12px"></span>
@@ -1866,7 +1885,7 @@ function drawAssuntos(){
       ${(fSemRaw||fS)?`<span class="qstat">${ts.length} no filtro</span>`:""}
       ${resumoTrilhasMat(ts)}
       <span class="mbar"><i style="width:${pct(conclG,totG.length)}%"></i></span>
-      <span class="mprog">${conclG}/${totG.length} concl.</span>
+      <span class="mprog">${conclG}/${totG.length} concl.${revT.length?` · ${revG}/${revT.length} revis.`:""}</span>
     </div><div class="mat-body"><table><tbody>`;
     ts.forEach(t=>{
       const stv=state.topicStatus[t.id]||"nao"; const q=topicQuestoes(t.id); const mn=topicMin(t.id);
@@ -1884,7 +1903,7 @@ function drawAssuntos(){
         <td>${qCol}</td>
         <td class="right">
           <select onchange="setStatus('${t.id}',this.value)" class="st-sel">
-            ${Object.entries(STATUS_LABEL).map(([k,v])=>`<option value="${k}" ${k===stv?"selected":""}>${v}</option>`).join("")}
+            ${opcoesStatus(t.id,stv)}
           </select>
         </td></tr>${linhaTrilha(t.id)}`;
     });
@@ -1913,11 +1932,11 @@ function desenharSemResumo(fSemRaw,fW,wNow,plano,sel){
     return;
   }
   const s=SEMANAS[fW-1]; if(!s){ box.innerHTML=""; return; }
-  let aq=0, rev=0, metaQ=0, min=0, concl=0;
+  let aq=0, rev=0, metaQ=0, min=0, concl=0, revOk=0;
   sel.forEach(t=>{ const z=semanasTopico(t.id,plano), g=grupo(t.mat);
     if(z.aq===fW){ aq++; metaQ+=topicMeta(t.id); min+=topicMeta(t.id)/ritmo(g)*60; }
-    if(z.rev===fW){ rev++; metaQ+=topicMetaRev(t.id); min+=topicMetaRev(t.id)/ritmo(g)*60; }
-    if(state.topicStatus[t.id]==="concluido") concl++; });
+    if(z.rev===fW){ rev++; metaQ+=topicMetaRev(t.id); min+=topicMetaRev(t.id)/ritmo(g)*60; if(revisitado(t.id)) revOk++; }
+    if(stConcl(state.topicStatus[t.id])) concl++; });
   // grade da semana por matéria (09/11/2026): na reta final não há mais
   // bloco/extensão/cauda, e mesmo antes a MICRO já rodava várias matérias
   const gm={}; itensDaSemana(fW).forEach(b=>{ gm[b.mat]=(gm[b.mat]||0)+b.min; });
@@ -1935,7 +1954,7 @@ function desenharSemResumo(fSemRaw,fW,wNow,plano,sel){
     ${fW===wNow?'<span class="now-pill" style="background:var(--ok);color:#06121c;font-size:11px;font-weight:700;padding:2px 9px;border-radius:20px">semana atual</span>':""}<br>
     ${blocos?`<span class="muted">grade (fora a fila):</span> ${blocos}`:'<span class="muted">sem grade — consolidação</span>'}<br>
     <b>${sel.length}</b> assuntos no filtro (${aq} de aquisição · ${rev} de revisita) · meta <b>${metaQ}q</b>
-    · ~<b>${fmtMin(min)}</b> de questões · <b>${concl}</b> marcados concluídos
+    · ~<b>${fmtMin(min)}</b> de questões · <b>${concl}</b> marcados concluídos${rev?` · <b>${revOk}/${rev}</b> revisitados`:""}
     <span class="muted">· régua: ${assSemBase==="orig"?"plano original":"replanejada"}</span>${nota}</div>`;
 }
 function setTopicStatus(id,v){ state.topicStatus[id]=v; state.topicStatusAt[id]=new Date().toISOString(); }
@@ -2250,7 +2269,7 @@ function replanejar(ate){
   const exec=planExec(ate);
   const cwReal=semanaDoDia(ate?new Date(ate+"T12:00:00"):new Date());
   // "concluído" marcado à mão só vale no corte se foi marcado antes dele
-  const concluido=id=>state.topicStatus[id]==="concluido"&&(!ate||!(state.topicStatusAt||{})[id]
+  const concluido=id=>stConcl(state.topicStatus[id])&&(!ate||!(state.topicStatusAt||{})[id]
     ||diaLocal(new Date((state.topicStatusAt||{})[id]))<ate);
   const wNow=Math.min(ULT_SEMANA,Math.max(1,cwReal));
   const topics=SEED_TOPICS.filter(t=>topicMeta(t.id)>0&&topicSemana(t.id)>0);
@@ -2384,6 +2403,7 @@ function projecaoSlots(plano, fixo){
     (PLANO_DIA[w]||[]).forEach(bl=>(bl.tops||[]).forEach(id=>{ if(!(id in ancorado)) ancorado[String(id)]=w; }));
   const exec=planExec(plano.ate||undefined);
   const rev0=SEED_TOPICS.map(t=>{ const p2=topicP2(t.id); if(!p2||!(p2[0]>0)) return null;
+      if(revisitado(t.id,plano.ate||undefined)) return null;   // marcada como feita no painel
       const e=exec[String(t.id)]||{qr:0}, feita=Math.max(0,(e.qr||0)-topicMeta(t.id));
       const resto=Math.max(0,p2[0]-feita); if(!resto) return null;
       return {t,semOrig:p2[1],meta:p2[0],qr:feita,resto,ok:false,movido:false,rev:true}; })
@@ -2747,7 +2767,8 @@ function renderGantt(){
       html+=`<div class="g-bar g-plan" style="${gPos(p0,p1)}" title="planejado: S${i.semOrig} (${fmtData(p0)}–${fmtData(p1)})"></div>`;
       const wr=topicSemanaRev(i.t.id);
       if(wr>0){ const [r0,r1]=semDatas(wr);
-        html+=`<div class="g-bar g-rev" style="${gPos(r0,r1)}" title="revisita: R${wr} — meta ${topicMetaRev(i.t.id)}q"></div>`; }
+        const rf=revisitado(i.t.id);
+        html+=`<div class="g-bar g-rev${rf?" feita":""}" style="${gPos(r0,r1)}" title="revisita: R${wr} — meta ${topicMetaRev(i.t.id)}q${rf?" · ✓ revisitado":""}"></div>`; }
       if(!i.ok){ const [e0,e1]=semDatas(i.semEff);
         html+=`<div class="g-bar g-eff" style="${gPos(e0,e1)};background:${cor}" title="replanejado: S${i.semEff} — faltam ${i.resto}q"></div>`; }
       const e=i.exec;
@@ -2827,7 +2848,7 @@ async function syncApi(method,path,body,token){
 
 /* ---------- MERGE ----------
    Devolve {estado, mudouLocal, mudouRemoto} — quem ganhou item por item. */
-const ST_RANK={nao:0,estudando:1,revisar:2,concluido:3};
+const ST_RANK={nao:0,estudando:1,revisar:2,concluido:3,revisitado:4};
 function mergeState(local, remoto){
   const out = Object.assign(defaultState(), JSON.parse(JSON.stringify(local)));
   let mudouLocal=false, mudouRemoto=false;
