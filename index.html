@@ -254,6 +254,9 @@ th.wk-now,td.wk-now{background:rgba(76,194,255,.12)}
 <!-- Sessões C/E já geradas pela questao-ce, por tópico (06_Scripts/sessoes_ce.py). O chip do
      assunto mostra 📝<ID> (pendente) ou ✓<ID> (feita), só de hoje em diante na grade. -->
 <script src="sessoes_ce.js" onerror="window.SESSOES_CE=null"></script>
+<!-- Etapas da fila de revisão que passaram para a grade (gerar_fila.py, ETAPA NA GRADE): o slot
+     do assunto naquela semana é o teste do D+6/D+14/D+28 — selo 🔁 no chip. -->
+<script src="grade_revisao.js" onerror="window.GRADE_REV=null"></script>
 
 <script>
 /* ============================================================
@@ -2530,9 +2533,20 @@ function marcaSessoesCE(id, dataISO){
     ? `<span class="ce-lk feita" title="Sessão ${s.id} (questao-ce, ${s.n} itens${g}) — já resolvida">✓${s.id}</span>`
     : `<span class="ce-lk" title="Sessão ${s.id} (questao-ce, ${s.n} itens${g}) — montada e ainda não resolvida: 09_Simulados/Simulado_${s.id}…/prova_interativa.html">📝${s.id}</span>`; }).join(" ");
 }
+// Etapa da cadeia de revisão que passou para a grade (grade_revisao.js, gerar_fila.py): o bloco
+// do assunto nesta semana vale como o D+6/D+14/D+28 e sai da fila de 45 min (12/11/2026).
+function marcaGradeRev(id, dataISO){
+  if(!dataISO||dataISO<hojeLocalISO()) return "";
+  const l=window.GRADE_REV&&window.GRADE_REV.por_topico&&window.GRADE_REV.por_topico[String(id)];
+  if(!l||!l.length) return "";
+  return " "+l.filter(r=>(r.dias||[]).includes(dataISO)).map(r=>{
+    const et=r.et.toUpperCase().replace("D","D+");
+    const feitos=r.itens?` (${r.itens} já feitos)`:"";
+    return `<span class="ce-lk" title="Este bloco vale como o ${et} da cadeia “${escapeHtml(r.assunto)}”: responda pelo menos ${r.min} itens do assunto nesta semana${feitos}. Ele não está na fila; se a semana passar sem o mínimo, volta para a fila.">🔁${et}</span>`; }).join(" ");
+}
 function chipTopico(i, dataISO){
   const lt=i.ok?0:leituraMin(i.t.id);
-  return `<span class="topchip${i.t.c25?' c25':''}"${i.ok?' style="opacity:.6"':''}>${i.ok?'✓ ':''}${i.t.c25?'✅ ':''}${lt?`<span title="${lt} min de leitura rápida da teoria antes das questões">📖${lt}′</span> `:''}${escapeHtml(i.t.assunto)} <span class="qn">${i.qr>0?i.qr+"/":""}${i.meta}q</span>${i.movido?` <span class="mov-chip" title="movido da S${i.semOrig}">↪S${i.semOrig}</span>`:''}${codigosUI(i.t.id)}${linkTrilha(i.t.id)}${marcaSessoesCE(i.t.id, typeof dataISO==="string"?dataISO:null)}</span>`;
+  return `<span class="topchip${i.t.c25?' c25':''}"${i.ok?' style="opacity:.6"':''}>${i.ok?'✓ ':''}${i.t.c25?'✅ ':''}${lt?`<span title="${lt} min de leitura rápida da teoria antes das questões">📖${lt}′</span> `:''}${escapeHtml(i.t.assunto)} <span class="qn">${i.qr>0?i.qr+"/":""}${i.meta}q</span>${i.movido?` <span class="mov-chip" title="movido da S${i.semOrig}">↪S${i.semOrig}</span>`:''}${codigosUI(i.t.id)}${linkTrilha(i.t.id)}${marcaSessoesCE(i.t.id, typeof dataISO==="string"?dataISO:null)}${marcaGradeRev(i.t.id, typeof dataISO==="string"?dataISO:null)}</span>`;
 }
 // 🧭 trilha do assunto no TEC (06_Scripts/montar_trilhas.py → trilhas.js; userscript v1.6).
 function linkTrilha(id){
