@@ -164,11 +164,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-14",
+          "prevista": "2026-12-08",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-16",
+          "prevista": "2026-12-10",
           "emitida": null
         }
       },
@@ -203,9 +203,85 @@
             true,
             false,
             "E"
+          ],
+          "3199361": [
+            true,
+            false,
+            "C"
+          ],
+          "3199362": [
+            true,
+            false,
+            "E"
+          ],
+          "3258721": [
+            true,
+            false,
+            "C"
+          ],
+          "3271582": [
+            true,
+            false,
+            "E"
           ]
         }
-      }
+      },
+      "topico": 89,
+      "fundidas": [
+        {
+          "materia": "Direito Tributário",
+          "assunto": "Jurisprudência dos Tribunais Superiores sobre Imunidades Tributárias",
+          "data_base": "2026-10-23",
+          "cadeia_completa": true,
+          "alvos_origem": [],
+          "reinicios": 0,
+          "status": "ativa",
+          "etapas": {
+            "d1": {
+              "prevista": "2026-10-26",
+              "emitida": "2026-10-26"
+            },
+            "d6": {
+              "prevista": "2026-11-18",
+              "emitida": null,
+              "resultado": null
+            },
+            "d14": {
+              "prevista": "2026-12-14",
+              "emitida": null
+            },
+            "d28": {
+              "prevista": "2026-12-16",
+              "emitida": null
+            }
+          },
+          "amostra_base": {
+            "itens": {
+              "3199361": [
+                true,
+                false,
+                "C"
+              ],
+              "3199362": [
+                true,
+                false,
+                "E"
+              ],
+              "3258721": [
+                true,
+                false,
+                "C"
+              ],
+              "3271582": [
+                true,
+                false,
+                "E"
+              ]
+            }
+          },
+          "chave": "Direito Tributário||Jurisprudência dos Tribunais Superiores sobre Imunidades Tributárias"
+        }
+      ]
     },
     "Direito Tributário||Taxas (CF/1988 e CTN)": {
       "materia": "Direito Tributário",
@@ -275,7 +351,7 @@
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-27",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       },
@@ -506,11 +582,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-25",
+          "prevista": "2026-11-23",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-08",
+          "prevista": "2026-12-02",
           "emitida": null
         }
       },
@@ -893,11 +969,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-17",
+          "prevista": "2026-12-10",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-18",
+          "prevista": "2026-12-11",
           "emitida": null
         }
       },
@@ -1035,7 +1111,16 @@
         },
         "d28": {
           "prevista": "2026-11-30",
-          "emitida": null
+          "emitida": null,
+          "grade": {
+            "semana": 11,
+            "via": "rev",
+            "dias": [
+              "2026-11-18",
+              "2026-11-19"
+            ],
+            "desde": "2026-11-13"
+          }
         }
       }
     },
@@ -1104,7 +1189,15 @@
         },
         "d28": {
           "prevista": "2026-11-30",
-          "emitida": null
+          "emitida": null,
+          "grade": {
+            "semana": 10,
+            "via": "rev",
+            "dias": [
+              "2026-11-13"
+            ],
+            "desde": "2026-11-13"
+          }
         }
       }
     },
@@ -1394,11 +1487,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-08",
+          "prevista": "2026-12-02",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-10",
+          "prevista": "2026-12-09",
           "emitida": null
         }
       },
@@ -1537,7 +1630,7 @@
           "emitida": "2026-10-01"
         },
         "d28": {
-          "prevista": "2026-11-30",
+          "prevista": "2026-11-26",
           "emitida": null
         }
       }
@@ -1577,7 +1670,7 @@
           "emitida": "2026-09-30"
         },
         "d28": {
-          "prevista": "2026-12-15",
+          "prevista": "2026-12-08",
           "emitida": null
         }
       }
@@ -1629,7 +1722,7 @@
           "emitida": "2026-09-30"
         },
         "d28": {
-          "prevista": "2026-11-26",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       }
@@ -1690,7 +1783,7 @@
           "emitida": "2026-09-30"
         },
         "d28": {
-          "prevista": "2026-11-26",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       }
@@ -1758,7 +1851,7 @@
           "emitida": "2026-10-02"
         },
         "d28": {
-          "prevista": "2026-11-26",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       }
@@ -1788,11 +1881,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-11",
+          "prevista": "2026-12-03",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-15",
+          "prevista": "2026-12-08",
           "emitida": null
         }
       }
@@ -1825,7 +1918,7 @@
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-27",
+          "prevista": "2026-11-26",
           "emitida": null
         }
       },
@@ -1892,11 +1985,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-11",
+          "prevista": "2026-12-04",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-15",
+          "prevista": "2026-12-08",
           "emitida": null
         }
       },
@@ -1988,11 +2081,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-11",
+          "prevista": "2026-12-04",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-15",
+          "prevista": "2026-12-08",
           "emitida": null
         }
       }
@@ -2127,11 +2220,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-11",
+          "prevista": "2026-12-04",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-15",
+          "prevista": "2026-12-08",
           "emitida": null
         }
       },
@@ -2337,7 +2430,15 @@
         },
         "d14": {
           "prevista": "2026-11-23",
-          "emitida": null
+          "emitida": null,
+          "grade": {
+            "semana": 10,
+            "via": "rev",
+            "dias": [
+              "2026-11-13"
+            ],
+            "desde": "2026-11-13"
+          }
         },
         "d28": {
           "prevista": "2026-12-02",
@@ -2466,7 +2567,7 @@
           "emitida": "2026-10-01"
         },
         "d28": {
-          "prevista": "2026-11-30",
+          "prevista": "2026-11-26",
           "emitida": null
         }
       }
@@ -2507,11 +2608,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-19",
+          "prevista": "2026-11-18",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-26",
+          "prevista": "2026-11-24",
           "emitida": null
         }
       },
@@ -3126,7 +3227,7 @@
           "emitida": "2026-10-09"
         },
         "d28": {
-          "prevista": "2026-11-26",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       },
@@ -3482,11 +3583,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-25",
+          "prevista": "2026-11-24",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-30",
+          "prevista": "2026-11-27",
           "emitida": null
         }
       },
@@ -3542,11 +3643,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-12-02",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-10",
+          "prevista": "2026-12-09",
           "emitida": null
         }
       },
@@ -3739,11 +3840,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-12-02",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-10",
+          "prevista": "2026-12-09",
           "emitida": null
         }
       },
@@ -3919,7 +4020,7 @@
           "emitida": "2026-10-09"
         },
         "d28": {
-          "prevista": "2026-11-26",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       },
@@ -4010,7 +4111,7 @@
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-27",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       },
@@ -4106,11 +4207,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-20",
+          "prevista": "2026-11-19",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-27",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       },
@@ -4410,11 +4511,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-12-02",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-10",
+          "prevista": "2026-12-09",
           "emitida": null
         }
       },
@@ -4539,11 +4640,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-12-02",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-10",
+          "prevista": "2026-12-09",
           "emitida": null
         }
       },
@@ -4657,7 +4758,15 @@
         },
         "d14": {
           "prevista": "2026-11-20",
-          "emitida": null
+          "emitida": null,
+          "grade": {
+            "semana": 11,
+            "via": "rev",
+            "dias": [
+              "2026-11-17"
+            ],
+            "desde": "2026-11-13"
+          }
         },
         "d28": {
           "prevista": "2026-11-27",
@@ -4733,11 +4842,11 @@
           }
         },
         "d14": {
-          "prevista": "2026-11-19",
+          "prevista": "2026-11-18",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-26",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       },
@@ -4848,7 +4957,7 @@
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-27",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       },
@@ -4978,11 +5087,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-25",
+          "prevista": "2026-11-23",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-30",
+          "prevista": "2026-11-26",
           "emitida": null
         }
       },
@@ -5068,7 +5177,7 @@
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-27",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       },
@@ -5172,7 +5281,7 @@
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-27",
+          "prevista": "2026-11-26",
           "emitida": null
         }
       },
@@ -5450,11 +5559,11 @@
           }
         },
         "d14": {
-          "prevista": "2026-11-23",
+          "prevista": "2026-11-20",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-30",
+          "prevista": "2026-11-26",
           "emitida": null
         }
       },
@@ -5570,11 +5679,11 @@
           }
         },
         "d14": {
-          "prevista": "2026-11-19",
+          "prevista": "2026-11-18",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-26",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       },
@@ -5718,7 +5827,7 @@
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-27",
+          "prevista": "2026-11-26",
           "emitida": null
         }
       },
@@ -5849,11 +5958,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-20",
+          "prevista": "2026-11-19",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-27",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       },
@@ -5934,11 +6043,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-19",
+          "prevista": "2026-11-18",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-26",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       },
@@ -6339,7 +6448,7 @@
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-27",
+          "prevista": "2026-11-26",
           "emitida": null
         }
       },
@@ -6448,7 +6557,7 @@
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-27",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       },
@@ -6663,11 +6772,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-14",
+          "prevista": "2026-12-07",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-15",
+          "prevista": "2026-12-08",
           "emitida": null
         }
       },
@@ -6743,11 +6852,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-24",
+          "prevista": "2026-11-23",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-30",
+          "prevista": "2026-11-26",
           "emitida": null
         }
       },
@@ -6842,11 +6951,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-25",
+          "prevista": "2026-11-23",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-30",
+          "prevista": "2026-11-26",
           "emitida": null
         }
       },
@@ -6998,11 +7107,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-23",
+          "prevista": "2026-11-20",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-30",
+          "prevista": "2026-11-26",
           "emitida": null
         }
       },
@@ -7121,7 +7230,15 @@
         },
         "d14": {
           "prevista": "2026-11-19",
-          "emitida": null
+          "emitida": null,
+          "grade": {
+            "semana": 11,
+            "via": "rev",
+            "dias": [
+              "2026-11-18"
+            ],
+            "desde": "2026-11-13"
+          }
         },
         "d28": {
           "prevista": "2026-11-26",
@@ -7304,7 +7421,15 @@
         },
         "d14": {
           "prevista": "2026-11-19",
-          "emitida": null
+          "emitida": null,
+          "grade": {
+            "semana": 11,
+            "via": "rev",
+            "dias": [
+              "2026-11-19"
+            ],
+            "desde": "2026-11-13"
+          }
         },
         "d28": {
           "prevista": "2026-11-26",
@@ -7452,7 +7577,15 @@
         },
         "d14": {
           "prevista": "2026-11-20",
-          "emitida": null
+          "emitida": null,
+          "grade": {
+            "semana": 11,
+            "via": "rev",
+            "dias": [
+              "2026-11-18"
+            ],
+            "desde": "2026-11-13"
+          }
         },
         "d28": {
           "prevista": "2026-11-27",
@@ -7745,7 +7878,16 @@
         },
         "d14": {
           "prevista": "2026-11-20",
-          "emitida": null
+          "emitida": null,
+          "grade": {
+            "semana": 11,
+            "via": "rev",
+            "dias": [
+              "2026-11-19",
+              "2026-11-20"
+            ],
+            "desde": "2026-11-13"
+          }
         },
         "d28": {
           "prevista": "2026-11-27",
@@ -7819,11 +7961,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-24",
+          "prevista": "2026-11-23",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-30",
+          "prevista": "2026-11-26",
           "emitida": null
         }
       },
@@ -7925,11 +8067,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-23",
+          "prevista": "2026-11-20",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-30",
+          "prevista": "2026-11-26",
           "emitida": null
         }
       },
@@ -8075,7 +8217,7 @@
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-12-01",
           "emitida": null
         }
       },
@@ -8133,11 +8275,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-25",
+          "prevista": "2026-11-24",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-30",
+          "prevista": "2026-11-27",
           "emitida": null
         }
       },
@@ -8470,11 +8612,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-25",
+          "prevista": "2026-11-24",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-30",
+          "prevista": "2026-11-27",
           "emitida": null
         }
       },
@@ -8535,11 +8677,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-12-02",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-10",
+          "prevista": "2026-12-09",
           "emitida": null
         }
       },
@@ -8683,7 +8825,15 @@
         },
         "d14": {
           "prevista": "2026-11-23",
-          "emitida": null
+          "emitida": null,
+          "grade": {
+            "semana": 11,
+            "via": "rev",
+            "dias": [
+              "2026-11-20"
+            ],
+            "desde": "2026-11-13"
+          }
         },
         "d28": {
           "prevista": "2026-11-27",
@@ -8783,11 +8933,11 @@
           }
         },
         "d14": {
-          "prevista": "2026-11-23",
+          "prevista": "2026-11-20",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-30",
+          "prevista": "2026-11-26",
           "emitida": null
         }
       },
@@ -9025,11 +9175,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-20",
+          "prevista": "2026-11-19",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-27",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       },
@@ -9197,11 +9347,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-19",
+          "prevista": "2026-11-18",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-26",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       },
@@ -9377,11 +9527,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-20",
+          "prevista": "2026-11-19",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-27",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       },
@@ -9467,11 +9617,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-20",
+          "prevista": "2026-11-19",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-27",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       },
@@ -9607,11 +9757,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-12-01",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-10",
+          "prevista": "2026-12-08",
           "emitida": null
         }
       },
@@ -9684,11 +9834,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-23",
+          "prevista": "2026-11-20",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-27",
+          "prevista": "2026-11-26",
           "emitida": null
         }
       },
@@ -9747,11 +9897,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-23",
+          "prevista": "2026-11-20",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-30",
+          "prevista": "2026-11-26",
           "emitida": null
         }
       },
@@ -9812,11 +9962,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-20",
+          "prevista": "2026-11-19",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-27",
+          "prevista": "2026-11-26",
           "emitida": null
         }
       },
@@ -9946,11 +10096,11 @@
           "obs_d6": "antecipado: feito em 20/10, decisão do usuário"
         },
         "d14": {
-          "prevista": "2026-11-23",
+          "prevista": "2026-11-20",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-30",
+          "prevista": "2026-11-26",
           "emitida": null
         }
       },
@@ -10033,11 +10183,11 @@
           }
         },
         "d14": {
-          "prevista": "2026-11-24",
+          "prevista": "2026-11-23",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-12-02",
           "emitida": null
         }
       },
@@ -10102,11 +10252,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-25",
+          "prevista": "2026-11-23",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-30",
+          "prevista": "2026-11-26",
           "emitida": null
         }
       },
@@ -10164,7 +10314,15 @@
         },
         "d14": {
           "prevista": "2026-11-24",
-          "emitida": null
+          "emitida": null,
+          "grade": {
+            "semana": 11,
+            "via": "rev",
+            "dias": [
+              "2026-11-17"
+            ],
+            "desde": "2026-11-13"
+          }
         },
         "d28": {
           "prevista": "2026-11-30",
@@ -10243,11 +10401,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-11",
+          "prevista": "2026-12-07",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-15",
+          "prevista": "2026-12-08",
           "emitida": null
         }
       },
@@ -10293,11 +10451,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-24",
+          "prevista": "2026-11-23",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-30",
+          "prevista": "2026-11-26",
           "emitida": null
         }
       },
@@ -10348,16 +10506,16 @@
           "emitida": "2026-10-15"
         },
         "d6": {
-          "prevista": "2026-11-17",
+          "prevista": "2026-11-16",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-11",
+          "prevista": "2026-12-07",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-15",
+          "prevista": "2026-12-08",
           "emitida": null
         }
       },
@@ -10524,7 +10682,7 @@
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-26",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       },
@@ -10654,7 +10812,7 @@
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-26",
+          "prevista": "2026-11-24",
           "emitida": null
         }
       },
@@ -11187,11 +11345,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-23",
+          "prevista": "2026-11-20",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-01",
+          "prevista": "2026-11-27",
           "emitida": null
         }
       },
@@ -11377,11 +11535,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-25",
+          "prevista": "2026-11-24",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-01",
+          "prevista": "2026-11-27",
           "emitida": null
         }
       },
@@ -11591,13 +11749,18 @@
       },
       "data_base_corrigida": "nome do arquivo = data da folha (20/10); respostas de 19/10"
     },
-    "Direito Constitucional (CF/1988 e Doutrina)||Dos Princípios Gerais (Sistema Tributário Nacional, arts. 145 a 149-B da CF/1988)": {
-      "materia": "Direito Constitucional (CF/1988 e Doutrina)",
-      "assunto": "Dos Princípios Gerais (Sistema Tributário Nacional, arts. 145 a 149-B da CF/1988)",
+    "Direito Tributário||Imposto sobre Propriedade Territorial Rural - ITR": {
+      "materia": "Direito Tributário",
+      "assunto": "Imposto sobre Propriedade Territorial Rural - ITR",
       "data_base": "2026-10-19",
       "cadeia_completa": true,
       "alvos_origem": [
-        "3314973"
+        "3039246",
+        "3446319",
+        "2935105",
+        "3830253",
+        "2983722",
+        "2983720"
       ],
       "reinicios": 0,
       "status": "ativa",
@@ -11612,196 +11775,270 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-25",
+          "prevista": "2026-11-19",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-01",
+          "prevista": "2026-11-27",
           "emitida": null
         }
       },
       "amostra_base": {
         "itens": {
-          "3290523": [
+          "3039246": [
+            false,
+            false,
+            "E"
+          ],
+          "3296097": [
             true,
             false,
             "E"
           ],
-          "3314973": [
+          "3514275": [
+            true,
+            false,
+            "E"
+          ],
+          "3830232": [
+            true,
+            false,
+            "E"
+          ],
+          "3446319": [
             false,
             false,
             "C"
           ],
-          "3361104": [
+          "3446320": [
+            true,
+            false,
+            "C"
+          ],
+          "3604350": [
             true,
             false,
             "E"
           ],
-          "3446315": [
+          "2935100": [
+            true,
+            false,
+            "C"
+          ],
+          "2935102": [
+            true,
+            false,
+            "C"
+          ],
+          "2935105": [
+            true,
+            true,
+            "E"
+          ],
+          "2935107": [
             true,
             false,
             "E"
+          ],
+          "3830253": [
+            true,
+            true,
+            "E"
+          ],
+          "2983719": [
+            true,
+            false,
+            "C"
+          ],
+          "2983720": [
+            true,
+            true,
+            "E"
+          ],
+          "2983722": [
+            false,
+            false,
+            "C"
           ]
         }
       },
-      "data_base_corrigida": "nome do arquivo = data da folha (20/10); respostas de 19/10"
+      "data_base_corrigida": "nome do arquivo = data da folha (20/10); respostas de 19/10",
+      "topico": 79,
+      "fundidas": [
+        {
+          "materia": "Direito Tributário",
+          "assunto": "Jurisprudência dos Tribunais Superiores sobre Tributos Federais",
+          "data_base": "2026-10-19",
+          "cadeia_completa": true,
+          "alvos_origem": [
+            "3446319"
+          ],
+          "reinicios": 0,
+          "status": "ativa",
+          "etapas": {
+            "d1": {
+              "prevista": "2026-10-19",
+              "emitida": "expirada"
+            },
+            "d6": {
+              "prevista": "2026-11-13",
+              "emitida": null,
+              "resultado": null
+            },
+            "d14": {
+              "prevista": "2026-11-25",
+              "emitida": null
+            },
+            "d28": {
+              "prevista": "2026-12-01",
+              "emitida": null
+            }
+          },
+          "amostra_base": {
+            "itens": {
+              "3446319": [
+                false,
+                false,
+                "C"
+              ],
+              "3446320": [
+                true,
+                false,
+                "C"
+              ],
+              "3604350": [
+                true,
+                false,
+                "E"
+              ]
+            }
+          },
+          "data_base_corrigida": "nome do arquivo = data da folha (20/10); respostas de 19/10",
+          "chave": "Direito Tributário||Jurisprudência dos Tribunais Superiores sobre Tributos Federais"
+        },
+        {
+          "materia": "Direito Tributário",
+          "assunto": "Imposto Predial e Territorial Urbano - IPTU (CF/1988 e CTN)",
+          "data_base": "2026-10-19",
+          "cadeia_completa": true,
+          "alvos_origem": [
+            "2935105",
+            "3830253"
+          ],
+          "reinicios": 0,
+          "status": "ativa",
+          "etapas": {
+            "d1": {
+              "prevista": "2026-10-20",
+              "emitida": "2026-10-20"
+            },
+            "d6": {
+              "prevista": "2026-11-10",
+              "emitida": "2026-11-10",
+              "resultado": null
+            },
+            "d14": {
+              "prevista": "2026-11-24",
+              "emitida": null
+            },
+            "d28": {
+              "prevista": "2026-12-01",
+              "emitida": null
+            }
+          },
+          "amostra_base": {
+            "itens": {
+              "2935100": [
+                true,
+                false,
+                "C"
+              ],
+              "2935102": [
+                true,
+                false,
+                "C"
+              ],
+              "2935105": [
+                true,
+                true,
+                "E"
+              ],
+              "2935107": [
+                true,
+                false,
+                "E"
+              ],
+              "3830253": [
+                true,
+                true,
+                "E"
+              ]
+            }
+          },
+          "data_base_corrigida": "nome do arquivo = data da folha (20/10); respostas de 19/10",
+          "chave": "Direito Tributário||Imposto Predial e Territorial Urbano - IPTU (CF/1988 e CTN)"
+        },
+        {
+          "materia": "Direito Tributário",
+          "assunto": "Jurisprudência dos Tribunais Superiores sobre ISS",
+          "data_base": "2026-10-19",
+          "cadeia_completa": true,
+          "alvos_origem": [
+            "2983722",
+            "2983720"
+          ],
+          "reinicios": 0,
+          "status": "ativa",
+          "etapas": {
+            "d1": {
+              "prevista": "2026-10-20",
+              "emitida": "2026-10-20"
+            },
+            "d6": {
+              "prevista": "2026-11-10",
+              "emitida": "2026-11-10",
+              "resultado": null
+            },
+            "d14": {
+              "prevista": "2026-11-24",
+              "emitida": null
+            },
+            "d28": {
+              "prevista": "2026-12-01",
+              "emitida": null
+            }
+          },
+          "amostra_base": {
+            "itens": {
+              "2983719": [
+                true,
+                false,
+                "C"
+              ],
+              "2983720": [
+                true,
+                true,
+                "E"
+              ],
+              "2983722": [
+                false,
+                false,
+                "C"
+              ]
+            }
+          },
+          "data_base_corrigida": "nome do arquivo = data da folha (20/10); respostas de 19/10",
+          "chave": "Direito Tributário||Jurisprudência dos Tribunais Superiores sobre ISS"
+        }
+      ]
     },
-    "Direito Constitucional (CF/1988 e Doutrina)||Jurisprudência dos Tribunais Superiores sobre Sistema Tributário Nacional": {
-      "materia": "Direito Constitucional (CF/1988 e Doutrina)",
-      "assunto": "Jurisprudência dos Tribunais Superiores sobre Sistema Tributário Nacional",
-      "data_base": "2026-10-19",
-      "cadeia_completa": true,
-      "alvos_origem": [
-        "2794515",
-        "3827694",
-        "3841960",
-        "3041256",
-        "3102877"
-      ],
-      "reinicios": 0,
-      "status": "ativa",
-      "etapas": {
-        "d1": {
-          "prevista": "2026-10-20",
-          "emitida": "2026-10-20"
-        },
-        "d6": {
-          "prevista": "2026-10-27",
-          "emitida": "2026-10-27",
-          "resultado": null
-        },
-        "d14": {
-          "prevista": "2026-11-20",
-          "emitida": null
-        },
-        "d28": {
-          "prevista": "2026-12-01",
-          "emitida": null
-        }
-      },
-      "amostra_base": {
-        "itens": {
-          "2794515": [
-            false,
-            true,
-            "C"
-          ],
-          "2794518": [
-            true,
-            false,
-            "C"
-          ],
-          "3041256": [
-            true,
-            true,
-            "E"
-          ],
-          "3041259": [
-            true,
-            false,
-            "C"
-          ],
-          "3102857": [
-            true,
-            false,
-            "E"
-          ],
-          "3102877": [
-            true,
-            true,
-            "E"
-          ],
-          "3827694": [
-            false,
-            false,
-            "C"
-          ],
-          "3827701": [
-            true,
-            false,
-            "E"
-          ],
-          "3841960": [
-            false,
-            true,
-            "E"
-          ]
-        }
-      },
-      "data_base_corrigida": "nome do arquivo = data da folha (20/10); respostas de 19/10"
-    },
-    "Direito Constitucional (CF/1988 e Doutrina)||Limitações do Poder de Tributar (arts. 150 a 152 da CF/1988)": {
-      "materia": "Direito Constitucional (CF/1988 e Doutrina)",
-      "assunto": "Limitações do Poder de Tributar (arts. 150 a 152 da CF/1988)",
-      "data_base": "2026-10-19",
-      "cadeia_completa": true,
-      "alvos_origem": [
-        "3314971",
-        "4023436"
-      ],
-      "reinicios": 0,
-      "status": "ativa",
-      "etapas": {
-        "d1": {
-          "prevista": "2026-10-20",
-          "emitida": "2026-10-20"
-        },
-        "d6": {
-          "prevista": "2026-11-10",
-          "emitida": "2026-11-10",
-          "resultado": null
-        },
-        "d14": {
-          "prevista": "2026-11-24",
-          "emitida": null
-        },
-        "d28": {
-          "prevista": "2026-12-01",
-          "emitida": null
-        }
-      },
-      "amostra_base": {
-        "itens": {
-          "2794503": [
-            true,
-            false,
-            "E"
-          ],
-          "2794506": [
-            true,
-            false,
-            "E"
-          ],
-          "3314971": [
-            false,
-            false,
-            "E"
-          ],
-          "3314972": [
-            true,
-            false,
-            "E"
-          ],
-          "3599516": [
-            true,
-            false,
-            "E"
-          ],
-          "4023436": [
-            true,
-            true,
-            "E"
-          ]
-        }
-      },
-      "data_base_corrigida": "nome do arquivo = data da folha (20/10); respostas de 19/10"
-    },
-    "Direito Tributário||Fato Gerador (arts. 114 a 118 do CTN)": {
+    "Direito Tributário||Jurisprudência dos Tribunais Superiores sobre Obrigação Tributária": {
       "materia": "Direito Tributário",
-      "assunto": "Fato Gerador (arts. 114 a 118 do CTN)",
-      "data_base": "2026-11-05",
+      "assunto": "Jurisprudência dos Tribunais Superiores sobre Obrigação Tributária",
+      "data_base": "2026-10-19",
       "cadeia_completa": true,
       "alvos_origem": [
+        "2983711",
         "1937994",
         "1998443"
       ],
@@ -11809,25 +12046,55 @@
       "status": "ativa",
       "etapas": {
         "d1": {
-          "prevista": "2026-11-05",
-          "emitida": "2026-11-05"
+          "prevista": "2026-10-19",
+          "emitida": "expirada"
         },
         "d6": {
-          "prevista": "2026-11-11",
-          "emitida": "2026-11-11",
+          "prevista": "2026-11-13",
+          "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-03",
+          "prevista": "2026-11-20",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-09",
+          "prevista": "2026-11-27",
           "emitida": null
         }
       },
       "amostra_base": {
         "itens": {
+          "2983711": [
+            false,
+            false,
+            "C"
+          ],
+          "3258718": [
+            true,
+            false,
+            "E"
+          ],
+          "3258719": [
+            true,
+            false,
+            "E"
+          ],
+          "3102911": [
+            true,
+            false,
+            "C"
+          ],
+          "3192166": [
+            true,
+            false,
+            "C"
+          ],
+          "3514278": [
+            true,
+            false,
+            "E"
+          ],
           "1884013": [
             true,
             false,
@@ -11859,275 +12126,126 @@
             "E"
           ]
         }
-      }
-    },
-    "Direito Tributário||Imposto Predial e Territorial Urbano - IPTU (CF/1988 e CTN)": {
-      "materia": "Direito Tributário",
-      "assunto": "Imposto Predial e Territorial Urbano - IPTU (CF/1988 e CTN)",
-      "data_base": "2026-10-19",
-      "cadeia_completa": true,
-      "alvos_origem": [
-        "2935105",
-        "3830253"
-      ],
-      "reinicios": 0,
-      "status": "ativa",
-      "etapas": {
-        "d1": {
-          "prevista": "2026-10-20",
-          "emitida": "2026-10-20"
-        },
-        "d6": {
-          "prevista": "2026-11-10",
-          "emitida": "2026-11-10",
-          "resultado": null
-        },
-        "d14": {
-          "prevista": "2026-11-24",
-          "emitida": null
-        },
-        "d28": {
-          "prevista": "2026-12-01",
-          "emitida": null
-        }
       },
-      "amostra_base": {
-        "itens": {
-          "2935100": [
-            true,
-            false,
-            "C"
+      "data_base_corrigida": "nome do arquivo = data da folha (20/10); respostas de 19/10",
+      "topico": 83,
+      "fundidas": [
+        {
+          "materia": "Direito Tributário",
+          "assunto": "Solidariedade (arts. 124 e 125 do CTN)",
+          "data_base": "2026-10-19",
+          "cadeia_completa": true,
+          "alvos_origem": [],
+          "reinicios": 0,
+          "status": "ativa",
+          "etapas": {
+            "d1": {
+              "prevista": "2026-10-19",
+              "emitida": "expirada"
+            },
+            "d6": {
+              "prevista": "2026-11-13",
+              "emitida": null,
+              "resultado": null
+            },
+            "d14": {
+              "prevista": "2026-11-25",
+              "emitida": null
+            },
+            "d28": {
+              "prevista": "2026-12-02",
+              "emitida": null
+            }
+          },
+          "amostra_base": {
+            "itens": {
+              "3102911": [
+                true,
+                false,
+                "C"
+              ],
+              "3192166": [
+                true,
+                false,
+                "C"
+              ],
+              "3514278": [
+                true,
+                false,
+                "E"
+              ]
+            }
+          },
+          "data_base_corrigida": "nome do arquivo = data da folha (20/10); respostas de 19/10",
+          "chave": "Direito Tributário||Solidariedade (arts. 124 e 125 do CTN)"
+        },
+        {
+          "materia": "Direito Tributário",
+          "assunto": "Fato Gerador (arts. 114 a 118 do CTN)",
+          "data_base": "2026-11-05",
+          "cadeia_completa": true,
+          "alvos_origem": [
+            "1937994",
+            "1998443"
           ],
-          "2935102": [
-            true,
-            false,
-            "C"
-          ],
-          "2935105": [
-            true,
-            true,
-            "E"
-          ],
-          "2935107": [
-            true,
-            false,
-            "E"
-          ],
-          "3830253": [
-            true,
-            true,
-            "E"
-          ]
+          "reinicios": 1,
+          "status": "ativa",
+          "etapas": {
+            "d1": {
+              "prevista": "2026-11-05",
+              "emitida": "2026-11-05"
+            },
+            "d6": {
+              "prevista": "2026-11-11",
+              "emitida": "2026-11-11",
+              "resultado": null
+            },
+            "d14": {
+              "prevista": "2026-12-03",
+              "emitida": null
+            },
+            "d28": {
+              "prevista": "2026-12-09",
+              "emitida": null
+            }
+          },
+          "amostra_base": {
+            "itens": {
+              "1884013": [
+                true,
+                false,
+                "C"
+              ],
+              "1937992": [
+                true,
+                false,
+                "E"
+              ],
+              "1937994": [
+                false,
+                true,
+                "E"
+              ],
+              "1998443": [
+                false,
+                false,
+                "E"
+              ],
+              "1504041": [
+                true,
+                false,
+                "C"
+              ],
+              "1790315": [
+                true,
+                false,
+                "E"
+              ]
+            }
+          },
+          "chave": "Direito Tributário||Fato Gerador (arts. 114 a 118 do CTN)"
         }
-      },
-      "data_base_corrigida": "nome do arquivo = data da folha (20/10); respostas de 19/10"
-    },
-    "Direito Tributário||Imposto sobre Propriedade Territorial Rural - ITR": {
-      "materia": "Direito Tributário",
-      "assunto": "Imposto sobre Propriedade Territorial Rural - ITR",
-      "data_base": "2026-10-19",
-      "cadeia_completa": true,
-      "alvos_origem": [
-        "3039246"
-      ],
-      "reinicios": 0,
-      "status": "ativa",
-      "etapas": {
-        "d1": {
-          "prevista": "2026-10-19",
-          "emitida": "expirada"
-        },
-        "d6": {
-          "prevista": "2026-11-13",
-          "emitida": null,
-          "resultado": null
-        },
-        "d14": {
-          "prevista": "2026-11-25",
-          "emitida": null
-        },
-        "d28": {
-          "prevista": "2026-12-01",
-          "emitida": null
-        }
-      },
-      "amostra_base": {
-        "itens": {
-          "3039246": [
-            false,
-            false,
-            "E"
-          ],
-          "3296097": [
-            true,
-            false,
-            "E"
-          ],
-          "3514275": [
-            true,
-            false,
-            "E"
-          ],
-          "3830232": [
-            true,
-            false,
-            "E"
-          ]
-        }
-      },
-      "data_base_corrigida": "nome do arquivo = data da folha (20/10); respostas de 19/10"
-    },
-    "Direito Tributário||Jurisprudência dos Tribunais Superiores sobre ISS": {
-      "materia": "Direito Tributário",
-      "assunto": "Jurisprudência dos Tribunais Superiores sobre ISS",
-      "data_base": "2026-10-19",
-      "cadeia_completa": true,
-      "alvos_origem": [
-        "2983722",
-        "2983720"
-      ],
-      "reinicios": 0,
-      "status": "ativa",
-      "etapas": {
-        "d1": {
-          "prevista": "2026-10-20",
-          "emitida": "2026-10-20"
-        },
-        "d6": {
-          "prevista": "2026-11-10",
-          "emitida": "2026-11-10",
-          "resultado": null
-        },
-        "d14": {
-          "prevista": "2026-11-24",
-          "emitida": null
-        },
-        "d28": {
-          "prevista": "2026-12-01",
-          "emitida": null
-        }
-      },
-      "amostra_base": {
-        "itens": {
-          "2983719": [
-            true,
-            false,
-            "C"
-          ],
-          "2983720": [
-            true,
-            true,
-            "E"
-          ],
-          "2983722": [
-            false,
-            false,
-            "C"
-          ]
-        }
-      },
-      "data_base_corrigida": "nome do arquivo = data da folha (20/10); respostas de 19/10"
-    },
-    "Direito Tributário||Jurisprudência dos Tribunais Superiores sobre Obrigação Tributária": {
-      "materia": "Direito Tributário",
-      "assunto": "Jurisprudência dos Tribunais Superiores sobre Obrigação Tributária",
-      "data_base": "2026-10-19",
-      "cadeia_completa": true,
-      "alvos_origem": [
-        "2983711"
-      ],
-      "reinicios": 0,
-      "status": "ativa",
-      "etapas": {
-        "d1": {
-          "prevista": "2026-10-19",
-          "emitida": "expirada"
-        },
-        "d6": {
-          "prevista": "2026-11-13",
-          "emitida": null,
-          "resultado": null
-        },
-        "d14": {
-          "prevista": "2026-11-25",
-          "emitida": null
-        },
-        "d28": {
-          "prevista": "2026-12-01",
-          "emitida": null
-        }
-      },
-      "amostra_base": {
-        "itens": {
-          "2983711": [
-            false,
-            false,
-            "C"
-          ],
-          "3258718": [
-            true,
-            false,
-            "E"
-          ],
-          "3258719": [
-            true,
-            false,
-            "E"
-          ]
-        }
-      },
-      "data_base_corrigida": "nome do arquivo = data da folha (20/10); respostas de 19/10"
-    },
-    "Direito Tributário||Jurisprudência dos Tribunais Superiores sobre Princípios Tributários": {
-      "materia": "Direito Tributário",
-      "assunto": "Jurisprudência dos Tribunais Superiores sobre Princípios Tributários",
-      "data_base": "2026-10-19",
-      "cadeia_completa": true,
-      "alvos_origem": [
-        "2778910",
-        "3192169"
-      ],
-      "reinicios": 0,
-      "status": "ativa",
-      "etapas": {
-        "d1": {
-          "prevista": "2026-10-20",
-          "emitida": "2026-10-20"
-        },
-        "d6": {
-          "prevista": "2026-11-10",
-          "emitida": "2026-11-10",
-          "resultado": null
-        },
-        "d14": {
-          "prevista": "2026-11-24",
-          "emitida": null
-        },
-        "d28": {
-          "prevista": "2026-12-01",
-          "emitida": null
-        }
-      },
-      "amostra_base": {
-        "itens": {
-          "2778886": [
-            true,
-            false,
-            "E"
-          ],
-          "2778910": [
-            false,
-            false,
-            "E"
-          ],
-          "3192169": [
-            false,
-            false,
-            "E"
-          ]
-        }
-      },
-      "data_base_corrigida": "nome do arquivo = data da folha (20/10); respostas de 19/10"
+      ]
     },
     "Direito Tributário||Jurisprudência dos Tribunais Superiores sobre Suspensão do Crédito Tributário": {
       "materia": "Direito Tributário",
@@ -12150,11 +12268,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-14",
+          "prevista": "2026-12-07",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-15",
+          "prevista": "2026-12-08",
           "emitida": null
         }
       },
@@ -12173,284 +12291,6 @@
           "3604352": [
             false,
             true,
-            "E"
-          ]
-        }
-      },
-      "data_base_corrigida": "nome do arquivo = data da folha (20/10); respostas de 19/10"
-    },
-    "Direito Tributário||Jurisprudência dos Tribunais Superiores sobre Tributos Federais": {
-      "materia": "Direito Tributário",
-      "assunto": "Jurisprudência dos Tribunais Superiores sobre Tributos Federais",
-      "data_base": "2026-10-19",
-      "cadeia_completa": true,
-      "alvos_origem": [
-        "3446319"
-      ],
-      "reinicios": 0,
-      "status": "ativa",
-      "etapas": {
-        "d1": {
-          "prevista": "2026-10-19",
-          "emitida": "expirada"
-        },
-        "d6": {
-          "prevista": "2026-11-13",
-          "emitida": null,
-          "resultado": null
-        },
-        "d14": {
-          "prevista": "2026-11-25",
-          "emitida": null
-        },
-        "d28": {
-          "prevista": "2026-12-01",
-          "emitida": null
-        }
-      },
-      "amostra_base": {
-        "itens": {
-          "3446319": [
-            false,
-            false,
-            "C"
-          ],
-          "3446320": [
-            true,
-            false,
-            "C"
-          ],
-          "3604350": [
-            true,
-            false,
-            "E"
-          ]
-        }
-      },
-      "data_base_corrigida": "nome do arquivo = data da folha (20/10); respostas de 19/10"
-    },
-    "Direito Tributário||Princípios Tributários": {
-      "materia": "Direito Tributário",
-      "assunto": "Princípios Tributários",
-      "data_base": "2026-10-19",
-      "cadeia_completa": true,
-      "alvos_origem": [
-        "2778879",
-        "3039134",
-        "3514269",
-        "3514270",
-        "3919677"
-      ],
-      "reinicios": 0,
-      "status": "ativa",
-      "etapas": {
-        "d1": {
-          "prevista": "2026-10-20",
-          "emitida": "2026-10-20"
-        },
-        "d6": {
-          "prevista": "2026-10-27",
-          "emitida": "2026-10-27",
-          "resultado": null
-        },
-        "d14": {
-          "prevista": "2026-11-20",
-          "emitida": null
-        },
-        "d28": {
-          "prevista": "2026-12-01",
-          "emitida": null
-        }
-      },
-      "amostra_base": {
-        "itens": {
-          "2778879": [
-            false,
-            false,
-            "C"
-          ],
-          "2935088": [
-            true,
-            false,
-            "E"
-          ],
-          "2983696": [
-            true,
-            false,
-            "E"
-          ],
-          "2983699": [
-            true,
-            false,
-            "E"
-          ],
-          "2983703": [
-            true,
-            false,
-            "E"
-          ],
-          "3039134": [
-            false,
-            false,
-            "E"
-          ],
-          "3258712": [
-            true,
-            false,
-            "E"
-          ],
-          "3438962": [
-            true,
-            false,
-            "C"
-          ],
-          "3493972": [
-            true,
-            false,
-            "C"
-          ],
-          "3514267": [
-            true,
-            false,
-            "C"
-          ],
-          "3514269": [
-            true,
-            true,
-            "C"
-          ],
-          "3514270": [
-            true,
-            true,
-            "E"
-          ],
-          "3830237": [
-            true,
-            false,
-            "E"
-          ],
-          "3830241": [
-            true,
-            false,
-            "C"
-          ],
-          "3831199": [
-            true,
-            false,
-            "E"
-          ],
-          "3831202": [
-            true,
-            false,
-            "E"
-          ],
-          "3919677": [
-            true,
-            true,
-            "C"
-          ]
-        }
-      },
-      "data_base_corrigida": "nome do arquivo = data da folha (20/10); respostas de 19/10"
-    },
-    "Direito Tributário||Repartição da Competência Tributária (Privativa, Comum, Cumulativa, Residual, Extraordinária e Compartilhada)": {
-      "materia": "Direito Tributário",
-      "assunto": "Repartição da Competência Tributária (Privativa, Comum, Cumulativa, Residual, Extraordinária e Compartilhada)",
-      "data_base": "2026-10-19",
-      "cadeia_completa": true,
-      "alvos_origem": [
-        "3039136",
-        "3604383"
-      ],
-      "reinicios": 0,
-      "status": "ativa",
-      "etapas": {
-        "d1": {
-          "prevista": "2026-10-19",
-          "emitida": "expirada"
-        },
-        "d6": {
-          "prevista": "2026-11-10",
-          "emitida": "2026-11-10",
-          "resultado": null
-        },
-        "d14": {
-          "prevista": "2026-11-24",
-          "emitida": null
-        },
-        "d28": {
-          "prevista": "2026-12-01",
-          "emitida": null
-        }
-      },
-      "amostra_base": {
-        "itens": {
-          "3039136": [
-            false,
-            false,
-            "E"
-          ],
-          "3293584": [
-            true,
-            false,
-            "E"
-          ],
-          "3514272": [
-            true,
-            false,
-            "E"
-          ],
-          "3604383": [
-            true,
-            true,
-            "E"
-          ]
-        }
-      },
-      "data_base_corrigida": "nome do arquivo = data da folha (20/10); respostas de 19/10"
-    },
-    "Direito Tributário||Solidariedade (arts. 124 e 125 do CTN)": {
-      "materia": "Direito Tributário",
-      "assunto": "Solidariedade (arts. 124 e 125 do CTN)",
-      "data_base": "2026-10-19",
-      "cadeia_completa": true,
-      "alvos_origem": [],
-      "reinicios": 0,
-      "status": "ativa",
-      "etapas": {
-        "d1": {
-          "prevista": "2026-10-19",
-          "emitida": "expirada"
-        },
-        "d6": {
-          "prevista": "2026-11-13",
-          "emitida": null,
-          "resultado": null
-        },
-        "d14": {
-          "prevista": "2026-11-25",
-          "emitida": null
-        },
-        "d28": {
-          "prevista": "2026-12-02",
-          "emitida": null
-        }
-      },
-      "amostra_base": {
-        "itens": {
-          "3102911": [
-            true,
-            false,
-            "C"
-          ],
-          "3192166": [
-            true,
-            false,
-            "C"
-          ],
-          "3514278": [
-            true,
-            false,
             "E"
           ]
         }
@@ -12481,11 +12321,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-23",
+          "prevista": "2026-11-20",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-01",
+          "prevista": "2026-11-27",
           "emitida": null
         }
       },
@@ -12606,11 +12446,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-19",
+          "prevista": "2026-11-18",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-01",
+          "prevista": "2026-11-27",
           "emitida": null
         }
       },
@@ -12782,11 +12622,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-03",
+          "prevista": "2026-11-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-09",
+          "prevista": "2026-12-03",
           "emitida": null
         }
       },
@@ -12873,11 +12713,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-23",
+          "prevista": "2026-11-20",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-02",
+          "prevista": "2026-11-27",
           "emitida": null
         }
       },
@@ -12979,11 +12819,11 @@
           }
         },
         "d14": {
-          "prevista": "2026-11-24",
+          "prevista": "2026-11-23",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-02",
+          "prevista": "2026-11-27",
           "emitida": null
         }
       },
@@ -13047,16 +12887,16 @@
           "emitida": "2026-10-23"
         },
         "d6": {
-          "prevista": "2026-11-16",
+          "prevista": "2026-11-13",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-25",
+          "prevista": "2026-11-24",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-02",
+          "prevista": "2026-11-27",
           "emitida": null
         }
       },
@@ -13105,16 +12945,16 @@
           "emitida": "expirada"
         },
         "d6": {
-          "prevista": "2026-11-16",
+          "prevista": "2026-11-13",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-26",
+          "prevista": "2026-11-24",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-02",
+          "prevista": "2026-11-27",
           "emitida": null
         }
       },
@@ -13199,7 +13039,17 @@
         },
         "d14": {
           "prevista": "2026-11-23",
-          "emitida": null
+          "emitida": null,
+          "grade": {
+            "semana": 11,
+            "via": "rev",
+            "dias": [
+              "2026-11-16",
+              "2026-11-17",
+              "2026-11-18"
+            ],
+            "desde": "2026-11-13"
+          }
         },
         "d28": {
           "prevista": "2026-12-02",
@@ -13304,11 +13154,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-24",
+          "prevista": "2026-11-23",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-02",
+          "prevista": "2026-11-27",
           "emitida": null
         }
       },
@@ -13496,16 +13346,16 @@
           "emitida": "expirada"
         },
         "d6": {
-          "prevista": "2026-11-16",
+          "prevista": "2026-11-13",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-26",
+          "prevista": "2026-11-24",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-02",
+          "prevista": "2026-11-27",
           "emitida": null
         }
       },
@@ -13598,7 +13448,7 @@
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-02",
+          "prevista": "2026-11-27",
           "emitida": null
         }
       },
@@ -13776,11 +13626,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-23",
+          "prevista": "2026-11-20",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-02",
+          "prevista": "2026-11-27",
           "emitida": null
         }
       },
@@ -13920,11 +13770,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-20",
+          "prevista": "2026-11-19",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-02",
+          "prevista": "2026-11-27",
           "emitida": null
         }
       },
@@ -13987,11 +13837,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-16",
+          "prevista": "2026-12-10",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-17",
+          "prevista": "2026-12-11",
           "emitida": null
         }
       },
@@ -14062,7 +13912,7 @@
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-02",
+          "prevista": "2026-11-27",
           "emitida": null
         }
       },
@@ -14143,11 +13993,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-14",
+          "prevista": "2026-12-07",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-15",
+          "prevista": "2026-12-09",
           "emitida": null
         }
       },
@@ -14193,16 +14043,16 @@
           "emitida": "2026-10-23"
         },
         "d6": {
-          "prevista": "2026-11-17",
+          "prevista": "2026-11-16",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-11",
+          "prevista": "2026-12-07",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-15",
+          "prevista": "2026-12-09",
           "emitida": null
         }
       },
@@ -14277,11 +14127,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-03",
+          "prevista": "2026-11-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-09",
+          "prevista": "2026-12-03",
           "emitida": null
         }
       },
@@ -14341,11 +14191,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-14",
+          "prevista": "2026-12-07",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-16",
+          "prevista": "2026-12-09",
           "emitida": null
         }
       },
@@ -14419,7 +14269,17 @@
         },
         "d14": {
           "prevista": "2026-12-11",
-          "emitida": null
+          "emitida": null,
+          "grade": {
+            "semana": 11,
+            "via": "rev",
+            "dias": [
+              "2026-11-16",
+              "2026-11-17",
+              "2026-11-18"
+            ],
+            "desde": "2026-11-13"
+          }
         },
         "d28": {
           "prevista": "2026-12-15",
@@ -14474,11 +14334,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-11",
+          "prevista": "2026-12-07",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-15",
+          "prevista": "2026-12-08",
           "emitida": null
         }
       },
@@ -14579,11 +14439,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-11",
+          "prevista": "2026-12-07",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-15",
+          "prevista": "2026-12-09",
           "emitida": null
         }
       },
@@ -14637,11 +14497,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-20",
+          "prevista": "2026-11-19",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-03",
+          "prevista": "2026-11-30",
           "emitida": null
         }
       },
@@ -14711,11 +14571,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-14",
+          "prevista": "2026-12-07",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-16",
+          "prevista": "2026-12-09",
           "emitida": null
         }
       },
@@ -14773,11 +14633,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-23",
+          "prevista": "2026-11-20",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-12-02",
           "emitida": null
         }
       },
@@ -14895,7 +14755,16 @@
         },
         "d14": {
           "prevista": "2026-12-02",
-          "emitida": null
+          "emitida": null,
+          "grade": {
+            "semana": 11,
+            "via": "rev",
+            "dias": [
+              "2026-11-19",
+              "2026-11-20"
+            ],
+            "desde": "2026-11-13"
+          }
         },
         "d28": {
           "prevista": "2026-12-08",
@@ -14991,7 +14860,15 @@
         },
         "d14": {
           "prevista": "2026-12-11",
-          "emitida": null
+          "emitida": null,
+          "grade": {
+            "semana": 10,
+            "via": "rev",
+            "dias": [
+              "2026-11-13"
+            ],
+            "desde": "2026-11-13"
+          }
         },
         "d28": {
           "prevista": "2026-12-15",
@@ -15053,7 +14930,16 @@
         },
         "d14": {
           "prevista": "2026-12-11",
-          "emitida": null
+          "emitida": null,
+          "grade": {
+            "semana": 11,
+            "via": "rev",
+            "dias": [
+              "2026-11-19",
+              "2026-11-20"
+            ],
+            "desde": "2026-11-13"
+          }
         },
         "d28": {
           "prevista": "2026-12-15",
@@ -15124,7 +15010,15 @@
         },
         "d14": {
           "prevista": "2026-11-23",
-          "emitida": null
+          "emitida": null,
+          "grade": {
+            "semana": 10,
+            "via": "rev",
+            "dias": [
+              "2026-11-13"
+            ],
+            "desde": "2026-11-13"
+          }
         },
         "d28": {
           "prevista": "2026-12-03",
@@ -15218,11 +15112,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-11",
+          "prevista": "2026-12-07",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-15",
+          "prevista": "2026-12-09",
           "emitida": null
         }
       },
@@ -15277,11 +15171,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-25",
+          "prevista": "2026-11-24",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-03",
+          "prevista": "2026-11-30",
           "emitida": null
         }
       },
@@ -15379,7 +15273,16 @@
         },
         "d14": {
           "prevista": "2026-11-19",
-          "emitida": null
+          "emitida": null,
+          "grade": {
+            "semana": 11,
+            "via": "rev",
+            "dias": [
+              "2026-11-19",
+              "2026-11-20"
+            ],
+            "desde": "2026-11-13"
+          }
         },
         "d28": {
           "prevista": "2026-12-03",
@@ -15832,11 +15735,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-23",
+          "prevista": "2026-11-20",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-03",
+          "prevista": "2026-11-30",
           "emitida": null
         }
       },
@@ -15967,11 +15870,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-11",
+          "prevista": "2026-12-07",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-16",
+          "prevista": "2026-12-09",
           "emitida": null
         }
       },
@@ -16227,11 +16130,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-24",
+          "prevista": "2026-11-23",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-03",
+          "prevista": "2026-11-30",
           "emitida": null
         }
       },
@@ -16311,16 +16214,16 @@
           "emitida": "2026-10-23"
         },
         "d6": {
-          "prevista": "2026-11-18",
+          "prevista": "2026-11-17",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-14",
+          "prevista": "2026-12-07",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-16",
+          "prevista": "2026-12-10",
           "emitida": null
         }
       },
@@ -16365,11 +16268,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-25",
+          "prevista": "2026-11-24",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-03",
+          "prevista": "2026-11-30",
           "emitida": null
         }
       },
@@ -16419,16 +16322,16 @@
           "emitida": "2026-10-23"
         },
         "d6": {
-          "prevista": "2026-11-18",
+          "prevista": "2026-11-17",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-14",
+          "prevista": "2026-12-07",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-16",
+          "prevista": "2026-12-10",
           "emitida": null
         }
       },
@@ -16502,7 +16405,15 @@
         },
         "d14": {
           "prevista": "2026-12-11",
-          "emitida": null
+          "emitida": null,
+          "grade": {
+            "semana": 11,
+            "via": "p1",
+            "dias": [
+              "2026-11-17"
+            ],
+            "desde": "2026-11-13"
+          }
         },
         "d28": {
           "prevista": "2026-12-16",
@@ -16570,11 +16481,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-14",
+          "prevista": "2026-12-07",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-16",
+          "prevista": "2026-12-10",
           "emitida": null
         }
       },
@@ -16617,11 +16528,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-26",
+          "prevista": "2026-11-24",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-03",
+          "prevista": "2026-11-30",
           "emitida": null
         }
       },
@@ -16706,16 +16617,16 @@
           "emitida": "2026-10-23"
         },
         "d6": {
-          "prevista": "2026-11-18",
+          "prevista": "2026-11-17",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-14",
+          "prevista": "2026-12-07",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-16",
+          "prevista": "2026-12-09",
           "emitida": null
         }
       },
@@ -16764,11 +16675,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-11",
+          "prevista": "2026-12-04",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-16",
+          "prevista": "2026-12-09",
           "emitida": null
         }
       },
@@ -16841,7 +16752,15 @@
         },
         "d14": {
           "prevista": "2026-11-23",
-          "emitida": null
+          "emitida": null,
+          "grade": {
+            "semana": 11,
+            "via": "rev",
+            "dias": [
+              "2026-11-20"
+            ],
+            "desde": "2026-11-13"
+          }
         },
         "d28": {
           "prevista": "2026-12-03",
@@ -16919,11 +16838,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-11",
+          "prevista": "2026-12-03",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-16",
+          "prevista": "2026-12-09",
           "emitida": null
         }
       },
@@ -16978,7 +16897,8 @@
       "data_base": "2026-10-23",
       "cadeia_completa": true,
       "alvos_origem": [
-        "3830244"
+        "3830244",
+        "4033909"
       ],
       "reinicios": 0,
       "status": "ativa",
@@ -16988,16 +16908,16 @@
           "emitida": "2026-10-26"
         },
         "d6": {
-          "prevista": "2026-11-18",
+          "prevista": "2026-11-17",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-14",
+          "prevista": "2026-12-07",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-16",
+          "prevista": "2026-12-10",
           "emitida": null
         }
       },
@@ -17022,41 +16942,7 @@
             true,
             true,
             "E"
-          ]
-        }
-      }
-    },
-    "Direito Tributário||Conceito de Tributo": {
-      "materia": "Direito Tributário",
-      "assunto": "Conceito de Tributo",
-      "data_base": "2026-10-23",
-      "cadeia_completa": true,
-      "alvos_origem": [
-        "4033909"
-      ],
-      "reinicios": 0,
-      "status": "ativa",
-      "etapas": {
-        "d1": {
-          "prevista": "2026-10-26",
-          "emitida": "2026-10-26"
-        },
-        "d6": {
-          "prevista": "2026-11-18",
-          "emitida": null,
-          "resultado": null
-        },
-        "d14": {
-          "prevista": "2026-12-14",
-          "emitida": null
-        },
-        "d28": {
-          "prevista": "2026-12-16",
-          "emitida": null
-        }
-      },
-      "amostra_base": {
-        "itens": {
+          ],
           "2794496": [
             true,
             false,
@@ -17098,7 +16984,85 @@
             "C"
           ]
         }
-      }
+      },
+      "topico": 86,
+      "fundidas": [
+        {
+          "materia": "Direito Tributário",
+          "assunto": "Conceito de Tributo",
+          "data_base": "2026-10-23",
+          "cadeia_completa": true,
+          "alvos_origem": [
+            "4033909"
+          ],
+          "reinicios": 0,
+          "status": "ativa",
+          "etapas": {
+            "d1": {
+              "prevista": "2026-10-26",
+              "emitida": "2026-10-26"
+            },
+            "d6": {
+              "prevista": "2026-11-18",
+              "emitida": null,
+              "resultado": null
+            },
+            "d14": {
+              "prevista": "2026-12-14",
+              "emitida": null
+            },
+            "d28": {
+              "prevista": "2026-12-16",
+              "emitida": null
+            }
+          },
+          "amostra_base": {
+            "itens": {
+              "2794496": [
+                true,
+                false,
+                "E"
+              ],
+              "3039135": [
+                true,
+                false,
+                "C"
+              ],
+              "3361154": [
+                true,
+                false,
+                "C"
+              ],
+              "3514274": [
+                true,
+                false,
+                "C"
+              ],
+              "3831201": [
+                true,
+                false,
+                "C"
+              ],
+              "3919674": [
+                true,
+                false,
+                "E"
+              ],
+              "4033909": [
+                true,
+                true,
+                "C"
+              ],
+              "4033913": [
+                true,
+                false,
+                "C"
+              ]
+            }
+          },
+          "chave": "Direito Tributário||Conceito de Tributo"
+        }
+      ]
     },
     "Direito Tributário||Extinção do Crédito Tributário (arts. 156 a 174 do CTN)": {
       "materia": "Direito Tributário",
@@ -17119,7 +17083,13 @@
         "3514281",
         "2358940",
         "364561",
-        "3041269"
+        "3041269",
+        "3102915",
+        "3041265",
+        "3271593",
+        "3271599",
+        "3625464",
+        "4068807"
       ],
       "reinicios": 0,
       "status": "ativa",
@@ -17134,11 +17104,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-19",
+          "prevista": "2026-11-18",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-04",
+          "prevista": "2026-12-01",
           "emitida": null
         }
       },
@@ -17288,6 +17258,148 @@
           "motivo": "os 7 itens de 30/10 eram todos repetidos (refazer erradas de 19-25/10); reacerto nao mede dominio",
           "data": "2026-11-03"
         }
+      ],
+      "topico": 78,
+      "fundidas": [
+        {
+          "materia": "Direito Tributário",
+          "assunto": "Jurisprudência dos Tribunais Superiores sobre Extinção do Crédito Tributário",
+          "data_base": "2026-10-23",
+          "cadeia_completa": true,
+          "alvos_origem": [
+            "3102915",
+            "3041265",
+            "3271593",
+            "3271599"
+          ],
+          "reinicios": 0,
+          "status": "ativa",
+          "etapas": {
+            "d1": {
+              "prevista": "2026-10-26",
+              "emitida": "2026-10-26"
+            },
+            "d6": {
+              "prevista": "2026-10-30",
+              "emitida": "2026-10-30",
+              "resultado": null
+            },
+            "d14": {
+              "prevista": "2026-11-23",
+              "emitida": null
+            },
+            "d28": {
+              "prevista": "2026-12-04",
+              "emitida": null
+            }
+          },
+          "amostra_base": {
+            "itens": {
+              "3041265": [
+                true,
+                true,
+                "C"
+              ],
+              "3271598": [
+                true,
+                false,
+                "C"
+              ],
+              "3271593": [
+                true,
+                true,
+                "E"
+              ],
+              "3604351": [
+                true,
+                false,
+                "C"
+              ],
+              "3192167": [
+                true,
+                false,
+                "E"
+              ],
+              "3102915": [
+                false,
+                false,
+                "E"
+              ],
+              "3271599": [
+                true,
+                true,
+                "E"
+              ]
+            }
+          },
+          "chave": "Direito Tributário||Jurisprudência dos Tribunais Superiores sobre Extinção do Crédito Tributário"
+        },
+        {
+          "materia": "Direito Tributário",
+          "assunto": "Tópicos Mesclados de Extinção, Exclusão e Suspensão do Crédito Tributário",
+          "data_base": "2026-10-23",
+          "cadeia_completa": true,
+          "alvos_origem": [
+            "3625464",
+            "4068807"
+          ],
+          "reinicios": 0,
+          "status": "ativa",
+          "etapas": {
+            "d1": {
+              "prevista": "2026-10-26",
+              "emitida": "2026-10-26"
+            },
+            "d6": {
+              "prevista": "2026-11-10",
+              "emitida": "2026-11-10",
+              "resultado": null
+            },
+            "d14": {
+              "prevista": "2026-11-24",
+              "emitida": null
+            },
+            "d28": {
+              "prevista": "2026-12-04",
+              "emitida": null
+            }
+          },
+          "amostra_base": {
+            "itens": {
+              "3625464": [
+                false,
+                true,
+                "C"
+              ],
+              "3604347": [
+                true,
+                false,
+                "E"
+              ],
+              "3969829": [
+                true,
+                false,
+                "E"
+              ],
+              "3039251": [
+                true,
+                false,
+                "E"
+              ],
+              "4068807": [
+                false,
+                true,
+                "E"
+              ],
+              "4147014": [
+                true,
+                false,
+                "D"
+              ]
+            }
+          },
+          "chave": "Direito Tributário||Tópicos Mesclados de Extinção, Exclusão e Suspensão do Crédito Tributário"
+        }
       ]
     },
     "Direito Tributário||Interpretação e Integração da Legislação Tributária (arts. 107 a 112 do CTN)": {
@@ -17297,7 +17409,9 @@
       "cadeia_completa": true,
       "alvos_origem": [
         "3314976",
-        "3199348"
+        "3199348",
+        "89361",
+        "118498"
       ],
       "reinicios": 0,
       "status": "ativa",
@@ -17307,16 +17421,16 @@
           "emitida": "2026-10-26"
         },
         "d6": {
-          "prevista": "2026-11-17",
+          "prevista": "2026-11-16",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-14",
+          "prevista": "2026-12-04",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-16",
+          "prevista": "2026-12-10",
           "emitida": null
         }
       },
@@ -17346,166 +17460,7 @@
             true,
             false,
             "C"
-          ]
-        }
-      }
-    },
-    "Direito Tributário||Jurisprudência dos Tribunais Superiores sobre Extinção do Crédito Tributário": {
-      "materia": "Direito Tributário",
-      "assunto": "Jurisprudência dos Tribunais Superiores sobre Extinção do Crédito Tributário",
-      "data_base": "2026-10-23",
-      "cadeia_completa": true,
-      "alvos_origem": [
-        "3102915",
-        "3041265",
-        "3271593",
-        "3271599"
-      ],
-      "reinicios": 0,
-      "status": "ativa",
-      "etapas": {
-        "d1": {
-          "prevista": "2026-10-26",
-          "emitida": "2026-10-26"
-        },
-        "d6": {
-          "prevista": "2026-10-30",
-          "emitida": "2026-10-30",
-          "resultado": null
-        },
-        "d14": {
-          "prevista": "2026-11-23",
-          "emitida": null
-        },
-        "d28": {
-          "prevista": "2026-12-04",
-          "emitida": null
-        }
-      },
-      "amostra_base": {
-        "itens": {
-          "3041265": [
-            true,
-            true,
-            "C"
           ],
-          "3271598": [
-            true,
-            false,
-            "C"
-          ],
-          "3271593": [
-            true,
-            true,
-            "E"
-          ],
-          "3604351": [
-            true,
-            false,
-            "C"
-          ],
-          "3192167": [
-            true,
-            false,
-            "E"
-          ],
-          "3102915": [
-            false,
-            false,
-            "E"
-          ],
-          "3271599": [
-            true,
-            true,
-            "E"
-          ]
-        }
-      }
-    },
-    "Direito Tributário||Jurisprudência dos Tribunais Superiores sobre Imunidades Tributárias": {
-      "materia": "Direito Tributário",
-      "assunto": "Jurisprudência dos Tribunais Superiores sobre Imunidades Tributárias",
-      "data_base": "2026-10-23",
-      "cadeia_completa": true,
-      "alvos_origem": [],
-      "reinicios": 0,
-      "status": "ativa",
-      "etapas": {
-        "d1": {
-          "prevista": "2026-10-26",
-          "emitida": "2026-10-26"
-        },
-        "d6": {
-          "prevista": "2026-11-18",
-          "emitida": null,
-          "resultado": null
-        },
-        "d14": {
-          "prevista": "2026-12-14",
-          "emitida": null
-        },
-        "d28": {
-          "prevista": "2026-12-16",
-          "emitida": null
-        }
-      },
-      "amostra_base": {
-        "itens": {
-          "3199361": [
-            true,
-            false,
-            "C"
-          ],
-          "3199362": [
-            true,
-            false,
-            "E"
-          ],
-          "3258721": [
-            true,
-            false,
-            "C"
-          ],
-          "3271582": [
-            true,
-            false,
-            "E"
-          ]
-        }
-      }
-    },
-    "Direito Tributário||Jurisprudência dos Tribunais Superiores sobre Legislação Tributária": {
-      "materia": "Direito Tributário",
-      "assunto": "Jurisprudência dos Tribunais Superiores sobre Legislação Tributária",
-      "data_base": "2026-10-23",
-      "cadeia_completa": true,
-      "alvos_origem": [
-        "89361",
-        "118498"
-      ],
-      "reinicios": 0,
-      "status": "ativa",
-      "etapas": {
-        "d1": {
-          "prevista": "2026-10-26",
-          "emitida": "2026-10-26"
-        },
-        "d6": {
-          "prevista": "2026-11-17",
-          "emitida": null,
-          "resultado": null
-        },
-        "d14": {
-          "prevista": "2026-12-14",
-          "emitida": null
-        },
-        "d28": {
-          "prevista": "2026-12-16",
-          "emitida": null
-        }
-      },
-      "amostra_base": {
-        "itens": {
           "89361": [
             false,
             false,
@@ -17522,72 +17477,61 @@
             "E"
           ]
         }
-      }
-    },
-    "Direito Tributário||Tópicos Mesclados de Extinção, Exclusão e Suspensão do Crédito Tributário": {
-      "materia": "Direito Tributário",
-      "assunto": "Tópicos Mesclados de Extinção, Exclusão e Suspensão do Crédito Tributário",
-      "data_base": "2026-10-23",
-      "cadeia_completa": true,
-      "alvos_origem": [
-        "3625464",
-        "4068807"
-      ],
-      "reinicios": 0,
-      "status": "ativa",
-      "etapas": {
-        "d1": {
-          "prevista": "2026-10-26",
-          "emitida": "2026-10-26"
-        },
-        "d6": {
-          "prevista": "2026-11-10",
-          "emitida": "2026-11-10",
-          "resultado": null
-        },
-        "d14": {
-          "prevista": "2026-11-24",
-          "emitida": null
-        },
-        "d28": {
-          "prevista": "2026-12-04",
-          "emitida": null
-        }
       },
-      "amostra_base": {
-        "itens": {
-          "3625464": [
-            false,
-            true,
-            "C"
+      "topico": 87,
+      "fundidas": [
+        {
+          "materia": "Direito Tributário",
+          "assunto": "Jurisprudência dos Tribunais Superiores sobre Legislação Tributária",
+          "data_base": "2026-10-23",
+          "cadeia_completa": true,
+          "alvos_origem": [
+            "89361",
+            "118498"
           ],
-          "3604347": [
-            true,
-            false,
-            "E"
-          ],
-          "3969829": [
-            true,
-            false,
-            "E"
-          ],
-          "3039251": [
-            true,
-            false,
-            "E"
-          ],
-          "4068807": [
-            false,
-            true,
-            "E"
-          ],
-          "4147014": [
-            true,
-            false,
-            "D"
-          ]
+          "reinicios": 0,
+          "status": "ativa",
+          "etapas": {
+            "d1": {
+              "prevista": "2026-10-26",
+              "emitida": "2026-10-26"
+            },
+            "d6": {
+              "prevista": "2026-11-17",
+              "emitida": null,
+              "resultado": null
+            },
+            "d14": {
+              "prevista": "2026-12-14",
+              "emitida": null
+            },
+            "d28": {
+              "prevista": "2026-12-16",
+              "emitida": null
+            }
+          },
+          "amostra_base": {
+            "itens": {
+              "89361": [
+                false,
+                false,
+                "C"
+              ],
+              "118498": [
+                false,
+                false,
+                "E"
+              ],
+              "1781107": [
+                true,
+                false,
+                "E"
+              ]
+            }
+          },
+          "chave": "Direito Tributário||Jurisprudência dos Tribunais Superiores sobre Legislação Tributária"
         }
-      }
+      ]
     },
     "AFO, Direito Financeiro e Contabilidade Pública||Bases de Mensuração de Ativos e Passivos (MCASP e NBC TSP EC)": {
       "materia": "AFO, Direito Financeiro e Contabilidade Pública",
@@ -17610,11 +17554,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-14",
+          "prevista": "2026-12-08",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-17",
+          "prevista": "2026-12-10",
           "emitida": null
         }
       },
@@ -17665,11 +17609,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-24",
+          "prevista": "2026-11-23",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-12-01",
           "emitida": null
         }
       },
@@ -17787,11 +17731,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-26",
+          "prevista": "2026-11-24",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-12-01",
           "emitida": null
         }
       },
@@ -17892,11 +17836,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-24",
+          "prevista": "2026-11-23",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-12-02",
           "emitida": null
         }
       },
@@ -17979,7 +17923,7 @@
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-12-01",
           "emitida": null
         }
       },
@@ -18059,11 +18003,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-14",
+          "prevista": "2026-12-08",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-17",
+          "prevista": "2026-12-10",
           "emitida": null
         }
       },
@@ -18131,7 +18075,15 @@
         },
         "d14": {
           "prevista": "2026-12-11",
-          "emitida": null
+          "emitida": null,
+          "grade": {
+            "semana": 10,
+            "via": "rev",
+            "dias": [
+              "2026-11-13"
+            ],
+            "desde": "2026-11-13"
+          }
         },
         "d28": {
           "prevista": "2026-12-17",
@@ -18249,11 +18201,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-25",
+          "prevista": "2026-11-24",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-12-02",
           "emitida": null
         }
       },
@@ -18296,11 +18248,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-26",
+          "prevista": "2026-11-24",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-12-02",
           "emitida": null
         }
       },
@@ -18347,7 +18299,15 @@
         },
         "d14": {
           "prevista": "2026-11-24",
-          "emitida": null
+          "emitida": null,
+          "grade": {
+            "semana": 11,
+            "via": "rev",
+            "dias": [
+              "2026-11-17"
+            ],
+            "desde": "2026-11-13"
+          }
         },
         "d28": {
           "prevista": "2026-12-07",
@@ -18429,11 +18389,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-20",
+          "prevista": "2026-11-19",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-12-01",
           "emitida": null
         }
       },
@@ -18554,11 +18514,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-24",
+          "prevista": "2026-11-23",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-12-02",
           "emitida": null
         }
       },
@@ -18670,7 +18630,17 @@
         },
         "d14": {
           "prevista": "2026-11-24",
-          "emitida": null
+          "emitida": null,
+          "grade": {
+            "semana": 11,
+            "via": "rev",
+            "dias": [
+              "2026-11-16",
+              "2026-11-17",
+              "2026-11-18"
+            ],
+            "desde": "2026-11-13"
+          }
         },
         "d28": {
           "prevista": "2026-12-07",
@@ -18753,11 +18723,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-14",
+          "prevista": "2026-12-08",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-17",
+          "prevista": "2026-12-10",
           "emitida": null
         }
       },
@@ -18809,11 +18779,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-24",
+          "prevista": "2026-11-23",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-08",
+          "prevista": "2026-12-02",
           "emitida": null
         }
       },
@@ -18905,11 +18875,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-08",
+          "prevista": "2026-12-03",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-11",
+          "prevista": "2026-12-10",
           "emitida": null
         }
       },
@@ -18967,11 +18937,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-26",
+          "prevista": "2026-11-24",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-08",
+          "prevista": "2026-12-03",
           "emitida": null
         }
       },
@@ -19017,11 +18987,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-25",
+          "prevista": "2026-11-23",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-08",
+          "prevista": "2026-12-02",
           "emitida": null
         }
       },
@@ -19079,11 +19049,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-14",
+          "prevista": "2026-12-08",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-17",
+          "prevista": "2026-12-10",
           "emitida": null
         }
       },
@@ -19136,11 +19106,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-14",
+          "prevista": "2026-12-08",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-17",
+          "prevista": "2026-12-10",
           "emitida": null
         }
       },
@@ -19200,11 +19170,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-25",
+          "prevista": "2026-11-24",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-08",
+          "prevista": "2026-12-02",
           "emitida": null
         }
       },
@@ -19265,7 +19235,7 @@
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-08",
+          "prevista": "2026-12-02",
           "emitida": null
         }
       },
@@ -19370,11 +19340,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-25",
+          "prevista": "2026-11-24",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-08",
+          "prevista": "2026-12-02",
           "emitida": null
         }
       },
@@ -19439,7 +19409,7 @@
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-08",
+          "prevista": "2026-12-02",
           "emitida": null
         }
       },
@@ -19567,11 +19537,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-01",
+          "prevista": "2026-11-23",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-08",
+          "prevista": "2026-12-03",
           "emitida": null
         }
       },
@@ -19649,7 +19619,15 @@
         },
         "d14": {
           "prevista": "2026-12-04",
-          "emitida": null
+          "emitida": null,
+          "grade": {
+            "semana": 11,
+            "via": "rev",
+            "dias": [
+              "2026-11-20"
+            ],
+            "desde": "2026-11-13"
+          }
         },
         "d28": {
           "prevista": "2026-12-10",
@@ -19738,11 +19716,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-15",
+          "prevista": "2026-12-07",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-17",
+          "prevista": "2026-12-10",
           "emitida": null
         }
       },
@@ -19819,11 +19797,11 @@
           }
         },
         "d14": {
-          "prevista": "2026-12-01",
+          "prevista": "2026-11-23",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-08",
+          "prevista": "2026-12-03",
           "emitida": null
         }
       },
@@ -19910,11 +19888,11 @@
           }
         },
         "d14": {
-          "prevista": "2026-12-01",
+          "prevista": "2026-11-23",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-08",
+          "prevista": "2026-12-03",
           "emitida": null
         }
       },
@@ -20002,11 +19980,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-01",
+          "prevista": "2026-11-24",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-08",
+          "prevista": "2026-12-03",
           "emitida": null
         }
       },
@@ -20069,11 +20047,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-01",
+          "prevista": "2026-11-24",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-08",
+          "prevista": "2026-12-03",
           "emitida": null
         }
       },
@@ -20128,7 +20106,7 @@
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-08",
+          "prevista": "2026-12-03",
           "emitida": null
         }
       },
@@ -20303,7 +20281,15 @@
         },
         "d14": {
           "prevista": "2026-12-02",
-          "emitida": null
+          "emitida": null,
+          "grade": {
+            "semana": 12,
+            "via": "rev",
+            "dias": [
+              "2026-11-23"
+            ],
+            "desde": "2026-11-13"
+          }
         },
         "d28": {
           "prevista": "2026-12-08",
@@ -20556,11 +20542,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-15",
+          "prevista": "2026-12-08",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-17",
+          "prevista": "2026-12-10",
           "emitida": null
         }
       },
@@ -20612,11 +20598,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-16",
+          "prevista": "2026-12-09",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-17",
+          "prevista": "2026-12-10",
           "emitida": null
         }
       },
@@ -20688,11 +20674,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-12-01",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-10",
+          "prevista": "2026-12-08",
           "emitida": null
         }
       },
@@ -20764,11 +20750,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-15",
+          "prevista": "2026-12-08",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-17",
+          "prevista": "2026-12-10",
           "emitida": null
         }
       },
@@ -21029,11 +21015,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-02",
+          "prevista": "2026-11-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-09",
+          "prevista": "2026-12-03",
           "emitida": null
         }
       },
@@ -21330,7 +21316,16 @@
         },
         "d14": {
           "prevista": "2026-12-02",
-          "emitida": null
+          "emitida": null,
+          "grade": {
+            "semana": 12,
+            "via": "rev",
+            "dias": [
+              "2026-11-23",
+              "2026-11-24"
+            ],
+            "desde": "2026-11-13"
+          }
         },
         "d28": {
           "prevista": "2026-12-09",
@@ -21483,11 +21478,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-02",
+          "prevista": "2026-11-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-09",
+          "prevista": "2026-12-03",
           "emitida": null
         }
       },
@@ -21536,11 +21531,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-02",
+          "prevista": "2026-11-27",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-08",
+          "prevista": "2026-12-03",
           "emitida": null
         }
       },
@@ -21667,11 +21662,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-03",
+          "prevista": "2026-11-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-09",
+          "prevista": "2026-12-03",
           "emitida": null
         }
       },
@@ -21778,7 +21773,15 @@
         },
         "d14": {
           "prevista": "2026-12-03",
-          "emitida": null
+          "emitida": null,
+          "grade": {
+            "semana": 11,
+            "via": "p1",
+            "dias": [
+              "2026-11-20"
+            ],
+            "desde": "2026-11-13"
+          }
         },
         "d28": {
           "prevista": "2026-12-09",
@@ -21829,11 +21832,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-16",
+          "prevista": "2026-12-09",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-17",
+          "prevista": "2026-12-10",
           "emitida": null
         }
       },
@@ -21896,7 +21899,15 @@
         },
         "d14": {
           "prevista": "2026-12-03",
-          "emitida": null
+          "emitida": null,
+          "grade": {
+            "semana": 12,
+            "via": "rev",
+            "dias": [
+              "2026-11-27"
+            ],
+            "desde": "2026-11-13"
+          }
         },
         "d28": {
           "prevista": "2026-12-09",
@@ -21959,11 +21970,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-16",
+          "prevista": "2026-12-09",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-17",
+          "prevista": "2026-12-10",
           "emitida": null
         }
       },
@@ -22037,11 +22048,11 @@
           }
         },
         "d14": {
-          "prevista": "2026-12-03",
+          "prevista": "2026-11-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-09",
+          "prevista": "2026-12-03",
           "emitida": null
         }
       },
@@ -22101,11 +22112,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-03",
+          "prevista": "2026-11-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-09",
+          "prevista": "2026-12-03",
           "emitida": null
         }
       },
@@ -22150,11 +22161,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-03",
+          "prevista": "2026-11-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-09",
+          "prevista": "2026-12-03",
           "emitida": null
         }
       },
@@ -22236,11 +22247,11 @@
           }
         },
         "d14": {
-          "prevista": "2026-12-02",
+          "prevista": "2026-11-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-09",
+          "prevista": "2026-12-03",
           "emitida": null
         }
       },
@@ -22400,11 +22411,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-04",
+          "prevista": "2026-12-01",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-10",
+          "prevista": "2026-12-04",
           "emitida": null
         }
       },
@@ -22472,11 +22483,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-04",
+          "prevista": "2026-12-01",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-10",
+          "prevista": "2026-12-04",
           "emitida": null
         }
       },
@@ -22529,11 +22540,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-04",
+          "prevista": "2026-12-01",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-10",
+          "prevista": "2026-12-04",
           "emitida": null
         }
       },
@@ -22591,11 +22602,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-04",
+          "prevista": "2026-12-01",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-09",
+          "prevista": "2026-12-04",
           "emitida": null
         }
       },
@@ -22669,11 +22680,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-04",
+          "prevista": "2026-11-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-09",
+          "prevista": "2026-12-04",
           "emitida": null
         }
       },
@@ -22810,11 +22821,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-03",
+          "prevista": "2026-11-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-09",
+          "prevista": "2026-12-04",
           "emitida": null
         }
       },
@@ -22920,11 +22931,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-04",
+          "prevista": "2026-12-01",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-10",
+          "prevista": "2026-12-04",
           "emitida": null
         }
       },
@@ -22993,7 +23004,15 @@
         },
         "d14": {
           "prevista": "2026-12-04",
-          "emitida": null
+          "emitida": null,
+          "grade": {
+            "semana": 12,
+            "via": "rev",
+            "dias": [
+              "2026-11-26"
+            ],
+            "desde": "2026-11-13"
+          }
         },
         "d28": {
           "prevista": "2026-12-09",
@@ -23141,11 +23160,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-04",
+          "prevista": "2026-12-01",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-10",
+          "prevista": "2026-12-04",
           "emitida": null
         }
       },
@@ -23201,11 +23220,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-04",
+          "prevista": "2026-12-01",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-10",
+          "prevista": "2026-12-04",
           "emitida": null
         }
       },
@@ -23294,11 +23313,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-03",
+          "prevista": "2026-11-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-09",
+          "prevista": "2026-12-04",
           "emitida": null
         }
       },
@@ -23438,11 +23457,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-04",
+          "prevista": "2026-11-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-09",
+          "prevista": "2026-12-04",
           "emitida": null
         }
       },
@@ -23553,11 +23572,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-04",
+          "prevista": "2026-12-01",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-10",
+          "prevista": "2026-12-04",
           "emitida": null
         }
       },
@@ -23615,11 +23634,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-04",
+          "prevista": "2026-12-01",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-10",
+          "prevista": "2026-12-07",
           "emitida": null
         }
       },
@@ -23708,11 +23727,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-04",
+          "prevista": "2026-12-01",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-10",
+          "prevista": "2026-12-07",
           "emitida": null
         }
       },
@@ -23768,11 +23787,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-04",
+          "prevista": "2026-12-01",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-10",
+          "prevista": "2026-12-04",
           "emitida": null
         }
       },
@@ -23851,11 +23870,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-04",
+          "prevista": "2026-12-01",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-10",
+          "prevista": "2026-12-04",
           "emitida": null
         }
       },
@@ -23918,11 +23937,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-04",
+          "prevista": "2026-11-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-09",
+          "prevista": "2026-12-04",
           "emitida": null
         }
       },
@@ -24002,11 +24021,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-08",
+          "prevista": "2026-12-02",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-11",
+          "prevista": "2026-12-09",
           "emitida": null
         }
       },
@@ -24078,7 +24097,17 @@
         "d6": {
           "prevista": "2026-11-18",
           "emitida": null,
-          "resultado": null
+          "resultado": null,
+          "grade": {
+            "semana": 11,
+            "via": "p1",
+            "dias": [
+              "2026-11-16",
+              "2026-11-17",
+              "2026-11-18"
+            ],
+            "desde": "2026-11-13"
+          }
         },
         "d14": {
           "prevista": "2026-12-17",
@@ -24113,93 +24142,759 @@
           ]
         }
       }
+    },
+    "Direito Tributário||Jurisprudência dos Tribunais Superiores sobre Princípios Tributários": {
+      "materia": "Direito Tributário",
+      "assunto": "Jurisprudência dos Tribunais Superiores sobre Princípios Tributários",
+      "data_base": "2026-10-19",
+      "cadeia_completa": true,
+      "alvos_origem": [
+        "3314973",
+        "2794515",
+        "3827694",
+        "3841960",
+        "3041256",
+        "3102877",
+        "3314971",
+        "4023436",
+        "2778910",
+        "3192169",
+        "2778879",
+        "3039134",
+        "3514269",
+        "3514270",
+        "3919677",
+        "3039136",
+        "3604383"
+      ],
+      "reinicios": 0,
+      "status": "ativa",
+      "etapas": {
+        "d1": {
+          "prevista": "2026-10-19",
+          "emitida": "expirada"
+        },
+        "d6": {
+          "prevista": "2026-11-13",
+          "emitida": null,
+          "resultado": null,
+          "grade": {
+            "semana": 10,
+            "via": "rev",
+            "dias": [
+              "2026-11-13"
+            ],
+            "desde": "2026-11-13"
+          }
+        },
+        "d14": {
+          "prevista": "2026-11-25",
+          "emitida": null
+        },
+        "d28": {
+          "prevista": "2026-12-01",
+          "emitida": null
+        }
+      },
+      "amostra_base": {
+        "itens": {
+          "3290523": [
+            true,
+            false,
+            "E"
+          ],
+          "3314973": [
+            false,
+            false,
+            "C"
+          ],
+          "3361104": [
+            true,
+            false,
+            "E"
+          ],
+          "3446315": [
+            true,
+            false,
+            "E"
+          ],
+          "2794515": [
+            false,
+            true,
+            "C"
+          ],
+          "2794518": [
+            true,
+            false,
+            "C"
+          ],
+          "3041256": [
+            true,
+            true,
+            "E"
+          ],
+          "3041259": [
+            true,
+            false,
+            "C"
+          ],
+          "3102857": [
+            true,
+            false,
+            "E"
+          ],
+          "3102877": [
+            true,
+            true,
+            "E"
+          ],
+          "3827694": [
+            false,
+            false,
+            "C"
+          ],
+          "3827701": [
+            true,
+            false,
+            "E"
+          ],
+          "3841960": [
+            false,
+            true,
+            "E"
+          ],
+          "2794503": [
+            true,
+            false,
+            "E"
+          ],
+          "2794506": [
+            true,
+            false,
+            "E"
+          ],
+          "3314971": [
+            false,
+            false,
+            "E"
+          ],
+          "3314972": [
+            true,
+            false,
+            "E"
+          ],
+          "3599516": [
+            true,
+            false,
+            "E"
+          ],
+          "4023436": [
+            true,
+            true,
+            "E"
+          ],
+          "2778886": [
+            true,
+            false,
+            "E"
+          ],
+          "2778910": [
+            false,
+            false,
+            "E"
+          ],
+          "3192169": [
+            false,
+            false,
+            "E"
+          ],
+          "2778879": [
+            false,
+            false,
+            "C"
+          ],
+          "2935088": [
+            true,
+            false,
+            "E"
+          ],
+          "2983696": [
+            true,
+            false,
+            "E"
+          ],
+          "2983699": [
+            true,
+            false,
+            "E"
+          ],
+          "2983703": [
+            true,
+            false,
+            "E"
+          ],
+          "3039134": [
+            false,
+            false,
+            "E"
+          ],
+          "3258712": [
+            true,
+            false,
+            "E"
+          ],
+          "3438962": [
+            true,
+            false,
+            "C"
+          ],
+          "3493972": [
+            true,
+            false,
+            "C"
+          ],
+          "3514267": [
+            true,
+            false,
+            "C"
+          ],
+          "3514269": [
+            true,
+            true,
+            "C"
+          ],
+          "3514270": [
+            true,
+            true,
+            "E"
+          ],
+          "3830237": [
+            true,
+            false,
+            "E"
+          ],
+          "3830241": [
+            true,
+            false,
+            "C"
+          ],
+          "3831199": [
+            true,
+            false,
+            "E"
+          ],
+          "3831202": [
+            true,
+            false,
+            "E"
+          ],
+          "3919677": [
+            true,
+            true,
+            "C"
+          ],
+          "3039136": [
+            false,
+            false,
+            "E"
+          ],
+          "3293584": [
+            true,
+            false,
+            "E"
+          ],
+          "3514272": [
+            true,
+            false,
+            "E"
+          ],
+          "3604383": [
+            true,
+            true,
+            "E"
+          ]
+        }
+      },
+      "data_base_corrigida": "nome do arquivo = data da folha (20/10); respostas de 19/10",
+      "topico": 77,
+      "fundidas": [
+        {
+          "materia": "Direito Constitucional (CF/1988 e Doutrina)",
+          "assunto": "Jurisprudência dos Tribunais Superiores sobre Sistema Tributário Nacional",
+          "data_base": "2026-10-19",
+          "cadeia_completa": true,
+          "alvos_origem": [
+            "2794515",
+            "3827694",
+            "3841960",
+            "3041256",
+            "3102877"
+          ],
+          "reinicios": 0,
+          "status": "ativa",
+          "etapas": {
+            "d1": {
+              "prevista": "2026-10-20",
+              "emitida": "2026-10-20"
+            },
+            "d6": {
+              "prevista": "2026-10-27",
+              "emitida": "2026-10-27",
+              "resultado": null
+            },
+            "d14": {
+              "prevista": "2026-11-20",
+              "emitida": null
+            },
+            "d28": {
+              "prevista": "2026-12-01",
+              "emitida": null
+            }
+          },
+          "amostra_base": {
+            "itens": {
+              "2794515": [
+                false,
+                true,
+                "C"
+              ],
+              "2794518": [
+                true,
+                false,
+                "C"
+              ],
+              "3041256": [
+                true,
+                true,
+                "E"
+              ],
+              "3041259": [
+                true,
+                false,
+                "C"
+              ],
+              "3102857": [
+                true,
+                false,
+                "E"
+              ],
+              "3102877": [
+                true,
+                true,
+                "E"
+              ],
+              "3827694": [
+                false,
+                false,
+                "C"
+              ],
+              "3827701": [
+                true,
+                false,
+                "E"
+              ],
+              "3841960": [
+                false,
+                true,
+                "E"
+              ]
+            }
+          },
+          "data_base_corrigida": "nome do arquivo = data da folha (20/10); respostas de 19/10",
+          "chave": "Direito Constitucional (CF/1988 e Doutrina)||Jurisprudência dos Tribunais Superiores sobre Sistema Tributário Nacional"
+        },
+        {
+          "materia": "Direito Constitucional (CF/1988 e Doutrina)",
+          "assunto": "Limitações do Poder de Tributar (arts. 150 a 152 da CF/1988)",
+          "data_base": "2026-10-19",
+          "cadeia_completa": true,
+          "alvos_origem": [
+            "3314971",
+            "4023436"
+          ],
+          "reinicios": 0,
+          "status": "ativa",
+          "etapas": {
+            "d1": {
+              "prevista": "2026-10-20",
+              "emitida": "2026-10-20"
+            },
+            "d6": {
+              "prevista": "2026-11-10",
+              "emitida": "2026-11-10",
+              "resultado": null
+            },
+            "d14": {
+              "prevista": "2026-11-24",
+              "emitida": null
+            },
+            "d28": {
+              "prevista": "2026-12-01",
+              "emitida": null
+            }
+          },
+          "amostra_base": {
+            "itens": {
+              "2794503": [
+                true,
+                false,
+                "E"
+              ],
+              "2794506": [
+                true,
+                false,
+                "E"
+              ],
+              "3314971": [
+                false,
+                false,
+                "E"
+              ],
+              "3314972": [
+                true,
+                false,
+                "E"
+              ],
+              "3599516": [
+                true,
+                false,
+                "E"
+              ],
+              "4023436": [
+                true,
+                true,
+                "E"
+              ]
+            }
+          },
+          "data_base_corrigida": "nome do arquivo = data da folha (20/10); respostas de 19/10",
+          "chave": "Direito Constitucional (CF/1988 e Doutrina)||Limitações do Poder de Tributar (arts. 150 a 152 da CF/1988)"
+        },
+        {
+          "materia": "Direito Tributário",
+          "assunto": "Jurisprudência dos Tribunais Superiores sobre Princípios Tributários",
+          "data_base": "2026-10-19",
+          "cadeia_completa": true,
+          "alvos_origem": [
+            "2778910",
+            "3192169"
+          ],
+          "reinicios": 0,
+          "status": "ativa",
+          "etapas": {
+            "d1": {
+              "prevista": "2026-10-20",
+              "emitida": "2026-10-20"
+            },
+            "d6": {
+              "prevista": "2026-11-10",
+              "emitida": "2026-11-10",
+              "resultado": null
+            },
+            "d14": {
+              "prevista": "2026-11-24",
+              "emitida": null
+            },
+            "d28": {
+              "prevista": "2026-12-01",
+              "emitida": null
+            }
+          },
+          "amostra_base": {
+            "itens": {
+              "2778886": [
+                true,
+                false,
+                "E"
+              ],
+              "2778910": [
+                false,
+                false,
+                "E"
+              ],
+              "3192169": [
+                false,
+                false,
+                "E"
+              ]
+            }
+          },
+          "data_base_corrigida": "nome do arquivo = data da folha (20/10); respostas de 19/10",
+          "chave": "Direito Tributário||Jurisprudência dos Tribunais Superiores sobre Princípios Tributários"
+        },
+        {
+          "materia": "Direito Tributário",
+          "assunto": "Princípios Tributários",
+          "data_base": "2026-10-19",
+          "cadeia_completa": true,
+          "alvos_origem": [
+            "2778879",
+            "3039134",
+            "3514269",
+            "3514270",
+            "3919677"
+          ],
+          "reinicios": 0,
+          "status": "ativa",
+          "etapas": {
+            "d1": {
+              "prevista": "2026-10-20",
+              "emitida": "2026-10-20"
+            },
+            "d6": {
+              "prevista": "2026-10-27",
+              "emitida": "2026-10-27",
+              "resultado": null
+            },
+            "d14": {
+              "prevista": "2026-11-20",
+              "emitida": null
+            },
+            "d28": {
+              "prevista": "2026-12-01",
+              "emitida": null
+            }
+          },
+          "amostra_base": {
+            "itens": {
+              "2778879": [
+                false,
+                false,
+                "C"
+              ],
+              "2935088": [
+                true,
+                false,
+                "E"
+              ],
+              "2983696": [
+                true,
+                false,
+                "E"
+              ],
+              "2983699": [
+                true,
+                false,
+                "E"
+              ],
+              "2983703": [
+                true,
+                false,
+                "E"
+              ],
+              "3039134": [
+                false,
+                false,
+                "E"
+              ],
+              "3258712": [
+                true,
+                false,
+                "E"
+              ],
+              "3438962": [
+                true,
+                false,
+                "C"
+              ],
+              "3493972": [
+                true,
+                false,
+                "C"
+              ],
+              "3514267": [
+                true,
+                false,
+                "C"
+              ],
+              "3514269": [
+                true,
+                true,
+                "C"
+              ],
+              "3514270": [
+                true,
+                true,
+                "E"
+              ],
+              "3830237": [
+                true,
+                false,
+                "E"
+              ],
+              "3830241": [
+                true,
+                false,
+                "C"
+              ],
+              "3831199": [
+                true,
+                false,
+                "E"
+              ],
+              "3831202": [
+                true,
+                false,
+                "E"
+              ],
+              "3919677": [
+                true,
+                true,
+                "C"
+              ]
+            }
+          },
+          "data_base_corrigida": "nome do arquivo = data da folha (20/10); respostas de 19/10",
+          "chave": "Direito Tributário||Princípios Tributários"
+        },
+        {
+          "materia": "Direito Tributário",
+          "assunto": "Repartição da Competência Tributária (Privativa, Comum, Cumulativa, Residual, Extraordinária e Compartilhada)",
+          "data_base": "2026-10-19",
+          "cadeia_completa": true,
+          "alvos_origem": [
+            "3039136",
+            "3604383"
+          ],
+          "reinicios": 0,
+          "status": "ativa",
+          "etapas": {
+            "d1": {
+              "prevista": "2026-10-19",
+              "emitida": "expirada"
+            },
+            "d6": {
+              "prevista": "2026-11-10",
+              "emitida": "2026-11-10",
+              "resultado": null
+            },
+            "d14": {
+              "prevista": "2026-11-24",
+              "emitida": null
+            },
+            "d28": {
+              "prevista": "2026-12-01",
+              "emitida": null
+            }
+          },
+          "amostra_base": {
+            "itens": {
+              "3039136": [
+                false,
+                false,
+                "E"
+              ],
+              "3293584": [
+                true,
+                false,
+                "E"
+              ],
+              "3514272": [
+                true,
+                false,
+                "E"
+              ],
+              "3604383": [
+                true,
+                true,
+                "E"
+              ]
+            }
+          },
+          "data_base_corrigida": "nome do arquivo = data da folha (20/10); respostas de 19/10",
+          "chave": "Direito Tributário||Repartição da Competência Tributária (Privativa, Comum, Cumulativa, Residual, Extraordinária e Compartilhada)"
+        },
+        {
+          "chave": "Direito Constitucional (CF/1988 e Doutrina)||Dos Princípios Gerais (Sistema Tributário Nacional, arts. 145 a 149-B da CF/1988)",
+          "etapas_mantidas": true
+        }
+      ]
     }
   },
   "ultima_fila": {
-    "data": "2026-11-12",
+    "data": "2026-11-13",
     "itens": [
       [
-        "AFO, Direito Financeiro e Contabilidade Pública||Balanço Orçamentário (MCASP e NBC TSP 13)",
+        "AFO, Direito Financeiro e Contabilidade Pública||Funções de Governo",
         "d6"
       ],
       [
-        "AFO, Direito Financeiro e Contabilidade Pública||NBC T 16.11 e MIC 1ª Edição - Sistema de Informação de Custos do Setor Público",
+        "AFO, Direito Financeiro e Contabilidade Pública||LDO - Lei de Diretrizes Orçamentárias (CF/1988 e Lei nº 4.320/1964)",
         "d6"
       ],
       [
-        "AFO, Direito Financeiro e Contabilidade Pública||Sistema de Planejamento e de Orçamento Federal (Lei 10.180/2001)",
-        "d1"
-      ],
-      [
-        "Auditoria Fiscal||MOC NF-e 7.0 — contingência (SVC-AN, SVC-RS, EPEC, FS-DA)",
-        "d1"
-      ],
-      [
-        "Auditoria Fiscal||MOC da NF-e e NFC-e 7.0 — modelo operacional e eventos",
-        "d1"
-      ],
-      [
-        "Auditoria Fiscal||Tabela CFOP — gramática do 1º dígito",
+        "AFO, Direito Financeiro e Contabilidade Pública||Regimes Orçamentário e Patrimonial e Exercício Financeiro",
         "d6"
       ],
       [
-        "Auditoria Fiscal||Tabela cBenef de Alagoas",
+        "AFO, Direito Financeiro e Contabilidade Pública||Técnicas/Espécies Orçamentárias (Orçamento Programa, Tradicional, Participativo, Base Zero, etc)",
         "d6"
       ],
       [
-        "Auditoria Fiscal||Tabelas CST (A e B) e CSOSN",
+        "AFO, Direito Financeiro e Contabilidade Pública||Tópicos Mesclados de PPA, LDO e LOA",
         "d6"
       ],
       [
-        "Contabilidade Geral||Demonstração de Fluxo de Caixa (DFC - CPC 03, Lei 6.404, art. 188, I)",
-        "d1"
-      ],
-      [
-        "Direito Administrativo (Doutrina e Leis Federais)||Modalidades de Licitação (arts. 28 a 32 da Lei nº 14.133/2021)",
+        "Direito Administrativo (Doutrina e Leis Federais)||Controle da Administração: Conceitos, Princípios, Abrangência e Classificações",
         "d6"
       ],
       [
-        "Direito Constitucional (CF/1988 e Doutrina)||Advocacia Privada e Defensoria Pública (arts. 133 a 135 da CF/1988)",
+        "Direito Constitucional (CF/1988 e Doutrina)||Das Atribuições do Presidente da República (art. 84 da CF/1988)",
         "d6"
       ],
       [
-        "Direito Constitucional (CF/1988 e Doutrina)||Competências para Fiscalização e Tribunal de Contas da União (arts. 70 a 73 da CF/1988)",
+        "Direito Constitucional (CF/1988 e Doutrina)||Municípios - Organização e Competências (arts. 29 a 31 da CF/1988)",
         "d6"
       ],
       [
-        "Direito Constitucional (CF/1988 e Doutrina)||Das Comissões Parlamentares - Permanentes e Temporárias (art. 58 da CF/1988)",
+        "Direito Tributário||Imposto sobre Propriedade Territorial Rural - ITR",
         "d6"
       ],
       [
-        "Direito Constitucional (CF/1988 e Doutrina)||Princípios Gerais da Ordem Econômica (arts. 170 a 172 e 175 a 181 da CF/1988)",
+        "Direito Tributário||Jurisprudência dos Tribunais Superiores sobre Obrigação Tributária",
         "d6"
       ],
       [
-        "Direito Penal||Jurisprudência sobre Crimes Praticados por Particular contra a Administração em Geral",
+        "Estatística||Quantis (Mediana, Quartil, Decil, Percentil) e Interpolação Linear da Ogiva",
         "d6"
       ],
       [
-        "Economia e Finanças Públicas||Modelo Keynesiano",
+        "Estatística||Questões Mescladas de Medidas de Posição",
         "d6"
       ],
       [
-        "Economia e Finanças Públicas||Produto Nominal X Produto Real (Deflator do PIB)",
+        "Legislação Tributária Estadual||ICMS-AL — alíquota geral de 20,5% (Lei 9.776/2025)",
         "d6"
       ],
       [
-        "Legislação Tributária Estadual||IPVA — FG, domicílio, contribuinte e solidariedade",
-        "d1"
+        "Legislação Tributária Estadual||ITCD — alíquotas progressivas (Lei 9.440/2024)",
+        "d6"
       ],
       [
-        "Legislação Tributária Estadual||IPVA — lançamento por calendário (Lei 9.780/2025)",
-        "d1"
+        "Legislação Tributária Federal||Do Comitê Gestor do IBS (arts. 480 a 484 da LC nº 214/2025)",
+        "d6"
       ],
       [
-        "Legislação Tributária Estadual||ITCD — incidência, doação, usufruto e competência",
-        "d1"
+        "Legislação Tributária dos Estados e do Distrito Federal||Ajuste SINIEF nº 02/2009 - Escrituração Fiscal Digital (EFD)",
+        "d6"
+      ],
+      [
+        "Legislação Tributária dos Estados e do Distrito Federal||Ajuste SINIEF nº 07/2005 - Nota Fiscal Eletrônica e Documento Auxiliar da Nota Fiscal Eletrônica",
+        "d6"
+      ],
+      [
+        "Legislação Tributária dos Estados e do Distrito Federal||Da Incidência (art. 1º da Lei Estadual nº 5.900/1996)",
+        "d6"
+      ],
+      [
+        "Legislação Tributária dos Estados e do Distrito Federal||Da Não Incidência, da Isenção e Suspensão do Imposto (arts. 3º a 5º da Lei Estadual nº 5.900/1996)",
+        "d6"
+      ],
+      [
+        "Legislação Tributária dos Estados e do Distrito Federal||Lei Estadual nº 5.077/1989 - Código Tributário do Estado de Alagoas (AL)",
+        "d6"
       ]
-    ],
-    "confirmada": "2026-11-12"
+    ]
   },
   "leituras": {
     "2026-09-14||LC 214, arts. 38-56 — não cumulatividade, apropriação e utilização de créditos": {
