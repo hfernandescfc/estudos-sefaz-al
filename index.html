@@ -2515,17 +2515,25 @@ function slotsDaGrade(plano, agora){
   for(let d=1; d<=Math.min(n,5); d++)
     foto[d]=projecaoSlots(replanejar(addDias(seg,d-1)),{dia:d})[cw];
   const vivo=projecaoSlots(plano,{dia:Math.min(n,6),reservado:n<=5?foto[n]:null});
-  const viva=f=>f.rev?f:(plano.info[f.t.id]||f);
+  // A foto guarda a revisita como estava no início do dia (ok:false). Marcada como
+  // Revisitado depois, ela tem de aparecer com ✓ também nos dias já passados — sem
+  // isto o ✓ só durava o próprio dia e sumia na manhã seguinte (13/11/2026).
+  const viva=f=>f.rev?(revisitado(f.t.id)?Object.assign({},f,{resto:0,ok:true}):f):(plano.info[f.t.id]||f);
   vivo[cw]=itensDaSemana(cw).map((it,k)=>{ const d=NUM_DIA[it.d];
     if(d<n&&foto[d]){ const s=foto[d][k]; return {tops:s.tops.map(viva),tipo:s.tipo}; }
     return vivo[cw][k]; });
   return vivo;
 }
-// Sessões C/E já geradas (sessoes_ce.js): 📝 pendente, ✓ feita. Só para dataISO de hoje em
-// diante — a grade do passado fica como estava (pedido do usuário, 11/11/2026).
+// Sessões C/E já geradas (sessoes_ce.js): 📝 pendente, ✓ feita. Da SEGUNDA da semana
+// corrente em diante — as semanas passadas ficam como estavam (pedido do usuário,
+// 11/11/2026). Até 13/11 o corte era "hoje": o chip sumia do slot de ontem, que é
+// justamente onde a sessão estava associada, e parecia atualização perdida.
 function hojeLocalISO(){ const d=new Date(); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`; }
+function inicioSemanaISO(){ const [y,m,d]=hojeLocalISO().split("-").map(Number), t=new Date(y,m-1,d);
+  t.setDate(t.getDate()-((t.getDay()+6)%7));
+  return `${t.getFullYear()}-${String(t.getMonth()+1).padStart(2,"0")}-${String(t.getDate()).padStart(2,"0")}`; }
 function marcaSessoesCE(id, dataISO){
-  if(!dataISO||dataISO<hojeLocalISO()) return "";
+  if(!dataISO||dataISO<inicioSemanaISO()) return "";
   const l=window.SESSOES_CE&&window.SESSOES_CE.por_topico&&window.SESSOES_CE.por_topico[String(id)];
   if(!l||!l.length) return "";
   return " "+l.map(s=>{ const g=s.gerado?`, gerada em ${fmtData(s.gerado)}`:"";
