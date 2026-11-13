@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-11-12T08:03:40",
+ "gerado_em": "2026-11-13T08:30:07",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -496,10 +496,10 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-03~peculato-art-312-do-cp-71742b",
+   "uid": "TEC~2026-09-03~peculato-art-312-do-cp-84a802",
    "origem": "tec",
    "data": "2026-09-03",
-   "mat": "DTRIB",
+   "mat": "DADM",
    "topicId": null,
    "assuntoLivre": "Peculato (art. 312 do CP)",
    "minutos": 1,
@@ -544,10 +544,10 @@ window.SESSOES_TEC = {
    "obs": "reconstruída do TEC"
   },
   {
-   "uid": "TEC~2026-09-03~questoes-mescladas-sobre-crimes-praticados-por-funcionario-p-db497d",
+   "uid": "TEC~2026-09-03~questoes-mescladas-sobre-crimes-praticados-por-funcionario-p-d50a16",
    "origem": "tec",
    "data": "2026-09-03",
-   "mat": "DTRIB",
+   "mat": "DADM",
    "topicId": null,
    "assuntoLivre": "Questões Mescladas sobre Crimes Praticados por Funcionário Público contra a Administração em Geral (arts. 312 a 327 do CP)",
    "minutos": 1,
@@ -6553,6 +6553,210 @@ window.SESSOES_TEC = {
    "minutos": 2,
    "qResolvidas": 7,
    "qAcertadas": 6,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "SIM~AF15~2026-11-12~AUDFIS",
+   "origem": "simulado",
+   "data": "2026-11-12",
+   "mat": "AUDFIS",
+   "topicId": null,
+   "assuntoLivre": "Simulado AF15 — AUDFIS",
+   "minutos": 8,
+   "qResolvidas": 23,
+   "qAcertadas": 14,
+   "obs": "Simulado AF15 (Q1-23) cronometrado"
+  },
+  {
+   "uid": "SIM~RT15~2026-11-12~RT",
+   "origem": "simulado",
+   "data": "2026-11-12",
+   "mat": "RT",
+   "topicId": null,
+   "assuntoLivre": "Simulado RT15 — RT",
+   "minutos": 4,
+   "qResolvidas": 22,
+   "qAcertadas": 17,
+   "obs": "Simulado RT15 (Q1-22) cronometrado"
+  },
+  {
+   "uid": "TEC~2026-11-12~224",
+   "origem": "tec",
+   "data": "2026-11-12",
+   "mat": "CDADOS",
+   "topicId": "224",
+   "assuntoLivre": "",
+   "minutos": 1,
+   "qResolvidas": 1,
+   "qAcertadas": 1,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-12~231",
+   "origem": "tec",
+   "data": "2026-11-12",
+   "mat": "CDADOS",
+   "topicId": "231",
+   "assuntoLivre": "",
+   "minutos": 3,
+   "qResolvidas": 14,
+   "qAcertadas": 14,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-12~319",
+   "origem": "tec",
+   "data": "2026-11-12",
+   "mat": "CPUB",
+   "topicId": "319",
+   "assuntoLivre": "",
+   "minutos": 3,
+   "qResolvidas": 7,
+   "qAcertadas": 7,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-12~324",
+   "origem": "tec",
+   "data": "2026-11-12",
+   "mat": "CPUB",
+   "topicId": "324",
+   "assuntoLivre": "",
+   "minutos": 2,
+   "qResolvidas": 8,
+   "qAcertadas": 6,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-12~353",
+   "origem": "tec",
+   "data": "2026-11-12",
+   "mat": "DCON",
+   "topicId": "353",
+   "assuntoLivre": "",
+   "minutos": 1,
+   "qResolvidas": 5,
+   "qAcertadas": 5,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-12~354",
+   "origem": "tec",
+   "data": "2026-11-12",
+   "mat": "DCON",
+   "topicId": "354",
+   "assuntoLivre": "",
+   "minutos": 3,
+   "qResolvidas": 15,
+   "qAcertadas": 12,
+   "obs": "reconstruída do TEC (2 assuntos)"
+  },
+  {
+   "uid": "TEC~2026-11-12~356",
+   "origem": "tec",
+   "data": "2026-11-12",
+   "mat": "DCON",
+   "topicId": "356",
+   "assuntoLivre": "",
+   "minutos": 2,
+   "qResolvidas": 7,
+   "qAcertadas": 7,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-12~360",
+   "origem": "tec",
+   "data": "2026-11-12",
+   "mat": "DCON",
+   "topicId": "360",
+   "assuntoLivre": "",
+   "minutos": 6,
+   "qResolvidas": 20,
+   "qAcertadas": 17,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-12~361",
+   "origem": "tec",
+   "data": "2026-11-12",
+   "mat": "DCON",
+   "topicId": "361",
+   "assuntoLivre": "",
+   "minutos": 2,
+   "qResolvidas": 6,
+   "qAcertadas": 4,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-12~367",
+   "origem": "tec",
+   "data": "2026-11-12",
+   "mat": "DCON",
+   "topicId": "367",
+   "assuntoLivre": "",
+   "minutos": 1,
+   "qResolvidas": 2,
+   "qAcertadas": 2,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-12~461",
+   "origem": "tec",
+   "data": "2026-11-12",
+   "mat": "MATFIN",
+   "topicId": "461",
+   "assuntoLivre": "",
+   "minutos": 120,
+   "qResolvidas": 5,
+   "qAcertadas": 3,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-12~462",
+   "origem": "tec",
+   "data": "2026-11-12",
+   "mat": "MATFIN",
+   "topicId": "462",
+   "assuntoLivre": "",
+   "minutos": 18,
+   "qResolvidas": 6,
+   "qAcertadas": 5,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-12~467",
+   "origem": "tec",
+   "data": "2026-11-12",
+   "mat": "MATFIN",
+   "topicId": "467",
+   "assuntoLivre": "",
+   "minutos": 8,
+   "qResolvidas": 4,
+   "qAcertadas": 4,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-12~49",
+   "origem": "tec",
+   "data": "2026-11-12",
+   "mat": "DEV",
+   "topicId": "49",
+   "assuntoLivre": "",
+   "minutos": 7,
+   "qResolvidas": 20,
+   "qAcertadas": 17,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-12~56",
+   "origem": "tec",
+   "data": "2026-11-12",
+   "mat": "DEV",
+   "topicId": "56",
+   "assuntoLivre": "",
+   "minutos": 5,
+   "qResolvidas": 21,
+   "qAcertadas": 18,
    "obs": "reconstruída do TEC"
   }
  ]
