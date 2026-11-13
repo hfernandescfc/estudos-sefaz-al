@@ -2644,6 +2644,30 @@ function cronoNav(d){
 }
 function cronoHoje(){ cronoWeek=null; renderCronograma(); }
 
+/* Sessões questao-ce pendentes cujo assunto não tem slot de hoje em diante (13/11/2026,
+   pedido do usuário). O chip 📝 só aparece no slot do assunto; sessão de assunto já
+   concluído, sem revisita ou fora do escopo da reta final não tinha onde aparecer. */
+function sessoesForaDaGrade(plano, agora){
+  const P=window.SESSOES_CE&&window.SESSOES_CE.por_topico; if(!P) return [];
+  agora=agora||new Date();
+  const hoje=hojeLocalISO(), proj=slotsDaGrade(plano, agora), naGrade=new Set();
+  Object.keys(proj).forEach(w=>{ const its=itensDaSemana(+w);
+    proj[w].forEach((s,k)=>{ const it=its[k]; if(!s||!it) return;
+      if(dataDoDia(+w,it.d)<hoje) return;
+      s.tops.forEach(i=>naGrade.add(String(i.t.id))); }); });
+  const porSessao={};
+  Object.entries(P).forEach(([id,l])=>{ if(naGrade.has(id)) return;
+    l.filter(s=>!s.feita).forEach(s=>{ (porSessao[s.id]=porSessao[s.id]||[]).push(id); }); });
+  return Object.keys(porSessao).sort().map(sid=>({id:sid, tops:porSessao[sid]}));
+}
+function cardSessoesFora(plano, agora){
+  const l=sessoesForaDaGrade(plano, agora); if(!l.length) return "";
+  const nome=id=>{ const t=SEED_TOPICS.find(x=>String(x.id)===id); return t?t.assunto:`tópico ${id}`; };
+  return `<div class="card" style="border-color:var(--warn)"><b>📝 Sessões questao-ce pendentes fora da grade</b> <span class="muted">(o assunto não tem slot de hoje até a prova, então o chip não aparece em dia nenhum)</span><br>`
+    + l.map(s=>`<span class="ce-lk" title="09_Simulados/Simulado_${s.id}…/prova_interativa.html">📝${s.id}</span> ${s.tops.map(id=>escapeHtml(nome(id))).join(" · ")}`).join("<br>")
+    + `</div>`;
+}
+
 function renderCronograma(){
   const plano=replanejar();
   const now=new Date();
@@ -2663,6 +2687,8 @@ function renderCronograma(){
     : `45min de fila + grade da semana — ${durDia}`;
   let html=`<div class="card"><b>Período:</b> 07/09/2026 → 20/12/2026 · Segunda a sexta · ${gradeTxt} · fim de semana livre, exceto os simulados: ${sims}.<br>
   <span class="muted">A <b>fila de revisão vem primeiro e não é negociável</b>. ${meta.grade?`Em cada slot: <b>📖15′</b> de leitura antes das questões quando marcado; depois a 1ª passagem pendente e, no que sobrar, a revisita (🔁) da mesma matéria.`:`Em cada bloco, atacar primeiro os <b>P1</b>; os marcados <b>🔨 gerar</b> não têm questão em banca nenhuma — é onde a posição sai mais barata.`} Prova objetiva <b>20/12</b> (160 itens C/E, 4h30) · discursiva <b>10/01/2027</b>.</span></div>`;
+
+  html+=cardSessoesFora(plano, now);
 
   // Resumo do replanejamento (execução real × plano)
   const infosP=Object.values(plano.info);
