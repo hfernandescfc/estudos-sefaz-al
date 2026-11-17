@@ -160,7 +160,7 @@
         "3258722"
       ],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-10-26",
@@ -168,16 +168,43 @@
         },
         "d6": {
           "prevista": "2026-11-19",
-          "emitida": null,
-          "resultado": null
+          "emitida": "dispensada",
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 90,
+            "questoes": 10,
+            "palpites": 1,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 90,
+            "questoes_origem": 10
+          }
         },
         "d14": {
           "prevista": "2026-12-08",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 90,
+            "questoes_origem": 10
+          }
         },
         "d28": {
           "prevista": "2026-12-10",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 90,
+            "questoes_origem": 10
+          }
         }
       },
       "amostra_base": {
@@ -355,11 +382,11 @@
           }
         },
         "d14": {
-          "prevista": "2026-11-20",
+          "prevista": "2026-11-18",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-27",
+          "prevista": "2026-11-24",
           "emitida": null
         }
       },
@@ -578,7 +605,7 @@
         "3962569"
       ],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-10-29",
@@ -587,15 +614,42 @@
         "d6": {
           "prevista": "2026-11-11",
           "emitida": "2026-11-11",
-          "resultado": null
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 82,
+            "questoes": 52,
+            "palpites": 3,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 82,
+            "questoes_origem": 52
+          }
         },
         "d14": {
           "prevista": "2026-11-25",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 82,
+            "questoes_origem": 52
+          }
         },
         "d28": {
           "prevista": "2026-12-03",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 82,
+            "questoes_origem": 52
+          }
         }
       },
       "amostra_base": {
@@ -972,16 +1026,16 @@
           "emitida": "2026-11-11"
         },
         "d6": {
-          "prevista": "2026-11-18",
+          "prevista": "2026-11-17",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-10",
+          "prevista": "2026-12-02",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-14",
+          "prevista": "2026-12-08",
           "emitida": null
         }
       },
@@ -1494,7 +1548,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-03",
+          "prevista": "2026-11-27",
           "emitida": null
         },
         "d28": {
@@ -1640,7 +1694,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-04",
+          "prevista": "2026-11-30",
           "emitida": null
         },
         "d28": {
@@ -1743,7 +1797,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-02",
+          "prevista": "2026-11-26",
           "emitida": null
         },
         "d28": {
@@ -1891,7 +1945,7 @@
           "emitida": "2026-10-01"
         },
         "d28": {
-          "prevista": "2026-11-30",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       }
@@ -1931,7 +1985,7 @@
           "emitida": "2026-09-30"
         },
         "d28": {
-          "prevista": "2026-12-08",
+          "prevista": "2026-12-01",
           "emitida": null
         }
       }
@@ -1983,7 +2037,7 @@
           "emitida": "2026-09-30"
         },
         "d28": {
-          "prevista": "2026-11-26",
+          "prevista": "2026-11-24",
           "emitida": null
         }
       }
@@ -2011,7 +2065,7 @@
         "3081634"
       ],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-09-17",
@@ -2045,7 +2099,14 @@
         },
         "d28": {
           "prevista": "2026-11-26",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "dominio_d6": 80,
+            "questoes_d6": 10,
+            "modo_d6": "bateria",
+            "medida_em": "d6"
+          }
         }
       }
     },
@@ -2112,7 +2173,7 @@
           "emitida": "2026-10-02"
         },
         "d28": {
-          "prevista": "2026-11-26",
+          "prevista": "2026-11-24",
           "emitida": null
         }
       }
@@ -2142,11 +2203,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-11-27",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-08",
+          "prevista": "2026-12-01",
           "emitida": null
         }
       }
@@ -2175,11 +2236,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-23",
+          "prevista": "2026-11-19",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-27",
+          "prevista": "2026-11-24",
           "emitida": null
         }
       },
@@ -2246,11 +2307,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-11-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-09",
+          "prevista": "2026-12-01",
           "emitida": null
         }
       },
@@ -2342,11 +2403,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-11-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-08",
+          "prevista": "2026-12-01",
           "emitida": null
         }
       }
@@ -2481,11 +2542,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-11-27",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-08",
+          "prevista": "2026-12-01",
           "emitida": null
         }
       },
@@ -2690,7 +2751,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-24",
+          "prevista": "2026-11-20",
           "emitida": null,
           "grade_sem_teste": [
             {
@@ -2701,7 +2762,7 @@
           ]
         },
         "d28": {
-          "prevista": "2026-11-30",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       },
@@ -2827,7 +2888,7 @@
           "emitida": "2026-10-01"
         },
         "d28": {
-          "prevista": "2026-11-30",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       }
@@ -2868,11 +2929,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-20",
+          "prevista": "2026-11-18",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-26",
+          "prevista": "2026-11-23",
           "emitida": null
         }
       },
@@ -3487,7 +3548,7 @@
           "emitida": "2026-10-09"
         },
         "d28": {
-          "prevista": "2026-11-26",
+          "prevista": "2026-11-23",
           "emitida": null
         }
       },
@@ -3831,7 +3892,7 @@
       "cadeia_completa": true,
       "alvos_origem": [],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-09-28",
@@ -3840,15 +3901,42 @@
         "d6": {
           "prevista": "2026-10-07",
           "emitida": "2026-10-07",
-          "resultado": null
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 100,
+            "questoes": 3,
+            "palpites": 0,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 3
+          }
         },
         "d14": {
           "prevista": "2026-11-25",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 3
+          }
         },
         "d28": {
           "prevista": "2026-11-30",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 3
+          }
         }
       },
       "amostra_base": {
@@ -3903,7 +3991,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-02",
+          "prevista": "2026-11-26",
           "emitida": null
         },
         "d28": {
@@ -4105,7 +4193,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-02",
+          "prevista": "2026-11-26",
           "emitida": null
         },
         "d28": {
@@ -4290,7 +4378,7 @@
           "emitida": "2026-10-09"
         },
         "d28": {
-          "prevista": "2026-11-26",
+          "prevista": "2026-11-23",
           "emitida": null
         }
       },
@@ -4487,11 +4575,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-23",
+          "prevista": "2026-11-18",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-27",
+          "prevista": "2026-11-24",
           "emitida": null
         }
       },
@@ -4791,7 +4879,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-02",
+          "prevista": "2026-11-26",
           "emitida": null
         },
         "d28": {
@@ -4920,7 +5008,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-02",
+          "prevista": "2026-11-26",
           "emitida": null
         },
         "d28": {
@@ -5122,11 +5210,11 @@
           }
         },
         "d14": {
-          "prevista": "2026-11-20",
+          "prevista": "2026-11-18",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-26",
+          "prevista": "2026-11-23",
           "emitida": null
         }
       },
@@ -5233,11 +5321,11 @@
           }
         },
         "d14": {
-          "prevista": "2026-11-20",
+          "prevista": "2026-11-18",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-27",
+          "prevista": "2026-11-24",
           "emitida": null
         }
       },
@@ -5367,11 +5455,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-25",
+          "prevista": "2026-11-23",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-30",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       },
@@ -5453,11 +5541,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-20",
+          "prevista": "2026-11-18",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-26",
+          "prevista": "2026-11-24",
           "emitida": null
         }
       },
@@ -5557,11 +5645,11 @@
           }
         },
         "d14": {
-          "prevista": "2026-11-24",
+          "prevista": "2026-11-19",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-27",
+          "prevista": "2026-11-24",
           "emitida": null
         }
       },
@@ -5817,7 +5905,7 @@
         "3008746"
       ],
       "reinicios": 1,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-10-14",
@@ -5840,11 +5928,25 @@
         },
         "d14": {
           "prevista": "2026-11-24",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "dominio_d6": 100,
+            "questoes_d6": 6,
+            "modo_d6": "bateria",
+            "medida_em": "d6"
+          }
         },
         "d28": {
           "prevista": "2026-11-30",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "dominio_d6": 100,
+            "questoes_d6": 6,
+            "modo_d6": "bateria",
+            "medida_em": "d6"
+          }
         }
       },
       "amostra_base": {
@@ -6113,11 +6215,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-23",
+          "prevista": "2026-11-19",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-27",
+          "prevista": "2026-11-24",
           "emitida": null
         }
       },
@@ -6248,11 +6350,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-23",
+          "prevista": "2026-11-18",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-27",
+          "prevista": "2026-11-24",
           "emitida": null
         }
       },
@@ -6744,11 +6846,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-23",
+          "prevista": "2026-11-19",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-27",
+          "prevista": "2026-11-24",
           "emitida": null
         }
       },
@@ -6841,7 +6943,7 @@
         "3857429"
       ],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-10-02",
@@ -6850,15 +6952,42 @@
         "d6": {
           "prevista": "2026-10-08",
           "emitida": "2026-10-08",
-          "resultado": null
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 82,
+            "questoes": 37,
+            "palpites": 5,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 82,
+            "questoes_origem": 37
+          }
         },
         "d14": {
           "prevista": "2026-11-20",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 82,
+            "questoes_origem": 37
+          }
         },
         "d28": {
           "prevista": "2026-11-27",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 82,
+            "questoes_origem": 37
+          }
         }
       },
       "amostra_base": {
@@ -7067,16 +7196,16 @@
           "emitida": "2026-10-05"
         },
         "d6": {
-          "prevista": "2026-11-18",
+          "prevista": "2026-11-17",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-08",
+          "prevista": "2026-11-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-09",
+          "prevista": "2026-12-01",
           "emitida": null
         }
       },
@@ -7152,11 +7281,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-24",
+          "prevista": "2026-11-20",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-30",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       },
@@ -7251,11 +7380,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-25",
+          "prevista": "2026-11-23",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-30",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       },
@@ -7407,11 +7536,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-24",
+          "prevista": "2026-11-20",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-27",
+          "prevista": "2026-11-24",
           "emitida": null
         }
       },
@@ -8261,11 +8390,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-25",
+          "prevista": "2026-11-20",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-30",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       },
@@ -8367,11 +8496,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-24",
+          "prevista": "2026-11-20",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-27",
+          "prevista": "2026-11-24",
           "emitida": null
         }
       },
@@ -8491,7 +8620,7 @@
         "905299"
       ],
       "reinicios": 1,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-10-27",
@@ -8514,11 +8643,25 @@
         },
         "d14": {
           "prevista": "2026-11-24",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "dominio_d6": 83,
+            "questoes_d6": 12,
+            "modo_d6": "bateria",
+            "medida_em": "d6"
+          }
         },
         "d28": {
           "prevista": "2026-12-02",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "dominio_d6": 83,
+            "questoes_d6": 12,
+            "modo_d6": "bateria",
+            "medida_em": "d6"
+          }
         }
       },
       "amostra_base": {
@@ -8563,7 +8706,7 @@
       "cadeia_completa": true,
       "alvos_origem": [],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-10-08",
@@ -8572,15 +8715,42 @@
         "d6": {
           "prevista": "2026-11-16",
           "emitida": "2026-11-16",
-          "resultado": null
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 100,
+            "questoes": 8,
+            "palpites": 0,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 8
+          }
         },
         "d14": {
           "prevista": "2026-11-25",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 8
+          }
         },
         "d28": {
           "prevista": "2026-11-30",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 8
+          }
         }
       },
       "amostra_base": {
@@ -8900,7 +9070,7 @@
       "cadeia_completa": true,
       "alvos_origem": [],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-10-08",
@@ -8909,15 +9079,42 @@
         "d6": {
           "prevista": "2026-11-16",
           "emitida": "2026-11-16",
-          "resultado": null
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 100,
+            "questoes": 5,
+            "palpites": 0,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 5
+          }
         },
         "d14": {
           "prevista": "2026-11-25",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 5
+          }
         },
         "d28": {
           "prevista": "2026-11-30",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 5
+          }
         }
       },
       "origem": "simulado",
@@ -8982,7 +9179,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-02",
+          "prevista": "2026-11-26",
           "emitida": null
         },
         "d28": {
@@ -9243,11 +9440,11 @@
           }
         },
         "d14": {
-          "prevista": "2026-11-24",
+          "prevista": "2026-11-20",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-27",
+          "prevista": "2026-11-24",
           "emitida": null
         }
       },
@@ -9485,11 +9682,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-23",
+          "prevista": "2026-11-19",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-27",
+          "prevista": "2026-11-24",
           "emitida": null
         }
       },
@@ -9657,11 +9854,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-20",
+          "prevista": "2026-11-18",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-26",
+          "prevista": "2026-11-23",
           "emitida": null
         }
       },
@@ -9937,11 +10134,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-23",
+          "prevista": "2026-11-19",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-27",
+          "prevista": "2026-11-24",
           "emitida": null
         }
       },
@@ -10077,7 +10274,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-02",
+          "prevista": "2026-11-26",
           "emitida": null
         },
         "d28": {
@@ -10225,11 +10422,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-24",
+          "prevista": "2026-11-20",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-27",
+          "prevista": "2026-11-24",
           "emitida": null
         }
       },
@@ -10290,11 +10487,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-23",
+          "prevista": "2026-11-19",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-27",
+          "prevista": "2026-11-24",
           "emitida": null
         }
       },
@@ -10401,7 +10598,7 @@
         "2876287"
       ],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-10-14",
@@ -10425,11 +10622,25 @@
         },
         "d14": {
           "prevista": "2026-11-24",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "dominio_d6": 80,
+            "questoes_d6": 7,
+            "modo_d6": "bateria",
+            "medida_em": "d6"
+          }
         },
         "d28": {
           "prevista": "2026-11-27",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "dominio_d6": 80,
+            "questoes_d6": 7,
+            "modo_d6": "bateria",
+            "medida_em": "d6"
+          }
         }
       },
       "amostra_base": {
@@ -10511,11 +10722,11 @@
           }
         },
         "d14": {
-          "prevista": "2026-11-24",
+          "prevista": "2026-11-20",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-02",
+          "prevista": "2026-11-26",
           "emitida": null
         }
       },
@@ -10580,11 +10791,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-25",
+          "prevista": "2026-11-23",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-30",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       },
@@ -10724,16 +10935,16 @@
           "emitida": "2026-10-15"
         },
         "d6": {
-          "prevista": "2026-11-18",
+          "prevista": "2026-11-17",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-11-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-09",
+          "prevista": "2026-12-01",
           "emitida": null
         }
       },
@@ -10779,11 +10990,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-25",
+          "prevista": "2026-11-20",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-30",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       },
@@ -10834,16 +11045,16 @@
           "emitida": "2026-10-15"
         },
         "d6": {
-          "prevista": "2026-11-18",
+          "prevista": "2026-11-17",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-11-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-09",
+          "prevista": "2026-12-01",
           "emitida": null
         }
       },
@@ -11123,7 +11334,7 @@
         "2847918"
       ],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-10-15",
@@ -11146,11 +11357,25 @@
         },
         "d14": {
           "prevista": "2026-11-20",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "dominio_d6": 80,
+            "questoes_d6": 10,
+            "modo_d6": "bateria",
+            "medida_em": "d6"
+          }
         },
         "d28": {
           "prevista": "2026-11-26",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "dominio_d6": 80,
+            "questoes_d6": 10,
+            "modo_d6": "bateria",
+            "medida_em": "d6"
+          }
         }
       },
       "amostra_base": {
@@ -11670,7 +11895,7 @@
         "3965217"
       ],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-10-20",
@@ -11679,15 +11904,42 @@
         "d6": {
           "prevista": "2026-10-28",
           "emitida": "2026-10-28",
-          "resultado": null
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 81,
+            "questoes": 31,
+            "palpites": 3,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 81,
+            "questoes_origem": 31
+          }
         },
         "d14": {
           "prevista": "2026-11-24",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 81,
+            "questoes_origem": 31
+          }
         },
         "d28": {
           "prevista": "2026-11-27",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 81,
+            "questoes_origem": 31
+          }
         }
       },
       "amostra_base": {
@@ -12641,16 +12893,16 @@
           "emitida": "expirada"
         },
         "d6": {
-          "prevista": "2026-11-18",
+          "prevista": "2026-11-17",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-08",
+          "prevista": "2026-11-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-09",
+          "prevista": "2026-12-01",
           "emitida": null
         }
       },
@@ -12699,11 +12951,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-24",
+          "prevista": "2026-11-20",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-27",
+          "prevista": "2026-11-24",
           "emitida": null
         }
       },
@@ -12824,11 +13076,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-20",
+          "prevista": "2026-11-18",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-26",
+          "prevista": "2026-11-23",
           "emitida": null
         }
       },
@@ -13000,11 +13252,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-01",
+          "prevista": "2026-11-25",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-04",
+          "prevista": "2026-12-03",
           "emitida": null
         }
       },
@@ -13207,11 +13459,11 @@
           }
         },
         "d14": {
-          "prevista": "2026-11-25",
+          "prevista": "2026-11-23",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-30",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       },
@@ -13268,7 +13520,7 @@
       "cadeia_completa": true,
       "alvos_origem": [],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-10-23",
@@ -13277,15 +13529,42 @@
         "d6": {
           "prevista": "2026-11-16",
           "emitida": "2026-11-16",
-          "resultado": null
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 100,
+            "questoes": 5,
+            "palpites": 0,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 5
+          }
         },
         "d14": {
           "prevista": "2026-11-25",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 5
+          }
         },
         "d28": {
           "prevista": "2026-11-30",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 5
+          }
         }
       },
       "amostra_base": {
@@ -13572,11 +13851,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-25",
+          "prevista": "2026-11-23",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-30",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       },
@@ -13757,7 +14036,7 @@
       "cadeia_completa": true,
       "alvos_origem": [],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-10-20",
@@ -13766,15 +14045,42 @@
         "d6": {
           "prevista": "2026-11-16",
           "emitida": "2026-11-16",
-          "resultado": null
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 100,
+            "questoes": 8,
+            "palpites": 0,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 8
+          }
         },
         "d14": {
           "prevista": "2026-11-26",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 8
+          }
         },
         "d28": {
           "prevista": "2026-11-30",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 8
+          }
         }
       },
       "amostra_base": {
@@ -13862,11 +14168,11 @@
           }
         },
         "d14": {
-          "prevista": "2026-11-20",
+          "prevista": "2026-11-18",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-26",
+          "prevista": "2026-11-23",
           "emitida": null
         }
       },
@@ -14044,11 +14350,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-24",
+          "prevista": "2026-11-20",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-30",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       },
@@ -14188,11 +14494,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-23",
+          "prevista": "2026-11-19",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-27",
+          "prevista": "2026-11-24",
           "emitida": null
         }
       },
@@ -14243,7 +14549,7 @@
         "2993129"
       ],
       "reinicios": 1,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-11-09",
@@ -14266,7 +14572,7 @@
         },
         "d14": {
           "prevista": "2026-12-10",
-          "emitida": null,
+          "emitida": "dispensada",
           "grade": {
             "semana": 12,
             "via": "rev",
@@ -14275,11 +14581,25 @@
               "2026-11-26"
             ],
             "desde": "2026-11-17"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "dominio_d6": 80,
+            "questoes_d6": 9,
+            "modo_d6": "bateria",
+            "medida_em": "d6"
           }
         },
         "d28": {
           "prevista": "2026-12-11",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "dominio_d6": 80,
+            "questoes_d6": 9,
+            "modo_d6": "bateria",
+            "medida_em": "d6"
+          }
         }
       },
       "amostra_base": {
@@ -14434,16 +14754,16 @@
           "emitida": "2026-10-23"
         },
         "d6": {
-          "prevista": "2026-11-19",
+          "prevista": "2026-11-17",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-08",
+          "prevista": "2026-11-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-09",
+          "prevista": "2026-12-01",
           "emitida": null
         }
       },
@@ -14489,16 +14809,16 @@
           "emitida": "2026-10-23"
         },
         "d6": {
-          "prevista": "2026-11-18",
+          "prevista": "2026-11-17",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-11-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-09",
+          "prevista": "2026-12-01",
           "emitida": null
         }
       },
@@ -14573,11 +14893,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-01",
+          "prevista": "2026-11-25",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-04",
+          "prevista": "2026-12-03",
           "emitida": null
         }
       },
@@ -14839,16 +15159,16 @@
           "emitida": "2026-10-23"
         },
         "d6": {
-          "prevista": "2026-11-18",
+          "prevista": "2026-11-17",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-11-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-09",
+          "prevista": "2026-12-01",
           "emitida": null
         }
       },
@@ -14944,16 +15264,16 @@
           "emitida": "2026-10-23"
         },
         "d6": {
-          "prevista": "2026-11-18",
+          "prevista": "2026-11-17",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-11-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-09",
+          "prevista": "2026-12-01",
           "emitida": null
         }
       },
@@ -15007,11 +15327,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-23",
+          "prevista": "2026-11-19",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-01",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       },
@@ -15069,7 +15389,7 @@
         "3827705"
       ],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-10-23",
@@ -15077,16 +15397,43 @@
         },
         "d6": {
           "prevista": "2026-11-19",
-          "emitida": null,
-          "resultado": null
+          "emitida": "dispensada",
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 80,
+            "questoes": 5,
+            "palpites": 1,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 80,
+            "questoes_origem": 5
+          }
         },
         "d14": {
           "prevista": "2026-12-08",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 80,
+            "questoes_origem": 5
+          }
         },
         "d28": {
           "prevista": "2026-12-09",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 80,
+            "questoes_origem": 5
+          }
         }
       },
       "amostra_base": {
@@ -15143,11 +15490,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-24",
+          "prevista": "2026-11-20",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-02",
+          "prevista": "2026-11-26",
           "emitida": null
         }
       },
@@ -15376,7 +15723,7 @@
           }
         },
         "d14": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-11-30",
           "emitida": null,
           "grade_sem_teste": [
             {
@@ -15387,7 +15734,7 @@
           ]
         },
         "d28": {
-          "prevista": "2026-12-09",
+          "prevista": "2026-12-01",
           "emitida": null
         }
       },
@@ -15525,7 +15872,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-24",
+          "prevista": "2026-11-20",
           "emitida": null,
           "grade_sem_teste": [
             {
@@ -15536,7 +15883,7 @@
           ]
         },
         "d28": {
-          "prevista": "2026-12-01",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       },
@@ -15622,16 +15969,16 @@
           "emitida": "2026-10-23"
         },
         "d6": {
-          "prevista": "2026-11-18",
+          "prevista": "2026-11-17",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-11-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-09",
+          "prevista": "2026-12-01",
           "emitida": null
         }
       },
@@ -15674,7 +16021,7 @@
         "2150710"
       ],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-10-23",
@@ -15683,15 +16030,42 @@
         "d6": {
           "prevista": "2026-11-13",
           "emitida": "2026-11-13",
-          "resultado": null
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 82,
+            "questoes": 11,
+            "palpites": 0,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 82,
+            "questoes_origem": 11
+          }
         },
         "d14": {
           "prevista": "2026-11-25",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 82,
+            "questoes_origem": 11
+          }
         },
         "d28": {
           "prevista": "2026-12-01",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 82,
+            "questoes_origem": 11
+          }
         }
       },
       "amostra_base": {
@@ -16238,7 +16612,7 @@
         "2151355"
       ],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-10-23",
@@ -16247,15 +16621,42 @@
         "d6": {
           "prevista": "2026-11-09",
           "emitida": "2026-11-09",
-          "resultado": null
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 80,
+            "questoes": 20,
+            "palpites": 2,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 80,
+            "questoes_origem": 20
+          }
         },
         "d14": {
           "prevista": "2026-11-24",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 80,
+            "questoes_origem": 20
+          }
         },
         "d28": {
           "prevista": "2026-12-01",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 80,
+            "questoes_origem": 20
+          }
         }
       },
       "amostra_base": {
@@ -16380,16 +16781,16 @@
           "emitida": "2026-10-23"
         },
         "d6": {
-          "prevista": "2026-11-18",
+          "prevista": "2026-11-17",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-11-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-10",
+          "prevista": "2026-12-02",
           "emitida": null
         }
       },
@@ -16737,16 +17138,16 @@
           "emitida": "2026-10-23"
         },
         "d6": {
-          "prevista": "2026-11-19",
+          "prevista": "2026-11-17",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-08",
+          "prevista": "2026-11-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-10",
+          "prevista": "2026-12-02",
           "emitida": null
         }
       },
@@ -16791,11 +17192,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-25",
+          "prevista": "2026-11-23",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-01",
+          "prevista": "2026-11-25",
           "emitida": null
         }
       },
@@ -16845,16 +17246,16 @@
           "emitida": "2026-10-23"
         },
         "d6": {
-          "prevista": "2026-11-19",
+          "prevista": "2026-11-17",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-08",
+          "prevista": "2026-11-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-10",
+          "prevista": "2026-12-02",
           "emitida": null
         }
       },
@@ -16999,16 +17400,16 @@
           "emitida": "2026-10-23"
         },
         "d6": {
-          "prevista": "2026-11-19",
+          "prevista": "2026-11-17",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-08",
+          "prevista": "2026-11-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-10",
+          "prevista": "2026-12-02",
           "emitida": null
         }
       },
@@ -17039,7 +17440,7 @@
       "cadeia_completa": true,
       "alvos_origem": [],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-10-22",
@@ -17061,11 +17462,25 @@
         },
         "d14": {
           "prevista": "2026-11-26",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "dominio_d6": 100,
+            "questoes_d6": 12,
+            "modo_d6": "breve",
+            "medida_em": "d6"
+          }
         },
         "d28": {
           "prevista": "2026-12-01",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "dominio_d6": 100,
+            "questoes_d6": 12,
+            "modo_d6": "breve",
+            "medida_em": "d6"
+          }
         }
       },
       "amostra_base": {
@@ -17149,16 +17564,16 @@
           "emitida": "2026-10-23"
         },
         "d6": {
-          "prevista": "2026-11-19",
+          "prevista": "2026-11-17",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-08",
+          "prevista": "2026-11-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-10",
+          "prevista": "2026-12-02",
           "emitida": null
         }
       },
@@ -17207,11 +17622,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-11-27",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-10",
+          "prevista": "2026-12-02",
           "emitida": null
         }
       },
@@ -17377,11 +17792,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-11-27",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-10",
+          "prevista": "2026-12-02",
           "emitida": null
         }
       },
@@ -17440,7 +17855,7 @@
         "4033909"
       ],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-10-26",
@@ -17448,16 +17863,43 @@
         },
         "d6": {
           "prevista": "2026-11-18",
-          "emitida": null,
-          "resultado": null
+          "emitida": "dispensada",
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 83,
+            "questoes": 12,
+            "palpites": 2,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 83,
+            "questoes_origem": 12
+          }
         },
         "d14": {
           "prevista": "2026-12-07",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 83,
+            "questoes_origem": 12
+          }
         },
         "d28": {
           "prevista": "2026-12-10",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 83,
+            "questoes_origem": 12
+          }
         }
       },
       "amostra_base": {
@@ -17643,11 +18085,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-20",
+          "prevista": "2026-11-18",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-01",
+          "prevista": "2026-11-26",
           "emitida": null
         }
       },
@@ -17960,16 +18402,16 @@
           "emitida": "2026-10-26"
         },
         "d6": {
-          "prevista": "2026-11-18",
+          "prevista": "2026-11-17",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-11-27",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-10",
+          "prevista": "2026-12-02",
           "emitida": null
         }
       },
@@ -18274,7 +18716,7 @@
       "cadeia_completa": true,
       "alvos_origem": [],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-10-27",
@@ -18296,11 +18738,25 @@
         },
         "d14": {
           "prevista": "2026-11-26",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "dominio_d6": 87,
+            "questoes_d6": 15,
+            "modo_d6": "breve",
+            "medida_em": "d6"
+          }
         },
         "d28": {
           "prevista": "2026-12-02",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "dominio_d6": 87,
+            "questoes_d6": 15,
+            "modo_d6": "breve",
+            "medida_em": "d6"
+          }
         }
       },
       "amostra_base": {
@@ -18405,11 +18861,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-25",
+          "prevista": "2026-11-23",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-02",
+          "prevista": "2026-11-26",
           "emitida": null
         }
       },
@@ -18498,11 +18954,11 @@
           }
         },
         "d14": {
-          "prevista": "2026-11-23",
+          "prevista": "2026-11-19",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-02",
+          "prevista": "2026-11-26",
           "emitida": null
         }
       },
@@ -18577,16 +19033,16 @@
           "emitida": "2026-10-28"
         },
         "d6": {
-          "prevista": "2026-11-19",
+          "prevista": "2026-11-17",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-08",
+          "prevista": "2026-11-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-10",
+          "prevista": "2026-12-02",
           "emitida": null
         }
       },
@@ -18653,7 +19109,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-11-27",
           "emitida": null,
           "grade_sem_teste": [
             {
@@ -18664,7 +19120,7 @@
           ]
         },
         "d28": {
-          "prevista": "2026-12-10",
+          "prevista": "2026-12-02",
           "emitida": null
         }
       },
@@ -18822,7 +19278,7 @@
       "cadeia_completa": true,
       "alvos_origem": [],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-10-28",
@@ -18831,15 +19287,42 @@
         "d6": {
           "prevista": "2026-11-17",
           "emitida": "2026-11-17",
-          "resultado": null
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 100,
+            "questoes": 3,
+            "palpites": 0,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 3
+          }
         },
         "d14": {
           "prevista": "2026-11-26",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 3
+          }
         },
         "d28": {
           "prevista": "2026-12-02",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 3
+          }
         }
       },
       "amostra_base": {
@@ -18975,11 +19458,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-23",
+          "prevista": "2026-11-19",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-02",
+          "prevista": "2026-11-26",
           "emitida": null
         }
       },
@@ -19088,7 +19571,7 @@
         "3039759"
       ],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-10-29",
@@ -19097,15 +19580,42 @@
         "d6": {
           "prevista": "2026-11-10",
           "emitida": "2026-11-10",
-          "resultado": null
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 81,
+            "questoes": 16,
+            "palpites": 1,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 81,
+            "questoes_origem": 16
+          }
         },
         "d14": {
           "prevista": "2026-11-25",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 81,
+            "questoes_origem": 16
+          }
         },
         "d28": {
           "prevista": "2026-12-02",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 81,
+            "questoes_origem": 16
+          }
         }
       },
       "amostra_base": {
@@ -19304,16 +19814,16 @@
           "emitida": "2026-10-29"
         },
         "d6": {
-          "prevista": "2026-11-19",
+          "prevista": "2026-11-17",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-08",
+          "prevista": "2026-12-01",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-11",
+          "prevista": "2026-12-02",
           "emitida": null
         }
       },
@@ -19365,11 +19875,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-24",
+          "prevista": "2026-11-20",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-03",
+          "prevista": "2026-11-27",
           "emitida": null
         }
       },
@@ -19461,7 +19971,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-03",
+          "prevista": "2026-11-27",
           "emitida": null
         },
         "d28": {
@@ -19511,7 +20021,7 @@
       "cadeia_completa": true,
       "alvos_origem": [],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-10-30",
@@ -19520,15 +20030,42 @@
         "d6": {
           "prevista": "2026-11-17",
           "emitida": "2026-11-17",
-          "resultado": null
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 100,
+            "questoes": 3,
+            "palpites": 0,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 3
+          }
         },
         "d14": {
           "prevista": "2026-11-26",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 3
+          }
         },
         "d28": {
           "prevista": "2026-12-03",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 3
+          }
         }
       },
       "amostra_base": {
@@ -19573,11 +20110,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-25",
+          "prevista": "2026-11-23",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-03",
+          "prevista": "2026-11-27",
           "emitida": null
         }
       },
@@ -19623,7 +20160,7 @@
       "cadeia_completa": true,
       "alvos_origem": [],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-10-29",
@@ -19631,16 +20168,43 @@
         },
         "d6": {
           "prevista": "2026-11-19",
-          "emitida": null,
-          "resultado": null
+          "emitida": "dispensada",
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 100,
+            "questoes": 5,
+            "palpites": 0,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 5
+          }
         },
         "d14": {
           "prevista": "2026-12-08",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 5
+          }
         },
         "d28": {
           "prevista": "2026-12-11",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 5
+          }
         }
       },
       "amostra_base": {
@@ -19680,7 +20244,7 @@
       "cadeia_completa": true,
       "alvos_origem": [],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-10-29",
@@ -19688,16 +20252,43 @@
         },
         "d6": {
           "prevista": "2026-11-19",
-          "emitida": null,
-          "resultado": null
+          "emitida": "dispensada",
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 86,
+            "questoes": 7,
+            "palpites": 1,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 86,
+            "questoes_origem": 7
+          }
         },
         "d14": {
           "prevista": "2026-12-08",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 86,
+            "questoes_origem": 7
+          }
         },
         "d28": {
           "prevista": "2026-12-11",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 86,
+            "questoes_origem": 7
+          }
         }
       },
       "amostra_base": {
@@ -19761,11 +20352,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-25",
+          "prevista": "2026-11-23",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-03",
+          "prevista": "2026-11-27",
           "emitida": null
         }
       },
@@ -19822,11 +20413,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-20",
+          "prevista": "2026-11-18",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-02",
+          "prevista": "2026-11-26",
           "emitida": null
         }
       },
@@ -19919,7 +20510,7 @@
         "SIM:AL07:Q1-5:5"
       ],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-10-29",
@@ -19928,15 +20519,42 @@
         "d6": {
           "prevista": "2026-11-13",
           "emitida": "2026-11-13",
-          "resultado": null
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 80,
+            "questoes": 5,
+            "palpites": 1,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 80,
+            "questoes_origem": 5
+          }
         },
         "d14": {
           "prevista": "2026-11-25",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 80,
+            "questoes_origem": 5
+          }
         },
         "d28": {
           "prevista": "2026-12-03",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 80,
+            "questoes_origem": 5
+          }
         }
       },
       "origem": "simulado",
@@ -19996,11 +20614,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-23",
+          "prevista": "2026-11-19",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-03",
+          "prevista": "2026-11-26",
           "emitida": null
         }
       },
@@ -20128,11 +20746,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-25",
+          "prevista": "2026-11-23",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-03",
+          "prevista": "2026-11-27",
           "emitida": null
         }
       },
@@ -20319,16 +20937,16 @@
           "emitida": "2026-10-30"
         },
         "d6": {
-          "prevista": "2026-11-18",
+          "prevista": "2026-11-17",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-07",
+          "prevista": "2026-11-30",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-11",
+          "prevista": "2026-12-02",
           "emitida": null
         }
       },
@@ -20405,11 +21023,11 @@
           }
         },
         "d14": {
-          "prevista": "2026-11-24",
+          "prevista": "2026-11-20",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-03",
+          "prevista": "2026-11-27",
           "emitida": null
         }
       },
@@ -20496,11 +21114,11 @@
           }
         },
         "d14": {
-          "prevista": "2026-11-24",
+          "prevista": "2026-11-20",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-03",
+          "prevista": "2026-11-27",
           "emitida": null
         }
       },
@@ -20576,7 +21194,7 @@
       "cadeia_completa": true,
       "alvos_origem": [],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-10-30",
@@ -20585,15 +21203,42 @@
         "d6": {
           "prevista": "2026-11-17",
           "emitida": "2026-11-17",
-          "resultado": null
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 100,
+            "questoes": 7,
+            "palpites": 0,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 7
+          }
         },
         "d14": {
           "prevista": "2026-11-26",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 7
+          }
         },
         "d28": {
           "prevista": "2026-12-03",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 7
+          }
         }
       },
       "amostra_base": {
@@ -20643,7 +21288,7 @@
       "cadeia_completa": true,
       "alvos_origem": [],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-10-30",
@@ -20652,15 +21297,42 @@
         "d6": {
           "prevista": "2026-11-17",
           "emitida": "2026-11-17",
-          "resultado": null
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 100,
+            "questoes": 3,
+            "palpites": 0,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 3
+          }
         },
         "d14": {
           "prevista": "2026-11-26",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 3
+          }
         },
         "d28": {
           "prevista": "2026-12-03",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 3
+          }
         }
       },
       "amostra_base": {
@@ -20710,11 +21382,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-20",
+          "prevista": "2026-11-18",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-03",
+          "prevista": "2026-11-27",
           "emitida": null
         }
       },
@@ -21145,16 +21817,16 @@
           "emitida": "2026-11-03"
         },
         "d6": {
-          "prevista": "2026-11-19",
+          "prevista": "2026-11-18",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-08",
+          "prevista": "2026-12-01",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-11",
+          "prevista": "2026-12-03",
           "emitida": null
         }
       },
@@ -21206,11 +21878,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-10",
+          "prevista": "2026-12-01",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-11",
+          "prevista": "2026-12-03",
           "emitida": null
         }
       },
@@ -21282,7 +21954,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-02",
+          "prevista": "2026-11-26",
           "emitida": null
         },
         "d28": {
@@ -21393,16 +22065,16 @@
           "emitida": "2026-11-04"
         },
         "d6": {
-          "prevista": "2026-11-18",
+          "prevista": "2026-11-17",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-09",
+          "prevista": "2026-12-01",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-11",
+          "prevista": "2026-12-03",
           "emitida": null
         }
       },
@@ -21448,7 +22120,7 @@
       "cadeia_completa": true,
       "alvos_origem": [],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-11-17",
@@ -21456,16 +22128,43 @@
         },
         "d6": {
           "prevista": "2026-11-23",
-          "emitida": null,
-          "resultado": null
+          "emitida": "dispensada",
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 100,
+            "questoes": 5,
+            "palpites": 0,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 5
+          }
         },
         "d14": {
           "prevista": "2026-12-04",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 5
+          }
         },
         "d28": {
           "prevista": "2026-12-15",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 5
+          }
         }
       },
       "amostra_base": {
@@ -21507,7 +22206,7 @@
         "2590654"
       ],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-11-04",
@@ -21516,15 +22215,42 @@
         "d6": {
           "prevista": "2026-11-13",
           "emitida": "2026-11-13",
-          "resultado": null
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 89,
+            "questoes": 9,
+            "palpites": 1,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 89,
+            "questoes_origem": 9
+          }
         },
         "d14": {
           "prevista": "2026-11-30",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 89,
+            "questoes_origem": 9
+          }
         },
         "d28": {
           "prevista": "2026-12-04",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 89,
+            "questoes_origem": 9
+          }
         }
       },
       "amostra_base": {
@@ -21584,7 +22310,7 @@
       "cadeia_completa": true,
       "alvos_origem": [],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-11-17",
@@ -21592,16 +22318,43 @@
         },
         "d6": {
           "prevista": "2026-11-23",
-          "emitida": null,
-          "resultado": null
+          "emitida": "dispensada",
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 100,
+            "questoes": 5,
+            "palpites": 0,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 5
+          }
         },
         "d14": {
           "prevista": "2026-12-04",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 5
+          }
         },
         "d28": {
           "prevista": "2026-12-15",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 5
+          }
         }
       },
       "amostra_base": {
@@ -21904,11 +22657,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-11-23",
+          "prevista": "2026-11-19",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-04",
+          "prevista": "2026-12-01",
           "emitida": null
         }
       },
@@ -22228,7 +22981,7 @@
       "cadeia_completa": true,
       "alvos_origem": [],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-11-05",
@@ -22236,16 +22989,43 @@
         },
         "d6": {
           "prevista": "2026-11-19",
-          "emitida": null,
-          "resultado": null
+          "emitida": "dispensada",
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 100,
+            "questoes": 4,
+            "palpites": 0,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 4
+          }
         },
         "d14": {
           "prevista": "2026-12-10",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 4
+          }
         },
         "d28": {
           "prevista": "2026-12-14",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 4
+          }
         }
       },
       "amostra_base": {
@@ -22373,16 +23153,16 @@
           "emitida": "2026-11-05"
         },
         "d6": {
-          "prevista": "2026-11-19",
+          "prevista": "2026-11-18",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-10",
+          "prevista": "2026-12-02",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-14",
+          "prevista": "2026-12-03",
           "emitida": null
         }
       },
@@ -22456,11 +23236,11 @@
           }
         },
         "d14": {
-          "prevista": "2026-12-01",
+          "prevista": "2026-11-25",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-04",
+          "prevista": "2026-12-03",
           "emitida": null
         }
       },
@@ -22520,11 +23300,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-01",
+          "prevista": "2026-11-25",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-04",
+          "prevista": "2026-12-03",
           "emitida": null
         }
       },
@@ -22557,7 +23337,7 @@
         "3401292"
       ],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-11-05",
@@ -22566,15 +23346,42 @@
         "d6": {
           "prevista": "2026-11-16",
           "emitida": "2026-11-16",
-          "resultado": null
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 86,
+            "questoes": 7,
+            "palpites": 1,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 86,
+            "questoes_origem": 7
+          }
         },
         "d14": {
           "prevista": "2026-12-01",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 86,
+            "questoes_origem": 7
+          }
         },
         "d28": {
           "prevista": "2026-12-04",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 86,
+            "questoes_origem": 7
+          }
         }
       },
       "amostra_base": {
@@ -22655,11 +23462,11 @@
           }
         },
         "d14": {
-          "prevista": "2026-11-30",
+          "prevista": "2026-11-25",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-04",
+          "prevista": "2026-12-02",
           "emitida": null
         }
       },
@@ -22807,7 +23614,7 @@
       "cadeia_completa": true,
       "alvos_origem": [],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-11-06",
@@ -22816,15 +23623,42 @@
         "d6": {
           "prevista": "2026-11-17",
           "emitida": "2026-11-17",
-          "resultado": null
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 100,
+            "questoes": 8,
+            "palpites": 0,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 8
+          }
         },
         "d14": {
           "prevista": "2026-12-01",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 8
+          }
         },
         "d28": {
           "prevista": "2026-12-04",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 8
+          }
         }
       },
       "amostra_base": {
@@ -22879,7 +23713,7 @@
       "cadeia_completa": true,
       "alvos_origem": [],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-11-06",
@@ -22888,15 +23722,42 @@
         "d6": {
           "prevista": "2026-11-17",
           "emitida": "2026-11-17",
-          "resultado": null
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 100,
+            "questoes": 5,
+            "palpites": 0,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 5
+          }
         },
         "d14": {
           "prevista": "2026-12-01",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 5
+          }
         },
         "d28": {
           "prevista": "2026-12-04",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 5
+          }
         }
       },
       "amostra_base": {
@@ -22936,7 +23797,7 @@
       "cadeia_completa": true,
       "alvos_origem": [],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-11-06",
@@ -22944,16 +23805,43 @@
         },
         "d6": {
           "prevista": "2026-11-18",
-          "emitida": null,
-          "resultado": null
+          "emitida": "dispensada",
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 100,
+            "questoes": 5,
+            "palpites": 0,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 5
+          }
         },
         "d14": {
           "prevista": "2026-12-01",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 5
+          }
         },
         "d28": {
           "prevista": "2026-12-07",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 5
+          }
         }
       },
       "amostra_base": {
@@ -23010,7 +23898,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-01",
+          "prevista": "2026-11-26",
           "emitida": null
         },
         "d28": {
@@ -23070,7 +23958,7 @@
       "cadeia_completa": true,
       "alvos_origem": [],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-11-17",
@@ -23078,16 +23966,43 @@
         },
         "d6": {
           "prevista": "2026-11-23",
-          "emitida": null,
-          "resultado": null
+          "emitida": "dispensada",
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 100,
+            "questoes": 3,
+            "palpites": 0,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 3
+          }
         },
         "d14": {
           "prevista": "2026-12-04",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 3
+          }
         },
         "d28": {
           "prevista": "2026-12-15",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 3
+          }
         }
       },
       "amostra_base": {
@@ -23134,7 +24049,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-03",
+          "prevista": "2026-11-27",
           "emitida": null
         },
         "d28": {
@@ -23229,7 +24144,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-01",
+          "prevista": "2026-11-26",
           "emitida": null
         },
         "d28": {
@@ -23446,7 +24361,7 @@
         "1143366"
       ],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-11-06",
@@ -23455,15 +24370,42 @@
         "d6": {
           "prevista": "2026-11-16",
           "emitida": "2026-11-16",
-          "resultado": null
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 80,
+            "questoes": 5,
+            "palpites": 1,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 80,
+            "questoes_origem": 5
+          }
         },
         "d14": {
           "prevista": "2026-12-01",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 80,
+            "questoes_origem": 5
+          }
         },
         "d28": {
           "prevista": "2026-12-04",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 80,
+            "questoes_origem": 5
+          }
         }
       },
       "amostra_base": {
@@ -23518,7 +24460,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-03",
+          "prevista": "2026-11-27",
           "emitida": null
         },
         "d28": {
@@ -23573,7 +24515,7 @@
       "cadeia_completa": true,
       "alvos_origem": [],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-11-17",
@@ -23581,16 +24523,43 @@
         },
         "d6": {
           "prevista": "2026-11-23",
-          "emitida": null,
-          "resultado": null
+          "emitida": "dispensada",
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 100,
+            "questoes": 7,
+            "palpites": 0,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 7
+          }
         },
         "d14": {
           "prevista": "2026-12-04",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 7
+          }
         },
         "d28": {
           "prevista": "2026-12-15",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 7
+          }
         }
       },
       "amostra_base": {
@@ -23659,7 +24628,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-01",
+          "prevista": "2026-11-26",
           "emitida": null
         },
         "d28": {
@@ -23774,7 +24743,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-01",
+          "prevista": "2026-11-26",
           "emitida": null
         },
         "d28": {
@@ -23942,7 +24911,7 @@
         "2924817"
       ],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-11-09",
@@ -23965,11 +24934,25 @@
         },
         "d14": {
           "prevista": "2026-12-02",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "dominio_d6": 83,
+            "questoes_d6": 11,
+            "modo_d6": "bateria",
+            "medida_em": "d6"
+          }
         },
         "d28": {
           "prevista": "2026-12-07",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "dominio_d6": 83,
+            "questoes_d6": 11,
+            "modo_d6": "bateria",
+            "medida_em": "d6"
+          }
         }
       },
       "amostra_base": {
@@ -24025,7 +25008,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-03",
+          "prevista": "2026-11-27",
           "emitida": null
         },
         "d28": {
@@ -24102,7 +25085,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-03",
+          "prevista": "2026-11-27",
           "emitida": null
         },
         "d28": {
@@ -24173,7 +25156,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-03",
+          "prevista": "2026-11-27",
           "emitida": null
         },
         "d28": {
@@ -24238,7 +25221,7 @@
       "cadeia_completa": true,
       "alvos_origem": [],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-11-11",
@@ -24246,16 +25229,43 @@
         },
         "d6": {
           "prevista": "2026-11-18",
-          "emitida": null,
-          "resultado": null
+          "emitida": "dispensada",
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 100,
+            "questoes": 9,
+            "palpites": 0,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 9
+          }
         },
         "d14": {
           "prevista": "2026-12-02",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 9
+          }
         },
         "d28": {
           "prevista": "2026-12-09",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 9
+          }
         }
       },
       "amostra_base": {
@@ -24416,11 +25426,11 @@
           ]
         },
         "d14": {
-          "prevista": "2026-11-20",
+          "prevista": "2026-11-18",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-11-26",
+          "prevista": "2026-11-23",
           "emitida": null
         }
       },
@@ -25226,11 +26236,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-11",
+          "prevista": "2026-12-02",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-14",
+          "prevista": "2026-12-11",
           "emitida": null
         }
       },
@@ -25360,11 +26370,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-11",
+          "prevista": "2026-12-02",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-14",
+          "prevista": "2026-12-11",
           "emitida": null
         }
       },
@@ -25409,16 +26419,16 @@
           "emitida": "2026-11-13"
         },
         "d6": {
-          "prevista": "2026-11-20",
+          "prevista": "2026-11-19",
           "emitida": null,
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-11",
+          "prevista": "2026-12-02",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-14",
+          "prevista": "2026-12-11",
           "emitida": null
         }
       },
@@ -25484,11 +26494,11 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-11",
+          "prevista": "2026-12-02",
           "emitida": null
         },
         "d28": {
-          "prevista": "2026-12-14",
+          "prevista": "2026-12-11",
           "emitida": null
         }
       },
@@ -25529,7 +26539,7 @@
       "cadeia_completa": true,
       "alvos_origem": [],
       "reinicios": 0,
-      "status": "ativa",
+      "status": "concluida",
       "etapas": {
         "d1": {
           "prevista": "2026-11-13",
@@ -25537,16 +26547,43 @@
         },
         "d6": {
           "prevista": "2026-11-20",
-          "emitida": null,
-          "resultado": null
+          "emitida": "dispensada",
+          "resultado": {
+            "aprovada": true,
+            "modo": "pass",
+            "saldo": 100,
+            "questoes": 14,
+            "palpites": 0,
+            "limiar_saldo": 80,
+            "data": "2026-11-17",
+            "fonte": "amostra de origem (pass por dominio)"
+          },
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 14
+          }
         },
         "d14": {
           "prevista": "2026-12-11",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 14
+          }
         },
         "d28": {
           "prevista": "2026-12-14",
-          "emitida": null
+          "emitida": "dispensada",
+          "dispensa": {
+            "data": "2026-11-17",
+            "motivo": "pass",
+            "dominio_origem": 100,
+            "questoes_origem": 14
+          }
         }
       },
       "amostra_base": {
@@ -25649,7 +26686,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-11",
+          "prevista": "2026-12-03",
           "emitida": null
         },
         "d28": {
@@ -25723,7 +26760,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-11",
+          "prevista": "2026-12-03",
           "emitida": null
         },
         "d28": {
@@ -25799,7 +26836,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-11",
+          "prevista": "2026-12-02",
           "emitida": null
         },
         "d28": {
@@ -26051,7 +27088,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-11",
+          "prevista": "2026-12-03",
           "emitida": null
         },
         "d28": {
@@ -26266,7 +27303,7 @@
           "resultado": null
         },
         "d14": {
-          "prevista": "2026-12-11",
+          "prevista": "2026-12-03",
           "emitida": null
         },
         "d28": {
@@ -26439,87 +27476,86 @@
     "data": "2026-11-17",
     "itens": [
       [
-        "AFO, Direito Financeiro e Contabilidade Pública||Balanço Orçamentário (MCASP e NBC TSP 13)",
-        "d1"
-      ],
-      [
-        "AFO, Direito Financeiro e Contabilidade Pública||Créditos Adicionais",
-        "d1"
-      ],
-      [
-        "AFO, Direito Financeiro e Contabilidade Pública||Provisões, Passivos e Ativos Contingentes (MCASP e NBC TSP 03)",
-        "d1"
-      ],
-      [
-        "AFO, Direito Financeiro e Contabilidade Pública||Redução ao Valor Recuperável (MCASP, NBC TSP 09 e 10)",
+        "AFO, Direito Financeiro e Contabilidade Pública||A Atividade Financeira do Estado",
         "d6"
       ],
       [
-        "Auditoria Fiscal||MOC NF-e 7.0 — contingência (SVC-AN, SVC-RS, EPEC, FS-DA)",
+        "AFO, Direito Financeiro e Contabilidade Pública||Ciclo Orçamentário",
         "d6"
       ],
       [
-        "Auditoria Fiscal||MOC da NF-e e NFC-e 7.0 — modelo operacional e eventos",
+        "AFO, Direito Financeiro e Contabilidade Pública||Conceitos Gerais sobre Despesa Pública",
         "d6"
       ],
       [
-        "Direito Administrativo (Doutrina e Leis Federais)||Administração Indireta",
+        "AFO, Direito Financeiro e Contabilidade Pública||Controle da Gestão Fiscal (arts. 56 a 59 da LRF)",
         "d6"
       ],
       [
-        "Direito Administrativo (Doutrina e Leis Federais)||Controle Jurisdicional",
+        "AFO, Direito Financeiro e Contabilidade Pública||Introdução às DCASP (Parte V, Capítulo 1 do MCASP e NBC TSP 11)",
         "d6"
       ],
       [
-        "Direito Administrativo (Doutrina e Leis Federais)||Das Disposições Gerais (arts. 1º a 8º-A da Lei nº 8.429/1992)",
+        "AFO, Direito Financeiro e Contabilidade Pública||Variações Patrimoniais",
         "d6"
       ],
       [
-        "Direito Constitucional (CF/1988 e Doutrina)||Princípios Gerais da Ordem Econômica (arts. 170 a 172 e 175 a 181 da CF/1988)",
-        "d1"
-      ],
-      [
-        "Direito Constitucional (CF/1988 e Doutrina)||União: Bens e Competências Exclusivas, Privativas, Comuns e Concorrentes (arts. 20 a 24 da CF/1988)",
-        "d1"
-      ],
-      [
-        "Direito Tributário||Contribuição sobre Bens e Serviços - CBS (CF/1988, EC 132)",
+        "Contabilidade Geral||Atos e Fatos Contábeis",
         "d6"
       ],
       [
-        "Legislação Tributária Estadual||IPVA — FG, domicílio, contribuinte e solidariedade",
+        "Direito Administrativo (Doutrina e Leis Federais)||Desconcentração e Descentralização",
         "d6"
       ],
       [
-        "Legislação Tributária Estadual||IPVA — lançamento por calendário (Lei 9.780/2025)",
+        "Direito Tributário||Interpretação e Integração da Legislação Tributária (arts. 107 a 112 do CTN)",
         "d6"
       ],
       [
-        "Legislação Tributária Estadual||ITCD — incidência, doação, usufruto e competência",
+        "Direito Tributário||Jurisprudência dos Tribunais Superiores sobre Suspensão do Crédito Tributário",
         "d6"
       ],
       [
-        "Legislação Tributária dos Estados e do Distrito Federal||Da Base de Cálculo (arts. 6º a 16 da Lei Estadual nº 5.900/1996)",
+        "Economia e Finanças Públicas||Eficiência (ou Ótimo) de Pareto",
         "d6"
       ],
       [
-        "Legislação Tributária dos Estados e do Distrito Federal||Da Sujeição Passiva (arts. 18 a 29 da Lei Estadual nº 5.900/1996)",
+        "Economia e Finanças Públicas||Escassez, Escolha e Custo de Oportunidade",
         "d6"
       ],
       [
-        "Legislação Tributária dos Estados e do Distrito Federal||Do Fato Gerador (art. 2º da Lei Estadual nº 5.900/1996)",
+        "Economia e Finanças Públicas||Princípios Teóricos da Tributação",
         "d6"
       ],
       [
-        "TI - Segurança da Informação||Gestão de Continuidade de Negócio (NBR ISO/IEC 15999-1, 15999-2, 27002, 22313, etc.)",
+        "Economia e Finanças Públicas||Tipos de Impostos",
         "d6"
       ],
       [
-        "TI - Segurança da Informação||Malware (Vírus, Worms, Trojans, etc.)",
-        "d1"
+        "Estatística||Média para Dados não Agrupados",
+        "d6"
+      ],
+      [
+        "Legislação Tributária Federal||Disposições Preliminares (arts. 1º a 3º da LC nº 214/2025)",
+        "d6"
+      ],
+      [
+        "Matemática Financeira||Equivalência de Capitais",
+        "d6"
+      ],
+      [
+        "Matemática Financeira||Juros Compostos",
+        "d6"
+      ],
+      [
+        "Matemática Financeira||Taxas Efetivas, Nominais e Equivalentes no Regime Composto",
+        "d6"
+      ],
+      [
+        "Matemática Financeira||Valor Atual de Uma Série de Pagamentos",
+        "d6"
       ]
-    ],
-    "confirmada": "2026-11-17"
+    ]
   },
   "leituras": {
     "2026-09-14||LC 214, arts. 38-56 — não cumulatividade, apropriação e utilização de créditos": {
