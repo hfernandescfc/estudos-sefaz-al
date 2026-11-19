@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-11-18T08:09:17",
+ "gerado_em": "2026-11-18T21:30:11",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -7801,6 +7801,174 @@ window.SESSOES_TEC = {
    "minutos": 2,
    "qResolvidas": 1,
    "qAcertadas": 1,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "SIM~AF19~2026-11-18~AUDFIS",
+   "origem": "simulado",
+   "data": "2026-11-18",
+   "mat": "AUDFIS",
+   "topicId": null,
+   "assuntoLivre": "Simulado AF19 — AUDFIS",
+   "minutos": 4,
+   "qResolvidas": 7,
+   "qAcertadas": 3,
+   "obs": "Simulado AF19 (Q1-7) cronometrado"
+  },
+  {
+   "uid": "SIM~AL28~2026-11-18~LEGAL",
+   "origem": "simulado",
+   "data": "2026-11-18",
+   "mat": "LEGAL",
+   "topicId": null,
+   "assuntoLivre": "Simulado AL28 — LEGAL",
+   "minutos": 14,
+   "qResolvidas": 37,
+   "qAcertadas": 25,
+   "obs": "Simulado AL28 (Q1-37) cronometrado"
+  },
+  {
+   "uid": "SIM~RT12~2026-11-18~RT",
+   "origem": "simulado",
+   "data": "2026-11-18",
+   "mat": "RT",
+   "topicId": null,
+   "assuntoLivre": "Simulado RT12 — RT",
+   "minutos": 7,
+   "qResolvidas": 36,
+   "qAcertadas": 26,
+   "obs": "Simulado RT12 (Q1-36) cronometrado"
+  },
+  {
+   "uid": "TEC~2026-11-18~2",
+   "origem": "tec",
+   "data": "2026-11-18",
+   "mat": "RT",
+   "topicId": "2",
+   "assuntoLivre": "",
+   "minutos": 11,
+   "qResolvidas": 20,
+   "qAcertadas": 18,
+   "obs": "reconstruída do TEC (2 assuntos)"
+  },
+  {
+   "uid": "TEC~2026-11-18~268",
+   "origem": "tec",
+   "data": "2026-11-18",
+   "mat": "FINPUB",
+   "topicId": "268",
+   "assuntoLivre": "",
+   "minutos": 2,
+   "qResolvidas": 9,
+   "qAcertadas": 8,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-18~274",
+   "origem": "tec",
+   "data": "2026-11-18",
+   "mat": "FINPUB",
+   "topicId": "274",
+   "assuntoLivre": "",
+   "minutos": 2,
+   "qResolvidas": 7,
+   "qAcertadas": 7,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-18~330",
+   "origem": "tec",
+   "data": "2026-11-18",
+   "mat": "CPUB",
+   "topicId": "330",
+   "assuntoLivre": "",
+   "minutos": 2,
+   "qResolvidas": 7,
+   "qAcertadas": 5,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-18~334",
+   "origem": "tec",
+   "data": "2026-11-18",
+   "mat": "CPUB",
+   "topicId": "334",
+   "assuntoLivre": "",
+   "minutos": 1,
+   "qResolvidas": 3,
+   "qAcertadas": 3,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-18~345",
+   "origem": "tec",
+   "data": "2026-11-18",
+   "mat": "ESTAT",
+   "topicId": "345",
+   "assuntoLivre": "",
+   "minutos": 12,
+   "qResolvidas": 24,
+   "qAcertadas": 21,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-18~358",
+   "origem": "tec",
+   "data": "2026-11-18",
+   "mat": "DCON",
+   "topicId": "358",
+   "assuntoLivre": "",
+   "minutos": 8,
+   "qResolvidas": 38,
+   "qAcertadas": 32,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-18~446",
+   "origem": "tec",
+   "data": "2026-11-18",
+   "mat": "CGER",
+   "topicId": "446",
+   "assuntoLivre": "",
+   "minutos": 3,
+   "qResolvidas": 8,
+   "qAcertadas": 8,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-18~85",
+   "origem": "tec",
+   "data": "2026-11-18",
+   "mat": "DTRIB",
+   "topicId": "85",
+   "assuntoLivre": "",
+   "minutos": 10,
+   "qResolvidas": 25,
+   "qAcertadas": 20,
+   "obs": "reconstruída do TEC (5 assuntos)"
+  },
+  {
+   "uid": "TEC~2026-11-18~87",
+   "origem": "tec",
+   "data": "2026-11-18",
+   "mat": "DTRIB",
+   "topicId": "87",
+   "assuntoLivre": "",
+   "minutos": 3,
+   "qResolvidas": 6,
+   "qAcertadas": 6,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-18~89",
+   "origem": "tec",
+   "data": "2026-11-18",
+   "mat": "DTRIB",
+   "topicId": "89",
+   "assuntoLivre": "",
+   "minutos": 3,
+   "qResolvidas": 13,
+   "qAcertadas": 12,
    "obs": "reconstruída do TEC"
   }
  ]
