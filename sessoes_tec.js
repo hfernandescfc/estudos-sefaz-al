@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-11-18T21:30:11",
+ "gerado_em": "2026-11-23T08:09:21",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -7969,6 +7969,126 @@ window.SESSOES_TEC = {
    "minutos": 3,
    "qResolvidas": 13,
    "qAcertadas": 12,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "SIM~AF18~2026-11-19~AUDFIS",
+   "origem": "simulado",
+   "data": "2026-11-19",
+   "mat": "AUDFIS",
+   "topicId": null,
+   "assuntoLivre": "Simulado AF18 — AUDFIS",
+   "minutos": 6,
+   "qResolvidas": 14,
+   "qAcertadas": 13,
+   "obs": "Simulado AF18 (Q1-14) cronometrado"
+  },
+  {
+   "uid": "TEC~2026-11-19~101",
+   "origem": "tec",
+   "data": "2026-11-19",
+   "mat": "ECON",
+   "topicId": "101",
+   "assuntoLivre": "",
+   "minutos": 25,
+   "qResolvidas": 15,
+   "qAcertadas": 9,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-19~224",
+   "origem": "tec",
+   "data": "2026-11-19",
+   "mat": "CDADOS",
+   "topicId": "224",
+   "assuntoLivre": "",
+   "minutos": 7,
+   "qResolvidas": 27,
+   "qAcertadas": 24,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-19~318",
+   "origem": "tec",
+   "data": "2026-11-19",
+   "mat": "CPUB",
+   "topicId": "318",
+   "assuntoLivre": "",
+   "minutos": 3,
+   "qResolvidas": 9,
+   "qAcertadas": 6,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-19~332",
+   "origem": "tec",
+   "data": "2026-11-19",
+   "mat": "CPUB",
+   "topicId": "332",
+   "assuntoLivre": "",
+   "minutos": 1,
+   "qResolvidas": 3,
+   "qAcertadas": 3,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-19~360",
+   "origem": "tec",
+   "data": "2026-11-19",
+   "mat": "DCON",
+   "topicId": "360",
+   "assuntoLivre": "",
+   "minutos": 1,
+   "qResolvidas": 7,
+   "qAcertadas": 6,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-19~361",
+   "origem": "tec",
+   "data": "2026-11-19",
+   "mat": "DCON",
+   "topicId": "361",
+   "assuntoLivre": "",
+   "minutos": 1,
+   "qResolvidas": 7,
+   "qAcertadas": 6,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-19~56",
+   "origem": "tec",
+   "data": "2026-11-19",
+   "mat": "DEV",
+   "topicId": "56",
+   "assuntoLivre": "",
+   "minutos": 1,
+   "qResolvidas": 8,
+   "qAcertadas": 7,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-19~79",
+   "origem": "tec",
+   "data": "2026-11-19",
+   "mat": "DTRIB",
+   "topicId": "79",
+   "assuntoLivre": "",
+   "minutos": 11,
+   "qResolvidas": 33,
+   "qAcertadas": 21,
+   "obs": "reconstruída do TEC (14 assuntos)"
+  },
+  {
+   "uid": "TEC~2026-11-19~demais-temas-sobre-custos-no-setor-publico-a276e4",
+   "origem": "tec",
+   "data": "2026-11-19",
+   "mat": "CPUB",
+   "topicId": null,
+   "assuntoLivre": "Demais Temas sobre Custos no Setor Público",
+   "minutos": 1,
+   "qResolvidas": 5,
+   "qAcertadas": 5,
    "obs": "reconstruída do TEC"
   }
  ]
