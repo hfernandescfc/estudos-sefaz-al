@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-11-23T08:09:21",
+ "gerado_em": "2026-11-24T07:59:56",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -8088,6 +8088,90 @@ window.SESSOES_TEC = {
    "assuntoLivre": "Demais Temas sobre Custos no Setor Público",
    "minutos": 1,
    "qResolvidas": 5,
+   "qAcertadas": 5,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "SIM~RT17~2026-11-23~RT",
+   "origem": "simulado",
+   "data": "2026-11-23",
+   "mat": "RT",
+   "topicId": null,
+   "assuntoLivre": "Simulado RT17 — RT",
+   "minutos": 10,
+   "qResolvidas": 30,
+   "qAcertadas": 18,
+   "obs": "Simulado RT17 (Q1-30) cronometrado"
+  },
+  {
+   "uid": "TEC~2026-11-23~114",
+   "origem": "tec",
+   "data": "2026-11-23",
+   "mat": "ECON",
+   "topicId": "114",
+   "assuntoLivre": "",
+   "minutos": 7,
+   "qResolvidas": 6,
+   "qAcertadas": 5,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-23~222",
+   "origem": "tec",
+   "data": "2026-11-23",
+   "mat": "CDADOS",
+   "topicId": "222",
+   "assuntoLivre": "",
+   "minutos": 15,
+   "qResolvidas": 37,
+   "qAcertadas": 30,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-23~235",
+   "origem": "tec",
+   "data": "2026-11-23",
+   "mat": "CDADOS",
+   "topicId": "235",
+   "assuntoLivre": "",
+   "minutos": 3,
+   "qResolvidas": 17,
+   "qAcertadas": 14,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-23~35",
+   "origem": "tec",
+   "data": "2026-11-23",
+   "mat": "INFRA",
+   "topicId": "35",
+   "assuntoLivre": "",
+   "minutos": 1,
+   "qResolvidas": 8,
+   "qAcertadas": 8,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-23~442",
+   "origem": "tec",
+   "data": "2026-11-23",
+   "mat": "CGER",
+   "topicId": "442",
+   "assuntoLivre": "",
+   "minutos": 3,
+   "qResolvidas": 8,
+   "qAcertadas": 6,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-23~487",
+   "origem": "tec",
+   "data": "2026-11-23",
+   "mat": "CGER",
+   "topicId": "487",
+   "assuntoLivre": "",
+   "minutos": 7,
+   "qResolvidas": 6,
    "qAcertadas": 5,
    "obs": "reconstruída do TEC"
   }
