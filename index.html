@@ -2906,7 +2906,37 @@ const SYNC_FILE="estudos-sefazal.json";   // 23/10/2026: Gist novo deste ciclo (
 const SYNC_POLL_MS=90000; // relê a nuvem periodicamente
 let syncTimer=null, syncPollTimer=null, syncEmVoo=false, syncEstado="off"; // off|ok|pendente|sincronizando|erro
 
-function syncCfg(){ return {token:localStorage.getItem(SYNC_LS.token)||"", gist:localStorage.getItem(SYNC_LS.gist)||""}; }
+/* 24/11/2026: o painel tinha TRÊS bases de estado. Esta máquina gravava no Gist do ciclo;
+   a de casa foi configurada uma vez criando um Gist novo (3f710be4…, 28/10) e depois com o
+   ID da CAIXA DE ENTRADA das capturas (82ae871c…) — o prompt aceitava qualquer ID, e vazio
+   criava Gist novo. Cada lado fundia só consigo mesmo e o status/avanço divergia em silêncio.
+   Agora o ID é fixo: navegador com outro ID funde aquele Gist uma vez e passa para este. */
+const SYNC_GIST_PADRAO="5e6e011af73a630c354c6d3eb1b9d64a";   // = 04_Dados/inbox_config.json → painel_gist_id
+const SYNC_LS_ANTIGO="estudosSEFAZAL_syncGistAntigo";
+function syncCfg(){
+  const token=localStorage.getItem(SYNC_LS.token)||"";
+  const gist=localStorage.getItem(SYNC_LS.gist)||"";
+  if(token && gist!==SYNC_GIST_PADRAO){
+    if(gist) localStorage.setItem(SYNC_LS_ANTIGO, gist);   // fundido no próximo sync
+    localStorage.setItem(SYNC_LS.gist, SYNC_GIST_PADRAO);
+  }
+  return {token, gist: token ? SYNC_GIST_PADRAO : gist};
+}
+/* Funde (uma vez) o estado que este navegador gravava num Gist errado. Lê só o arquivo
+   do painel; nunca grava nem apaga nada no Gist antigo. */
+async function syncFundirAntigo(token){
+  const antigo=localStorage.getItem(SYNC_LS_ANTIGO);
+  if(!antigo || antigo===SYNC_GIST_PADRAO){ localStorage.removeItem(SYNC_LS_ANTIGO); return false; }
+  let remoto=null;
+  try{ remoto=await lerRemoto(await syncApi("GET","/gists/"+antigo,null,token)); }
+  catch(e){ if(/40[34]/.test(String(e.message||e))) localStorage.removeItem(SYNC_LS_ANTIGO); return false; }
+  localStorage.removeItem(SYNC_LS_ANTIGO);
+  if(!remoto||!remoto.sessions) return false;
+  const {estado,mudouLocal}=mergeState(state, migrar(remoto));
+  if(mudouLocal){ state=estado; gravarLocal(); }
+  toast("☁ Sync passou para o Gist do ciclo (o antigo foi fundido)");
+  return true;
+}
 function syncSetStatus(s,msg){
   syncEstado=s; const el=document.getElementById("syncStatus"); if(!el) return;
   const map={off:"",ok:"☁ sincronizado",pendente:"☁ alterações pendentes…",sincronizando:"☁ sincronizando…",erro:"☁ ⚠ "+(msg||"erro")};
@@ -3120,9 +3150,11 @@ async function syncSincronizar(silencioso){
   syncEmVoo=true;
   syncSetStatus("sincronizando");
   try{
+    const fundiuAntigo=await syncFundirAntigo(c.token);
     const g=await syncApi("GET","/gists/"+c.gist,null,c.token);
     const remoto=await lerRemoto(g);
     let {estado,mudouLocal,mudouRemoto}=mergeState(state,remoto);
+    if(fundiuAntigo) mudouRemoto=true;
     if(mudouLocal) aplicar(estado, silencioso?"":"Dados do outro computador incorporados ☁");
     else { state=estado; gravarLocal(); }
     // só depois de conhecer a nuvem: evita inserir do TEC algo que a outra
@@ -3154,16 +3186,12 @@ async function syncSetup(){
     }
     return;
   }
-  let gist=(prompt("ID do Gist (deixe vazio para CRIAR um Gist secreto novo agora):",c.gist)||"").trim();
+  // O Gist é fixo (SYNC_GIST_PADRAO): não se pergunta mais o ID nem se cria Gist novo —
+  // foi assim que surgiram as bases paralelas. Um ID antigo salvo é fundido no próximo sync.
+  const gist=SYNC_GIST_PADRAO;
   try{
-    if(!gist){
-      const g=await syncApi("POST","/gists",{description:"Estudos SEFAZ-AL — estado do dashboard",public:false,
-        files:{[SYNC_FILE]:{content:JSON.stringify(state)}}},token);
-      gist=g.id;
-      alert("Gist secreto criado!\n\nID (use-o ao configurar o outro computador):\n"+gist);
-    } else {
-      await syncApi("GET","/gists/"+gist,null,token); // valida token+id
-    }
+    await syncApi("GET","/gists/"+gist,null,token); // valida token+id
+    if(c.gist && c.gist!==gist) localStorage.setItem(SYNC_LS_ANTIGO,c.gist);
     localStorage.setItem(SYNC_LS.token,token); localStorage.setItem(SYNC_LS.gist,gist);
     toast("Sync configurada ✓"); syncPull();
   }catch(e){ alert("Não deu certo ("+e.message+").\nConfira se o token tem o escopo Gists e se o ID está correto."); }
