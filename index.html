@@ -2601,10 +2601,11 @@ function resumoTrilhasMat(ts){
 }
 // 🧭 trilha das erradas (06_Scripts/trilha_erros.py → montar_trilhas.py → TRILHAS.erros),
 // no bloco de Consolidação do dia marcado na fonte. Chave numérica: o userscript só aceita
-// ?trilha=<dígitos>.
-function linkTrilhaErros(dataISO){
+// ?trilha=<dígitos>. Trilha de UMA matéria (--mat, 25/11) vai no bloco daquela matéria no dia.
+function linkTrilhaErros(dataISO, mat){
   const E=window.TRILHAS&&window.TRILHAS.erros; if(!E||!dataISO) return "";
-  return Object.entries(E).filter(([,t])=>t.dia===dataISO).map(([k,t])=>{
+  mat=mat||"CEX";
+  return Object.entries(E).filter(([,t])=>t.dia===dataISO&&(t.mat||"CEX")===mat).map(([k,t])=>{
     if(!t.n||!t.prox) return `<span class="bloco-note">✓ ${escapeHtml(t.titulo)}: as ${t.total} refeitas</span>`;
     return `<span class="bloco-note">🔁 ${escapeHtml(t.titulo)} — refazer escrevendo o porquê antes de responder</span> `+
       `<span class="topchip">${escapeHtml(t.titulo)} <span class="qn">${t.n}/${t.total}q</span> `+
@@ -2614,6 +2615,12 @@ function linkTrilhaErros(dataISO){
 // Conteúdo (HTML) de um bloco da grade para a semana corrente.
 // slot: {tops, tipo} da projecaoSlots() — da semana atual em diante.
 function blocoConteudo(matGroup, week, plano, ids, slot, dataISO){
+  const base=blocoConteudoBase(matGroup, week, plano, ids, slot, dataISO);
+  if(matGroup==="CEX") return base;
+  const ex=linkTrilhaErros(dataISO, matGroup);
+  return ex ? ex+"<br>"+base : base;
+}
+function blocoConteudoBase(matGroup, week, plano, ids, slot, dataISO){
   if(matGroup==="CEX") return linkTrilhaErros(dataISO) || `<span class="bloco-note muted">Consolidação — sem assunto novo</span>`;
   if(slot){
     if(!slot.tops.length) return `<span class="bloco-note">🎯 Plano inteiro em dia — simulado por bloco cronometrado + refazer as erradas</span>`;
