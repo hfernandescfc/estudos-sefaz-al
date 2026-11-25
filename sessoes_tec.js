@@ -1,6 +1,6 @@
 // Gerado por 06_Scripts/gerar_sessoes_tec.py - NAO editar a mao.
 window.SESSOES_TEC = {
- "gerado_em": "2026-11-24T07:59:56",
+ "gerado_em": "2026-11-25T06:57:24",
  "fonte": "07_TEC/TEC_Captura/tec_registros_*.json (1 sessão por dia+assunto) + resultado_simulado_*.json (1 sessão por simulado+dia+matéria)",
  "sessoes": [
   {
@@ -8173,6 +8173,174 @@ window.SESSOES_TEC = {
    "minutos": 7,
    "qResolvidas": 6,
    "qAcertadas": 5,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "SIM~AF16~2026-11-24~AUDFIS",
+   "origem": "simulado",
+   "data": "2026-11-24",
+   "mat": "AUDFIS",
+   "topicId": null,
+   "assuntoLivre": "Simulado AF16 — AUDFIS",
+   "minutos": 11,
+   "qResolvidas": 22,
+   "qAcertadas": 12,
+   "obs": "Simulado AF16 (Q1-22) cronometrado"
+  },
+  {
+   "uid": "SIM~AF21~2026-11-24~AUDFIS",
+   "origem": "simulado",
+   "data": "2026-11-24",
+   "mat": "AUDFIS",
+   "topicId": null,
+   "assuntoLivre": "Simulado AF21 — AUDFIS",
+   "minutos": 11,
+   "qResolvidas": 31,
+   "qAcertadas": 22,
+   "obs": "Simulado AF21 (Q1-32) cronometrado"
+  },
+  {
+   "uid": "TEC~2026-11-24~272",
+   "origem": "tec",
+   "data": "2026-11-24",
+   "mat": "FINPUB",
+   "topicId": "272",
+   "assuntoLivre": "",
+   "minutos": 2,
+   "qResolvidas": 10,
+   "qAcertadas": 8,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-24~307",
+   "origem": "tec",
+   "data": "2026-11-24",
+   "mat": "FINPUB",
+   "topicId": "307",
+   "assuntoLivre": "",
+   "minutos": 1,
+   "qResolvidas": 3,
+   "qAcertadas": 2,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-24~31",
+   "origem": "tec",
+   "data": "2026-11-24",
+   "mat": "INFRA",
+   "topicId": "31",
+   "assuntoLivre": "",
+   "minutos": 2,
+   "qResolvidas": 6,
+   "qAcertadas": 6,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-24~328",
+   "origem": "tec",
+   "data": "2026-11-24",
+   "mat": "CPUB",
+   "topicId": "328",
+   "assuntoLivre": "",
+   "minutos": 1,
+   "qResolvidas": 7,
+   "qAcertadas": 7,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-24~40",
+   "origem": "tec",
+   "data": "2026-11-24",
+   "mat": "INFRA",
+   "topicId": "40",
+   "assuntoLivre": "",
+   "minutos": 5,
+   "qResolvidas": 13,
+   "qAcertadas": 9,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-24~45",
+   "origem": "tec",
+   "data": "2026-11-24",
+   "mat": "INFRA",
+   "topicId": "45",
+   "assuntoLivre": "",
+   "minutos": 2,
+   "qResolvidas": 5,
+   "qAcertadas": 5,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-24~491",
+   "origem": "tec",
+   "data": "2026-11-24",
+   "mat": "DTRIB",
+   "topicId": "491",
+   "assuntoLivre": "",
+   "minutos": 1,
+   "qResolvidas": 2,
+   "qAcertadas": 1,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-24~52",
+   "origem": "tec",
+   "data": "2026-11-24",
+   "mat": "DEV",
+   "topicId": "52",
+   "assuntoLivre": "",
+   "minutos": 7,
+   "qResolvidas": 21,
+   "qAcertadas": 11,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-24~68",
+   "origem": "tec",
+   "data": "2026-11-24",
+   "mat": "DEV",
+   "topicId": "68",
+   "assuntoLivre": "",
+   "minutos": 1,
+   "qResolvidas": 2,
+   "qAcertadas": 2,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-24~77",
+   "origem": "tec",
+   "data": "2026-11-24",
+   "mat": "DTRIB",
+   "topicId": "77",
+   "assuntoLivre": "",
+   "minutos": 1,
+   "qResolvidas": 4,
+   "qAcertadas": 4,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-24~98",
+   "origem": "tec",
+   "data": "2026-11-24",
+   "mat": "ECON",
+   "topicId": "98",
+   "assuntoLivre": "",
+   "minutos": 19,
+   "qResolvidas": 11,
+   "qAcertadas": 7,
+   "obs": "reconstruída do TEC"
+  },
+  {
+   "uid": "TEC~2026-11-24~competencia-para-legislar-sobre-direito-tributario-cfc9ab",
+   "origem": "tec",
+   "data": "2026-11-24",
+   "mat": "DTRIB",
+   "topicId": null,
+   "assuntoLivre": "Competência para Legislar sobre Direito Tributário",
+   "minutos": 1,
+   "qResolvidas": 2,
+   "qAcertadas": 2,
    "obs": "reconstruída do TEC"
   }
  ]
