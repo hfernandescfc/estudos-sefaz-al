@@ -1193,7 +1193,7 @@ function drawDesempTec(){
    estrutura. O achado foi RETIRADO (taxa-base — ver CLAUDE.md); a ideia de
    restringir o continente continua valendo por si, sem apoiar-se nele.
 
-   ⚠ FONTE: 02_Analises/Backlog_Tempo_Livre.md — este array é a cópia
+   ⚠ FONTE: 02_Analises/06_Operacional/Backlog_Tempo_Livre.md — este array é a cópia
    operacional. Mexer em um exige mexer no outro.
 
    campos: id · t = faixa (15|30|60) · rec = recorrente (nunca sai da lista)
@@ -1244,7 +1244,7 @@ const BACKLOG_SOBRA=[
  // ---------- 30-60 min: abrir frente nova ----------
  {id:"cd-ia-caderno",t:60,rec:1,prio:0,tit:"Rodar o caderno de IA — conta para dois blocos (30 itens)",
   det:"🟢 Os itens 8 e 9 do programa de Ciência de Dados têm <b>mais material no caderno de IA</b> que no próprio caderno (clusterização 76×38, classificação 32×7, regressão 22×2, métricas 29×10). <b>O melhor uso isolado de 45 min do projeto.</b>",
-  ref:"02_Analises/Ciencia_Dados_Prioridade_por_Evidencia.md §6"},
+  ref:"02_Analises/02_Prioridade_por_Materia/Ciencia_Dados_Prioridade_por_Evidencia.md §6"},
  {id:"cd-crispdm",t:60,prio:1,tit:"Ciência de Dados 🔴P1 — CRISP-DM",
   det:"As 6 fases, na ordem, e o que cada uma entrega. <b>Enumerativo e não derivável</b> da formação prévia. Vira <code>mapa-mental</code> + cards.",ref:"Ciencia_Dados_Prioridade_por_Evidencia.md · item 6.1 do edital"},
  {id:"cd-bigdata",t:60,prio:2,tit:"Ciência de Dados 🔴P1 — Big Data",
@@ -1259,11 +1259,11 @@ const BACKLOG_SOBRA=[
   det:"Os 4 temas já estão no edital e são os 4 maiores blocos de P2 (60 dos 100 itens). <code>NQi = NCi − 2×NEi ÷ TLi</code> — com as linhas no denominador, escrever 15 <b>dobra</b> o peso de cada erro. Preencher as 30 linhas é estratégia de nota. ⚠ A skill <code>discursiva-fgv</code> ainda é FGV: usar só o esqueleto.",
   ref:"ciência de dados · auditoria fiscal · finanças públicas · reforma tributária"},
  {id:"zero-audfis",t:60,prio:7,tit:"Auditoria Fiscal — 15 itens, zero card",
-  det:"O deck <code>AUD</code> é auditoria <i>governamental</i> e foi descartado na triagem; não serve.",ref:"02_Analises/Auditoria_Fiscal_Prioridade_por_Evidencia.md"},
+  det:"O deck <code>AUD</code> é auditoria <i>governamental</i> e foi descartado na triagem; não serve.",ref:"02_Analises/02_Prioridade_por_Materia/Auditoria_Fiscal_Prioridade_por_Evidencia.md"},
  {id:"zero-legal",t:60,prio:8,tit:"Legislação Tributária de AL — 10 itens, zero card",
-  det:"Roteiro de leitura já pronto.",ref:"02_Analises/Mapa_Leitura_Legislacao_AL.md"},
+  det:"Roteiro de leitura já pronto.",ref:"02_Analises/04_Mapas_Leitura/Mapa_Leitura_Legislacao_AL.md"},
  {id:"zero-econ",t:60,prio:9,tit:"Economia (10) e Matemática Financeira (5) — zero card",
-  det:"15 itens de P1 sem nenhum card na coleção.",ref:"02_Analises/Economia_Prioridade_por_Evidencia.md"}
+  det:"15 itens de P1 sem nenhum card na coleção.",ref:"02_Analises/02_Prioridade_por_Materia/Economia_Prioridade_por_Evidencia.md"}
 ];
 const SOBRA_FAIXA={15:"≤ 15 min",30:"15-30 min",60:"30-60 min"};
 const SOBRA_SUB={15:"manutenção — já está pronto, só consumir",30:"o que está medido como buraco",60:"abrir frente nova"};
@@ -1315,7 +1315,7 @@ function cardSobra(){
     <div style="font-size:11.5px;color:var(--muted);margin-top:10px;border-top:1px solid var(--line);padding-top:8px">
       <b>Escolher pelo relógio, não pela vontade.</b> Nada de "mais questões do assunto do dia": abaixo de ~40% de domínio isso está medido como não funcionando — o que move é <b>leitura</b>.
       Atividade sem registro não volta: leitura → <code>gerar_fila.py --leitura "Matéria|trecho"</code>; painel, card ou faixa → anotar na folha de amanhã.
-      Fonte: <code>02_Analises/Backlog_Tempo_Livre.md</code>.
+      Fonte: <code>02_Analises/06_Operacional/Backlog_Tempo_Livre.md</code>.
     </div>
   </details>`;
 }
